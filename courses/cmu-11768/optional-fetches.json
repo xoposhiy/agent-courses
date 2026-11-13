@@ -17,7 +17,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2401.09670",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2401.09670.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2401-09670.pdf",
     "sha256": "3ef8776301629419e97d7f6dc08b9a46f3577e05e96538a17dd4a526762f42f0",
     "bytes": 647352
   },
@@ -43,7 +43,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/1706.03762",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-1706.03762.pdf",
+    "raw_path": "raw/optional-readings/arxiv-1706-03762.pdf",
     "sha256": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697",
     "bytes": 2215244
   },
@@ -179,7 +179,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2004.05150",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2004.05150.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2004-05150.pdf",
     "sha256": "053756b54e2d3462d4690b3aed489c962f17df7c3531865e47374c4a651f526c",
     "bytes": 539211
   },
@@ -205,7 +205,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2006.16236",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2006.16236.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2006-16236.pdf",
     "sha256": "2e655ef4a8d85428b576c8e0827d68f1c97950318ba03c9887c5b019a9a332fd",
     "bytes": 1728131
   },
@@ -282,7 +282,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2102.11174",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2102.11174.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2102-11174.pdf",
     "sha256": "6891c3b7f048f436cebb6f4aaee0343b3e3b2b91793f3412819383ccea5c962b",
     "bytes": 1452993
   },
@@ -392,7 +392,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2412.06464",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2412.06464.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2412-06464.pdf",
     "sha256": "55f84f2ae9c4e52ff494bfa699499867f5e9e17514994ac71de43888363a5fb9",
     "bytes": 442953
   },
@@ -491,7 +491,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2510.26692",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2510.26692.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2510-26692.pdf",
     "sha256": "e2e23a449fc9bb27e34e783d20b2e6cd0f1ac67d58efdc0479c03c54db956a17",
     "bytes": 1354769
   },
@@ -568,7 +568,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2512.02556",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2512.02556.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2512-02556.pdf",
     "sha256": "2bec0671778769c159ec389412727d1f3d4889fe1c71564b61edaa24705bd17b",
     "bytes": 980616
   },
@@ -590,7 +590,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2305.13245",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2305.13245.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2305-13245.pdf",
     "sha256": "ba9094fe73db9bf515d47ae8b2d502fee9d8a6c7b1327e197ddb160f4c63b94a",
     "bytes": 269116
   },
@@ -667,7 +667,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2405.04434",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2405.04434.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2405-04434.pdf",
     "sha256": "f149f9c09aa8b46ce6a740a255a99b7cc2317ac5b065989339919b7e6c329c9b",
     "bytes": 1586880
   },
@@ -689,7 +689,7 @@
     "http_status": 200,
     "final_url": "https://www.openhands.dev/blog/dont-sleep-on-single-agent-systems",
     "content_type": "text/html",
-    "raw_path": "raw/optional-readings/ref-b067890a8880.html",
+    "raw_path": "raw/optional-readings/ref-42f1d27e513b.html",
     "sha256": "235e1d87f851fbe19a749b9e88d7a91236fd92c997bcb282e5ce079a9f137b8a",
     "bytes": 91781
   },
@@ -755,7 +755,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2104.09864",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2104.09864.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2104-09864.pdf",
     "sha256": "e9a481fbe1c8a20b7b1fa566b13102a1896c7829fa9a8b4c80528452a5ddaf79",
     "bytes": 599289
   },
@@ -832,7 +832,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2305.19466",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2305.19466.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2305-19466.pdf",
     "sha256": "a323eefd993ecf978f007e1478cc197b463adb5147e5c029b973b4a45552d6d6",
     "bytes": 1472316
   },
@@ -942,7 +942,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2306.15595",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2306.15595.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2306-15595.pdf",
     "sha256": "890702e3170e5b8e2fb55552bd86cd99b0aa4ddbb3670ae8c351faa575cfaf09",
     "bytes": 751217
   },
@@ -997,7 +997,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2309.00071",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2309.00071.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2309-00071.pdf",
     "sha256": "e7c0268a796138460c6ba2f67a7cba5bd922c401aea94c1fcd09c4b76b883c85",
     "bytes": 838521
   },
@@ -1106,7 +1106,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2602.15763",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2602.15763.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2602-15763.pdf",
     "sha256": "e20742ff36e08dc361de6973f7f72ad38e107edf8fd92d2a777a8428fc9b8f0e",
     "bytes": 6177650
   },
@@ -1161,7 +1161,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2607.24653",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2607.24653.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2607-24653.pdf",
     "sha256": "1a21e4d15de52eb0d4cf09cdbffc6248c497ba6897572cc5574af237c13da51d",
     "bytes": 1790685
   },
@@ -1315,7 +1315,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2606.19348",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2606.19348.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2606-19348.pdf",
     "sha256": "55b2d72f772ac00de2e470b3ee08443c648d971c7f57c52d6202895665e5978d",
     "bytes": 4713349
   },
@@ -1392,7 +1392,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2310.01889",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2310.01889.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2310-01889.pdf",
     "sha256": "1e0ee1ad0aaf8c5763d060ba725887f1c6affda412c0a26dbb888cad5ad80f8c",
     "bytes": 1766025
   },
@@ -1441,7 +1441,7 @@
     "http_status": 200,
     "final_url": "https://raw.githubusercontent.com/OpenHands/OpenHands/HEAD/README.md",
     "content_type": "text/plain; charset=utf-8",
-    "raw_path": "raw/optional-readings/ref-b5a44c85aa77.md",
+    "raw_path": "raw/optional-readings/ref-a04396a09788.md",
     "sha256": "eca2b7026190577215e9967cc6ba69ff6ed3219d05f2a48a01d4ab590fa6a38a",
     "bytes": 15412
   },
@@ -1496,7 +1496,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2311.04934",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2311.04934.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2311-04934.pdf",
     "sha256": "15e198a54c37a1177c9b17cf44261b4bec50fe5c3a2377bc8d1af4eadabea20f",
     "bytes": 905557
   },
@@ -1606,7 +1606,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2606.13361",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2606.13361.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2606-13361.pdf",
     "sha256": "0595a6c2dcbbf5b08b524579fa5a1b213c781933e07633f40ab25055f6ddb188",
     "bytes": 341437
   },
@@ -1650,7 +1650,7 @@
     "http_status": 200,
     "final_url": "https://smith.langchain.com/public/aeddf201-687b-4389-acdb-137dd9683000/r",
     "content_type": "text/html",
-    "raw_path": "raw/optional-readings/ref-ce2d7d4d3fa3.html",
+    "raw_path": "raw/optional-readings/ref-612df9ac7b00.html",
     "sha256": "61e1c03b3d57ea31ee9328b60e8fe84e797e07b94cc32bae146b43e3c1fd0a14",
     "bytes": 569402
   },
@@ -1694,7 +1694,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2309.06180",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2309.06180.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2309-06180.pdf",
     "sha256": "55b3b324d779a67c59dac2519445e3b07c14e6ff5c656fadb47a3d7b5997469e",
     "bytes": 1459631
   },
@@ -1846,7 +1846,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2312.07104",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2312.07104.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2312-07104.pdf",
     "sha256": "161e0a0123a89cd8a57d68734ae704680b0e577fee41e1e7e1029c37a9d99b57",
     "bytes": 1383463
   },
@@ -1901,7 +1901,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2509.13313",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2509.13313.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2509-13313.pdf",
     "sha256": "ff58187f496fb96575da3639f6137a6d3a9c1e8b32c810318b703a4d3e0c6e9d",
     "bytes": 1360337
   },
@@ -1967,7 +1967,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2504.19413",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2504.19413.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2504-19413.pdf",
     "sha256": "bec870b657aa73405275a6d8fe27bcd4271799e028bc62986ab9c4cd27a3712d",
     "bytes": 1144031
   },
@@ -1982,7 +1982,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2303.11366",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2303.11366.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2303-11366.pdf",
     "sha256": "6059b6f89fea9959bd3dab553fbb97756a3dfb1b15e3cbab2fbf3ab6664333bd",
     "bytes": 591097
   },
@@ -2081,7 +2081,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2308.10144",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2308.10144.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2308-10144.pdf",
     "sha256": "01e533d81fb4a5f91797c073a9b1929acbaa64da45a592b26563ca7d135024f3",
     "bytes": 9870272
   },
@@ -2092,7 +2092,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2410.08164",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2410.08164.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2410-08164.pdf",
     "sha256": "ee8c9b38e20b5f747bd78828d96beab0b266eb99baaafe44c3936ff0d89cb92b",
     "bytes": 26111150
   },
@@ -2103,7 +2103,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2306.07863",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2306.07863.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2306-07863.pdf",
     "sha256": "24a8e95ceb3a90f6c303442f224c109f5abc92d2a9918ee0cf7d2246de781260",
     "bytes": 1527350
   },
@@ -2114,7 +2114,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2406.14596",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2406.14596.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2406-14596.pdf",
     "sha256": "fe6e17dc31e0631ce8afc73e82ae53ad50a5579e15d3fb2e99bd0464a4164ad1",
     "bytes": 10542280
   },
@@ -2125,7 +2125,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2305.16291",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2305.16291.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2305-16291.pdf",
     "sha256": "769a4e33ddeeb73870849232eece49afe882c2d146362e33917ccb432ba0efb8",
     "bytes": 18830859
   },
@@ -2136,7 +2136,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2006.08381",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2006.08381.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2006-08381.pdf",
     "sha256": "547027556f1220f22555c35f91d2527d78d825553a1b24201f58d56274ec0e80",
     "bytes": 4869773
   },
@@ -2147,7 +2147,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2211.16605",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2211.16605.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2211-16605.pdf",
     "sha256": "60a5205585d4ea3fa8153cffcbad136fd825278dfced2dddabf6f9e3217a35f6",
     "bytes": 4720796
   },
@@ -2158,7 +2158,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2106.11053",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2106.11053.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2106-11053.pdf",
     "sha256": "61a9698eea4a15c622b8faad2403bd6ec1cb8337b0d160367d3c6de1cfdb27e5",
     "bytes": 3295478
   },
@@ -2169,7 +2169,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2310.19791",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2310.19791.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2310-19791.pdf",
     "sha256": "efbbc1a0f24305e41e546b33911036cc77e75b67759c3b39cbf61c5ebed7a53b",
     "bytes": 4349281
   },
@@ -2180,7 +2180,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2504.07079",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2504.07079.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2504-07079.pdf",
     "sha256": "aa237b4626363fa3de5479ed12bc93434ae9922f15432eca5bbf3444119d7d60",
     "bytes": 3190311
   },
@@ -2191,7 +2191,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2510.15863",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2510.15863.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2510-15863.pdf",
     "sha256": "4fd727b7dcc0320a8c3c5dfcf3bd8fd9760bfd7ad69ba3af0283dfecf03f2b8d",
     "bytes": 3857510
   },
@@ -2202,7 +2202,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2401.12869",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2401.12869.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2401-12869.pdf",
     "sha256": "53da61ab207079b41be34d251eebe7058043980b22840ef73dd62906bb1da4ac",
     "bytes": 1261833
   },
@@ -2213,7 +2213,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2606.15390",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2606.15390.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2606-15390.pdf",
     "sha256": "7d2652d701fd180491d8223facab98f54b59f337275b47314d728ec4de3e990f",
     "bytes": 1473650
   },
@@ -2224,7 +2224,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2205.11916",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2205.11916.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2205-11916.pdf",
     "sha256": "43a3d73c77c7f3e115bb85522a4d94aaa54cdb55a0d9e17eb6af3117f39111c7",
     "bytes": 762445
   },
@@ -2235,7 +2235,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2305.04091",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2305.04091.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2305-04091.pdf",
     "sha256": "cc65b7ad233da4f46a673c0045ee2c0ab332948d86b3f401ba97345d650abf04",
     "bytes": 3442331
   },
@@ -2246,7 +2246,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2203.14465",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2203.14465.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2203-14465.pdf",
     "sha256": "d22a472fce2631755849988a78d78ad6d80999166eb4bac4f5315c97dfdf6d9a",
     "bytes": 771851
   },
@@ -2261,7 +2261,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2501.12948",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2501.12948.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2501-12948.pdf",
     "sha256": "b191b0a365a64b4ab2791d117069ed17a2933d03554a662ced58b37df52018f4",
     "bytes": 5034998
   },
@@ -2272,7 +2272,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2512.24601",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2512.24601.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2512-24601.pdf",
     "sha256": "8567362c22768d9b50d4a4a8d63bb28dda2c2b2051be30d67f70f645170429ca",
     "bytes": 9942446
   },
@@ -2283,7 +2283,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2206.10498",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2206.10498.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2206-10498.pdf",
     "sha256": "cb1a34744f5dbd1c35726928dee865d7f719cee8287e121bdd5e83bdf47db825",
     "bytes": 1228868
   },
@@ -2294,7 +2294,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2209.11302",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2209.11302.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2209-11302.pdf",
     "sha256": "f9106cad86a1e73ecb93366a85cf4845989207ae21a176693a7ecdb02403692a",
     "bytes": 20896192
   },
@@ -2305,7 +2305,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2210.02875",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2210.02875.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2210-02875.pdf",
     "sha256": "8a125d224aeeedadc4a5cb490a2516a4bdf75671c962cb66de2ac21f6d89ae23",
     "bytes": 1265617
   },
@@ -2316,7 +2316,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2410.05243",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2410.05243.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2410-05243.pdf",
     "sha256": "b166b8e09f604e64067d12ded4689e7582df106988b28f018651835843b04e68",
     "bytes": 18205895
   },
@@ -2327,7 +2327,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2201.07207",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2201.07207.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2201-07207.pdf",
     "sha256": "9f73b5223b98af093a689191c16b5b1b700e7958b85ade4421afcbabfd1ab827",
     "bytes": 2709191
   },
@@ -2338,7 +2338,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2212.04088",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2212.04088.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2212-04088.pdf",
     "sha256": "0c4b002fc25c6ac6815bb545e7bbe7c3dbfa696dc2af424130108f56b6fb53d5",
     "bytes": 784436
   },
@@ -2349,7 +2349,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2207.05608",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2207.05608.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2207-05608.pdf",
     "sha256": "ecf30268add2af672291ad65b53c9fd87801f6490b0af195b12db1dedee0f2b9",
     "bytes": 10805774
   },
@@ -2360,7 +2360,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2305.17390",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2305.17390.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2305-17390.pdf",
     "sha256": "193dbdfb2bcf9a155dda81eeab11a951628754bb69d3a91e0ccf89a9c005456f",
     "bytes": 3601309
   },
@@ -2371,7 +2371,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2502.08235",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2502.08235.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2502-08235.pdf",
     "sha256": "49c65719e1756597e41ddde8677894d133691a90b7fbe1652ea6c832c45eb5b6",
     "bytes": 712566
   },
@@ -2382,7 +2382,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2511.02208",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2511.02208.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2511-02208.pdf",
     "sha256": "8286ac58f1e734a5370ec23be907bad4b2547ca343efd12b980d2f4e2d347cb8",
     "bytes": 5234699
   },
@@ -2393,7 +2393,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2502.15840",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2502.15840.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2502-15840.pdf",
     "sha256": "6d081d99d4f21041b4990846f675aeb6d2f46ebf034fa58ab436b1c78286e8c2",
     "bytes": 7449988
   },
@@ -2404,7 +2404,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2509.09677",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2509.09677.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2509-09677.pdf",
     "sha256": "244143cdf580fd8c11c4288b4c18b031cd7f6c2aa49be874547fcdc9ae36f439",
     "bytes": 10068505
   },
@@ -2415,7 +2415,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2311.05772",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2311.05772.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2311-05772.pdf",
     "sha256": "9de7a8f3fa07efc9b35c5dac4f5d7a8b55720e3eeaa9f65788aa06a54aa05a0f",
     "bytes": 1457254
   },
@@ -2426,7 +2426,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2605.14290",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2605.14290.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2605-14290.pdf",
     "sha256": "dcae3390b591f4dee65b5dad1ff13e28043f8b6ed1f0ccc5c59882f0f5b59431",
     "bytes": 389279
   },
@@ -2437,7 +2437,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2402.01622",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2402.01622.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2402-01622.pdf",
     "sha256": "a91b967cf5227a65b7e2fb0f63c7c006aeed800a31fd5020e594acd5ba935e9a",
     "bytes": 3369495
   },
@@ -2448,7 +2448,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2402.00838",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2402.00838.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2402-00838.pdf",
     "sha256": "121e82248da601e8e4d4da5fa9b4486660ecf0f5a0fae5292b7af3c656c2385d",
     "bytes": 562224
   },
@@ -2459,7 +2459,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2305.06161",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2305.06161.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2305-06161.pdf",
     "sha256": "549e079ffd6104417f8443570954b232d2ed58886cf45c60482e631cb36e1351",
     "bytes": 1174499
   },
@@ -2470,7 +2470,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2107.03374",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2107.03374.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2107-03374.pdf",
     "sha256": "ebae72ea0e8a5eb2ecbccdb985aec6cc1254a7c4d29e6d4de7866db1e66c4855",
     "bytes": 1885177
   },
@@ -2481,7 +2481,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2308.12950",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2308.12950.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2308-12950.pdf",
     "sha256": "05ed05d2d76c420b6af4a1afe6e1dec99939ccf62c5a0c0a258b09cbe1889346",
     "bytes": 1623794
   },
@@ -2492,7 +2492,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2409.12186",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2409.12186.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2409-12186.pdf",
     "sha256": "8416ad8d885737ed15f757180499f5202fa93e791180a6d3fcd6f0381d79595e",
     "bytes": 1204247
   },
@@ -2503,7 +2503,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2204.05999",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2204.05999.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2204-05999.pdf",
     "sha256": "6e926c91f6fe0d275888ffcc354467384b22615a018238dbda51494fce17def3",
     "bytes": 6223235
   },
@@ -2514,7 +2514,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2207.14255",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2207.14255.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2207-14255.pdf",
     "sha256": "cd6ab0f06dd444040bcb5089c498214d94edc4159d55f284bcefbbe6c8d2c5db",
     "bytes": 780311
   },
@@ -2525,7 +2525,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2308.07124",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2308.07124.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2308-07124.pdf",
     "sha256": "c03f04d06e000e4a251bea07c8b654721a97dbf23009ba45909439c7d814502a",
     "bytes": 2618401
   },
@@ -2536,7 +2536,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2207.01780",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2207.01780.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2207-01780.pdf",
     "sha256": "baac51d227441123433533e5ce3a40b32bd3affd09af4286acc607818d15c599",
     "bytes": 3779063
   },
@@ -2547,7 +2547,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2009.10297",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2009.10297.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2009-10297.pdf",
     "sha256": "7dae089fe44f0d668fc20b1af43bfbde8e8e6f75fad81acc4e3f4398eff5466e",
     "bytes": 550833
   },
@@ -2558,7 +2558,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2305.01210",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2305.01210.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2305-01210.pdf",
     "sha256": "52d35d25a10c38da3db132beceb8d29bee77abd46f18aafe76c5b0c63f0a6541",
     "bytes": 970804
   },
@@ -2569,7 +2569,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2203.07814",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2203.07814.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2203-07814.pdf",
     "sha256": "4facd32698069e8eda5e3714f12be8519dbe2a184e9386e37a9939d7f4030bea",
     "bytes": 3797220
   },
@@ -2580,7 +2580,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2401.15963",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2401.15963.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2401-15963.pdf",
     "sha256": "0f78b31bb40478cacc2ff1c9c221a78c17dd600d565bc7d201d91ad1f3bf2603",
     "bytes": 2596442
   },
@@ -2595,7 +2595,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2405.15793",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2405.15793.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2405-15793.pdf",
     "sha256": "d171e0693060b910ceb2cddd0fd4bc7cae302005d42d0d8059bfdbe056c3adba",
     "bytes": 4963538
   },
@@ -2606,7 +2606,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2407.01489",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2407.01489.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2407-01489.pdf",
     "sha256": "1675c2dcd5ecaef47e8a4356062f60be642cee82e1bbacb044c9d047dce4c856",
     "bytes": 1384716
   },
@@ -2617,7 +2617,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2503.09089",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2503.09089.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2503-09089.pdf",
     "sha256": "61e5aba684293deb26ef2d5e18731f16e7278ce8600d806a0089bf7eda1a597c",
     "bytes": 846547
   },
@@ -2632,7 +2632,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2310.06770",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2310.06770.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2310-06770.pdf",
     "sha256": "f7e8e1df64129742b8199a21a042734519a823a1dafd6f48f8f3ddcfb48ee296",
     "bytes": 4533722
   },
@@ -2643,7 +2643,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2412.21139",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2412.21139.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2412-21139.pdf",
     "sha256": "5c35e277544323fcc4ce8929e208bb8cc32efbbd40b8069c7daa084548d79396",
     "bytes": 589198
   },
@@ -2654,7 +2654,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2504.07164",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2504.07164.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2504-07164.pdf",
     "sha256": "7b4557f7b60fc2d17250fc87f01da9c102c336a0fd584f358f16b7b0d30d9c2f",
     "bytes": 7778370
   },
@@ -2669,7 +2669,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2504.21798",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2504.21798.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2504-21798.pdf",
     "sha256": "6752df853569104ae2e55cc1bee09dc3f6b335f7eeae300b6e9fee911f3f2897",
     "bytes": 3613659
   },
@@ -2680,7 +2680,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2504.02605",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2504.02605.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2504-02605.pdf",
     "sha256": "4de921d8d88a016762ad1680ec8f5b24381c8c69442e96a4265a50f1bce31d92",
     "bytes": 7042084
   },
@@ -2691,7 +2691,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2410.03859",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2410.03859.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2410-03859.pdf",
     "sha256": "4fa09c3734547e8ba4a5288e7e8d9273d1136c70295e4f91ef3592df0ead2a71",
     "bytes": 4379827
   },
@@ -2702,7 +2702,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2412.01769",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2412.01769.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2412-01769.pdf",
     "sha256": "8c25fd42b3c1dd817e39bce93c5bee072f43ecf92dead76493b9ca3c8a0e72c8",
     "bytes": 837585
   },
@@ -2713,7 +2713,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2605.03546",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2605.03546.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2605-03546.pdf",
     "sha256": "87c67873f06f48044ef3a1bcd5bed21be2c90d92090bfb3b73b6ca7b9b13781c",
     "bytes": 2568568
   },
@@ -2724,7 +2724,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2603.13428",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2603.13428.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2603-13428.pdf",
     "sha256": "ab1a668e7b7ba89399867479caca568faa65e3464c20cbb2fd5d2dc894f0cc8c",
     "bytes": 3886309
   },
@@ -2735,7 +2735,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2406.12952",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2406.12952.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2406-12952.pdf",
     "sha256": "b2cc900757e8f87f9f3d7c42e64470aa02c98b174bfc3b5b9cbf1684fc0ff044",
     "bytes": 678923
   },
@@ -2746,7 +2746,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2512.12216",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2512.12216.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2512-12216.pdf",
     "sha256": "3a37615a7bd5525570eada4ba48227a3ab7d437b052d3a34557319bccc84a856",
     "bytes": 1454872
   },
@@ -2757,7 +2757,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2602.16819",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2602.16819.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2602-16819.pdf",
     "sha256": "d08bb65362eb4e6dd81390d05675fc245a946efe60d29f2f63517972cc1b41af",
     "bytes": 1347208
   },
@@ -2768,7 +2768,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2405.15383",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2405.15383.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2405-15383.pdf",
     "sha256": "64c9d0504344661f3477eebd0d92e1290da36f173805cef2d79a571152bf67f2",
     "bytes": 793865
   },
@@ -2779,7 +2779,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/1704.04368",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-1704.04368.pdf",
+    "raw_path": "raw/optional-readings/arxiv-1704-04368.pdf",
     "sha256": "c3c0b947598c27e21181e8f26510ea493f12acb67d6ff43e616bd96497fc2d9f",
     "bytes": 442103
   },
@@ -2790,7 +2790,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2207.01206",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2207.01206.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2207-01206.pdf",
     "sha256": "131e93080bc8d9ff801ff40bf69b7d12bfd9db018c223fdf03e622928f7ec032",
     "bytes": 8878628
   },
@@ -2801,7 +2801,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2306.06070",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2306.06070.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2306-06070.pdf",
     "sha256": "75d8af953769a53bf75913908e2bb6185c6b338c8d89b7304e7fd8cfb79934e8",
     "bytes": 7635816
   },
@@ -2812,7 +2812,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2401.13919",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2401.13919.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2401-13919.pdf",
     "sha256": "476ed4a064311f93414f5d5d17d90f10d07d2922bc05e09ee89cea26b617a2cb",
     "bytes": 18497629
   },
@@ -2823,7 +2823,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2504.07981",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2504.07981.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2504-07981.pdf",
     "sha256": "4eec6bbf0bba837c66a0d69551cc1567200d7aea85c6ce72650706de637c10c0",
     "bytes": 11160171
   },
@@ -2834,7 +2834,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2604.06126",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2604.06126.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2604-06126.pdf",
     "sha256": "14c933ca460112b0b50e0d4ae17b9a5555ece5db0c767dc85627fa4c670a9c0b",
     "bytes": 49184139
   },
@@ -2845,7 +2845,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2604.08516",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2604.08516.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2604-08516.pdf",
     "sha256": "5cec3493a000bac9e99d44bf2fccedc8c06b6b4c28fd14bdd67b0c6f6001105d",
     "bytes": 12979883
   },
@@ -2856,7 +2856,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2507.20534",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2507.20534.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2507-20534.pdf",
     "sha256": "035062b5e1ab865ffad9f90f81d6c8332f8af805063fac54cc6f2cca1fe608b5",
     "bytes": 5872335
   },
@@ -2867,7 +2867,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2606.24855",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2606.24855.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2606-24855.pdf",
     "sha256": "0ce7e6e5fe8e3d68c3cc134f97ff89e50ce0f484a9d5442279838e299433981a",
     "bytes": 2550856
   },
@@ -2878,7 +2878,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2510.24702",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2510.24702.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2510-24702.pdf",
     "sha256": "76543f11aa8a9e9f30ae07f8a461e89a0c16b926130647d3cfcad8f9a8eee782",
     "bytes": 1145378
   },
@@ -2889,7 +2889,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2505.20192",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2505.20192.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2505-20192.pdf",
     "sha256": "a3b0fa3c2ef28ab136b12d8d0c7b01d6214b301bbf0c8639b7998dd6d1a818e1",
     "bytes": 1047941
   },
@@ -2900,7 +2900,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2405.14394",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2405.14394.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2405-14394.pdf",
     "sha256": "a94d18800efd7aaee5e84ab4fede585682eba24ca68cb561af81c8f00b026b6a",
     "bytes": 695241
   },
@@ -2911,7 +2911,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2507.07817",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2507.07817.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2507-07817.pdf",
     "sha256": "78246fe7eb519d93849c2f282c76feaabb56ad572fe733cd23309ca5874c2be8",
     "bytes": 2534322
   },
@@ -2922,7 +2922,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2508.06600",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2508.06600.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2508-06600.pdf",
     "sha256": "0aa19d874913ae5f95fc9913aaa9c0cb68f4a8cbba8d2e436ea9b41738e69d3c",
     "bytes": 2405417
   },
@@ -2933,7 +2933,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2509.13160",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2509.13160.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2509-13160.pdf",
     "sha256": "74887941b188b76c9c0eeb5294a47e8dcde43dd80e9201d881984527d828f416",
     "bytes": 1386528
   },
@@ -2944,7 +2944,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2505.14963",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2505.14963.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2505-14963.pdf",
     "sha256": "35ce8e598d884e1076359ad83372676bb5a19c67809632b92e763977c3e644a4",
     "bytes": 1181995
   },
@@ -2955,7 +2955,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2506.13784",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2506.13784.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2506-13784.pdf",
     "sha256": "52752ccb8e3cf0c18000fbf1b5c62d7e7d5062d2aa05239fb1134fda5715fca9",
     "bytes": 934775
   },
@@ -2966,7 +2966,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2604.25256",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2604.25256.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2604-25256.pdf",
     "sha256": "9303b8930eb3c5b6eca8e4cfda6d56506ade638200c86c32a8fa7b91f44cae60",
     "bytes": 3157379
   },
@@ -2977,7 +2977,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2509.00496",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2509.00496.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2509-00496.pdf",
     "sha256": "5804ffd0982a7d18253cae419d3891e3fd3cd2d82c6de71635e48b800111fde1",
     "bytes": 6070407
   },
@@ -2988,7 +2988,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2601.08536",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2601.08536.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2601-08536.pdf",
     "sha256": "6377061d91b212bba03b2ea30fdce11dc8c0ac425b1dbc898086f885e433aa32",
     "bytes": 1403887
   },
@@ -2999,7 +2999,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2509.13305",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2509.13305.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2509-13305.pdf",
     "sha256": "2a0aa73e31f0c16f2f2fc07259ed0593f88c5f72f727bc443026490e3a47ab8c",
     "bytes": 4319305
   },
@@ -3010,7 +3010,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2505.22648",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2505.22648.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2505-22648.pdf",
     "sha256": "e7ea9dab41d1284d7ddcebc53022e23f14d868f4639469c7122d1f86797c9a51",
     "bytes": 1209450
   },
@@ -3021,7 +3021,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2509.13310",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2509.13310.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2509-13310.pdf",
     "sha256": "aca7473950791937154bad8351e4d5f5001d0ba166acdd9065248bf97942064d",
     "bytes": 4141441
   },
@@ -3032,7 +3032,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2503.09516",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2503.09516.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2503-09516.pdf",
     "sha256": "524306de91f80d7755c43f8daad11eb463832762ba1debe0f37788bdbb3a6a0d",
     "bytes": 645723
   },
@@ -3047,7 +3047,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2203.02155",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2203.02155.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2203-02155.pdf",
     "sha256": "c1984bb50a5b90fddb895fdc3a0f72e5bc977148c9f63ef6040cbe7a3e1f0d98",
     "bytes": 1797405
   },
@@ -3058,7 +3058,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/1506.02438",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-1506.02438.pdf",
+    "raw_path": "raw/optional-readings/arxiv-1506-02438.pdf",
     "sha256": "5aa736ccf3517a1f36d0ca8146982e69beaf9a2bdccac2ae324f780743bc045e",
     "bytes": 1798117
   },
@@ -3069,7 +3069,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2305.20050",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2305.20050.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2305-20050.pdf",
     "sha256": "fbd170e2042c32950c3fe97d3a558d89e8a8dffaadc942e774ccb4b751abc123",
     "bytes": 4384742
   },
@@ -3080,7 +3080,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2505.24298",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2505.24298.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2505-24298.pdf",
     "sha256": "5785033bdd229ee6ddf26d8fcd9f61671801f208272c921ba6884da87cc5b351",
     "bytes": 772563
   },
@@ -3091,7 +3091,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2605.07331",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2605.07331.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2605-07331.pdf",
     "sha256": "9f919201071f6352fdec180480ae5659725895b9869ab9dce260bb79a293d241",
     "bytes": 608936
   },
@@ -3102,7 +3102,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/1707.06347",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-1707.06347.pdf",
+    "raw_path": "raw/optional-readings/arxiv-1707-06347.pdf",
     "sha256": "e78feadadbdbb0b601b3c2bcc81404722cd431a489b307545f9b7bea1e8c4f5b",
     "bytes": 2923532
   },
@@ -3113,7 +3113,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2506.13585",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2506.13585.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2506-13585.pdf",
     "sha256": "d355a6a41a26b85ca145aec5154650f4d39733c92f54775ae7f5851ecbedf600",
     "bytes": 1584812
   },
@@ -3124,7 +3124,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2507.18071",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2507.18071.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2507-18071.pdf",
     "sha256": "67221ec313f42d8b3029686b604b2621a311ae0d74e38524092e7c7a94613bd0",
     "bytes": 458773
   },
@@ -3135,7 +3135,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2503.14476",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2503.14476.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2503-14476.pdf",
     "sha256": "f01e4fd347530cadd68e5c36b1998532a6d1adb272c817e73b927453c26e9d79",
     "bytes": 826801
   },
@@ -3146,7 +3146,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2512.07850",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2512.07850.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2512-07850.pdf",
     "sha256": "e6875d7dccabcfd4acaebffc96e160434bf32932180febce7429c4230d0c7c99",
     "bytes": 1450821
   },
@@ -3157,7 +3157,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2603.08640",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2603.08640.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2603-08640.pdf",
     "sha256": "823f11de21206c9ba5be0531bee62f1d29d97cfeb5c8e9a6c90a2256f1f948bc",
     "bytes": 366334
   },
@@ -3168,7 +3168,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/1503.02531",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-1503.02531.pdf",
+    "raw_path": "raw/optional-readings/arxiv-1503-02531.pdf",
     "sha256": "74e6689115c539db499f9d6153edecb364059926fd45402454f8210442444c5a",
     "bytes": 106630
   },
@@ -3179,7 +3179,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2306.13649",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2306.13649.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2306-13649.pdf",
     "sha256": "a81c71fa0cd15506642092790d854347f030c29ee1d6aa643b55aa51348e6869",
     "bytes": 895556
   },
@@ -3194,7 +3194,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2601.18734",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2601.18734.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2601-18734.pdf",
     "sha256": "e521ed6c2939dc612daec5fe6fb47bef554a291228c02cafae07102b9729bad8",
     "bytes": 681639
   },
@@ -3205,7 +3205,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2406.13352v3",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2406.13352v3.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2406-13352v3.pdf",
     "sha256": "349884fffbf43282591c5accffd57bb651632f38e412fe303114941bdd111b05",
     "bytes": 1042076
   },
@@ -3216,7 +3216,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2309.15817v2",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2309.15817v2.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2309-15817v2.pdf",
     "sha256": "2d746c512086bd47084e616a0848c6dd25052dfe8b6da64e42e4c5e2f0050722",
     "bytes": 2712591
   },
@@ -3227,7 +3227,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2507.20526",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2507.20526.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2507-20526.pdf",
     "sha256": "dd47a8416b0cdb6cf2365b51f9c9042b0213f172280a215719b09b7ff60414ca",
     "bytes": 1861702
   },
@@ -3238,7 +3238,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2310.08419",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2310.08419.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2310-08419.pdf",
     "sha256": "590bf40aa58061928f54d01b7d53f0d5141bb2ecf4f01483c6849423934f44e4",
     "bytes": 5353023
   },
@@ -3249,7 +3249,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2312.06942v5",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2312.06942v5.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2312-06942v5.pdf",
     "sha256": "999f7a92bb8c085799e68f3d88f491ad8a334f862ccf5b286e5c2766677864c0",
     "bytes": 1102474
   },
@@ -3260,7 +3260,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2503.11926",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2503.11926.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2503-11926.pdf",
     "sha256": "2547162c549d70e02beca2687903a8fce75fd950269a3ee479d5b8ebbb53ff38",
     "bytes": 5643216
   },
@@ -3271,7 +3271,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2410.09024",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2410.09024.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2410-09024.pdf",
     "sha256": "1f3bbfa41e9e8d0c1218fba19af5a7b9cffc04a1d9fba8b739ce57b080489560",
     "bytes": 1054913
   },
@@ -3282,7 +3282,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2507.06134v2",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2507.06134v2.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2507-06134.pdf",
     "sha256": "8036bbdb56f8ef225d928e44c4448be5c71e8663ddb48169115a98e6056e0ee5",
     "bytes": 2871416
   },
@@ -3293,7 +3293,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2512.18311",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2512.18311.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2512-18311.pdf",
     "sha256": "ecb8076f08298956cc535d8ae516653808ade0d1fb62a7c06ac465392b88ada8",
     "bytes": 39927761
   },
@@ -3304,7 +3304,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2511.03690v1",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2511.03690v1.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2511-03690v1.pdf",
     "sha256": "41bb259e4005ae52993c0348b2edfaf0bdd1634de213048618ed13431b309b15",
     "bytes": 1277023
   },
@@ -3315,7 +3315,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2310.06770v1",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2310.06770v1.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2310-06770v1.pdf",
     "sha256": "dffbba18e814e495b103078cdc2f833ae2392a030f6beb21b07e1fa5252501ba",
     "bytes": 6139359
   },
@@ -3326,7 +3326,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2406.01304",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2406.01304.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2406-01304.pdf",
     "sha256": "4a9950e3082d190b716f004d7e14d122e507a62cc0ad7176e8de8c8ec26ac786",
     "bytes": 1836754
   },
@@ -3341,7 +3341,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2308.00352",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2308.00352.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2308-00352.pdf",
     "sha256": "17582e47647fac8eaa3681feade41c8408310c4133acc5c6823565fbe880e1ac",
     "bytes": 16753634
   },
@@ -3352,7 +3352,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2506.03011v1",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2506.03011v1.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2506-03011v1.pdf",
     "sha256": "cc1a26856d6033ab470c634a204fe1d2e1aaf88589fe23ef18c66c271a6ae815",
     "bytes": 841326
   },
@@ -3363,7 +3363,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2507.08149v1",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2507.08149v1.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2507-08149v1.pdf",
     "sha256": "01444cdaab637219cec52a717e7f5ef7ebe91efae29f50ff77a303eaa6b7b72c",
     "bytes": 2490786
   },
@@ -3374,7 +3374,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2510.26787",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2510.26787.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2510-26787.pdf",
     "sha256": "7bc1e50585429c83a93a8045fdaa654ba074c4fa3a35671613024de69c46d2ed",
     "bytes": 11494857
   },
@@ -3385,7 +3385,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2608.12355",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2608.12355.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2608-12355.pdf",
     "sha256": "5b0ce4341a7a91aff5e9e461bc8dbf58ec5b9ca101b370b815adff8c943feb20",
     "bytes": 2838754
   },
@@ -3396,7 +3396,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2605.26329",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2605.26329.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2605-26329.pdf",
     "sha256": "e953d19425eb92a95cb07a43b4efdd37fada966b4ec76ff57ae633cf15261d38",
     "bytes": 4103504
   },
@@ -3407,7 +3407,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2403.08140",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2403.08140.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2403-08140.pdf",
     "sha256": "4682bf1b5aa9354be0415274a8f387bd990b7d94fad42e853f7097b37d589771",
     "bytes": 1330289
   },
@@ -3418,7 +3418,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2410.02907",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2410.02907.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2410-02907.pdf",
     "sha256": "6e203ccd2b00202ec6abb808c8e71f2b440af731c1922099beeacf9936e24fa7",
     "bytes": 24063765
   },
@@ -3429,7 +3429,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2511.04703",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2511.04703.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2511-04703.pdf",
     "sha256": "955941e3f27f584eb37f755290ffd6bf9c9db8efd0bd53a5d515c938addc9ced",
     "bytes": 859991
   },
@@ -3440,7 +3440,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2412.14161",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2412.14161.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2412-14161.pdf",
     "sha256": "9574c7c5d4f1592dd1a0c9615cb3c2f8bd130f18b2c2cde4d0bbace4e80ef620",
     "bytes": 2169754
   },
@@ -3455,7 +3455,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2601.11868",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2601.11868.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2601-11868.pdf",
     "sha256": "4430e04a507b2442bb7b24a88899b750948fa0a6b3bbc33a8d541d6d4debcc1e",
     "bytes": 2773926
   },
@@ -3466,7 +3466,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2604.06996",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2604.06996.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2604-06996.pdf",
     "sha256": "677edce3aa4e6de900358fbf46c2c899050df87b2e48b43a770b514f9d1a5371",
     "bytes": 395545
   },
@@ -3477,7 +3477,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2403.07974",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2403.07974.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2403-07974.pdf",
     "sha256": "a9bd3f7b96ac846ac53506e7b58197d9213919f18f402a27910dcf9fc948b427",
     "bytes": 4960954
   },
@@ -3488,7 +3488,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2501.16609",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2501.16609.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2501-16609.pdf",
     "sha256": "670a9ee9c1982c60fc9a34da1a7b71ea39e4cb731396b975d709f4f6f1f58a28",
     "bytes": 4362850
   },
@@ -3499,7 +3499,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2602.17588",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2602.17588.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2602-17588.pdf",
     "sha256": "f6ab73dbcf0972d3963302eeabaa959eb62767fed4d7857dea3d73b06ddc49cd",
     "bytes": 13175722
   },
@@ -3510,7 +3510,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2610.19159",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2610.19159.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2610-19159.pdf",
     "sha256": "69baf9bc753f5f57de496d45a74faee9f3afaee13df50e7b8228db1a9aa769fb",
     "bytes": 5722151
   },
@@ -3521,7 +3521,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2507.06134",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2507.06134.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2507-06134.pdf",
     "sha256": "8036bbdb56f8ef225d928e44c4448be5c71e8663ddb48169115a98e6056e0ee5",
     "bytes": 2871416
   },
@@ -3532,7 +3532,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2602.08235",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2602.08235.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2602-08235.pdf",
     "sha256": "b4178cf1b74dcb71ed3777cb0cd6ea3b4bbd76f3b054a0ecb7a876ac80db60b2",
     "bytes": 2528634
   },
@@ -3543,7 +3543,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2603.14963",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2603.14963.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2603-14963.pdf",
     "sha256": "1796326eb21fabbe518a5d921f2b9d85ac161c32bdcd546367fee3437100a8d1",
     "bytes": 3329393
   },
@@ -3554,7 +3554,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2303.10130",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2303.10130.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2303-10130.pdf",
     "sha256": "af3edd4efc120c70f0e2e6dc7a4e314a41f1b9eb5a7e88bc25533db631f79632",
     "bytes": 2119311
   },
@@ -3565,7 +3565,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2305.14930",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2305.14930.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2305-14930.pdf",
     "sha256": "bf4f83d6579cf96586a754a669cb763e6d8c89d0a4536be7a431d32b29575603",
     "bytes": 3966488
   },
@@ -3576,7 +3576,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2307.07924",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2307.07924.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2307-07924.pdf",
     "sha256": "1cffa12eae0586ec7074fc660a90b4fe90e406e9c07f3a48819a899e4bf55fd1",
     "bytes": 3477144
   },
@@ -3587,7 +3587,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2603.21489",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2603.21489.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2603-21489.pdf",
     "sha256": "7db67ce0a2b2d4188149b5d84dd44f2a2aab6dc6edd1de02d5508ff561834e62",
     "bytes": 3324961
   },
@@ -3598,7 +3598,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2510.01285",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2510.01285.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2510-01285.pdf",
     "sha256": "333545f7d918b877eb02579a04da724b0823e7886f232983453975797f5b19be",
     "bytes": 2861833
   },
@@ -3609,7 +3609,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2606.10662",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2606.10662.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2606-10662.pdf",
     "sha256": "9637a7c7d8a09d2181f75c3150c9fac0d00333147b11d100ea5b1c89fed29e17",
     "bytes": 635744
   },
@@ -3620,7 +3620,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2610.04862",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2610.04862.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2610-04862.pdf",
     "sha256": "1df39f09ce0cf67489711bf2f62b0259ea717eb0b57df03505ffc1b9aa9bce07",
     "bytes": 1990742
   },
@@ -3631,7 +3631,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2608.12253",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2608.12253.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2608-12253.pdf",
     "sha256": "5b8c0cb6ddf3e053f437ec9e753285c26f60cd49906bf0b87b9fae91933ff80c",
     "bytes": 3259309
   },
@@ -3642,7 +3642,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2609.01491",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2609.01491.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2609-01491.pdf",
     "sha256": "5068771ccde165fd8d41bc190a58c5ff241ad3874f73c1491c0289cf719ad59c",
     "bytes": 1129808
   },
@@ -3653,7 +3653,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2510.25779",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2510.25779.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2510-25779.pdf",
     "sha256": "d1a309d06fd3b211d6ef470a6721713403596a140c5e3f9b4abc38fe01099aa4",
     "bytes": 2957137
   },
@@ -3668,7 +3668,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2304.03442",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2304.03442.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2304-03442.pdf",
     "sha256": "1b31e77fb24d25d7598f2c49e955d12a28b95a6dabad34acdac40f44bfb7a139",
     "bytes": 11947867
   },
@@ -3679,7 +3679,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2107.03374v2",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2107.03374v2.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2107-03374.pdf",
     "sha256": "ebae72ea0e8a5eb2ecbccdb985aec6cc1254a7c4d29e6d4de7866db1e66c4855",
     "bytes": 1885177
   },
@@ -3690,7 +3690,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2510.01171v4",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2510.01171v4.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2510-01171v4.pdf",
     "sha256": "b93019722dcfd841279113c91d9fb812d71090e0158d30899db89c77a1900a64",
     "bytes": 12246083
   },
@@ -3701,7 +3701,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2512.01127v1",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2512.01127v1.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2512-01127v1.pdf",
     "sha256": "6b668c12609cd1fc24a26969f93c7438c300195b77afef99a2d50d4f5cd955a8",
     "bytes": 1264829
   },
@@ -3712,7 +3712,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2506.02355v2",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2506.02355v2.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2506-02355v2.pdf",
     "sha256": "5daad4497bf1a2af73ee663688ec7873b5d26aa883c5c246acfc0f0fa1e56292",
     "bytes": 941634
   },
@@ -3723,7 +3723,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2412.21139v2",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2412.21139v2.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2412-21139.pdf",
     "sha256": "5c35e277544323fcc4ce8929e208bb8cc32efbbd40b8069c7daa084548d79396",
     "bytes": 589198
   },
@@ -3738,7 +3738,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2203.11171",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2203.11171.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2203-11171.pdf",
     "sha256": "1a49ce0373afc89d2d6e97fb1aa8230f6b818c70590d732a3187f753f4df6aba",
     "bytes": 10505941
   },
@@ -3749,7 +3749,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2406.16838v2",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2406.16838v2.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2406-16838v2.pdf",
     "sha256": "eb0d6904ecab0092396f6606db799c6b9e0c3cb2bd3d099bbccc993a0213004b",
     "bytes": 1307596
   },
@@ -3760,7 +3760,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2303.17651v2",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2303.17651v2.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2303-17651v2.pdf",
     "sha256": "81e44592314d80218ad108d3490cd0b84ba5962fefd5c84819987afd77a57087",
     "bytes": 2014949
   },
@@ -3771,7 +3771,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2304.05128v2",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2304.05128v2.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2304-05128v2.pdf",
     "sha256": "020e06b1fb9e1d4b6c33016a9471e8bd31f8ecfd7a22335d85956c14efa39f75",
     "bytes": 1419448
   },
@@ -3782,7 +3782,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2310.01798",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2310.01798.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2310-01798.pdf",
     "sha256": "15e1731e255ec6b217792a1e077926807da77e8e46b69e6c57dda30d67794761",
     "bytes": 385585
   },
@@ -3793,7 +3793,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2509.26626v2",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2509.26626v2.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2509-26626v2.pdf",
     "sha256": "edff4dc2dc6393dc958d752f8c766221d8eaee77328745fa4d2e3dbc7824ff35",
     "bytes": 1947227
   },
@@ -3804,7 +3804,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2609.00196v1",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2609.00196v1.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2609-00196v1.pdf",
     "sha256": "f4307846da7686ee75ef070fdc53112c8eb8ca557b9318da0a88838e56b9e602",
     "bytes": 628308
   },
@@ -3815,7 +3815,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2505.22954v3",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2505.22954v3.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2505-22954v3.pdf",
     "sha256": "13ff4abe0c7ad4a7dd3b4876d19a8bf940e39e70dabbf06065aa774a6c3457de",
     "bytes": 3825399
   },
@@ -3826,7 +3826,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2602.04837v1",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2602.04837v1.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2602-04837v1.pdf",
     "sha256": "967517dbde132a515386f9c8ac25969be2578658a7b9a7927c893751b009c3c4",
     "bytes": 4331505
   },
@@ -3837,7 +3837,7 @@
     "http_status": 200,
     "final_url": "https://arxiv.org/pdf/2407.01476",
     "content_type": "application/pdf",
-    "raw_path": "raw/optional-readings/arxiv-2407.01476.pdf",
+    "raw_path": "raw/optional-readings/arxiv-2407-01476.pdf",
     "sha256": "0b21710f26db2e9383f768cdaea5755f1a39fb0b5eafffdfa5451a33d106e130",
     "bytes": 3312735
   }

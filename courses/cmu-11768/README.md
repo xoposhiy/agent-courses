@@ -263,7 +263,7 @@ Repository files and saved traces are linked from each repository archive index.
 - [LangSmith: Evaluation](markdown/optional-readings/ref-1cb888b65fa5.md)
 - [LangChain: Testing](markdown/optional-readings/ref-adb9c7fcd887.md)
 - Course support demo: password-reset trace — downloaded; conversion not_available. [Saved response](raw/optional-readings/ref-612df9ac7b00.html). See [gaps](GAPS.md).
-- Course support demo: billing trace before approval — downloaded; conversion not_available. [Saved response](raw/optional-readings/ref-ce2d7d4d3fa3.html). See [gaps](GAPS.md).
+- Course support demo: billing trace before approval — downloaded; conversion not_available. [Saved response](raw/optional-readings/ref-612df9ac7b00.html). See [gaps](GAPS.md).
 - Course support demo: billing trace after approval — downloaded; conversion not_available. [Saved response](raw/optional-readings/ref-7683706f13ec.html). See [gaps](GAPS.md).
 - [Docent: Pairwise comparisons and failure-mode synthesis](markdown/optional-readings/docent-plan-81230a32-88e0-42af-82c9-101660ab1d89.md) — recovered from another source; see [gaps](GAPS.md).
 - [Hodoscope announcement](markdown/optional-readings/ref-18261f112927.md)

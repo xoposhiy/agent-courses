@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-11-13T17:39:24.846270+00:00",
+  "checked_at": "2026-11-13T21:06:46.015926+00:00",
   "courses": [
     {
       "id": "stanford-cs329z",
       "folder": "courses/stanford-cs329z",
       "raw_files": 427,
       "markdown_files": 278,
-      "bytes": 397704615,
+      "bytes": 397704881,
       "local_links_checked": 1436,
       "broken_local_links": [],
       "manifest_type": "dict",
@@ -50,9 +50,9 @@
     {
       "id": "cmu-11768",
       "folder": "courses/cmu-11768",
-      "raw_files": 1491,
+      "raw_files": 1303,
       "markdown_files": 721,
-      "bytes": 2149173322,
+      "bytes": 1399837198,
       "local_links_checked": 7950,
       "broken_local_links": [],
       "manifest_type": "dict",
@@ -76,7 +76,7 @@
       "folder": "courses/langchain-deep-agents",
       "raw_files": 946,
       "markdown_files": 606,
-      "bytes": 149020100,
+      "bytes": 149020740,
       "local_links_checked": 5400,
       "broken_local_links": [],
       "manifest_type": "dict",
@@ -123,7 +123,7 @@
       "folder": "courses/dlai-agentic-evals",
       "raw_files": 98,
       "markdown_files": 38,
-      "bytes": 32180951,
+      "bytes": 32181645,
       "local_links_checked": 228,
       "broken_local_links": [],
       "manifest_type": "dict",
@@ -171,7 +171,7 @@
       "folder": "courses/agentic-large-language-models",
       "raw_files": 265,
       "markdown_files": 26,
-      "bytes": 128947266,
+      "bytes": 128947330,
       "local_links_checked": 770,
       "broken_local_links": [],
       "manifest_type": "dict",
@@ -190,15 +190,15 @@
   "errors": [],
   "warnings": [],
   "root_navigation": {
-    "local_links_checked": 97,
+    "local_links_checked": 99,
     "broken_local_links": []
   },
   "totals": {
     "courses": 8,
-    "raw_files": 10784,
+    "raw_files": 10596,
     "markdown_files": 8520,
-    "bytes": 3708703130,
-    "local_links_checked": 38360,
+    "bytes": 2959368670,
+    "local_links_checked": 38362,
     "broken_local_links": 0
   }
 }

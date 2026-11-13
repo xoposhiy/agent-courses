@@ -386,7 +386,7 @@ def optional_target(url):
     name = 'ref-' + hashlib.sha256(url.encode()).hexdigest()[:12]
     if host.endswith('arxiv.org'):
         identifier = re.sub(r'^/(?:abs|pdf|html)/', '', parsed.path).removesuffix('.pdf')
-        return 'https://arxiv.org/pdf/' + identifier, 'arxiv-' + identifier
+        return 'https://arxiv.org/pdf/' + identifier, slug('arxiv-' + identifier)
     if host == 'aclanthology.org':
         return (url if parsed.path.endswith('.pdf') else url.rstrip('/') + '.pdf'), name
     if host == 'openreview.net':

@@ -1,6 +1,6 @@
 # OpenHands
 
-[Course index](../../README.md) · [Original source](https://raw.githubusercontent.com/OpenHands/OpenHands/HEAD/README.md) · [Raw file](../../raw/optional-readings/ref-b5a44c85aa77.md)
+[Course index](../../README.md) · [Original source](https://raw.githubusercontent.com/OpenHands/OpenHands/HEAD/README.md) · [Raw file](../../raw/optional-readings/ref-a04396a09788.md)
 
 Retrieved: 2026-11-13T16:57:33.954120+00:00
 
