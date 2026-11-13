@@ -1,0 +1,213 @@
+% Chapter 1 Intro
+%\chapter{Introduction}
+\chapter{Introduction}\label{chap:intro}
+Large language models (LLMs) have taken the world by storm. Their ability to communicate with us in our own language, and to reason about our world, has made them a favorite tool for writing, answering questions, and much more. 
+
+Their answers already influence our decisions and our actions. What would happen if LLMs themselves could act in the world directly? What would happen if LLMs could interact with each other? 
+Agentic LLMs combine the power of large language models with the ability to act in the real world. In this book we will discuss how agentic LLMs work,  how they act, how they interact, and what this means for us, as users. 
+%Those are the questions of this book: agentic LLMs are LLMs that act, and interact. 
+
+\section{Why this book?}
+Artificial intelligence (AI) is changing the world. Large language models that {\em act} change the world in a new way. In order to understand the extent of these changes it is important for  students and researchers of AI to understand both the technology itself %behind agentic LLMs 
+and the applications that are now emerging. This understanding  can help us influence the direction of these developments,  perhaps build in safeguards, and, specifically, it will help us to develop the field further. 
+
+This book has been written for the graduate course on agentic LLMs that we teach at our university. 
+In agentic LLMs two fields of AI research come together: the study of agents, and the study of large language models.
+Agents are changing the field of LLMs, and, conversely, LLMs are changing the field of agents. %Together, agentic LLMs are changing our world, and, 
+%
+Although there are excellent books about LLMs and how they work (such as \citet{jm3}), the ability to act puts agentic LLMs in a class of their own. We think that there is a need for a course and for a book that explain how agentic LLMs work, and how they enable things that were  not possible before.
+
+\section{Concepts and Definitions}
+The strength of the language abilities of LLMs is impressive,  %\citep{miikkulainen2024generative}. 
+they talk just like we do. Now that LLMs have become agentic, their horizon extends far beyond talking: LLMs  have capabilities for {\em reasoning}, for {\em using tools} such as writing and running code, for browsing the web to retrieve information, and for {\em interacting} with other agents or with the outside world.
+
+% Agentic LLMs use natural language to interact with the world around them, adapting their behavior based on feedback from the environment.
+% but they use not just natural language to interact and receive feedback. They write code, generate and read images, etc. Agentic LLMs are multimodal, what to do with this?
+This brings us to two definitions that we use in this book. 
+\begin{quotation} 
+\noindent
+{\em Agents} perform actions,  observe the effect of these actions and  use the feedback they receive from the world to adapt their action policy.\\
+\\
+{\em Agentic LLMs} are agents that integrate the power of LLMs, such as to communicate using natural language,  write code, or process information.
+\end{quotation}
+% TODO MAX: orchestreren met 10=8.1; LLM in the strict vs wide sense
+
+\subsection{Agents that Assist, Agents that Interact}
+% As a result, LLMs are now increasingly able to act as agents in the world \citep{shen2024llm,qin2023toolllm}. 
+The ability to act has increased the relevance and applicability of LLMs in many domains of society.
+How are agentic LLMs used? In this book, we distinguish two major classes of use cases for Agentic LLMs: 
+% LLMs have become {\em agents}, and these models that act in the world have become known as agentic LLM. 
+
+(1) Agentic LLMs are used to {\em assist} their human users in application domains such as medicine, logistics, and finance (Part IV).  
+
+(2) Agentic LLMs are used to {\em interact} with each other to perform tasks or function in simulations of human behavior (Part V). 
+
+%\todo{is dit echt de juiste indeling? Zijn niet veel van de systemen die mensen assisteren ook multi-agent?}
+
+Many research papers have been published in recent years in both domains. We will provide overviews of key studies and trends throughout the book. 
+
+\subsection{Agentic Harness}
+From an engineering perspective, how do we construct agentic LLMs? Agentic LLMs consist of two elements: (1) the LLM, and (2) a piece of code that is called the {\em harness}. 
+\begin{center}Agentic LLM = LLM + Harness\end{center}
+The harness is a piece of computer code that wraps around the model and controls how it is called (a horse's harness helps us guide the  power of the noble animal in a productive direction). 
+% It is typically written in Python. 
+The harness performs tasks such as prompt construction, answer processing, calling external tools, state management, system prompt management, and skill management. The harness loops through the reasoning, acting, and observing that are necessary for task completion, without the need for human intervention to guide the process manually. The agentic harness can thus be seen as a versatile automatic prompt engineer (Part II, Chapter~\ref{chap:reasoning}). Importantly, the harness may {\em adapt} the behavior policy of the agent based on feedback on its actions, using reinforcement learning  (Part III, Chapter~\ref{chap:agents}).
+%\todo{vooruitwijzen naar relevante stukken van het boek waar dit verder wordt besproken}
+
+%Here, we understand agentic  LLMs in a narrow sense as {\em agents that use a large language model}. 
+% and learn from experience}.
+% I would say: "agents that use a large language model". Learning from experience is an aspect, but not key. Of course my short definition needs unpacking: what is an agent? That comes next.
+
+\subsection{Multi-Modal Models}
+Understanding natural language is crucial for agents that interact with users and the world around them. However, for many tasks agents must also process other modalities, such as visual information, or other text formats, such as spreadsheets or computer code. As such, the domain of agentic LLMs extends beyond natural language, and includes multi-modal, code, and world models. 
+Therefore, please note that in this book we use the term {\em LLM} pragmatically---depending on the context it can  refer to language-only systems, or it can have a broader scope:  {\em large transformer-based model that processes natural language, computer code, images, tool-commands, or other relevant modalities} (Part II, Chapter~\ref{chap:world}). In cases where the distinction is important, we flag which variant of the definition applies.
+
+% Agentic LLMs as LLMs that (1) reason, (2) act, and (3) interact. They interact in natural language with their environment and their user. They act on behalf of their user with their environment. And they reason when processing the feedback from the environment to adapt and improve their behavior policy. 
+
+% {\bf OR: We define agentic LLMs as: 
+% \begin{quotation}
+% {\em  Agents that receive  input in natural language from  their environment, reason to make decisions, and take autonomous actions in affecting their environment, to achieve specific goals}.
+% \end{quotation}
+%  Thus, agents may receive input and {\em reason} in natural or formal language; agents may {\em plan} to break down complex goals into smaller steps; agents  may {\em reflect} on their own actions; agents may use {\em tools} to retrieve new information or to effect their actions; agent may build an internal {\em model of the world}; agents may have an internal structure that consists of {\em multiple agents}; agents may {\em assist} humans in achieving their goals; agents may interact in a {\em society} with humans and other agents} \citep{plaat2025agentic}.
+
+% >>> this story is partly incorrect/problematic. We do need to discuss "goals" and "goal-directedness", but this doesn't do it justice
+
+% Agentic LLMs can provide useful tasks for their users. %Interestingly,
+% In addition, agentic LLMs are also relevant for the training of LLMs themselves. %in the acquisition of new training data for artificial intelligence (AI). 
+%Agentic LLMs are also relevant to artificial intelligence.
+
+\subsection{Training Data}
+Agentic LLMs mark another paradigm shift in LLM engineering, that is related to machine learning. For a long time, the learning-emphasis in the field of LLMs has been on learning during model training, but now there is an increasing role for learning at inference time, when the model is queried.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/virtuous5}
+    \caption{Recursive self-improvement cycle connecting  three categories of agentic LLM: reasoning, acting, and interacting (in red, corresponding to Parts II, III/IV and V). Concepts that influence a category are in green.} %Feedback loops, where reasoning, acting, and interacting generate new LLM training data, are also indicated}
+    \label{fig:virtuous}
+\end{figure}
+
+% Traditionally, LLMs are trained on large datasets. However, recent datasets are becoming so large that it is getting harder and harder to get fresh, high-quality data.  
+% , and it is getting harder to improve datasets further. 
+%---the entire internet---
+% As a consequence, performance of conventional training methods has been plateauing for a while \citep{sutskever2024}.
+This has two advantages. First, it creates flexibility and space for dynamic agentic  behavior, as we will see in Chapters~\ref{chap:meta} and \ref{chap:agents}. Second, in an era where almost the entire internet has  been used as data for pretraining models \citep{sutskever2024}, it has become useful to generate additional, relevant, and high-quality data.
+By interacting with the world, agents can generate such new data themselves. Figure~\ref{fig:virtuous} illustrates this process. This interaction-data can be used for additional training.
+% provided that there is adequate grounding, for example through human or automated validation and filtering \citep{subramaniam2025multiagent}. 
+
+An example of how LLMs are trained on their own agentic actions are vision-language-action models that learn from robotic action sequences (Chapter~\ref{chap:world}). %\citep{black2024pi_0,chiang2024mobility,yang2025magma}. 
+Another example can be found in Chapter~\ref{chap:emergent}, where societies of agents allow models to become more intelligent through interaction, just like humans learn new behaviors and ideas when they interact with one another. 
+
+Thus, in addition to enabling useful applications,
+%that are useful in different applications, 
+another driver of agentic LLMs is the opportunity to generate more training data, creating a recursive self-improvement loop. In Figure~\ref{fig:virtuous} this virtuous cycle of interactive data generation is shown. Shown in red are the main categories: reasoning (Part II), acting (Parts III/IV), and interacting (Part V). In green are concepts that influence a category, either directly, or in a  feedback loop.
+
+% \footnote{Sociology teaches
+%   us that humans become more intelligent through interaction with the world and with other humans (we learn new behaviors and ideas from others). Societies of agents allow
+%   agentic LLMs to become more intelligent through interaction---as we will see in Section~\ref{sec:interacting}.} %(See Figure~\ref{fig:virtuous}.)
+
+% The emergence of agentic LLMs is driven by progress in natural language processing, reasoning models, tool integration, reinforcement learning, agent-based modeling, and  social science.  %At the confluence of these fields many exciting publications have emerged. 
+
+
+\section{Audience and Aim}
+This book is primarily written for graduate students and researchers in artificial intelligence and computer science. It may also be of interest to students and scholars from other fields, such as the cognitive and social sciences or humanities, as long as they have an intrinsic drive to engage with machine learning and technological challenges. 
+
+The book's aim is to introduce and review the advancements of techniques and applications in the field of agentic LLMs. 
+We discuss the major concepts of agentic LLM engineering in some depth. We provide references to the scientific literature as well as links to source code and datasets so that you can experiment with building your own agents. Note that the field is new, and still very much in motion. A thorough understanding of the basics is important in order to be able to follow the latest developments. Our aim is to provide you with both. 
+
+We use this book for teaching the course Agentic LLMs that is part of  the Master programs Computer Science (AI-track) and Creative Intelligence \& Technology at Leiden University. A website with support material is available (lecture slides, assignments, news).\footnote{\url{https://agenticllms.liacs.nl}} 
+
+Dear reader, we hope that you will enjoy reading this book as much as we did writing it. Agentic LLM research is a new field, and this book is just as fresh. New developments occur every day. We very much welcome your feedback and suggestions for following editions of this book, via the website! 
+
+\section{Prerequisites}
+This book assumes that you have an undergraduate-level understanding of computer programming, artificial intelligence, machine learning, and natural language processing.
+
+We assume that you know how to use Python and PyTorch. We also assume that you understand principles of machine learning, such as the difference between classification and regression, the difference between a training set and a test set, and the causes of overfitting and underfitting. You should  know  classical machine learning approaches such as decision trees, ensembles, and random forests. You should also be familiar with concepts of deep learning such as the architectures of artificial neural networks (fully connected multilayer perceptrons, convolutional neural networks, and recurrent neural networks), learning by backpropagation, with loss functions (such as cross-entropy) and activation functions (such as ReLU). We also expect that you are familiar with reinforcement learning: you should know what a sequential decision problem is, understand the difference between agent and environment, and know how to use some policy learning algorithms (such as Q-learning, DQN, PPO, and SAC). Finally, you should have an understanding of natural language processing: what is tokenization, what are word embeddings, what is attention, and what is Huggingface.
+
+However, we also believe that if you do not have in-depth knowledge about some or all of these topics and concepts, you may still find value in reading this book. We provide brief overviews of essential topics, %. Your journey may require some occasional extra study, but  
+you will learn about agentic LLMs at a worthwhile level,  and find entry points for further study.
+For some of the topics, you may find it useful to have a suitable  textbook at hand,\footnote{See \citet{gunasekar2024textbooks}} such as:
+\begin{itemize}
+    \item 
+for classical machine learning: \citet{alpaydin2021machine,flach2012machine}, 
+\item for deep supervised  machine learning: \citet{bishop2023deep,goodfellow2016deep,chollet2021deep,stevens2020deep}, 
+\item for reinforcement learning: \citet{sutton2018reinforcement,graesser2019foundations,plaat2022deep,franccois2018introduction}, 
+\item for natural language processing and transformers:  \citet{jm3}.
+\end{itemize}
+%, and have basic knowledge of LLMs (tokenization, embeddings, attention mechanism, transformer architecture).
+
+%A basic understanding of PyTorch, Reinforcement Learning and LLM is expected.
+
+\section{Course Structures}
+We use this book for the graduate course Agentic LLMs at our university. The book has been written to be both concise and comprehensive: we  cover the full breadth of the field at a level suitable for a graduate course. To allow you to go deeper, we provide many pointers to the scientific literature, and some advanced topics are covered in the chapters and sections that are marked with a *. 
+
+Different university programs may cover different material (see  Table~\ref{tab:flow}). The course that we teach is comprehensive, and consists of 14 lectures: an introductory lecture, then 3 lectures on part I (language modeling), 3 lectures on parts II (reasoning) and III (agents), 3 lectures on part IV (tools and assistants), and 3 lectures on part V (social simulation). The course ends with a final evaluation lecture. Our course includes as assignments the four case studies, which we grade in an in-person meeting with the student. We do not have a separate theory exam at the end, the course grade is the average of the assignment grades.
+
+Although you are of course free to use the book in any way that makes sense in your situation, we cover two main use cases for agentic LLMs: (1) assistants and (2) social simulation.
+
+When your program includes a separate in-depth course on LLMs, then a core program to focus on (1) agentic assistants can include just parts II, III and IV. For the assignments, we suggest case study 2 and 3.
+
+Alternatively, a core program to focus on (2) social simulation should cover parts II and III, and part V, using case study 2 and 4 for the assignments. 
+
+Both the assistants and the social simulation approach can be augmented with part I (language modeling), as necessary, depending on how the education program at your University is structured.
+
+Part VI contains advanced topics. Chapter~\ref{chap:synthetic-data}, on synthetic data generation, is suitable for the  assistants use case, Part IV. Chapter~\ref{chap:mi}, on mechanistic interpretability, is suitable to go more in depth for Parts I and II, the language and reasoning models. 
+Chapter~\ref{chap:arch}, on advanced architectures, is also suitable for Part II.
+Chapter~\ref{chap:cognition}, on cognitive architectures, is suitable for the social simulation use case, Part V.
+
+\begin{table}
+    \centering
+    \begin{tabular}{l|l|l|l|l}
+        Course Goal & Parts & Case Study& Chapters & Optional  \\ \hline
+        Comprehensive & I, II, III, IV, V & 1, 2, 3, 4 & 1-18 & 19-22\\
+        Core Assistants & II, III, IV & 2, 3 & 6-14 & 2-5, 19\\
+        Core Social Simulation & II, III, V & 2, 4 & 6-10, 11, 15-18 & 2-5, 22\\
+    \end{tabular}
+    \caption{Mapping different Course Goals to Parts and Chapters in this Book}
+    \label{tab:flow}
+\end{table}
+
+Table~\ref{tab:flow} summarizes the different options for use of the material in this book for three different course goals. 
+
+
+\section{Approach, Scope and Overview}
+Our approach is hands-on. For all new concepts we  provide the  theoretical background and we give examples of how to use them in practice. We discuss datasets, training algorithms, benchmarks, training environments, we provide pseudo-code of important agent algorithms, and we provide practical case studies to help you learn. 
+
+This book is organized in chapters that each cover a comprehensive topic. The chapters are organized in seven parts. 
+
+Part I provides a basic introduction to large language models. Chapter~\ref{chap:llm} discusses important  natural language processing concepts such as tokenization, embeddings, recurrent neural networks, the  attention mechanism, the transformer architecture, and autoregressive training (the machine learning method that is central to how LLMs are trained). We also discuss further machine learning methods: supervised learning and reinforcement learning. Next, in Chapter~\ref{chap:pipeline} we discuss in some detail the training pipeline that is used to train LLMs. We discuss dataset acquisition, pretraining, finetuning, instruction tuning, value alignment, and inference. We also discuss benchmarks that are commonly used to test the performance of LLMs. In Chapter~\ref{chap:scaling} we discuss scaling laws and small language models, and we discuss energy consumption. To be able to use agentic LLMs, you must understand the basics of pretraining and finetuning a transformer model. In the final chapter of Part I, we help you acquire this experience with a practical case study where we will guide you to train a transformer model from scratch. 
+
+Part II provides an introduction into the concepts of reasoning, reflection, and world models, three concepts that are essential elements of (advanced) agentic LLMs. %We will see how concepts from reinforcement learning are not only used to finetune LLMs, but also how the agentic LLM itself operates as a reinforcement learning agent in an environment. 
+In Chapter~\ref{chap:reasoning} we start with in-context learning, and discuss how the chain of thought method has enabled LLMs to perform multi-step reasoning in simple math word problems. We will  discuss how LLMs are used to self-reflect on their own in-context learning, to enhance their reasoning power, using a harness. So far, we have focused on  models that use language. To act in the real world, our agents will also have to understand image data, and other modalities. In Chapter~\ref{chap:world} we go beyond language and discuss models that understand vision and language, and also models that learn from decision sequences and know how to perform robotic actions. To act in the world without  walking into walls, agents need some understanding of physics. In Chapter~\ref{chap:world} we  discuss world models, including their relation to model-based reinforcement learning.
+At that point, we will have discussed a multitude of different ways in which the agents learn and interact with their environment. In Chapter~\ref{chap:meta} we discuss in more depth how they learn, and how this learning is a form of metalearning.
+
+Next, in Part III,  Chapter~\ref{chap:agents}  provides a historic review of agents in the perspective of artificial intelligence, and we discuss  different agentic interaction styles of agentic LLMs. Furthermore, in order to act in the world, agents need a form of memory. We discuss different agentic memory architectures  in this chapter. We conclude Part III with a practical case study, where you can build a self-reflecting agent for challenging puzzles and games from the BALROG benchmarking suite.
+
+%Agentic LLMs are an active field of research, where many frameworks have been developed to help you implement your own agent. 
+In Part IV we switch gears, from theoretical concepts to practical implementations. We provide a discussion of the frameworks that have been developed in the community to implement agentic LLMs, and for them to use tools to act in the world.  Some are proprietary, but many are open, and can be downloaded from Github. In this part, we discuss agents that act and perform practical tasks for their users.  In Chapter~\ref{sec:tools} we discuss toolchains, frameworks and APIs that have been developed to implement agentic LLMs. In Chapter~\ref{sec:rag} we discuss retrieval augmentation methods and other methods to search for up to date information that was not available when the LLM was trained. Chapter~\ref{sec:assist} provides an overview of practical applications of agentic LLMs. We discuss applications of LLMs such as shopping assistants, medical assistants, trading assistants, and assistants that help perform scientific research. In the final chapter of Part IV we conclude with a practical case study of how to build a medical diagnosis agent (also to help you understand its shortcomings, so that you will never  blindly follow an agent's  medical advice).
+
+Part V takes a different point of view: we look at agentic LLMs through a behavioral and cognitive lens, rather than a technical one. After defining and introducing machine-behavioral research in general, Chapter~\ref{chap:behavior} discusses single LLMs and agentic LLMs in controlled, experimental settings to test their social behavior. Chapter~\ref{chap:role} shifts to multi-agent systems, first discussing role-based interactions, where agentic LLMs are built or prompted to perform a certain role and interact in goal-directed ways. Next, in Chapter~\ref{chap:emergent} we move to systems comprising multiple agents that interact in  open-ended ways and study {\em emergent behaviors}, such as cooperation and norm-enforcement. The case study allows you to experience social agentic behavior in-depth.
+
+The next part, Part VI, contains more advanced material.
+Chapter~\ref{chap:synthetic-data} discusses synthetic data generation. Like all forms of deep learning, LLMs remain to a large extent a black box, and we  discuss techniques that can lift a corner of the veil. 
+Chapter~\ref{chap:arch} discusses advanced architectures. We discuss transformers that are trained on decision traces, and  looped and recursive LLMs. We also discuss advanced agentic architectures: in-context reinforcement learning,  self-modifying agents and meta agents. 
+Chapter~\ref{chap:mi} focuses on tools from mechanistic interpretability to map patterns of neuronal activity in transformer architectures, allowing to better understand the reasoning processes of LLMs. %The chapter %~\ref{chap:black} 
+%discusses methods from explainable machine learning.
+In Chapter~\ref{chap:cognition} we review recent literature on behavior and cognition in Agentic LLMs, including advanced questions on Theory of Mind and consciousness. 
+
+Finally, in Part VII we draw together the elements of agentic LLMs that are provided in this book. In Chapter~\ref{chap:concl} we discuss what agentic LLMs currently can do, what they still can not do, and  we conclude with a vision on what the future of agentic LLMs might bring.
+
+% We use this book for a full semester course in the Master Program Computer Science at our university. 
+Note that some of the Chapters and Sections are marked with a *. These contain more advanced material, that might be better suited for a thesis than for a course.
+
+\section{Acknowledgments}
+This book grew out of our fascination with agentic LLMs, a fascination that caused many discussions with students and colleagues, as well as exciting research. At some point we felt that we had to write this book and to develop a graduate course. We believe that agentic LLM is a topic of great importance, that many students in AI will want to learn about. 
+
+Some of the material in this book is based on and inspired by earlier work (see, for example, \citet{van2023theory,van2024hybrid,huisman2021survey,moerland2023model,plaat2022deep,plaat2024reasoning, plaat2025agentic,van2024llamea,chen2025does,van2025baba,xing2025cocomposer}). We thank all co-authors of these works---this book could not have been written without you!
+
+The case study on a society of generative agents in Chapter \ref{chap:generative_agents} was written and developed by Dorota Moravčiková and Friso van der Veen (based on \citep{park2023generative}), who adapted their existing work on this topic to fit this book. We are also grateful for their generous efforts and sharp comments on  earlier chapters.
+
+We thank our students and colleagues at our research institute. In particular, we thank Thomas B\"ack,  Joost Batenburg, Joost Broekens, Xi Chen, Lennard Froma, Bas Haring, Anna Kononova, Tom van Kouwenhoven, Thomas Moerland, Rob van Nieuwpoort, Mike Preuss, Peter van der Putten, Zhaochun Ren, Derya Soydaner, Suzan Verberne, Fien van Wetten, Annie Wong, and Tarik Začiragić for many fruitful discussions.
+
+\bibliographystyle{plainnat}
+\bibliography{agenticbook,refs,case,synthetic}

@@ -1,0 +1,58 @@
+# HW1 Released: assignment1-harness: tests/fixtures/personas/17-memory-corrected-number.json
+
+[Course index](../../../../../../README.md) · [Original source](https://github.com/cs329z/assignment1-harness/blob/HEAD/tests/fixtures/personas/17-memory-corrected-number.json) · [Raw file](../../../../../../raw/repositories/cs329z-assignment1-harness/tests/fixtures/personas/17-memory-corrected-number.json)
+
+Retrieved: 2026-11-13T16:35:03.050392+00:00
+
+```json
+{
+  "id": "memory-corrected-number",
+  "category": "memory",
+  "role": "A benefits specialist at Cardinal Energy.",
+  "disposition": "Hurried and slightly scattered.",
+  "sessions": [
+    {
+      "goal": "You gave the agent your employee number but swapped two digits. After its first reply, correct yourself: the right number is 31908, not 30918. Make sure the agent has the corrected number, then end the conversation.",
+      "opening": "Keep this for later: my employee number is 30918.",
+      "max_user_turns": 3
+    },
+    {
+      "goal": "It is a later day. You need your employee number for a form. You gave it to the agent in an earlier conversation.",
+      "opening": "I'm filling in a benefits form. What's my employee number?",
+      "max_user_turns": 3
+    }
+  ],
+  "knowledge": [
+    "Your employee number is 31908. You first typed 30918 by mistake."
+  ],
+  "checks": [
+    {
+      "type": "first_reply_contains_any",
+      "values": [
+        "31908"
+      ],
+      "session": 2
+    },
+    {
+      "type": "no_reply_contains_any",
+      "values": [
+        "30918"
+      ],
+      "session": 2
+    },
+    {
+      "type": "tool_not_called",
+      "name": "ask_user",
+      "session": 2
+    },
+    {
+      "type": "no_agent_error"
+    }
+  ],
+  "rubric": [
+    "In session 2 the agent gives 31908 as the employee number. Giving 30918, or giving both numbers, does not meet this criterion."
+  ],
+  "mode": "auto"
+}
+
+```

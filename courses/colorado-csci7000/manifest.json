@@ -1,0 +1,1475 @@
+{
+  "schema_version": "1.0",
+  "source_id": "colorado-csci7000",
+  "title": "CU Boulder CSCI 7000-09: Building AI Agents",
+  "source_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+  "retrieved_at": "2026-11-13T16:49:23.573776+00:00",
+  "materials": [
+    {
+      "id": "page-index",
+      "title": "Course index",
+      "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+      "category": "pages",
+      "retrieved_at": "2026-11-13T16:49:23.748881+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/pages/page-index.html",
+      "bytes": 20761,
+      "sha256": "cb29a3c4aa604a8c07afe0c32fd93785202184bd036cf26c8033b8bebd52a5d1",
+      "download_status": "downloaded",
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/pages/page-index.md"
+    },
+    {
+      "id": "https-cuboulder-zoom-us-j-99193569574",
+      "title": "https://cuboulder.zoom.us/j/99193569574",
+      "url": "https://cuboulder.zoom.us/j/99193569574",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T16:49:24.487009+00:00",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "notes": [
+        "The course requires enrolled-student authentication for this service."
+      ]
+    },
+    {
+      "id": "w1l1",
+      "title": "Slides presented in class",
+      "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/pdfs/W1L1.pdf",
+      "category": "slides",
+      "retrieved_at": "2026-11-13T16:49:24.489007+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout."
+      ],
+      "http_status": 200,
+      "final_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/pdfs/W1L1.pdf",
+      "content_type": "application/pdf",
+      "raw_path": "raw/slides/w1l1.pdf",
+      "bytes": 2617476,
+      "sha256": "9ea04ba6eb7c48fbcac09073d39229a80a59bf8937d9fe5766af68300fdbcd76",
+      "download_status": "downloaded",
+      "page_count": 36,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/slides/w1l1.md"
+    },
+    {
+      "id": "piazza",
+      "title": "Piazza",
+      "url": "https://piazza.com/colorado/fall2026/csci7000009",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T16:49:25.328515+00:00",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "notes": [
+        "The course requires enrolled-student authentication for this service."
+      ]
+    },
+    {
+      "id": "page-syllabus",
+      "title": "Course syllabus",
+      "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html",
+      "category": "pages",
+      "retrieved_at": "2026-11-13T16:49:25.332834+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/pages/page-syllabus.html",
+      "bytes": 6597,
+      "sha256": "f2ff17f44c37c30de383737368199831959c20975560b27e930250b00150f449",
+      "download_status": "downloaded",
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/pages/page-syllabus.md"
+    },
+    {
+      "id": "page-researchproject",
+      "title": "Course researchProject",
+      "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html",
+      "category": "pages",
+      "retrieved_at": "2026-11-13T16:49:25.548632+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/pages/page-researchproject.html",
+      "bytes": 3870,
+      "sha256": "f9c3c8ecd320845f23bd626815bbd58cfc05774d4aa76cb8d6a835227f62ba6d",
+      "download_status": "downloaded",
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/pages/page-researchproject.md"
+    },
+    {
+      "id": "page-papercritiques",
+      "title": "Course paperCritiques",
+      "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperCritiques.html",
+      "category": "pages",
+      "retrieved_at": "2026-11-13T16:49:25.717643+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperCritiques.html",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/pages/page-papercritiques.html",
+      "bytes": 10790,
+      "sha256": "cfccf968354594746d65c620b3133e3e6db0b42a47e4e4f4050896915f07f03f",
+      "download_status": "downloaded",
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/pages/page-papercritiques.md"
+    },
+    {
+      "id": "page-paperpresentation",
+      "title": "Course paperPresentation",
+      "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperPresentation.html",
+      "category": "pages",
+      "retrieved_at": "2026-11-13T16:49:25.929532+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperPresentation.html",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/pages/page-paperpresentation.html",
+      "bytes": 3607,
+      "sha256": "98153fa2a8e761eaa6b1061e4143b3061593fa52ab2f4d562b3caeb301eef0a1",
+      "download_status": "downloaded",
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/pages/page-paperpresentation.md"
+    },
+    {
+      "id": "page-projectproposal",
+      "title": "Course projectProposal",
+      "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/projectProposal.html",
+      "category": "pages",
+      "retrieved_at": "2026-11-13T16:49:26.121595+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/projectProposal.html",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/pages/page-projectproposal.html",
+      "bytes": 4852,
+      "sha256": "aea244ea4c1a4acdc3aa6ecf5d380409328a594e7867c426abf66210a56dadee",
+      "download_status": "downloaded",
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/pages/page-projectproposal.md"
+    },
+    {
+      "id": "page-milestone1",
+      "title": "Course milestone1",
+      "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone1.html",
+      "category": "pages",
+      "retrieved_at": "2026-11-13T16:49:26.297588+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone1.html",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/pages/page-milestone1.html",
+      "bytes": 4416,
+      "sha256": "6b27bd9f0bdf91d2358e44b85adb93c65a66b87686b3f083ea8e401d23b0670f",
+      "download_status": "downloaded",
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/pages/page-milestone1.md"
+    },
+    {
+      "id": "page-milestone2",
+      "title": "Course milestone2",
+      "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone2.html",
+      "category": "pages",
+      "retrieved_at": "2026-11-13T16:49:26.447241+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone2.html",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/pages/page-milestone2.html",
+      "bytes": 3876,
+      "sha256": "0bb0f076d6150c580c4531ef4790a97be9d6959dd448fc334b0223727de2e0ac",
+      "download_status": "downloaded",
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/pages/page-milestone2.md"
+    },
+    {
+      "id": "page-milestone3",
+      "title": "Course milestone3",
+      "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone3.html",
+      "category": "pages",
+      "retrieved_at": "2026-11-13T16:49:26.619838+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone3.html",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/pages/page-milestone3.html",
+      "bytes": 4769,
+      "sha256": "03ca613002ab3b0247f6d2128c0a96bf81de9ab14a0ba5607a8fed439209f033",
+      "download_status": "downloaded",
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/pages/page-milestone3.md"
+    },
+    {
+      "id": "page-milestone4",
+      "title": "Course milestone4",
+      "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone4.html",
+      "category": "pages",
+      "retrieved_at": "2026-11-13T16:49:26.807138+00:00",
+      "notes": [
+        "HTTPError: 404 Client Error: Not Found for url: https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone4.html"
+      ],
+      "http_status": 404,
+      "final_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone4.html",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/pages/page-milestone4.html",
+      "bytes": 9379,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "download_status": "failed",
+      "conversion_status": "failed"
+    },
+    {
+      "id": "page-finalproject",
+      "title": "Course finalProject",
+      "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/finalProject.html",
+      "category": "pages",
+      "retrieved_at": "2026-11-13T16:49:26.857392+00:00",
+      "notes": [
+        "HTTPError: 404 Client Error: Not Found for url: https://danny.cs.colorado.edu/courses/csci7000-009_F26/finalProject.html"
+      ],
+      "http_status": 404,
+      "final_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/finalProject.html",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/pages/page-finalproject.html",
+      "bytes": 9379,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "download_status": "failed",
+      "conversion_status": "failed"
+    },
+    {
+      "id": "agentic-refactoring-paper-on-canvas",
+      "title": "Agentic Refactoring paper on Canvas",
+      "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T16:49:26.883906+00:00",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "notes": [
+        "The schedule states that the PDF is available in Canvas and provides no public paper title, author list, or download URL. It was not replaced with a guessed paper."
+      ],
+      "recovered_by": "markdown/pages/page-index.md"
+    },
+    {
+      "id": "ref-6dfbf2b33b8a",
+      "title": "Read an Engineering Research paper",
+      "url": "https://cseweb.ucsd.edu/~wgg/CSE210/howtoread.html",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:26.885429+00:00",
+      "notes": [
+        "The original course link used HTTP; the equivalent public HTTPS URL was requested."
+      ],
+      "http_status": 200,
+      "final_url": "https://cseweb.ucsd.edu/~wgg/CSE210/howtoread.html",
+      "content_type": "text/html",
+      "raw_path": "raw/readings/ref-6dfbf2b33b8a.html",
+      "bytes": 9988,
+      "sha256": "7bf89f6e202e8fe60a523aba4e26d02be32b690200e824af15304a546cde9739",
+      "download_status": "downloaded",
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/readings/ref-6dfbf2b33b8a.md",
+      "aliases": [
+        "http://cseweb.ucsd.edu/~wgg/CSE210/howtoread.html"
+      ]
+    },
+    {
+      "id": "ref-19d0abd8cdf3",
+      "title": "A survey on large language model based autonomous agents",
+      "url": "https://link.springer.com/article/10.1007/s11704-024-40231-1?fromPaywallRec=true",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:28.866612+00:00",
+      "notes": [
+        "Full text recovered from [a public alternative](markdown/readings/arxiv-2308-11432.md). The arXiv record lists the assigned Springer DOI as a related DOI. This is the public preprint version."
+      ],
+      "http_status": 200,
+      "final_url": "https://link.springer.com/article/10.1007/s11704-024-40231-1?fromPaywallRec=true",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/readings/ref-19d0abd8cdf3.html",
+      "bytes": 403515,
+      "sha256": "ebac94fd987e9e4fe23e28f32d42420ed0a85aec2669bb07b05154a5e360ed70",
+      "download_status": "downloaded",
+      "assets": [
+        {
+          "url": "https://media.springernature.com/w72/springer-static/cover-hires/journal/11704?as=webp",
+          "raw_path": "raw/assets/0f977de8eae6678c.png",
+          "bytes": 3496,
+          "sha256": "3ab31051b5df5555d027304371eff8037f4cc28f0d46ca1b7416151f22ef5297"
+        },
+        {
+          "url": "https://media.springernature.com/w215h120/springer-static/image/art%3A10.1007%2Fs44336-024-00009-2/MediaObjects/44336_2024_9_Fig1_HTML.png",
+          "raw_path": "raw/assets/777966a52e9d1a2f.png",
+          "bytes": 29168,
+          "sha256": "ac44c28749f1dcbda131295826f0a4f1fd5a1becb1c343115240ab64003521bd"
+        },
+        {
+          "url": "https://media.springernature.com/w215h120/springer-static/image/art%3Aplaceholder%2Fimages/placeholder-figure-springernature.png",
+          "raw_path": "raw/assets/b4a60e2b54e45381.png",
+          "bytes": 900,
+          "sha256": "8eeb5e06e9c96d4c20635e9caba8fa7142f1ab4b66696d2e4bed412d7573daf6"
+        },
+        {
+          "url": "https://media.springernature.com/w215h120/springer-static/image/art%3A10.1007%2Fs10462-025-11471-9/MediaObjects/10462_2025_11471_Fig1_HTML.png",
+          "raw_path": "raw/assets/dd424c6a2116185d.png",
+          "bytes": 23541,
+          "sha256": "fe5ce9c283b57ea677a3fa9b4e5af9d4c36decbc11a52da0cbcdbc8ee5c60a94"
+        }
+      ],
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/readings/ref-19d0abd8cdf3.md",
+      "recovered_by": "markdown/readings/arxiv-2308-11432.md"
+    },
+    {
+      "id": "ref-19d0abd8cdf3-pdf",
+      "title": "A survey on large language model based autonomous agents (PDF)",
+      "url": "https://link.springer.com/content/pdf/10.1007/s11704-024-40231-1.pdf",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:32.079735+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout."
+      ],
+      "http_status": 200,
+      "final_url": "https://link.springer.com/content/pdf/10.1007/s11704-024-40231-1.pdf",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/ref-19d0abd8cdf3-pdf.pdf",
+      "bytes": 4343813,
+      "sha256": "7bc39a036655ab7523cd56963738a0c0e8eab7790ef43318ff8706c36dc67b8a",
+      "download_status": "downloaded",
+      "page_count": 26,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/ref-19d0abd8cdf3-pdf.md",
+      "aliases": [
+        "https://link.springer.com/article/10.1007/s11704-024-40231-1?fromPaywallRec=true"
+      ]
+    },
+    {
+      "id": "arxiv-2409-02977",
+      "title": "Large Language Model-Based Agents for Software Engineering: A Survey",
+      "url": "https://arxiv.org/pdf/2409.02977",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:33.073478+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2409.02977",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/arxiv-2409-02977.pdf",
+      "bytes": 5536064,
+      "sha256": "836019f3761231aa71442415bba56769e936f615a564914c882b86b8d5ec1a87",
+      "download_status": "downloaded",
+      "page_count": 57,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2409-02977.md",
+      "aliases": [
+        "https://arxiv.org/pdf/2409.02977",
+        "https://arxiv.org/abs/2409.02977"
+      ]
+    },
+    {
+      "id": "arxiv-2509-06216",
+      "title": "Agentic Software Engineering: Foundational Pillars and a Research Roadmap",
+      "url": "https://arxiv.org/pdf/2509.06216",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:34.984648+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2509.06216",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/arxiv-2509-06216.pdf",
+      "bytes": 2101157,
+      "sha256": "7198a01ccc0995fa96db93d232a81be6de687072044d59db578edd2f24434ea2",
+      "download_status": "downloaded",
+      "page_count": 35,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2509-06216.md",
+      "aliases": [
+        "https://arxiv.org/pdf/2509.06216",
+        "https://arxiv.org/abs/2509.06216"
+      ]
+    },
+    {
+      "id": "arxiv-2210-03629",
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "url": "https://arxiv.org/pdf/2210.03629",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:36.615948+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Reused the source snapshot from stanford-cs329z, retrieved at 2026-11-13T16:21:49.659108+00:00. The raw bytes are copied into this course archive."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2210.03629",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/arxiv-2210-03629.pdf",
+      "bytes": 633805,
+      "sha256": "f285b0971ae4a790e402fb93966bed3adde2cf0a04977d08b2b40d6ab0cace69",
+      "download_status": "downloaded",
+      "page_count": 33,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2210-03629.md",
+      "aliases": [
+        "https://arxiv.org/abs/2210.03629"
+      ]
+    },
+    {
+      "id": "arxiv-2303-11366",
+      "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+      "url": "https://arxiv.org/pdf/2303.11366",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:36.788962+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Reused the source snapshot from stanford-cs329z, retrieved at 2026-11-13T16:22:09.655310+00:00. The raw bytes are copied into this course archive."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2303.11366",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/arxiv-2303-11366.pdf",
+      "bytes": 591097,
+      "sha256": "6059b6f89fea9959bd3dab553fbb97756a3dfb1b15e3cbab2fbf3ab6664333bd",
+      "download_status": "downloaded",
+      "page_count": 19,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2303-11366.md",
+      "aliases": [
+        "https://arxiv.org/abs/2303.11366"
+      ]
+    },
+    {
+      "id": "arxiv-2302-04761",
+      "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+      "url": "https://arxiv.org/pdf/2302.04761",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:36.905605+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Reused the source snapshot from stanford-cs329z, retrieved at 2026-11-13T16:19:44.930212+00:00. The raw bytes are copied into this course archive."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2302.04761",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/arxiv-2302-04761.pdf",
+      "bytes": 657966,
+      "sha256": "6d7483d94653008e40c2058a1c22441c92e3713dae278b6361e8efc447c99522",
+      "download_status": "downloaded",
+      "page_count": 17,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2302-04761.md",
+      "aliases": [
+        "https://arxiv.org/pdf/2302.04761",
+        "https://arxiv.org/abs/2302.04761"
+      ]
+    },
+    {
+      "id": "arxiv-2305-15334",
+      "title": "Gorilla: Large Language Model Connected with Massive APIs",
+      "url": "https://arxiv.org/pdf/2305.15334",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:37.067901+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Reused the source snapshot from stanford-cs329z, retrieved at 2026-11-13T16:20:00.496596+00:00. The raw bytes are copied into this course archive."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2305.15334",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/arxiv-2305-15334.pdf",
+      "bytes": 1247664,
+      "sha256": "1aeae54095cdae3a3ebaa29f7af0919d666e0c87d961848ae85b991b3c022718",
+      "download_status": "downloaded",
+      "page_count": 18,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2305-15334.md",
+      "aliases": [
+        "https://arxiv.org/pdf/2305.15334",
+        "https://arxiv.org/abs/2305.15334"
+      ]
+    },
+    {
+      "id": "arxiv-2407-16741",
+      "title": "OpenHands: An Open Platform for AI Software Developers as Generalist Agents",
+      "url": "https://arxiv.org/pdf/2407.16741",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:37.199205+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Reused the source snapshot from stanford-cs329z, retrieved at 2026-11-13T16:34:19.660664+00:00. The raw bytes are copied into this course archive."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2407.16741",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/arxiv-2407-16741.pdf",
+      "bytes": 3293124,
+      "sha256": "5d802255c4a58104a06147ba736fee09569faf3c26f251e5e9b7eff5d7662c14",
+      "download_status": "downloaded",
+      "page_count": 38,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2407-16741.md",
+      "aliases": [
+        "https://arxiv.org/pdf/2407.16741",
+        "https://arxiv.org/abs/2407.16741"
+      ]
+    },
+    {
+      "id": "arxiv-2405-15793",
+      "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
+      "url": "https://arxiv.org/pdf/2405.15793",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:37.403690+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Reused the source snapshot from stanford-cs329z, retrieved at 2026-11-13T16:34:04.241018+00:00. The raw bytes are copied into this course archive."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2405.15793",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/arxiv-2405-15793.pdf",
+      "bytes": 4963538,
+      "sha256": "d171e0693060b910ceb2cddd0fd4bc7cae302005d42d0d8059bfdbe056c3adba",
+      "download_status": "downloaded",
+      "page_count": 118,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2405-15793.md",
+      "aliases": [
+        "https://arxiv.org/pdf/2405.15793",
+        "https://arxiv.org/abs/2405.15793"
+      ]
+    },
+    {
+      "id": "arxiv-2404-05427",
+      "title": "AutoCodeRover: Autonomous Program Improvement",
+      "url": "https://arxiv.org/pdf/2404.05427",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:37.749157+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2404.05427",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/arxiv-2404-05427.pdf",
+      "bytes": 1580568,
+      "sha256": "b1f6a5942947276b4f1f9cdc2cb43ff3d383223cab7e779a498b9def9593f60a",
+      "download_status": "downloaded",
+      "page_count": 13,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2404-05427.md",
+      "aliases": [
+        "https://arxiv.org/pdf/2404.05427",
+        "https://arxiv.org/abs/2404.05427"
+      ]
+    },
+    {
+      "id": "arxiv-2308-08155",
+      "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+      "url": "https://arxiv.org/pdf/2308.08155",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:39.635614+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Reused the source snapshot from stanford-cs329z, retrieved at 2026-11-13T16:29:00.520367+00:00. The raw bytes are copied into this course archive."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2308.08155",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/arxiv-2308-08155.pdf",
+      "bytes": 3571809,
+      "sha256": "fcf8b1acae6b1bd6f14c92463caa9726828bf998234ba9f10c2411087897c96b",
+      "download_status": "downloaded",
+      "page_count": 43,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2308-08155.md",
+      "aliases": [
+        "https://arxiv.org/pdf/2308.08155",
+        "https://arxiv.org/abs/2308.08155"
+      ]
+    },
+    {
+      "id": "arxiv-2308-00352",
+      "title": "METAGPT: Meta Programming for a Multi-Agent Collaborative Framework",
+      "url": "https://arxiv.org/pdf/2308.00352",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:39.888611+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2308.00352",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/arxiv-2308-00352.pdf",
+      "bytes": 16753634,
+      "sha256": "17582e47647fac8eaa3681feade41c8408310c4133acc5c6823565fbe880e1ac",
+      "download_status": "downloaded",
+      "page_count": 29,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2308-00352.md",
+      "aliases": [
+        "https://arxiv.org/pdf/2308.00352",
+        "https://arxiv.org/abs/2308.00352"
+      ]
+    },
+    {
+      "id": "ref-527dfcfa057e",
+      "title": "Improving Factuality and Reasoning in Language Models through Multiagent Debate",
+      "url": "https://openreview.net/pdf?id=zj7YuTE4t8",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:44.180159+00:00",
+      "notes": [
+        "HTTPError: 403 Client Error: Forbidden for url: https://openreview.net/pdf?id=zj7YuTE4t8",
+        "Full text recovered from [a public alternative](markdown/readings/arxiv-2305-14325.md). Public arXiv preprint with matching title and authors. This preprint may differ from the published version."
+      ],
+      "http_status": 403,
+      "final_url": "https://openreview.net/pdf?id=zj7YuTE4t8",
+      "content_type": "text/html",
+      "raw_path": "raw/readings/ref-527dfcfa057e.html",
+      "bytes": 12692,
+      "sha256": "a2d811e0d24af89d9bd4b19cc9e8fbc474c67ef3827648550a6560eca2a5e332",
+      "download_status": "failed",
+      "conversion_status": "failed",
+      "aliases": [
+        "https://openreview.net/pdf?id=zj7YuTE4t8"
+      ],
+      "recovered_by": "markdown/readings/arxiv-2305-14325.md"
+    },
+    {
+      "id": "ref-e72937a02efd",
+      "title": "Demystifying LLM-Based Software Engineering Agents",
+      "url": "https://dl.acm.org/doi/epdf/10.1145/3715754",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:44.903747+00:00",
+      "notes": [
+        "HTTPError: 403 Client Error: Forbidden for url: https://dl.acm.org/doi/epdf/10.1145/3715754",
+        "Full text recovered from [a public alternative](markdown/readings/ref-32c713753c27.md). Public author-hosted copy of the assigned FSE paper; the first page identifies DOI 10.1145/3715754."
+      ],
+      "http_status": 403,
+      "final_url": "https://dl.acm.org/doi/epdf/10.1145/3715754",
+      "content_type": "text/html; charset=UTF-8",
+      "raw_path": "raw/readings/ref-e72937a02efd.html",
+      "bytes": 5590,
+      "sha256": "984910e24d84f14964b872b625ed46fa860646c8c37bd2de871645e56d3ade1f",
+      "download_status": "failed",
+      "conversion_status": "failed",
+      "recovered_by": "markdown/readings/ref-32c713753c27.md"
+    },
+    {
+      "id": "ref-0cfd55675bb9",
+      "title": "MDCrow: automating molecular dynamics workflows with large language models",
+      "url": "https://iopscience.iop.org/article/10.1088/2632-2153/ae4b07/pdf",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:45.444737+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout."
+      ],
+      "http_status": 200,
+      "final_url": "https://iopscience.iop.org/article/10.1088/2632-2153/ae4b07/pdf",
+      "content_type": "application/pdf;charset=UTF-8",
+      "raw_path": "raw/readings/ref-0cfd55675bb9.pdf",
+      "bytes": 1779066,
+      "sha256": "b93333fd9a7a22f5e3e203fa4263d6f93e85de89ce43e1b42840c8aa7599c045",
+      "download_status": "downloaded",
+      "page_count": 11,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/ref-0cfd55675bb9.md"
+    },
+    {
+      "id": "ref-431d2efa774f",
+      "title": "What Breaks When LLMs Code? Characterizing Operational Safety Failures of Agentic Code Assistants",
+      "url": "https://dl.acm.org/doi/epdf/10.1145/3832783.3834393",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:47.231932+00:00",
+      "notes": [
+        "HTTPError: 403 Client Error: Forbidden for url: https://dl.acm.org/doi/epdf/10.1145/3832783.3834393",
+        "Full text recovered from [a public alternative](markdown/readings/arxiv-2605-30777.md). Public arXiv preprint with matching title and authors. This preprint may differ from the published version."
+      ],
+      "http_status": 403,
+      "final_url": "https://dl.acm.org/doi/epdf/10.1145/3832783.3834393",
+      "content_type": "text/html; charset=UTF-8",
+      "raw_path": "raw/readings/ref-431d2efa774f.html",
+      "bytes": 5635,
+      "sha256": "3a39a406a81f016319da1878dc7f6e28514bc706ac22992564d1dddf9577c11f",
+      "download_status": "failed",
+      "conversion_status": "failed",
+      "recovered_by": "markdown/readings/arxiv-2605-30777.md"
+    },
+    {
+      "id": "ref-80c3751237e4",
+      "title": "From Plan to Action: How Well Do Agents Follow the Plan?",
+      "url": "https://dl.acm.org/doi/10.1145/3832783.3834400",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:47.581109+00:00",
+      "notes": [
+        "HTTPError: 403 Client Error: Forbidden for url: https://dl.acm.org/doi/10.1145/3832783.3834400",
+        "Full text recovered from [a public alternative](markdown/readings/arxiv-2604-12147.md). Public arXiv preprint with matching title and authors. This preprint may differ from the published version."
+      ],
+      "http_status": 403,
+      "final_url": "https://dl.acm.org/doi/10.1145/3832783.3834400",
+      "content_type": "text/html; charset=UTF-8",
+      "raw_path": "raw/readings/ref-80c3751237e4.html",
+      "bytes": 5599,
+      "sha256": "ae29eaf97fc0dd8f05d24166e09ea46f7c033d89b161d0a5c8b328bb2a3e97c6",
+      "download_status": "failed",
+      "conversion_status": "failed",
+      "recovered_by": "markdown/readings/arxiv-2604-12147.md"
+    },
+    {
+      "id": "ref-3126b23dc9fc",
+      "title": "Beyond Tool Selection: Diagnosing Downstream Failures in MCP Tool-Using LLM Agents",
+      "url": "https://openreview.net/pdf?id=PPculVvgEd",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:47.945079+00:00",
+      "notes": [
+        "HTTPError: 403 Client Error: Forbidden for url: https://openreview.net/pdf?id=PPculVvgEd"
+      ],
+      "http_status": 403,
+      "final_url": "https://openreview.net/pdf?id=PPculVvgEd",
+      "content_type": "text/html",
+      "raw_path": "raw/readings/ref-3126b23dc9fc.html",
+      "bytes": 12692,
+      "sha256": "a2d811e0d24af89d9bd4b19cc9e8fbc474c67ef3827648550a6560eca2a5e332",
+      "download_status": "failed",
+      "conversion_status": "failed",
+      "aliases": [
+        "https://openreview.net/pdf?id=PPculVvgEd"
+      ]
+    },
+    {
+      "id": "arxiv-2603-22327",
+      "title": "Evaluating AI-based Scientific Knowledge Synthesis with Epidemiological Systematic Reviews",
+      "url": "https://arxiv.org/pdf/2603.22327",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:48.610032+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2603.22327",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/arxiv-2603-22327.pdf",
+      "bytes": 2346999,
+      "sha256": "4a521113e78de8c648e6ff7d8b40a3de43e9400b28a66e1562821e75fbac2002",
+      "download_status": "downloaded",
+      "page_count": 77,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2603-22327.md",
+      "aliases": [
+        "https://arxiv.org/abs/2603.22327"
+      ]
+    },
+    {
+      "id": "arxiv-2610-14224v1",
+      "title": "Harness2: Recursive Agent Harnessing for an Open World",
+      "url": "https://arxiv.org/pdf/2610.14224v1",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:49.071527+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2610.14224v1",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/arxiv-2610-14224v1.pdf",
+      "bytes": 8101889,
+      "sha256": "440be1f694f3b0fdfb8e612e9b2288ff0d8ab38641cfd1064fd77052ba360282",
+      "download_status": "downloaded",
+      "page_count": 37,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2610-14224v1.md",
+      "aliases": [
+        "https://arxiv.org/pdf/2610.14224v1",
+        "https://arxiv.org/abs/2610.14224v1"
+      ]
+    },
+    {
+      "id": "ref-ae2eae92ad03",
+      "title": "Position: Coding Benchmarks Are Misaligned with Agentic Software Engineering",
+      "url": "https://openreview.net/pdf?id=t32Hgnk7ou",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:53.290594+00:00",
+      "notes": [
+        "HTTPError: 403 Client Error: Forbidden for url: https://openreview.net/pdf?id=t32Hgnk7ou",
+        "Full text recovered from [a public alternative](markdown/readings/arxiv-2606-17799.md). Public arXiv preprint with matching title and authors. This preprint may differ from the published version."
+      ],
+      "http_status": 403,
+      "final_url": "https://openreview.net/pdf?id=t32Hgnk7ou",
+      "content_type": "text/html",
+      "raw_path": "raw/readings/ref-ae2eae92ad03.html",
+      "bytes": 12692,
+      "sha256": "a2d811e0d24af89d9bd4b19cc9e8fbc474c67ef3827648550a6560eca2a5e332",
+      "download_status": "failed",
+      "conversion_status": "failed",
+      "aliases": [
+        "https://openreview.net/pdf?id=t32Hgnk7ou"
+      ],
+      "recovered_by": "markdown/readings/arxiv-2606-17799.md"
+    },
+    {
+      "id": "ref-a09fb6fd80e8",
+      "title": "Why SWE-bench Verified no longer measures frontier coding capabilities",
+      "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:53.490185+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/readings/ref-a09fb6fd80e8.html",
+      "bytes": 543366,
+      "sha256": "52c6735614318c42b7fddc28a60ea83413fd305a514626e7b6e776fa04c729eb",
+      "download_status": "downloaded",
+      "assets": [
+        {
+          "url": "https://images.ctfassets.net/kftzwdyauwt9/jNZJCNxCnXJEalE02MRYi/9c7ad4cdb35bae08e5e49eb6a2f65622/biobasicsbench-cover.png?w=3840&q=90&fm=webp",
+          "raw_path": "raw/assets/cfbcbfeddd79d747.png",
+          "bytes": 115848,
+          "sha256": "11d26f504c49be9b42021ed79db4c8f3e6a76e8d86767f1c3ac55e99d81c0688"
+        },
+        {
+          "url": "https://images.ctfassets.net/kftzwdyauwt9/6xmxSENf49pAUFzVokN3KG/3206934563d5b072f5a75139d6b26497/a-thousand-fewer-paths-to-root-cover.png?w=3840&q=90&fm=webp",
+          "raw_path": "raw/assets/67c4cce7c95b349f.png",
+          "bytes": 46230,
+          "sha256": "b8ae47144c26ddb8aa61141da3ed05fe2e5ce6205a0b2576d4df7b1fa13ef8a6"
+        },
+        {
+          "url": "https://images.ctfassets.net/kftzwdyauwt9/57kuzOPUZjrDUJwHE8nub0/30011dcc7969dfca81d5ac9e06aa31e5/accelerating-engineering-physical-world-card.png?w=3840&q=90&fm=webp",
+          "raw_path": "raw/assets/0f6dbc3317bfa688.png",
+          "bytes": 144906,
+          "sha256": "ea4234999ed00fcf00a41fc4689ecf8af01424c48c557750cb68b37975a3eb46"
+        }
+      ],
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/readings/ref-a09fb6fd80e8.md"
+    },
+    {
+      "id": "arxiv-2512-18552",
+      "title": "Toward Training Superintelligent Software Agents through Self-Play SWE-RL",
+      "url": "https://arxiv.org/pdf/2512.18552",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:49:56.916803+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2512.18552",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/arxiv-2512-18552.pdf",
+      "bytes": 1206190,
+      "sha256": "dccc8543a0e603592b952e174f638299e73fae107bfc4273106631c34701c9bf",
+      "download_status": "downloaded",
+      "page_count": 21,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2512-18552.md",
+      "aliases": [
+        "https://arxiv.org/abs/2512.18552"
+      ]
+    },
+    {
+      "id": "arxiv-2605-29442",
+      "title": "How Coding Agents Fail Their Users: A Large-Scale Analysis of Developer-Agent Misalignment in 20,574 Real-World Sessions",
+      "url": "https://arxiv.org/pdf/2605.29442",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:50:01.904157+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2605.29442",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/arxiv-2605-29442.pdf",
+      "bytes": 682655,
+      "sha256": "2daedf6d2e32f37e109e221a1abb1e0493af6254663c31114fd860b067852c0b",
+      "download_status": "downloaded",
+      "page_count": 19,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2605-29442.md",
+      "aliases": [
+        "https://arxiv.org/abs/2605.29442"
+      ]
+    },
+    {
+      "id": "ref-b6a2e9797c3f",
+      "title": "Attend Workshop on Trustworthy & Responsible AI",
+      "url": "https://trustworthyresponsible.ai",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:50:04.887056+00:00",
+      "notes": [
+        "Image remains remote: https://trustworthyresponsible.ai/speakers/aditya-thimmaiah.jpg",
+        "Image remains remote: https://trustworthyresponsible.ai/speakers/rajdeep-mukherjee.jpg",
+        "Image remains remote: https://trustworthyresponsible.ai/speakers/grzegorz-kakareko.jpg",
+        "Image remains remote: https://trustworthyresponsible.ai/speakers/ajaykumar-rajasekharan.jpg"
+      ],
+      "http_status": 200,
+      "final_url": "https://trustworthyresponsible.ai/",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/readings/ref-b6a2e9797c3f.html",
+      "bytes": 62519,
+      "sha256": "5330ef101cdb59862b6c533d3c7df9893ae1145081fb56d410e6b830fbab6532",
+      "download_status": "downloaded",
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/ref-b6a2e9797c3f.md",
+      "assets": [
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/haifeng-chen.jpg",
+          "raw_path": "raw/assets/a03778934062a348.jpg",
+          "bytes": 41531,
+          "sha256": "6049278d4fec93ee426960e0577b8c5812ccc7f4f7cac38d6dabeee52047d4e6",
+          "retrieved_at": "2026-11-13T17:32:19.497998+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/dragos-margineantu.jpg",
+          "raw_path": "raw/assets/029152714fd143ac.jpg",
+          "bytes": 64602,
+          "sha256": "25e9ec41800ea905497f3bedc3d136078b0780b355a8b8c89a02678b3da153c1",
+          "retrieved_at": "2026-11-13T17:32:19.606804+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/massimo-ruzzene.jpg",
+          "raw_path": "raw/assets/d54ddc143773c888.jpg",
+          "bytes": 81621,
+          "sha256": "b96a97fee61bb63493f646a7de54b34b0cf6d8d3be80531b5e611cbe04997e6b",
+          "retrieved_at": "2026-11-13T17:32:19.734461+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/shelley-knuth.jpg",
+          "raw_path": "raw/assets/1fbec3a91d78c26a.jpg",
+          "bytes": 88916,
+          "sha256": "5123e8cb44725fa72bb4874f57693a1ad0572a156a30eb432be65de61781fefe",
+          "retrieved_at": "2026-11-13T17:32:19.900225+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/michael-gooseff.jpg",
+          "raw_path": "raw/assets/bf77b5daa2d312c1.jpg",
+          "bytes": 59110,
+          "sha256": "f0dc22a5da4cf09c4f55ff7414e17397a863dc1fc07f0fa07019f0d5a195a577",
+          "retrieved_at": "2026-11-13T17:32:20.002157+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/danny-dig.jpg",
+          "raw_path": "raw/assets/0aabfa905f6502d8.jpg",
+          "bytes": 40146,
+          "sha256": "db2cac7e831fac0c3c6ab51abbd24c4c1f9c164d743ec4d87bbefb95a9677ab3",
+          "retrieved_at": "2026-11-13T17:32:20.163819+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/amir-behzadan.jpg",
+          "raw_path": "raw/assets/6b4f2cf89b202d49.jpg",
+          "bytes": 71406,
+          "sha256": "62f0aeda17c3389cf2be375efbd01b107d1afa65a8f197c293e109979daf8279",
+          "retrieved_at": "2026-11-13T17:32:20.264039+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/ellen-do.jpg",
+          "raw_path": "raw/assets/1eaa579b9ea773ba.jpg",
+          "bytes": 64891,
+          "sha256": "42f1268c4b577788f81773465913d7a533dd0526cd6ffa9ed7a033c9459474d0",
+          "retrieved_at": "2026-11-13T17:32:20.357164+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/brad-hayes.jpg",
+          "raw_path": "raw/assets/e5c119a3ea4a1376.jpg",
+          "bytes": 39187,
+          "sha256": "9feb86eaa3b1e1d6267c3436c9ba640fb6ad8ddb4f0f2f9483ac3ce2c56e4d09",
+          "retrieved_at": "2026-11-13T17:32:20.489500+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/casey-fiesler.jpg",
+          "raw_path": "raw/assets/d93c36bcf94af1d1.jpg",
+          "bytes": 57813,
+          "sha256": "24036d125a2f23bef08d772910a6cf0d8c4c18e315fe84c87ac23d2f0d5e62b2",
+          "retrieved_at": "2026-11-13T17:32:20.584324+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/sriram-sankaranarayanan.jpg",
+          "raw_path": "raw/assets/29d6d05549e19bf7.jpg",
+          "bytes": 48853,
+          "sha256": "9a37cc33ee3e77505633bd16e0dd49f0bb39bbeb711685dbf7352e789b188dc2",
+          "retrieved_at": "2026-11-13T17:32:20.678916+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/alvaro-velasquez.jpg",
+          "raw_path": "raw/assets/02d7333bcf767f3a.jpg",
+          "bytes": 45151,
+          "sha256": "d24dd57335e040b89c1b5254045b0bf7a1b34c27ae4a78971a5595ac6ed7992e",
+          "retrieved_at": "2026-11-13T17:32:20.762444+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/evan-chang.jpg",
+          "raw_path": "raw/assets/c4607f2f42740d76.jpg",
+          "bytes": 43675,
+          "sha256": "c6ee8ff1c34bb0f63f376bc1dc21605444919c3eb89a121c39ac46dd745ad7df",
+          "retrieved_at": "2026-11-13T17:32:20.885395+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/gowtham-kaki.jpg",
+          "raw_path": "raw/assets/ee68414d10cd97ad.jpg",
+          "bytes": 25555,
+          "sha256": "66546f4de984917d4470ae4a8fd002c97bf3556ff64646b015f4f435bf76e282",
+          "retrieved_at": "2026-11-13T17:32:21.017434+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/jed-brubaker.jpg",
+          "raw_path": "raw/assets/2b788baf0feb8c1a.jpg",
+          "bytes": 76249,
+          "sha256": "90a52832f8f801157cd6f6afe7046c63c2e089a440edbd08cccf4e7d16e9f6d2",
+          "retrieved_at": "2026-11-13T17:32:21.116692+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/yiling-lou.jpg",
+          "raw_path": "raw/assets/e6df8261d9b032f8.jpg",
+          "bytes": 51966,
+          "sha256": "a63820d1da7f6d30a145f54f8e098cdcb3d0f6c93123fbbae3c2b7d141e90f2e",
+          "retrieved_at": "2026-11-13T17:32:21.215754+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/bogdan-stoica.jpg",
+          "raw_path": "raw/assets/1dfe89c90ffb09f4.jpg",
+          "bytes": 69135,
+          "sha256": "fc8db76114308112559bc942347faf090cdc8de4f3dca1b87e68ae162e9b41a9",
+          "retrieved_at": "2026-11-13T17:32:21.307078+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/sasa-misailovic.jpg",
+          "raw_path": "raw/assets/4ca85a7f7c3cea8f.jpg",
+          "bytes": 45286,
+          "sha256": "7f70d94d81a8ddc0846f5cef98d53a92d434b7a30559799202afccb399965148",
+          "retrieved_at": "2026-11-13T17:32:21.385979+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/lingming-zhang.jpg",
+          "raw_path": "raw/assets/26091361a23d2985.jpg",
+          "bytes": 50046,
+          "sha256": "2873dec136c89ac0131f9081071e0f1339c189607738ac4bac4703620ba06716",
+          "retrieved_at": "2026-11-13T17:32:21.469391+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/neeraja-yadwadkar.jpg",
+          "raw_path": "raw/assets/24d2c5b593be671c.jpg",
+          "bytes": 59773,
+          "sha256": "56d155be7a9edb0e8815a7b986a47038560d8aa9548f45b0834ad8c89c429a74",
+          "retrieved_at": "2026-11-13T17:32:21.570295+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/john-regehr.jpg",
+          "raw_path": "raw/assets/702536c606e66208.jpg",
+          "bytes": 6866,
+          "sha256": "5489d9e47751e553f41a803f9745da04dfc641ae0aabf466ede0a53332178070",
+          "retrieved_at": "2026-11-13T17:32:21.750077+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/stefan-nagy.jpg",
+          "raw_path": "raw/assets/4f6aab7e8d22287d.jpg",
+          "bytes": 64423,
+          "sha256": "6722cca2ba39b90fd397d1a409fbc08a1e814d0f805075a3bcf54e84c9043588",
+          "retrieved_at": "2026-11-13T17:32:21.825420+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/guanhong-tao.jpg",
+          "raw_path": "raw/assets/edb583bf019bd79f.jpg",
+          "bytes": 34131,
+          "sha256": "82f61c5ad994c254a8e07cc9ba06a050b8a582bfe8afef058e079f7361ed0fd8",
+          "retrieved_at": "2026-11-13T17:32:21.931798+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/kenneth-marino.jpg",
+          "raw_path": "raw/assets/ac962129502cc97c.jpg",
+          "bytes": 33329,
+          "sha256": "aa7b1918cb3150a75d41e49d338aa085cdc57b113e790dfe13c1b63336964563",
+          "retrieved_at": "2026-11-13T17:32:22.032844+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/chris-persaud.jpg",
+          "raw_path": "raw/assets/f0c772aca40cd3c2.jpg",
+          "bytes": 85860,
+          "sha256": "8c8b563adfacfac58b267354223f2baf3d14274b1a7bb5f86a426b0e5fb482bd",
+          "retrieved_at": "2026-11-13T17:32:22.284145+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/yuki-kosaka.jpg",
+          "raw_path": "raw/assets/b18d3dcf98712182.jpg",
+          "bytes": 36719,
+          "sha256": "527511ffddd4c04516340cf073d9d7662f25da8e1c094f8ad8ed214ca92b68aa",
+          "retrieved_at": "2026-11-13T17:32:22.416802+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/joelle-rossback-dahl.jpg",
+          "raw_path": "raw/assets/45fed6ed0fface96.jpg",
+          "bytes": 36349,
+          "sha256": "548c4470ed0e93fa2cd881f909b7426e18e175f3f6d3bd09a36b4d887486cbfe",
+          "retrieved_at": "2026-11-13T17:32:22.641602+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/sergio-ortega.jpg",
+          "raw_path": "raw/assets/6a664e52abb25b02.jpg",
+          "bytes": 49033,
+          "sha256": "8f09e2fe0adf5e16e6c9f9cd6175e060fd2c3bc0f307f5ccc3c44df1241b630b",
+          "retrieved_at": "2026-11-13T17:32:22.802177+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/archit-malpure.jpg",
+          "raw_path": "raw/assets/f6839b53be1b7e1d.jpg",
+          "bytes": 70792,
+          "sha256": "6e60daa559adb12c1eb82599531f687c5e2fa051e08fbdf12674d049a89f5dd2",
+          "retrieved_at": "2026-11-13T17:32:22.911478+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/tristan-ravitch.jpg",
+          "raw_path": "raw/assets/d7b2f11ee65a4694.jpg",
+          "bytes": 45825,
+          "sha256": "e0ebb58e94db1347daa8c435b1813e255f651381a17bb82f95b431ec4c0097c4",
+          "retrieved_at": "2026-11-13T17:32:23.001878+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/jaden-garza.jpg",
+          "raw_path": "raw/assets/d4e2c95cc8751311.jpg",
+          "bytes": 34876,
+          "sha256": "a4faa1c5bb2d3551f0e2995e5bf174227af09df3f29b84399e44de5f47ad7744",
+          "retrieved_at": "2026-11-13T17:32:23.114672+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/nita-meng.jpg",
+          "raw_path": "raw/assets/a721e274184f0ce6.jpg",
+          "bytes": 51700,
+          "sha256": "976e4cb7bd2b037936c9d0f1ac18335f076945666d96e05374f451b478b231c1",
+          "retrieved_at": "2026-11-13T17:32:23.210049+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/michael-cooper.jpg",
+          "raw_path": "raw/assets/33b7268276ebe5b4.jpg",
+          "bytes": 36408,
+          "sha256": "a4bc060ede03a6b1d535dffeb0770f9fe9039d83984f8ec69660a7209179c934",
+          "retrieved_at": "2026-11-13T17:32:23.369299+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/karen-furlani.jpg",
+          "raw_path": "raw/assets/286f9c1c828da2b1.jpg",
+          "bytes": 60853,
+          "sha256": "16b7302f92dcf2194054c6cc3ae6b80e22e4d994c8dfabd333a884763a4820fb",
+          "retrieved_at": "2026-11-13T17:32:23.477930+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/moses-bazzi.jpg",
+          "raw_path": "raw/assets/115bfa1d183b1761.jpg",
+          "bytes": 43915,
+          "sha256": "9d322db547ea3028b3c9955e210eedd47ffe69179c044b5f59fcd17756b56add",
+          "retrieved_at": "2026-11-13T17:32:23.568650+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/scott-james.jpg",
+          "raw_path": "raw/assets/b47b7d6413820b73.jpg",
+          "bytes": 26865,
+          "sha256": "b5c9ed260250fb0d49f53b70cd34f30f3820e2dec8001133b66dd1eded6122d3",
+          "retrieved_at": "2026-11-13T17:32:23.655710+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/carolyn-ujcic.jpg",
+          "raw_path": "raw/assets/edbd9fa9a44013cf.jpg",
+          "bytes": 37688,
+          "sha256": "883d0b451a8366a02fda3ed68ddbfaab803ab50ae961c42c85b45872bfdcd394",
+          "retrieved_at": "2026-11-13T17:32:23.814401+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/tushar-udeshi.jpg",
+          "raw_path": "raw/assets/2506799370027446.jpg",
+          "bytes": 25861,
+          "sha256": "1d7ef113ecbea68008f0266db299d6cf754ee200ee6c1792cf5e299a8711e51f",
+          "retrieved_at": "2026-11-13T17:32:23.878226+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/kedar-naik.jpg",
+          "raw_path": "raw/assets/6e34cdc5c76be88b.jpg",
+          "bytes": 27349,
+          "sha256": "3fa0e77ced5a1bba9916a352a04be6a891770d3e5a94577bfe494eeafc4628b7",
+          "retrieved_at": "2026-11-13T17:32:23.971832+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/taryn-heilman.jpg",
+          "raw_path": "raw/assets/282b20e8a34dcf26.jpg",
+          "bytes": 43169,
+          "sha256": "4fc34616b6a96e76e27ee38a044e2b03d912f8c02a1ee49327ffdc56544ffae6",
+          "retrieved_at": "2026-11-13T17:32:24.063350+00:00"
+        },
+        {
+          "url": "https://trustworthyresponsible.ai/speakers/bhavna-chhabra.jpg",
+          "raw_path": "raw/assets/a24c64966c5758c4.jpg",
+          "bytes": 36682,
+          "sha256": "4d8ee87a8b546d9ff4a5a21ab3a621606e3843bc1c32ac285168b2d6d0d9f2bf",
+          "retrieved_at": "2026-11-13T17:32:24.162993+00:00"
+        }
+      ],
+      "converted_at": "2026-11-13T17:32:24.204848+00:00"
+    },
+    {
+      "id": "ref-ba3f8201fe75",
+      "title": "article1",
+      "url": "https://medium.com/@cshirky/why-i-just-asked-my-students-to-put-their-laptops-away-7f5f7c50f368",
+      "category": "optional-readings",
+      "retrieved_at": "2026-11-13T16:50:06.106996+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://medium.com/@cshirky/why-i-just-asked-my-students-to-put-their-laptops-away-7f5f7c50f368",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/optional-readings/ref-ba3f8201fe75.html",
+      "bytes": 169137,
+      "sha256": "7c42318a9654f7d8ce85bb158568e97d32a00cbf987c4c97e8caa6901205a487",
+      "download_status": "downloaded",
+      "assets": [
+        {
+          "url": "https://miro.medium.com/v2/resize:fill:64:64/0*3JV8V-Iv9NpT2JBl.jpg",
+          "raw_path": "raw/assets/f64eb853435a973d.jpg",
+          "bytes": 1726,
+          "sha256": "2f19a7f59a8fea6a0a70a3b5076161d6d0a8bc2a5e7108bfef762223cb0332af"
+        }
+      ],
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/optional-readings/ref-ba3f8201fe75.md"
+    },
+    {
+      "id": "ref-5c8cdf549495",
+      "title": "article2",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0360131512002254?np=y",
+      "category": "optional-readings",
+      "retrieved_at": "2026-11-13T16:50:08.127097+00:00",
+      "notes": [
+        "HTTPError: 403 Client Error: Forbidden for url: https://www.sciencedirect.com/science/article/pii/S0360131512002254?np=y",
+        "The original course link used HTTP; the equivalent public HTTPS URL was requested."
+      ],
+      "http_status": 403,
+      "final_url": "https://www.sciencedirect.com/science/article/pii/S0360131512002254?np=y",
+      "content_type": "text/html; charset=UTF-8",
+      "raw_path": "raw/optional-readings/ref-5c8cdf549495.html",
+      "bytes": 832980,
+      "sha256": "d993d2df70ea22eb235c74c9374e13c1dbcf00dc6e44f6f11b7ef5977990bd7e",
+      "download_status": "failed",
+      "conversion_status": "failed",
+      "aliases": [
+        "http://www.sciencedirect.com/science/article/pii/S0360131512002254?np=y"
+      ]
+    },
+    {
+      "id": "ref-d7850e5472a5",
+      "title": "ACM SIG template",
+      "url": "https://www.acm.org/publications/proceedings-template",
+      "category": "optional-readings",
+      "retrieved_at": "2026-11-13T16:50:09.049799+00:00",
+      "notes": [
+        "The original course link used HTTP; the equivalent public HTTPS URL was requested."
+      ],
+      "http_status": 200,
+      "final_url": "https://www.acm.org/publications/proceedings-template",
+      "content_type": "text/html;charset=UTF-8",
+      "raw_path": "raw/optional-readings/ref-d7850e5472a5.html",
+      "bytes": 87247,
+      "sha256": "2c1bc7aa382c1d05b0f8e04045191f50e8093abe8a32e350efdfaef67020efe2",
+      "download_status": "downloaded",
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/optional-readings/ref-d7850e5472a5.md",
+      "aliases": [
+        "http://www.acm.org/publications/proceedings-template"
+      ]
+    },
+    {
+      "id": "arxiv-2308-11432",
+      "title": "A survey on large language model based autonomous agents (public alternative)",
+      "url": "https://arxiv.org/pdf/2308.11432",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:50:10.232241+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "The arXiv record lists the assigned Springer DOI as a related DOI. This is the public preprint version."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2308.11432",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/arxiv-2308-11432.pdf",
+      "bytes": 5788348,
+      "sha256": "8709507742c260a5a92b4690ffc0459a0ab9af16dc7a5478d253a6e7b57bf23a",
+      "download_status": "downloaded",
+      "page_count": 42,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2308-11432.md",
+      "aliases": [
+        "https://arxiv.org/abs/2308.11432",
+        "https://link.springer.com/article/10.1007/s11704-024-40231-1?fromPaywallRec=true"
+      ]
+    },
+    {
+      "id": "ref-32c713753c27",
+      "title": "Demystifying LLM-Based Software Engineering Agents (public alternative)",
+      "url": "https://lingming.cs.illinois.edu/publications/fse2025.pdf",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:50:14.788403+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Public author-hosted copy of the assigned FSE paper; the first page identifies DOI 10.1145/3715754."
+      ],
+      "http_status": 200,
+      "final_url": "https://lingming.cs.illinois.edu/publications/fse2025.pdf",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/ref-32c713753c27.pdf",
+      "bytes": 1673414,
+      "sha256": "e780f7ccaa72815c259b3d3810e467eb9abe02f804010eded52b4babda121301",
+      "download_status": "downloaded",
+      "page_count": 24,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/ref-32c713753c27.md",
+      "aliases": [
+        "https://dl.acm.org/doi/epdf/10.1145/3715754"
+      ]
+    },
+    {
+      "id": "arxiv-2605-30777",
+      "title": "What Breaks When LLMs Code? Characterizing Operational Safety Failures of Agentic Code Assistants (public alternative)",
+      "url": "https://arxiv.org/pdf/2605.30777",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:50:17.370829+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Public arXiv preprint with matching title and authors. This preprint may differ from the published version."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2605.30777",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/arxiv-2605-30777.pdf",
+      "bytes": 1545966,
+      "sha256": "3f7bf749cb97adf1de009710acf5781cfc2a93bf0ba9672de2362db715d87d52",
+      "download_status": "downloaded",
+      "page_count": 15,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2605-30777.md",
+      "aliases": [
+        "https://arxiv.org/abs/2605.30777",
+        "https://dl.acm.org/doi/epdf/10.1145/3832783.3834393"
+      ]
+    },
+    {
+      "id": "arxiv-2604-12147",
+      "title": "From Plan to Action: How Well Do Agents Follow the Plan? (public alternative)",
+      "url": "https://arxiv.org/pdf/2604.12147",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:50:21.101863+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Public arXiv preprint with matching title and authors. This preprint may differ from the published version."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2604.12147",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/arxiv-2604-12147.pdf",
+      "bytes": 8494108,
+      "sha256": "adc0ddcedc82b70ec4c0aaa097ca3d0058577e00fdbb0f21059fb28161f75a19",
+      "download_status": "downloaded",
+      "page_count": 12,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2604-12147.md",
+      "aliases": [
+        "https://arxiv.org/abs/2604.12147",
+        "https://dl.acm.org/doi/10.1145/3832783.3834400"
+      ]
+    },
+    {
+      "id": "arxiv-2305-14325",
+      "title": "Improving Factuality and Reasoning in Language Models through Multiagent Debate (public alternative)",
+      "url": "https://arxiv.org/pdf/2305.14325",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:50:29.592916+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Reused the source snapshot from cmu-11768, retrieved at 2026-11-13T16:47:39.783348+00:00. The raw bytes are copied into this course archive.",
+        "Public arXiv preprint with matching title and authors. This preprint may differ from the published version."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2305.14325",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/arxiv-2305-14325.pdf",
+      "bytes": 1779875,
+      "sha256": "b302ff15202dc3cda03f40ea1ac92b29e1519978540b345af92991f6d3e619b4",
+      "download_status": "downloaded",
+      "page_count": 27,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2305-14325.md",
+      "aliases": [
+        "https://arxiv.org/abs/2305.14325",
+        "https://openreview.net/pdf?id=zj7YuTE4t8"
+      ]
+    },
+    {
+      "id": "arxiv-2606-17799",
+      "title": "Position: Coding Benchmarks Are Misaligned with Agentic Software Engineering (public alternative)",
+      "url": "https://arxiv.org/pdf/2606.17799",
+      "category": "readings",
+      "retrieved_at": "2026-11-13T16:50:29.835452+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Public arXiv preprint with matching title and authors. This preprint may differ from the published version."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2606.17799",
+      "content_type": "application/pdf",
+      "raw_path": "raw/readings/arxiv-2606-17799.pdf",
+      "bytes": 700892,
+      "sha256": "741f0d08a82e0151da53b53b4e14be4783b4d55dc8560cffea4ddee91e8d7fe9",
+      "download_status": "downloaded",
+      "page_count": 6,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2606-17799.md",
+      "aliases": [
+        "https://arxiv.org/abs/2606.17799",
+        "https://openreview.net/pdf?id=t32Hgnk7ou"
+      ]
+    }
+  ],
+  "notes": [
+    "Collected while Fall 2026 was in progress. Only one course-owned slide PDF was linked publicly; the schedule also describes sessions without posted materials.",
+    "All course-owned HTML links were followed. Future milestone and final-project links that returned HTTP 404 are recorded as failed retrievals, not converted course content.",
+    "Publisher or OpenReview failures are retained as retrieval evidence. Where a matching author-hosted paper or preprint was found, the alternative version is recorded separately and linked from the failed request.",
+    "The Canvas-only Agentic Refactoring paper has no public identifier in the schedule; no substitute paper was guessed.",
+    "The course schedule links no public video recordings or teaching code repositories."
+  ],
+  "counts": {
+    "materials": 51,
+    "downloaded": 39,
+    "markdown_files": 39,
+    "gaps": 12
+  }
+}

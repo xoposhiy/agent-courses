@@ -1,0 +1,68 @@
+# Homework 1 public teaching repository: assignments/OMIM_620450/grill_run/tasks/0021_screen_h8/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620450/grill_run/tasks/0021_screen_h8/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620450/grill_run/tasks/0021_screen_h8/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Genome sequencing in children with severe sporadic DLD and normal non-verbal IQ identified a de novo TAF4 frameshift variant, expanding the TAF4 phenotypic spectrum.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "A prospective trio-based genome sequencing study of 25 individuals with severe sporadic developmental language disorder and normal non-verbal IQ (non-verbal IQ >= 70) identified a pathogenic de novo frameshift variant in TAF4 (Gly171fs) fitting within the TAF4-related disorder spectrum.",
+      "stance": "supports",
+      "source": {
+        "title": "Genome sequencing reveals high diagnostic yield in children with severe sporadic developmental language disorder",
+        "authors": [
+          "MGP Kennis",
+          "L van Haaften",
+          "K van Hulst"
+        ],
+        "year": 2026,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.nature.com/articles/s41431-026-02214-7",
+        "quote": "Haploinsufficiency of TAF4 is associated with a developmental disorder \u2026 mild facial dysmorphisms, fit within the phenotype of TAF4-related disorders. This individual \u2026"
+      },
+      "numbers": [
+        {
+          "metric": "DLD cohort size",
+          "value": 25
+        },
+        {
+          "metric": "Molecular diagnostic yield percentage",
+          "value": 36
+        }
+      ]
+    },
+    {
+      "text": "De novo putative loss-of-function variants in TAF4 cause a neurodevelopmental disorder characterized by intellectual disability, abnormal behavior, and facial dysmorphisms.",
+      "stance": "neutral",
+      "source": {
+        "title": "De novo putative loss\u2010of\u2010function variants in TAF4 are associated with a neuro\u2010developmental disorder",
+        "authors": [
+          "BDE Janssen",
+          "MJH van den Boogaard"
+        ],
+        "year": 2022,
+        "journal": null,
+        "doi": "10.1002/humu.24444",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/humu.24444",
+        "quote": "We here present a cohort of eight individuals, each carrying de novo putative loss-of-function (pLoF) variants in TAF4 and expressing phenotypes consistent with a neuro-developmental disorder (NDD)."
+      },
+      "numbers": [
+        {
+          "metric": "Cohort size",
+          "value": 8
+        }
+      ]
+    }
+  ]
+}
+```

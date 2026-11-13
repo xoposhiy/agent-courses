@@ -1,0 +1,38 @@
+[
+  {
+    "original_url": "https://link.springer.com/article/10.1007/s11704-024-40231-1?fromPaywallRec=true",
+    "alternate_url": "https://arxiv.org/abs/2308.11432",
+    "markdown_path": "markdown/readings/arxiv-2308-11432.md",
+    "notes": "The arXiv record lists the assigned Springer DOI as a related DOI. This is the public preprint version."
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/epdf/10.1145/3715754",
+    "alternate_url": "https://lingming.cs.illinois.edu/publications/fse2025.pdf",
+    "markdown_path": "markdown/readings/ref-32c713753c27.md",
+    "notes": "Public author-hosted copy of the assigned FSE paper; the first page identifies DOI 10.1145/3715754."
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/epdf/10.1145/3832783.3834393",
+    "alternate_url": "https://arxiv.org/abs/2605.30777",
+    "markdown_path": "markdown/readings/arxiv-2605-30777.md",
+    "notes": "Public arXiv preprint with matching title and authors. This preprint may differ from the published version."
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/10.1145/3832783.3834400",
+    "alternate_url": "https://arxiv.org/abs/2604.12147",
+    "markdown_path": "markdown/readings/arxiv-2604-12147.md",
+    "notes": "Public arXiv preprint with matching title and authors. This preprint may differ from the published version."
+  },
+  {
+    "original_url": "https://openreview.net/pdf?id=zj7YuTE4t8",
+    "alternate_url": "https://arxiv.org/abs/2305.14325",
+    "markdown_path": "markdown/readings/arxiv-2305-14325.md",
+    "notes": "Public arXiv preprint with matching title and authors. This preprint may differ from the published version."
+  },
+  {
+    "original_url": "https://openreview.net/pdf?id=t32Hgnk7ou",
+    "alternate_url": "https://arxiv.org/abs/2606.17799",
+    "markdown_path": "markdown/readings/arxiv-2606-17799.md",
+    "notes": "Public arXiv preprint with matching title and authors. This preprint may differ from the published version."
+  }
+]

@@ -1,0 +1,69 @@
+# Homework 1 public teaching repository: assignments/OMIM_621201/grill_run/tasks/0042_screen_h17/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621201/grill_run/tasks/0042_screen_h17/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621201/grill_run/tasks/0042_screen_h17/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "GTF3C3 deficiency literature documents cerebellar atrophy, frontal lobe hypoplasia, and corpus callosum abnormalities, making this neuroimaging comparison plausible.",
+  "confidence": 0.8,
+  "evidence": [
+    {
+      "text": "Brain MRI of patients with biallelic GTF3C3 variants demonstrated brain atrophy with predominant cerebellar involvement, hypoplasia of the frontal lobes, and simplified gyral pattern.",
+      "stance": "supports",
+      "source": {
+        "title": "Biallelic variants in GTF3C3 encoding a subunit of the TFIIIC2 complex are associated with neurodevelopmental phenotypes in humans and zebrafish",
+        "authors": [
+          "MS Abdel"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://academic.oup.com/braincomms/article-abstract/7/1/fcaf055/8002734",
+        "quote": "Their brain imaging showed brain atrophy with predominant cerebellar involvement, as well as hypoplasia of the frontal lobes and one patient had moderate to severe simplified gyral pattern."
+      },
+      "numbers": [
+        {
+          "metric": "affected patients assessed",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "text": "Affected individuals with recessive GTF3C3 variants presented with cerebellar and corpus callosum malformations, including progressive cerebral and marked cerebellar atrophy and corpus callosum hypoplasia.",
+      "stance": "supports",
+      "source": {
+        "title": "Biallelic variants in GTF3C3 result in an autosomal recessive disorder with intellectual disability",
+        "authors": [
+          "L De Hayr",
+          "LER Blok",
+          "KR Dias",
+          "J Long",
+          "A Begemann"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.sciencedirect.com/science/article/pii/S1098360024001874",
+        "quote": "The cohort presented with intellectual disability, variable nonfamilial facial features, motor impairments, seizures, and cerebellar/corpus callosum malformations."
+      },
+      "numbers": [
+        {
+          "metric": "affected individuals",
+          "value": 12
+        },
+        {
+          "metric": "unrelated families",
+          "value": 7
+        }
+      ]
+    }
+  ]
+}
+```

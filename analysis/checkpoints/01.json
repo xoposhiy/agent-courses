@@ -1,0 +1,1048 @@
+{
+  "concepts": {
+    "agent-architecture": {
+      "id": "agent-architecture",
+      "label": "Agent architecture",
+      "kind": "topic",
+      "definition": "Combine a model, tools, memory, control flow, and an environment into an agent.",
+      "aliases": [
+        "agent anatomy",
+        "agent components"
+      ],
+      "parent_id": null,
+      "introduced_in": "stanford-cs329z"
+    },
+    "workflow-agent": {
+      "id": "workflow-agent",
+      "label": "Workflows versus agents",
+      "kind": "concept",
+      "definition": "Distinguish fixed program control flow from model-directed control flow.",
+      "aliases": [
+        "workflows vs agents",
+        "workflow versus agent"
+      ],
+      "parent_id": "agent-architecture",
+      "introduced_in": "stanford-cs329z"
+    },
+    "reasoning": {
+      "id": "reasoning",
+      "label": "Multi-step reasoning",
+      "kind": "topic",
+      "definition": "Use intermediate reasoning steps to solve a task.",
+      "aliases": [
+        "LLM reasoning"
+      ],
+      "parent_id": "agent-architecture",
+      "introduced_in": "stanford-cs329z"
+    },
+    "cot": {
+      "id": "cot",
+      "label": "Chain of thought",
+      "kind": "pattern",
+      "definition": "Generate intermediate reasoning steps before a final answer.",
+      "aliases": [
+        "CoT",
+        "chain-of-thought"
+      ],
+      "parent_id": "reasoning",
+      "introduced_in": "stanford-cs329z"
+    },
+    "self-consistency": {
+      "id": "self-consistency",
+      "label": "Self-consistency",
+      "kind": "pattern",
+      "definition": "Sample several reasoning paths and combine their answers.",
+      "aliases": [
+        "self consistency"
+      ],
+      "parent_id": "reasoning",
+      "introduced_in": "stanford-cs329z"
+    },
+    "reflection": {
+      "id": "reflection",
+      "label": "Reflection and self-correction",
+      "kind": "pattern",
+      "definition": "Use feedback about an attempt to revise reasoning or future actions.",
+      "aliases": [
+        "self-reflection",
+        "self correction"
+      ],
+      "parent_id": "reasoning",
+      "introduced_in": "stanford-cs329z"
+    },
+    "reflexion": {
+      "id": "reflexion",
+      "label": "Reflexion",
+      "kind": "method",
+      "definition": "Store verbal feedback from earlier attempts to improve later attempts.",
+      "aliases": [],
+      "parent_id": "reflection",
+      "introduced_in": "stanford-cs329z"
+    },
+    "planning": {
+      "id": "planning",
+      "label": "Planning and task decomposition",
+      "kind": "topic",
+      "definition": "Choose and organize steps or subtasks before or during action.",
+      "aliases": [
+        "task planning",
+        "task decomposition"
+      ],
+      "parent_id": "agent-architecture",
+      "introduced_in": "stanford-cs329z"
+    },
+    "react": {
+      "id": "react",
+      "label": "ReAct",
+      "kind": "pattern",
+      "definition": "Alternate reasoning, tool actions, and observations.",
+      "aliases": [
+        "reasoning and acting"
+      ],
+      "parent_id": "agent-architecture",
+      "introduced_in": "stanford-cs329z"
+    },
+    "codeact": {
+      "id": "codeact",
+      "label": "CodeAct",
+      "kind": "pattern",
+      "definition": "Use executable code as the agent action interface.",
+      "aliases": [
+        "code actions"
+      ],
+      "parent_id": "tool-use",
+      "introduced_in": "stanford-cs329z"
+    },
+    "plan-execute": {
+      "id": "plan-execute",
+      "label": "Plan then execute",
+      "kind": "pattern",
+      "definition": "Separate a planning stage from the execution of the planned steps.",
+      "aliases": [
+        "plan-and-execute",
+        "plan then execution"
+      ],
+      "parent_id": "planning",
+      "introduced_in": "stanford-cs329z"
+    },
+    "prompt-chain": {
+      "id": "prompt-chain",
+      "label": "Prompt chaining",
+      "kind": "pattern",
+      "definition": "Pass the output of one model step into the next step.",
+      "aliases": [
+        "prompt chain"
+      ],
+      "parent_id": "workflow-agent",
+      "introduced_in": "stanford-cs329z"
+    },
+    "routing": {
+      "id": "routing",
+      "label": "Routing",
+      "kind": "pattern",
+      "definition": "Choose a specialized path or component for an input.",
+      "aliases": [
+        "router pattern"
+      ],
+      "parent_id": "workflow-agent",
+      "introduced_in": "stanford-cs329z"
+    },
+    "parallelization": {
+      "id": "parallelization",
+      "label": "Parallel execution",
+      "kind": "pattern",
+      "definition": "Run independent tasks at the same time and combine results.",
+      "aliases": [
+        "parallelization",
+        "parallelisation"
+      ],
+      "parent_id": "workflow-agent",
+      "introduced_in": "stanford-cs329z"
+    },
+    "orchestrator-workers": {
+      "id": "orchestrator-workers",
+      "label": "Orchestrator and workers",
+      "kind": "pattern",
+      "definition": "Let a coordinator split work and assign subtasks to worker agents.",
+      "aliases": [
+        "orchestrator-workers",
+        "supervisor-worker"
+      ],
+      "parent_id": "multi-agent",
+      "introduced_in": "stanford-cs329z"
+    },
+    "critic-loop": {
+      "id": "critic-loop",
+      "label": "Evaluator and optimizer loop",
+      "kind": "pattern",
+      "definition": "Use a separate evaluator to guide repeated improvement of an output.",
+      "aliases": [
+        "evaluator-optimizer",
+        "generator-critic"
+      ],
+      "parent_id": "reflection",
+      "introduced_in": "stanford-cs329z"
+    },
+    "llm-foundations": {
+      "id": "llm-foundations",
+      "label": "Language model foundations",
+      "kind": "topic",
+      "definition": "Explain next-token modeling and the main parts of a language model.",
+      "aliases": [
+        "LLM foundations",
+        "language modeling"
+      ],
+      "parent_id": null,
+      "introduced_in": "stanford-cs329z"
+    },
+    "transformer": {
+      "id": "transformer",
+      "label": "Transformer and attention",
+      "kind": "concept",
+      "definition": "Use attention-based neural networks to model token sequences.",
+      "aliases": [
+        "transformers",
+        "self-attention"
+      ],
+      "parent_id": "llm-foundations",
+      "introduced_in": "stanford-cs329z"
+    },
+    "decoding": {
+      "id": "decoding",
+      "label": "Decoding and sampling",
+      "kind": "topic",
+      "definition": "Choose output tokens from model probabilities.",
+      "aliases": [
+        "token sampling",
+        "generation strategies"
+      ],
+      "parent_id": "llm-foundations",
+      "introduced_in": "stanford-cs329z"
+    },
+    "structured-output": {
+      "id": "structured-output",
+      "label": "Structured output and constrained decoding",
+      "kind": "method",
+      "definition": "Constrain model output to a schema or a set of valid tokens.",
+      "aliases": [
+        "structured I/O",
+        "constrained generation"
+      ],
+      "parent_id": "llm-foundations",
+      "introduced_in": "stanford-cs329z"
+    },
+    "inference-scaling": {
+      "id": "inference-scaling",
+      "label": "Inference-time scaling",
+      "kind": "method",
+      "definition": "Spend more inference compute on reasoning, search, or repeated attempts.",
+      "aliases": [
+        "test-time scaling",
+        "test time compute"
+      ],
+      "parent_id": "reasoning",
+      "introduced_in": "stanford-cs329z"
+    },
+    "prompting": {
+      "id": "prompting",
+      "label": "Prompt design",
+      "kind": "topic",
+      "definition": "Design instructions, examples, and role messages to guide a model.",
+      "aliases": [
+        "prompt engineering",
+        "prompting"
+      ],
+      "parent_id": null,
+      "introduced_in": "stanford-cs329z"
+    },
+    "few-shot": {
+      "id": "few-shot",
+      "label": "Few-shot prompting",
+      "kind": "method",
+      "definition": "Include examples in a prompt to guide the response.",
+      "aliases": [
+        "fewshot prompting",
+        "in-context examples"
+      ],
+      "parent_id": "prompting",
+      "introduced_in": "stanford-cs329z"
+    },
+    "prompt-optimization": {
+      "id": "prompt-optimization",
+      "label": "Automatic prompt optimization",
+      "kind": "method",
+      "definition": "Use measured feedback to search for better instructions or examples.",
+      "aliases": [
+        "context optimization",
+        "instruction optimization"
+      ],
+      "parent_id": "prompting",
+      "introduced_in": "stanford-cs329z"
+    },
+    "sft": {
+      "id": "sft",
+      "label": "Supervised fine-tuning",
+      "kind": "method",
+      "definition": "Train a model on examples of desired responses or action trajectories.",
+      "aliases": [
+        "SFT",
+        "instruction fine-tuning"
+      ],
+      "parent_id": "model-training",
+      "introduced_in": "stanford-cs329z"
+    },
+    "model-training": {
+      "id": "model-training",
+      "label": "Model training and post-training",
+      "kind": "topic",
+      "definition": "Train model weights before or after initial pretraining.",
+      "aliases": [
+        "LLM training",
+        "posttraining"
+      ],
+      "parent_id": "llm-foundations",
+      "introduced_in": "stanford-cs329z"
+    },
+    "rl": {
+      "id": "rl",
+      "label": "Reinforcement learning",
+      "kind": "topic",
+      "definition": "Learn a policy by using rewards from interaction.",
+      "aliases": [
+        "RL"
+      ],
+      "parent_id": "model-training",
+      "introduced_in": "stanford-cs329z"
+    },
+    "ppo": {
+      "id": "ppo",
+      "label": "Proximal policy optimization",
+      "kind": "method",
+      "definition": "Update a policy with a clipped objective to limit policy changes.",
+      "aliases": [
+        "PPO"
+      ],
+      "parent_id": "rl",
+      "introduced_in": "stanford-cs329z"
+    },
+    "grpo": {
+      "id": "grpo",
+      "label": "Group relative policy optimization",
+      "kind": "method",
+      "definition": "Compare rewards within groups of sampled outputs to update a policy.",
+      "aliases": [
+        "GRPO"
+      ],
+      "parent_id": "rl",
+      "introduced_in": "stanford-cs329z"
+    },
+    "distillation": {
+      "id": "distillation",
+      "label": "Knowledge distillation",
+      "kind": "method",
+      "definition": "Train a model to follow the outputs or behavior of a teacher model.",
+      "aliases": [
+        "on-policy distillation"
+      ],
+      "parent_id": "model-training",
+      "introduced_in": "stanford-cs329z"
+    },
+    "rag": {
+      "id": "rag",
+      "label": "Retrieval-augmented generation",
+      "kind": "topic",
+      "definition": "Retrieve external information and use it to generate an answer.",
+      "aliases": [
+        "RAG",
+        "retrieval augmented generation"
+      ],
+      "parent_id": null,
+      "introduced_in": "stanford-cs329z"
+    },
+    "chunking": {
+      "id": "chunking",
+      "label": "Document chunking and indexing",
+      "kind": "method",
+      "definition": "Split source documents and build an index for retrieval.",
+      "aliases": [
+        "chunking",
+        "document indexing"
+      ],
+      "parent_id": "rag",
+      "introduced_in": "stanford-cs329z"
+    },
+    "embeddings": {
+      "id": "embeddings",
+      "label": "Embedding-based retrieval",
+      "kind": "method",
+      "definition": "Encode queries and documents as vectors and retrieve similar documents.",
+      "aliases": [
+        "dense retrieval",
+        "vector search",
+        "DPR"
+      ],
+      "parent_id": "rag",
+      "introduced_in": "stanford-cs329z"
+    },
+    "sparse-retrieval": {
+      "id": "sparse-retrieval",
+      "label": "Sparse retrieval",
+      "kind": "method",
+      "definition": "Rank documents with token-based relevance scores.",
+      "aliases": [
+        "BM25",
+        "lexical retrieval"
+      ],
+      "parent_id": "rag",
+      "introduced_in": "stanford-cs329z"
+    },
+    "hybrid-search": {
+      "id": "hybrid-search",
+      "label": "Hybrid retrieval",
+      "kind": "method",
+      "definition": "Combine lexical and embedding-based retrieval results.",
+      "aliases": [
+        "hybrid search",
+        "reciprocal rank fusion"
+      ],
+      "parent_id": "rag",
+      "introduced_in": "stanford-cs329z"
+    },
+    "reranking": {
+      "id": "reranking",
+      "label": "Reranking and late interaction",
+      "kind": "method",
+      "definition": "Rescore retrieved candidates with richer query-document comparisons.",
+      "aliases": [
+        "cross-encoder reranking",
+        "ColBERT"
+      ],
+      "parent_id": "rag",
+      "introduced_in": "stanford-cs329z"
+    },
+    "graph-rag": {
+      "id": "graph-rag",
+      "label": "Graph-based retrieval",
+      "kind": "method",
+      "definition": "Use graph relations or graph summaries to support retrieval.",
+      "aliases": [
+        "GraphRAG",
+        "graph RAG"
+      ],
+      "parent_id": "rag",
+      "introduced_in": "stanford-cs329z"
+    },
+    "agentic-rag": {
+      "id": "agentic-rag",
+      "label": "Agentic retrieval",
+      "kind": "pattern",
+      "definition": "Let an agent decide when and how to retrieve and revise a search.",
+      "aliases": [
+        "agentic RAG",
+        "corrective RAG"
+      ],
+      "parent_id": "rag",
+      "introduced_in": "stanford-cs329z"
+    },
+    "retrieval-eval": {
+      "id": "retrieval-eval",
+      "label": "Retrieval evaluation",
+      "kind": "topic",
+      "definition": "Measure whether retrieval returns relevant evidence.",
+      "aliases": [
+        "retrieval metrics",
+        "recall at k",
+        "MRR",
+        "nDCG"
+      ],
+      "parent_id": "evaluation",
+      "introduced_in": "stanford-cs329z"
+    },
+    "tool-use": {
+      "id": "tool-use",
+      "label": "Tool use and function calling",
+      "kind": "topic",
+      "definition": "Let a model choose and call external functions and consume their results.",
+      "aliases": [
+        "tool calling",
+        "function calling",
+        "tool invocation"
+      ],
+      "parent_id": null,
+      "introduced_in": "stanford-cs329z"
+    },
+    "tool-discovery": {
+      "id": "tool-discovery",
+      "label": "Tool discovery and selection",
+      "kind": "method",
+      "definition": "Find and select relevant tools from available tool descriptions.",
+      "aliases": [
+        "tool retrieval",
+        "API selection"
+      ],
+      "parent_id": "tool-use",
+      "introduced_in": "stanford-cs329z"
+    },
+    "mcp": {
+      "id": "mcp",
+      "label": "Model Context Protocol",
+      "kind": "protocol",
+      "definition": "Connect agent hosts and tool servers through a shared tool interface.",
+      "aliases": [
+        "MCP"
+      ],
+      "parent_id": "tool-use",
+      "introduced_in": "stanford-cs329z"
+    },
+    "tool-eval": {
+      "id": "tool-eval",
+      "label": "Tool-call evaluation",
+      "kind": "topic",
+      "definition": "Check selected tools, arguments, execution, and tool-use outcomes.",
+      "aliases": [
+        "function-call evaluation",
+        "tool use evaluation"
+      ],
+      "parent_id": "evaluation",
+      "introduced_in": "stanford-cs329z"
+    },
+    "frameworks": {
+      "id": "frameworks",
+      "label": "Agent frameworks and orchestration",
+      "kind": "topic",
+      "definition": "Use reusable components and control flow to build agent systems.",
+      "aliases": [
+        "agent orchestration",
+        "agent frameworks"
+      ],
+      "parent_id": "agent-architecture",
+      "introduced_in": "stanford-cs329z"
+    },
+    "dspy": {
+      "id": "dspy",
+      "label": "DSPy",
+      "kind": "tool",
+      "definition": "Build and optimize language model programs with signatures, modules, and optimizers.",
+      "aliases": [],
+      "parent_id": "frameworks",
+      "introduced_in": "stanford-cs329z"
+    },
+    "langgraph": {
+      "id": "langgraph",
+      "label": "LangGraph",
+      "kind": "tool",
+      "definition": "Build stateful model workflows with nodes, edges, and graph state.",
+      "aliases": [],
+      "parent_id": "frameworks",
+      "introduced_in": "stanford-cs329z"
+    },
+    "harness": {
+      "id": "harness",
+      "label": "Agent harness design",
+      "kind": "topic",
+      "definition": "Design the runtime around a model, including tools, state, limits, and execution.",
+      "aliases": [
+        "agent scaffolds",
+        "agent scaffolding"
+      ],
+      "parent_id": "agent-architecture",
+      "introduced_in": "stanford-cs329z"
+    },
+    "durable-execution": {
+      "id": "durable-execution",
+      "label": "Durable execution and recovery",
+      "kind": "pattern",
+      "definition": "Persist execution state and recover work after failures or pauses.",
+      "aliases": [
+        "durable workflows",
+        "retries and recovery"
+      ],
+      "parent_id": "frameworks",
+      "introduced_in": "stanford-cs329z"
+    },
+    "observability": {
+      "id": "observability",
+      "label": "Tracing and observability",
+      "kind": "topic",
+      "definition": "Record agent steps and inspect behavior, failures, and runtime measurements.",
+      "aliases": [
+        "agent traces",
+        "telemetry",
+        "tracing"
+      ],
+      "parent_id": null,
+      "introduced_in": "stanford-cs329z"
+    },
+    "context-engineering": {
+      "id": "context-engineering",
+      "label": "Context engineering",
+      "kind": "topic",
+      "definition": "Select and organize the information supplied to a model for each step.",
+      "aliases": [
+        "context management"
+      ],
+      "parent_id": null,
+      "introduced_in": "stanford-cs329z"
+    },
+    "compaction": {
+      "id": "compaction",
+      "label": "Context summarization and compaction",
+      "kind": "pattern",
+      "definition": "Replace long interaction history with a shorter useful representation.",
+      "aliases": [
+        "context summarization",
+        "compaction"
+      ],
+      "parent_id": "context-engineering",
+      "introduced_in": "stanford-cs329z"
+    },
+    "context-offload": {
+      "id": "context-offload",
+      "label": "Context offloading",
+      "kind": "pattern",
+      "definition": "Store information outside the active prompt and load it when needed.",
+      "aliases": [
+        "memory offloading",
+        "context offloading to files"
+      ],
+      "parent_id": "context-engineering",
+      "introduced_in": "stanford-cs329z"
+    },
+    "observation-masking": {
+      "id": "observation-masking",
+      "label": "Observation masking",
+      "kind": "pattern",
+      "definition": "Remove or hide older tool outputs while keeping useful interaction structure.",
+      "aliases": [],
+      "parent_id": "context-engineering",
+      "introduced_in": "stanford-cs329z"
+    },
+    "context-isolation": {
+      "id": "context-isolation",
+      "label": "Context isolation",
+      "kind": "pattern",
+      "definition": "Give a task or subagent a separate context to limit interference.",
+      "aliases": [],
+      "parent_id": "context-engineering",
+      "introduced_in": "stanford-cs329z"
+    },
+    "progressive-disclosure": {
+      "id": "progressive-disclosure",
+      "label": "Progressive disclosure",
+      "kind": "pattern",
+      "definition": "Load instructions or tool details only when the current task needs them.",
+      "aliases": [],
+      "parent_id": "context-engineering",
+      "introduced_in": "stanford-cs329z"
+    },
+    "memory": {
+      "id": "memory",
+      "label": "Agent memory",
+      "kind": "topic",
+      "definition": "Store and reuse information across steps or interactions.",
+      "aliases": [
+        "agent memory architectures"
+      ],
+      "parent_id": null,
+      "introduced_in": "stanford-cs329z"
+    },
+    "working-memory": {
+      "id": "working-memory",
+      "label": "Working memory",
+      "kind": "concept",
+      "definition": "Keep information needed for the current task in active context.",
+      "aliases": [
+        "short-term memory"
+      ],
+      "parent_id": "memory",
+      "introduced_in": "stanford-cs329z"
+    },
+    "episodic-memory": {
+      "id": "episodic-memory",
+      "label": "Episodic memory",
+      "kind": "concept",
+      "definition": "Store events or past experiences that an agent can recall.",
+      "aliases": [],
+      "parent_id": "memory",
+      "introduced_in": "stanford-cs329z"
+    },
+    "semantic-memory": {
+      "id": "semantic-memory",
+      "label": "Semantic memory",
+      "kind": "concept",
+      "definition": "Store facts and general knowledge for later use.",
+      "aliases": [],
+      "parent_id": "memory",
+      "introduced_in": "stanford-cs329z"
+    },
+    "procedural-memory": {
+      "id": "procedural-memory",
+      "label": "Procedural memory and skills",
+      "kind": "concept",
+      "definition": "Store reusable procedures or skills that guide actions.",
+      "aliases": [
+        "skill libraries",
+        "agent skills"
+      ],
+      "parent_id": "memory",
+      "introduced_in": "stanford-cs329z"
+    },
+    "tiered-memory": {
+      "id": "tiered-memory",
+      "label": "Tiered memory",
+      "kind": "pattern",
+      "definition": "Move information between memory levels with different capacity and access costs.",
+      "aliases": [
+        "memory hierarchy",
+        "MemGPT"
+      ],
+      "parent_id": "memory",
+      "introduced_in": "stanford-cs329z"
+    },
+    "memory-maintenance": {
+      "id": "memory-maintenance",
+      "label": "Memory maintenance and consolidation",
+      "kind": "pattern",
+      "definition": "Update, combine, remove, or reorganize stored memories.",
+      "aliases": [
+        "memory consolidation",
+        "forgetting"
+      ],
+      "parent_id": "memory",
+      "introduced_in": "stanford-cs329z"
+    },
+    "memory-eval": {
+      "id": "memory-eval",
+      "label": "Memory evaluation",
+      "kind": "topic",
+      "definition": "Measure recall, updating, temporal reasoning, and useful memory use.",
+      "aliases": [
+        "memory benchmarks"
+      ],
+      "parent_id": "evaluation",
+      "introduced_in": "stanford-cs329z"
+    },
+    "multi-agent": {
+      "id": "multi-agent",
+      "label": "Multi-agent systems",
+      "kind": "topic",
+      "definition": "Use several agents that interact to solve tasks.",
+      "aliases": [
+        "MAS",
+        "multiagent systems"
+      ],
+      "parent_id": null,
+      "introduced_in": "stanford-cs329z"
+    },
+    "agent-handoff": {
+      "id": "agent-handoff",
+      "label": "Agent handoffs",
+      "kind": "pattern",
+      "definition": "Transfer control and relevant information from one agent to another.",
+      "aliases": [
+        "handoff"
+      ],
+      "parent_id": "multi-agent",
+      "introduced_in": "stanford-cs329z"
+    },
+    "agent-as-tool": {
+      "id": "agent-as-tool",
+      "label": "Agent as a tool",
+      "kind": "pattern",
+      "definition": "Call a specialist agent as a tool while the caller keeps control.",
+      "aliases": [
+        "subagent as tool"
+      ],
+      "parent_id": "multi-agent",
+      "introduced_in": "stanford-cs329z"
+    },
+    "shared-memory": {
+      "id": "shared-memory",
+      "label": "Shared memory and task coordination",
+      "kind": "pattern",
+      "definition": "Coordinate agents through shared state, task records, or message stores.",
+      "aliases": [
+        "task ledger",
+        "message board"
+      ],
+      "parent_id": "multi-agent",
+      "introduced_in": "stanford-cs329z"
+    },
+    "a2a": {
+      "id": "a2a",
+      "label": "Agent2Agent protocol",
+      "kind": "protocol",
+      "definition": "Describe and exchange tasks between agents through a shared protocol.",
+      "aliases": [
+        "A2A"
+      ],
+      "parent_id": "multi-agent",
+      "introduced_in": "stanford-cs329z"
+    },
+    "worktree-isolation": {
+      "id": "worktree-isolation",
+      "label": "Workspace isolation",
+      "kind": "pattern",
+      "definition": "Give agents separate working directories to prevent conflicting file changes.",
+      "aliases": [
+        "worktree isolation"
+      ],
+      "parent_id": "multi-agent",
+      "introduced_in": "stanford-cs329z"
+    },
+    "multi-agent-failures": {
+      "id": "multi-agent-failures",
+      "label": "Multi-agent failure analysis",
+      "kind": "topic",
+      "definition": "Analyze coordination failures, conflicting goals, and harmful group behavior.",
+      "aliases": [
+        "coordination failures"
+      ],
+      "parent_id": "multi-agent",
+      "introduced_in": "stanford-cs329z"
+    },
+    "data-curation": {
+      "id": "data-curation",
+      "label": "Training data selection and quality",
+      "kind": "topic",
+      "definition": "Select and check useful tasks, demonstrations, and trajectories.",
+      "aliases": [
+        "data selection",
+        "data quality"
+      ],
+      "parent_id": "model-training",
+      "introduced_in": "stanford-cs329z"
+    },
+    "synthetic-data": {
+      "id": "synthetic-data",
+      "label": "Synthetic data and trajectory generation",
+      "kind": "method",
+      "definition": "Generate tasks, examples, or agent rollouts for training or testing.",
+      "aliases": [
+        "synthetic data generation",
+        "synthesized trajectories"
+      ],
+      "parent_id": "data-curation",
+      "introduced_in": "stanford-cs329z"
+    },
+    "human-demos": {
+      "id": "human-demos",
+      "label": "Human demonstrations and feedback",
+      "kind": "method",
+      "definition": "Collect human actions or feedback to train or improve an agent.",
+      "aliases": [
+        "human demonstrations",
+        "human feedback"
+      ],
+      "parent_id": "data-curation",
+      "introduced_in": "stanford-cs329z"
+    },
+    "evaluation": {
+      "id": "evaluation",
+      "label": "Agent evaluation and benchmarks",
+      "kind": "topic",
+      "definition": "Measure agent behavior and outcomes with defined tasks and scores.",
+      "aliases": [
+        "agent evals",
+        "agent benchmarking"
+      ],
+      "parent_id": null,
+      "introduced_in": "stanford-cs329z"
+    },
+    "benchmark-design": {
+      "id": "benchmark-design",
+      "label": "Benchmark and test-set design",
+      "kind": "topic",
+      "definition": "Define tasks, environments, stopping rules, and scoring for evaluation.",
+      "aliases": [
+        "benchmark design",
+        "test set design"
+      ],
+      "parent_id": "evaluation",
+      "introduced_in": "stanford-cs329z"
+    },
+    "code-grader": {
+      "id": "code-grader",
+      "label": "Code-based evaluators",
+      "kind": "method",
+      "definition": "Use deterministic code or tests to score agent behavior or outputs.",
+      "aliases": [
+        "code based graders",
+        "programmatic evaluators"
+      ],
+      "parent_id": "evaluation",
+      "introduced_in": "stanford-cs329z"
+    },
+    "human-eval": {
+      "id": "human-eval",
+      "label": "Human evaluation",
+      "kind": "method",
+      "definition": "Use human judgments or labels to assess agent behavior or outputs.",
+      "aliases": [
+        "human graders"
+      ],
+      "parent_id": "evaluation",
+      "introduced_in": "stanford-cs329z"
+    },
+    "llm-judge": {
+      "id": "llm-judge",
+      "label": "LLM as a judge",
+      "kind": "method",
+      "definition": "Use a language model to score another system with stated criteria.",
+      "aliases": [
+        "LLM-as-judge",
+        "LM-as-a-judge",
+        "LLM judge"
+      ],
+      "parent_id": "evaluation",
+      "introduced_in": "stanford-cs329z"
+    },
+    "judge-validation": {
+      "id": "judge-validation",
+      "label": "Judge validation and bias",
+      "kind": "topic",
+      "definition": "Check evaluator agreement, accuracy, and bias against trusted labels.",
+      "aliases": [
+        "validating LLM judges",
+        "evaluator calibration"
+      ],
+      "parent_id": "llm-judge",
+      "introduced_in": "stanford-cs329z"
+    },
+    "rubrics": {
+      "id": "rubrics",
+      "label": "Evaluation rubrics",
+      "kind": "method",
+      "definition": "Define explicit criteria and rating rules for judgments.",
+      "aliases": [
+        "custom rubrics",
+        "grading rubrics"
+      ],
+      "parent_id": "evaluation",
+      "introduced_in": "stanford-cs329z"
+    },
+    "reliability": {
+      "id": "reliability",
+      "label": "Reliability and repeated-run evaluation",
+      "kind": "topic",
+      "definition": "Measure variation and success across repeated agent runs.",
+      "aliases": [
+        "pass@k",
+        "pass^k",
+        "nondeterminism"
+      ],
+      "parent_id": "evaluation",
+      "introduced_in": "stanford-cs329z"
+    },
+    "reward-hacking": {
+      "id": "reward-hacking",
+      "label": "Reward hacking and evaluation gaming",
+      "kind": "concept",
+      "definition": "Exploit a reward or scoring rule without meeting the intended task.",
+      "aliases": [
+        "reward hacking",
+        "benchmark gaming"
+      ],
+      "parent_id": "evaluation",
+      "introduced_in": "stanford-cs329z"
+    },
+    "coding-agents": {
+      "id": "coding-agents",
+      "label": "Coding and terminal agents",
+      "kind": "application",
+      "definition": "Use agents to write, edit, test, or run code and command-line tasks.",
+      "aliases": [
+        "software engineering agents",
+        "terminal agents"
+      ],
+      "parent_id": null,
+      "introduced_in": "stanford-cs329z"
+    },
+    "safety": {
+      "id": "safety",
+      "label": "Agent safety and guardrails",
+      "kind": "topic",
+      "definition": "Limit harmful agent actions and enforce task or use constraints.",
+      "aliases": [
+        "agent guardrails",
+        "safety guardrails"
+      ],
+      "parent_id": null,
+      "introduced_in": "stanford-cs329z"
+    },
+    "prompt-injection": {
+      "id": "prompt-injection",
+      "label": "Prompt injection",
+      "kind": "concept",
+      "definition": "Untrusted content attempts to redirect an agent or override instructions.",
+      "aliases": [
+        "indirect prompt injection"
+      ],
+      "parent_id": "safety",
+      "introduced_in": "stanford-cs329z"
+    },
+    "privacy": {
+      "id": "privacy",
+      "label": "Privacy and user data protection",
+      "kind": "topic",
+      "definition": "Control disclosure and use of private user information.",
+      "aliases": [
+        "privacy risks"
+      ],
+      "parent_id": "safety",
+      "introduced_in": "stanford-cs329z"
+    },
+    "sandboxing": {
+      "id": "sandboxing",
+      "label": "Sandboxed execution",
+      "kind": "method",
+      "definition": "Run code or tools inside a restricted environment.",
+      "aliases": [
+        "sandboxing",
+        "execution sandbox"
+      ],
+      "parent_id": "safety",
+      "introduced_in": "stanford-cs329z"
+    },
+    "hitl": {
+      "id": "hitl",
+      "label": "Human oversight and approval",
+      "kind": "pattern",
+      "definition": "Pause or route an agent decision to a person for review or approval.",
+      "aliases": [
+        "human-in-the-loop",
+        "HITL",
+        "human oversight"
+      ],
+      "parent_id": "safety",
+      "introduced_in": "stanford-cs329z"
+    },
+    "personalization": {
+      "id": "personalization",
+      "label": "Personalization and user modeling",
+      "kind": "topic",
+      "definition": "Adapt agent behavior to a user's preferences, history, or needs.",
+      "aliases": [
+        "user modeling",
+        "personal agents"
+      ],
+      "parent_id": null,
+      "introduced_in": "stanford-cs329z"
+    },
+    "proactive": {
+      "id": "proactive",
+      "label": "Proactive and mixed-initiative agents",
+      "kind": "pattern",
+      "definition": "Let an agent decide when to initiate useful actions or interaction.",
+      "aliases": [
+        "mixed initiative",
+        "proactive agents"
+      ],
+      "parent_id": "personalization",
+      "introduced_in": "stanford-cs329z"
+    }
+  },
+  "courses": [
+    "stanford-cs329z"
+  ]
+}

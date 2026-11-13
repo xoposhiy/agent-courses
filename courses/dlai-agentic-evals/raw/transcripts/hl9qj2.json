@@ -1,0 +1,337 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 6,
+    "text": "In the last video, you explored how code evaluators check requirements\nusing explicit rules,"
+  },
+  {
+    "startInSeconds": 6,
+    "endInSeconds": 10,
+    "text": "but some requirements call for interpreting what a\nresponse means in context."
+  },
+  {
+    "startInSeconds": 10,
+    "endInSeconds": 17,
+    "text": "Was the response helpful? Did it answer the user's actual question?\nWas the tone appropriate for somebody who was already frustrated?"
+  },
+  {
+    "startInSeconds": 17,
+    "endInSeconds": 22,
+    "text": "You need to read the response and consider the situation to\nmake those judgments."
+  },
+  {
+    "startInSeconds": 22,
+    "endInSeconds": 27,
+    "text": "You can make those judgments yourself through a human review,\nor use an LLM judge to automate them."
+  },
+  {
+    "startInSeconds": 27,
+    "endInSeconds": 34,
+    "text": "An LLM judge uses a model to evaluate the agent's response against\nwritten criteria, In this video,"
+  },
+  {
+    "startInSeconds": 34,
+    "endInSeconds": 40,
+    "text": "you'll look at how to put that evaluator together and use its\njudgments to find responses that need a closer look."
+  },
+  {
+    "startInSeconds": 40,
+    "endInSeconds": 43,
+    "text": "Let's start with the shelter's safe matching requirement."
+  },
+  {
+    "startInSeconds": 43,
+    "endInSeconds": 49,
+    "text": "Suppose the agent recommends a dog that lunges at children for a\nvolunteer described as an experienced handler."
+  },
+  {
+    "startInSeconds": 49,
+    "endInSeconds": 54,
+    "text": "The record can tell you about the dog's behavior,\nand the profile can tell you about the volunteer's experience,"
+  },
+  {
+    "startInSeconds": 54,
+    "endInSeconds": 60,
+    "text": "but you still need to consider whether that experience prepares the\nvolunteer to manage this dog's particular behavior."
+  },
+  {
+    "startInSeconds": 60,
+    "endInSeconds": 65,
+    "text": "Simply confirming that the volunteer is experienced doesn't settle\nwhether the match is safe."
+  },
+  {
+    "startInSeconds": 65,
+    "endInSeconds": 74,
+    "text": "So, how would an LLM judge evaluate that recommendation? It needs\nthree things: a judge model, a rubric, and data from the agent's run."
+  },
+  {
+    "startInSeconds": 74,
+    "endInSeconds": 82,
+    "text": "The judge model is the LLM that makes the evaluation. The rubric gives\nthe model the criteria and instructions for evaluating the response."
+  },
+  {
+    "startInSeconds": 82,
+    "endInSeconds": 87,
+    "text": "For safe matching, those criteria might tell the judge to identify the\ndog's behavior risks,"
+  },
+  {
+    "startInSeconds": 87,
+    "endInSeconds": 95,
+    "text": "compare them with the volunteer's relevant experience, and return SAFE\nonly when the volunteer appears to be able to manage those risks."
+  },
+  {
+    "startInSeconds": 95,
+    "endInSeconds": 101,
+    "text": "The data gives the judge the evidence for that particular\nrecommendation, the volunteer's profile, the dog's record,"
+  },
+  {
+    "startInSeconds": 101,
+    "endInSeconds": 103,
+    "text": "and the agent's decision."
+  },
+  {
+    "startInSeconds": 103,
+    "endInSeconds": 107,
+    "text": "The model applies the rubric to that evidence\nand returns its judgment,"
+  },
+  {
+    "startInSeconds": 107,
+    "endInSeconds": 114,
+    "text": "So the rubric matters because it tells the model what to consider\nwhen deciding whether the recommendation meets the requirement."
+  },
+  {
+    "startInSeconds": 114,
+    "endInSeconds": 119,
+    "text": "Phoenix keeps the model, rubric, and data separate,\nso you can change one without changing the others."
+  },
+  {
+    "startInSeconds": 119,
+    "endInSeconds": 126,
+    "text": "You might try another model with the same rubric and examples,\nor revise the rubric while keeping the model and examples the same."
+  },
+  {
+    "startInSeconds": 126,
+    "endInSeconds": 133,
+    "text": "That lets you compare the evaluations and see how the judgments\ndiffer. Let's look first at choosing the judge model."
+  },
+  {
+    "startInSeconds": 133,
+    "endInSeconds": 137,
+    "text": "You don't have to use the same model for the judge that you\nuse in the application."
+  },
+  {
+    "startInSeconds": 137,
+    "endInSeconds": 143,
+    "text": "For the application, you might choose a faster,\nless expensive model to keep the response times and costs down."
+  },
+  {
+    "startInSeconds": 143,
+    "endInSeconds": 147,
+    "text": "But the judge can often evaluate completed runs afterwards,"
+  },
+  {
+    "startInSeconds": 147,
+    "endInSeconds": 151,
+    "text": "so you may be able to use a more capable model even if it's\nslower or more expensive."
+  },
+  {
+    "startInSeconds": 151,
+    "endInSeconds": 158,
+    "text": "Mistakes by the judge affect your evaluation results,\nso how reliably it applies the rubric matters."
+  },
+  {
+    "startInSeconds": 158,
+    "endInSeconds": 162,
+    "text": "The judge's model can also come from a different provider than the\napplication's model."
+  },
+  {
+    "startInSeconds": 162,
+    "endInSeconds": 170,
+    "text": "from the same provider may share biases in how they generate\nand evaluate responses, so they may overlook similar problems."
+  },
+  {
+    "startInSeconds": 170,
+    "endInSeconds": 174,
+    "text": "Choosing a different provider for the judge can help reduce that risk."
+  },
+  {
+    "startInSeconds": 174,
+    "endInSeconds": 181,
+    "text": "Now, whichever model or provider you choose, what you really need to\nknow is whether the judge is applying your criteria correctly."
+  },
+  {
+    "startInSeconds": 181,
+    "endInSeconds": 187,
+    "text": "You can check that by comparing its judgments with human judgments of\nthe same responses using the same criteria."
+  },
+  {
+    "startInSeconds": 187,
+    "endInSeconds": 193,
+    "text": "In this course, we call the person making those judgments a Reviewer,\nand the automated system an Evaluator."
+  },
+  {
+    "startInSeconds": 193,
+    "endInSeconds": 201,
+    "text": "Later in the module, you'll look at how well the Evaluator agrees with\nthose Reviewers. Next, consider where the rubric will come from."
+  },
+  {
+    "startInSeconds": 201,
+    "endInSeconds": 207,
+    "text": "Before writing one from scratch, check whether Phoenix already has an\nevaluator for the requirement you want to measure."
+  },
+  {
+    "startInSeconds": 207,
+    "endInSeconds": 214,
+    "text": "Built-in templates cover questions such as correctness,\ntool selection and tool invocation, document relevance, and refusal."
+  },
+  {
+    "startInSeconds": 214,
+    "endInSeconds": 221,
+    "text": "They give you prewritten criteria and an expected output,\nand you provide the judge model and evidence to evaluate."
+  },
+  {
+    "startInSeconds": 221,
+    "endInSeconds": 225,
+    "text": "A built-in evaluator is useful when those criteria\nmatch your requirements,"
+  },
+  {
+    "startInSeconds": 225,
+    "endInSeconds": 229,
+    "text": "but a general Correctness evaluator doesn't know how the\nshelter judges a match,"
+  },
+  {
+    "startInSeconds": 229,
+    "endInSeconds": 234,
+    "text": "including whether the volunteer's experience prepares them to manage\nthe dog's particular behavior."
+  },
+  {
+    "startInSeconds": 234,
+    "endInSeconds": 237,
+    "text": "So you're going to need a custom rubric to tell the judge\nwhich details matter"
+  },
+  {
+    "startInSeconds": 237,
+    "endInSeconds": 241,
+    "text": "and what makes a recommendation acceptable for the shelter."
+  },
+  {
+    "startInSeconds": 241,
+    "endInSeconds": 246,
+    "text": "Once you've selected the model and rubric,\nyou can run the judge across a set of recorded runs."
+  },
+  {
+    "startInSeconds": 246,
+    "endInSeconds": 253,
+    "text": "The workflow is to retrieve the data from Phoenix,\nevaluate the responses, and save the judgments back to Phoenix."
+  },
+  {
+    "startInSeconds": 253,
+    "endInSeconds": 259,
+    "text": "You'll work through the code for this workflow in the lab.\nFor now, let's look at what each part does."
+  },
+  {
+    "startInSeconds": 259,
+    "endInSeconds": 265,
+    "text": "Start by retrieving the relevant spans from Phoenix as a dataframe,\nand prepare the information the judge needs for each example."
+  },
+  {
+    "startInSeconds": 265,
+    "endInSeconds": 272,
+    "text": "For a response check, that includes the input and output from the run,\nalong with any context needed to apply the rubric."
+  },
+  {
+    "startInSeconds": 272,
+    "endInSeconds": 278,
+    "text": "For safe matching, you need the volunteer profile, the dog's record,\nand the agent's recommendation."
+  },
+  {
+    "startInSeconds": 278,
+    "endInSeconds": 284,
+    "text": "Then, set up the evaluator with your judge model and the rubric\nthat it will apply to that evidence."
+  },
+  {
+    "startInSeconds": 284,
+    "endInSeconds": 291,
+    "text": "Before running the evaluator, remember that the judge also makes calls\nto an LLM, and those calls can produce traces of their own."
+  },
+  {
+    "startInSeconds": 291,
+    "endInSeconds": 296,
+    "text": "Use suppress_tracing around the evaluation code to pause\nthat recording while the judge runs."
+  },
+  {
+    "startInSeconds": 296,
+    "endInSeconds": 299,
+    "text": "You'll still save the judge's scores and labels,"
+  },
+  {
+    "startInSeconds": 299,
+    "endInSeconds": 304,
+    "text": "but you won't add traces of the grading process alongside the\napplication runs you're evaluating."
+  },
+  {
+    "startInSeconds": 304,
+    "endInSeconds": 307,
+    "text": "You can then run the judge across the recorded runs."
+  },
+  {
+    "startInSeconds": 307,
+    "endInSeconds": 314,
+    "text": "For each safe matching example, the judge receives the volunteer's\nprofile, the dog's record, and the agent's recommendation."
+  },
+  {
+    "startInSeconds": 314,
+    "endInSeconds": 322,
+    "text": "It applies the rubric and returns a structured result,\nsuch as a safe or unsafe label, a score, and an explanation."
+  },
+  {
+    "startInSeconds": 322,
+    "endInSeconds": 326,
+    "text": "Save those results back to Phoenix as annotations linked to the\nruns they evaluated,"
+  },
+  {
+    "startInSeconds": 326,
+    "endInSeconds": 330,
+    "text": "so you can find the responses the judge flagged\nand inspect what happened."
+  },
+  {
+    "startInSeconds": 330,
+    "endInSeconds": 335,
+    "text": "Now you can sort by score or filter by label to find the responses\nyou want to inspect."
+  },
+  {
+    "startInSeconds": 335,
+    "endInSeconds": 339,
+    "text": "For safe matching, you might start with\nrecommendations labeled UNSAFE."
+  },
+  {
+    "startInSeconds": 339,
+    "endInSeconds": 346,
+    "text": "Those labels give you an explanation of what failed, so open one of\nthose traces and compare the volunteer's profile, the dog's record,"
+  },
+  {
+    "startInSeconds": 346,
+    "endInSeconds": 351,
+    "text": "and the agent's recommendation to see which risk the agent\nmay have overlooked."
+  },
+  {
+    "startInSeconds": 351,
+    "endInSeconds": 355,
+    "text": "The automated evaluations help you choose where to focus your review,"
+  },
+  {
+    "startInSeconds": 355,
+    "endInSeconds": 358,
+    "text": "instead of having to read every response just to\nfind possible problems."
+  },
+  {
+    "startInSeconds": 358,
+    "endInSeconds": 364,
+    "text": "The judge can help you find possible failures,\nand the rubric tells it what to look for."
+  },
+  {
+    "startInSeconds": 364,
+    "endInSeconds": 370,
+    "text": "In the next video, you'll look at how to turn the shelter's safe\nmatching requirement into a custom rubric the judge can apply."
+  }
+]

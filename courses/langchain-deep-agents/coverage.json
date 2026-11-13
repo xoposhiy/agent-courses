@@ -1,0 +1,18 @@
+{
+  "public_lesson_markdown_sources": 29,
+  "converted_lessons": 29,
+  "interactive_html_assets": 6,
+  "static_slideshow_steps": 30,
+  "interactive_programs_preserved_as_source": 42,
+  "official_tutor_subtree_files": 27,
+  "public_video_urls": 78,
+  "public_video_transcripts": 78,
+  "explicit_reference_urls": 123,
+  "excluded_example_urls": [],
+  "repository_files": 457,
+  "assigned_arxiv_full_texts": 1,
+  "announcement_transcripts": 1,
+  "example_endpoints_not_teaching_materials": [
+    "http://localhost:3000"
+  ]
+}

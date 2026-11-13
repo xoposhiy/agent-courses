@@ -1,0 +1,105 @@
+# Homework 1 public teaching repository: assignments/OMIM_620511/grill_run/tasks/0036_explore_r2_1/meta.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620511/grill_run/tasks/0036_explore_r2_1/meta.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620511/grill_run/tasks/0036_explore_r2_1/meta.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "mode": "research",
+  "model": "gemini-3.8-flash",
+  "executor": "direct",
+  "queries": [
+    "\"SCAF4\" \"Fliedner-Zweier syndrome\" phenotype clinical features",
+    "SCAF4 Fliedner-Zweier syndrome seizures hypotonia skeletal features cohort"
+  ],
+  "n_hits": 10,
+  "hits": [
+    {
+      "id": "10.3389/fgene.2025.1487352/full",
+      "title": "A novel nonsense mutation in SCAF4 associated with fliedner-zweier syndrome: a case report and review of the literature",
+      "pmid": null,
+      "doi": "10.3389/fgene.2025.1487352/full",
+      "url": "https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2025.1487352/full",
+      "abstract_chars": 0
+    },
+    {
+      "id": "https://www.nature.com/articles/s41431-024-01760-2",
+      "title": "Further delineation of the SCAF4-associated neurodevelopmental disorder",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.nature.com/articles/s41431-024-01760-2",
+      "abstract_chars": 1470
+    },
+    {
+      "id": "https://www.cell.com/trends/cell-biology/fulltext/S0962-8924(26)00163-7",
+      "title": "Transcription elongation by RNA polymerase II: from regulatory complexity to disease",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.cell.com/trends/cell-biology/fulltext/S0962-8924(26)00163-7",
+      "abstract_chars": 784
+    },
+    {
+      "id": "https://www.nature.com/articles/s41431-025-01966-y",
+      "title": "Heterozygous loss of SRRM1 may be associated with neurodevelopmental phenotypes and anomalies in cell growth and neurite morphology",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.nature.com/articles/s41431-025-01966-y",
+      "abstract_chars": 1382
+    },
+    {
+      "id": "https://www.cureus.com/articles/439889-congenital-anomalies-in-a-neonate-with-partial-monosomy-of-chromosome-21-q-arm-a-case-report.pdf",
+      "title": "Congenital Anomalies in a Neonate With Partial Monosomy of Chromosome 21 q Arm: A Case Report",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.cureus.com/articles/439889-congenital-anomalies-in-a-neonate-with-partial-monosomy-of-chromosome-21-q-arm-a-case-report.pdf",
+      "abstract_chars": 887
+    },
+    {
+      "id": "PMC12021868",
+      "title": "A novel nonsense mutation in SCAF4 associated with fliedner ...",
+      "pmid": null,
+      "doi": null,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12021868/",
+      "abstract_chars": 1560
+    },
+    {
+      "id": "https://www.malacards.org/card/fliedner_zweier_syndrome",
+      "title": "Fliedner-Zweier Syndrome (FZS)",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.malacards.org/card/fliedner_zweier_syndrome",
+      "abstract_chars": 0
+    },
+    {
+      "id": "https://www.researchgate.net/publication/391122301_A_novel_nonsense_mutation_in_SCAF4_associated_with_fliedner-zweier_syndrome_a_case_report_and_review_of_the_literature",
+      "title": "(PDF) A novel nonsense mutation in SCAF4 associated ...",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.researchgate.net/publication/391122301_A_novel_nonsense_mutation_in_SCAF4_associated_with_fliedner-zweier_syndrome_a_case_report_and_review_of_the_literature",
+      "abstract_chars": 0
+    },
+    {
+      "id": "https://datasetcatalog.nlm.nih.gov/dataset?q=0002369087",
+      "title": "Table 1_A novel nonsense mutation in SCAF4 associated with ...",
+      "pmid": null,
+      "doi": null,
+      "url": "https://datasetcatalog.nlm.nih.gov/dataset?q=0002369087",
+      "abstract_chars": 0
+    },
+    {
+      "id": "https://www.sciencedirect.com/science/article/pii/S0002929720302287",
+      "title": "Variants in SCAF4 Cause a Neurodevelopmental Disorder ...",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0002929720302287",
+      "abstract_chars": 1690
+    }
+  ],
+  "input_tokens": 6779,
+  "output_tokens": 3668,
+  "usd": 0.01439,
+  "seconds": 18.0,
+  "ok": true
+}
+```

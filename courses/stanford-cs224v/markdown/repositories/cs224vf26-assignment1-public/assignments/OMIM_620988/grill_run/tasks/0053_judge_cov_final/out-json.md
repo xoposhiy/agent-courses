@@ -1,0 +1,42 @@
+# Homework 1 public teaching repository: assignments/OMIM_620988/grill_run/tasks/0053_judge_cov_final/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620988/grill_run/tasks/0053_judge_cov_final/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620988/grill_run/tasks/0053_judge_cov_final/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "fields": [
+    {
+      "field": "Clinical phenotypes reported in affected individuals with numerator and denominator per cohort (not percentage alone), using the paper's wording and standard HPO term if identifiable, with resolvable PMID or DOI",
+      "covered": false,
+      "contributing_aspects": []
+    },
+    {
+      "field": "Most discriminating findings that are present in most affected individuals but uncommon in usually confused disorders, including names of those differential disorders and confidence in the distinction",
+      "covered": false,
+      "contributing_aspects": []
+    },
+    {
+      "field": "Findings looked for and found absent in affected individuals (features arguing against the diagnosis)",
+      "covered": false,
+      "contributing_aspects": []
+    },
+    {
+      "field": "Phenotype differences or correlations by variant type, variant position, age, or sex",
+      "covered": true,
+      "contributing_aspects": [
+        "genotype-phenotype correlation",
+        "seizures",
+        "epilepsy",
+        "phenotypic spectrum"
+      ]
+    },
+    {
+      "field": "Contradictory findings reported by one paper and explicitly contradicted by another",
+      "covered": false,
+      "contributing_aspects": []
+    }
+  ]
+}
+```

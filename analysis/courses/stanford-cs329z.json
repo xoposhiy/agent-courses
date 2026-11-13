@@ -1,0 +1,1735 @@
+{
+  "source_id": "stanford-cs329z",
+  "summary": "An engineering course that connects agent components, design patterns, data, optimization, and evaluation. Available slides support the completed lectures. Later safety and personal-agent topics appear in the schedule and are kept separate.",
+  "limitations": [
+    "Fourteen slide decks are available. Later scheduled lectures have no archived slide deck.",
+    "Core evidence comes from lecture slides. A schedule-only topic is marked planned, even when a related reading is archived.",
+    "The inventory separates general topics, specific patterns, methods, tools, and applications. Repeated slides do not increase course frequency."
+  ],
+  "new_concept_ids": [
+    "agent-architecture",
+    "workflow-agent",
+    "reasoning",
+    "cot",
+    "self-consistency",
+    "reflection",
+    "reflexion",
+    "planning",
+    "react",
+    "codeact",
+    "plan-execute",
+    "prompt-chain",
+    "routing",
+    "parallelization",
+    "orchestrator-workers",
+    "critic-loop",
+    "llm-foundations",
+    "transformer",
+    "decoding",
+    "structured-output",
+    "inference-scaling",
+    "prompting",
+    "few-shot",
+    "prompt-optimization",
+    "sft",
+    "model-training",
+    "rl",
+    "ppo",
+    "grpo",
+    "distillation",
+    "rag",
+    "chunking",
+    "embeddings",
+    "sparse-retrieval",
+    "hybrid-search",
+    "reranking",
+    "graph-rag",
+    "agentic-rag",
+    "retrieval-eval",
+    "tool-use",
+    "tool-discovery",
+    "mcp",
+    "tool-eval",
+    "frameworks",
+    "dspy",
+    "langgraph",
+    "harness",
+    "durable-execution",
+    "observability",
+    "context-engineering",
+    "compaction",
+    "context-offload",
+    "observation-masking",
+    "context-isolation",
+    "progressive-disclosure",
+    "memory",
+    "working-memory",
+    "episodic-memory",
+    "semantic-memory",
+    "procedural-memory",
+    "tiered-memory",
+    "memory-maintenance",
+    "memory-eval",
+    "multi-agent",
+    "agent-handoff",
+    "agent-as-tool",
+    "shared-memory",
+    "a2a",
+    "worktree-isolation",
+    "multi-agent-failures",
+    "data-curation",
+    "synthetic-data",
+    "human-demos",
+    "evaluation",
+    "benchmark-design",
+    "code-grader",
+    "human-eval",
+    "llm-judge",
+    "judge-validation",
+    "rubrics",
+    "reliability",
+    "reward-hacking",
+    "coding-agents",
+    "safety",
+    "prompt-injection",
+    "privacy",
+    "sandboxing",
+    "hitl",
+    "personalization",
+    "proactive"
+  ],
+  "concepts": [
+    {
+      "concept_id": "agent-architecture",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture01.md",
+          "line": 463,
+          "page": 29,
+          "excerpt": "Anatomy of an Agent",
+          "material_id": "slides/lecture01",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture01.pdf",
+          "sha256": "a7548483e6dc5cb0317296e6ac3b245bd918537b8cafc0de9f79791d7443d26b"
+        }
+      ]
+    },
+    {
+      "concept_id": "workflow-agent",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture01.md",
+          "line": 965,
+          "page": 56,
+          "excerpt": "Workflows vs. Agents: Who Decides the Steps?",
+          "material_id": "slides/lecture01",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture01.pdf",
+          "sha256": "a7548483e6dc5cb0317296e6ac3b245bd918537b8cafc0de9f79791d7443d26b"
+        }
+      ]
+    },
+    {
+      "concept_id": "reasoning",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture01.md",
+          "line": 556,
+          "page": 33,
+          "excerpt": "Reasoning and Planning",
+          "material_id": "slides/lecture01",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture01.pdf",
+          "sha256": "a7548483e6dc5cb0317296e6ac3b245bd918537b8cafc0de9f79791d7443d26b"
+        }
+      ]
+    },
+    {
+      "concept_id": "cot",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture01.md",
+          "line": 671,
+          "page": 37,
+          "excerpt": "Comparing ReAct with COT, SC",
+          "material_id": "slides/lecture01",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture01.pdf",
+          "sha256": "a7548483e6dc5cb0317296e6ac3b245bd918537b8cafc0de9f79791d7443d26b"
+        }
+      ]
+    },
+    {
+      "concept_id": "self-consistency",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture01.md",
+          "line": 681,
+          "page": 38,
+          "excerpt": "Self-Consistency \\[Wang et al., 2023\\]",
+          "material_id": "slides/lecture01",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture01.pdf",
+          "sha256": "a7548483e6dc5cb0317296e6ac3b245bd918537b8cafc0de9f79791d7443d26b"
+        }
+      ]
+    },
+    {
+      "concept_id": "reflection",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture01.md",
+          "line": 701,
+          "page": 40,
+          "excerpt": "Reduce error cases by using self-reflection to distill long, failed trajectories",
+          "material_id": "slides/lecture01",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture01.pdf",
+          "sha256": "a7548483e6dc5cb0317296e6ac3b245bd918537b8cafc0de9f79791d7443d26b"
+        }
+      ]
+    },
+    {
+      "concept_id": "llm-foundations",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture02.md",
+          "line": 112,
+          "page": 5,
+          "excerpt": "• What is a Language Model?",
+          "material_id": "slides/lecture02",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture02.pdf",
+          "sha256": "0b942b046f3588f4a8e9a8b7c13478e42792dc35eaee209748666951bf365caf"
+        }
+      ]
+    },
+    {
+      "concept_id": "transformer",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture02.md",
+          "line": 1402,
+          "page": 43,
+          "excerpt": "Multi-Head",
+          "material_id": "slides/lecture02",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture02.pdf",
+          "sha256": "0b942b046f3588f4a8e9a8b7c13478e42792dc35eaee209748666951bf365caf"
+        }
+      ]
+    },
+    {
+      "concept_id": "decoding",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture02.md",
+          "line": 483,
+          "page": 20,
+          "excerpt": "Temperature",
+          "material_id": "slides/lecture02",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture02.pdf",
+          "sha256": "0b942b046f3588f4a8e9a8b7c13478e42792dc35eaee209748666951bf365caf"
+        }
+      ]
+    },
+    {
+      "concept_id": "structured-output",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture02.md",
+          "line": 5318,
+          "page": 153,
+          "excerpt": "Constrained Decoding",
+          "material_id": "slides/lecture02",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture02.pdf",
+          "sha256": "0b942b046f3588f4a8e9a8b7c13478e42792dc35eaee209748666951bf365caf"
+        }
+      ]
+    },
+    {
+      "concept_id": "inference-scaling",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture02.md",
+          "line": 5081,
+          "page": 138,
+          "excerpt": "Inference Time Scaling (Test Time Scaling)",
+          "material_id": "slides/lecture02",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture02.pdf",
+          "sha256": "0b942b046f3588f4a8e9a8b7c13478e42792dc35eaee209748666951bf365caf"
+        }
+      ]
+    },
+    {
+      "concept_id": "model-training",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture02.md",
+          "line": 4219,
+          "page": 111,
+          "excerpt": "Posttraining Distributions.  arxiv 2510.14865",
+          "material_id": "slides/lecture02",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture02.pdf",
+          "sha256": "0b942b046f3588f4a8e9a8b7c13478e42792dc35eaee209748666951bf365caf"
+        }
+      ]
+    },
+    {
+      "concept_id": "prompting",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture02.md",
+          "line": 5433,
+          "page": 160,
+          "excerpt": "Context Engineering",
+          "material_id": "slides/lecture02",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture02.pdf",
+          "sha256": "0b942b046f3588f4a8e9a8b7c13478e42792dc35eaee209748666951bf365caf"
+        }
+      ]
+    },
+    {
+      "concept_id": "rag",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture03.md",
+          "line": 252,
+          "page": 14,
+          "excerpt": "Retrieval Augmented Generation (RAG)",
+          "material_id": "slides/lecture03",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture03.pdf",
+          "sha256": "a472f7f3307196d05e815608e12a5e98a73868b2cab771860a533d43dc99ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "chunking",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture03.md",
+          "line": 435,
+          "page": 24,
+          "excerpt": "Chunking: Basic Unit in Retrieval",
+          "material_id": "slides/lecture03",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture03.pdf",
+          "sha256": "a472f7f3307196d05e815608e12a5e98a73868b2cab771860a533d43dc99ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "embeddings",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture03.md",
+          "line": 750,
+          "page": 43,
+          "excerpt": "DPR: dense passage retrieval (Karpukhin et al., 2020)",
+          "material_id": "slides/lecture03",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture03.pdf",
+          "sha256": "a472f7f3307196d05e815608e12a5e98a73868b2cab771860a533d43dc99ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "sparse-retrieval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture03.md",
+          "line": 712,
+          "page": 41,
+          "excerpt": "BM25:  the most widely used (even today)",
+          "material_id": "slides/lecture03",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture03.pdf",
+          "sha256": "a472f7f3307196d05e815608e12a5e98a73868b2cab771860a533d43dc99ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "hybrid-search",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture03.md",
+          "line": 862,
+          "page": 49,
+          "excerpt": "Hybrid Search and Reciprocal Rank Fusion",
+          "material_id": "slides/lecture03",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture03.pdf",
+          "sha256": "a472f7f3307196d05e815608e12a5e98a73868b2cab771860a533d43dc99ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "reranking",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture03.md",
+          "line": 885,
+          "page": 50,
+          "excerpt": "Cross-Encoders and Reranking",
+          "material_id": "slides/lecture03",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture03.pdf",
+          "sha256": "a472f7f3307196d05e815608e12a5e98a73868b2cab771860a533d43dc99ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "graph-rag",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture03.md",
+          "line": 609,
+          "page": 34,
+          "excerpt": "GraphRAG: query-focused over LLM-built graph",
+          "material_id": "slides/lecture03",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture03.pdf",
+          "sha256": "a472f7f3307196d05e815608e12a5e98a73868b2cab771860a533d43dc99ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "agentic-rag",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture03.md",
+          "line": 42,
+          "page": 3,
+          "excerpt": "●Agentic RAG: Self-RAG, Search-R1 (10 mins)",
+          "material_id": "slides/lecture03",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture03.pdf",
+          "sha256": "a472f7f3307196d05e815608e12a5e98a73868b2cab771860a533d43dc99ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "retrieval-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture03.md",
+          "line": 762,
+          "page": 45,
+          "excerpt": "Scoring a Retriever: Hit@k, Failed@k, nDCG@k",
+          "material_id": "slides/lecture03",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture03.pdf",
+          "sha256": "a472f7f3307196d05e815608e12a5e98a73868b2cab771860a533d43dc99ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "tool-use",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture04.md",
+          "line": 13,
+          "page": 1,
+          "excerpt": "Tool Use",
+          "material_id": "slides/lecture04",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture04.pdf",
+          "sha256": "e86d8afda87387f1efe0176ee6f438ab400457e275e91344799dd8cd955dd73d"
+        }
+      ]
+    },
+    {
+      "concept_id": "tool-discovery",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture04.md",
+          "line": 940,
+          "page": 53,
+          "excerpt": "MCP: Tool Discovery (tools/list)",
+          "material_id": "slides/lecture04",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture04.pdf",
+          "sha256": "e86d8afda87387f1efe0176ee6f438ab400457e275e91344799dd8cd955dd73d"
+        }
+      ]
+    },
+    {
+      "concept_id": "mcp",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture04.md",
+          "line": 936,
+          "page": 52,
+          "excerpt": "MCP Architecture: MCP Host, MCP Client, MCP Server",
+          "material_id": "slides/lecture04",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture04.pdf",
+          "sha256": "e86d8afda87387f1efe0176ee6f438ab400457e275e91344799dd8cd955dd73d"
+        }
+      ]
+    },
+    {
+      "concept_id": "tool-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture04.md",
+          "line": 1099,
+          "page": 58,
+          "excerpt": "BFCL: Berkeley Function-Calling Leaderboard (Patil et al., 2025)",
+          "material_id": "slides/lecture04",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture04.pdf",
+          "sha256": "e86d8afda87387f1efe0176ee6f438ab400457e275e91344799dd8cd955dd73d"
+        }
+      ]
+    },
+    {
+      "concept_id": "frameworks",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture05.md",
+          "line": 50,
+          "page": 4,
+          "excerpt": "Abstractions in Frameworks",
+          "material_id": "slides/lecture05",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture05.pdf",
+          "sha256": "4d66fb124ea3f742d69ba0f3773f2e63d6d53e88046201a97a7447075cd3a477"
+        }
+      ]
+    },
+    {
+      "concept_id": "dspy",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture05.md",
+          "line": 792,
+          "page": 51,
+          "excerpt": "DSPy Summary",
+          "material_id": "slides/lecture05",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture05.pdf",
+          "sha256": "4d66fb124ea3f742d69ba0f3773f2e63d6d53e88046201a97a7447075cd3a477"
+        }
+      ]
+    },
+    {
+      "concept_id": "langgraph",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture05.md",
+          "line": 1026,
+          "page": 76,
+          "excerpt": "LangGraph Summary",
+          "material_id": "slides/lecture05",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture05.pdf",
+          "sha256": "4d66fb124ea3f742d69ba0f3773f2e63d6d53e88046201a97a7447075cd3a477"
+        }
+      ]
+    },
+    {
+      "concept_id": "harness",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture05.md",
+          "line": 1121,
+          "page": 80,
+          "excerpt": "What is an Agent Harness?",
+          "material_id": "slides/lecture05",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture05.pdf",
+          "sha256": "4d66fb124ea3f742d69ba0f3773f2e63d6d53e88046201a97a7447075cd3a477"
+        }
+      ]
+    },
+    {
+      "concept_id": "durable-execution",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture05.md",
+          "line": 1426,
+          "page": 101,
+          "excerpt": "Making a Durable Workflow: Activities",
+          "material_id": "slides/lecture05",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture05.pdf",
+          "sha256": "4d66fb124ea3f742d69ba0f3773f2e63d6d53e88046201a97a7447075cd3a477"
+        }
+      ]
+    },
+    {
+      "concept_id": "observability",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture05.md",
+          "line": 1560,
+          "page": 118,
+          "excerpt": "Additional Observability Frameworks",
+          "material_id": "slides/lecture05",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture05.pdf",
+          "sha256": "4d66fb124ea3f742d69ba0f3773f2e63d6d53e88046201a97a7447075cd3a477"
+        }
+      ]
+    },
+    {
+      "concept_id": "react",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture06.md",
+          "line": 453,
+          "page": 33,
+          "excerpt": "ReAct (2023)",
+          "material_id": "slides/lecture06",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture06.pdf",
+          "sha256": "bdaf426915277c1ad637df8655d1224667326bb9c2813a3f1a04d4b3fa6c5ceb"
+        }
+      ]
+    },
+    {
+      "concept_id": "reflexion",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture06.md",
+          "line": 490,
+          "page": 37,
+          "excerpt": "Reflexion (2023)",
+          "material_id": "slides/lecture06",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture06.pdf",
+          "sha256": "bdaf426915277c1ad637df8655d1224667326bb9c2813a3f1a04d4b3fa6c5ceb"
+        }
+      ]
+    },
+    {
+      "concept_id": "codeact",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture06.md",
+          "line": 557,
+          "page": 43,
+          "excerpt": "CodeAct (2024)",
+          "material_id": "slides/lecture06",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture06.pdf",
+          "sha256": "bdaf426915277c1ad637df8655d1224667326bb9c2813a3f1a04d4b3fa6c5ceb"
+        }
+      ]
+    },
+    {
+      "concept_id": "planning",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture06.md",
+          "line": 615,
+          "page": 47,
+          "excerpt": "Planning then executing",
+          "material_id": "slides/lecture06",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture06.pdf",
+          "sha256": "bdaf426915277c1ad637df8655d1224667326bb9c2813a3f1a04d4b3fa6c5ceb"
+        }
+      ]
+    },
+    {
+      "concept_id": "plan-execute",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture06.md",
+          "line": 615,
+          "page": 47,
+          "excerpt": "Planning then executing",
+          "material_id": "slides/lecture06",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture06.pdf",
+          "sha256": "bdaf426915277c1ad637df8655d1224667326bb9c2813a3f1a04d4b3fa6c5ceb"
+        }
+      ]
+    },
+    {
+      "concept_id": "prompt-chain",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture06.md",
+          "line": 245,
+          "page": 15,
+          "excerpt": "• Prompt Chaining: Decomposing the problem into smaller steps.",
+          "material_id": "slides/lecture06",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture06.pdf",
+          "sha256": "bdaf426915277c1ad637df8655d1224667326bb9c2813a3f1a04d4b3fa6c5ceb"
+        }
+      ]
+    },
+    {
+      "concept_id": "routing",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture06.md",
+          "line": 247,
+          "page": 15,
+          "excerpt": "• Routing: Route the task to appropriate LLM.",
+          "material_id": "slides/lecture06",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture06.pdf",
+          "sha256": "bdaf426915277c1ad637df8655d1224667326bb9c2813a3f1a04d4b3fa6c5ceb"
+        }
+      ]
+    },
+    {
+      "concept_id": "parallelization",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture06.md",
+          "line": 249,
+          "page": 15,
+          "excerpt": "• Parallelization: Divide the work amongst multiple threads.",
+          "material_id": "slides/lecture06",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture06.pdf",
+          "sha256": "bdaf426915277c1ad637df8655d1224667326bb9c2813a3f1a04d4b3fa6c5ceb"
+        }
+      ]
+    },
+    {
+      "concept_id": "orchestrator-workers",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture06.md",
+          "line": 251,
+          "page": 15,
+          "excerpt": "• Orchestrator-Workers: Identify subtasks and dispatch workers to complete them.",
+          "material_id": "slides/lecture06",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture06.pdf",
+          "sha256": "bdaf426915277c1ad637df8655d1224667326bb9c2813a3f1a04d4b3fa6c5ceb"
+        }
+      ]
+    },
+    {
+      "concept_id": "critic-loop",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture06.md",
+          "line": 253,
+          "page": 15,
+          "excerpt": "• Evaluator-Optimizer: Generate an output, critique or respond, and iterate on the",
+          "material_id": "slides/lecture06",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture06.pdf",
+          "sha256": "bdaf426915277c1ad637df8655d1224667326bb9c2813a3f1a04d4b3fa6c5ceb"
+        }
+      ]
+    },
+    {
+      "concept_id": "context-engineering",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture06.md",
+          "line": 716,
+          "page": 57,
+          "excerpt": "Context Engineering",
+          "material_id": "slides/lecture06",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture06.pdf",
+          "sha256": "bdaf426915277c1ad637df8655d1224667326bb9c2813a3f1a04d4b3fa6c5ceb"
+        }
+      ]
+    },
+    {
+      "concept_id": "compaction",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture06.md",
+          "line": 770,
+          "page": 61,
+          "excerpt": "• Compaction: Summarizing prior context into a compressed description",
+          "material_id": "slides/lecture06",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture06.pdf",
+          "sha256": "bdaf426915277c1ad637df8655d1224667326bb9c2813a3f1a04d4b3fa6c5ceb"
+        }
+      ]
+    },
+    {
+      "concept_id": "context-offload",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture06.md",
+          "line": 768,
+          "page": 61,
+          "excerpt": "• Memory Offloading: Store knowledge to memory to enable pruning",
+          "material_id": "slides/lecture06",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture06.pdf",
+          "sha256": "bdaf426915277c1ad637df8655d1224667326bb9c2813a3f1a04d4b3fa6c5ceb"
+        }
+      ]
+    },
+    {
+      "concept_id": "observation-masking",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture06.md",
+          "line": 772,
+          "page": 61,
+          "excerpt": "• Observation Masking: Hiding/truncating old outputs from tool calls",
+          "material_id": "slides/lecture06",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture06.pdf",
+          "sha256": "bdaf426915277c1ad637df8655d1224667326bb9c2813a3f1a04d4b3fa6c5ceb"
+        }
+      ]
+    },
+    {
+      "concept_id": "context-isolation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture06.md",
+          "line": 774,
+          "page": 61,
+          "excerpt": "• Context Isolation: Use subagents for specific tasks, only include in the",
+          "material_id": "slides/lecture06",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture06.pdf",
+          "sha256": "bdaf426915277c1ad637df8655d1224667326bb9c2813a3f1a04d4b3fa6c5ceb"
+        }
+      ]
+    },
+    {
+      "concept_id": "progressive-disclosure",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture06.md",
+          "line": 869,
+          "page": 70,
+          "excerpt": "Context Isolation: Progressive Disclosure",
+          "material_id": "slides/lecture06",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture06.pdf",
+          "sha256": "bdaf426915277c1ad637df8655d1224667326bb9c2813a3f1a04d4b3fa6c5ceb"
+        }
+      ]
+    },
+    {
+      "concept_id": "memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture07.md",
+          "line": 121,
+          "page": 10,
+          "excerpt": "Benefits of Agent Memory",
+          "material_id": "slides/lecture07",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture07.pdf",
+          "sha256": "6d567efbc3e47c87be2027a2f598d13d49d813d5d494dddb22e25032092d9629"
+        }
+      ]
+    },
+    {
+      "concept_id": "working-memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture07.md",
+          "line": 195,
+          "page": 17,
+          "excerpt": "Working Memory",
+          "material_id": "slides/lecture07",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture07.pdf",
+          "sha256": "6d567efbc3e47c87be2027a2f598d13d49d813d5d494dddb22e25032092d9629"
+        }
+      ]
+    },
+    {
+      "concept_id": "episodic-memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture07.md",
+          "line": 211,
+          "page": 18,
+          "excerpt": "Episodic Memory",
+          "material_id": "slides/lecture07",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture07.pdf",
+          "sha256": "6d567efbc3e47c87be2027a2f598d13d49d813d5d494dddb22e25032092d9629"
+        }
+      ]
+    },
+    {
+      "concept_id": "semantic-memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture07.md",
+          "line": 228,
+          "page": 19,
+          "excerpt": "Semantic Memory",
+          "material_id": "slides/lecture07",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture07.pdf",
+          "sha256": "6d567efbc3e47c87be2027a2f598d13d49d813d5d494dddb22e25032092d9629"
+        }
+      ]
+    },
+    {
+      "concept_id": "procedural-memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture07.md",
+          "line": 249,
+          "page": 20,
+          "excerpt": "Procedural Memory",
+          "material_id": "slides/lecture07",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture07.pdf",
+          "sha256": "6d567efbc3e47c87be2027a2f598d13d49d813d5d494dddb22e25032092d9629"
+        }
+      ]
+    },
+    {
+      "concept_id": "tiered-memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture07.md",
+          "line": 537,
+          "page": 42,
+          "excerpt": "Pattern 2: Tiered Memory",
+          "material_id": "slides/lecture07",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture07.pdf",
+          "sha256": "6d567efbc3e47c87be2027a2f598d13d49d813d5d494dddb22e25032092d9629"
+        }
+      ]
+    },
+    {
+      "concept_id": "memory-maintenance",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture07.md",
+          "line": 685,
+          "page": 57,
+          "excerpt": "Pattern 4: Memory Maintenance",
+          "material_id": "slides/lecture07",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture07.pdf",
+          "sha256": "6d567efbc3e47c87be2027a2f598d13d49d813d5d494dddb22e25032092d9629"
+        }
+      ]
+    },
+    {
+      "concept_id": "memory-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture07.md",
+          "line": 84,
+          "page": 7,
+          "excerpt": "• Evaluating Agent Memory (15 minutes)",
+          "material_id": "slides/lecture07",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture07.pdf",
+          "sha256": "6d567efbc3e47c87be2027a2f598d13d49d813d5d494dddb22e25032092d9629"
+        }
+      ]
+    },
+    {
+      "concept_id": "personalization",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture07.md",
+          "line": 139,
+          "page": 11,
+          "excerpt": "Personalization: Example \\[Jiang et al., 2025\\]",
+          "material_id": "slides/lecture07",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture07.pdf",
+          "sha256": "6d567efbc3e47c87be2027a2f598d13d49d813d5d494dddb22e25032092d9629"
+        }
+      ]
+    },
+    {
+      "concept_id": "multi-agent",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture08.md",
+          "line": 137,
+          "page": 10,
+          "excerpt": "What is a Multi-Agent System?",
+          "material_id": "slides/lecture08",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture08.pdf",
+          "sha256": "0abaa088f3e0779ede35ffb36f8e735de2b1e3bde28fedb2a904ee7a18ac7f46"
+        }
+      ]
+    },
+    {
+      "concept_id": "agent-handoff",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture08.md",
+          "line": 627,
+          "page": 36,
+          "excerpt": "Handoff vs Agent-as-tool",
+          "material_id": "slides/lecture08",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture08.pdf",
+          "sha256": "0abaa088f3e0779ede35ffb36f8e735de2b1e3bde28fedb2a904ee7a18ac7f46"
+        }
+      ]
+    },
+    {
+      "concept_id": "agent-as-tool",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture08.md",
+          "line": 627,
+          "page": 36,
+          "excerpt": "Handoff vs Agent-as-tool",
+          "material_id": "slides/lecture08",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture08.pdf",
+          "sha256": "0abaa088f3e0779ede35ffb36f8e735de2b1e3bde28fedb2a904ee7a18ac7f46"
+        }
+      ]
+    },
+    {
+      "concept_id": "shared-memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture08.md",
+          "line": 884,
+          "page": 52,
+          "excerpt": "• Task Ledger: Tracking planning",
+          "material_id": "slides/lecture08",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture08.pdf",
+          "sha256": "0abaa088f3e0779ede35ffb36f8e735de2b1e3bde28fedb2a904ee7a18ac7f46"
+        }
+      ]
+    },
+    {
+      "concept_id": "a2a",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture08.md",
+          "line": 754,
+          "page": 45,
+          "excerpt": "Agent2Agent (A2A) Protocol",
+          "material_id": "slides/lecture08",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture08.pdf",
+          "sha256": "0abaa088f3e0779ede35ffb36f8e735de2b1e3bde28fedb2a904ee7a18ac7f46"
+        }
+      ]
+    },
+    {
+      "concept_id": "worktree-isolation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture08.md",
+          "line": 890,
+          "page": 52,
+          "excerpt": "• Worktree Isolation: Separation",
+          "material_id": "slides/lecture08",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture08.pdf",
+          "sha256": "0abaa088f3e0779ede35ffb36f8e735de2b1e3bde28fedb2a904ee7a18ac7f46"
+        }
+      ]
+    },
+    {
+      "concept_id": "multi-agent-failures",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture08.md",
+          "line": 1171,
+          "page": 70,
+          "excerpt": "Why Do Multi-Agent Systems Fail?",
+          "material_id": "slides/lecture08",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture08.pdf",
+          "sha256": "0abaa088f3e0779ede35ffb36f8e735de2b1e3bde28fedb2a904ee7a18ac7f46"
+        }
+      ]
+    },
+    {
+      "concept_id": "few-shot",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture09.md",
+          "line": 239,
+          "page": 14,
+          "excerpt": "Fewshot Prompting",
+          "material_id": "slides/lecture09",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture09.pdf",
+          "sha256": "00a95913f2caec8f640fc3c10f3872a764d33cb6aed89b18dd81e7f0ba9e7b15"
+        }
+      ]
+    },
+    {
+      "concept_id": "prompt-optimization",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture09.md",
+          "line": 407,
+          "page": 23,
+          "excerpt": "Reflective Optimization",
+          "material_id": "slides/lecture09",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture09.pdf",
+          "sha256": "00a95913f2caec8f640fc3c10f3872a764d33cb6aed89b18dd81e7f0ba9e7b15"
+        }
+      ]
+    },
+    {
+      "concept_id": "sft",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture09.md",
+          "line": 1217,
+          "page": 71,
+          "excerpt": "Supervised Finetuning",
+          "material_id": "slides/lecture09",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture09.pdf",
+          "sha256": "00a95913f2caec8f640fc3c10f3872a764d33cb6aed89b18dd81e7f0ba9e7b15"
+        }
+      ]
+    },
+    {
+      "concept_id": "rl",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture09.md",
+          "line": 1329,
+          "page": 80,
+          "excerpt": "Reinforcement Learning",
+          "material_id": "slides/lecture09",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture09.pdf",
+          "sha256": "00a95913f2caec8f640fc3c10f3872a764d33cb6aed89b18dd81e7f0ba9e7b15"
+        }
+      ]
+    },
+    {
+      "concept_id": "ppo",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture09.md",
+          "line": 1526,
+          "page": 95,
+          "excerpt": "GRPO vs PPO for DeepSeekR1",
+          "material_id": "slides/lecture09",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture09.pdf",
+          "sha256": "00a95913f2caec8f640fc3c10f3872a764d33cb6aed89b18dd81e7f0ba9e7b15"
+        }
+      ]
+    },
+    {
+      "concept_id": "grpo",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture09.md",
+          "line": 1526,
+          "page": 95,
+          "excerpt": "GRPO vs PPO for DeepSeekR1",
+          "material_id": "slides/lecture09",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture09.pdf",
+          "sha256": "00a95913f2caec8f640fc3c10f3872a764d33cb6aed89b18dd81e7f0ba9e7b15"
+        }
+      ]
+    },
+    {
+      "concept_id": "distillation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture09.md",
+          "line": 1534,
+          "page": 96,
+          "excerpt": "On-Policy Distillation",
+          "material_id": "slides/lecture09",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture09.pdf",
+          "sha256": "00a95913f2caec8f640fc3c10f3872a764d33cb6aed89b18dd81e7f0ba9e7b15"
+        }
+      ]
+    },
+    {
+      "concept_id": "coding-agents",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture10.md",
+          "line": 13,
+          "page": 1,
+          "excerpt": "TERMINAL-BENCH AND HARBOR",
+          "material_id": "slides/lecture10",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture10.pdf",
+          "sha256": "b98de0affc124ebe422ed525e100a2b9b3c768512aee5fd15f0e8d70dbecdbb8"
+        }
+      ]
+    },
+    {
+      "concept_id": "reward-hacking",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture10.md",
+          "line": 390,
+          "page": 44,
+          "excerpt": "PREVENTING REWARD HACKING",
+          "material_id": "slides/lecture10",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture10.pdf",
+          "sha256": "b98de0affc124ebe422ed525e100a2b9b3c768512aee5fd15f0e8d70dbecdbb8"
+        }
+      ]
+    },
+    {
+      "concept_id": "synthetic-data",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture11.md",
+          "line": 684,
+          "page": 38,
+          "excerpt": "Synthesized trajectories",
+          "material_id": "slides/lecture11",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture11.pdf",
+          "sha256": "db2aa1e521c49812a97929a7986379a0b2a8295dd21a024b8ff8f3392d4dd0b1"
+        }
+      ]
+    },
+    {
+      "concept_id": "human-demos",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture11.md",
+          "line": 408,
+          "page": 21,
+          "excerpt": "Human Demonstrations",
+          "material_id": "slides/lecture11",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture11.pdf",
+          "sha256": "db2aa1e521c49812a97929a7986379a0b2a8295dd21a024b8ff8f3392d4dd0b1"
+        }
+      ]
+    },
+    {
+      "concept_id": "data-curation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture12.md",
+          "line": 837,
+          "page": 35,
+          "excerpt": "Which trajectories are worth imitating?",
+          "material_id": "slides/lecture12",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture12.pdf",
+          "sha256": "04beb2d058b6a9b402509e83b3a61a7ede290c61a9ae1747c6d25764c38f2097"
+        }
+      ]
+    },
+    {
+      "concept_id": "evaluation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture13.md",
+          "line": 33,
+          "page": 2,
+          "excerpt": "Agent Benchmarks \\[25 min\\]",
+          "material_id": "slides/lecture13",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture13.pdf",
+          "sha256": "c2e02aa1269c3a827a67b568f6f25ec6f6786470c15f370c2baa5c772a185421"
+        }
+      ]
+    },
+    {
+      "concept_id": "benchmark-design",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture13.md",
+          "line": 410,
+          "page": 32,
+          "excerpt": "1. Task formulation: Deﬁne the task you want to be solved",
+          "material_id": "slides/lecture13",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture13.pdf",
+          "sha256": "c2e02aa1269c3a827a67b568f6f25ec6f6786470c15f370c2baa5c772a185421"
+        }
+      ]
+    },
+    {
+      "concept_id": "code-grader",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture15.md",
+          "line": 287,
+          "page": 14,
+          "excerpt": "Code Based Graders",
+          "material_id": "slides/lecture15",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture15.pdf",
+          "sha256": "125ff9b66d7bbfa1e5bbde5db9632d0aa50bafbba1cf78320625b05437da8f23"
+        }
+      ]
+    },
+    {
+      "concept_id": "human-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture15.md",
+          "line": 369,
+          "page": 17,
+          "excerpt": "Human Graders",
+          "material_id": "slides/lecture15",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture15.pdf",
+          "sha256": "125ff9b66d7bbfa1e5bbde5db9632d0aa50bafbba1cf78320625b05437da8f23"
+        }
+      ]
+    },
+    {
+      "concept_id": "llm-judge",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture15.md",
+          "line": 464,
+          "page": 20,
+          "excerpt": "LM-as-a-Judge Graders",
+          "material_id": "slides/lecture15",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture15.pdf",
+          "sha256": "125ff9b66d7bbfa1e5bbde5db9632d0aa50bafbba1cf78320625b05437da8f23"
+        }
+      ]
+    },
+    {
+      "concept_id": "judge-validation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture15.md",
+          "line": 226,
+          "page": 11,
+          "excerpt": "Biases + Validating Judgment: How can I make sure the verdict is trustworthy?",
+          "material_id": "slides/lecture15",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture15.pdf",
+          "sha256": "125ff9b66d7bbfa1e5bbde5db9632d0aa50bafbba1cf78320625b05437da8f23"
+        }
+      ]
+    },
+    {
+      "concept_id": "rubrics",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture15.md",
+          "line": 850,
+          "page": 49,
+          "excerpt": "Motivation: Can you train an OSS model to judge with rubrics? (instead of GPT-4)",
+          "material_id": "slides/lecture15",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture15.pdf",
+          "sha256": "125ff9b66d7bbfa1e5bbde5db9632d0aa50bafbba1cf78320625b05437da8f23"
+        }
+      ]
+    },
+    {
+      "concept_id": "reliability",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture15.md",
+          "line": 1234,
+          "page": 83,
+          "excerpt": "Handling Nondeterminism",
+          "material_id": "slides/lecture15",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture15.pdf",
+          "sha256": "125ff9b66d7bbfa1e5bbde5db9632d0aa50bafbba1cf78320625b05437da8f23"
+        }
+      ]
+    },
+    {
+      "concept_id": "safety",
+      "coverage": "planned",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/pages/index.md",
+          "line": 83,
+          "page": null,
+          "excerpt": "| 9 | Wed Nov 18 | Safety Agent Safety & Guardrails Privacy risks of tool access, prompt injection (including indirect injection), red-teaming, sandboxing and permission models, output guardrails, liability considerations, responsible deployment, and human-in-the-loop patterns. | **Readings**:  - [Shao et al. \"PrivacyLens: Evaluating Privacy Norm Awareness of LMs in Action.\" NeurIPS D&B (2024).](../readings/arxiv-2409-00138.md) - [Zhang & Yang. \"Searching for Privacy Risks in LLM Agents via Simulation.\" arXiv (2025).](../readings/arxiv-2508-10880.md) - [Li. \"Agentic LLMs as Powerful Deanonymizers.\" arXiv (2026).](../readings/arxiv-2601-05918.md)  Additional readings  - [Wen et al. \"Contextualized Privacy Defense for LLM Agents.\" arXiv (2026).](../readings/arxiv-2603-02983.md) - [OpenAI. \"Understanding Prompt Injections: A Frontier Security Challenge.\" (2025).](../readings/openai-understanding-prompt-injections-a-frontier-security-challenge-2025.md) - [Anthropic. \"Anthropic's Responsible Scaling Policy.\" (2023).](../readings/anthropic-anthropic-s-responsible-scaling-policy-2023.md) |",
+          "material_id": "pages/index",
+          "category": "pages",
+          "source_url": "https://cs329z.stanford.edu/",
+          "sha256": "3c3f50667682a9d1d2b789f4b4792ddad7511e3b23fbbe521aa7670d1ae6a652"
+        }
+      ]
+    },
+    {
+      "concept_id": "prompt-injection",
+      "coverage": "planned",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/pages/index.md",
+          "line": 83,
+          "page": null,
+          "excerpt": "| 9 | Wed Nov 18 | Safety Agent Safety & Guardrails Privacy risks of tool access, prompt injection (including indirect injection), red-teaming, sandboxing and permission models, output guardrails, liability considerations, responsible deployment, and human-in-the-loop patterns. | **Readings**:  - [Shao et al. \"PrivacyLens: Evaluating Privacy Norm Awareness of LMs in Action.\" NeurIPS D&B (2024).](../readings/arxiv-2409-00138.md) - [Zhang & Yang. \"Searching for Privacy Risks in LLM Agents via Simulation.\" arXiv (2025).](../readings/arxiv-2508-10880.md) - [Li. \"Agentic LLMs as Powerful Deanonymizers.\" arXiv (2026).](../readings/arxiv-2601-05918.md)  Additional readings  - [Wen et al. \"Contextualized Privacy Defense for LLM Agents.\" arXiv (2026).](../readings/arxiv-2603-02983.md) - [OpenAI. \"Understanding Prompt Injections: A Frontier Security Challenge.\" (2025).](../readings/openai-understanding-prompt-injections-a-frontier-security-challenge-2025.md) - [Anthropic. \"Anthropic's Responsible Scaling Policy.\" (2023).](../readings/anthropic-anthropic-s-responsible-scaling-policy-2023.md) |",
+          "material_id": "pages/index",
+          "category": "pages",
+          "source_url": "https://cs329z.stanford.edu/",
+          "sha256": "3c3f50667682a9d1d2b789f4b4792ddad7511e3b23fbbe521aa7670d1ae6a652"
+        }
+      ]
+    },
+    {
+      "concept_id": "privacy",
+      "coverage": "planned",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/pages/index.md",
+          "line": 83,
+          "page": null,
+          "excerpt": "| 9 | Wed Nov 18 | Safety Agent Safety & Guardrails Privacy risks of tool access, prompt injection (including indirect injection), red-teaming, sandboxing and permission models, output guardrails, liability considerations, responsible deployment, and human-in-the-loop patterns. | **Readings**:  - [Shao et al. \"PrivacyLens: Evaluating Privacy Norm Awareness of LMs in Action.\" NeurIPS D&B (2024).](../readings/arxiv-2409-00138.md) - [Zhang & Yang. \"Searching for Privacy Risks in LLM Agents via Simulation.\" arXiv (2025).](../readings/arxiv-2508-10880.md) - [Li. \"Agentic LLMs as Powerful Deanonymizers.\" arXiv (2026).](../readings/arxiv-2601-05918.md)  Additional readings  - [Wen et al. \"Contextualized Privacy Defense for LLM Agents.\" arXiv (2026).](../readings/arxiv-2603-02983.md) - [OpenAI. \"Understanding Prompt Injections: A Frontier Security Challenge.\" (2025).](../readings/openai-understanding-prompt-injections-a-frontier-security-challenge-2025.md) - [Anthropic. \"Anthropic's Responsible Scaling Policy.\" (2023).](../readings/anthropic-anthropic-s-responsible-scaling-policy-2023.md) |",
+          "material_id": "pages/index",
+          "category": "pages",
+          "source_url": "https://cs329z.stanford.edu/",
+          "sha256": "3c3f50667682a9d1d2b789f4b4792ddad7511e3b23fbbe521aa7670d1ae6a652"
+        }
+      ]
+    },
+    {
+      "concept_id": "sandboxing",
+      "coverage": "planned",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/pages/index.md",
+          "line": 83,
+          "page": null,
+          "excerpt": "| 9 | Wed Nov 18 | Safety Agent Safety & Guardrails Privacy risks of tool access, prompt injection (including indirect injection), red-teaming, sandboxing and permission models, output guardrails, liability considerations, responsible deployment, and human-in-the-loop patterns. | **Readings**:  - [Shao et al. \"PrivacyLens: Evaluating Privacy Norm Awareness of LMs in Action.\" NeurIPS D&B (2024).](../readings/arxiv-2409-00138.md) - [Zhang & Yang. \"Searching for Privacy Risks in LLM Agents via Simulation.\" arXiv (2025).](../readings/arxiv-2508-10880.md) - [Li. \"Agentic LLMs as Powerful Deanonymizers.\" arXiv (2026).](../readings/arxiv-2601-05918.md)  Additional readings  - [Wen et al. \"Contextualized Privacy Defense for LLM Agents.\" arXiv (2026).](../readings/arxiv-2603-02983.md) - [OpenAI. \"Understanding Prompt Injections: A Frontier Security Challenge.\" (2025).](../readings/openai-understanding-prompt-injections-a-frontier-security-challenge-2025.md) - [Anthropic. \"Anthropic's Responsible Scaling Policy.\" (2023).](../readings/anthropic-anthropic-s-responsible-scaling-policy-2023.md) |",
+          "material_id": "pages/index",
+          "category": "pages",
+          "source_url": "https://cs329z.stanford.edu/",
+          "sha256": "3c3f50667682a9d1d2b789f4b4792ddad7511e3b23fbbe521aa7670d1ae6a652"
+        }
+      ]
+    },
+    {
+      "concept_id": "hitl",
+      "coverage": "planned",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/pages/index.md",
+          "line": 83,
+          "page": null,
+          "excerpt": "| 9 | Wed Nov 18 | Safety Agent Safety & Guardrails Privacy risks of tool access, prompt injection (including indirect injection), red-teaming, sandboxing and permission models, output guardrails, liability considerations, responsible deployment, and human-in-the-loop patterns. | **Readings**:  - [Shao et al. \"PrivacyLens: Evaluating Privacy Norm Awareness of LMs in Action.\" NeurIPS D&B (2024).](../readings/arxiv-2409-00138.md) - [Zhang & Yang. \"Searching for Privacy Risks in LLM Agents via Simulation.\" arXiv (2025).](../readings/arxiv-2508-10880.md) - [Li. \"Agentic LLMs as Powerful Deanonymizers.\" arXiv (2026).](../readings/arxiv-2601-05918.md)  Additional readings  - [Wen et al. \"Contextualized Privacy Defense for LLM Agents.\" arXiv (2026).](../readings/arxiv-2603-02983.md) - [OpenAI. \"Understanding Prompt Injections: A Frontier Security Challenge.\" (2025).](../readings/openai-understanding-prompt-injections-a-frontier-security-challenge-2025.md) - [Anthropic. \"Anthropic's Responsible Scaling Policy.\" (2023).](../readings/anthropic-anthropic-s-responsible-scaling-policy-2023.md) |",
+          "material_id": "pages/index",
+          "category": "pages",
+          "source_url": "https://cs329z.stanford.edu/",
+          "sha256": "3c3f50667682a9d1d2b789f4b4792ddad7511e3b23fbbe521aa7670d1ae6a652"
+        }
+      ]
+    },
+    {
+      "concept_id": "proactive",
+      "coverage": "planned",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/pages/index.md",
+          "line": 87,
+          "page": null,
+          "excerpt": "| 11 | Wed Dec 2 | Personal Agents From reactive to proactive, personal agents: General User Models (GUM), Next Action Prediction, open-source proactive personal agents, privacy and trust implications, and when agents should initiate vs. wait (mixed initiative). | **Readings**:  - [Shaikh et al. \"Creating General User Models from Computer Use.\" UIST (2025).](../readings/arxiv-2505-10831.md)  Additional readings  - [Shaikh et al. \"Learning Next Action Predictors from Human-Computer Interaction.\" arXiv (2026).](../readings/arxiv-2603-05923.md) - [Steinberger. \"OpenClaw: Open-source proactive AI agent.\" (2025).](../readings/steinberger-openclaw-open-source-proactive-ai-agent-2025.md) |",
+          "material_id": "pages/index",
+          "category": "pages",
+          "source_url": "https://cs329z.stanford.edu/",
+          "sha256": "3c3f50667682a9d1d2b789f4b4792ddad7511e3b23fbbe521aa7670d1ae6a652"
+        }
+      ]
+    },
+    {
+      "concept_id": "beam-search",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture02.md",
+          "line": 502,
+          "page": 21,
+          "excerpt": "Beam Search",
+          "material_id": "slides/lecture02",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture02.pdf",
+          "sha256": "0b942b046f3588f4a8e9a8b7c13478e42792dc35eaee209748666951bf365caf"
+        }
+      ]
+    },
+    {
+      "concept_id": "rlhf",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture02.md",
+          "line": 4240,
+          "page": 114,
+          "excerpt": "Learning from Human Preferences",
+          "material_id": "slides/lecture02",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture02.pdf",
+          "sha256": "0b942b046f3588f4a8e9a8b7c13478e42792dc35eaee209748666951bf365caf"
+        }
+      ]
+    },
+    {
+      "concept_id": "long-context",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture02.md",
+          "line": 3748,
+          "page": 87,
+          "excerpt": "Full Softmax Attention vs Linear Attention",
+          "material_id": "slides/lecture02",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture02.pdf",
+          "sha256": "0b942b046f3588f4a8e9a8b7c13478e42792dc35eaee209748666951bf365caf"
+        }
+      ]
+    },
+    {
+      "concept_id": "kv-cache",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture02.md",
+          "line": 5558,
+          "page": 168,
+          "excerpt": "Avoid invalidating the KV Cache",
+          "material_id": "slides/lecture02",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture02.pdf",
+          "sha256": "0b942b046f3588f4a8e9a8b7c13478e42792dc35eaee209748666951bf365caf"
+        }
+      ]
+    },
+    {
+      "concept_id": "speculative-decoding",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture02.md",
+          "line": 5021,
+          "page": 136,
+          "excerpt": "Speculative Decoding",
+          "material_id": "slides/lecture02",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture02.pdf",
+          "sha256": "0b942b046f3588f4a8e9a8b7c13478e42792dc35eaee209748666951bf365caf"
+        }
+      ]
+    },
+    {
+      "concept_id": "serving",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture02.md",
+          "line": 4326,
+          "page": 120,
+          "excerpt": "Prefill and Decode",
+          "material_id": "slides/lecture02",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture02.pdf",
+          "sha256": "0b942b046f3588f4a8e9a8b7c13478e42792dc35eaee209748666951bf365caf"
+        }
+      ]
+    },
+    {
+      "concept_id": "multi-agent-debate",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture01.md",
+          "line": 710,
+          "page": 41,
+          "excerpt": "Multi-agent debate to improve reasoning \\[Du et al.,",
+          "material_id": "slides/lecture01",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture01.pdf",
+          "sha256": "a7548483e6dc5cb0317296e6ac3b245bd918537b8cafc0de9f79791d7443d26b"
+        }
+      ]
+    },
+    {
+      "concept_id": "reward-model",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture09.md",
+          "line": 1445,
+          "page": 89,
+          "excerpt": "1. Three Models to keep in memory!  Also “Reward Model”",
+          "material_id": "slides/lecture09",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture09.pdf",
+          "sha256": "00a95913f2caec8f640fc3c10f3872a764d33cb6aed89b18dd81e7f0ba9e7b15"
+        }
+      ]
+    },
+    {
+      "concept_id": "cost-quality",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture09.md",
+          "line": 208,
+          "page": 11,
+          "excerpt": "• Lower cost and latency: Maintain quality with smaller",
+          "material_id": "slides/lecture09",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture09.pdf",
+          "sha256": "00a95913f2caec8f640fc3c10f3872a764d33cb6aed89b18dd81e7f0ba9e7b15"
+        }
+      ]
+    },
+    {
+      "concept_id": "harness-optimization",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture09.md",
+          "line": 1665,
+          "page": 110,
+          "excerpt": "Meta-Harness",
+          "material_id": "slides/lecture09",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture09.pdf",
+          "sha256": "00a95913f2caec8f640fc3c10f3872a764d33cb6aed89b18dd81e7f0ba9e7b15"
+        }
+      ]
+    },
+    {
+      "concept_id": "recursive-agents",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture09.md",
+          "line": 1658,
+          "page": 109,
+          "excerpt": "Both the self-improvement (parent modifies itself rather than meta-agent) AND the",
+          "material_id": "slides/lecture09",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture09.pdf",
+          "sha256": "00a95913f2caec8f640fc3c10f3872a764d33cb6aed89b18dd81e7f0ba9e7b15"
+        }
+      ]
+    },
+    {
+      "concept_id": "user-simulation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs329z/markdown/slides/lecture11.md",
+          "line": 936,
+          "page": 53,
+          "excerpt": "An LLM can stand in for the user, the environment, or both, so the agent gets",
+          "material_id": "slides/lecture11",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs329z/slides/lecture11.pdf",
+          "sha256": "db2aa1e521c49812a97929a7986379a0b2a8295dd21a024b8ff8f3392d4dd0b1"
+        }
+      ]
+    }
+  ]
+}

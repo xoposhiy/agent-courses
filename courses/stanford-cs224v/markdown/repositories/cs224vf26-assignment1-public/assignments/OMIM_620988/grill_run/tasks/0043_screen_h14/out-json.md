@@ -1,0 +1,42 @@
+# Homework 1 public teaching repository: assignments/OMIM_620988/grill_run/tasks/0043_screen_h14/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620988/grill_run/tasks/0043_screen_h14/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620988/grill_run/tasks/0043_screen_h14/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Calame et al. (2023) established distinct genotype-phenotype correlations in DHX9 where LoF alleles cause mild NDD phenotypes while functional domain missense variants cause severe NDD.",
+  "confidence": 0.75,
+  "evidence": [
+    {
+      "text": "Quantitative Human Phenotype Ontology analysis demonstrated genotype-phenotype correlations with LoF variants causing mild NDD phenotypes and nuclear localization signal missense variants causing severe NDD.",
+      "stance": "supports",
+      "source": {
+        "title": "Monoallelic variation in DHX9, the gene encoding the DExH-box helicase DHX9, underlies neurodevelopment disorders and Charcot-Marie-Tooth disease",
+        "authors": [
+          "DG Calame",
+          "T Guo",
+          "C Wang",
+          "L Garrett",
+          "A Jolly"
+        ],
+        "year": 2023,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.cell.com/ajhg/fulltext/S0002-9297(23)00214-8",
+        "quote": "Quantitative Human Phenotype Ontology (HPO) analysis demonstrated genotype-phenotype correlations with LoF variants causing mild NDD phenotypes and nuclear localization signal (NLS) missense variants causing severe NDD."
+      },
+      "numbers": [
+        {
+          "metric": "individuals with de novo heterozygous DHX9 variant alleles",
+          "value": 20
+        }
+      ]
+    }
+  ]
+}
+```

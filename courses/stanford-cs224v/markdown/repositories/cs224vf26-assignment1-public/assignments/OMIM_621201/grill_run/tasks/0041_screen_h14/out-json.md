@@ -1,0 +1,69 @@
+# Homework 1 public teaching repository: assignments/OMIM_621201/grill_run/tasks/0041_screen_h14/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621201/grill_run/tasks/0041_screen_h14/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621201/grill_run/tasks/0041_screen_h14/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "GTF3C3-related neurodevelopmental disorder cohorts consistently exhibit cerebellar atrophy and frontal hypoplasia, whereas simplified gyral pattern was reported in only a subset (e.g., 1 of 4 patients).",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "Brain imaging in four patients with biallelic GTF3C3 variants demonstrated brain atrophy with predominant cerebellar involvement and frontal lobe hypoplasia, while a simplified gyral pattern was observed in only one patient.",
+      "stance": "supports",
+      "source": {
+        "title": "Biallelic variants in GTF3C3 encoding a subunit of the TFIIIC2 complex are associated with neurodevelopmental phenotypes in humans and zebrafish",
+        "authors": [
+          "MS Abdel"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://academic.oup.com/braincomms/article-abstract/7/1/fcaf055/8002734",
+        "quote": "Their brain imaging showed brain atrophy with predominant cerebellar involvement, as well as hypoplasia of the frontal lobes and one patient had moderate to severe simplified gyral pattern."
+      },
+      "numbers": [
+        {
+          "metric": "patients with simplified gyral pattern",
+          "value": 1
+        },
+        {
+          "metric": "total patients evaluated",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "text": "Affected individuals with GTF3C3 variants frequently show cerebellar and corpus callosum malformations or cerebellar atrophy alongside frontal hypoplasia.",
+      "stance": "supports",
+      "source": {
+        "title": "Biallelic variants in GTF3C3 result in an autosomal recessive disorder with intellectual disability",
+        "authors": [
+          "L De Hayr",
+          "LER Blok",
+          "KR Dias",
+          "J Long",
+          "A Begemann"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.sciencedirect.com/science/article/pii/S1098360024001874",
+        "quote": "cerebellar atrophy with simplified gyral pattern and hypoplastic frontal lobes bilaterally at age 15y 11m Cerebellar atrophy"
+      },
+      "numbers": [
+        {
+          "metric": "total cohort size",
+          "value": 12
+        }
+      ]
+    }
+  ]
+}
+```

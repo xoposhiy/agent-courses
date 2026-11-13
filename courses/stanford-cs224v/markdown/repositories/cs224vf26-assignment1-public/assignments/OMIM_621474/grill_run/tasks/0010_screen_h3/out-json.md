@@ -1,0 +1,65 @@
+# Homework 1 public teaching repository: assignments/OMIM_621474/grill_run/tasks/0010_screen_h3/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621474/grill_run/tasks/0010_screen_h3/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621474/grill_run/tasks/0010_screen_h3/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "KDM2B variants (especially CxxC domain) cause developmental delay with cardiac, ocular, and renal anomalies, overlapping clinically with chromatinopathies like CHARGE syndrome while lacking classical cardinal features.",
+  "confidence": 0.8,
+  "evidence": [
+    {
+      "text": "Individuals with KDM2B CxxC variants exhibit developmental delay, congenital heart defects in up to 78%, and common ophthalmological and urogenital anomalies.",
+      "stance": "supports",
+      "source": {
+        "title": "KDM2B variants in the CxxC domain impair its DNA-binding ability and cause a distinct neurodevelopmental syndrome",
+        "authors": [
+          "ASE van Oirsouw",
+          "MA Hadders"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://academic.oup.com/hmg/article-abstract/34/16/1353/8150966",
+        "quote": "Congenital heart defects were observed in up to 78% of individuals, with additional common findings including musculoskeletal, ophthalmological, and urogenital anomalies, as well as behavioral challenges and feeding difficulties."
+      },
+      "numbers": [
+        {
+          "metric": "congenital heart defects percentage",
+          "value": 78
+        }
+      ]
+    },
+    {
+      "text": "KDM2B CxxC variants cause complex structural eye defects alongside neurodevelopmental, cardiac, and renal anomalies.",
+      "stance": "supports",
+      "source": {
+        "title": "Variants in the CxxC domain of the epigenetic regulator KDM2B support its role in developmental eye anomalies",
+        "authors": [
+          "F Ceroni",
+          "LM Reis",
+          "F Watkins",
+          "DA Bax"
+        ],
+        "year": 2026,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.nature.com/articles/s41431-026-02090-1",
+        "quote": "Both individuals exhibited complex structural eye defects, with neurodevelopmental, cardiac and renal anomalies variably present."
+      },
+      "numbers": [
+        {
+          "metric": "screened families with developmental eye disorders",
+          "value": 706
+        }
+      ]
+    }
+  ]
+}
+```

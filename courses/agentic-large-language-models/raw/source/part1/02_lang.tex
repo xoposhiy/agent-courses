@@ -1,0 +1,710 @@
+
+
+%\chapter{Foundations of Language Modeling with LLMs}\label{chap:llm}
+
+\chapter[Foundations of Language Modeling]{Foundations of Language Modeling with LLMs}\label{chap:llm}
+
+\begin{learningbox}
+In this chapter you will learn how  natural language can be processed in machine learning models. 
+Specifically, you will be able to:
+\begin{itemize}[leftmargin=*, nosep]
+    \item Describe the core concepts of {\em language modeling}, including tokenization and early word-representation methods, and explain what problem each was designed to solve.
+    \item Distinguish the learning regimes used to build a language model---{\em supervised, autoregressive, and reinforcement}---and state what each contributes to the final model.
+    \item Explain how {\em embeddings} represent word meaning as vectors, and predict how semantically related words are positioned relative to one another.
+    \item Explain how the {\em attention mechanism} forms flexible, context-dependent connections between tokens, and trace how a query, key, and value interact for a given input.
+    \item Describe how the {\em transformer architecture} is built from attention, and identify its main components.
+    \item Contrast {\em encoder} (classification) and {\em decoder} (generation) models, and select the appropriate one for a given NLP task.
+\end{itemize}
+\end{learningbox}
+
+\section{Processing Natural Language}\label{sec:processinglanguage}
+Language is the primary medium through which humans communicate. Language comes in forms spanning from printed books, digital media to spoken discourse. Language research  has long been a focal point of multidisciplinary research. Within the context of artificial intelligence and computer science, language is of particular significance: we use it to articulate complex ideas, we formulate algorithms in programming languages, and we use it to facilitate interaction between software and its users.
+
+For decades, a key aim of AI has been to unlock the ability for machines to understand human-produced language, as is argued by \citet{jm3} in their major textbook of the field. Research in this area is combined in the field of Natural Language Processing (NLP) and its counterpart, Computational Linguistics.\footnote{Originally further apart, the two fields have been growing closer in recent years, one starting from the linguistic side, the other from the computational side.} In this chapter, we provide an overview of the complexities of capturing {\em natural} (human) language by computational means, and outline the evolution of various fundamental techniques over the years for achieving such understanding. 
+
+One of the early goals of the fields has been to achieve the dream of practical machine translation. Since its inception in the 1950's \citep{hutchins-1999-retrospect}, human language processing technology has evolved greatly. Extensive research progress has allowed it to have a profound impact across  industries. This widespread industrial adoption has, in turn, emerged as a vital driving force for application-oriented development. In NLP,  fundamental theoretical research and practical, real-world utility, go hand in hand. As a consequence, the application areas have expanded beyond machine translation.
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.7\linewidth]{part1/visuals/ELIZA_conversation.jpg}
+    \caption{A typical conversation with ELIZA}
+    \label{fig:eliza}
+\end{figure}
+
+Recently, the impact of language technology on society has truly exploded. We interact on a daily basis with chatbots such as ChatGPT and Claude. We can do so in multiple languages, and enhanced search engines have been incorporated in many popular products. However, these developments stand on the shoulders of many earlier results. A famous early example is ELIZA, the psychotherapist chatbot developed in 1966 by Joseph Weizenbaum \citep{10.1145/365153.365168}. ELIZA was a rudimentary chatbot based on simple rule-based word substitutions (see Figure~\ref{fig:eliza}). ELIZA was already ascribed human-like qualities. Since these early days of rule-based systems for text processing, where we identify words based on specific delimiters (such as white space), we have come a long way. % to neural methods of language understanding. 
+\begin{comment}
+    
+In this chapter, we will explore how language models actually generate responses to the text-based questions we pose, and how we might teach a machine to process languages that we humans use to communicate. 
+First, in Section~\ref{sec:processinglanguage}, we will briefly discuss the basics of natural language processing. Then, in Section~\ref{sec:machinelearning} we will discuss machine learning aspects that are relevant for language learning and for agentic models. Finally, in Section~\ref{sec:modernNLP}, we will focus on modern deep learning approaches for language modeling, including transformers. 
+
+\end{comment}
+
+
+
+
+\subsection{Language Understanding and Language Generation}
+Before considering how computers process language, we will consider how humans understand language. 
+
+A key observation is that communication is a sequential process, and that languages are shaped accordingly. Words are uttered one at a time, and are also consumed one at a time. This parallel holds both for human and mechanical processing of language: language is a sequence of characters (when reading), syllables (when speaking), or entire words (for early computational models of language). 
+
+We will now look deeper into the technology developed for working with  natural language sequences. This technology is categorized as either  natural language {\em understanding} or natural language {\em generation}. We will briefly describe both categories.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.66\linewidth]{part1/visuals/nlp_pipeline.pdf}
+    \caption{The standard NLP pipeline, as visualized by \citet{manning-etal-2014-stanford}}
+    \label{fig:nlp-pipeline}
+\end{figure}
+
+\paragraph{Natural Language Understanding}
+Natural language understanding (NLU) focuses on developing methods for capturing meaning and intent. Approaches and techniques for NLU  map unstructured human language elements onto a structured format such that a computer can interpret and act upon them. Such techniques can involve several layers of processing,  inspired by linguistic analysis (as visualized in Figure~\ref{fig:nlp-pipeline}), as follows:
+\begin{itemize}
+\item Tokenization: determine boundaries between  meaningful linguistic elements (such as words) to be used for further processing.
+    \item Syntactic Parsing: determine the grammatical structure (such as subjects, verbs, and objects).
+    \item Named Entity Recognition (NER): identify and categorize key entities such as names, dates, and locations.
+    \item Sentiment Analysis: detect the emotional tone of a text.
+    \item Co-reference Resolution: determine what person or items are referred to in referential expressions (such as: {\em the computer} talked to me).
+    \item Discourse Analysis: understand how the meaning of a sentence is influenced by preceding sentences. 
+\end{itemize}
+%
+%
+One of the primary challenges in NLU is dealing with ambiguity \citep{DBLP:conf/aaai/Roth98, liu-etal-2023-afraid}. Human language is rife with ambiguity. Examples are polysemy (words with multiple meanings, such as {\em bank}) and context-dependent nuances that require  world knowledge to decode correctly. Many more challenges exist; naturally occurring human language is as rich and complex as humans are.
+
+\paragraph{Natural Language Generation}
+Natural language generation (NLG) focuses on developing methods for producing readable, natural-sounding human language. 
+Tasks range from free-form language generation, to the transformation of structured data or model representations into realistic utterances. 
+
+An important NLG task is \emph{language modeling} (LM). In language modeling, the task is to predict the next element in a sequence, given the previous context. Mathematically, this involves assigning a probability distribution over sequences of words. Traditionally, finding this distribution was achieved using simple count-based models, often relying on further simplifying assumptions to predict a word based on a fixed window of preceding words.
+
+Modern approaches use elaborate neural methods that can generate fluent sentences based on a long context, that often appear meaningful to a human observer.\footnote{Which is by itself not always difficult to achieve, as we saw in the ELIZA example.} Note that effective language generation requires more than just grammatical correctness; it requires coherence (logical flow) and cohesion (linguistic links). Current NLG systems use sampling methods, ensembles, and many other mechanisms to balance the creativity and predictability of the text that they produce, to ensure that the output feels natural rather than robotic \citep{li-jurafsky-2017-neural, 10.1145/3554727, gatt2018survey}. Techniques for NLG are commonly categorized into two approaches:
+\begin{itemize}
+    \item Extractive Generation: Selecting and rearranging existing segments of text (often used in early summarization tools).
+    \item Abstractive Generation: Generating entirely new sentences from scratch (as modern models such as ChatGPT do).
+\end{itemize}
+Most LLMs use the abstractive approach.
+
+We will now discuss  early, fundamental, approaches to language modeling. We will start by discussing the complexity of language, and then discuss the principle of distributional representation, tokenization methods, and early language modeling representations. 
+
+\subsection{Complexity of Natural Language}
+There are many reasons %beyond those mentioned thus far 
+why natural language can be difficult for a machine to interpret. Language exhibits subtle nuances that carry meaning or distort it. Capturing the full nuance of language requires more than understanding its structure. Furthermore,  the context in which something is said  plays a role in communication. Understanding goes beyond the words themselves to grasp the intentions, implications, and subtleties embedded in communication \citep{wittgenstein1953philosophical, Grice_1975, krause-vossen-2024-gricean-maxims}. Below, we introduce topics that are studied in the field of linguistics, each of which brings about a different view on what language is capable of expressing. 
+
+\paragraph{Syntax} Syntax rules govern the structure of sentences. In the study of linguistics, syntax refers to the set of rules, principles, and processes that regulate the structure of sentences in a given language. Linguistic syntax examines the underlying logic that allows a speaker to combine words into well-formed and meaningful sequences. In English, for example, the most common order is subject-verb-object: in {\em cat bites dog} the verb {\em bites} follows the subject {\em cat}, indicating that the meaning of the sentence is that it was the cat that was doing the biting (and not the dog). 
+    
+\paragraph{Morphology} Morphology is the study of how words change shape depending on their grammatical function. How words change shape is related to syntax, and the morphological rules (and their exceptions)  depend on the language (family). In the preceding example sentence, the shape of the verb {\em to bite} changed to {\em bites}, where the {\em -s} indicates simple present tense (it is happening now, by a singular actor, not by a posse of felines in ancient times).
+    
+\paragraph{Semantics} In linguistics, lexical semantics is the  study of the meaning of words. In natural languages words derive their meaning from their relationship to other words. For instance, words with nearly identical meanings form {\em synonyms}, such as car and automobile or vanish and disappear; words with opposite meanings form {\em antonyms}, such as hot and cold or buy and sell. Many more relationships exist. 
+    
+In NLP, computational semantics is the study of how we can represent that meaning efficiently in a computer. A basic approach for storing a sentence in a computer memory would be to simply use a sequence of indices into a vector of the words of a language. However, this encoding only records the occurrence of the words, but not the relationships between the words; the semantics of the words are no longer present in this naive representation.
+
+Words derive their meaning from their relationship to other words, and we need a way to efficiently encode these relationships. As we will see later in this chapter, different solutions have been developed over the years, including the transformer architecture and the attention mechanism.
+    
+\paragraph{Pragmatics} In addition to the literal meaning of words, humans care about the intent of the speaker and the context of the utterance. The way language is employed in specific social contexts determines its effect ({\em meaning is use} \citep{baker2008wittgenstein}). The study of the implicit, everyday rules humans naturally follow to ensure that our communication is effective is called {\em pragmatics}. 
+
+A set of foundational principles are the Gricean Maxims \citep{Grice_1975}: the unspoken cooperative principles that humans use to infer meaning. For instance, the maxim of quantity states that humans provide exactly as much information as is required for the conversation. These maxims shape our communication, and help make our language understandable and cooperative. For a machine, interpreting sarcasm, subtext, or placeholders (e.g., ``thingy'') requires knowledge of these rules, beyond adherance to a static dictionary.
+
+\paragraph{Discourse} Language rarely occurs in isolated sentences; language is structured into larger units such as paragraphs, conversations, or full documents. The study of discourse focuses on how sentences connect to form a cohesive and coherent whole. For a machine to truly interpret a text, it must be able to track entities across multiple sentences, a task known as co-reference resolution (e.g., determining whether the pronoun {\em it} refers to the cat, the dog, or the bite from a previous sentence). Understanding discourse is vital for complex NLP tasks such as document summarization, machine translation, and sustaining long-form dialogue.
+
+In addition to these topics, other fields of study exist, such as phonetics (the sounds of a language that carry additional meaning in human communication), sociolinguistics (how language varies according to social factors like class or region), lexicography (the science of compiling dictionaries), and many more. 
+
+As this overview may have highlighted, the generation and understanding of natural languages are large and challenging fields. It is  important to realize that language is not static. Language varies over time, across geographical locations, between different cultures, and depending on the medium through which it is communicated :-). % \emoji{smiley}. 
+This variation makes the creation of language technology a difficult and never-ending quest. 
+
+Before we introduce the recent technologies that provide at least a partial answer to these challenges, we discuss the fundamental assumptions that inspired the modern turn in NLP.
+
+Representing natural language in a computer is difficult because natural language is rich and complex. In the remainder of this section, we discuss the principle of distributional representation, which states that the semantic meaning of a word is driven by the context that surrounds that word. Next, we will look at tokenization methods: methods for splitting sentences into words. Finally we will discuss how we can work with vectors of tokens to arrive at a representation that encodes meaning. 
+
+\subsection{Distributional Representations} 
+How can we teach a machine to understand  complex semantic relationships and grammatical structures without manually encoding them all?  The answer lies in the distributional hypothesis, a foundational concept in modern NLP. The core idea was articulated in the late 1950s:
+\begin{center}
+    \emph{You shall know a word by the company it keeps. (Firth, 1957)}
+\end{center} 
+%
+This suggests that the meaning of a word can be inferred from the words around it (contexts) in which it typically appears. Words that appear in similar contexts are likely to have similar meanings. For example, if the words {\em coffee} and {\em tea} both frequently appear near verbs like {\em drink}, {\em sip}, or {\em brew}, then a machine may infer that there is a semantic relationship between them,  without explicit definitions or other human-provided information. 
+
+To operationalize the distributional hypothesis for computational purposes, we will rely on linear algebra and turn to a framework known as \emph{vector semantics}. We represent words as points in a high-dimensional continuous space. Words with similar meanings are mapped to points close to each other in this space, and we can measure semantic similarity using geometric distance measures such as cosine similarity (see Figure~\ref{fig:word-embeddings} and Section~\ref{sec:cosine}). Furthermore, we can make modifications to word meaning by doing vector arithmetic. 
+%
+Early implementations relied on sparse co-occurrence matrices to construct semantic vectors, where individual words were counted inside their context, much like other methods described in Section \ref{sec:early}. Modern approaches favor dense, low-dimensional vectors, often referred to as \emph{word embeddings}. These representations are typically learned by training a neural model to predict a word from its neighbors or vice versa, a breakthrough popularized by the \emph{word2vec} architecture \citep{mikolov2013efficient}.  
+
+
+While learning vector-based representations for words is an effective way to capture meaning, maintaining a distinct vector for every unique word in a language results in an impractically large vocabulary. 
+
+Furthermore, strict word-level approaches struggle to process rare or entirely unseen words, as the model has no pre-existing vector for them. Hence, before a model can assign vectors to linguistic units, we must first determine what those fundamental units actually are. To address these inefficiencies and handle out-of-vocabulary inputs, modern methods use a systematic approach to break down raw text into more manageable pieces. This process is called tokenization, which we will now discuss.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.66\linewidth]{part1/visuals/Word_vector_illustration.jpg}
+    \caption{Illustration of vector arithmetic with word2vec embeddings \citep{singerep2022wordvector}.}
+    \label{fig:word-embeddings}
+\end{figure}
+
+\subsection{Tokenization}
+\label{sec:tokenization}
+Before computers can ascribe meaning to language, they must first have a way to digest it. Assuming that we already have raw text at our disposal, whether scraped from the web or transcribed from speech, the immediate challenge is determining how to split these continuous character strings into meaningful units, or how to split sentences into words. This process is called \emph{tokenization}. However, a robust tokenization strategy must do much more than simply divide sentences by spaces to obtain words; it needs to be able to handle the nuances of different languages and dialects, parse complex punctuation, and even account for modern additions like emojis, and fit these into a vocabulary of fixed size. 
+
+This process of segmentation is a key step to many NLP pipelines. While dividing text might appear straightforward, ambiguities in punctuation complicate the process, such as in abbreviations (N.L.P. or NLP?). Simple rule-based segmenters frequently fail against the structural irregularities of natural language. Consequently, there are different approaches for constructing these units, as shown in Example~\ref{ex:tokenization}. 
+
+\begin{example}[Tokenization Strategies]\label{ex:tokenization}
+Consider the following sentence:\\ ``Leiden is beautiful in summer.''
+
+\vspace{0.3cm}
+\noindent\textbf{Word Tokenization} \\
+This approach typically splits text by spaces and punctuation.\\
+\vspace{0.1cm}
+\noindent\texttt{["Leiden", "is", "beautiful", "in", "summer", "."]}
+
+\vspace{0.4cm}
+\noindent\textbf{Character Tokenization} \\
+This approach breaks the text down into individual characters.\\
+\vspace{0.1cm}
+\noindent\texttt{["L", "e", "i", "d", "e", "n", " ", "i", "s", " ", "b", "e", "a", "u", "t", "i", "f", "u", "l", " ", "i", "n", " ", "s", "u", "m", "m", "e", "r", "."]}
+
+\vspace{0.4cm}
+\noindent\textbf{Subword Tokenization (e.g., WordPiece)} \\
+This approach preserves common words as whole tokens but breaks down complex or rare words into foundational subwords.\\
+\vspace{0.1cm}
+\noindent\texttt{["Lei", "\#\#den", "is", "beautiful", "in", "summer",}\\ 
+\noindent\texttt{"."]}
+\end{example}
+
+\paragraph{Word-Level Tokenization}
+% \todo{Do we need references to the literature here?} -> Michiel: we don't, this is canon in NLP and there is no single paper/book for it (though we can go back to early linguistic works about the meaning of symbols).
+This approach treats each space-separated string as a token that is unique. While it preserves syntactic structure, it results in impractically large vocabularies and suffers from the out-of-vocabulary (OOV) problem, where models fail on words that were not seen during training.
+
+Large vocabularies are problematic due to the mechanics of \emph{one-hot encoding}.
+% \todo{and here a ref?}  -> same reason as above
+If every word $w$ in a vocabulary $V$ is represented as a vector $\mathbf{x} \in \{0, 1\}^{|V|}$, where only the index corresponding to $w$ is 1, the dimensionality $|V|$ scales linearly with the size of the vocabulary. As these one-hot vectors will later form the input to our neural networks, for texts that do not contain all words in a certain vocabulary, we end up creating sparse, computationally inefficient representations that fail to capture semantic relationships between words.
+
+\paragraph{Character-Level Tokenization} 
+Pure character-level modeling seems like a clear solution to the problem of increasing vocabularies, and has been explored over the years \citep{mielke2021wordscharactersbriefhistory}. Such a method divides text into individual characters, which restricts the vocabulary to the size of the alphabet, virtually eliminating OOV issues. However, it significantly increases sequence length and the resulting computational burden is substantial. Furthermore, because isolated characters lack inherent semantic meaning, the model must learn word morphology before it can grasp broader linguistic patterns, increasing training time.
+
+\paragraph{Subword Tokenization} Hence, the current standard for LLMs balances the previous two methods. It preserves common words as whole tokens while decomposing rare words into smaller, meaningful components. Notable implementations include:
+
+\begin{itemize}
+    \item Byte Pair Encoding (BPE): An iterative algorithm that begins with individual characters and merges the most frequent adjacent pairs into single tokens until a target vocabulary size is reached \citep{sennrich-etal-2016-neural} (e.g., \textit{highest} $\rightarrow$ [\textit{high}, \textit{est}]). BPE was originally proposed as a data compression algorithm \citep{gage1994new}.
+    \item WordPiece: An iterative algorithm, similar to BPE, that merges pairs based on a likelihood criterion rather than on raw frequency, aiming to maximize the probability of the training data \citep{wu2016googlesneuralmachinetranslation}.
+\end{itemize}
+
+\subsection{Early Methods for Language Representation}
+\label{sec:early}
+After tokenization, the next question is how to combine our linguistic units (tokens) into coherent sentences, that carry meaning? We start with the observation that the ordering of these units in human language is dictated by strict syntactic and semantic rules. Now, if our computational approaches would be able to accurately produce sensible text sequences, then we might say that they possess the same syntactic and semantic understanding (or at least that they are able to reproduce such understanding).
+
+How can we build mathematical representations that achieve this goal? A core task in this endeavor is \emph{language modeling}. Mathematically speaking, a language model is a function  that computes the joint probability of a sequence of words occurring together in a specific context.
+By calculating this probability, models can distinguish between a logical, fluent sentence and a random sequence of tokens. For example, in English, the sequence \textit{the cat sat} is significantly more probable than \textit{sat cat the} because it adheres to established syntactic rules.
+
+Because written language is sequential, estimating the joint probability of a sentence is inherently a sequence estimation problem. The overarching goal of language modeling is to quantify the statistical likelihood that a given sentence, $S$, occurs within a specific language, based on its sequence of constituent words $w_1, \dots, w_k$:
+
+\begin{equation}
+    \label{eq:language-sequence}
+    P(S) = P(w_1, \dots, w_k)
+\end{equation}
+
+For sentences of arbitrary length, calculating this exact joint probability directly is computationally intractable, due to the exponentially large  number of word combinations in any given vocabulary. To resolve this complexity, we often decompose the joint probability, using the chain rule of probability. By making specific mathematical assumptions regarding conditional independence, this decomposition allows the computation to remain tractable for real-world applications \citep{jm3}:
+
+\begin{equation}
+\label{eq:bigram}
+    P(w_1, \dots, w_k) = P(w_1) \prod_{i=2}^{k} P(w_i \mid w_1, \dots, w_{i-1})
+\end{equation}
+
+By maximizing this joint probability, probabilistic models learn to favor grammatically and logically sound sequences. The learned probabilistic distributions  effectively reverse engineer the complex, unwritten rules of human language \citep{manning1999foundations}. To estimate these probabilities from a segmented text corpus, early methods relied on maximum likelihood estimation (MLE). The simplest approach computes the marginal probability of a word based on its relative frequency in the corpus:
+
+\begin{equation}
+\label{eq:mle-word-prob}
+    P(w) = \frac{\text{count}(w \text{ in corpus})}{\text{total number of words}}
+\end{equation}
+
+To make the computation of these conditional probabilities manageable, researchers rely on \emph{$n$-gram models}. An $n$-gram is a contiguous sequence of $n$ items from a given sample of text. Instead of calculating the probability of a word given its entire preceding history, which quickly becomes computationally intractable, $n$-gram models apply the \emph{Markov assumption}. This assumption states that the probability of the next word depends only on the preceding $n-1$ words, effectively truncating the context. For example, a bi-gram model ($n=2$) approximates the history by looking solely at the immediately preceding word. The conditional probability is then calculated by taking the frequency of the two words occurring together and dividing it by the frequency of the first word alone, 
+
+\begin{equation}
+    P(w_i \mid w_1, \dots, w_{i-1}) \approx P(w_i \mid w_{i-1}) = \frac{\text{count}(w_{i-1}, w_i)}{\text{count}(w_{i-1})}
+\end{equation}
+
+Likewise, a tri-gram model ($n=3$) conditions on the previous two words. This simplification drastically reduces the computational burden and makes it feasible to estimate probabilities directly from a corpus. 
+
+Selecting the appropriate $n$ involves a critical trade-off. A larger $n$ captures richer contextual information and deeper syntactic dependencies, resulting in a model that generates a more natural language. Yet, increasing $n$ exponentially exacerbates the sparsity problem: highly specific word sequences appear far less frequently in the training data, and the model will increasingly encounter zero probabilities. Conversely, a smaller $n$ yields robust, frequent counts but severely limits the model's understanding of broader semantic meaning and long-distance dependencies within the sentence.
+
+In a standard language model computation, observing an unseen $n$-gram results in a probability of zero, as it nullifies the joint probability of the entire sentence via multiplication. To mitigate this counterintuitive behavior, total counts are often smoothed. A common technique is \emph{Laplace (or add-one) smoothing}, which adds a fictitious count of $1$ to every possible vocabulary item. To maintain a valid probability distribution, the denominator is adjusted by adding the vocabulary size, $|V|$:
+
+\begin{equation}
+\label{eq:mle-word-prob-laplace}
+    P_{\text{Laplace}}(w) = \frac{\text{count}(w \text{ in corpus}) + 1}{\text{total number of words} + |V|}
+\end{equation}
+
+These probabilistic and count-based methods ultimately yield a numerical representation of language. A strong representation encodes the properties we intuitively grasp about a word: its meaning, its grammatical function, and its relationship with other words. In early NLP, these relative frequencies and co-occurrence counts were structured into vectors,  representing words based on their distribution in the text. 
+
+While count-based representations are tractable, they result in vectors that are  high-dimensional and sparse, leading to computational inefficiencies and poor generalization on unseen data. Consequently, modern NLP has transitioned toward learning dense, low-dimensional vector representations, known as \textit{embeddings}, using neural networks. Instead of relying on explicit counting, these models learn continuous representations as a byproduct of predicting a word from its surrounding context, capturing deeper semantic relationships in a  more efficient format.
+These modern approaches will be discussed in Section~\ref{sec:modernNLP}. First we will have a brief intermezzo where we review three important machine learning approaches.
+
+\section{Machine Learning Methods For Natural Language Processing}
+\label{sec:machinelearning}
+\chaptermark{ML Methods for NLP}
+Having  established a primer on language representation, we will now turn to the learning algorithms that allow us to create the large models powering modern AI systems. LLMs are trained using methods from the broader field of machine learning. While machine learning is an extensive field of research,  understanding LLMs requires familiarity with three core paradigms, and how they are used in language modeling: \emph{supervised learning},  \emph{autoregressive learning}, and \emph{reinforcement learning}. We briefly touch upon these essential methods and refer to standard works for deeper exploration.
+
+\subsection{Supervised Learning} 
+Supervised learning is the foundation of machine learning. It is named so because it relies on a set of  labels, that must be given beforehand, that \textit{supervise} the training process. This approach utilizes a dataset consisting of paired examples and labels, $D = \{(x_i, y_i)\}$, to train the parameters $\theta$ of a predictive model $f_\theta$. The model can be used to compute an estimate $\hat{y}$ for each input $x$, denoted mathematically as $f_\theta(x) \rightarrow \hat{y}$. Using the model to compute this estimate is also known as {\em inference}, or the {\em forward pass}. 
+
+After the forward pass, we can use a loss function $\mathcal{L}$ to compute some kind of difference between the estimate $\hat{y}$ and the true label $y$. Common examples of loss functions are the sum of squared-difference loss from statistical regression $\mathcal{L} = \sum_i(\hat{y_i} - y_i)^2$, or the cross-entropy loss for classification $\mathcal{L} = -\sum_cy_c\log(\hat{y_c})$.
+ 
+The goal of a supervised training algorithm is to minimize the sum of the losses over the dataset of example pairs by adjusting the parameters. This is done in the {\em backward pass}. Here, the loss function is used to compute an error signal to adjust the parameters $\theta$ of the model $f$ so that the next forward pass achieves a lower loss (backpropagation of the error). Minimizing the loss function on the examples from a data set is a process called \emph{training}. A single training run of forward and backward passes over all of the training data is called an \textit{epoch} (for efficiency reasons, epochs can be split into training \textit{batches}). 
+
+After training, to see if our model $f_\theta$ works well---if it generalizes to unseen examples---it is \textit{tested} on new examples, that were not part of the training set. 
+
+If the accuracy on the training set is high, we say that the model trains well (training converges). If the accuracy on the test set is also high, then we say that the model generalizes well and we have achieved our training goal. Informally speaking, if the accuracy of the model on the training set is high, but on the test set it is low, we say the model overfits on the training set. This usually means that the model has trained for too long or has too many parameters, so that it models not only the signal in the training set but also the noise. If the model has low accuracy on both training and test set, we say that it underfits. This is most likely due to too short training, or a model that is too simple (too few trainable parameters) to model the complexities of the data. 
+
+Generally speaking, problems with few variables (low-dimensional problems, such as simple regression) require smaller models (fewer parameters) and less training data to perform well. Problems with many variables (high-dimensional problems, such as image classification) require larger models  with many millions of parameters (often deep neural networks) and large training datasets to perform well. Indeed,  breakthrough performance in image classification \citep{krizhevsky2012imagenet} was only achieved after the construction of a large dataset with millions of hand-labeled images, Imagenet \citep{deng2009imagenet}.
+
+Supervised learning is the basis of machine learning. Many good text books have been written about the topic \citep{bishop2023deep,goodfellow2016deep}. It is one of the core techniques in LLM training, for example in supervised finetuning, as we will see in the next chapter.
+
+\subsection{Autoregressive Learning} 
+Large language models are trained autoregressively. In this training approach, there is no dataset of pairs of labeled examples, but there is a lot of (textual) data available. Autoregressive learning is a form of self-supervised learning, without explicit labels, using the inherent sequential nature of the data, to predict the next token. 
+
+In autoregressive pretraining of language models, our algorithm performs predictions over the dataset where each token $y=x_t$ is taken as a label for preceding example tokens $\mathbf{x}=x_{t-1}$. Autoregressive learning is a core task of modern NLP, and is used in contemporary model training pipelines \citep{radford2018improving} and included in textbooks on NLP \citep{jm3}. We will provide more details of the methods in Section~\ref{sec:modernNLP} and Chapter~\ref{chap:pipeline}.
+
+\subsection{Reinforcement Learning} 
+\label{sec:sdp}\label{sec:rl}
+Both supervised and autogregressive learning need a dataset of training data to train on---they train {\em offline} on pre-existing data. However, sometimes no dataset is available, but we may have access to a function that can tell us when we are in a good state or in a bad state. In that case, an {\em online} learning method called reinforcement learning (RL) can be used, where an agent performs an action $a$ to bring an environment from state $s$ to the next state $s'$, after which the environment reports back the reward $r(s')$ of that new state. (The method is called online because it generates its training data on the fly, while training.)  The agent can then use this reward information to adjust a $\theta$-parameterized behavior policy function $\pi_\theta(s) \rightarrow a$ to know which action to perform in which state. When the problem at hand is as a sequential decision problem,  actions $a$ take the system from state $s$ to another state $s'$, and rewards depend on actions taken in the past (the credit assignment problem: to which actions should rewards be assigned?). Repeating the state/action/reward  process can cause  the agent to explore the entire state space, and  learn an optimal policy $\pi^*(s)$ of which action to take, for all states. %, solving the credit assignment problem.  
+
+\begin{figure}[tb]
+  \begin{center}
+    \input figures/rl
+    \caption{Reinforcement Learning, after \citet{sutton2018reinforcement}}\label{fig:rl-org}
+  \end{center}
+\end{figure}
+
+Note that reinforcement learning, being online,  is inherently circular. At the start, the policy $\pi$ has seen few rewards, and has useful information on which action to take for just a few states. If it would greedily use this information on which good action to take, it would  traverse only a limited part of the environment, and the optimal policy that it would find would be only locally optimum. To find better optima, it should explore, and try random actions, ideally to cover the entire state space. 
+
+Reinforcement is a form of active agentic learning from feedback from an environment. A key observation is that it is typically easier to see if an output is good (reward function), than to create a full new one (labeled dataset).
+Many reinforcement learning algorithms have been developed that focus on good exploration methods. 
+Reinforcement learning problems are formally modeled as a Markov decision process (MDP), consisting of a state representation $S$, an action function $A(s)$, a transition function $T(s, a) \rightarrow s'$, and a reward function $R(s)$. Rewards are numeric indications of the quality of a state, provided by the environment. They can be positive or negative. The goal of an agent is to find the policy $\pi(s)$ of optimal actions $a*$ in each state $s$. 
+Figure~\ref{fig:rl-org} illustrates how a reinforcement learning agent learns a policy with an action for each state, online, through interaction with the environment, which can compute functions $T$ and $R$ (the environment will answer the agent's question as to what the next state is that resulted from its action, and how good that state is). 
+
+When the state space is small enough to fit in a computer memory, we can use exact tabular reinforcement learning methods, such as Q-learning \citep{watkins1992q}. For larger problems, function approximation methods are used (deep neural networks) such as deep Q-learning (DQN) \citep{mnih2015human} or proximal policy optimization (PPO) \citep{schulman2017proximal}. In deep reinforcement learning, the policy is a parameterized neural network that is trained by backpropagation, as in supervised deep learning. 
+
+Reinforcement learning is the basis of modern reasoning language models. Many text books have been written about reinforcement learning, such as the seminal work by \citet{sutton2018reinforcement}, as well as more educational texts \citep{graesser2019foundations,plaat2020learning,plaat2022deep}. In LLM training, reinforcement learning is used in reinforcement finetuning, and in multi-step reasoning, as we will see in Chapter~\ref{chap:reasoning}.  Furthermore, reinforcement learning formulates  machine learning problems in terms of an agent that tries to learn how to interact in an environment, which fits the agentic LLM setting nicely. In agentic LLMs, it is used in in-context reinforcement learning for prompt optimization, in world models, and to model other agent behavior in relation to the environment, as we will see later in this book.
+
+
+Reinforcement learning is a popular machine learning approach since we can learn new environments where we do not have data available. The method finds its own data. %New environments can be explored for which no dataset exists yet. 
+When we consider using reinforcement learning, two questions should be answered: (1) is the problem at hand a sequential decision problem, and, if so, (2) what is the size of the state space, can we use exact tabular methods, or must we resort to approximation?
+
+%Going from state to next state allows sequential decision problems to be solved, where choices in the past determine the outcome in the future. For this, the credit of a certain state must also be assigned to previous states, so that we know the right action in all states. Reinforcement learning is an open and flexible paradigm, powerful, when caveats of exploration and credit assignment are taken care of.
+
+
+Now that we have discussed the necessary language and machine learning principles, we turn back to language, to the next step: modeling language.  
+
+\section{Modeling Language}\label{sec:modernNLP}
+After the basics of language representation and machine learning, we turn to the overarching paradigms used to build  computational language modeling capabilities. The development of natural language processing is broadly characterized by three paradigms. Each paradigm represents a fundamental shift in the type of model constructed to capture language and how the inherent complexity of human language is managed. We will see that as we move through the paradigms, we incorporate more techniques from machine learning, leveraging  increases in compute power to process more data to train larger and larger neural networks for language processing. The paradigms are the \textit{symbolic}, \textit{statistical}, and  \textit{neural} approaches \citep{kautz2020third, deng2018deep}.
+% \todo{Hebben we een ref voor dit mooie historische overzicht?}  -> toegevoegd, de tweede citatie noemt het "rational" "empirical" en "deep learning" maar dat vind ik maar vaag
+
+\paragraph{Symbolic Methods} Often referred to as \textit{Classical AI} or rule-based systems, these early ELIZA-like symbolic approaches rely on explicit, human-defined instructions. By treating language as a formal system, symbolic models attempt to parse meaning deductively. While these systems are highly transparent and interpretable by design, they are brittle, as they struggle using rigid rules (\textit{if-then-else}) to handle the natural variation, idiomatic expressions, and ambiguities of real-world language. Scaling symbolic approaches to larger language tasks requires a labor-intensive, manual enumeration of many edge cases, which turned out to be unfeasible for all but the smallest problem domains.
+
+\paragraph{Statistical Methods} To overcome the limitations of rigid rule sets, between 1980-1990 the field experienced an empirical shift toward probabilistic modeling with the statistical methods. Instead of relying on explicit syntactic rules, statistical methods such as hidden Markov models and $n$-gram language models leverage large text corpora to compute the likelihood of word co-occurrences. This data-driven approach scales efficiently and handles linguistic ambiguity and noise far better than its symbolic predecessors. However, because these models typically rely on the Markov assumption, %\footnote{The Markov property describes a memoryless, stochastic process, where future states depend only on the current state, not on past states (or, to put it differently, relevant history must be encoded in the current state). It simplifies complex systems reasoning, and allows efficient algorithmic and mathematical reasoning. The Markov property may be an oversimplification, especially in language, where elements far far away---not encoded in the previous word---may influence current meaning.} 
+their representation of meaning is inherently limited to local word patterns, making them ill-equipped to capture long-distance dependencies and broader context.
+
+\paragraph{Neural Methods} After approximately 2010, the contemporary  state-of-the-art shifted to neural networks and deep learning. Rather than using logic or discrete counts, neural methods represent linguistic units as dense, low-dimensional vectors in a continuous semantic space. Modern architectures, particularly transformers, employ attention mechanisms to model global context simultaneously across an entire sequence. This approach yields impressive generalization, high fluency in text generation, and cross-lingual capabilities. Nevertheless, these advantages come with significant trade-offs: neural models operate largely as black boxes, sacrificing the interpretability seen in symbolic methods, and they require large data sets and large computational resources.
+
+The contemporary pipelines for NLP training draw inspiration from all of these three paradigms. Before describing an example pipeline in the next chapter,  we require a deeper understanding of the core components of these parts, as they are the building blocks for the systems on which agentic LLMs are based. In the next sections we will discuss many topics: word embeddings, contextualized embeddings, sequence modeling,  attention, transformers, encoders (such as BERT), and decoders (such as GPT).  
+
+\subsection{Embeddings}\label{sec:cosine}
+Early models of neural embeddings operationalize semantic understanding of lexical items by defining a context window, a span of $n$ words to the left and right of a target word, and predicting the missing focus word. For the sentence \textit{There are two cookies left on the table}, if we set a window of $n=2$, the context words for \textit{cookies} are \textit{are}, \textit{two}, \textit{left}, and \textit{on}. By systematically sliding this window over a large corpus of text, we can count how many times each word appears in the context of every other word. These counts form the basis of a co-occurrence matrix, where each row represents a target word and each column represents a context word. The value in each cell is the number of times the column word appeared in the context of the row word. For example, the vector for \textit{cherry} might have a high value in the column for pie (e.g., 442) and a low value for computer (e.g., 2). The vector for \textit{strawberry} would show a similar pattern, and hence reflect the semantical similarity between the two words.
+
+By representing words as vectors, we place them in a high-dimensional vector space where each dimension corresponds to a context word. In this space, words with similar meanings, which share similar contexts, will point in similar directions. This geometric relationship allows us to measure semantic similarity numerically. The most common method for this is \emph{cosine similarity}, which measures the cosine of the angle $\theta$ between two vectors $\mathbf{a}$ and $\mathbf{b}$, as in Equation~\ref{eq:cosine}. 
+
+\begin{equation}
+    \label{eq:cosine}
+\text{similarity} = \cos(\theta) = \frac{\mathbf{a} \cdot \mathbf{b}}{\|\mathbf{a}\| \|\mathbf{b}\|} = \frac{\sum_{i=1}^{n} a_i b_i}{\sqrt{\sum_{i=1}^{n} a_i^2} \sqrt{\sum_{i=1}^{n} b_i^2}}
+\end{equation}
+
+
+Earlier, we argued that count-based vectors result in high-dimensional spaces that scale linearly with vocabulary size. Since the number of dimensions dictates the computational complexity of downstream models, we wish to keep the dimensionality in check and instead create dense embeddings. For this, we use the classical word2vec algorithm \citep{mikolov2013efficient}. In this approach, a random embedding matrix $W$ is initialized and iteratively updated to match the intuition that similar words occur in similar contexts. This general framework uses two distinct techniques to achieve this: skip-gram and continuous bag-of-words, as shown in Figure~\ref{fig:word2vec}.
+
+The first, \emph{skip-gram}, predicts which context words are likely to surround a given target word. It updates the matrix to ensure that the cosine similarity between positive samples, which are  actual target and context pairs, is high, while driving down the similarity for negative samples, which are random word pairings. Because skip-gram treats every target-context pairing as a distinct training observation, it heavily penalizes incorrect predictions even for infrequent terms. Hence, skip-gram excels at capturing fine-grained semantic details and produces accurate representations even for rare words.
+
+The second, \emph{continuous bag-of-words} (CBOW), performs the reverse operation. It predicts a single target word based on a combined set of surrounding context words. By averaging the context vectors before predicting the target, CBOW inherently smooths over the specific details of individual context words. This distributional smoothing is the reason for its distinct performance profile: CBOW trains significantly faster than skip-gram and is highly effective at capturing general syntactic relationships among frequent words, though it sacrifices some sensitivity to a rare vocabulary.
+
+\begin{figure}[tb]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \includegraphics[width=\textwidth]{part1/visuals/skipgram.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \includegraphics[width=\textwidth]{part1/visuals/cbow.png}
+    \end{minipage}
+    \caption{Visualizations of the skipgram (left) and continuous bag-of-words (right) approaches to constructing word embeddings \citep{d2l_cbow_2023}.}
+    \label{fig:word2vec}
+\end{figure}
+
+
+
+\subsection{Shifting to Contextualized Embeddings}
+Word2vec represented a major leap forward in the creation of high-quality word embeddings. However, a major downside is that word2vec results in \textit{static embeddings}. This means that a word is mapped to a single vector regardless of its usage (its context). This creates a fundamental problem with polysemy. Consider the word \textit{bank} in two different sentences:
+\begin{enumerate}
+    \item I need to go to the \textit{bank} to withdraw some money.
+    \item The swimmer sat on the river \textit{bank}.
+\end{enumerate}
+In a static model, \textit{bank} has one fixed representation that must average or pick between these disparate meanings, resulting in a vector that is neither purely financial nor purely geographical or a weird blend of the two. Modern architectures (such as BERT and GPT, which are discussed later in this chapter) solve this by producing \textit{contextualized embeddings}. Instead of a static look-up table, the model processes the entire sequence. The resulting vector for \textit{bank} is calculated dynamically based on the surrounding tokens (\textit{money}, \textit{withdraw} vs.\  \textit{river}, \textit{swimmer}), allowing the machine to represent the specific nuance intended by the speaker.
+
+
+\subsection{Recurrent Neural Networks}
+While embeddings are capable of expressing the complex semantics of individual words, we still need an efficient way to ingest language as a sequence. Training models for classification tasks, for instance,  requires independence assumptions to simplify computational dependencies. We could take a sliding window approach to concatenate all relevant word embeddings into a single vector to represent a sentence. However, this rapidly increases the size of the input to any classifier, and  does not scale to long sequences of text. 
+
+In humans, the expectation of what we observe next is conditioned on the things that we have seen (or heard) in the past. Previously, models approximated this intuition through the independence assumption, as seen in Equation~\ref{eq:bigram}. Formally, we introduce additional notation for our input $x$ occurring in sequence $x_1, x_2, \dots, x_t$ from timestep 1 through $t$. In this formulation,  predicting the next word can be modeled as $P(x_{t+1} \mid x_1, \dots, x_t)$. Alternatively, we call $x_{t+1}$ the prediction $y_{t}$ for timestep $t$. 
+% our models produce output predictions for corresponding timesteps $y_1, \dots, y_t$. 
+
+To effectively observe input in sequences and produce corresponding predictions, we must incorporate historical context into our models. This means that, in addition to the current input, we include the previous hidden state from our model. \emph{Recurrent neural networks} (RNNs) are networks with such a cycle, where current values depend on the input as well as the network's state at a previous timestep. Instead of only producing a prediction (e.g., a word or token) $y_t$, we now also keep track of a hidden state $h_t$. Formally, this is expressed  in Equations~\ref{eq:rnn_h} and~\ref{eq:rnn_y}. Figure~\ref{fig:rnn} illustrate the architecure of an RNN, and how we can picture its unrolling in time steps.
+%
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=\linewidth]{figures/RNNcolah.png}
+    \caption{Unrolled RNN (illustration from Chris Olah's blog \citep{olah2015understanding})}
+    \label{fig:rnn}
+\end{figure}
+%
+\begin{align}
+    \label{eq:rnn_h}
+    h_t &= f(\mathbf{U}h_{t-1} + \mathbf{W}x_t + \mathbf{b_h})\\
+    \label{eq:rnn_y}
+    y_t &= g(\mathbf{V}h_t + \mathbf{b_y})
+\end{align}
+%
+This introduces new trainable parameter matrices $\mathbf{U}, \mathbf{V}, \mathbf{W}$ (and subsequent bias terms $\mathbf{b}$) to make sure our architecture can shape the hidden state and output logits accordingly. RNNs can theoretically process infinite-length sequences, and we no longer need the Markov assumption to account for a sparsity problem. 
+
+Training RNNs is  done using backpropagation through time (BPTT), where we unroll the temporal dependencies to backpropagate the gradient from time step $t$ to earlier ones: $t_{-1}, t_{-2}, \dots$. However, because the gradients for updating the model at a timestep depend recursively on the previous timesteps, this step is sensitive. Because of the repeated matrix multiplications required by the chain rule, this leads to the problem of \emph{vanishing or exploding gradients} \citep{bengio1994learning, pmlr-v28-pascanu13}. Controlling the flow of information in RNNs is difficult. Information from early timesteps has relatively little impact on our gradients, compared to more recent information. In practice,  learning salient signals with RNNs is often   difficult. 
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=\linewidth]{figures/LSTMcolah.png}
+    \caption{Repeating module of an LSTM (illustration from Chris Olah's blog \citep{olah2015understanding})}
+    \label{fig:lstm}
+\end{figure}
+
+\paragraph{LSTMs} The \emph{long short-term memory} (LSTM) architecture was introduced to address the gradient problem  \citep{hochreiter1997long}. An LSTM works by controlling the flow of information. In an LSTM network, additional gates are added to construct a context vector, which the network will learn to add and update information to (see Figure~\ref{fig:lstm}). Below is the mathematical definition for a single time step $t$ for the LSTM architecture. The LSTM maintains two states: a context state ($c_t$) and a hidden state ($h_t$), and uses gates to control the flow of information:
+\begin{align*}
+    f_t &= \sigma(U_f h_{t-1} + W_f x_t) \\
+    k_t &= c_{t-1} \odot f_t \\
+    g_t &= \tanh(U_g h_{t-1} + W_g x_t) \\
+    i_t &= \sigma(U_i h_{t-1} + W_i x_t) \\
+    j_t &= g_t \odot i_t \\
+    c_t &= j_t + k_t \\
+    o_t &= \sigma(U_o h_{t-1} + W_o x_t) \\
+    h_t &= o_t \odot \tanh(c_t)
+\end{align*}
+%
+In the notation above, $\odot$ denotes the element-wise multiplication of two vectors, also called the Hadamard product. Besides LSTMs, there are subsequent variants such as the \emph{gated recurrent unit} (GRU) that balance the computational complexity and the number of trainable parameters \citep{cho2014gated}. 
+
+Recurrent neural networks played an important role in language modeling. For further explanations of how RNNs, LSTMs, and GRUs, work, see for example \citet{olah2015understanding,bishop2023deep,goodfellow2014generative}.
+
+% maybe not so relevant
+% The GRU merges the cell and hidden states into a single state ($h_t$), and also uses a series of gates. 
+% \begin{align*}
+%     z_t &= \sigma(U_z h_{t-1} + W_z x_t) \\
+%     r_t &= \sigma(U_r h_{t-1} + W_r x_t) \\
+%     g_t &= \tanh(U_g (r_t \odot h_{t-1}) + W_g x_t) \\
+%     h_t &= (1 - z_t) \odot h_{t-1} + z_t \odot g_t
+% \end{align*}
+
+\paragraph{Encoder-Decoder}
+So far, we have formulated our  task as the  language modeling task: how to predict the next word, given a context of preceding words. However, there is an alternative task formulation that is useful to introduce.
+
+Consider the problem of machine translation. While this looks like the previous tasks of predicting token $x_{t+1}$ based on inputs $x_1, \dots, x_t$, we are now dealing with a \emph{sequence-to-sequence} (seq2seq) problem: we need to process an input sentence $x_1, \dots, x_n$ in one language, and output a translated sentence $y_1, \dots, y_m$ in another. Why is translation a seq2seq problem? Note that $n$ and $m$ can be different from each other and that translations may not preserve order, as in the English to Dutch translation example below:
+\begin{center}
+    \emph{We will celebrate the relief of Leiden} (7 words)\\[.5em]
+    \emph{Wij gaan Leids Ontzet vieren} (5 words)
+\end{center}
+%
+The \emph{encoder-decoder} architecture is a powerful framework designed to handle sequence-to-sequence  tasks where the input and output lengths may differ. The encoder and decoder are two distinct RNNs that work together to map a variable-length input to a variable-length output. The job of the encoder is to process the input sequence one step at a time and compress the information into a fixed-length vector, often called the context vector.\footnote{Not to be confused with the LSTM's context vector. NLP research has repurposed terminology in relatively little time. Language in research papers is also a moving target.} This forces the information into a \emph{bottleneck}: compressing information of an input sequence $x_1, \dots, x_t$ into a single hidden vector. However, this process is difficult to model and there is a loss of information. See Figure~\ref{fig:encdec} for an illustration of the architecture.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.65\linewidth]{figures/encdec.png}
+    \caption{Illustration of the Encoder-Decoder architecture}
+    \label{fig:encdec}
+\end{figure}
+
+The context vector acts as the bridge between the encoder and the decoder. It is the final hidden state of the encoder that is passed to the decoder as its initial hidden state. This vector encodes the semantic meaning of the entire source sentence, so the decoder can begin generating the target sequence accurately. The decoder is a second RNN that produces output tokens, conditioned on the context vector. Its goal is to generate the output sequence one token at a time. This continues until a special end-of-sequence token is generated. This approach works well, in principle. However, forcing a  long input sentence into a single, fixed-length context vector causes information loss (the bottleneck problem). Moreover, RNNs struggle to remember the beginning of long sequences by the time they reach the end. These two problems combined prompted the  development of a more dynamic approach for passing information between the encoder and decoder, which we will discuss next. 
+
+
+
+
+\subsection{Attention}
+In search for a solution to the bottleneck problem, researchers looked for ways to efficiently pass information from across the entire sequence into the decoder. During the generation process, the decoder could then decide which of the parts in the input sequence were relevant for decoding the next word. 
+
+This search has lead to advanced mechanisms for attention \citep{DBLP:journals/corr/BahdanauCB14,kim2017structured}. %These attention mechanisms aim to address this problem. 
+The effect of the  attention mechanism is illustrated in Figure~\ref{fig:enc-dec-bleu}, where translation performance (in terms of BLEU score \citep{papineni2002bleu}, higher is better) is plotted. The architecture using the attention mechanism (called \textit{RNNsearch}, see Figure~\ref{fig:enc-dec-bleu}) shows a consistent ability to achieve high translation quality especially for long sentences. The standard RNN encoder-decoder model (\textit{RNNenc}) suffers a sharp drop in performance as sentence length increases.
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.66\linewidth]{part1/visuals/enc_dec.png}
+    \caption{The bilingual evaluation understudy (BLEU) scores of generated translations with respect to the lengths of the sentences \citep{DBLP:journals/corr/BahdanauCB14}}
+    \label{fig:enc-dec-bleu}
+\end{figure}
+
+
+The intuition behind attention is to include a linear combination of all encoder hidden states in the context vector, instead of relying on a single final hidden state. This allows the model to look back at specific parts of the input sequence that are relevant to the current word being generated. We can control how much focus each input token $x_i$ receives by adjusting its weight $a_i$ in the linear combination, as shown in Equation~\ref{eq:enc-dec-attention}. Here, $\mathbf{c}_j$ is the context vector for the $j$-th output, and $h_i$ represents the hidden state of the $i$-th input token.
+
+\begin{equation}
+\label{eq:enc-dec-attention}
+    \mathbf{c}_{j} = a_1\mathbf{h}_1, \dots, a_n\mathbf{h}_n
+\end{equation}
+
+The weights $a$ (often called attention weights) are not fixed; they are computed dynamically. A key observation is that we can make use of the hidden states $h_i$, which are a representation of the semantics of a token or word. We can find out how relevant one hidden state is to another, by comparing them,  for example by computing their cosine similarity. The {\em softmax-normalized dot product} is a common approach:
+\begin{enumerate}
+    \item Compare the current decoder state with each encoder hidden state by applying a similarity function (such as a dot product) to see how well they match.
+    \item Pass these scores through a softmax function so they sum to 1, effectively creating a probability distribution over the input tokens.
+\end{enumerate}
+While attention improved accuracy, the challenge of efficient computation of RNNs still remained to be solved. Because RNNs process tokens one by one (sequentially), they cannot take full advantage of modern parallel computing hardware in GPUs. To be able to scale to  large datasets the  recurrence should be removed entirely. This can be achieved by going from a sequential structure to a parallel one  with a fixed context width that processes all tokens in parallel. This is achieved through \textit{self-attention}.  Mathematically, this turns the computation of the contextualized embeddings into Equation~\ref{eq:contextualized-embeddings}.
+\begin{equation}
+\label{eq:contextualized-embeddings}
+    \mathbf{a}_3 = \sum_{j=1}^{5} \alpha_{3j} \mathbf{x}_j = \sum_{j=1}^{5} \textsf{softmax}{(\underbrace{\mathbf{x}_3}_{\text{query}} \cdot \underbrace{\mathbf{x}_j}_{\text{key}}}) \underbrace{\mathbf{x}_j}_{\text{value}} 
+\end{equation}
+
+\begin{equation}
+\label{eq:attention}
+    \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+\end{equation}
+
+
+Where $Q$ represents the matrix representing the current focus, $K$ represents the keys providing the information in the sequence to compare against, $V$ represents the matrix containing the actual content to be extracted, and $d_k$ represents the dimension of the keys (used for scaling to prevent gradient vanishing). As the dimension $d_k$ increases, the dot products $QK^T$ can grow  large, pushing the softmax function into regions where it has  small gradients. Dividing by $\sqrt{d_k}$ counteracts this effect, ensuring more stable training.
+
+Together, the set of attention matrices $Q,K,V$ are called an attention {\em layer} or {\em head}.
+In practice, one attention layer   captures a specific type of interaction between tokens. However,  having just one type of interaction means that the model can only focus on one relationship at a time (an attention {\em head}). Since a word can have many different types of linguistic relationships, such as syntactical ({\em which verb does this noun belong to?}), semantic ({\em is this word part of a metaphor?}), or referential ({\em who does {\em he} refer to?}). By using multiple heads in tandem, we give the model the ability to represent multiple types of relationships. One head might learn to look for grammatical structure, while another learns to look for pronouns, and another for entities. The heads all work in parallel, and their results are concatenated into a single, rich representation. Together, these heads form a layer. This is shown in Equation~\ref{eq:multi-head-attention}. 
+
+
+\begin{align}
+    \label{eq:multi-head-attention}
+    \text{MultiHead}(Q, K, V) &= \text{Concat}(\text{head}_1, \dots, \text{head}_h)W^O \\
+    \nonumber \text{where } \text{head}_i &= \text{Attention}(QW_i^Q, KW_i^K, VW_i^V)    
+\end{align}
+
+
+
+\subsection{Transformers}
+% \todo{Meer uitleg? Intuitiever?}
+How can we use the attention mechanism to build an architecture for language modeling? We will now discuss one such architecture, the transformer architecture, introduced in the seminal work by \citet{vaswani2017attention}.
+
+The attention mechanism is the core of the transformer architecture.
+%LLMs can be seen as a form of \textit{multi-purpose artificial intelligence}: they can be used to perform an array of different tasks on which they have not explicitly been trained, including some tasks that were previously deemed as {\em AI-hard}.\footnote{AI-hard problems are problems that are thought to require human-level intelligence to solve. Examples are natural language understanding and navigating chaotic real-world scenarios. They cannot be solved by simple, purpose-specific algorithms ({\em classical AI}) and are considered milestones toward achieving artificial general intelligence (AGI).}
+%
+The original transformer architecture, shown in Figure~\ref{fig:transformer}, consists of both an encoder  and a decoder. The left side of the Figure shows the encoder stack, the right side shows the decoder stack.  Most LLMs are decoder-only transformers.
+
+The Figure shows {\em transformer blocks} that each consist of a self-attention module, a feed-forward network, a normalization layer, and residual connections from input to output. In most LLMs many transformer blocks are stacked on each other, in layers. For example, GPT-2 consists of 12 layers or more, depending on the version of the model. 
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.7\linewidth]{part1/visuals/transformer_full_architecture.png}
+    \caption{Visualization of the Transformer architecture \citep{godoy_dl_visuals,vaswani2017attention}}
+    \label{fig:transformer}
+\end{figure}
+
+Let us now have a closer look at the transformer architecture (please refer to the Figure). The full architecture consists of three main types of elements: embedding, transformer blocks, and output probabilities:
+\begin{enumerate}
+\item Embedding: First, the input text is tokenized, and projected into low dimensional embedding vectors. Positional encoding is added to the embedding to preserve word order. 
+\item Transformer Blocks: The transformer blocks are the main feature of the architecture. Most models consist of multiple layers of transformer blocks. Within each layer, each block consists of three elements:
+\begin{itemize}
+    \item Self-attention Mechanism: The attention mechanism allows long range connections between tokens, capturing contextual information and relationships between tokens. Multiple attention heads allow the model to consider these relationships from different perspectives, for example, for short-range syntactic links, and for  broader semantic context. 
+    
+    For an encoder stack, transformers use self-attention. For a decoder stack, they use masked self-attention, to prevent looking at the future.  
+    \item Multi-layer Perceptron: A fully-connected feed-forward network  operates on each token independently. The attention layer makes connections  between tokens, whereas the MLP can refine each token's representation. 
+    \item Normalization: In most transformer blocks typical deep learning methods such as normalization,  regularization (dropouts), and residual connections are added, to prevent vanishing or exploding gradients, and to improve stable training.     \end{itemize}
+\item Output Probabilities: linear and softmax layers transform the processed embeddings into probabilities, to make the next-token predictions. 
+\end{enumerate}
+The transformer architecture has two main advantages over earlier methods, such as RNN and LSTM networks. %Transformers allow parallel processing of token sequence, unlike RNN, which must be processed in sequence. Furthermore, the attention mechanism enables long range context semantic relations to be recognized, preventing the model from forgetting early information, which is a problem with RNNs.
+%These advantages of transformers, and the availability of large training corpuses, have enabled the successful development  of LLMs. 
+Attention-based transformers allow (1) large scale parallel processing, and (2) fine-grained long-range semantic connections---speed {\em and} semantic accuracy. 
+
+Transformers have dominated language modeling since their introduction. After large scale high quality training corpuses were created, transformer-based LLMs achieved impressive performance in question-answering, data-to-text generation, and application-driven tasks. Researchers have been pursuing increasingly larger models with promises of even higher capabilities \citep{brown2020language}. In Chapter~\ref{chap:scaling}  we will discuss how to scale performance further.
+%Powered by a large amount of language data and compute, large language models  have yielded strong empirical results across many fundamental language tasks such as   yet some specialized smaller models have appeared that outperform larger counterparts on various benchmarks. 
+
+
+The transformer architecture is a complex architecture. Excellent interactive tutorials exist online, with more details,\footnote{See, for example, \url{https://poloclub.github.io/transformer-explainer/}} see also the case study in Chapter~\ref{ch:nanochat}.
+
+
+\begin{comment}
+%Finally, we turn back to the input. 
+The transformer architecture  eliminated the recurrent connections, we now process entire sequences in one go through a fully connected setup. However, in doing so, we lose the influence of sequential input. In other words, we can now present the input in any order, and the subsequent contextualized embedding will be the same. To fix this problem, we include a {\em positional encoding} for each token. This positional encoding embeds the absolute position of tokens. The original transformer paper \citep{vaswani2017attention} used a clever mathematical trick involving sine and cosine functions of different frequencies to create Rotary positional embeddings (RoPE), as in Equation~\ref{eq:pos-enc}, where $pos$ is the index of the token in the sequence, $i$ is the dimension index within the vector, and $d_{model}$ is the total size of the embedding vector. A visualization is given in Figure~\ref{fig:pos-emb}. While learned embeddings seem ideal, as they can fit any positional pattern, they are sensitive to the lengths observed during training. RoPE is fixed and structured, encoding position as rotation frequency, and works well irrespective of sequence length. 
+
+\begin{align}
+    \label{eq:pos-enc}
+    PE_{(pos,2i)}               &=\sin(pos/10000^{2i/d_{model}})\\
+    \nonumber PE_{(pos,2i+1)}   &=\cos(pos/10000^{2i/d_{model}})
+\end{align}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=.95\linewidth]{part1/visuals/positional_encodings.pdf}
+    \caption{A visual contrast between arbitrarily learned positional embeddings, and fixed, structured rotational positional embeddings.}
+    \label{fig:pos-emb}
+\end{figure}
+\end{comment}
+    
+\subsection{Encoder-only (BERT)}
+While the original transformer model consists of a combined encoder-decoder structure, modern models are usually either an encoder or a decoder, as they are found to have specific empirical strengths. 
+
+Let us have a closer look at encoders.
+Encoders are trained to compress input data into meaningful representations (embeddings) using techniques such as masked language modeling (MLM).
+They are good at NLU tasks  such as text classification and sentiment analysis, while decoders are good at NLG tasks such as text generation, paraphrasing and summarization.
+
+Encoder-only models are designed to produce high-quality vector representations (embeddings) of input text. Unlike decoders, which are {\em causal} (they can only look at past words), encoders are inherently bidirectional. In an encoder, every token in a sequence can attend to every other token simultaneously. This global context allows the model to build a complex semantic representation of the input. 
+To train these models, we use masked language modeling. In this process, roughly 15\% of the input tokens are replaced with a special \texttt{[MASK]} token. It is up to the model to then learn which of the tokens from its vocabulary should go in its place. Often the regular cross-entropy loss is used to update the model. The goal of MLM encoder training is for the model to use the surrounding context (both left and right) to predict what the masked word is. Eventually, this forces the model to learn grammar, semantics, and even some world logic. 
+
+To improve learning, in addition to the \texttt{[MASK]} token,  encoder training typically  includes several special tokens: 
+\begin{itemize}
+    \item \texttt{[CLS]} (Classification): Inserted at the very start. After passing through all layers, the final state of this token is used as the aggregate representation for the whole sequence. 
+    \item \texttt{[SEP]} (Separator): Used to tell the model where one sentence ends and another begins, which is vital for tasks such as question answering.
+    \item \texttt{[PAD]} (Padding): Ensures all sequences in a training batch are the same length.
+\end{itemize}
+The best-known encoder-only model may well be the {\em bidirectional encoder representations from transformers}, better known as BERT~\citep{devlin2018bert}. 
+Encoder-only models such as BERT, and its successors RoBERTa \citep{liu2019roberta} and ALBERT~\citep{lan2019albert}, have become popular. 
+
+Encoder-only models are quite suitable  for  transfer learning, where they  embed inputs and are subsequently finetuned on downstream tasks, such as classification for certain application domains. 
+%Encoder-only models often make use of \textit{bidirectional} or global attention, since we know the entire input at prediction time. 
+The pipeline for constructing encoder-only models involves two phases: 
+\begin{enumerate}
+    \item Pretraining:  First train the model on a large corpus of billions of words. It may learn, for example,  that \textit{King} is related to \textit{Man} and \textit{Queen} is related to \textit{Woman}. The model does not yet know how to do a specific job yet, it just learns English. Pretraining is an expensive step, and may take a long time (weeks or months).
+    \item Finetuning: Second,  take the pretrained model and add a small additional classification layer on top (often called a \textit{classification head}). Then,  the whole model is trained again on task-specific data (such as spam detection, or sentiment analysis). Because the model already understands language, it typically only needs a few thousand examples to become an expert at the new task. Finetuning is a cheap step, and may take just  hours or minutes, whereas  starting from scratch on the specific task would require a large dataset and much training time. 
+\end{enumerate}
+After we have discussed encoder-only models, we will now switch to decoder-only models.
+
+\subsection{Decoder-only (GPT)}
+In language generation tasks, decoder-only models are used. 
+Decoders are trained to reconstruct data or generate sequences using  autoregressive training---they often generate output one token at a time. This autoregressive dependency, where the next tokens depend on what has been  generated so far, is a form of \textit{causal} attention. We cannot use future tokens to derive the best prediction.
+In an encoder, a word can look at the words to its right. In a decoder, this is strictly forbidden. We use a look-ahead mask (often a triangular matrix) that sets the attention scores of future tokens to $-\infty$. If the model is predicting the word \textit{apple} in the phrase \textit{The boy ate the...}, it should not be allowed to observe the word \textit{apple} in the training data. The decoder must rely solely on the preceding context. Subsequently, while encoders use masked language modeling, decoders use (regular) \textit{causal language modeling}, as shown in Equation~\ref{eq:lm} in the next chapter.
+
+
+
+As a consequence, when moving from encoders to decoders, the relationship between pretraining and finetuning changes slightly: decoders learn to predict the next word in pretaining, and are then fine-tuned with the same loss function, but with another type of data. This allows us to move to {\em in-context learning} (ICL) or prompt-learning: because decoders are trained to continue a sequence, you can simply give them a prompt (the context), and they will generate the answer without needing any weight updates. The learn, as it were, from the examples in the prompt \citep{brown2020language}. The ease of use with which large decoders can be used through in-context learning, without having to do expensive task-specific training or finetuning,  has created much interest in ICL. 
+
+Decoder-only models, such as the {\em generalized pretrained transformer} (GPT) family \citep{radford2018improving,radford2019language,brown2020language,ouyang2022training,achiam2023gpt},  have become quite successful and are now widely used in our society. Many other models have been developed, both open and closed. 
+%
+Together, the training mechanisms that we discussed form the basis of the modern LLM pipeline, which we will explain in more detail in Chapter~\ref{chap:pipeline}.
+
+
+
+\section{Concluding Remarks}
+In this chapter, we have traced the remarkable evolution of natural language processing from its foundational linguistic roots to the neural architectures that power today's large language models. We have argued that  human language is inherently complex, defined by intricate rules of syntax, morphology, and deep semantic and pragmatic nuances. The breakthrough in modern NLP progressed through  a series of  paradigm shifts---symbolic, statistical, neural---delivering  building blocks for contemporary language models that are built on  dense embeddings, the attention mechanism, and increases in scale, for data, model size, and compute power. Encoder models are suitable for NLU, decoder models are suitable for NLG. Both are trained by pretraining, finetuning, and decoders allow prompt-based  in-context learning.  %Driven by robust machine learning paradigms, these training methodologies are what ultimately breathe functional life into the models.
+
+\subsection{Open challenges}
+Although the performance of modern LLMs is  impressive, and many useful use cases exists, important challenges remain. %Many impressive inventions have progressed NLP from simple count-based systems to (Agentic) LLMs. However, as we push the boundaries of what machines can understand, several fundamental challenges mentioned so far are ever prevalent. 
+Understanding these challenges is critical for identifying research gaps and for engineering more robust systems,  that are also relevant for agentic LLMs. 
+
+\paragraph{Performance Scaling}
+Current language modeling assumes {\em scaling laws}: better generalization is achieved through the triumvirate of more parameters, more data, and more compute. However, further scaling  creates  significant challenges. Achieving state-of-the-art performance may require models with billions of parameters, whose training costs millions of dollars in compute, bringing about a high environmental impact. How to achieve better generalization (the ability to perform tasks that the model was not  trained on) using efficient architectures is an open question. Current research is exploring  model pruning and quantization (both discussed in Chapter~\ref{chap:scaling}). Furthermore, synthetic data generation (see Chapter~\ref{chap:synthetic-data}) aims to achieve higher generalization without more training data, but the sweet spot between model size and generalization capability remains elusive.
+
+\paragraph{Data Scarcity}
+The majority of NLP training  datasets  are built for the English language, and so are major benchmarks, such as GLUE (general language understanding  \citep{wang2018glue}) or SQuAD (question answering \citep{rajpurkar2016squad}). The data is often accumulated from large web-scrapes. Other high-resource languages, such as Chinese or Hindi, can also benefit from this approach, while low-resource languages (such as Dutch or Flemish) lack the digital footprint and the cultural presence that is necessary to train modern transformers from scratch. Because models inherit the cultural nuances of their training data, non-English speakers often experience degraded performance or algorithmic bias that favors Western perspectives and linguistic norms.
+
+\paragraph{Multilinguality}
+Because of the differences in available resources, NLP rarely provides a generic solution for each language. For instance, translating a model’s success from English to other languages introduces several linguistic complexities.
+Other languages like Turkish, Finnish, or Arabic may be morphologically richer, as they convey significant information through prefixes and suffixes to verbs or nouns. A single word in Turkish might correspond to an entire sentence in English. Models that are not trained on such  languages fail to reflect such linguistic richness.  
+
+Furthermore, different languages may employ different character sets and scripts. This leads to problems in handling non-Latin scripts (for example, logographic scripts for Chinese, or Abjads for  Hebrew and Arabic). These languages require new tokenization and embedding strategies that lead to sensible subwords. 
+
+\paragraph{Language Evolution}
+Languages are living entities that  evolve faster than models can be retrained. Amongst others, this leads to the out-of-vocabulary (OOV) problem. Even with sub-word tokenization (such as byte-pair encoding (BPE) \citep{gage1994new} or WordPiece \citep{song2021fast}), models struggle with neologisms, slang, technical jargon, or names that did not exist at the time of  the training cutoff. Furthermore, a model trained in 2022 may not understand the context of global events or cultural shifts in 2026 (what is the Gen Z stare?). Creating continual learning systems that update knowledge without forgetting previous information (catastrophic forgetting) is an open challenge \citep{wu2024continual}.
+
+\paragraph{Tokenization Beyond Text}
+The boundary between text and other modalities is blurring as a consequence of the effort to make sense of information outside its traditional context. A challenge in providing this context is multi-modal representation:  representing images, audio, and video in the same latent space as text. While text is discrete (words/characters), audio and video are continuous signals that must be sampled and quantized. Mapping a frame of video or a segment of a waveform to a token that a language model can process alongside text requires complex architectures like Vision Transformers (ViT) \citep{han2022survey} or Contrastive Language-Image Pre-training (CLIP) \citep{radford2021learning}. Chapter~\ref{chap:world} will discuss multi-modal models.
+
+\paragraph{Interpretability}
+Finally, an important open question is how these models work internally. While we can measure that a model works, we often struggle to explain why it provided a specific answer. Furthermore, models often fail, or hallucinate, giving wrong answers in a convincing way. For high-stakes applications such as military, legal or medical NLP, the lack of transparency should be a significant barrier to adoption of language models. Techniques for interpretable language models, such as mechanistic interpretability, are discussed in Chapter~\ref{chap:mi}. 
+
+Beyond these challenges, language modeling faces many other socio-technical challenges, including ethical alignment, long-form logical reasoning, and many others. As NLP continues to evolve, these open problems represent a dynamic frontier where solving one challenges often reveals a host of deeper questions for the next generation of student, researchers and engineers.
+
+\subsection{Looking Ahead}
+In this chapter we have discussed the basics of language modeling, from the early beginning, to modern decoder models. We are now ready to go deeper into the matter of agentic LLMs. In the next chapter, we will discuss in more detail how a training pipeline of a large language model works.
+
+\bibliographystyle{plainnat}
+\bibliography{agenticbook,refs,case,synthetic}
+
+
+% \begin{comment}
+% \section{Training Paradigm: Supervised Learning. Why?}
+% static dataset (in distribution) of labeled examples, learn regression or classification on the static dataset in order to predict out of distribution.
+
+% Sample many epochs over the examples in the dataset to fit the parameters defining the curves/classes.
+
+% Learning is conceptually quite simple: just variables for the parameters, a min operator (which is a simple conditional statement) to minimize the loss between the predicted label and the real label, and a while-loop to keep on iterating until we have converged enough (the sum of the error does not change much between training epochs).
+
+% \section{Training Paradigm: Reinforcement Learning (Aske). Why?}
+% \subsection{Offline and Online Learning}
+% Supervised and Reinforcement. Stable and Unstable.
+
+% Interactive learning is algorithmically exactly as simple as offline learning: a while loop around a max operation that improves the reward of the action for each state of the policy. The only difference is that there is no static dataset, but data items are chosen by using the current policy to take an action to create a new state, and getting the label, the reward, for that state/action combination, from an environment. The environment is like an oracle that plays the role of the dataset. 
+
+% \subsubsection{Exploration}
+% There is a complication in that the next state is determined online, dynamically, and the algorithm can get stuck in a feedback loop (converge on a local optimum), or have bad coverage of the state space (converge on a local optimum). Special measures have to be taken to make reinforcement learning well behaved, that are not needed in supervised learning. Reinforcement learning algorithms must explore. 
+
+% \subsubsection{Credit assignment}\label{sec:sdp}
+% Furthermore, reinforcement learning typically allows a general setting in which not all states have a reward defined. Also, the concept of state and action imply that states are connected: a policy is also a path, a trajectory, a trace, an episode, of timesteps through the state space. The policy is interpreted not as a curve or a classification, but as a function that defines the optimal actions from a start state, that finds the optimal expected cumulative future reward. In supervised learning the examples in the dataset are independent. There is no causal connection between two pictures of dogs. It is a dataset of independent singular decision problems.  In reinforcement the states are causally connected by the actions, the reinforcement learning problem (MDP) defines a sequential decision problem. Each state is a time step in the system towards a final state. The policy is the optimal solution for the sequential decision problem, giving the actions, for each state, that find the best reward of a path/episode/trace/trajectory.
+
+% Reinforcement learning algorithms, such as Q learning, solve the credit assignment problem, which is how to take an action in the present that takes into account the rewards of future states. 
+
+% Interestingly, the algorithm is the same: just a while loop that maximizes.
+
+% \subsubsection{Loss and Reward}
+% Note that in supervised learning we minimize (loss) and in reinforcement learning we maximize (reward). Very confusing. Just keep in mind that in supervised learning a loss is minimized, and in reinforcement learning a reward is maximized.
+
+% \subsubsection{Operational Considerations}
+% Machine learning started with supervised learning, where a dataset must be present for the algorithm to work. After the instability issues of reinforcement learning were solved, reinforcement learning has become quite popular. It is quicker to use, online, as soon as one reward is available, an optimization pass can be done, no need to first collect a full dataset of examples. RL is also able to solve open ended problems, online, it learns as it goes, it optimizes running processes where that training data is incomplete. 
+
+% Note that this ease of use advantage does not fully remove the dangers of local optima: in open ended problems there is always the danger that RL only partially covers the state space, remains stuck in a friendly part of the state space, or even in feedback loop. A typical way to prevent this problem is to run the algorithm for a long time, to reduce learning rates, or to increase exploration of random moves, not taking advantage of existing policies. For open ended problems RL algorithms can be quite slow.
+
+% \subsection{Interaction: Agent/Environment}
+% %\subsection{Optimal Reward Policy}
+% %\subsection{Tabular and Deep Algorithms: Q-learning, DQN, PPO}
+% \subsubsection{Markov Decision Process}
+% Grid world example
+% \paragraph{State}
+% Language
+
+% Vision
+
+% Action
+
+% \paragraph{Action---Agent}
+% \paragraph{Transition---Environment}
+% \paragraph{Reward---Environment}
+% \paragraph{Policy---An action for each state}
+
+
+% \begin{figure}[t]
+%   \begin{center}
+%     \input figures/rl
+%     \caption{Reinforcement Learning}\label{fig:rl-org}
+%   \end{center}
+% \end{figure}
+% Figure~\ref{fig:rl-org} illustrates how a reinforcement learning agent learns a policy with an action for each state, online, through interaction with the environment.
+
+
+% \paragraph{RL Intuition}
+% \begin{itemize}
+%     \item[Credit Convergence]
+% Bellman equation, Sampling/Target network/Replay Buffer
+% %\subsubsection{Unknown Transition Function}
+% Monte Carlo Sampling
+% \item[High Variance]
+% Bootstrapping:  Temporal Difference Learning, Region methods
+% \item[Exploration]
+% Epsilon Greedy, Entropy methods
+% \item[Off-policy learning]
+% Q-learning
+% \item[Continuous Actions]
+% Direct Policy-based Methods REINFORCE
+% \item[High Dimensional State Representation]
+% Deep learning Representation, JAX
+% \item[Tabula Rasa: Curriculum Learning Beyond Dataset]
+% AlphaZero
+
+% Metalearning, transfer learning
+
+% \end{itemize}
+
+% Matrix for DP, MC, SARSA, Qlearning, DQN, PQN, REINFORCE, TRPO, PPO, TD3, SAC and the challenges that they solve
+
+
+% \subsection{RL for LLM Training}
+% See: \citep{liu2025part}
+% \subsubsection{RLHF}
+% \subsubsection{DPO}
+% \subsubsection{GRPO}
+% \end{comment}

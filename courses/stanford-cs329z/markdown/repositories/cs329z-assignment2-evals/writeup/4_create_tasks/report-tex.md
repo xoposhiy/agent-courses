@@ -1,0 +1,66 @@
+# Homework 2 alternate repository from resource list: writeup/4_create_tasks/report.tex
+
+[Course index](../../../../../README.md) · [Original source](https://github.com/cs329z/assignment2-evals/blob/HEAD/writeup/4_create_tasks/report.tex) · [Raw file](../../../../../raw/repositories/cs329z-assignment2-evals/writeup/4_create_tasks/report.tex)
+
+Retrieved: 2026-11-13T16:35:22.706220+00:00
+
+```tex
+\documentclass[11pt]{article}
+
+\usepackage{cs329z}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+\begin{document}
+
+\section*{Task ID: \underline{\hspace{0.62\linewidth}}}
+
+\subsection*{Description}
+Describe the task, the capability it measures, its environment, and the initial assets provided to the agent.
+
+\vspace{1.1in}
+
+\subsection*{Construction}
+Explain how you constructed the task and which verification techniques you used.
+
+\vspace{1.1in}
+
+\subsection*{Outcomes}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}Xccccc}
+  \toprule
+  Metric & Attempt 1 & Attempt 2 & Attempt 3 & Attempt 4 & Attempt 5 \\
+  \midrule
+  Verifier reward & & & & & \\
+  Wall-clock time & & & & & \\
+  Tokens or cost & & & & & \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+Summarize the most informative success, failure, or difference between models.
+
+\vspace{0.65in}
+
+\subsection*{Self-assessment}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{>{\bfseries\raggedright\arraybackslash}p{0.25\linewidth}p{0.15\linewidth}X}
+  \toprule
+  Axis & Rating (1--5) & Brief justification \\
+  \midrule
+  Reproducibility & & \\
+  Capability & & \\
+  Task--verifier fidelity & & \\
+  Difficulty & & \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+\end{document}
+
+```

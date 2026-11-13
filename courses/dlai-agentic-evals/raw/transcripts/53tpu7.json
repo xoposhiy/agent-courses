@@ -1,0 +1,352 @@
+[
+  {
+    "startInSeconds": 1,
+    "endInSeconds": 6,
+    "text": "Throughout this module, you've been looking more and more closely at\nwhat an agent does while completing a task."
+  },
+  {
+    "startInSeconds": 6,
+    "endInSeconds": 11,
+    "text": "You started with individual actions, then looked at the sequence of\nactions in a trajectory, and finally,"
+  },
+  {
+    "startInSeconds": 11,
+    "endInSeconds": 15,
+    "text": "at requirements that can stretch across several\nturns of a conversation."
+  },
+  {
+    "startInSeconds": 15,
+    "endInSeconds": 22,
+    "text": "But even if all of that looks right, there's still one question left:\nDid the agent actually do what it said it would?"
+  },
+  {
+    "startInSeconds": 22,
+    "endInSeconds": 28,
+    "text": "In the dog shelter case, suppose a volunteer asks,\n\"Can you book me with Pepper for Saturday at 2 PM?\""
+  },
+  {
+    "startInSeconds": 28,
+    "endInSeconds": 34,
+    "text": "The agent checks the volunteer's eligibility,\nconfirms that Pepper is available, and then responds, \"Great,"
+  },
+  {
+    "startInSeconds": 34,
+    "endInSeconds": 37,
+    "text": "you're booked with Pepper for Saturday at 2 PM.\""
+  },
+  {
+    "startInSeconds": 37,
+    "endInSeconds": 41,
+    "text": "So far, everything looks good, but if you really want to know\nwhether the task succeeded,"
+  },
+  {
+    "startInSeconds": 41,
+    "endInSeconds": 45,
+    "text": "the agent's message isn't the final source of truth."
+  },
+  {
+    "startInSeconds": 45,
+    "endInSeconds": 51,
+    "text": "You need to check the booking system. Is there actually a booking for\nthis volunteer and Pepper on Saturday at 2:00?"
+  },
+  {
+    "startInSeconds": 51,
+    "endInSeconds": 58,
+    "text": "If the row exists with the right volunteer, dog, date, and time,\nthen the outcome matches what the agent claimed."
+  },
+  {
+    "startInSeconds": 58,
+    "endInSeconds": 64,
+    "text": "But imagine the agent gives exactly the same confirmation,\nand you check the booking system and there's nothing there."
+  },
+  {
+    "startInSeconds": 64,
+    "endInSeconds": 71,
+    "text": "Now you have a different kind of failure. The response says the\nbooking succeeded, but the state of the system says it didn't."
+  },
+  {
+    "startInSeconds": 71,
+    "endInSeconds": 78,
+    "text": "That's why, for tasks that are supposed to change something outside\nthe conversation, you often need to evaluate the outcome directly."
+  },
+  {
+    "startInSeconds": 78,
+    "endInSeconds": 84,
+    "text": "Northwind gives you a similar example.\nSuppose a customer asks for a refund on order 4521."
+  },
+  {
+    "startInSeconds": 84,
+    "endInSeconds": 91,
+    "text": "The agent verifies the customer, looks up the order,\ndetermines that the refund is allowed, calls the refund tool,"
+  },
+  {
+    "startInSeconds": 91,
+    "endInSeconds": 94,
+    "text": "and then tells the customer, \"Your refund has been processed.\""
+  },
+  {
+    "startInSeconds": 94,
+    "endInSeconds": 101,
+    "text": "Again, that sounds like success, but instead of trusting the message,\ncheck the refunds table in the system of record."
+  },
+  {
+    "startInSeconds": 101,
+    "endInSeconds": 107,
+    "text": "Is there now a refund for order 4521?\nDoes it belong to the right customer? Is the amount correct?"
+  },
+  {
+    "startInSeconds": 107,
+    "endInSeconds": 114,
+    "text": "If the customer was supposed to receive $49.99, you can compare\nthat expected amount with the value that was actually written."
+  },
+  {
+    "startInSeconds": 114,
+    "endInSeconds": 121,
+    "text": "That gives you evidence about the final state of the task, rather than\nevidence about what the agent intended to do or what it said happened."
+  },
+  {
+    "startInSeconds": 121,
+    "endInSeconds": 127,
+    "text": "And because that state is structured, a very simple deterministic\nevaluator is usually enough."
+  },
+  {
+    "startInSeconds": 127,
+    "endInSeconds": 133,
+    "text": "You don't need an LLM to read the conversation and guess whether the\nrefund probably happened when you can ask the database directly."
+  },
+  {
+    "startInSeconds": 133,
+    "endInSeconds": 138,
+    "text": "For example, if the expected outcome is a $49.99\nrefund for order 4521,"
+  },
+  {
+    "startInSeconds": 138,
+    "endInSeconds": 143,
+    "text": "your evaluator can look for a refund row with that\norder ID and amount."
+  },
+  {
+    "startInSeconds": 143,
+    "endInSeconds": 150,
+    "text": "If it finds a row, the outcome passes. If the agent says the refund\nwas processed, but no matching row exists, it fails."
+  },
+  {
+    "startInSeconds": 150,
+    "endInSeconds": 157,
+    "text": "And sometimes the outcome you want is that nothing changes. Suppose\nthe customer asks for a refund on an order that isn't eligible."
+  },
+  {
+    "startInSeconds": 157,
+    "endInSeconds": 161,
+    "text": "In that case, you don't want to find a new refund row at all."
+  },
+  {
+    "startInSeconds": 161,
+    "endInSeconds": 167,
+    "text": "So after the interaction, you can check the same system and confirm\nthat no refund was created."
+  },
+  {
+    "startInSeconds": 167,
+    "endInSeconds": 170,
+    "text": "That makes outcome evaluation useful in both directions."
+  },
+  {
+    "startInSeconds": 170,
+    "endInSeconds": 178,
+    "text": "You can verify that an expected change happened, and you can verify\nthat an action that should have been blocked never changed the system."
+  },
+  {
+    "startInSeconds": 178,
+    "endInSeconds": 180,
+    "text": "Now, here's where this gets especially useful."
+  },
+  {
+    "startInSeconds": 180,
+    "endInSeconds": 187,
+    "text": "An outcome evaluator and a trajectory evaluator can look at the exact\nsame run and reach different conclusions."
+  },
+  {
+    "startInSeconds": 187,
+    "endInSeconds": 192,
+    "text": "Take the Northwind refund case. The customer asks for a\nrefund on order 4521."
+  },
+  {
+    "startInSeconds": 192,
+    "endInSeconds": 198,
+    "text": "The agent processes a $49.99 refund, and when you check the refunds\ntable, the row is there."
+  },
+  {
+    "startInSeconds": 198,
+    "endInSeconds": 202,
+    "text": "Right order, right amount, so the outcome evaluator passes."
+  },
+  {
+    "startInSeconds": 202,
+    "endInSeconds": 206,
+    "text": "From the point of view of the final state, the task succeeded,"
+  },
+  {
+    "startInSeconds": 206,
+    "endInSeconds": 211,
+    "text": "but then you inspect the trajectory and it turns out the agent looked\nup the order and called process_refund"
+  },
+  {
+    "startInSeconds": 211,
+    "endInSeconds": 213,
+    "text": "before it verified the customer."
+  },
+  {
+    "startInSeconds": 213,
+    "endInSeconds": 217,
+    "text": "only after the refund had already been issued did it retrieve\nthe customer record."
+  },
+  {
+    "startInSeconds": 217,
+    "endInSeconds": 221,
+    "text": "So now you have two pieces of evidence that tell you different things."
+  },
+  {
+    "startInSeconds": 221,
+    "endInSeconds": 225,
+    "text": "The outcome check says yes, the refund exists\nand the amount is correct."
+  },
+  {
+    "startInSeconds": 225,
+    "endInSeconds": 233,
+    "text": "The identity before refund check says no, the agent didn't follow the\nrequired policy before issuing it. Both results are useful."
+  },
+  {
+    "startInSeconds": 233,
+    "endInSeconds": 240,
+    "text": "The outcome tells you that the agent produced the intended state,\nand the trajectory tells you that it took the wrong path to get there."
+  },
+  {
+    "startInSeconds": 240,
+    "endInSeconds": 246,
+    "text": "And that distinction matters because a successful outcome doesn't\nautomatically mean the run was acceptable."
+  },
+  {
+    "startInSeconds": 246,
+    "endInSeconds": 253,
+    "text": "Let's imagine an equivalent example for the shelter. A booking exists\nfor Pepper at the right time, so the outcome looks correct."
+  },
+  {
+    "startInSeconds": 253,
+    "endInSeconds": 259,
+    "text": "But if the agent skipped the eligibility check before creating it,\nthe shelter may still consider the booking invalid."
+  },
+  {
+    "startInSeconds": 259,
+    "endInSeconds": 263,
+    "text": "The final state is there, but the process wasn't executed as required."
+  },
+  {
+    "startInSeconds": 263,
+    "endInSeconds": 267,
+    "text": "This is why it's useful to keep the outcome and process\nevaluations separate."
+  },
+  {
+    "startInSeconds": 267,
+    "endInSeconds": 274,
+    "text": "If you collapse them into one overall \"did the task succeed\" result,\nyou lose information about what actually happened."
+  },
+  {
+    "startInSeconds": 274,
+    "endInSeconds": 280,
+    "text": "A run where the agent followed every required step but failed to\ncreate the final booking is different from a run where the booking"
+  },
+  {
+    "startInSeconds": 280,
+    "endInSeconds": 283,
+    "text": "exists but the agent violated policy along the way."
+  },
+  {
+    "startInSeconds": 283,
+    "endInSeconds": 290,
+    "text": "Those failures may eventually need very different fixes. And there's\nanother advantage to checking the system of record directly."
+  },
+  {
+    "startInSeconds": 290,
+    "endInSeconds": 294,
+    "text": "Remember the general rule we've been using throughout this module:"
+  },
+  {
+    "startInSeconds": 294,
+    "endInSeconds": 298,
+    "text": "match the evaluator to the evidence that can actually\nanswer the question."
+  },
+  {
+    "startInSeconds": 298,
+    "endInSeconds": 302,
+    "text": "If you want to know whether the agent chose order_lookup,\ninspect the tool call."
+  },
+  {
+    "startInSeconds": 302,
+    "endInSeconds": 307,
+    "text": "If you want to know whether customer verification happened\nbefore the refund, inspect the trajectory."
+  },
+  {
+    "startInSeconds": 307,
+    "endInSeconds": 312,
+    "text": "If you want to know whether a standing instruction from three turns\nago was respected, inspect the session."
+  },
+  {
+    "startInSeconds": 312,
+    "endInSeconds": 317,
+    "text": "And if you want to know whether the refund really exists,\ninspect the refunds table."
+  },
+  {
+    "startInSeconds": 317,
+    "endInSeconds": 324,
+    "text": "Giving an evaluator more conversation text won't make it better at\nanswering a question the database can answer directly."
+  },
+  {
+    "startInSeconds": 324,
+    "endInSeconds": 330,
+    "text": "So at this point, you have several different views of the same agent\ntask. You can look at the response the user sees."
+  },
+  {
+    "startInSeconds": 330,
+    "endInSeconds": 337,
+    "text": "You can inspect the individual actions the agent chose. You can\nreconstruct the trajectory and see how those actions fit together."
+  },
+  {
+    "startInSeconds": 337,
+    "endInSeconds": 341,
+    "text": "You can look across a session when earlier turns\nstill matter, and now,"
+  },
+  {
+    "startInSeconds": 341,
+    "endInSeconds": 346,
+    "text": "you can even check the external state to see what the\ntask actually changed."
+  },
+  {
+    "startInSeconds": 346,
+    "endInSeconds": 348,
+    "text": "None of those views replaces the others."
+  },
+  {
+    "startInSeconds": 348,
+    "endInSeconds": 355,
+    "text": "Each of them answers a different question, and that means they can\ndisagree in ways that are actually very informative."
+  },
+  {
+    "startInSeconds": 355,
+    "endInSeconds": 361,
+    "text": "In the final video of this module, you'll bring those evaluation\nlayers together around complete Northwind runs."
+  },
+  {
+    "startInSeconds": 361,
+    "endInSeconds": 369,
+    "text": "You'll see how a response can pass while a tool call fails,\nhow the outcome can be correct while the process violates policy,"
+  },
+  {
+    "startInSeconds": 369,
+    "endInSeconds": 373,
+    "text": "and how those different results help you locate where a\ncomplex task broke down."
+  },
+  {
+    "startInSeconds": 373,
+    "endInSeconds": 378,
+    "text": "That will give you the full evaluation picture you'll carry into the\nimprovement stage in module 5."
+  }
+]

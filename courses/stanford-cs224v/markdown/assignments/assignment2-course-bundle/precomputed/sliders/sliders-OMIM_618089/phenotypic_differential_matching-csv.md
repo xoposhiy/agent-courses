@@ -1,0 +1,14 @@
+# Homework 2 bundle: precomputed/sliders/sliders-OMIM_618089/phenotypic_differential_matching.csv
+
+[Course index](../../../../../../README.md) · [Original source](https://drive.google.com/file/d/1VPlTDJULw4qIkQuVcHxxPh4Q50Nvmi-z/view#archive-member=precomputed/sliders/sliders-OMIM_618089/phenotypic_differential_matching.csv) · [Raw file](../../../../../../raw/assignments/assignment2-course-bundle/precomputed/sliders/sliders-OMIM_618089/phenotypic_differential_matching.csv)
+
+Retrieved: 2026-11-13T17:00:50.402745+00:00
+
+```csv
+row_id,target_disease,mimic_disease,overlapping_phenotypes,discriminating_phenotype,discriminating_logic,diagnostic_confidence
+1de88847633b1ba6:0:phenotypic_differential_matching:0,FBXO11-Related IDDFBA,Cornelia de Lange Syndrome,"developmental delay, intellectual disability",structural limb-reduction defects,"Limb-reduction defects have 0% penetrance (0/21) in FBXO11 cohorts, and severe congenital structural limb malformations reliably exclude FBXO11.",high
+1de88847633b1ba6:0:phenotypic_differential_matching:1,FBXO11-Related IDDFBA,Rubinstein-Taybi Syndrome,"developmental delay, intellectual disability",complex congenital heart defects and angulated broad digits,Complex congenital heart defects (HP:0001627) and angulated broad digits are absent in FBXO11 carriers.,high
+1de88847633b1ba6:0:phenotypic_differential_matching:2,FBXO11-Related IDDFBA,Coffin-Siris Syndrome,"developmental delay, nail hypoplasia",generalized hypertrichosis and hypoplasia/aplasia of fifth fingernails/toenails,"While generalized hypertrichosis and absent fifth digits are not part of the FBXO11 phenotype, caution is warranted regarding nail and nasal morphology as specific FBXO11 variants can phenocopy TRPS-like phenotypes.",moderate
+1de88847633b1ba6:0:phenotypic_differential_matching:3,FBXO11-Related IDDFBA,Koolen-de Vries Syndrome,"developmental delay, nonspecific facial dysmorphism, pear-shaped nose","disruptive, hyperactive, or aggressive behavior vs. friendly, hyper-affable demeanor","Differentiating FBXO11 from KdVS on dysmorphic grounds alone is challenging due to nonspecific facial features; however, friendly demeanor contrasts with the disruptive, hyperactive, or aggressive behavioral abnormalities often observed in FBXO11.",moderate
+
+```

@@ -1,0 +1,68 @@
+# Homework 1 public teaching repository: assignments/OMIM_620793/grill_run/tasks/0024_screen_h6/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620793/grill_run/tasks/0024_screen_h6/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620793/grill_run/tasks/0024_screen_h6/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Multiple recent reports confirm SNUPN variants can manifest as spinocerebellar atrophy/ataxia with minimal or no overt muscle disease, as well as an asymptomatic neuroimaging finding in LGMDR29.",
+  "confidence": 0.9,
+  "evidence": [
+    {
+      "text": "Biallelic SNUPN variants cause spinocerebellar atrophy characterized by cerebellar ataxia and Purkinje cell pathology, expanding the clinical phenotype beyond skeletal muscle; one patient presented without skeletal muscle changes while another showed only mild changes.",
+      "stance": "supports",
+      "source": {
+        "title": "SNUPN variants cause spinocerebellar atrophy by disrupting global splicing in cerebellar Purkinje cells",
+        "authors": [
+          "M Okubo",
+          "M Ogawa",
+          "N Eura",
+          "YU Inoue",
+          "K Dewa",
+          "T Owa"
+        ],
+        "year": 2026,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://academic.oup.com/brain/article-abstract/149/3/1007/8483316",
+        "quote": "We identified pathogenic variants in the SNUPN gene in two families with spinocerebellar atrophy. One patient exhibited mild changes in skeletal muscle, while the other did not."
+      },
+      "numbers": [
+        {
+          "metric": "families with spinocerebellar atrophy",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "text": "In a report of siblings with SNUPN-related muscular dystrophy presenting with adult-onset myopathy, one patient demonstrated asymptomatic cerebellar atrophy on brain neuroimaging.",
+      "stance": "supports",
+      "source": {
+        "title": "SNUPN\u2010Related Muscular Dystrophy: Novel Phenotypic, Pathological and Functional Protein Insights",
+        "authors": [
+          "N Muelas",
+          "P Iruzubieta",
+          "A Damborenea"
+        ],
+        "year": 2026,
+        "journal": null,
+        "doi": "10.1002/acn3.70211",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/acn3.70211",
+        "quote": "One patient presented with asymptomatic cerebellar atrophy."
+      },
+      "numbers": [
+        {
+          "metric": "patients with asymptomatic cerebellar atrophy in cohort",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}
+```

@@ -1,0 +1,31 @@
+# Homework 1 public teaching repository: assignments/OMIM_618428/grill_run/tasks/0046_screen_h20/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_618428/grill_run/tasks/0046_screen_h20/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_618428/grill_run/tasks/0046_screen_h20/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "YWHAZ p.Ser230Trp causes Popov-Chang syndrome with CFC-like features via RAS-ERK pathway activation, making the evaluation of its specific cardiac profile vs. classical CFC highly plausible.",
+  "confidence": 0.75,
+  "evidence": [
+    {
+      "text": "The S230W variant in YWHAZ acts as a gain-of-function mutation in the RAS-ERK pathway and was identified in individuals with phenotypes consistent with cardiofaciocutaneous (CFC) syndrome, a condition characterized by congenital heart defects.",
+      "stance": "supports",
+      "source": {
+        "title": "A YWHAZ Variant Associated With Cardiofaciocutaneous ...",
+        "authors": [],
+        "year": 2019,
+        "journal": null,
+        "doi": null,
+        "pmid": "31024343",
+        "pmc": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31024343/",
+        "quote": "We recently identified novel variants in YWHAZ, a 14-3-3 family member, in individuals with a phenotype consistent with CFC that may potentially be deleterious and disease-causing. In the current study, we take advantage of the vertebrate model Xenopus laevis to analyze the functional consequence of a particular YWHAZ variant, S230W, and investigate the molecular mechanisms underlying its activity."
+      },
+      "numbers": []
+    }
+  ]
+}
+```

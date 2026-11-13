@@ -1,0 +1,54 @@
+# Homework 1 public teaching repository: assignments/OMIM_621535/grill_run/tasks/0004_ground_1/sources.txt
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621535/grill_run/tasks/0004_ground_1/sources.txt) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621535/grill_run/tasks/0004_ground_1/sources.txt)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```txt
+SOURCES (the only material you may cite; copy locators exactly):
+
+[1] RAB3A (Ataxia) - Gene
+    (authors not shown)
+    https://panelapp-aus.org/panels/271/gene/RAB3A/
+    snippet: Spinocerebellar ataxia 52, MIM# 621535. Created ... phenotype ... Set Phenotypes. Zornitza Stark (Victorian Clinical Genetics Services). Phenotypes for gene: RAB3A ...
+
+[2] RAB3A
+    (authors not shown)
+    https://marrvel.org/human/gene/5864
+    snippet: Disease/Phenotype Associated with RAB3A curated by OMIM (1 Phenotype). filter_list. Phenotype. Phenotype mimNumber. Inheritance. Spinocerebellar ataxia 52 ...
+
+[3] Activity
+    (authors not shown)
+    https://panelapp.genomicsengland.co.uk/panels/activity/?panel=466&entity=RAB3A
+    snippet: ... genetics clinic, Unexplained ... RAB3A, Ida Ertmanska Phenotypes for gene: RAB3A were changed from RAB3A ... Spinocerebellar ataxia 52, OMIM:621535. 01 May ...
+
+[4] Entry - #117210 - SPINOCEREBELLAR ATAXIA 31; SCA31
+    (authors not shown)
+    https://omim.org/entry/117210
+    snippet: Spinocerebellar ataxia 52, AD, 3, 621535 · RAB3A · 179490 · 19q13.2 ?Spinocerebellar ... Phenotype-Gene Relationships. Location, Phenotype, Phenotype MIM number ...
+
+[5] RAB3A Gene
+    (authors not shown)
+    https://www.genecards.org/card/RAB3A
+    snippet: Pathogenic variants in RAB3A are reported in spinocerebellar ataxia 52. This condition links RAB3A to a disease pathway involving the nervous system and ...
+
+[6] Entry - #621535 - SPINOCEREBELLAR ATAXIA 52; SCA52
+    (authors not shown)
+    https://omim.org/entry/621535
+    snippet: Features include gait and limb ataxia, nystagmus, and cerebellar atrophy, with variable dysarthria, dysphagia, and urinary urgency. Some individuals may also ...
+
+[7] SPINOCEREBELLAR ATAXIA 52; SCA52 - Clinical Synopsis
+    (authors not shown)
+    https://omim.org/clinicalSynopsis/621535
+    snippet: HEAD & NECK Eyes - Horizontal gaze nystagmus. Saccadic pursuit. Neck - Neck tremor. RESPIRATORY Larynx - Laryngeal dystonia (in 1 family) 49] ABDOMEN ...
+
+[8] 613227 - SPINOCEREBELLAR ATAXIA, AUTOSOMAL ...
+    (authors not shown)
+    https://omim.org/entry/613227
+    snippet: Affected individuals show motor delay with delayed walking (around 5 to 6 years), unsteady wide-based gait, dysarthria, dysmetria, nystagmus, abnormal smooth
+
+[9] Entry - #605259 - SPINOCEREBELLAR ATAXIA 13; SCA13
+    (authors not shown)
+    https://omim.org/entry/605259
+    snippet: Clinical features included gait ataxia, limb ataxia/dysmetria, titubation, hypotonia, and dysarthria. Only 1 patient had nystagmus. Mental retardation was not ...
+```

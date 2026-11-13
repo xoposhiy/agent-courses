@@ -1,0 +1,515 @@
+# Axolotl: conversation datasets
+
+[Course index](../../README.md) · [Original source](https://docs.axolotl.ai/docs/dataset-formats/conversation.html) · [Raw file](../../raw/optional-readings/ref-cc7ce71c1794.html)
+
+Retrieved: 2026-11-13T16:56:22.708965+00:00
+
+# Conversation
+
+Conversation format for supervised fine-tuning.
+
+## chat\_template
+
+Chat Template strategy uses a jinja2 template that converts a list of messages into a prompt. Support using tokenizer’s template, a supported template, or custom jinja2.
+
+```
+data.jsonl
+```
+
+```
+{"messages": [{"role": "...", "content": "..."}, {"role": "...", "content": "..."}, ...]}
+```
+
+An optional top-level `system` field is prepended as a system turn unless `messages` already starts with one. Null values are skipped.
+
+See [configs](https://docs.axolotl.ai/docs/config-reference.html) for full configs and supported templates.
+
+### Migrating from sharegpt
+
+Most configs can be adapted as follows:
+
+```
+# old
+chat_template: chatml
+datasets:
+  - path: ...
+    type: sharegpt
+    conversation: chatml
+
+# new (if using tokenizer's chat_template)
+datasets:
+  - path: ...
+    type: chat_template
+
+    field_messages: conversations
+    message_property_mappings:
+      role: from
+      content: value
+
+# new (if setting a new chat_template like chatml, gemma, etc)
+chat_template: chatml
+datasets:
+  - path: ...
+    type: chat_template
+
+    field_messages: conversations
+    message_property_mappings:
+      role: from
+      content: value
+```
+
+We recommend checking the below examples for other usecases.
+
+### Examples
+
+#### Training on last message
+
+(Legacy) Using the default chat template in the tokenizer\_config.json on OpenAI messages format, training on only last message.
+
+```
+datasets:
+  - path: ...
+    type: chat_template
+    roles_to_train:
+    train_on_eos:
+```
+
+Tip
+
+If you receive an error like “`chat_template` choice is `tokenizer_default` but tokenizer’s `chat_template` is null.”, it means the tokenizer does not have a default `chat_template`. Follow the examples below instead to set a custom `chat_template`.
+
+#### Overriding default chat template
+
+Using the `gemma` chat template to override the tokenizer\_config.json’s chat template on OpenAI messages format, training on all assistant messages.
+
+```
+chat_template: gemma # this overwrites the tokenizer's chat_template
+datasets:
+  - path: ...
+    type: chat_template
+    roles_to_train: ["assistant"]  # default value
+```
+
+Note
+
+If you want to use built-in chat\_template, use `chat_template: tokenizer_default` (this is set by default).
+
+#### Using default chat template with fallback
+
+Using the tokenizer\_config.json’s chat template or `chatml` as fallback if the former’s chat template does not exist, on OpenAI messages format, training on all assistant messages.
+
+```
+chat_template: tokenizer_default_fallback_chatml # this overwrites the tokenizer's chat_template
+datasets:
+  - path: ...
+    type: chat_template
+```
+
+#### Custom Jinja template
+
+Using a custom jinja template on OpenAI messages format, training on all assistant messages.
+
+```
+# chat_template: jinja # `jinja` will be implied if the `chat_template_jinja` is set and this field is empty
+chat_template_jinja: "{{ bos_token }}{% for message in messages %}{% if (message['role'] == 'system') %}{{'<|system|>' + '\n' + message['content'] + '<|end|>' + '\n'}}{% elif (message['role'] == 'user') %}{{'<|user|>' + '\n' + message['content'] + '<|end|>' + '\n' + '<|assistant|>' + '\n'}}{% elif message['role'] == 'assistant' %}{{message['content'] + '<|end|>' + '\n'}}{% endif %}{% endfor %}"
+
+datasets:
+  - path: ...
+    type: chat_template
+```
+
+Tip
+
+`chat_template_jinja` also accepts a file path to a `.jinja2` file instead of an inline string:
+
+```
+chat_template_jinja: ./path/to/my_template.jinja2
+```
+
+Important
+
+Please make sure that your `tokenizer.eos_token` is same as EOS (End-of-Sequence) token in template. Otherwise, set `eos_token` under `special_tokens:`.
+
+#### Using template with different token for EOT and EOS
+
+- If you are using a template that has a different EOT (End-of-Turn) token from EOS token or multiple EOT tokens (like Mistral V7 Tekken), set the `eot_tokens:` config. The handling of EOT tokens follows `train_on_eos:` which defaults to turn.
+
+```
+eot_tokens:
+  - "[/INST]"
+  # - "[/SYSTEM_PROMPT]"
+
+datasets:
+  - path: ...
+    type: chat_template
+
+    # optional
+    train_on_eot: turn  # defaults read from train_on_eos (which defaults to turn)
+```
+
+Tip
+
+See [config documentation](https://docs.axolotl.ai/docs/config-reference.html) for detailed explanations of “turn”, “last”, and “all” options for training on tokens.
+
+Note
+
+Using `eot_tokens` requires each token that exists in `chat_template` to be a single token in the tokenizer. Otherwise, the tokenizer will split the token and cause unexpected behavior.
+
+You can add those tokens as new tokens under `tokens:` or (recommended) override unused added\_tokens via `added_tokens_overrides:`. See [config](https://docs.axolotl.ai/docs/config-reference.html) for more details.
+
+- Continuing from the previous example, if you want to train on all EOT token trainable turns but only last EOS token, set `train_on_eos: last`.
+
+```
+eot_tokens:
+  - "[/INST]"
+  # ...
+
+datasets:
+  - path: ...
+    type: chat_template
+
+    train_on_eos: last
+    train_on_eot: turn
+```
+
+Tip
+
+If EOS token only appears at the end of a prompt, `train_on_eos: last` is equivalent to `train_on_eos: turn`. Therefore, generally, you can leave them to their defaults and omit them.
+
+#### Using tool use
+
+Instead of passing `tools` via the system prompt, an alternative method would be to have the `tools` in a separate column and loaded via `chat_template` to let the template dynamically build it.
+
+```
+{
+    "tools": [
+        {
+            "type": "...",
+            "function": {
+                "name": "...",
+                "description": "...",
+                "parameters": {
+                    "type": "...",
+                    "properties": {
+                        // ...
+                    },
+                    "required": ["..."],
+                },
+            },
+        },
+    ],
+    "messages": [
+        // ...
+        {
+            "role": "assistant", // call the function via assistant
+            "tool_calls": [
+                {
+                    "id": "...",  // required only for mistral
+                    "type": "function",
+                    "function": {
+                        "name": "...",
+                        "arguments": {
+                            "...": "...",
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "role": "tool",
+            "tool_call_id": "...",  // required only for mistral
+            "name": "...",
+            "content": "..."
+        },
+    ],
+}
+```
+
+Note
+
+Tools need to follow [JSON schema](https://json-schema.org/learn/getting-started-step-by-step).
+
+Warning
+
+If you have tool arguments with same name but different dtypes (like `"time": string` and `"time": number`), please save `arguments:` as JSON string to prevent `datasets` from having casting issues.
+
+```
+"arguments": "{\"...\": \"...\"}"
+```
+
+The same is applicable for tool parameters.
+
+```
+"parameters": "{\"...\": \"...\"}"
+```
+
+Example config for Llama4:
+
+```
+chat_template: llama4
+datasets:
+  - path: Nanobit/text-tools-2k-test
+    type: chat_template
+    # field_tools: tools # default is `tools`
+```
+
+Tip
+
+Look into the `chat_template` you are using to see if it supports `tools` and what the expected role is for the tool answer. In the example above, the tool answer is expected to be in the `tool` or `ipython` role for `llama4` template.
+
+#### Using fine-grained control over token masking
+
+(Advanced) Using fine-grained control over tokens and turns to train in a conversation
+
+For a data sample that looks like:
+
+```
+data.jsonl
+```
+
+```
+{
+  "conversations": [
+    {"from": "system", "value": "You are an AI assistant.", "train": false},
+    {"from": "human", "value": "Hello", "train": false},
+    {"from": "assistant", "value": "Hello", "train": true},
+    {"from": "human", "value": "How are you?", "train": true},
+    {
+      "from": "assistant",
+      "value": "I'm doing very well, thank you!",
+      "train_detail": [
+        {"begin_offset": 0, "end_offset": 8, "train": false},
+        {"begin_offset": 9, "end_offset": 18, "train": true},
+        {"begin_offset": 19, "end_offset": 30, "train": false},
+      ],
+    },
+    {
+        "from": "human",
+        "value": "I'm doing very well, thank you!",
+        "train": true,
+    },
+    {"from": "assistant", "value": "Hi there!", "train": true}
+  ]
+}
+```
+
+The configuration would look like:
+
+```
+datasets:
+  - path: ...
+    type: chat_template
+    chat_template: tokenizer_default
+    field_messages: conversations
+    message_property_mappings:
+      role: from
+      content: value
+    roles_to_train: []
+    train_on_eos: turn
+    message_field_training: train
+    message_field_training_detail: train_detail
+```
+
+Tip
+
+It is not necessary to set both `message_field_training` and `message_field_training_detail` at once.
+
+#### Content parts with per-part training control
+
+Instead of using character offsets with `train_detail`, you can split a message’s content into a list of parts, each with its own training flag. This is useful when you want to mask specific sections of a response (e.g., mask reasoning but train on the answer).
+
+```
+data.jsonl
+```
+
+```
+{
+  "messages": [
+    {"role": "user", "content": [{"type": "text", "text": "What is 2+2?"}]},
+    {
+      "role": "assistant",
+      "content": [
+        {"type": "text", "text": "Let me think step by step...", "train": false},
+        {"type": "text", "text": " The answer is 4.", "train": true}
+      ]
+    }
+  ]
+}
+```
+
+The configuration is the same as standard `chat_template` — no extra fields needed:
+
+```
+datasets:
+  - path: ...
+    type: chat_template
+    roles_to_train: ["assistant"]
+```
+
+Each content part supports:
+
+- `type`: `"text"` (required)
+- `text`: the text value (also accepts `content` or `value` as the key)
+- `train`: `true`/`false` (optional) — whether to train on this part
+- `weight`: `0`/`1` (optional) — alternative to `train`
+
+If a part has no `train` or `weight` flag, it inherits the turn-level training decision (from `roles_to_train`, `message_field_training`, or `train_on_inputs`).
+
+WarningWhitespace at part boundaries
+
+BPE tokenizers (used by Llama, Qwen, Mistral, GPT, etc.) prepend spaces to word tokens. For example, `" answer"` is a single token — the space is part of it. This means **where you place whitespace between content parts matters**:
+
+**Split BEFORE spaces** (space goes with the next part):
+
+```
+[
+  {"type": "text", "text": "Let me think...", "train": false},
+  {"type": "text", "text": " The answer is 4.", "train": true}
+]
+```
+
+**DON’T put trailing spaces** on a part (the space merges with the next word into one token that straddles the boundary, and straddling tokens are masked):
+
+```
+[
+  {"type": "text", "text": "Let me think... ", "train": false},
+  {"type": "text", "text": "The answer is 4.", "train": true}
+]
+```
+
+In the bad example, `" The"` becomes a single token that spans both parts. Because it straddles the boundary, it is conservatively **masked** (not trained) — even though the second part has `train: true`.
+
+**Newlines** typically merge with preceding punctuation (e.g., `":\n"` is one token). Keep newlines with the preceding part:
+
+```
+[
+  {"type": "text", "text": "Thinking:\n", "train": false},
+  {"type": "text", "text": "The answer is 4.", "train": true}
+]
+```
+
+Axolotl will log a warning if it detects trailing whitespace at a boundary between parts with different training flags.
+
+Note
+
+When all content parts in a message are strings, they are concatenated before being passed to the chat template. This means content parts work with **any** Jinja template — the template sees a plain string, and the per-part training flags are applied during tokenization.
+
+##### Per-part training on reasoning\_content
+
+For templates that support a separate `reasoning_content` field (e.g., `qwen3`), the same content-parts format works on `reasoning_content`. This is useful for masking incorrect reasoning steps while training on self-corrections:
+
+```
+data.jsonl
+```
+
+```
+{
+  "messages": [
+    {"role": "user", "content": [{"type": "text", "text": "What is 2+2?"}]},
+    {
+      "role": "assistant",
+      "reasoning_content": [
+        {"type": "text", "text": "Hmm maybe 2+2=5.", "train": false},
+        {"type": "text", "text": " Wait no, 2+2=4.", "train": true}
+      ],
+      "content": [
+        {"type": "text", "text": "The answer is 4.", "train": true}
+      ]
+    }
+  ]
+}
+```
+
+The `reasoning_content` and `content` fields are handled independently — each has its own token boundaries and per-part masking. No additional configuration is needed beyond what the template already requires.
+
+Tip
+
+When `reasoning_content` is provided as a separate field, `split_thinking` is not needed — the reasoning is already separated from the content in the data.
+
+The same whitespace rules apply to `reasoning_content` parts as to `content` parts — split before spaces, keep newlines with the preceding part.
+
+#### Reasoning split
+
+(For Qwen3 template only) Enable reasoning split, where the reasoning is split from the content and passed as a separate field into the template.
+
+```
+datasets:
+  - path: ...
+    type: chat_template
+    chat_template: qwen3
+    split_thinking: true
+```
+
+For example, a content can look like:
+
+```
+{
+  "content": "<think>Some thinking outputs</think>Output after thinking."
+}
+```
+
+After split, it will look like:
+
+```
+{
+  "reasoning_content": "Some thinking outputs",
+  "content": "Output after thinking..."
+}
+```
+
+#### Labeling from generation markers
+
+If your chat template wraps assistant output in `{% generation %}...{% endgeneration %}`, set `generation_tags: true` to label those blocks directly. This also trains template structure inside them, such as Harmony channel headers, and is faster on long conversations.
+
+```
+datasets:
+  - path: ...
+    type: chat_template
+    generation_tags: true
+```
+
+- The template needs one generation block per assistant turn. Per-turn `train` flags still apply.
+- `train_on_eot` and `train_on_eos` apply to the token ending each block, inside it or right after it.
+- Rows with `training_detail`, a trainable non-assistant turn, or blocks that don’t match the turns use the default labeling. `train_on_inputs` or non-assistant `roles_to_train` turn it off.
+- Not supported with a processor, mistral-common, or slow tokenizers.
+
+#### Stochastic label dropout for structural tokens (advanced)
+
+Tool-heavy chat data repeats structural tokens (channel/message/end markers, tool-call tags) thousands of times, so they dominate the training signal. `label_keep_prob` down-weights them in expectation without changing the loss: on every optimizer step, each trained label whose token id is listed is kept with probability `keep_prob` and otherwise set to `-100`. Draws are independent per position and re-drawn every step. Inputs are unchanged, and labels that are already masked (system/user/tool turns) are never touched.
+
+```
+# Reflection Beam (Harmony-style template): ids as the template emits them
+label_keep_prob:
+  151672: 0.3   # <|channel|>
+  151671: 0.3   # <|message|>
+  151670: 0.5   # <|end|>
+  151675: 0.5   # <|call|>
+  151679: 0.3   # <rfl:parameter name="   (one added token, includes the quote)
+  151680: 0.3   # \n</rfl:parameter>      (one added token, includes the newline)
+label_keep_prob_normalize: dropped  # default; or `original`
+```
+
+Keys are **token ids**, not strings. Give the exact ids the chat template emits: a string typed by hand can tokenize into different pieces than the template produces (e.g. `<rfl:parameter name=` typed as text is six ordinary pieces, while the template emits the single added token `<rfl:parameter name="`). Find ids with `axolotl preprocess config.yaml --debug` or `tokenizer.convert_tokens_to_ids(...)`. At startup each configured id is logged with the token it decodes to, and ids outside the tokenizer vocabulary are rejected.
+
+Behavior:
+
+- Masking is applied to collated training batches inside the trainer, so it works with every SFT collator, sample packing, and any loss that reads `labels` (model cross entropy, Cut Cross Entropy, Liger). Evaluation batches are not masked.
+- Draws come from a generator seeded by `seed`, the global step, the process rank and the micro-batch index, so runs (and resumes) are reproducible.
+- `label_keep_prob_normalize: dropped` (default) normalizes by the trained-token count after masking, as ordinary label masking does, so the other tokens are slightly upweighted. `original` normalizes by the count before masking, so every other token’s weight is exactly unchanged and a listed token’s expected weight is exactly `keep_prob`.
+- Only supported for SFT / causal LM training; it is rejected with `rl`, reward models, KD and diffusion LM.
+
+## sharegpt
+
+Important
+
+ShareGPT is deprecated!. Please see [chat\_template](ref-cc7ce71c1794.md) section.
+
+## pygmalion
+
+```
+data.jsonl
+```
+
+```
+{"conversations": [{"role": "...", "value": "..."}]}
+```

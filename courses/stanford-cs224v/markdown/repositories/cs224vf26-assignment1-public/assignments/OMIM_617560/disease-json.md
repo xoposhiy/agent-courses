@@ -1,0 +1,35 @@
+# Homework 1 public teaching repository: assignments/OMIM_617560/disease.json
+
+[Course index](../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_617560/disease.json) · [Raw file](../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_617560/disease.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "omim": "OMIM:617560",
+  "label": "Spastic ataxia 8, autosomal recessive, with hypomyelinating leukodystrophy",
+  "gene": "NKX6-2",
+  "gene_info": {
+    "symbol": "NKX6-2",
+    "name": "NK6 homeobox 2",
+    "type_of_gene": "protein-coding",
+    "map_location": "10q26.3",
+    "entrez_id": "84504",
+    "aliases": [
+      "GTX",
+      "NKX6.2",
+      "NKX6B",
+      "SPAX8"
+    ],
+    "summary": "Enables sequence-specific double-stranded DNA binding activity. Predicted to be involved in cell differentiation; regulation of myelination; and regulation of transcription, DNA-templated. Predicted to act upstream of or within several processes, including negative regulation of transcription by RNA polymerase II; neurogenesis; and neuromuscular process controlling balance. Predicted to be part of chromatin. Predicted to be active in nucleus. Implicated in spastic ataxia 8. [provided by Alliance of Genome Resources, Apr 2022]",
+    "source": "NCBI Gene via mygene.info"
+  },
+  "n_patients_in_store": 33,
+  "n_case_reports": 4,
+  "curated_hpo_terms": 38,
+  "corpus_query": "\"NKX6-2\" OR \"Spastic ataxia 8\"",
+  "corpus_query_clinical": "(\"NKX6-2\" OR \"Spastic ataxia 8\") AND (phenotype OR cohort OR \"case report\" OR clinical)",
+  "grill_question": "For Spastic ataxia 8, autosomal recessive, with hypomyelinating leukodystrophy (OMIM #617560), caused by variants in NKX6-2: how can one identify which patients\nhave this disease from their phenotypes alone?\n\nConcretely, build the evidence a clinician would need to pick the affected\nindividual out of a group of patients who all have overlapping findings:\n\n  1. Which clinical phenotypes have been reported in affected individuals, and\n     for each, in how many of the individuals assessed was it present? Give the\n     numerator and denominator per cohort, not a percentage alone, with the\n     finding as the paper words it plus the standard HPO term if identifiable.\n  2. Which findings are most discriminating: present in most affected\n     individuals but uncommon in the disorders this one is usually confused\n     with? Name those disorders and say how confident the distinction is.\n  3. Which findings have been looked for and found ABSENT in affected\n     individuals, so that their presence argues against the diagnosis?\n  4. Whether the phenotype differs by variant type, position, age or sex.\n  5. Any finding one paper reports and another explicitly contradicts.\n\nEvery frequency must be attached to the cohort it came from and a paper with a\nPMID or DOI. Do not report a phenotype frequency you cannot attach to a\nresolvable source.\n"
+}
+
+```

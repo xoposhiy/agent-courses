@@ -1,0 +1,56 @@
+{
+  "advertised_modules": 5,
+  "attachments": [
+    {
+      "module": 1,
+      "title": "Module 1: Foundations of Evals",
+      "name": "M1-Evals.pdf",
+      "url": "https://community.deeplearning.ai/uploads/short-url/c8xBrMPWqkILoU6CWXklx4kFs8Z.pdf",
+      "download_status": "failed"
+    },
+    {
+      "module": 2,
+      "title": "Module 2: Observing and Benchmarking Agents",
+      "name": "M2-Evals.pdf",
+      "url": "https://community.deeplearning.ai/uploads/short-url/9wgIKm0rLjWcOnUJdsVphq2ms98.pdf",
+      "download_status": "failed"
+    },
+    {
+      "module": 3,
+      "title": "Module 3: Building Evaluators You Can Trust",
+      "name": "M3-Evals.pdf",
+      "url": "https://community.deeplearning.ai/uploads/short-url/tLSAIa9bPtyFDEq1AqLAkqDmyfR.pdf",
+      "download_status": "failed"
+    },
+    {
+      "module": 4,
+      "title": "Module 4: Evaluating Agent Actions and Outcomes",
+      "name": "M4-Evals.pdf",
+      "url": "https://community.deeplearning.ai/uploads/short-url/6g4jtQ0QNcMsyIOESETOiLUWS1m.pdf",
+      "download_status": "failed"
+    },
+    {
+      "module": 5,
+      "title": "Module 5: Improving Agentic Applications",
+      "name": "M5-Evals.pdf",
+      "url": "https://community.deeplearning.ai/uploads/short-url/rkaTE0Pcgkuc0v9pBgWMsTHy9bd.pdf",
+      "download_status": "failed"
+    }
+  ],
+  "recovered_modules": 5,
+  "recovered_pdf_pages": 288,
+  "verified_attachment_sha1": 5,
+  "pdf_link_targets": [],
+  "catalog_lessons": 52,
+  "video_lessons": 28,
+  "public_transcripts": 28,
+  "timed_caption_cues": 2662,
+  "login_only_readings": 8,
+  "login_only_ungraded_labs": 6,
+  "pro_graded_labs": 5,
+  "pro_quizzes": 5,
+  "lesson_urls_missing_from_public_navigation": [],
+  "transcript_words": 37800,
+  "caption_text_matches_timed_cues": true,
+  "genuine_account_only_items": 24
+}

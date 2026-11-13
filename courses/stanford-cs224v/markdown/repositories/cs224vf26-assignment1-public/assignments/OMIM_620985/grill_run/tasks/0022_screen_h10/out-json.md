@@ -1,0 +1,61 @@
+# Homework 1 public teaching repository: assignments/OMIM_620985/grill_run/tasks/0022_screen_h10/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620985/grill_run/tasks/0022_screen_h10/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620985/grill_run/tasks/0022_screen_h10/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "MSL2 cohort studies and NMD-escape analyses demonstrate that both PTVs and missense variants cause a shared neurodevelopmental disorder with reduced MSL2 expression and overlapping core phenotype severity.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "Karayol et al. identified a cohort of 25 individuals harboring heterozygous de novo missense or protein-truncating variants in MSL2, who shared core neurodevelopmental features including developmental delay, hypotonia, and dysmorphisms, with patient-derived iPSCs demonstrating reduced MSL2 levels and a common distinct DNA episignature.",
+      "stance": "supports",
+      "source": {
+        "title": "MSL2 variants lead to a neurodevelopmental syndrome with lack of coordination, epilepsy, specific dysmorphisms, and a distinct episignature",
+        "authors": [
+          "R Karayol",
+          "MC Borroto",
+          "S Haghshenas"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.cell.com/ajhg/fulltext/S0002-9297(24)00164-2",
+        "quote": "Here we describe 25 individuals with heterozygous, missense, or protein-truncating variant alleles in MSL2, delineating genotypes and phenotypes"
+      },
+      "numbers": [
+        {
+          "metric": "cohort size",
+          "value": 25
+        }
+      ]
+    },
+    {
+      "text": "Systematic evaluation of truncating variants in neurodevelopmental cohorts identified frameshift and missense variants in MSL2 presenting with similar neurodevelopmental phenotypes.",
+      "stance": "supports",
+      "source": {
+        "title": "Systematic analysis of variants escaping nonsense-mediated decay uncovers candidate Mendelian diseases",
+        "authors": [
+          "RI Torene",
+          "MJG Sacoto",
+          "F Millan",
+          "Z Zhang"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.cell.com/ajhg/fulltext/S0002-9297(23)00402-0",
+        "quote": "Frameshift and missense variants in HDAC2 and MSL2 have \u2026 individuals with NDD similar to the missense individuals."
+      },
+      "numbers": []
+    }
+  ]
+}
+```

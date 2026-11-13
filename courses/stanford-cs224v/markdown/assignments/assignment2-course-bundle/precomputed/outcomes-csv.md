@@ -1,0 +1,44 @@
+# Homework 2 bundle: precomputed/outcomes.csv
+
+[Course index](../../../../README.md) · [Original source](https://drive.google.com/file/d/1VPlTDJULw4qIkQuVcHxxPh4Q50Nvmi-z/view#archive-member=precomputed/outcomes.csv) · [Raw file](../../../../raw/assignments/assignment2-course-bundle/precomputed/outcomes.csv)
+
+Retrieved: 2026-11-13T17:00:50.402745+00:00
+
+```csv
+folder,label,gene,target,grill_top1_r1,grill_top1_r2,grill_top1_r3,grill_hits,grill_correct,grill_target_rank_r1,rag_hits,rag_correct
+OMIM_617516,Stankiewicz-Isidor syndrome,PSMD12,P05,P04,P04,P04,0,False,,2,True
+OMIM_617527,"Neurodevelopmental disorder with progressive microcephaly, spasticity, and brain anomalies",PLAA,P05,P02,P02,P05,1,False,3,1,False
+OMIM_617560,"Spastic ataxia 8, autosomal recessive, with hypomyelinating leukodystrophy",NKX6-2,P05,P05,P05,P05,3,True,1,0,False
+OMIM_617988,Jaberi-Elahi syndrome,GTPBP2,P04,P04,P04,P04,3,True,1,0,False
+OMIM_618089,Intellectual developmental disorder with dysmorphic facies and behavioral abnormalities,FBXO11,P07,P01,P01,P01,0,False,2,0,False
+OMIM_618428,Popov-Chang syndrome,YWHAZ,P09,P04,P04,P04,0,False,,0,False
+OMIM_618443,Neurodevelopmental disorder with or without variable brain abnormalities,MAPK8IP3,P06,P04,P04,P04,0,False,3,0,False
+OMIM_618505,Stolerman neurodevelopmental syndrome,KDM6B,P07,P01,P01,P01,0,False,2,1,False
+OMIM_619656,Loeys-Dietz syndrome 6,SMAD2,P06,P06,P06,P06,3,True,1,0,False
+OMIM_620401,"Intellectual developmental disorder, autosomal recessive 84",SGSM3,P01,P02,P02,P02,0,False,2,0,False
+OMIM_620450,"Intellectual developmental disorder, autosomal dominant 73",TAF4,P10,P07,P07,P07,0,False,4,0,False
+OMIM_620511,Fliedner-Zweier syndrome,SCAF4,P07,P10,P10,P10,0,False,5,2,True
+OMIM_620528,"Neuronopathy, distal hereditary motor, autosomal dominant 11",SPTAN1,P09,P07,P07,P07,0,False,3,0,False
+OMIM_620568,Cornelia de Lange syndrome 6,BRD4,P04,P03,P03,P03,0,False,2,0,False
+OMIM_620775,"Neuromuscular disorder, congenital, with dysmorphic facies",FILIP1,P03,P08,P08,P08,0,False,4,0,False
+OMIM_620785,Neurodevelopmental disorder with progressive movement abnormalities,ACBD6,P01,P01,P01,P01,3,True,1,0,False
+OMIM_620793,"Muscular dystrophy, limb-girdle, autosomal recessive 29",SNUPN,P10,P10,P10,P10,3,True,1,1,False
+OMIM_620887,Multiple mitochondrial dysfunctions syndrome 9B,FDXR,P06,P02,P02,P02,0,False,2,3,True
+OMIM_620938,"Spastic paraplegia 93, autosomal recessive",NFU1,P06,P01,P01,P01,0,False,2,0,False
+OMIM_620985,Karayol-Borroto-Haghshenas neurodevelopmental syndrome,MSL2,P01,P06,P06,P06,0,False,5,0,False
+OMIM_620988,"Intellectual developmental disorder, autosomal dominant 75",DHX9,P09,P09,P01,P09,2,True,1,0,False
+OMIM_621182,"Neurodevelopmental disorder with poor or absent speech, dysmorphic facies, and behavioral abnormalities",NAV3,P03,P03,P03,P03,3,True,1,0,False
+OMIM_621201,"Neurodevelopmental disorder with dysmorphic facies, brain anomalies, and seizures",GTF3C3,P09,P05,P05,P05,0,False,2,0,False
+OMIM_621226,"Spastic ataxia 11, autosomal dominant",TUBA4A,P01,P01,P01,P01,3,True,1,0,False
+OMIM_621295,"Cerebral arteriopathy, autosomal recessive, with subcortical infarcts and leukoencephalopathy 1",NOTCH3,P02,P05,P05,P05,0,False,2,0,False
+OMIM_621304,Developmental and epileptic encephalopathy 119,RNU2-2,P02,P10,P10,P10,0,False,,0,False
+OMIM_621307,Alsahan-Harris syndrome,TBC1D32,P08,P06,P06,P06,0,False,,1,False
+OMIM_621390,"Neurodevelopmental disorder with early-onset seizures, facial dysmorphism, and behavioral abnormalities",KLHL20,P10,P01,P10,P01,1,False,3,0,False
+OMIM_621415,"Intellectual developmental disorder, autosomal dominant 77",LRRC7,P06,P10,P10,P10,0,False,5,0,False
+OMIM_621421,Ramond-Elliott neurodevelopmental syndrome,TRA2B,P09,P09,P09,P09,3,True,1,0,False
+OMIM_621474,Neurodevelopmental disorder with congenital cardiac defects and variable renal and ocular abnormalities,KDM2B,P03,P06,P06,P06,0,False,,0,False
+OMIM_621535,Spinocerebellar ataxia 52,RAB3A,P02,P06,P06,P06,0,False,2,0,False
+OMIM_621548,Retinitis pigmentosa 101,CLN3,P03,P03,P03,P03,3,True,1,0,False
+OMIM_621570,Cornelia de Lange syndrome 7,MAU2,P10,P04,P04,P04,0,False,,0,False
+
+```

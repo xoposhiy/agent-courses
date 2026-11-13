@@ -1,0 +1,48 @@
+# Homework 1 public teaching repository: assignments/OMIM_621474/grill_run/tasks/0040_screen_h18/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621474/grill_run/tasks/0040_screen_h18/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621474/grill_run/tasks/0040_screen_h18/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature confirms incomplete penetrance and variable expressivity for KDM2B loss-of-function and JmjC domain variants in larger cohorts.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "A comprehensive assessment of KDM2B variants across a cohort of 68 individuals identified incomplete penetrance and variable expressivity for loss-of-function and JmjC domain variants, contrasting with the highly penetrant CxxC domain variants.",
+      "stance": "supports",
+      "source": {
+        "title": "Comprehensive Assessment of the KDM2B\u2010Associated Neurodevelopmental Disorder and the 12q24. 31 Microdeletion Syndrome",
+        "authors": [
+          "ASE van Oirsouw",
+          "TC Hsieh",
+          "M Koetsier"
+        ],
+        "year": 2026,
+        "journal": null,
+        "doi": "10.1111/cge.70169",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/cge.70169",
+        "quote": "In contrast, our findings point to variable expressivity and incomplete penetrance of loss-of-function variants and JmjC domain variants complicating variant classification and genetic counseling."
+      },
+      "numbers": [
+        {
+          "metric": "previously reported individuals combined cohort size",
+          "value": 68
+        },
+        {
+          "metric": "pathogenic or likely pathogenic variants classified",
+          "value": 37
+        },
+        {
+          "metric": "individuals with pathogenic or likely pathogenic variants",
+          "value": 47
+        }
+      ]
+    }
+  ]
+}
+```

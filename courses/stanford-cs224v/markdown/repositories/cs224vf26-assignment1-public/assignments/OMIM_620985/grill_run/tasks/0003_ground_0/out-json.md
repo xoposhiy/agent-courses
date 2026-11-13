@@ -1,0 +1,27 @@
+# Homework 1 public teaching repository: assignments/OMIM_620985/grill_run/tasks/0003_ground_0/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620985/grill_run/tasks/0003_ground_0/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620985/grill_run/tasks/0003_ground_0/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "term": "Karayol-Borroto-Haghshenas syndrome",
+  "definition": "Karayol-Borroto-Haghshenas neurodevelopmental syndrome (OMIM #620985), also described as MSL2-associated neurodevelopmental syndrome (MANDS), is a rare genetic neurodevelopmental disorder caused by heterozygous pathogenic variants in MSL2, a component of the chromatin-modifying male-specific lethal (MSL) complex. The disorder is characterized by global developmental delay, intellectual disability, hypotonia, motor coordination problems, gait disturbances, feeding difficulties, distinctive dysmorphic features, behavioral/psychiatric conditions (including autism spectrum disorder), and variable occurrences of seizures, connective tissue signs, sleep disturbances, visual anomalies, and a distinct peripheral blood DNA methylation episignature.",
+  "source": {
+    "title": "MSL2 variants lead to a neurodevelopmental syndrome with lack of coordination, epilepsy, specific dysmorphisms, and a distinct episignature",
+    "authors": [
+      "Remzi Karayol",
+      "Maria Carla Borroto",
+      "Sadegheh Haghshenas"
+    ],
+    "year": 2024,
+    "journal": null,
+    "doi": "10.1016/j.ajhg.2024.05.001",
+    "pmid": "38815585",
+    "pmc": null,
+    "url": "https://www.cell.com/ajhg/fulltext/S0002-9297(24)00164-2",
+    "quote": "MSL2 variants were associated with NDD phenotypes including global developmental delay, intellectual disability, hypotonia, and motor issues such as coordination problems, feeding difficulties, and gait disturbance. Dysmorphisms and behavioral and/or psychiatric conditions, including autism spectrum disorder, and to a lesser extent, seizures, connective tissue disease signs, sleep disturbance, vision problems, and other organ anomalies, were observed in affected individuals."
+  }
+}
+```

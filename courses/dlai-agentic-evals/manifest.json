@@ -1,0 +1,1885 @@
+{
+  "schema_version": "1.0",
+  "source_id": "dlai-agentic-evals",
+  "title": "DeepLearning.AI / Arize: Evaluating and Improving Agentic Applications",
+  "source_url": "https://www.deeplearning.ai/courses/evaluating-and-improving-agentic-applications",
+  "retrieved_at": "2026-11-13T17:15:45.061902+00:00",
+  "materials": [
+    {
+      "id": "pages/course-page",
+      "title": "Official course page",
+      "url": "https://www.deeplearning.ai/courses/evaluating-and-improving-agentic-applications",
+      "category": "pages",
+      "retrieved_at": "2026-11-13T17:15:45.062897+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://www.deeplearning.ai/courses/evaluating-and-improving-agentic-applications",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/pages/course-page.html",
+      "bytes": 283416,
+      "sha256": "af35ef69307650fba3b61492ecb071db05e4942be7d539a67f0e4764b6533e0a",
+      "download_status": "downloaded",
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/pages/course-page.md",
+      "assets": [
+        {
+          "url": "https://www.deeplearning.ai/_next/image?url=%2Fdlai%2Fassets%2Fdlai-logo.png&w=640&q=75&dpl=dpl_BLGPRciUf9MN6wZJQ3nrEii2a3fd",
+          "raw_path": "raw/assets/3b7710aacc6b9879.png",
+          "bytes": 5354,
+          "sha256": "35f9e5b5dbb20c9a9228f414b42f25ed7912edeb375844a8958ddfd3e8983c09"
+        },
+        {
+          "url": "https://www.deeplearning.ai/_next/image?url=https%3A%2F%2Fassets.deeplearning.ai%2Flanding-pages%2Fevaluating-and-improving-agentic-applications%2Flc-evals-landingpage-bg-1.png&w=3840&q=75",
+          "raw_path": "raw/assets/b808966ffbf9c210.png",
+          "bytes": 601943,
+          "sha256": "76cfcb2de6f27b692b24ad984062c11ed6aaec63d77aaffe419c91f49329df71"
+        },
+        {
+          "url": "https://www.deeplearning.ai/_next/image?url=https%3A%2F%2Fassets.deeplearning.ai%2Flanding-pages%2Fevaluating-and-improving-agentic-applications%2Farize-logo-pink-black-1.png&w=384&q=75",
+          "raw_path": "raw/assets/0f7a3a9ca06e8582.png",
+          "bytes": 3260,
+          "sha256": "ffe7c96fcc3d201567fc584b4068d5601122ee0a93a449e9f643923955478940"
+        },
+        {
+          "url": "https://www.deeplearning.ai/_next/image?url=https%3A%2F%2Fassets.deeplearning.ai%2Flanding-pages%2Fevaluating-and-improving-agentic-applications%2Flc-evals-course-card.png&w=3840&q=75",
+          "raw_path": "raw/assets/0b39229794a86185.png",
+          "bytes": 1879015,
+          "sha256": "79c0bab97c82dac15716f0b64b9864bdbeb9e090443ac415d24d43d0662703c8"
+        },
+        {
+          "url": "https://www.deeplearning.ai/_next/image?url=https%3A%2F%2Fassets.deeplearning.ai%2Flanding-pages%2Fevaluating-and-improving-agentic-applications%2Fhackathon-logo-forum.png&w=48&q=75",
+          "raw_path": "raw/assets/06ec33414c427dd2.png",
+          "bytes": 429,
+          "sha256": "e19dcbe6121b66de2df11d1a477d6968dcc5e7b376db8c300f29826002c18e4f"
+        },
+        {
+          "url": "https://www.deeplearning.ai/_next/image?url=%2Fdlai%2Fassets%2Funlock-certificate.png&w=3840&q=75&dpl=dpl_BLGPRciUf9MN6wZJQ3nrEii2a3fd",
+          "raw_path": "raw/assets/ef9dc78af506942a.png",
+          "bytes": 34886,
+          "sha256": "f231af205d9d38f34deef697eb0f84d0f1c51a45e0444ae7afb7ec84e6a6258f"
+        },
+        {
+          "url": "https://www.deeplearning.ai/_next/image?url=%2Fdlai%2Fassets%2Funlock-certificate-narrow.png&w=3840&q=75&dpl=dpl_BLGPRciUf9MN6wZJQ3nrEii2a3fd",
+          "raw_path": "raw/assets/25ec759f3a93b7e9.png",
+          "bytes": 23277,
+          "sha256": "31c47c41925f283c6b07686a41a65c00e9db6417244c63f7ba9969520900bca7"
+        },
+        {
+          "url": "https://www.deeplearning.ai/_next/image?url=https%3A%2F%2Fassets.deeplearning.ai%2Flanding-pages%2Fevaluating-and-improving-agentic-applications%2Finstructors%2Fpm037241.jpg&w=256&q=75",
+          "raw_path": "raw/assets/b22bb23d3f950cf9.jpg",
+          "bytes": 7281,
+          "sha256": "a25dc543e8696d7e9814ea3a45325e0c88bb27edc84d3739c64e835954c0222b"
+        },
+        {
+          "url": "https://www.deeplearning.ai/dlai/assets/course-information/hero-blocks.svg?dpl=dpl_BLGPRciUf9MN6wZJQ3nrEii2a3fd",
+          "raw_path": "raw/assets/980fcd59ff1fae65.svg",
+          "bytes": 1543,
+          "sha256": "58bc18176a6fa2bfe42a603f7913062966dc3681bf3fae83ccdb5452cc7c13d6"
+        }
+      ]
+    },
+    {
+      "id": "pages/lecture-notes",
+      "title": "Official lecture notes and maintenance warning",
+      "url": "https://community.deeplearning.ai/t/evals-lecture-notes/896118",
+      "category": "pages",
+      "retrieved_at": "2026-11-13T17:15:45.756607+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://community.deeplearning.ai/t/evals-lecture-notes/896118",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/pages/lecture-notes.html",
+      "bytes": 36620,
+      "sha256": "096417fb0a4833edd8af56a01b5b7b6bca399a4aeeaa5bc953c7bf3972b118cf",
+      "download_status": "downloaded",
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/pages/lecture-notes.md"
+    },
+    {
+      "id": "metadata/lecture-notes-topic",
+      "title": "Official lecture-notes topic metadata",
+      "url": "https://community.deeplearning.ai/t/evals-lecture-notes/896118.json",
+      "category": "metadata",
+      "retrieved_at": "2026-11-13T17:15:46.847377+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://community.deeplearning.ai/t/evals-lecture-notes/896118.json",
+      "content_type": "application/json; charset=utf-8",
+      "raw_path": "raw/metadata/lecture-notes-topic.json",
+      "bytes": 16994,
+      "sha256": "0b1d8f67b549e7ee3a29b84ddc96a6863d22b854bff0932019b9aefac001d881",
+      "download_status": "downloaded",
+      "conversion_method": "source-code-fence",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/metadata/lecture-notes-topic.md"
+    },
+    {
+      "id": "access-attempts/module-1-short-url",
+      "title": "Module 1: Foundations of Evals: original short-URL attempt",
+      "url": "https://community.deeplearning.ai/uploads/short-url/c8xBrMPWqkILoU6CWXklx4kFs8Z.pdf",
+      "category": "access-attempts",
+      "retrieved_at": "2026-11-13T17:15:47.125526+00:00",
+      "notes": [
+        "HTTPError: 404 Client Error: Not Found for url: https://community.deeplearning.ai/uploads/short-url/c8xBrMPWqkILoU6CWXklx4kFs8Z.pdf",
+        "Full slide deck recovered from the verified public CDN original: markdown/slides/module-1.md"
+      ],
+      "http_status": 404,
+      "final_url": "https://community.deeplearning.ai/uploads/short-url/c8xBrMPWqkILoU6CWXklx4kFs8Z.pdf",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/slides/module-1.html",
+      "bytes": 34524,
+      "sha256": "e68ce5c1bff38c1da70c497a20e0d5bfbd0d3db3a5c1bef190b8ae1329095d16",
+      "download_status": "failed",
+      "conversion_status": "failed",
+      "recovered_by": "markdown/slides/module-1.md"
+    },
+    {
+      "id": "access-attempts/module-2-short-url",
+      "title": "Module 2: Observing and Benchmarking Agents: original short-URL attempt",
+      "url": "https://community.deeplearning.ai/uploads/short-url/9wgIKm0rLjWcOnUJdsVphq2ms98.pdf",
+      "category": "access-attempts",
+      "retrieved_at": "2026-11-13T17:15:47.338768+00:00",
+      "notes": [
+        "HTTPError: 404 Client Error: Not Found for url: https://community.deeplearning.ai/uploads/short-url/9wgIKm0rLjWcOnUJdsVphq2ms98.pdf",
+        "Full slide deck recovered from the verified public CDN original: markdown/slides/module-2.md"
+      ],
+      "http_status": 404,
+      "final_url": "https://community.deeplearning.ai/uploads/short-url/9wgIKm0rLjWcOnUJdsVphq2ms98.pdf",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/slides/module-2.html",
+      "bytes": 34524,
+      "sha256": "cbb21339259b7791b6224889aa598575269476c9ccf282902e1109c4cc5e505b",
+      "download_status": "failed",
+      "conversion_status": "failed",
+      "recovered_by": "markdown/slides/module-2.md"
+    },
+    {
+      "id": "access-attempts/module-3-short-url",
+      "title": "Module 3: Building Evaluators You Can Trust: original short-URL attempt",
+      "url": "https://community.deeplearning.ai/uploads/short-url/tLSAIa9bPtyFDEq1AqLAkqDmyfR.pdf",
+      "category": "access-attempts",
+      "retrieved_at": "2026-11-13T17:15:47.557122+00:00",
+      "notes": [
+        "HTTPError: 404 Client Error: Not Found for url: https://community.deeplearning.ai/uploads/short-url/tLSAIa9bPtyFDEq1AqLAkqDmyfR.pdf",
+        "Full slide deck recovered from the verified public CDN original: markdown/slides/module-3.md"
+      ],
+      "http_status": 404,
+      "final_url": "https://community.deeplearning.ai/uploads/short-url/tLSAIa9bPtyFDEq1AqLAkqDmyfR.pdf",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/slides/module-3.html",
+      "bytes": 34524,
+      "sha256": "9480ebb5db4b6325931301dcc5a901e429d4757b7afc205bc50afdaa0039bee1",
+      "download_status": "failed",
+      "conversion_status": "failed",
+      "recovered_by": "markdown/slides/module-3.md"
+    },
+    {
+      "id": "access-attempts/module-4-short-url",
+      "title": "Module 4: Evaluating Agent Actions and Outcomes: original short-URL attempt",
+      "url": "https://community.deeplearning.ai/uploads/short-url/6g4jtQ0QNcMsyIOESETOiLUWS1m.pdf",
+      "category": "access-attempts",
+      "retrieved_at": "2026-11-13T17:15:47.770498+00:00",
+      "notes": [
+        "HTTPError: 404 Client Error: Not Found for url: https://community.deeplearning.ai/uploads/short-url/6g4jtQ0QNcMsyIOESETOiLUWS1m.pdf",
+        "Full slide deck recovered from the verified public CDN original: markdown/slides/module-4.md"
+      ],
+      "http_status": 404,
+      "final_url": "https://community.deeplearning.ai/uploads/short-url/6g4jtQ0QNcMsyIOESETOiLUWS1m.pdf",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/slides/module-4.html",
+      "bytes": 34524,
+      "sha256": "7a6d95fbd2bb88834ac680eea7016bdcd25549cf86ddd2aa6fa077e47c10f5d1",
+      "download_status": "failed",
+      "conversion_status": "failed",
+      "recovered_by": "markdown/slides/module-4.md"
+    },
+    {
+      "id": "access-attempts/module-5-short-url",
+      "title": "Module 5: Improving Agentic Applications: original short-URL attempt",
+      "url": "https://community.deeplearning.ai/uploads/short-url/rkaTE0Pcgkuc0v9pBgWMsTHy9bd.pdf",
+      "category": "access-attempts",
+      "retrieved_at": "2026-11-13T17:15:48.004354+00:00",
+      "notes": [
+        "HTTPError: 404 Client Error: Not Found for url: https://community.deeplearning.ai/uploads/short-url/rkaTE0Pcgkuc0v9pBgWMsTHy9bd.pdf",
+        "Full slide deck recovered from the verified public CDN original: markdown/slides/module-5.md"
+      ],
+      "http_status": 404,
+      "final_url": "https://community.deeplearning.ai/uploads/short-url/rkaTE0Pcgkuc0v9pBgWMsTHy9bd.pdf",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/slides/module-5.html",
+      "bytes": 34524,
+      "sha256": "75bb3141268292953e5edcc75bdd63df339cc1e7d4369b12c2eda40079235dcf",
+      "download_status": "failed",
+      "conversion_status": "failed",
+      "recovered_by": "markdown/slides/module-5.md"
+    },
+    {
+      "id": "pages/launch-announcement",
+      "title": "Official course launch announcement",
+      "url": "https://community.deeplearning.ai/t/new-course-enroll-in-evaluating-and-improving-agentic-applications/896149",
+      "category": "pages",
+      "retrieved_at": "2026-11-13T17:15:48.239220+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://community.deeplearning.ai/t/new-course-enroll-in-evaluating-and-improving-agentic-applications/896149",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/pages/launch-announcement.html",
+      "bytes": 31509,
+      "sha256": "bc276c08a6f3bab918c6c155f4f20b070b77e55c6c23122942e3c1d067ef1c65",
+      "download_status": "downloaded",
+      "assets": [
+        {
+          "url": "https://global.discourse-cdn.com/dlai/optimized/3X/8/f/8f74d9835493550f9ca6ea29ffd54adaca0cc8cb_2_690x388.jpeg",
+          "raw_path": "raw/assets/25ecea558c7d4dee.jpeg",
+          "bytes": 44359,
+          "sha256": "de1618d9a0b7d39f284b964661180e9f13f9677efffbce53a2e2b52f806b99ee"
+        }
+      ],
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/pages/launch-announcement.md"
+    },
+    {
+      "id": "metadata/launch-topic",
+      "title": "Course launch topic metadata",
+      "url": "https://community.deeplearning.ai/t/new-course-enroll-in-evaluating-and-improving-agentic-applications/896149.json",
+      "category": "metadata",
+      "retrieved_at": "2026-11-13T17:15:49.411968+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://community.deeplearning.ai/t/new-course-enroll-in-evaluating-and-improving-agentic-applications/896149.json",
+      "content_type": "application/json; charset=utf-8",
+      "raw_path": "raw/metadata/launch-topic.json",
+      "bytes": 17776,
+      "sha256": "b81636cbbb2eb8f7028ff3682d0a0e92ac4671d55d66e4d709402996a8c57e8e",
+      "download_status": "downloaded",
+      "conversion_method": "source-code-fence",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/metadata/launch-topic.md"
+    },
+    {
+      "id": "slides/module-1",
+      "title": "Module 1: Foundations of Evals",
+      "url": "https://global.discourse-cdn.com/dlai/original/3X/5/5/5511474bc19c467f66a1d5b76ae6301c58e464d5.pdf",
+      "category": "slides",
+      "retrieved_at": "2026-11-13T17:18:06.733766+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Recovered from the public CDN original after the published short attachment URL returned 404. The file SHA-1 matches the base62-decoded short-link hash exactly."
+      ],
+      "http_status": 200,
+      "final_url": "https://global.discourse-cdn.com/dlai/original/3X/5/5/5511474bc19c467f66a1d5b76ae6301c58e464d5.pdf",
+      "content_type": "application/pdf",
+      "raw_path": "raw/slides/module-1.pdf",
+      "bytes": 3977739,
+      "sha256": "5543cffa72d5d7c9b81237a40a48d17812403d1eb5f4993e92eef2725aef81ba",
+      "download_status": "downloaded",
+      "page_count": 60,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/slides/module-1.md",
+      "aliases": [
+        "https://community.deeplearning.ai/uploads/short-url/c8xBrMPWqkILoU6CWXklx4kFs8Z.pdf"
+      ],
+      "discovered_from": "https://community.deeplearning.ai/t/evals-lecture-notes/896118",
+      "expected_source_sha1": "5511474bc19c467f66a1d5b76ae6301c58e464d5",
+      "source_sha1_matches": true
+    },
+    {
+      "id": "slides/module-2",
+      "title": "Module 2: Observing and Benchmarking Agents",
+      "url": "https://global.discourse-cdn.com/dlai/original/3X/4/2/42b96553ad0415e8fc965096711ee974d49f4196.pdf",
+      "category": "slides",
+      "retrieved_at": "2026-11-13T17:18:08.222315+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Recovered from the public CDN original after the published short attachment URL returned 404. The file SHA-1 matches the base62-decoded short-link hash exactly."
+      ],
+      "http_status": 200,
+      "final_url": "https://global.discourse-cdn.com/dlai/original/3X/4/2/42b96553ad0415e8fc965096711ee974d49f4196.pdf",
+      "content_type": "application/pdf",
+      "raw_path": "raw/slides/module-2.pdf",
+      "bytes": 3744129,
+      "sha256": "348b56d011682bb48aab956140e1b7b7c2bab6128ca9a6ab862f1290f1c745f5",
+      "download_status": "downloaded",
+      "page_count": 52,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/slides/module-2.md",
+      "aliases": [
+        "https://community.deeplearning.ai/uploads/short-url/9wgIKm0rLjWcOnUJdsVphq2ms98.pdf"
+      ],
+      "discovered_from": "https://community.deeplearning.ai/t/evals-lecture-notes/896118",
+      "expected_source_sha1": "42b96553ad0415e8fc965096711ee974d49f4196",
+      "source_sha1_matches": true
+    },
+    {
+      "id": "slides/module-3",
+      "title": "Module 3: Building Evaluators You Can Trust",
+      "url": "https://global.discourse-cdn.com/dlai/original/3X/d/0/d0a8a01b0dd03a3502bd9e3a03b6ea994cbc28df.pdf",
+      "category": "slides",
+      "retrieved_at": "2026-11-13T17:18:09.199628+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Recovered from the public CDN original after the published short attachment URL returned 404. The file SHA-1 matches the base62-decoded short-link hash exactly."
+      ],
+      "http_status": 200,
+      "final_url": "https://global.discourse-cdn.com/dlai/original/3X/d/0/d0a8a01b0dd03a3502bd9e3a03b6ea994cbc28df.pdf",
+      "content_type": "application/pdf",
+      "raw_path": "raw/slides/module-3.pdf",
+      "bytes": 6215021,
+      "sha256": "84a47a794ae43cddb62bddbe33332b64d67c05b62fab8f47ced73af3f2afd4a1",
+      "download_status": "downloaded",
+      "page_count": 55,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/slides/module-3.md",
+      "aliases": [
+        "https://community.deeplearning.ai/uploads/short-url/tLSAIa9bPtyFDEq1AqLAkqDmyfR.pdf"
+      ],
+      "discovered_from": "https://community.deeplearning.ai/t/evals-lecture-notes/896118",
+      "expected_source_sha1": "d0a8a01b0dd03a3502bd9e3a03b6ea994cbc28df",
+      "source_sha1_matches": true
+    },
+    {
+      "id": "slides/module-4",
+      "title": "Module 4: Evaluating Agent Actions and Outcomes",
+      "url": "https://global.discourse-cdn.com/dlai/original/3X/2/b/2bde11f1c30ca57f2de23cfe4e779fafc9de0b7c.pdf",
+      "category": "slides",
+      "retrieved_at": "2026-11-13T17:18:10.486645+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Recovered from the public CDN original after the published short attachment URL returned 404. The file SHA-1 matches the base62-decoded short-link hash exactly."
+      ],
+      "http_status": 200,
+      "final_url": "https://global.discourse-cdn.com/dlai/original/3X/2/b/2bde11f1c30ca57f2de23cfe4e779fafc9de0b7c.pdf",
+      "content_type": "application/pdf",
+      "raw_path": "raw/slides/module-4.pdf",
+      "bytes": 1857715,
+      "sha256": "4dea14e8851a062f64366c6d8a992d98bdd59cc213bb39ce9d8fd3eee683a6b9",
+      "download_status": "downloaded",
+      "page_count": 55,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/slides/module-4.md",
+      "aliases": [
+        "https://community.deeplearning.ai/uploads/short-url/6g4jtQ0QNcMsyIOESETOiLUWS1m.pdf"
+      ],
+      "discovered_from": "https://community.deeplearning.ai/t/evals-lecture-notes/896118",
+      "expected_source_sha1": "2bde11f1c30ca57f2de23cfe4e779fafc9de0b7c",
+      "source_sha1_matches": true
+    },
+    {
+      "id": "slides/module-5",
+      "title": "Module 5: Improving Agentic Applications",
+      "url": "https://global.discourse-cdn.com/dlai/original/3X/b/f/bf828ca0e9d7ad63146803dca92ed5b3d204e39b.pdf",
+      "category": "slides",
+      "retrieved_at": "2026-11-13T17:18:11.167310+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Recovered from the public CDN original after the published short attachment URL returned 404. The file SHA-1 matches the base62-decoded short-link hash exactly."
+      ],
+      "http_status": 200,
+      "final_url": "https://global.discourse-cdn.com/dlai/original/3X/b/f/bf828ca0e9d7ad63146803dca92ed5b3d204e39b.pdf",
+      "content_type": "application/pdf",
+      "raw_path": "raw/slides/module-5.pdf",
+      "bytes": 2582680,
+      "sha256": "10ad3fcade8f935edf78b623ca71e74de33845c2cb49b803e2e1a8922f45cbfc",
+      "download_status": "downloaded",
+      "page_count": 66,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/slides/module-5.md",
+      "aliases": [
+        "https://community.deeplearning.ai/uploads/short-url/rkaTE0Pcgkuc0v9pBgWMsTHy9bd.pdf"
+      ],
+      "discovered_from": "https://community.deeplearning.ai/t/evals-lecture-notes/896118",
+      "expected_source_sha1": "bf828ca0e9d7ad63146803dca92ed5b3d204e39b",
+      "source_sha1_matches": true
+    },
+    {
+      "id": "metadata/course-outline",
+      "title": "Public course outline and access flags",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/53tpudpi/a-conversation-between-laurie-voss-and-andrew-ng",
+      "category": "metadata",
+      "retrieved_at": "2026-11-13T17:25:55.938959+00:00",
+      "raw_path": "raw/metadata/course-outline.json",
+      "bytes": 41830,
+      "sha256": "6c2c678e54a85825bde70923bb55b21c08bfaca340225c0f185ada11ffc709dd",
+      "download_status": "downloaded",
+      "conversion_status": "not_applicable",
+      "conversion_method": "public-page-course-metadata",
+      "notes": [
+        "Extracted from the anonymous page's __NEXT_DATA__ JSON. This is catalog metadata, not notebook or assessment content."
+      ]
+    },
+    {
+      "id": "lessons/53tpudpi",
+      "title": "A Conversation Between Laurie Voss and Andrew Ng",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/53tpudpi/a-conversation-between-laurie-voss-and-andrew-ng",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:04.689813+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/53tpudpi/a-conversation-between-laurie-voss-and-andrew-ng",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/53tpudpi.html",
+      "bytes": 147861,
+      "sha256": "a789e8463d8ac1bcbba7f93792a5646ebab06b71c6c007da4789dd1cc7a0dfec",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/53tpudpi/a-conversation-between-laurie-voss-and-andrew-ng#transcript",
+          "raw_path": "raw/transcripts/53tpudpi.json",
+          "bytes": 23182,
+          "sha256": "f36c9f3aaa8a0264c95f4b39fd4d06af8c1f63adf939cbbd539148279bc9bea4"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 181,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1595,
+      "markdown_path": "markdown/lessons/53tpudpi.md"
+    },
+    {
+      "id": "lessons/ldijc37i",
+      "title": "Why Evals Matter",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/ldijc37i/why-evals-matter",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:04.799047+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/ldijc37i/why-evals-matter",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/ldijc37i.html",
+      "bytes": 143960,
+      "sha256": "6f31423ab2e601fd7bbf78ffef7c37460b0283a27c427f52458772a8b5e0c544",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/ldijc37i/why-evals-matter#transcript",
+          "raw_path": "raw/transcripts/ldijc37i.json",
+          "bytes": 13151,
+          "sha256": "28bfc6e381599c58fb078a2eb44b4c98c26cff3d9e50304b31d2f9f2d4842b86"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 75,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1226,
+      "markdown_path": "markdown/lessons/ldijc37i.md"
+    },
+    {
+      "id": "lessons/bvl0kh83",
+      "title": "The Evals Process Part 1",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/bvl0kh83/the-evals-process-part-1",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:04.906597+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/bvl0kh83/the-evals-process-part-1",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/bvl0kh83.html",
+      "bytes": 143989,
+      "sha256": "5f35515689657170ac88606b7582c5b1b87bb529a89919af0246fbdb9ecb102f",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/bvl0kh83/the-evals-process-part-1#transcript",
+          "raw_path": "raw/transcripts/bvl0kh83.json",
+          "bytes": 13055,
+          "sha256": "cbec90784d72800b60f46637137193b716641aa58ee214526d7f224afceaad29"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 74,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1212,
+      "markdown_path": "markdown/lessons/bvl0kh83.md"
+    },
+    {
+      "id": "lessons/eg5nacsy",
+      "title": "The Evals Process Part 2",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/eg5nacsy/the-evals-process-part-2",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:05.024734+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/eg5nacsy/the-evals-process-part-2",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/eg5nacsy.html",
+      "bytes": 140505,
+      "sha256": "4c4d8fe6fce8c6c943175381e0ba5ec1e9870e7d9172b872e274699bb5709f87",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/eg5nacsy/the-evals-process-part-2#transcript",
+          "raw_path": "raw/transcripts/eg5nacsy.json",
+          "bytes": 11284,
+          "sha256": "043b36810219aef9c655fd9196b5b7391b9d9d48df61c370e136065011cfe1b8"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 64,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1018,
+      "markdown_path": "markdown/lessons/eg5nacsy.md"
+    },
+    {
+      "id": "lessons/gy3a4e",
+      "title": "Traces",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/gy3a4e/traces",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:05.153905+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/gy3a4e/traces",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/gy3a4e.html",
+      "bytes": 142318,
+      "sha256": "93880db38b3fa8b2b109170d484aa4785f5d37db7defca14da04598cdb908a14",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/gy3a4e/traces#transcript",
+          "raw_path": "raw/transcripts/gy3a4e.json",
+          "bytes": 12528,
+          "sha256": "2927c4e083e24dd41223fa07b8353f27d9e3e72f33875e4ac702ddb4177c2b3e"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 72,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1166,
+      "markdown_path": "markdown/lessons/gy3a4e.md"
+    },
+    {
+      "id": "lessons/a4ui1p",
+      "title": "Define Application Requirements",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/a4ui1p/define-application-requirements",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:05.264175+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/a4ui1p/define-application-requirements",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/a4ui1p.html",
+      "bytes": 144203,
+      "sha256": "e5ccf146c41057aacfca6d7c6cd7d56d48d57f758c02bf1a7c663d4924983c50",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/a4ui1p/define-application-requirements#transcript",
+          "raw_path": "raw/transcripts/a4ui1p.json",
+          "bytes": 15081,
+          "sha256": "f60206212d56078845d8cd9b2b8cbb1a974162073dd65d6db99907b15809a299"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 88,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1345,
+      "markdown_path": "markdown/lessons/a4ui1p.md"
+    },
+    {
+      "id": "lessons/sh7zq0bk",
+      "title": "Turn Requirements into Test Cases",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/sh7zq0bk/turn-requirements-into-test-cases",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:05.345708+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/sh7zq0bk/turn-requirements-into-test-cases",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/sh7zq0bk.html",
+      "bytes": 135350,
+      "sha256": "1d6edf03cdb6d3b3021a957264418ced37432f5503ebea4249f1a18d1d1656a0",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/sh7zq0bk/turn-requirements-into-test-cases#transcript",
+          "raw_path": "raw/transcripts/sh7zq0bk.json",
+          "bytes": 10304,
+          "sha256": "57991770aa659dde814c205e20ea1bb7a66f54d657bb176c4cf54453a37c7472"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 59,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 928,
+      "markdown_path": "markdown/lessons/sh7zq0bk.md"
+    },
+    {
+      "id": "lessons/9i8rmo",
+      "title": "Analyze and Label Failures",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/9i8rmo/analyze-and-label-failures",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:05.486465+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/9i8rmo/analyze-and-label-failures",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/9i8rmo.html",
+      "bytes": 142421,
+      "sha256": "f2364319ef79564964d679a1e3edd7dd18502ba5b90973052ae388ac0569623c",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/9i8rmo/analyze-and-label-failures#transcript",
+          "raw_path": "raw/transcripts/9i8rmo.json",
+          "bytes": 14112,
+          "sha256": "d6f94b85e22ef66ce3f1a2af8a5794dce7f035a7360a7a3cc751454796d4b110"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 81,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1322,
+      "markdown_path": "markdown/lessons/9i8rmo.md"
+    },
+    {
+      "id": "lessons/a4ui13bl",
+      "title": "Build a Test Set You Can Trust",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/a4ui13bl/build-a-test-set-you-can-trust",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:05.572053+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/a4ui13bl/build-a-test-set-you-can-trust",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/a4ui13bl.html",
+      "bytes": 137795,
+      "sha256": "7f1e381475c1bdb835b11cb9fb4e85d9a7efe1531f06014d1f8bd8ed11f0044c",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/a4ui13bl/build-a-test-set-you-can-trust#transcript",
+          "raw_path": "raw/transcripts/a4ui13bl.json",
+          "bytes": 11651,
+          "sha256": "b4ce6c5816cb1fb8acddfd0a75dc3114a8fd90c5d34f22cab515cb9016bc6857"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 67,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1074,
+      "markdown_path": "markdown/lessons/a4ui13bl.md"
+    },
+    {
+      "id": "lessons/txe2f9",
+      "title": "Build the Northwind Benchmark",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/txe2f9/build-the-northwind-benchmark",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:05.664358+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/txe2f9/build-the-northwind-benchmark",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/txe2f9.html",
+      "bytes": 152156,
+      "sha256": "893dc9b7bd53e403b04f1aeede3e35e088a53beb010d20f586b200a163955405",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/txe2f9/build-the-northwind-benchmark#transcript",
+          "raw_path": "raw/transcripts/txe2f9.json",
+          "bytes": 19022,
+          "sha256": "5ca5d4171358578a75c1ba44c59f5510a9893a50440d826a66050a315046cb48"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 108,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1699,
+      "markdown_path": "markdown/lessons/txe2f9.md"
+    },
+    {
+      "id": "lessons/jcmx7x",
+      "title": "Building Code Evaluators",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/jcmx7x/building-code-evaluators",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:05.770122+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/jcmx7x/building-code-evaluators",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/jcmx7x.html",
+      "bytes": 138965,
+      "sha256": "9323db3d1115c2021e68ceda830c10a6f30168670dd636854bc402593d1ddc21",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/jcmx7x/building-code-evaluators#transcript",
+          "raw_path": "raw/transcripts/jcmx7x.json",
+          "bytes": 12245,
+          "sha256": "b41a6fc0cce258216b4741a83cecc9fa0d2cf61583579eae5279e1de81831fe8"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 69,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1147,
+      "markdown_path": "markdown/lessons/jcmx7x.md"
+    },
+    {
+      "id": "lessons/hl9qj2",
+      "title": "Using an LLM Judge",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/hl9qj2/using-an-llm-judge",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:05.867032+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/hl9qj2/using-an-llm-judge",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/hl9qj2.html",
+      "bytes": 138809,
+      "sha256": "8ed3565070243aefb7d6fe7ef397824fe0f91646bd1de33240c3a1052217d683",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/hl9qj2/using-an-llm-judge#transcript",
+          "raw_path": "raw/transcripts/hl9qj2.json",
+          "bytes": 12094,
+          "sha256": "fe1beae29f88af2a3217b77881e978a7980275bcc38efae067c328399a34e7aa"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 67,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1110,
+      "markdown_path": "markdown/lessons/hl9qj2.md"
+    },
+    {
+      "id": "lessons/pu28bj",
+      "title": "Writing a Custom Rubric",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/pu28bj/writing-a-custom-rubric",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:05.980975+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/pu28bj/writing-a-custom-rubric",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/pu28bj.html",
+      "bytes": 137163,
+      "sha256": "05e3e0ab11fbbf43abab6c8be1aed27f3e56395973f50b15f1968e5bb3509f82",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/pu28bj/writing-a-custom-rubric#transcript",
+          "raw_path": "raw/transcripts/pu28bj.json",
+          "bytes": 11442,
+          "sha256": "37cb1cf6d29838c4465f3d827c96020e0dfc5fdb20dcd50537fbf5ef285833ee"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 66,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1073,
+      "markdown_path": "markdown/lessons/pu28bj.md"
+    },
+    {
+      "id": "lessons/79ywrq",
+      "title": " Validating LLM Judges",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/79ywrq/-validating-llm-judges",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:06.076301+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/79ywrq/-validating-llm-judges",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/79ywrq.html",
+      "bytes": 146293,
+      "sha256": "cb19adeddbdc0b9d60a061d2616dff6a205bd9a4468cb4923392cdf52f0a2e55",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/79ywrq/-validating-llm-judges#transcript",
+          "raw_path": "raw/transcripts/79ywrq.json",
+          "bytes": 16207,
+          "sha256": "3d390a8a91fdb9792c5f74b059645c2c0c4eac8ab2a273b6f16dd74d05c1d834"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 93,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1473,
+      "markdown_path": "markdown/lessons/79ywrq.md"
+    },
+    {
+      "id": "lessons/y8s465",
+      "title": "Applying Evaluators to Northwind",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/y8s465/applying-evaluators-to-northwind",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:06.173246+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/y8s465/applying-evaluators-to-northwind",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/y8s465.html",
+      "bytes": 146899,
+      "sha256": "f1c5cee8b7ba1d93e9ae41528da3d6f3a18c59900cd426fb48eca6dfc97dda48",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/y8s465/applying-evaluators-to-northwind#transcript",
+          "raw_path": "raw/transcripts/y8s465.json",
+          "bytes": 16384,
+          "sha256": "dec0585a1996d080f3e8593789135933354730131f69a22d211d8f3b5801c69d"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 94,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1416,
+      "markdown_path": "markdown/lessons/y8s465.md"
+    },
+    {
+      "id": "lessons/8bh60i",
+      "title": "Evaluating the Work Behind a Response",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/8bh60i/evaluating-the-work-behind-a-response",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:06.293877+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/8bh60i/evaluating-the-work-behind-a-response",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/8bh60i.html",
+      "bytes": 133743,
+      "sha256": "65ec0b3b018835891c1b2facefb63a205379d771dfeaecfe56f7bb222312c4f4",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/8bh60i/evaluating-the-work-behind-a-response#transcript",
+          "raw_path": "raw/transcripts/8bh60i.json",
+          "bytes": 8920,
+          "sha256": "9cc2996c31c0296013afb7b3dc98573f960b41f1bde324b6e793a786137adcfb"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 52,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 812,
+      "markdown_path": "markdown/lessons/8bh60i.md"
+    },
+    {
+      "id": "lessons/60q53a",
+      "title": "Evaluating Actions and Tool Calls",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/60q53a/evaluating-actions-and-tool-calls",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:06.397985+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/60q53a/evaluating-actions-and-tool-calls",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/60q53a.html",
+      "bytes": 140027,
+      "sha256": "af9272a19fa121fd63cd8393268ec55486aac57f401bb532aa7351fb05af4ce6",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/60q53a/evaluating-actions-and-tool-calls#transcript",
+          "raw_path": "raw/transcripts/60q53a.json",
+          "bytes": 11978,
+          "sha256": "41213d32c15f9f973210d93d43a761d8be1169bbd3f0a04e540043478cf9b84c"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 67,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1127,
+      "markdown_path": "markdown/lessons/60q53a.md"
+    },
+    {
+      "id": "lessons/jcmx7u",
+      "title": "Evaluating Trajectories",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/jcmx7u/evaluating-trajectories",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:06.505145+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/jcmx7u/evaluating-trajectories",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/jcmx7u.html",
+      "bytes": 141673,
+      "sha256": "a45f95ebe88c3b3538149c3526407337f41810f6f1150e65c7ab3360155904a2",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/jcmx7u/evaluating-trajectories#transcript",
+          "raw_path": "raw/transcripts/jcmx7u.json",
+          "bytes": 13116,
+          "sha256": "f756273be8b215f89da9f4585d7266a6d1ddd4b794091d4abc29c1fa9c265a87"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 75,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1152,
+      "markdown_path": "markdown/lessons/jcmx7u.md"
+    },
+    {
+      "id": "lessons/46z155",
+      "title": "Evaluating Across Conversation Turns",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/46z155/evaluating-across-conversation-turns",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:06.766612+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/46z155/evaluating-across-conversation-turns",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/46z155.html",
+      "bytes": 150154,
+      "sha256": "a54605107dc478cd516ed04163ea1b069826be32994940e2f24ead987b0779de",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/46z155/evaluating-across-conversation-turns#transcript",
+          "raw_path": "raw/transcripts/46z155.json",
+          "bytes": 16933,
+          "sha256": "57e864152d8ce2274dea50e09a70fc8024119f5ff0ac5f236d4971fc68393342"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 93,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1585,
+      "markdown_path": "markdown/lessons/46z155.md"
+    },
+    {
+      "id": "lessons/53tpu7",
+      "title": "Verifying Task Outcomes",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/53tpu7/verifying-task-outcomes",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:06.871662+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/53tpu7/verifying-task-outcomes",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/53tpu7.html",
+      "bytes": 140600,
+      "sha256": "1db622c625d0e5128397d666fdd1c32b4671d7426164a053c1de9d727bcd67be",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/53tpu7/verifying-task-outcomes#transcript",
+          "raw_path": "raw/transcripts/53tpu7.json",
+          "bytes": 12441,
+          "sha256": "e492c807c3f488eb13edceeebb22972da8dc0bfebb133409c9b6f0def8f20f58"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 70,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1158,
+      "markdown_path": "markdown/lessons/53tpu7.md"
+    },
+    {
+      "id": "lessons/txe2fim",
+      "title": "Interpreting Evaluation Results Together",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/txe2fim/interpreting-evaluation-results-together",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:06.972010+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/txe2fim/interpreting-evaluation-results-together",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/txe2fim.html",
+      "bytes": 132406,
+      "sha256": "81628c56594429315cbf09e4fab90e58cd6123c5d3ad12cedbe28fdb0c534281",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/txe2fim/interpreting-evaluation-results-together#transcript",
+          "raw_path": "raw/transcripts/txe2fim.json",
+          "bytes": 8003,
+          "sha256": "e4d5a39aa94d20167e0a40e484b8354d4fe66f33cf7171c399e9fce7150831a6"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 45,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 724,
+      "markdown_path": "markdown/lessons/txe2fim.md"
+    },
+    {
+      "id": "lessons/k2csh8",
+      "title": "Planning an Improvement Test",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/k2csh8/planning-an-improvement-test",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:07.075090+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/k2csh8/planning-an-improvement-test",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/k2csh8.html",
+      "bytes": 142836,
+      "sha256": "11aa1f04a1de94dc8260d221db47abe71f416e51851ce99a570b071275741d46",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/k2csh8/planning-an-improvement-test#transcript",
+          "raw_path": "raw/transcripts/k2csh8.json",
+          "bytes": 12723,
+          "sha256": "5f1ebb644060c9b58aa876f6e7ff184c08681dd0300bd587679dbf3509d4a480"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 71,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1188,
+      "markdown_path": "markdown/lessons/k2csh8.md"
+    },
+    {
+      "id": "lessons/de1cnr",
+      "title": "Comparing Versions and Assessing Tradeoffs",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/de1cnr/comparing-versions-and-assessing-tradeoffs",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:07.183480+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/de1cnr/comparing-versions-and-assessing-tradeoffs",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/de1cnr.html",
+      "bytes": 146433,
+      "sha256": "c887ef58367486a6f7bb5aa0538a7df8063b98d0559cea84ae0da32776207413",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/de1cnr/comparing-versions-and-assessing-tradeoffs#transcript",
+          "raw_path": "raw/transcripts/de1cnr.json",
+          "bytes": 14727,
+          "sha256": "9044c01a1be805461a7cb65b5c68de18708cfb35b257eec87f06ffb911ed4189"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 85,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1350,
+      "markdown_path": "markdown/lessons/de1cnr.md"
+    },
+    {
+      "id": "lessons/2fnhlq",
+      "title": "Choosing Where to Intervene",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/2fnhlq/choosing-where-to-intervene",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:07.286631+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/2fnhlq/choosing-where-to-intervene",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/2fnhlq.html",
+      "bytes": 147635,
+      "sha256": "7cdf53e105cbcda855664cdbee90fa560566669658ce6ea3ab27edc0a4299a2f",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/2fnhlq/choosing-where-to-intervene#transcript",
+          "raw_path": "raw/transcripts/2fnhlq.json",
+          "bytes": 15617,
+          "sha256": "6ffca66f3cb36d5ff9f80e3b590ffb93b3b7e3c830a99645402ee3fb58582977"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 91,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1419,
+      "markdown_path": "markdown/lessons/2fnhlq.md"
+    },
+    {
+      "id": "lessons/15vop8",
+      "title": "Refining a Change After a Regression",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/15vop8/refining-a-change-after-a-regression",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:07.383203+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/15vop8/refining-a-change-after-a-regression",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/15vop8.html",
+      "bytes": 143136,
+      "sha256": "34f36d94391988a151326ad62daf2ff54e163fd4ddf0420b024da449b33943f4",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/15vop8/refining-a-change-after-a-regression#transcript",
+          "raw_path": "raw/transcripts/15vop8.json",
+          "bytes": 13016,
+          "sha256": "c918a338d9d30ab32c37d0c73a25cf03456314ce5e70b35a0bb64c198e3bb845"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 75,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1168,
+      "markdown_path": "markdown/lessons/15vop8.md"
+    },
+    {
+      "id": "lessons/zqwvtn",
+      "title": "Improving Agents After Deployment",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/zqwvtn/improving-agents-after-deployment",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:07.487971+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/zqwvtn/improving-agents-after-deployment",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/zqwvtn.html",
+      "bytes": 149829,
+      "sha256": "9d4b940ff6b9e84a6559f794a2f5bef8f257f4c1fae761b70fc3812a512f37dc",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/zqwvtn/improving-agents-after-deployment#transcript",
+          "raw_path": "raw/transcripts/zqwvtn.json",
+          "bytes": 16529,
+          "sha256": "24d726843a37462e0a586a7c654968b77bdb39181ccd6b621d95ea45136fdd7c"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 95,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1499,
+      "markdown_path": "markdown/lessons/zqwvtn.md"
+    },
+    {
+      "id": "lessons/hl9qjqa",
+      "title": "Turning Production Failures into Regression Tests",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/hl9qjqa/turning-production-failures-into-regression-tests",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:07.591547+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/hl9qjqa/turning-production-failures-into-regression-tests",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/hl9qjqa.html",
+      "bytes": 149865,
+      "sha256": "361f4824fb4ce87fcfcebc2f60dd1f60f6b20380ee6c81201128c1b8a3714a71",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/hl9qjqa/turning-production-failures-into-regression-tests#transcript",
+          "raw_path": "raw/transcripts/hl9qjqa.json",
+          "bytes": 16205,
+          "sha256": "938198ff4305237ba7b4cd2aa500892afddd1592fbd99f694274e582d633e692"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 92,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 1515,
+      "markdown_path": "markdown/lessons/hl9qjqa.md"
+    },
+    {
+      "id": "lessons/mo0gyiw",
+      "title": "A Conversation with Aparna Dhinakaran, Co-founder of Arize AI",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/mo0gyiw/a-conversation-with-aparna-dhinakaran%2C-co-founder-of-arize-ai",
+      "category": "lessons",
+      "retrieved_at": "2026-11-13T17:26:07.708936+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/mo0gyiw/a-conversation-with-aparna-dhinakaran%2C-co-founder-of-arize-ai",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/mo0gyiw.html",
+      "bytes": 211528,
+      "sha256": "db52d74405defb1403fe02e40f83db637f30ac5afc14abb70738107c62770f39",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Complete transcript supplied in the public anonymous lesson HTML (__NEXT_DATA__). Original HTML and timed caption JSON are preserved. Video media was not downloaded."
+      ],
+      "lesson_type": "video",
+      "access_control": "full",
+      "required_user_tier": null,
+      "assets": [
+        {
+          "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/mo0gyiw/a-conversation-with-aparna-dhinakaran%2C-co-founder-of-arize-ai#transcript",
+          "raw_path": "raw/transcripts/mo0gyiw.json",
+          "bytes": 62813,
+          "sha256": "0df92210d89ccd8bb8ac5b4b913fd513fe52ae1155750e7f97d3bd8784b4514d"
+        }
+      ],
+      "plain_caption_matches_timed_cues": true,
+      "caption_cues": 493,
+      "conversion_method": "anonymous-public-page-transcript",
+      "anonymous_source": true,
+      "transcript_words": 4299,
+      "markdown_path": "markdown/lessons/mo0gyiw.md"
+    },
+    {
+      "id": "restricted/bvl0k28r",
+      "title": "Reading Lab 1: How Tracing Works",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/bvl0k28r/reading-lab-1%3A-how-tracing-works",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.127142+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/bvl0k28r/reading-lab-1%3A-how-tracing-works",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/bvl0k28r.html",
+      "bytes": 113407,
+      "sha256": "d7d264146532a50a552a75a743089730afdd3d82b33f094522b1e081bcddda1c",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "notes": [
+        "The anonymous browser opens 'Log In to Continue'. The saved HTML is a viewer/catalog shell and is not represented as lesson text or notebook code. No account was used or created."
+      ],
+      "lesson_type": "reading_material",
+      "access_control": "full",
+      "required_user_tier": null
+    },
+    {
+      "id": "restricted/3sxuzjlf",
+      "title": "Lab 1: Trace an Agent with Python",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/3sxuzjlf/lab-1%3A-trace-an-agent-with-python",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.134849+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/3sxuzjlf/lab-1%3A-trace-an-agent-with-python",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/3sxuzjlf.html",
+      "bytes": 113441,
+      "sha256": "690165a575a22f0d5c792e9bad0877227a849994d44bc9bef15ce3586253a940",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "notes": [
+        "The anonymous browser opens 'Log In to Continue'. The saved HTML is a viewer/catalog shell and is not represented as lesson text or notebook code. No account was used or created."
+      ],
+      "lesson_type": "notebook",
+      "access_control": "full",
+      "required_user_tier": null
+    },
+    {
+      "id": "restricted/79ywr3",
+      "title": "Lab 2: Trace an Agent with Phoenix",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/79ywr3/lab-2%3A-trace-an-agent-with-phoenix",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.140909+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/79ywr3/lab-2%3A-trace-an-agent-with-phoenix",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/79ywr3.html",
+      "bytes": 113434,
+      "sha256": "8f478d28b14734b1e4def1821406913d3c039f89ecd2bd00d663357c33759771",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "notes": [
+        "The anonymous browser opens 'Log In to Continue'. The saved HTML is a viewer/catalog shell and is not represented as lesson text or notebook code. No account was used or created."
+      ],
+      "lesson_type": "notebook",
+      "access_control": "full",
+      "required_user_tier": null
+    },
+    {
+      "id": "restricted/cno79b0z",
+      "title": "Join the Deeplearning.AI Forum!",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/cno79b0z/join-the-deeplearning.ai-forum!",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.147890+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/cno79b0z/join-the-deeplearning.ai-forum!",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/cno79b0z.html",
+      "bytes": 113456,
+      "sha256": "bfc725822baef7a3b6788842095d670e707fdfd1839c38b2e0f0917138a2ccc2",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "notes": [
+        "The anonymous browser opens 'Log In to Continue'. The saved HTML is a viewer/catalog shell and is not represented as lesson text or notebook code. No account was used or created."
+      ],
+      "lesson_type": "reading_material",
+      "access_control": "full",
+      "required_user_tier": null
+    },
+    {
+      "id": "restricted/i1bmosoj",
+      "title": "Module 1 Resources",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/i1bmosoj/module-1-resources",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.153525+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/i1bmosoj/module-1-resources",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/i1bmosoj.html",
+      "bytes": 113342,
+      "sha256": "c7f76751978a1b47c5a9bba8e502bbfbbb92461a6b518bcaf89d89da3ebf7f45",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "notes": [
+        "The anonymous browser opens 'Log In to Continue'. The saved HTML is a viewer/catalog shell and is not represented as lesson text or notebook code. No account was used or created."
+      ],
+      "lesson_type": "reading_material",
+      "access_control": "full",
+      "required_user_tier": null
+    },
+    {
+      "id": "restricted/i1bmo7ob",
+      "title": "Lab 1: Build the Northwind Benchmark",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/i1bmo7ob/lab-1%3A-build-the-northwind-benchmark",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.161043+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/i1bmo7ob/lab-1%3A-build-the-northwind-benchmark",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/i1bmo7ob.html",
+      "bytes": 110016,
+      "sha256": "4ebd1e3cda1cac1caa2baec7f5b79549bd2151809509807b39cd313b1c2301ee",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "notes": [
+        "The anonymous browser opens 'Log In to Continue'. The saved HTML is a viewer/catalog shell and is not represented as lesson text or notebook code. No account was used or created."
+      ],
+      "lesson_type": "notebook",
+      "access_control": "full",
+      "required_user_tier": null
+    },
+    {
+      "id": "restricted/txe2fafd",
+      "title": "Module 2 Resources",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/txe2fafd/module-2-resources",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.168050+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/txe2fafd/module-2-resources",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/txe2fafd.html",
+      "bytes": 109883,
+      "sha256": "a66fed75fbf13106187495f9454e6933c867bdb918c26492f63363326f795056",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "notes": [
+        "The anonymous browser opens 'Log In to Continue'. The saved HTML is a viewer/catalog shell and is not represented as lesson text or notebook code. No account was used or created."
+      ],
+      "lesson_type": "reading_material",
+      "access_control": "full",
+      "required_user_tier": null
+    },
+    {
+      "id": "restricted/8bh609rg",
+      "title": "Lab 1: Build Evaluators You Can Trust",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/8bh609rg/lab-1%3A-build-evaluators-you-can-trust",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.175384+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/8bh609rg/lab-1%3A-build-evaluators-you-can-trust",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/8bh609rg.html",
+      "bytes": 109992,
+      "sha256": "cda016aa45f85575c2cc9f5170285f299da4b5691eb97d454160537504ddbfc2",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "notes": [
+        "The anonymous browser opens 'Log In to Continue'. The saved HTML is a viewer/catalog shell and is not represented as lesson text or notebook code. No account was used or created."
+      ],
+      "lesson_type": "notebook",
+      "access_control": "full",
+      "required_user_tier": null
+    },
+    {
+      "id": "restricted/53tpuep7",
+      "title": "Module 3 Resources",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/53tpuep7/module-3-resources",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.181696+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/53tpuep7/module-3-resources",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/53tpuep7.html",
+      "bytes": 109870,
+      "sha256": "4ac6afdc1c4ce8ca2dee2d97bf3f778cb55d152b7f15052141d90eb35882c20c",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "notes": [
+        "The anonymous browser opens 'Log In to Continue'. The saved HTML is a viewer/catalog shell and is not represented as lesson text or notebook code. No account was used or created."
+      ],
+      "lesson_type": "reading_material",
+      "access_control": "full",
+      "required_user_tier": null
+    },
+    {
+      "id": "restricted/sh7zqa8",
+      "title": "Lab 1: Evaluate What the Agent Does",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/sh7zqa8/lab-1%3A-evaluate-what-the-agent-does",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.188762+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/sh7zqa8/lab-1%3A-evaluate-what-the-agent-does",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/sh7zqa8.html",
+      "bytes": 111198,
+      "sha256": "b2b949e3cee535c71163e990b5ab208cece192c49e310c03ce5b1daf4d0728d5",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "notes": [
+        "The anonymous browser opens 'Log In to Continue'. The saved HTML is a viewer/catalog shell and is not represented as lesson text or notebook code. No account was used or created."
+      ],
+      "lesson_type": "notebook",
+      "access_control": "full",
+      "required_user_tier": null
+    },
+    {
+      "id": "restricted/gy3a4nh",
+      "title": "Module 4 Resources",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/gy3a4nh/module-4-resources",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.192972+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/gy3a4nh/module-4-resources",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/gy3a4nh.html",
+      "bytes": 111069,
+      "sha256": "609adfe65ce60fae1f35f6c98fb6bbadaffd1cd480c21daea326ac6a1b6e4709",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "notes": [
+        "The anonymous browser opens 'Log In to Continue'. The saved HTML is a viewer/catalog shell and is not represented as lesson text or notebook code. No account was used or created."
+      ],
+      "lesson_type": "reading_material",
+      "access_control": "full",
+      "required_user_tier": null
+    },
+    {
+      "id": "restricted/ldijcwt7i",
+      "title": "Lab 1: Evaluate What the Agent Does",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/ldijcwt7i/lab-1%3A-evaluate-what-the-agent-does",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.198663+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/ldijcwt7i/lab-1%3A-evaluate-what-the-agent-does",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/ldijcwt7i.html",
+      "bytes": 112657,
+      "sha256": "6570042fac20efc223dd0740d9b06bb77ddd3ff9246d1fb020e6a7ee4980b2e2",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "notes": [
+        "The anonymous browser opens 'Log In to Continue'. The saved HTML is a viewer/catalog shell and is not represented as lesson text or notebook code. No account was used or created."
+      ],
+      "lesson_type": "notebook",
+      "access_control": "full",
+      "required_user_tier": null
+    },
+    {
+      "id": "restricted/uzfbvtz",
+      "title": "Module 5 Resources",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/uzfbvtz/module-5-resources",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.202338+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/uzfbvtz/module-5-resources",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/uzfbvtz.html",
+      "bytes": 112481,
+      "sha256": "c4ff4cfcd22b5e2342ed8ed9a5be72315be79898005b5f089dd7805d33066169",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "notes": [
+        "The anonymous browser opens 'Log In to Continue'. The saved HTML is a viewer/catalog shell and is not represented as lesson text or notebook code. No account was used or created."
+      ],
+      "lesson_type": "reading_material",
+      "access_control": "full",
+      "required_user_tier": null
+    },
+    {
+      "id": "restricted/jcmx7d2",
+      "title": "Acknowledgments",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/jcmx7d2/acknowledgments",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.207046+00:00",
+      "http_status": 200,
+      "final_url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/jcmx7d2/acknowledgments",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/lessons/jcmx7d2.html",
+      "bytes": 112472,
+      "sha256": "0f8505eb5b8f9ddf596963186a3727052a1cafda1762d8e1f6a324ea7e10ce33",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "notes": [
+        "The anonymous browser opens 'Log In to Continue'. The saved HTML is a viewer/catalog shell and is not represented as lesson text or notebook code. No account was used or created."
+      ],
+      "lesson_type": "reading_material",
+      "access_control": "full",
+      "required_user_tier": null
+    },
+    {
+      "id": "restricted/m1-graded-lab-tracing-the-northwind-apparel-agent-with-phoenix",
+      "title": "M1 Graded Lab: Tracing the Northwind Apparel Agent with Phoenix",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/nap9iymg/m1-graded-lab%3A-tracing-the-northwind-apparel-agent-with-phoenix",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.210050+00:00",
+      "download_status": "requires_subscription",
+      "conversion_status": "not_available",
+      "notes": [
+        "The public course catalog marks this item locked with requiredUserTier=pro. Subscription-only assessment content was not requested."
+      ],
+      "lesson_type": "graded_notebook",
+      "access_control": "locked",
+      "required_user_tier": "pro",
+      "source_catalog": "raw/metadata/course-outline.json"
+    },
+    {
+      "id": "restricted/module-1-quiz",
+      "title": "Module 1 Quiz",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/rm6eg2/module-1-quiz",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.213050+00:00",
+      "download_status": "requires_subscription",
+      "conversion_status": "not_available",
+      "notes": [
+        "The public course catalog marks this item locked with requiredUserTier=pro. Subscription-only assessment content was not requested."
+      ],
+      "lesson_type": "quiz",
+      "access_control": "locked",
+      "required_user_tier": "pro",
+      "source_catalog": "raw/metadata/course-outline.json"
+    },
+    {
+      "id": "restricted/m2-graded-lab-error-analysis-and-synthetic-test-data",
+      "title": "M2 Graded Lab: Error analysis and synthetic test data",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/i1bmot/m2-graded-lab%3A-error-analysis-and-synthetic-test-data",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.216049+00:00",
+      "download_status": "requires_subscription",
+      "conversion_status": "not_available",
+      "notes": [
+        "The public course catalog marks this item locked with requiredUserTier=pro. Subscription-only assessment content was not requested."
+      ],
+      "lesson_type": "graded_notebook",
+      "access_control": "locked",
+      "required_user_tier": "pro",
+      "source_catalog": "raw/metadata/course-outline.json"
+    },
+    {
+      "id": "restricted/module-2-quiz",
+      "title": "Module 2 Quiz",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/uzfbvx/module-2-quiz",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.220056+00:00",
+      "download_status": "requires_subscription",
+      "conversion_status": "not_available",
+      "notes": [
+        "The public course catalog marks this item locked with requiredUserTier=pro. Subscription-only assessment content was not requested."
+      ],
+      "lesson_type": "quiz",
+      "access_control": "locked",
+      "required_user_tier": "pro",
+      "source_catalog": "raw/metadata/course-outline.json"
+    },
+    {
+      "id": "restricted/m3-graded-lab-building-and-trusting-evaluators",
+      "title": "M3 Graded Lab: Building and trusting evaluators",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/x7gfw63j/m3-graded-lab%3A-building-and-trusting-evaluators",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.223567+00:00",
+      "download_status": "requires_subscription",
+      "conversion_status": "not_available",
+      "notes": [
+        "The public course catalog marks this item locked with requiredUserTier=pro. Subscription-only assessment content was not requested."
+      ],
+      "lesson_type": "graded_notebook",
+      "access_control": "locked",
+      "required_user_tier": "pro",
+      "source_catalog": "raw/metadata/course-outline.json"
+    },
+    {
+      "id": "restricted/module-3-quiz",
+      "title": "Module 3 Quiz",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/46z15qil/module-3-quiz",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.226566+00:00",
+      "download_status": "requires_subscription",
+      "conversion_status": "not_available",
+      "notes": [
+        "The public course catalog marks this item locked with requiredUserTier=pro. Subscription-only assessment content was not requested."
+      ],
+      "lesson_type": "quiz",
+      "access_control": "locked",
+      "required_user_tier": "pro",
+      "source_catalog": "raw/metadata/course-outline.json"
+    },
+    {
+      "id": "restricted/m4-graded-lab-multi-layer-agent-evaluation",
+      "title": "M4 Graded Lab: Multi-Layer Agent Evaluation",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/cno79gi0z/m4-graded-lab%3A-multi-layer-agent-evaluation",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.230080+00:00",
+      "download_status": "requires_subscription",
+      "conversion_status": "not_available",
+      "notes": [
+        "The public course catalog marks this item locked with requiredUserTier=pro. Subscription-only assessment content was not requested."
+      ],
+      "lesson_type": "graded_notebook",
+      "access_control": "locked",
+      "required_user_tier": "pro",
+      "source_catalog": "raw/metadata/course-outline.json"
+    },
+    {
+      "id": "restricted/module-4-quiz",
+      "title": "Module 4 Quiz",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/bvl0kp/module-4-quiz",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.234079+00:00",
+      "download_status": "requires_subscription",
+      "conversion_status": "not_available",
+      "notes": [
+        "The public course catalog marks this item locked with requiredUserTier=pro. Subscription-only assessment content was not requested."
+      ],
+      "lesson_type": "quiz",
+      "access_control": "locked",
+      "required_user_tier": "pro",
+      "source_catalog": "raw/metadata/course-outline.json"
+    },
+    {
+      "id": "restricted/m5-graded-lab-improving-an-agent-with-evals",
+      "title": "M5 Graded Lab: Improving an Agent with Evals",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/79ywr27/m5-graded-lab%3A-improving-an-agent-with-evals",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.241108+00:00",
+      "download_status": "requires_subscription",
+      "conversion_status": "not_available",
+      "notes": [
+        "The public course catalog marks this item locked with requiredUserTier=pro. Subscription-only assessment content was not requested."
+      ],
+      "lesson_type": "graded_notebook",
+      "access_control": "locked",
+      "required_user_tier": "pro",
+      "source_catalog": "raw/metadata/course-outline.json"
+    },
+    {
+      "id": "restricted/module-5-quiz",
+      "title": "Module 5 Quiz",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/fwaldl/module-5-quiz",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T17:26:13.246107+00:00",
+      "download_status": "requires_subscription",
+      "conversion_status": "not_available",
+      "notes": [
+        "The public course catalog marks this item locked with requiredUserTier=pro. Subscription-only assessment content was not requested."
+      ],
+      "lesson_type": "quiz",
+      "access_control": "locked",
+      "required_user_tier": "pro",
+      "source_catalog": "raw/metadata/course-outline.json"
+    },
+    {
+      "id": "metadata/anonymous-browser-access",
+      "title": "Anonymous browser access evidence",
+      "url": "https://learn.deeplearning.ai/courses/evaluating-and-improving-agentic-applications/lesson/bvl0k28r/reading-lab-1%3A-how-tracing-works",
+      "category": "metadata",
+      "retrieved_at": "2026-11-13T17:29:08.238455+00:00",
+      "raw_path": "raw/access/anonymous-reading-snapshot.yml",
+      "bytes": 11674,
+      "sha256": "b15b6248ba97e319690a1ebc28ed18416343cbf53084db050d33cc56b689f15d",
+      "download_status": "downloaded",
+      "conversion_status": "not_applicable",
+      "conversion_method": "anonymous-browser-snapshot",
+      "notes": [
+        "A separate anonymous browser displayed 'Log In to Continue' for the reading. No login, enrollment, or account changes were made."
+      ]
+    }
+  ],
+  "notes": [
+    "All five advertised module PDFs were recovered from the forum's public CDN originals. The original short attachment URLs return 404, but every recovered PDF has the SHA-1 encoded in its advertised short link. Initial failed responses are retained separately for provenance.",
+    "The official lecture-notes post warns that the slide PDFs are not maintained and can omit topics or contain errors. Lecture videos are updated separately. Preserve this warning when using the slides to design teaching material.",
+    "PDF Markdown is full page-by-page text extraction. The original PDFs preserve diagrams, tables, and exact mathematical notation.",
+    "Only public sources were fetched; no course enrollment, payment, account changes, or downloaded code execution was performed.",
+    "All 28 public video transcripts were captured from anonymous server-rendered lesson HTML, including timed captions where supplied. No video binaries were downloaded.",
+    "The remaining eight readings and six ungraded notebook labs require login in the anonymous browser. Five graded notebook labs and five quizzes are marked Pro-only in the public catalog. These are recorded as access gaps, not converted from generic help or sign-in text.",
+    "No separate official public repository for this specific November 2026 course was found in targeted title/provider searches. The older 'Evaluating AI Agents' course was not substituted.",
+    "[Anonymous browser access evidence](raw/access/anonymous-reading-snapshot.yml) records the reading viewer's login requirement. The isolated browser session was closed after inspection."
+  ],
+  "counts": {
+    "materials": 69,
+    "downloaded": 40,
+    "markdown_files": 38,
+    "gaps": 29
+  }
+}

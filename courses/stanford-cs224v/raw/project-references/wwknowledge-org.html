@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><title></title><meta name="description" content="Stanford Open Virtual Assistant Lab led by Prof Monica Lam"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.4.11"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/blob.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css"><link rel="stylesheet" href="/_astro/index.ColkuZLe.css" /></head> <body> <header style="background-color: var(--bg); border-bottom: solid; border-color: #FFFDF6;" data-testId="header" class="py-2  flex lg:justify-end" data-astro-cid-5blmo7yk> <img src="/assets/logos/stanford-logo.png" alt="Stanford Logo" class="mx-8 sm:mx-24" style="height: 3rem; vertical-align: middle; display: inline; " data-astro-cid-5blmo7yk> <div class="flex-1 flex justify-end hidden lg:flex lg:w-auto" data-astro-cid-5blmo7yk> <a href="https://hai.stanford.edu/events/first-workshop-public-ai-assistant-world-wide-knowledge-wwk" data-astro-cid-5blmo7yk> <button style="background-color:rgb(var(--accent-pale)); color:rgb(var(--accent-bright));" class="rounded-lg px-5 py-2 mr-5 text-center transition font-semibold focus-visible:ring-2 ring-offset-2 ring-orange " size="sm" data-astro-cid-5blmo7yk>Watch recordings from our 2025 Workshop</button></a> </div>  <script>(function(){const closeOnClick = false;
+
+["DOMContentLoaded", "astro:after-swap"].forEach((event) => {
+  document.addEventListener(event, addListeners);
+});
+
+// Function to clone and replace elements
+function cloneAndReplace(element) {
+  const clone = element.cloneNode(true);
+  element.parentNode.replaceChild(clone, element);
+}
+
+function addListeners() {
+  // Clean up existing listeners
+  const oldMenuButton = document.getElementById("astronav-menu");
+  if (oldMenuButton) {
+    cloneAndReplace(oldMenuButton);
+  }
+
+  const oldDropdownMenus = document.querySelectorAll(".astronav-dropdown");
+  oldDropdownMenus.forEach((menu) => {
+    cloneAndReplace(menu);
+  });
+
+  // Mobile nav toggle
+  const menuButton = document.getElementById("astronav-menu");
+  menuButton && menuButton.addEventListener("click", toggleMobileNav);
+
+  // Dropdown menus
+  const dropdownMenus = document.querySelectorAll(".astronav-dropdown");
+  dropdownMenus.forEach((menu) => {
+    const button = menu.querySelector("button");
+    button &&
+      button.addEventListener("click", (event) =>
+        toggleDropdownMenu(event, menu, dropdownMenus)
+      );
+
+    // Handle Submenu Dropdowns
+    const dropDownSubmenus = menu.querySelectorAll(
+      ".astronav-dropdown-submenu"
+    );
+
+    dropDownSubmenus.forEach((submenu) => {
+      const submenuButton = submenu.querySelector("button");
+      submenuButton &&
+        submenuButton.addEventListener("click", (event) => {
+          event.stopImmediatePropagation();
+          toggleSubmenuDropdown(event, submenu);
+        });
+    });
+  });
+
+  // Clicking away from dropdown will remove the dropdown class
+  document.addEventListener("click", closeAllDropdowns);
+
+  if (closeOnClick) {
+    handleCloseOnClick();
+  }
+}
+
+function toggleMobileNav() {
+  [...document.querySelectorAll(".astronav-toggle")].forEach((el) => {
+    el.classList.toggle("hidden");
+  });
+}
+
+function toggleDropdownMenu(event, menu, dropdownMenus) {
+  toggleMenu(menu);
+
+  // Close one dropdown when selecting another
+  Array.from(dropdownMenus)
+    .filter((el) => el !== menu && !menu.contains(el))
+    .forEach(closeMenu);
+
+  event.stopPropagation();
+}
+
+function toggleSubmenuDropdown(event, submenu) {
+  event.stopPropagation();
+  toggleMenu(submenu);
+
+  // Close sibling submenus at the same nesting level
+  const siblingSubmenus = submenu
+    .closest(".astronav-dropdown")
+    .querySelectorAll(".astronav-dropdown-submenu");
+  Array.from(siblingSubmenus)
+    .filter((el) => el !== submenu && !submenu.contains(el))
+    .forEach(closeMenu);
+}
+
+function closeAllDropdowns(event) {
+  const dropdownMenus = document.querySelectorAll(".dropdown-toggle");
+  const dropdownParent = document.querySelectorAll(
+    ".astronav-dropdown, .astronav-dropdown-submenu"
+  );
+  const isButtonInsideDropdown = [
+    ...document.querySelectorAll(
+      ".astronav-dropdown button, .astronav-dropdown-submenu button, #astronav-menu"
+    ),
+  ].some((button) => button.contains(event.target));
+  if (!isButtonInsideDropdown) {
+    dropdownMenus.forEach((d) => {
+      // console.log("I ran", d);
+      // if (!d.contains(event.target)) {
+      d.classList.remove("open");
+      d.removeAttribute("open");
+      d.classList.add("hidden");
+      // }
+    });
+    dropdownParent.forEach((d) => {
+      d.classList.remove("open");
+      d.removeAttribute("open");
+      d.setAttribute("aria-expanded", "false");
+    });
+  }
+}
+
+function toggleMenu(menu) {
+  menu.classList.toggle("open");
+  const expanded = menu.getAttribute("aria-expanded") === "true";
+  menu.setAttribute("aria-expanded", expanded ? "false" : "true");
+  menu.hasAttribute("open")
+    ? menu.removeAttribute("open")
+    : menu.setAttribute("open", "");
+
+  const dropdownToggle = menu.querySelector(".dropdown-toggle");
+  const dropdownExpanded = dropdownToggle.getAttribute("aria-expanded");
+  dropdownToggle.classList.toggle("hidden");
+  dropdownToggle.setAttribute(
+    "aria-expanded",
+    dropdownExpanded === "true" ? "false" : "true"
+  );
+}
+
+function closeMenu(menu) {
+  // console.log("closing", menu);
+  menu.classList.remove("open");
+  menu.removeAttribute("open");
+  menu.setAttribute("aria-expanded", "false");
+  const dropdownToggles = menu.querySelectorAll(".dropdown-toggle");
+  dropdownToggles.forEach((toggle) => {
+    toggle.classList.add("hidden");
+    toggle.setAttribute("aria-expanded", "false");
+  });
+}
+
+function handleCloseOnClick() {
+  const navMenuItems = document.querySelector(".astronav-items");
+  const navToggle = document.getElementById("astronav-menu");
+  const navLink = navMenuItems && navMenuItems.querySelectorAll("a");
+
+  const MenuIcons = navToggle.querySelectorAll(".astronav-toggle");
+
+  navLink &&
+    navLink.forEach((item) => {
+      item.addEventListener("click", () => {
+        navMenuItems?.classList.add("hidden");
+        MenuIcons.forEach((el) => {
+          el.classList.toggle("hidden");
+        });
+      });
+    });
+}
+})();</script> </header>   <main style="background-color: var(--bg)" data-astro-cid-j7pv25f6> <div class="mx-8 sm:mx-24 lg:flex justify-center text-lg z-10" data-astro-cid-j7pv25f6> <span style="display: inline;" class="lg:mr-1" data-astro-cid-j7pv25f6>The</span> <a href="https://oval.cs.stanford.edu/" style="color:rgb(var(--accent-bright)); text-decoration: none; display: inline;" data-astro-cid-j7pv25f6> <b data-astro-cid-j7pv25f6>Stanford Open Virtual Assistant Lab</b> </a> <img src="/assets/logos/oval-logo.png" alt="Oval Logo" style="height: 1.5em; vertical-align: middle; display: inline; " data-astro-cid-j7pv25f6> <span style="display: inline;" class="lg:ml-1" data-astro-cid-j7pv25f6>presents a pilot of</span> </div> <div class="flex justify-center" data-astro-cid-j7pv25f6> <div class="blob" data-astro-cid-j7pv25f6></div> <p class="header text-4xl mx-8 sm:mx-24 lg:max-w-[50%] lg:text-center sm:text-7xl dark:text-black" data-astro-cid-j7pv25f6>A Public AI Assistant to World Wide Knowledge </p> </div> <p class="flex mx-8 justify-center sm:mx-24 text-lg pt-2 z-10" data-astro-cid-j7pv25f6>Advancing global education and accelerating knowledge discovery with Artificial Intelligence</p> <p class="flex justify-center font-semibold pt-4 my-5 mx-8 sm:mx-24 text-lg z-10" data-astro-cid-j7pv25f6>Access the WWKnowledge Assistant:</p> <div class="grid grid-cols-1 lg:grid-cols-6 gap-8 mx-8 sm:mx-24" data-astro-cid-j7pv25f6> <div class="hidden lg:block" data-astro-cid-j7pv25f6></div> <div class="col-span-2" data-astro-cid-j7pv25f6> <div class="card-container" data-astro-cid-dohjnao5> <div class="banner max-w-48" style="background-color: #FFD0C6; color: #FC3E3E; border: 2px solid #FC3E3E;" data-astro-cid-dohjnao5> BROWSING </div>   <a href="https://storm.genie.stanford.edu" class="card-link rounded-xl" style="background-color: #FFF3F3; border: 2px solid #FC3E3E;" data-astro-cid-dohjnao5> <div class="hover:brightness-95 swiper-carousel-animate-opacity flex items-center" data-astro-cid-dohjnao5> <div class="max-w-4x flex flex-col" data-astro-cid-dohjnao5> <p class="sm:text-xl text-lg font-semibold text-center" style="color: #444444" data-astro-cid-dohjnao5></p> <p class="sm:text-xl text-lg mr-20" style="color: #444444; " data-astro-cid-dohjnao5>Collaboratively research the web with Storm. Create research articles with comprehensive and accurate bibliographies.</p> <p class="sm:text-xl text-lg mt-2 font-semibold" style="color: #FC3E3E; font-weight: 600; display: inline; " data-astro-cid-dohjnao5> Get your own article now <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; display: inline;" data-astro-cid-dohjnao5> <path d="M2.67759 6.3777e-06L10.1448 6.3777e-06C10.3715 -0.000925691 10.5897 0.0885581 10.7499 0.248892C10.9101 0.408287 11 0.624536 11 0.850108L11 8.21765C11 8.68745 10.6169 9.06868 10.1448 9.06868C9.91815 9.06868 9.70083 8.97919 9.54068 8.81886C9.3805 8.65947 9.29058 8.44322 9.29058 8.21765L9.29058 2.96051L1.4591 10.7511C1.12565 11.083 0.58426 11.083 0.250787 10.7511C-0.0835968 10.4193 -0.0835968 9.88053 0.250787 9.54867L8.13933 1.70006L2.67768 1.70006C2.45101 1.70006 2.23369 1.61058 2.07354 1.45118C1.91336 1.29178 1.82344 1.07554 1.82344 0.849964C1.82344 0.624389 1.91336 0.408126 2.07354 0.248748C2.23371 0.0893543 2.45091 6.3777e-06 2.67759 6.3777e-06Z" fill="#FC3E3E" data-astro-cid-dohjnao5></path> </svg> </p> </div> </div> <img src="/assets/logos/storm-logo-4.png" alt="" class="floating-image" data-astro-cid-dohjnao5> </a> </div>  </div> <div class="col-span-2" data-astro-cid-j7pv25f6> <div class="card-container" data-astro-cid-dohjnao5>  <div class="invisible banner max-w-48" style="background-color: white; color: white; border: 2px solid white;" data-astro-cid-dohjnao5>
+&nbsp;
+</div>  <a href="https://wikichat.genie.stanford.edu" class="card-link rounded-xl" style="background-color: #FFF3F3; border: 2px solid #FC3E3E;" data-astro-cid-dohjnao5> <div class="hover:brightness-95 swiper-carousel-animate-opacity flex items-center" data-astro-cid-dohjnao5> <div class="max-w-4x flex flex-col" data-astro-cid-dohjnao5> <p class="sm:text-xl text-lg font-semibold text-center" style="color: #444444" data-astro-cid-dohjnao5></p> <p class="sm:text-xl text-lg mr-20" style="color: #444444; " data-astro-cid-dohjnao5>Chat with popular Wikipedias in different languages</p> <p class="sm:text-xl text-lg mt-2 font-semibold" style="color: #FC3E3E; font-weight: 600; display: inline; " data-astro-cid-dohjnao5> Start chatting in English, Deutsch, Français, Español, 日本語, Русский, Português, Italiano, 中文, فارسی, … <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; display: inline;" data-astro-cid-dohjnao5> <path d="M2.67759 6.3777e-06L10.1448 6.3777e-06C10.3715 -0.000925691 10.5897 0.0885581 10.7499 0.248892C10.9101 0.408287 11 0.624536 11 0.850108L11 8.21765C11 8.68745 10.6169 9.06868 10.1448 9.06868C9.91815 9.06868 9.70083 8.97919 9.54068 8.81886C9.3805 8.65947 9.29058 8.44322 9.29058 8.21765L9.29058 2.96051L1.4591 10.7511C1.12565 11.083 0.58426 11.083 0.250787 10.7511C-0.0835968 10.4193 -0.0835968 9.88053 0.250787 9.54867L8.13933 1.70006L2.67768 1.70006C2.45101 1.70006 2.23369 1.61058 2.07354 1.45118C1.91336 1.29178 1.82344 1.07554 1.82344 0.849964C1.82344 0.624389 1.91336 0.408126 2.07354 0.248748C2.23371 0.0893543 2.45091 6.3777e-06 2.67759 6.3777e-06Z" fill="#FC3E3E" data-astro-cid-dohjnao5></path> </svg> </p> </div> </div> <img src="/assets/logos/wikipedia-logo.png" alt="" class="floating-image" data-astro-cid-dohjnao5> </a> </div>  </div> <div class="hidden lg:block" data-astro-cid-j7pv25f6></div> </div> <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8 mx-8 sm:mx-24" data-astro-cid-j7pv25f6> <div class="card-container" data-astro-cid-dohjnao5> <div class="banner max-w-48" style="background-color: #B2C3FF; color: #4D3EFC; border: 2px solid #4D3EFC;" data-astro-cid-dohjnao5> DEEP-DIVE </div>   <a href="https://history.genie.stanford.edu" class="card-link rounded-xl" style="background-color: #F0F1F7; border: 2px solid #4D3EFC;" data-astro-cid-dohjnao5> <div class="hover:brightness-95 swiper-carousel-animate-opacity flex items-center" data-astro-cid-dohjnao5> <div class="max-w-4x flex flex-col" data-astro-cid-dohjnao5> <p class="sm:text-xl text-lg font-semibold text-center" style="color: #444444" data-astro-cid-dohjnao5></p> <p class="sm:text-xl text-lg mr-20" style="color: #444444; " data-astro-cid-dohjnao5><i>The African Times</i> newspaper <br/> (1867 and 1910), available digitally for the first time.</p> <p class="sm:text-xl text-lg mt-2 font-semibold" style="color: #4D3EFC; font-weight: 600; display: inline; " data-astro-cid-dohjnao5> Chat with the African diaspora in that period <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; display: inline;" data-astro-cid-dohjnao5> <path d="M2.67759 6.3777e-06L10.1448 6.3777e-06C10.3715 -0.000925691 10.5897 0.0885581 10.7499 0.248892C10.9101 0.408287 11 0.624536 11 0.850108L11 8.21765C11 8.68745 10.6169 9.06868 10.1448 9.06868C9.91815 9.06868 9.70083 8.97919 9.54068 8.81886C9.3805 8.65947 9.29058 8.44322 9.29058 8.21765L9.29058 2.96051L1.4591 10.7511C1.12565 11.083 0.58426 11.083 0.250787 10.7511C-0.0835968 10.4193 -0.0835968 9.88053 0.250787 9.54867L8.13933 1.70006L2.67768 1.70006C2.45101 1.70006 2.23369 1.61058 2.07354 1.45118C1.91336 1.29178 1.82344 1.07554 1.82344 0.849964C1.82344 0.624389 1.91336 0.408126 2.07354 0.248748C2.23371 0.0893543 2.45091 6.3777e-06 2.67759 6.3777e-06Z" fill="#4D3EFC" data-astro-cid-dohjnao5></path> </svg> </p> </div> </div> <img src="/assets/logos/tat-logo-border.png" alt="" class="floating-image" data-astro-cid-dohjnao5> </a> </div>  <div class="card-container" data-astro-cid-dohjnao5>  <div class="invisible banner max-w-48" style="background-color: white; color: white; border: 2px solid white;" data-astro-cid-dohjnao5>
+&nbsp;
+</div>  <a href="https://spinach.genie.stanford.edu" class="card-link rounded-xl" style="background-color: #F0F1F7; border: 2px solid #4D3EFC;" data-astro-cid-dohjnao5> <div class="hover:brightness-95 swiper-carousel-animate-opacity flex items-center" data-astro-cid-dohjnao5> <div class="max-w-4x flex flex-col" data-astro-cid-dohjnao5> <p class="sm:text-xl text-lg font-semibold text-center" style="color: #444444" data-astro-cid-dohjnao5></p> <p class="sm:text-xl text-lg mr-20" style="color: #444444; " data-astro-cid-dohjnao5>Co-hosted with Wikidata from Wikimedia, explore the world's knowledge</p> <p class="sm:text-xl text-lg mt-2 font-semibold" style="color: #4D3EFC; font-weight: 600; display: inline; " data-astro-cid-dohjnao5> Deep-dive into 15 billion facts and ask questions <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; display: inline;" data-astro-cid-dohjnao5> <path d="M2.67759 6.3777e-06L10.1448 6.3777e-06C10.3715 -0.000925691 10.5897 0.0885581 10.7499 0.248892C10.9101 0.408287 11 0.624536 11 0.850108L11 8.21765C11 8.68745 10.6169 9.06868 10.1448 9.06868C9.91815 9.06868 9.70083 8.97919 9.54068 8.81886C9.3805 8.65947 9.29058 8.44322 9.29058 8.21765L9.29058 2.96051L1.4591 10.7511C1.12565 11.083 0.58426 11.083 0.250787 10.7511C-0.0835968 10.4193 -0.0835968 9.88053 0.250787 9.54867L8.13933 1.70006L2.67768 1.70006C2.45101 1.70006 2.23369 1.61058 2.07354 1.45118C1.91336 1.29178 1.82344 1.07554 1.82344 0.849964C1.82344 0.624389 1.91336 0.408126 2.07354 0.248748C2.23371 0.0893543 2.45091 6.3777e-06 2.67759 6.3777e-06Z" fill="#4D3EFC" data-astro-cid-dohjnao5></path> </svg> </p> </div> </div> <img src="/assets/logos/wikidata-logo-tight.png" alt="" class="floating-image" data-astro-cid-dohjnao5> </a> </div>  <div class="card-container" data-astro-cid-dohjnao5>  <div class="invisible banner max-w-48" style="background-color: white; color: white; border: 2px solid white;" data-astro-cid-dohjnao5>
+&nbsp;
+</div>  <a href="https://datatalk.genie.stanford.edu/" class="card-link rounded-xl" style="background-color: #F0F1F7; border: 2px solid #4D3EFC;" data-astro-cid-dohjnao5> <div class="hover:brightness-95 swiper-carousel-animate-opacity flex items-center" data-astro-cid-dohjnao5> <div class="max-w-4x flex flex-col" data-astro-cid-dohjnao5> <p class="sm:text-xl text-lg font-semibold text-center" style="color: #444444" data-astro-cid-dohjnao5></p> <p class="sm:text-xl text-lg mr-20" style="color: #444444; " data-astro-cid-dohjnao5>Explore FEC campaign donation data (built in partnership with Big Local News)</p> <p class="sm:text-xl text-lg mt-2 font-semibold" style="color: #4D3EFC; font-weight: 600; display: inline; " data-astro-cid-dohjnao5> Chat and ask questions about campaign donations <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; display: inline;" data-astro-cid-dohjnao5> <path d="M2.67759 6.3777e-06L10.1448 6.3777e-06C10.3715 -0.000925691 10.5897 0.0885581 10.7499 0.248892C10.9101 0.408287 11 0.624536 11 0.850108L11 8.21765C11 8.68745 10.6169 9.06868 10.1448 9.06868C9.91815 9.06868 9.70083 8.97919 9.54068 8.81886C9.3805 8.65947 9.29058 8.44322 9.29058 8.21765L9.29058 2.96051L1.4591 10.7511C1.12565 11.083 0.58426 11.083 0.250787 10.7511C-0.0835968 10.4193 -0.0835968 9.88053 0.250787 9.54867L8.13933 1.70006L2.67768 1.70006C2.45101 1.70006 2.23369 1.61058 2.07354 1.45118C1.91336 1.29178 1.82344 1.07554 1.82344 0.849964C1.82344 0.624389 1.91336 0.408126 2.07354 0.248748C2.23371 0.0893543 2.45091 6.3777e-06 2.67759 6.3777e-06Z" fill="#4D3EFC" data-astro-cid-dohjnao5></path> </svg> </p> </div> </div> <img src="/assets/logos/fec-logo.png" alt="" class="floating-image" data-astro-cid-dohjnao5> </a> </div>  </div> <p class="flex justify-center font-semibold mt-12 mb-2 mx-8 sm:mx-24 text-lg z-10" data-astro-cid-j7pv25f6>Contributing to WWKnowledge:</p> <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mx-8 sm:mx-24" data-astro-cid-j7pv25f6> <div class="card-container" data-astro-cid-dohjnao5>    <div class="card-content rounded-xl" style="background-color: #FBF1FF; border: 2px solid #8C1EA7;" data-astro-cid-dohjnao5> <div class="swiper-carousel-animate-opacity flex items-center" data-astro-cid-dohjnao5> <div class="max-w-4x flex flex-col" data-astro-cid-dohjnao5> <p class="sm:text-xl text-lg font-semibold text-center" style="color: #444444" data-astro-cid-dohjnao5>Upload your Sources</p> <p class="sm:text-xl text-lg mr-20" style="color: #444444; text-align: center; margin-right:0px;" data-astro-cid-dohjnao5>We are always welcoming new data sources to include in WWKnowledge.</p>  <div class="cta-container mt-4 flex flex-col gap-2" data-astro-cid-dohjnao5> <p class="sm:text-xl text-lg mt-2 font-semibold" style="color: #8C1EA7; font-weight: 600; display: block; text-align: center; margin-right:0px;" data-astro-cid-dohjnao5> <a href="https://datatalk-ingestion.genie.stanford.edu/" style="color: #8C1EA7; text-decoration: none;" data-astro-cid-dohjnao5> Upload your CSV <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; display: inline; margin-left: 4px;" data-astro-cid-dohjnao5> <path d="M2.67759 6.3777e-06L10.1448 6.3777e-06C10.3715 -0.000925691 10.5897 0.0885581 10.7499 0.248892C10.9101 0.408287 11 0.624536 11 0.850108L11 8.21765C11 8.68745 10.6169 9.06868 10.1448 9.06868C9.91815 9.06868 9.70083 8.97919 9.54068 8.81886C9.3805 8.65947 9.29058 8.44322 9.29058 8.21765L9.29058 2.96051L1.4591 10.7511C1.12565 11.083 0.58426 11.083 0.250787 10.7511C-0.0835968 10.4193 -0.0835968 9.88053 0.250787 9.54867L8.13933 1.70006L2.67768 1.70006C2.45101 1.70006 2.23369 1.61058 2.07354 1.45118C1.91336 1.29178 1.82344 1.07554 1.82344 0.849964C1.82344 0.624389 1.91336 0.408126 2.07354 0.248748C2.23371 0.0893543 2.45091 6.3777e-06 2.67759 6.3777e-06Z" fill="#8C1EA7" data-astro-cid-dohjnao5></path> </svg> </a> </p><p class="sm:text-xl text-lg mt-2 font-semibold" style="color: #8C1EA7; font-weight: 600; display: block; text-align: center; margin-right:0px;" data-astro-cid-dohjnao5> <a href="https://search.genie.stanford.edu/upload_collection" style="color: #8C1EA7; text-decoration: none;" data-astro-cid-dohjnao5> Upload your corpora <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; display: inline; margin-left: 4px;" data-astro-cid-dohjnao5> <path d="M2.67759 6.3777e-06L10.1448 6.3777e-06C10.3715 -0.000925691 10.5897 0.0885581 10.7499 0.248892C10.9101 0.408287 11 0.624536 11 0.850108L11 8.21765C11 8.68745 10.6169 9.06868 10.1448 9.06868C9.91815 9.06868 9.70083 8.97919 9.54068 8.81886C9.3805 8.65947 9.29058 8.44322 9.29058 8.21765L9.29058 2.96051L1.4591 10.7511C1.12565 11.083 0.58426 11.083 0.250787 10.7511C-0.0835968 10.4193 -0.0835968 9.88053 0.250787 9.54867L8.13933 1.70006L2.67768 1.70006C2.45101 1.70006 2.23369 1.61058 2.07354 1.45118C1.91336 1.29178 1.82344 1.07554 1.82344 0.849964C1.82344 0.624389 1.91336 0.408126 2.07354 0.248748C2.23371 0.0893543 2.45091 6.3777e-06 2.67759 6.3777e-06Z" fill="#8C1EA7" data-astro-cid-dohjnao5></path> </svg> </a> </p> </div> </div> </div>  </div> </div>  <div class="card-container" data-astro-cid-dohjnao5>    <a href="https://github.com/stanford-oval" class="card-link rounded-xl" style="background-color: #FBF1FF; border: 2px solid #8C1EA7;" data-astro-cid-dohjnao5> <div class="hover:brightness-95 swiper-carousel-animate-opacity flex items-center" data-astro-cid-dohjnao5> <div class="max-w-4x flex flex-col" data-astro-cid-dohjnao5> <p class="sm:text-xl text-lg font-semibold text-center" style="color: #444444" data-astro-cid-dohjnao5>Learn the Genie Framework</p> <p class="sm:text-xl text-lg mr-20" style="color: #444444; text-align: center; margin-right:0px;" data-astro-cid-dohjnao5>WWKnowledge is developed on the Stanford OVAL Lab's Genie Agent Framework</p> <p class="sm:text-xl text-lg mt-2 font-semibold" style="color: #8C1EA7; font-weight: 600; display: inline; text-align: center; margin-right:0px;" data-astro-cid-dohjnao5> Learn to build with Genie <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; display: inline;" data-astro-cid-dohjnao5> <path d="M2.67759 6.3777e-06L10.1448 6.3777e-06C10.3715 -0.000925691 10.5897 0.0885581 10.7499 0.248892C10.9101 0.408287 11 0.624536 11 0.850108L11 8.21765C11 8.68745 10.6169 9.06868 10.1448 9.06868C9.91815 9.06868 9.70083 8.97919 9.54068 8.81886C9.3805 8.65947 9.29058 8.44322 9.29058 8.21765L9.29058 2.96051L1.4591 10.7511C1.12565 11.083 0.58426 11.083 0.250787 10.7511C-0.0835968 10.4193 -0.0835968 9.88053 0.250787 9.54867L8.13933 1.70006L2.67768 1.70006C2.45101 1.70006 2.23369 1.61058 2.07354 1.45118C1.91336 1.29178 1.82344 1.07554 1.82344 0.849964C1.82344 0.624389 1.91336 0.408126 2.07354 0.248748C2.23371 0.0893543 2.45091 6.3777e-06 2.67759 6.3777e-06Z" fill="#8C1EA7" data-astro-cid-dohjnao5></path> </svg> </p> </div> </div>  </a> </div>  <div class="card-container" data-astro-cid-dohjnao5>    <a href="https://hai.stanford.edu/events/first-workshop-public-ai-assistant-world-wide-knowledge-wwk" class="card-link rounded-xl" style="background-color: #FBF1FF; border: 2px solid #8C1EA7;" data-astro-cid-dohjnao5> <div class="hover:brightness-95 swiper-carousel-animate-opacity flex items-center" data-astro-cid-dohjnao5> <div class="max-w-4x flex flex-col" data-astro-cid-dohjnao5> <p class="sm:text-xl text-lg font-semibold text-center" style="color: #444444" data-astro-cid-dohjnao5>Learn at our Workshops</p> <p class="sm:text-xl text-lg mr-20" style="color: #444444; text-align: center; margin-right:0px;" data-astro-cid-dohjnao5>Learn about the Genie framework from its creators, and about funding and collaboration opportunities</p> <p class="sm:text-xl text-lg mt-2 font-semibold" style="color: #8C1EA7; font-weight: 600; display: inline; text-align: center; margin-right:0px;" data-astro-cid-dohjnao5> Watch the 2025 recordings <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; display: inline;" data-astro-cid-dohjnao5> <path d="M2.67759 6.3777e-06L10.1448 6.3777e-06C10.3715 -0.000925691 10.5897 0.0885581 10.7499 0.248892C10.9101 0.408287 11 0.624536 11 0.850108L11 8.21765C11 8.68745 10.6169 9.06868 10.1448 9.06868C9.91815 9.06868 9.70083 8.97919 9.54068 8.81886C9.3805 8.65947 9.29058 8.44322 9.29058 8.21765L9.29058 2.96051L1.4591 10.7511C1.12565 11.083 0.58426 11.083 0.250787 10.7511C-0.0835968 10.4193 -0.0835968 9.88053 0.250787 9.54867L8.13933 1.70006L2.67768 1.70006C2.45101 1.70006 2.23369 1.61058 2.07354 1.45118C1.91336 1.29178 1.82344 1.07554 1.82344 0.849964C1.82344 0.624389 1.91336 0.408126 2.07354 0.248748C2.23371 0.0893543 2.45091 6.3777e-06 2.67759 6.3777e-06Z" fill="#8C1EA7" data-astro-cid-dohjnao5></path> </svg> </p> </div> </div>  </a> </div>  </div> <p class="flex justify-center font-semibold mt-10 mb-5 mx-8 sm:mx-24 text-lg z-10" data-astro-cid-j7pv25f6>In Collaboration With</p> <div class="flex justify-center my-8" data-astro-cid-j7pv25f6> <div class="flex flex-col lg:flex-row items-center justify-center max-w-3xl lg:space-x-12 space-y-8 lg:space-y-0" data-astro-cid-j7pv25f6> <img src="/assets/logos/wikimedia-logo.png" alt="Wikimedia Logo" class="max-w-[100px] sm:max-w-[120px]" data-astro-cid-j7pv25f6> <img src="/assets/logos/northwestern-logo.png" alt="Northwestern University Logo" class="max-w-[150px] sm:max-w-[160px]" data-astro-cid-j7pv25f6> <img src="/assets/logos/cjs-logo.png" alt="Columbia Journalism School Logo" class="max-w-[150px] sm:max-w-[160px]" data-astro-cid-j7pv25f6> <img src="/assets/logos/bln-logo.png" alt="Big Local News Logo" class="max-w-[100px] sm:max-w-[120px]" data-astro-cid-j7pv25f6> <img src="/assets/logos/cfas-logo.png" alt="Stanford Center for African Studies Logo" class="max-w-[180px] sm:max-w-[220px]" data-astro-cid-j7pv25f6> </div> </div> <p class="flex justify-center font-semibold my-5 mx-8 sm:mx-24 pt-10 text-lg z-10" data-astro-cid-j7pv25f6>Sponsored  By Verdant Foundation, Alfred P. Sloan Foundation, Brown Institute, Microsoft Azure Services, NSF NAIRR Pilot program, and Stanford HAI</p> </main> <h1 class="text-3xl font-bold underline" data-astro-cid-j7pv25f6></h1>  <footer style="background-color: var(--bg); border-bottom: solid; border-color: #FFFDF6;" data-testId="header" class="py-2 px-2 flex flex-col justify-center items-center " data-astro-cid-sz7xmlte> <p style="color:rgb(var(--accent))" class="footer mt-20 text-center" data-astro-cid-sz7xmlte> Website made by <a href="https://tommybruzzese.com" data-astro-cid-sz7xmlte>Tommy Bruzzese</a> using React and Astro</p> <div class="flex flex-col items-center z-10" data-astro-cid-sz7xmlte> <div data-astro-cid-sz7xmlte> <span style="display: inline;" data-astro-cid-sz7xmlte>© 2025 by</span> <a href="https://oval.cs.stanford.edu/" style="color:rgb(var(--accent-bright)); text-decoration: none; display: inline;" data-astro-cid-sz7xmlte> <b data-astro-cid-sz7xmlte>Stanford Open Virtual Assistant Lab</b> </a> <img src="/assets/logos/oval-logo.png" alt="Oval Logo" style="height: 1.5em; vertical-align: middle; display: inline; " data-astro-cid-sz7xmlte> </div> <a href="https://github.com/stanford-oval" class="lg:ml-2" data-astro-cid-sz7xmlte> <svg width="25px" height="24" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg" data-astro-cid-sz7xmlte> <path fill-rule="evenodd" clipPathUnits="objectBoundingBox" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f" data-astro-cid-sz7xmlte></path> </svg> </a> </div> </footer>  </body></html> 

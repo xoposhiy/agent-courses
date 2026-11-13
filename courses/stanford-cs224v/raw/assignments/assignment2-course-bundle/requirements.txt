@@ -1,0 +1,9 @@
+# the assignment's own dependencies; AOS comes from vendor/aos
+langchain==1.4.3
+langchain-google-genai==4.4.0
+langchain-openai==1.6.7
+pydantic>=2.8,<3
+tenacity>=8.2,<10
+pandas>=2.3
+jupyter>=1.0
+./vendor/aos

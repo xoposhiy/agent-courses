@@ -1,0 +1,28 @@
+# Homework 1 public teaching repository: assignments/OMIM_620938/grill_run/tasks/0006_ground_3/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620938/grill_run/tasks/0006_ground_3/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620938/grill_run/tasks/0006_ground_3/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "term": "Multiple mitochondrial dysfunctions syndrome 1 (MMDS1)",
+  "definition": "A severe autosomal recessive disorder of mitochondrial energy metabolism caused by pathogenic variants in the NFU1 gene, which encodes an iron-sulfur cluster scaffold protein essential for the maturation and assembly of iron-sulfur proteins. Onset typically occurs in early infancy and is characterized by neurological regression, weakness, spasticity or spastic paraparesis, cavitating leukodystrophy, hyperglycinemia, lactic acidosis, and early mortality, representing the severe end of a phenotypic spectrum of NFU1-related diseases that also includes spastic paraplegia 93.",
+  "source": {
+    "title": "A genetic mimic of cerebral palsy: Homozygous NFU1 mutation with marked intrafamilial phenotypic variation",
+    "authors": [
+      "TA Uzunhan",
+      "NE \u00c7akar",
+      "S Seyhan",
+      "K Aydin"
+    ],
+    "year": 2020,
+    "journal": null,
+    "doi": "10.1016/j.braindev.2020.07.009",
+    "pmid": "32747156",
+    "pmc": null,
+    "url": "https://www.sciencedirect.com/science/article/pii/S0387760420301911",
+    "quote": "Genetic defects in the NFU1, an iron-sulfur cluster scaffold protein coding gene, which is vital in the final stage of assembly for iron sulfur proteins, have been defined as multiple mitochondrial dysfunctions syndrome I. This disorder is a severe autosomal recessive disease with onset in early infancy. It is characterized by disruption of the energy metabolism, resulting in weakness, neurological regression, hyperglycinemia, lactic acidosis, and early death."
+  }
+}
+```

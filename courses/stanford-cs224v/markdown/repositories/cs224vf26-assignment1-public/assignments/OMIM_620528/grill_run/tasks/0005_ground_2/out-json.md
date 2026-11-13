@@ -1,0 +1,27 @@
+# Homework 1 public teaching repository: assignments/OMIM_620528/grill_run/tasks/0005_ground_2/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620528/grill_run/tasks/0005_ground_2/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620528/grill_run/tasks/0005_ground_2/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "term": "Distal hereditary motor neuropathy type 11",
+  "definition": "An autosomal dominant motor neuropathy (also referred to as HMND11) associated with heterozygous mutations\u2014including loss-of-function and nonsense variants\u2014in the SPTAN1 gene encoding alpha-II-spectrin, characterized primarily by progressive distal muscle weakness and atrophy, which may also encompass overlapping neuropathic, myopathic, or neurodevelopmental features.",
+  "source": {
+    "title": "A novel de novo SPTAN1 nonsense variant causes hereditary motor neuropathy in a Chinese family",
+    "authors": [
+      "HL Dong",
+      "L Chen",
+      "ZY Wu"
+    ],
+    "year": 2021,
+    "journal": null,
+    "doi": "10.1093/brain/awaa357",
+    "pmid": "33578420",
+    "pmc": null,
+    "url": "https://academic.oup.com/brain/article-abstract/144/1/e11/6015895",
+    "quote": "\u2026 (2019) about autosomal dominant distal hereditary motor neuropathy (dHMN) caused by \u2026 pathogenic SPTAN1 variants exhibiting a broad spectrum of neurodevelopmental phenotypes, \u2026"
+  }
+}
+```

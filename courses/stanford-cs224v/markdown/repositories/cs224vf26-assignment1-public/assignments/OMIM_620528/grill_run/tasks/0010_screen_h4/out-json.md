@@ -1,0 +1,55 @@
+# Homework 1 public teaching repository: assignments/OMIM_620528/grill_run/tasks/0010_screen_h4/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620528/grill_run/tasks/0010_screen_h4/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620528/grill_run/tasks/0010_screen_h4/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "dHMN by definition presents with predominantly motor axonal neuropathy without prominent objective sensory loss; significant sensory involvement reclassifies the phenotype toward CMT2.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "dHMN patients, including those with SPTAN1 variants, manifest lower limb motor deficits without significant sensory impairment, aligning with the standard distinction between dHMN and sensory-motor neuropathies.",
+      "stance": "supports",
+      "source": {
+        "title": "Neuromuscular disorders with evidence of both neuropathic and myopathic phenotype",
+        "authors": [
+          "C Laurini",
+          "L Bosco",
+          "AA Zambon",
+          "B Sorrenti"
+        ],
+        "year": 2026,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://academic.oup.com/brain/article-abstract/149/4/1104/8299847",
+        "quote": "to adhere to that of described dHMN patients (these being \u2026 in the lower limbs without significant sensory impairment, and a \u2026 -function SPTAN1 variants showing a phenotype resembling"
+      },
+      "numbers": []
+    },
+    {
+      "text": "Hereditary motor neuropathies are defined primarily by length-dependent axonal degeneration of lower motor neurons, distinguishing them clinically and mechanistically from Charcot-Marie-Tooth disease.",
+      "stance": "supports",
+      "source": {
+        "title": "The expanding genetic landscape of hereditary motor neuropathies",
+        "authors": [
+          "D Beijer",
+          "J Baets"
+        ],
+        "year": 2020,
+        "journal": null,
+        "doi": "10.1093/brain/awaa311",
+        "pmid": "33210134",
+        "pmc": null,
+        "url": "https://academic.oup.com/brain/article-abstract/143/12/3540/5989972",
+        "quote": "Hereditary motor neuropathies are clinically and genetically diverse disorders characterized by length-dependent axonal degeneration of lower motor neurons."
+      },
+      "numbers": []
+    }
+  ]
+}
+```

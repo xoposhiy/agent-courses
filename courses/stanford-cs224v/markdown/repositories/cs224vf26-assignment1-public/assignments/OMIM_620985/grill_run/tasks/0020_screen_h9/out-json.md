@@ -1,0 +1,40 @@
+# Homework 1 public teaching repository: assignments/OMIM_620985/grill_run/tasks/0020_screen_h9/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620985/grill_run/tasks/0020_screen_h9/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620985/grill_run/tasks/0020_screen_h9/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Karayol et al. (2024) specifically demonstrated that while MOF and MSL3 variants cause reduced global H4K16ac, global bulk H4K16ac levels remain unchanged in MSL2 patient iPSCs.",
+  "confidence": 0.95,
+  "evidence": [
+    {
+      "text": "In individuals with MSL2-related neurodevelopmental disorder, global bulk H4K16ac levels were unchanged in patient-derived iPSCs, unlike in other MSL complex-related disorders caused by MOF and MSL3 variants, which exhibit reduced global H4K16ac.",
+      "stance": "supports",
+      "source": {
+        "title": "MSL2 variants lead to a neurodevelopmental syndrome with lack of coordination, epilepsy, specific dysmorphisms, and a distinct episignature",
+        "authors": [
+          "R Karayol",
+          "MC Borroto",
+          "S Haghshenas"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": "PMC11267526",
+        "url": "https://www.cell.com/ajhg/fulltext/S0002-9297(24)00164-2",
+        "quote": "Remarkably, while NDD-associated variants in two other members of the MSL complex (MOF and MSL3) result in reduced H4K16ac, global H4K16ac levels are unchanged in iPSCs with MSL2 variants."
+      },
+      "numbers": [
+        {
+          "metric": "cohort size",
+          "value": 25
+        }
+      ]
+    }
+  ]
+}
+```

@@ -1,0 +1,51 @@
+# Homework 1 public teaching repository: assignments/OMIM_621295/grill_run/tasks/0040_screen_h17/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621295/grill_run/tasks/0040_screen_h17/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621295/grill_run/tasks/0040_screen_h17/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature notes that absence of selective anterior temporal pole lesions typical of CADASIL distinguishes the recessive form, supporting the premise that temporal involvement in homozygous LoF reflects diffuse changes.",
+  "confidence": 0.8,
+  "evidence": [
+    {
+      "text": "The absence of anterior temporal pole lesions, which are typically found in CADASIL, is regarded as a distinctive feature of the recessive form.",
+      "stance": "supports",
+      "source": {
+        "title": "Novel Mutation of NOTCH3 Gene in a Chinese Patient ... - PMC",
+        "authors": [],
+        "year": 2025,
+        "journal": null,
+        "doi": "10.2478/bjmg-2025-00025",
+        "pmid": "42147988",
+        "pmc": "PMC13175647",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13175647/",
+        "quote": "The absence of anterior temporal pole lesions, which are typically found in CADASIL, is regarded as a distinctive feature of the recessive form."
+      },
+      "numbers": []
+    },
+    {
+      "text": "A homozygous loss-of-function NOTCH3 frameshift variant manifested with early-onset pyramidal signs, epilepsy, and bilateral periventricular confluent white matter hyperintensities distinguishing it from the classical dominant CADASIL presentation.",
+      "stance": "supports",
+      "source": {
+        "title": "A novel homozygous loss-of-function NOTCH3 variant in a Moroccan patient: expanding the spectrum beyond CADASIL",
+        "authors": [
+          "A Ouskri",
+          "H Ihlal",
+          "Z En"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": "10.1007/s10048-025-00862-3",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://link.springer.com/article/10.1007/s10048-025-00862-3",
+        "quote": "Emerging evidence shows that biallelic loss-of-function variants, unlike the gain-of-function variants underlying CADASIL, define a distinct autosomal recessive leukodystrophy characterized by early-onset pyramidal signs, epilepsy, and white matter abnormalities, thereby expanding the phenotypic and molecular spectrum of NOTCH3-related disorders."
+      },
+      "numbers": []
+    }
+  ]
+}
+```

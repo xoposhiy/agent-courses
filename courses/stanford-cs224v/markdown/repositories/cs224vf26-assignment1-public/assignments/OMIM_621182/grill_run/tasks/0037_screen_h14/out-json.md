@@ -1,0 +1,70 @@
+# Homework 1 public teaching repository: assignments/OMIM_621182/grill_run/tasks/0037_screen_h14/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621182/grill_run/tasks/0037_screen_h14/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621182/grill_run/tasks/0037_screen_h14/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Early publications establishing biallelic NAV3 variants and OMIM #621182 describe isolated probands or small consanguineous cohorts (e.g., 1 to 5 patients), supporting small-cohort ascertainment bias.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "The authors report five patients from three unrelated consanguineous families segregating autosomal recessive neurodevelopmental disorder with biallelic truncating variants in NAV3.",
+      "stance": "supports",
+      "source": {
+        "title": "Further evidence of biallelic NAV3 variants associated with recessive neurodevelopmental disorder with dysmorphism, developmental delay, intellectual disability\u00a0\u2026",
+        "authors": [
+          "N Kakar",
+          "S Mascarenhas",
+          "A Ali",
+          "Azmatullah"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": "10.1007/s00439-024-02718-6",
+        "pmid": null,
+        "pmc": "PMC11754320",
+        "url": "https://link.springer.com/article/10.1007/s00439-024-02718-6",
+        "quote": "Here, we report five patients from three unrelated consanguineous families segregating autosomal recessive NDD."
+      },
+      "numbers": [
+        {
+          "metric": "affected patients",
+          "value": 5
+        },
+        {
+          "metric": "unrelated consanguineous families",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "text": "The initial discovery linking biallelic NAV3 variants to autosomal recessive neurodevelopmental disorder identified a homozygous frameshift variant in a single Saudi proband.",
+      "stance": "supports",
+      "source": {
+        "title": "Mutated neuron navigator 3 as a candidate gene for a rare neurodevelopmental disorder",
+        "authors": [
+          "M Umair",
+          "M Alharbi",
+          "E Aloyouni"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": "10.1002/mgg3.2473",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/mgg3.2473",
+        "quote": "We describe a Saudi proband presenting a complex recessive neurodevelopmental disorder (NDD)... For the time, we associate a bi-allelic variant in the NAV3 gene causing NDD in humans."
+      },
+      "numbers": [
+        {
+          "metric": "proband count",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}
+```

@@ -1,0 +1,42 @@
+# Homework 1 public teaching repository: assignments/OMIM_620988/grill_run/tasks/0040_screen_h18/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620988/grill_run/tasks/0040_screen_h18/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620988/grill_run/tasks/0040_screen_h18/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Yamada et al. (2023) confirmed left ventricular non-compaction cardiomyopathy in a human patient and cardiac conduction defects in a knock-in mouse model with a DHX9 ATP-binding motif variant, providing strong plausibility for distinguishing it from DHX30 phenotypes.",
+  "confidence": 0.75,
+  "evidence": [
+    {
+      "text": "Yamada et al. reported a patient with a de novo missense variant p.(Gly414Arg) in the DHX9 ATP-binding site who presented with intellectual disability, short stature, and ventricular non-compaction cardiomyopathy, while the corresponding mouse model exhibited cardiac conduction abnormality.",
+      "stance": "supports",
+      "source": {
+        "title": "Heterozygous loss-of-function DHX9 variants are associated with neurodevelopmental disorders: Human genetic and experimental evidences",
+        "authors": [
+          "M Yamada",
+          "Y Nitta",
+          "T Uehara",
+          "H Suzuki",
+          "F Miya"
+        ],
+        "year": 2023,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.sciencedirect.com/science/article/pii/S1769721223001106",
+        "quote": "Herein, we report a patients with a heterozygous de novo missense variant, p.(Gly414Arg) of DHX9 who presented with a short stature, intellectual disability, and ventricular non-compaction cardiomyopathy. The variant was located in the glycine codon of the ATP-binding site, G-C-G-K-T... Furthermore, in a gene-editing experiment of Dhx9 G416 to R416, corresponding to p.(Gly414Arg) in humans, heterozygous mice showed a reduced body size, reduced emotionality, and cardiac conduction abnormality."
+      },
+      "numbers": [
+        {
+          "metric": "patient count with p.Gly414Arg and ventricular non-compaction cardiomyopathy",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}
+```

@@ -1,0 +1,1504 @@
+{
+  "source_id": "stanford-cs329z",
+  "summary": "An engineering course that connects agent components, design patterns, data, optimization, and evaluation. Available slides support the completed lectures. Later safety and personal-agent topics appear in the schedule and are kept separate.",
+  "limitations": [
+    "Fourteen slide decks are available. Later scheduled lectures have no archived slide deck.",
+    "Core evidence comes from lecture slides. A schedule-only topic is marked planned, even when a related reading is archived.",
+    "The inventory separates general topics, specific patterns, methods, tools, and applications. Repeated slides do not increase course frequency."
+  ],
+  "new_concepts": [
+    {
+      "id": "agent-architecture",
+      "label": "Agent architecture",
+      "kind": "topic",
+      "definition": "Combine a model, tools, memory, control flow, and an environment into an agent.",
+      "aliases": [
+        "agent anatomy",
+        "agent components"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "workflow-agent",
+      "label": "Workflows versus agents",
+      "kind": "concept",
+      "definition": "Distinguish fixed program control flow from model-directed control flow.",
+      "aliases": [
+        "workflows vs agents",
+        "workflow versus agent"
+      ],
+      "parent_id": "agent-architecture"
+    },
+    {
+      "id": "reasoning",
+      "label": "Multi-step reasoning",
+      "kind": "topic",
+      "definition": "Use intermediate reasoning steps to solve a task.",
+      "aliases": [
+        "LLM reasoning"
+      ],
+      "parent_id": "agent-architecture"
+    },
+    {
+      "id": "cot",
+      "label": "Chain of thought",
+      "kind": "pattern",
+      "definition": "Generate intermediate reasoning steps before a final answer.",
+      "aliases": [
+        "CoT",
+        "chain-of-thought"
+      ],
+      "parent_id": "reasoning"
+    },
+    {
+      "id": "self-consistency",
+      "label": "Self-consistency",
+      "kind": "pattern",
+      "definition": "Sample several reasoning paths and combine their answers.",
+      "aliases": [
+        "self consistency"
+      ],
+      "parent_id": "reasoning"
+    },
+    {
+      "id": "reflection",
+      "label": "Reflection and self-correction",
+      "kind": "pattern",
+      "definition": "Use feedback about an attempt to revise reasoning or future actions.",
+      "aliases": [
+        "self-reflection",
+        "self correction"
+      ],
+      "parent_id": "reasoning"
+    },
+    {
+      "id": "reflexion",
+      "label": "Reflexion",
+      "kind": "method",
+      "definition": "Store verbal feedback from earlier attempts to improve later attempts.",
+      "aliases": [],
+      "parent_id": "reflection"
+    },
+    {
+      "id": "planning",
+      "label": "Planning and task decomposition",
+      "kind": "topic",
+      "definition": "Choose and organize steps or subtasks before or during action.",
+      "aliases": [
+        "task planning",
+        "task decomposition"
+      ],
+      "parent_id": "agent-architecture"
+    },
+    {
+      "id": "react",
+      "label": "ReAct",
+      "kind": "pattern",
+      "definition": "Alternate reasoning, tool actions, and observations.",
+      "aliases": [
+        "reasoning and acting"
+      ],
+      "parent_id": "agent-architecture"
+    },
+    {
+      "id": "codeact",
+      "label": "CodeAct",
+      "kind": "pattern",
+      "definition": "Use executable code as the agent action interface.",
+      "aliases": [
+        "code actions"
+      ],
+      "parent_id": "tool-use"
+    },
+    {
+      "id": "plan-execute",
+      "label": "Plan then execute",
+      "kind": "pattern",
+      "definition": "Separate a planning stage from the execution of the planned steps.",
+      "aliases": [
+        "plan-and-execute",
+        "plan then execution"
+      ],
+      "parent_id": "planning"
+    },
+    {
+      "id": "prompt-chain",
+      "label": "Prompt chaining",
+      "kind": "pattern",
+      "definition": "Pass the output of one model step into the next step.",
+      "aliases": [
+        "prompt chain"
+      ],
+      "parent_id": "workflow-agent"
+    },
+    {
+      "id": "routing",
+      "label": "Routing",
+      "kind": "pattern",
+      "definition": "Choose a specialized path or component for an input.",
+      "aliases": [
+        "router pattern"
+      ],
+      "parent_id": "workflow-agent"
+    },
+    {
+      "id": "parallelization",
+      "label": "Parallel execution",
+      "kind": "pattern",
+      "definition": "Run independent tasks at the same time and combine results.",
+      "aliases": [
+        "parallelization",
+        "parallelisation"
+      ],
+      "parent_id": "workflow-agent"
+    },
+    {
+      "id": "orchestrator-workers",
+      "label": "Orchestrator and workers",
+      "kind": "pattern",
+      "definition": "Let a coordinator split work and assign subtasks to worker agents.",
+      "aliases": [
+        "orchestrator-workers",
+        "supervisor-worker"
+      ],
+      "parent_id": "multi-agent"
+    },
+    {
+      "id": "critic-loop",
+      "label": "Evaluator and optimizer loop",
+      "kind": "pattern",
+      "definition": "Use a separate evaluator to guide repeated improvement of an output.",
+      "aliases": [
+        "evaluator-optimizer",
+        "generator-critic"
+      ],
+      "parent_id": "reflection"
+    },
+    {
+      "id": "llm-foundations",
+      "label": "Language model foundations",
+      "kind": "topic",
+      "definition": "Explain next-token modeling and the main parts of a language model.",
+      "aliases": [
+        "LLM foundations",
+        "language modeling"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "transformer",
+      "label": "Transformer and attention",
+      "kind": "concept",
+      "definition": "Use attention-based neural networks to model token sequences.",
+      "aliases": [
+        "transformers",
+        "self-attention"
+      ],
+      "parent_id": "llm-foundations"
+    },
+    {
+      "id": "decoding",
+      "label": "Decoding and sampling",
+      "kind": "topic",
+      "definition": "Choose output tokens from model probabilities.",
+      "aliases": [
+        "token sampling",
+        "generation strategies"
+      ],
+      "parent_id": "llm-foundations"
+    },
+    {
+      "id": "structured-output",
+      "label": "Structured output and constrained decoding",
+      "kind": "method",
+      "definition": "Constrain model output to a schema or a set of valid tokens.",
+      "aliases": [
+        "structured I/O",
+        "constrained generation"
+      ],
+      "parent_id": "llm-foundations"
+    },
+    {
+      "id": "inference-scaling",
+      "label": "Inference-time scaling",
+      "kind": "method",
+      "definition": "Spend more inference compute on reasoning, search, or repeated attempts.",
+      "aliases": [
+        "test-time scaling",
+        "test time compute"
+      ],
+      "parent_id": "reasoning"
+    },
+    {
+      "id": "prompting",
+      "label": "Prompt design",
+      "kind": "topic",
+      "definition": "Design instructions, examples, and role messages to guide a model.",
+      "aliases": [
+        "prompt engineering",
+        "prompting"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "few-shot",
+      "label": "Few-shot prompting",
+      "kind": "method",
+      "definition": "Include examples in a prompt to guide the response.",
+      "aliases": [
+        "fewshot prompting",
+        "in-context examples"
+      ],
+      "parent_id": "prompting"
+    },
+    {
+      "id": "prompt-optimization",
+      "label": "Automatic prompt optimization",
+      "kind": "method",
+      "definition": "Use measured feedback to search for better instructions or examples.",
+      "aliases": [
+        "context optimization",
+        "instruction optimization"
+      ],
+      "parent_id": "prompting"
+    },
+    {
+      "id": "sft",
+      "label": "Supervised fine-tuning",
+      "kind": "method",
+      "definition": "Train a model on examples of desired responses or action trajectories.",
+      "aliases": [
+        "SFT",
+        "instruction fine-tuning"
+      ],
+      "parent_id": "model-training"
+    },
+    {
+      "id": "model-training",
+      "label": "Model training and post-training",
+      "kind": "topic",
+      "definition": "Train model weights before or after initial pretraining.",
+      "aliases": [
+        "LLM training",
+        "posttraining"
+      ],
+      "parent_id": "llm-foundations"
+    },
+    {
+      "id": "rl",
+      "label": "Reinforcement learning",
+      "kind": "topic",
+      "definition": "Learn a policy by using rewards from interaction.",
+      "aliases": [
+        "RL"
+      ],
+      "parent_id": "model-training"
+    },
+    {
+      "id": "ppo",
+      "label": "Proximal policy optimization",
+      "kind": "method",
+      "definition": "Update a policy with a clipped objective to limit policy changes.",
+      "aliases": [
+        "PPO"
+      ],
+      "parent_id": "rl"
+    },
+    {
+      "id": "grpo",
+      "label": "Group relative policy optimization",
+      "kind": "method",
+      "definition": "Compare rewards within groups of sampled outputs to update a policy.",
+      "aliases": [
+        "GRPO"
+      ],
+      "parent_id": "rl"
+    },
+    {
+      "id": "distillation",
+      "label": "Knowledge distillation",
+      "kind": "method",
+      "definition": "Train a model to follow the outputs or behavior of a teacher model.",
+      "aliases": [
+        "on-policy distillation"
+      ],
+      "parent_id": "model-training"
+    },
+    {
+      "id": "rag",
+      "label": "Retrieval-augmented generation",
+      "kind": "topic",
+      "definition": "Retrieve external information and use it to generate an answer.",
+      "aliases": [
+        "RAG",
+        "retrieval augmented generation"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "chunking",
+      "label": "Document chunking and indexing",
+      "kind": "method",
+      "definition": "Split source documents and build an index for retrieval.",
+      "aliases": [
+        "chunking",
+        "document indexing"
+      ],
+      "parent_id": "rag"
+    },
+    {
+      "id": "embeddings",
+      "label": "Embedding-based retrieval",
+      "kind": "method",
+      "definition": "Encode queries and documents as vectors and retrieve similar documents.",
+      "aliases": [
+        "dense retrieval",
+        "vector search",
+        "DPR"
+      ],
+      "parent_id": "rag"
+    },
+    {
+      "id": "sparse-retrieval",
+      "label": "Sparse retrieval",
+      "kind": "method",
+      "definition": "Rank documents with token-based relevance scores.",
+      "aliases": [
+        "BM25",
+        "lexical retrieval"
+      ],
+      "parent_id": "rag"
+    },
+    {
+      "id": "hybrid-search",
+      "label": "Hybrid retrieval",
+      "kind": "method",
+      "definition": "Combine lexical and embedding-based retrieval results.",
+      "aliases": [
+        "hybrid search",
+        "reciprocal rank fusion"
+      ],
+      "parent_id": "rag"
+    },
+    {
+      "id": "reranking",
+      "label": "Reranking and late interaction",
+      "kind": "method",
+      "definition": "Rescore retrieved candidates with richer query-document comparisons.",
+      "aliases": [
+        "cross-encoder reranking",
+        "ColBERT"
+      ],
+      "parent_id": "rag"
+    },
+    {
+      "id": "graph-rag",
+      "label": "Graph-based retrieval",
+      "kind": "method",
+      "definition": "Use graph relations or graph summaries to support retrieval.",
+      "aliases": [
+        "GraphRAG",
+        "graph RAG"
+      ],
+      "parent_id": "rag"
+    },
+    {
+      "id": "agentic-rag",
+      "label": "Agentic retrieval",
+      "kind": "pattern",
+      "definition": "Let an agent decide when and how to retrieve and revise a search.",
+      "aliases": [
+        "agentic RAG",
+        "corrective RAG"
+      ],
+      "parent_id": "rag"
+    },
+    {
+      "id": "retrieval-eval",
+      "label": "Retrieval evaluation",
+      "kind": "topic",
+      "definition": "Measure whether retrieval returns relevant evidence.",
+      "aliases": [
+        "retrieval metrics",
+        "recall at k",
+        "MRR",
+        "nDCG"
+      ],
+      "parent_id": "evaluation"
+    },
+    {
+      "id": "tool-use",
+      "label": "Tool use and function calling",
+      "kind": "topic",
+      "definition": "Let a model choose and call external functions and consume their results.",
+      "aliases": [
+        "tool calling",
+        "function calling",
+        "tool invocation"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "tool-discovery",
+      "label": "Tool discovery and selection",
+      "kind": "method",
+      "definition": "Find and select relevant tools from available tool descriptions.",
+      "aliases": [
+        "tool retrieval",
+        "API selection"
+      ],
+      "parent_id": "tool-use"
+    },
+    {
+      "id": "mcp",
+      "label": "Model Context Protocol",
+      "kind": "protocol",
+      "definition": "Connect agent hosts and tool servers through a shared tool interface.",
+      "aliases": [
+        "MCP"
+      ],
+      "parent_id": "tool-use"
+    },
+    {
+      "id": "tool-eval",
+      "label": "Tool-call evaluation",
+      "kind": "topic",
+      "definition": "Check selected tools, arguments, execution, and tool-use outcomes.",
+      "aliases": [
+        "function-call evaluation",
+        "tool use evaluation"
+      ],
+      "parent_id": "evaluation"
+    },
+    {
+      "id": "frameworks",
+      "label": "Agent frameworks and orchestration",
+      "kind": "topic",
+      "definition": "Use reusable components and control flow to build agent systems.",
+      "aliases": [
+        "agent orchestration",
+        "agent frameworks"
+      ],
+      "parent_id": "agent-architecture"
+    },
+    {
+      "id": "dspy",
+      "label": "DSPy",
+      "kind": "tool",
+      "definition": "Build and optimize language model programs with signatures, modules, and optimizers.",
+      "aliases": [],
+      "parent_id": "frameworks"
+    },
+    {
+      "id": "langgraph",
+      "label": "LangGraph",
+      "kind": "tool",
+      "definition": "Build stateful model workflows with nodes, edges, and graph state.",
+      "aliases": [],
+      "parent_id": "frameworks"
+    },
+    {
+      "id": "harness",
+      "label": "Agent harness design",
+      "kind": "topic",
+      "definition": "Design the runtime around a model, including tools, state, limits, and execution.",
+      "aliases": [
+        "agent scaffolds",
+        "agent scaffolding"
+      ],
+      "parent_id": "agent-architecture"
+    },
+    {
+      "id": "durable-execution",
+      "label": "Durable execution and recovery",
+      "kind": "pattern",
+      "definition": "Persist execution state and recover work after failures or pauses.",
+      "aliases": [
+        "durable workflows",
+        "retries and recovery"
+      ],
+      "parent_id": "frameworks"
+    },
+    {
+      "id": "observability",
+      "label": "Tracing and observability",
+      "kind": "topic",
+      "definition": "Record agent steps and inspect behavior, failures, and runtime measurements.",
+      "aliases": [
+        "agent traces",
+        "telemetry",
+        "tracing"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "context-engineering",
+      "label": "Context engineering",
+      "kind": "topic",
+      "definition": "Select and organize the information supplied to a model for each step.",
+      "aliases": [
+        "context management"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "compaction",
+      "label": "Context summarization and compaction",
+      "kind": "pattern",
+      "definition": "Replace long interaction history with a shorter useful representation.",
+      "aliases": [
+        "context summarization",
+        "compaction"
+      ],
+      "parent_id": "context-engineering"
+    },
+    {
+      "id": "context-offload",
+      "label": "Context offloading",
+      "kind": "pattern",
+      "definition": "Store information outside the active prompt and load it when needed.",
+      "aliases": [
+        "memory offloading",
+        "context offloading to files"
+      ],
+      "parent_id": "context-engineering"
+    },
+    {
+      "id": "observation-masking",
+      "label": "Observation masking",
+      "kind": "pattern",
+      "definition": "Remove or hide older tool outputs while keeping useful interaction structure.",
+      "aliases": [],
+      "parent_id": "context-engineering"
+    },
+    {
+      "id": "context-isolation",
+      "label": "Context isolation",
+      "kind": "pattern",
+      "definition": "Give a task or subagent a separate context to limit interference.",
+      "aliases": [],
+      "parent_id": "context-engineering"
+    },
+    {
+      "id": "progressive-disclosure",
+      "label": "Progressive disclosure",
+      "kind": "pattern",
+      "definition": "Load instructions or tool details only when the current task needs them.",
+      "aliases": [],
+      "parent_id": "context-engineering"
+    },
+    {
+      "id": "memory",
+      "label": "Agent memory",
+      "kind": "topic",
+      "definition": "Store and reuse information across steps or interactions.",
+      "aliases": [
+        "agent memory architectures"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "working-memory",
+      "label": "Working memory",
+      "kind": "concept",
+      "definition": "Keep information needed for the current task in active context.",
+      "aliases": [
+        "short-term memory"
+      ],
+      "parent_id": "memory"
+    },
+    {
+      "id": "episodic-memory",
+      "label": "Episodic memory",
+      "kind": "concept",
+      "definition": "Store events or past experiences that an agent can recall.",
+      "aliases": [],
+      "parent_id": "memory"
+    },
+    {
+      "id": "semantic-memory",
+      "label": "Semantic memory",
+      "kind": "concept",
+      "definition": "Store facts and general knowledge for later use.",
+      "aliases": [],
+      "parent_id": "memory"
+    },
+    {
+      "id": "procedural-memory",
+      "label": "Procedural memory and skills",
+      "kind": "concept",
+      "definition": "Store reusable procedures or skills that guide actions.",
+      "aliases": [
+        "skill libraries",
+        "agent skills"
+      ],
+      "parent_id": "memory"
+    },
+    {
+      "id": "tiered-memory",
+      "label": "Tiered memory",
+      "kind": "pattern",
+      "definition": "Move information between memory levels with different capacity and access costs.",
+      "aliases": [
+        "memory hierarchy",
+        "MemGPT"
+      ],
+      "parent_id": "memory"
+    },
+    {
+      "id": "memory-maintenance",
+      "label": "Memory maintenance and consolidation",
+      "kind": "pattern",
+      "definition": "Update, combine, remove, or reorganize stored memories.",
+      "aliases": [
+        "memory consolidation",
+        "forgetting"
+      ],
+      "parent_id": "memory"
+    },
+    {
+      "id": "memory-eval",
+      "label": "Memory evaluation",
+      "kind": "topic",
+      "definition": "Measure recall, updating, temporal reasoning, and useful memory use.",
+      "aliases": [
+        "memory benchmarks"
+      ],
+      "parent_id": "evaluation"
+    },
+    {
+      "id": "multi-agent",
+      "label": "Multi-agent systems",
+      "kind": "topic",
+      "definition": "Use several agents that interact to solve tasks.",
+      "aliases": [
+        "MAS",
+        "multiagent systems"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "agent-handoff",
+      "label": "Agent handoffs",
+      "kind": "pattern",
+      "definition": "Transfer control and relevant information from one agent to another.",
+      "aliases": [
+        "handoff"
+      ],
+      "parent_id": "multi-agent"
+    },
+    {
+      "id": "agent-as-tool",
+      "label": "Agent as a tool",
+      "kind": "pattern",
+      "definition": "Call a specialist agent as a tool while the caller keeps control.",
+      "aliases": [
+        "subagent as tool"
+      ],
+      "parent_id": "multi-agent"
+    },
+    {
+      "id": "shared-memory",
+      "label": "Shared memory and task coordination",
+      "kind": "pattern",
+      "definition": "Coordinate agents through shared state, task records, or message stores.",
+      "aliases": [
+        "task ledger",
+        "message board"
+      ],
+      "parent_id": "multi-agent"
+    },
+    {
+      "id": "a2a",
+      "label": "Agent2Agent protocol",
+      "kind": "protocol",
+      "definition": "Describe and exchange tasks between agents through a shared protocol.",
+      "aliases": [
+        "A2A"
+      ],
+      "parent_id": "multi-agent"
+    },
+    {
+      "id": "worktree-isolation",
+      "label": "Workspace isolation",
+      "kind": "pattern",
+      "definition": "Give agents separate working directories to prevent conflicting file changes.",
+      "aliases": [
+        "worktree isolation"
+      ],
+      "parent_id": "multi-agent"
+    },
+    {
+      "id": "multi-agent-failures",
+      "label": "Multi-agent failure analysis",
+      "kind": "topic",
+      "definition": "Analyze coordination failures, conflicting goals, and harmful group behavior.",
+      "aliases": [
+        "coordination failures"
+      ],
+      "parent_id": "multi-agent"
+    },
+    {
+      "id": "data-curation",
+      "label": "Training data selection and quality",
+      "kind": "topic",
+      "definition": "Select and check useful tasks, demonstrations, and trajectories.",
+      "aliases": [
+        "data selection",
+        "data quality"
+      ],
+      "parent_id": "model-training"
+    },
+    {
+      "id": "synthetic-data",
+      "label": "Synthetic data and trajectory generation",
+      "kind": "method",
+      "definition": "Generate tasks, examples, or agent rollouts for training or testing.",
+      "aliases": [
+        "synthetic data generation",
+        "synthesized trajectories"
+      ],
+      "parent_id": "data-curation"
+    },
+    {
+      "id": "human-demos",
+      "label": "Human demonstrations and feedback",
+      "kind": "method",
+      "definition": "Collect human actions or feedback to train or improve an agent.",
+      "aliases": [
+        "human demonstrations",
+        "human feedback"
+      ],
+      "parent_id": "data-curation"
+    },
+    {
+      "id": "evaluation",
+      "label": "Agent evaluation and benchmarks",
+      "kind": "topic",
+      "definition": "Measure agent behavior and outcomes with defined tasks and scores.",
+      "aliases": [
+        "agent evals",
+        "agent benchmarking"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "benchmark-design",
+      "label": "Benchmark and test-set design",
+      "kind": "topic",
+      "definition": "Define tasks, environments, stopping rules, and scoring for evaluation.",
+      "aliases": [
+        "benchmark design",
+        "test set design"
+      ],
+      "parent_id": "evaluation"
+    },
+    {
+      "id": "code-grader",
+      "label": "Code-based evaluators",
+      "kind": "method",
+      "definition": "Use deterministic code or tests to score agent behavior or outputs.",
+      "aliases": [
+        "code based graders",
+        "programmatic evaluators"
+      ],
+      "parent_id": "evaluation"
+    },
+    {
+      "id": "human-eval",
+      "label": "Human evaluation",
+      "kind": "method",
+      "definition": "Use human judgments or labels to assess agent behavior or outputs.",
+      "aliases": [
+        "human graders"
+      ],
+      "parent_id": "evaluation"
+    },
+    {
+      "id": "llm-judge",
+      "label": "LLM as a judge",
+      "kind": "method",
+      "definition": "Use a language model to score another system with stated criteria.",
+      "aliases": [
+        "LLM-as-judge",
+        "LM-as-a-judge",
+        "LLM judge"
+      ],
+      "parent_id": "evaluation"
+    },
+    {
+      "id": "judge-validation",
+      "label": "Judge validation and bias",
+      "kind": "topic",
+      "definition": "Check evaluator agreement, accuracy, and bias against trusted labels.",
+      "aliases": [
+        "validating LLM judges",
+        "evaluator calibration"
+      ],
+      "parent_id": "llm-judge"
+    },
+    {
+      "id": "rubrics",
+      "label": "Evaluation rubrics",
+      "kind": "method",
+      "definition": "Define explicit criteria and rating rules for judgments.",
+      "aliases": [
+        "custom rubrics",
+        "grading rubrics"
+      ],
+      "parent_id": "evaluation"
+    },
+    {
+      "id": "reliability",
+      "label": "Reliability and repeated-run evaluation",
+      "kind": "topic",
+      "definition": "Measure variation and success across repeated agent runs.",
+      "aliases": [
+        "pass@k",
+        "pass^k",
+        "nondeterminism"
+      ],
+      "parent_id": "evaluation"
+    },
+    {
+      "id": "reward-hacking",
+      "label": "Reward hacking and evaluation gaming",
+      "kind": "concept",
+      "definition": "Exploit a reward or scoring rule without meeting the intended task.",
+      "aliases": [
+        "reward hacking",
+        "benchmark gaming"
+      ],
+      "parent_id": "evaluation"
+    },
+    {
+      "id": "coding-agents",
+      "label": "Coding and terminal agents",
+      "kind": "application",
+      "definition": "Use agents to write, edit, test, or run code and command-line tasks.",
+      "aliases": [
+        "software engineering agents",
+        "terminal agents"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "safety",
+      "label": "Agent safety and guardrails",
+      "kind": "topic",
+      "definition": "Limit harmful agent actions and enforce task or use constraints.",
+      "aliases": [
+        "agent guardrails",
+        "safety guardrails"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "prompt-injection",
+      "label": "Prompt injection",
+      "kind": "concept",
+      "definition": "Untrusted content attempts to redirect an agent or override instructions.",
+      "aliases": [
+        "indirect prompt injection"
+      ],
+      "parent_id": "safety"
+    },
+    {
+      "id": "privacy",
+      "label": "Privacy and user data protection",
+      "kind": "topic",
+      "definition": "Control disclosure and use of private user information.",
+      "aliases": [
+        "privacy risks"
+      ],
+      "parent_id": "safety"
+    },
+    {
+      "id": "sandboxing",
+      "label": "Sandboxed execution",
+      "kind": "method",
+      "definition": "Run code or tools inside a restricted environment.",
+      "aliases": [
+        "sandboxing",
+        "execution sandbox"
+      ],
+      "parent_id": "safety"
+    },
+    {
+      "id": "hitl",
+      "label": "Human oversight and approval",
+      "kind": "pattern",
+      "definition": "Pause or route an agent decision to a person for review or approval.",
+      "aliases": [
+        "human-in-the-loop",
+        "HITL",
+        "human oversight"
+      ],
+      "parent_id": "safety"
+    },
+    {
+      "id": "personalization",
+      "label": "Personalization and user modeling",
+      "kind": "topic",
+      "definition": "Adapt agent behavior to a user's preferences, history, or needs.",
+      "aliases": [
+        "user modeling",
+        "personal agents"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "proactive",
+      "label": "Proactive and mixed-initiative agents",
+      "kind": "pattern",
+      "definition": "Let an agent decide when to initiate useful actions or interaction.",
+      "aliases": [
+        "mixed initiative",
+        "proactive agents"
+      ],
+      "parent_id": "personalization"
+    }
+  ],
+  "coverage": [
+    {
+      "concept_id": "agent-architecture",
+      "source": "markdown/slides/lecture01.md",
+      "needle": "Anatomy of an Agent",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "workflow-agent",
+      "source": "markdown/slides/lecture01.md",
+      "needle": "Workflows vs. Agents",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reasoning",
+      "source": "markdown/slides/lecture01.md",
+      "needle": "Reasoning and Planning",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "cot",
+      "source": "markdown/slides/lecture01.md",
+      "needle": "Comparing ReAct with COT",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "self-consistency",
+      "source": "markdown/slides/lecture01.md",
+      "needle": "Self-Consistency",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reflection",
+      "source": "markdown/slides/lecture01.md",
+      "needle": "self-reflection",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "llm-foundations",
+      "source": "markdown/slides/lecture02.md",
+      "needle": "What is a Language Model?",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "transformer",
+      "source": "markdown/slides/lecture02.md",
+      "needle": "Multi-Head",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "decoding",
+      "source": "markdown/slides/lecture02.md",
+      "needle": "Temperature",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "structured-output",
+      "source": "markdown/slides/lecture02.md",
+      "needle": "Constrained Decoding",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "inference-scaling",
+      "source": "markdown/slides/lecture02.md",
+      "needle": "Inference Time Scaling",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "model-training",
+      "source": "markdown/slides/lecture02.md",
+      "needle": "Posttraining",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "prompting",
+      "source": "markdown/slides/lecture02.md",
+      "needle": "Context Engineering",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "rag",
+      "source": "markdown/slides/lecture03.md",
+      "needle": "Retrieval Augmented Generation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "chunking",
+      "source": "markdown/slides/lecture03.md",
+      "needle": "Chunking: Basic Unit",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "embeddings",
+      "source": "markdown/slides/lecture03.md",
+      "needle": "dense passage retrieval",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "sparse-retrieval",
+      "source": "markdown/slides/lecture03.md",
+      "needle": "BM25:",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "hybrid-search",
+      "source": "markdown/slides/lecture03.md",
+      "needle": "Hybrid Search",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reranking",
+      "source": "markdown/slides/lecture03.md",
+      "needle": "Cross-Encoders and Reranking",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "graph-rag",
+      "source": "markdown/slides/lecture03.md",
+      "needle": "GraphRAG:",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "agentic-rag",
+      "source": "markdown/slides/lecture03.md",
+      "needle": "Agentic RAG:",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "retrieval-eval",
+      "source": "markdown/slides/lecture03.md",
+      "needle": "Scoring a Retriever",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "tool-use",
+      "source": "markdown/slides/lecture04.md",
+      "needle": "Tool Use",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "tool-discovery",
+      "source": "markdown/slides/lecture04.md",
+      "needle": "Tool Discovery",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "mcp",
+      "source": "markdown/slides/lecture04.md",
+      "needle": "MCP Architecture",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "tool-eval",
+      "source": "markdown/slides/lecture04.md",
+      "needle": "BFCL:",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "frameworks",
+      "source": "markdown/slides/lecture05.md",
+      "needle": "Abstractions in Frameworks",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "dspy",
+      "source": "markdown/slides/lecture05.md",
+      "needle": "DSPy Summary",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "langgraph",
+      "source": "markdown/slides/lecture05.md",
+      "needle": "LangGraph Summary",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "harness",
+      "source": "markdown/slides/lecture05.md",
+      "needle": "What is an Agent Harness?",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "durable-execution",
+      "source": "markdown/slides/lecture05.md",
+      "needle": "Making a Durable Workflow",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "observability",
+      "source": "markdown/slides/lecture05.md",
+      "needle": "Additional Observability Frameworks",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "react",
+      "source": "markdown/slides/lecture06.md",
+      "needle": "ReAct (2023)",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reflexion",
+      "source": "markdown/slides/lecture06.md",
+      "needle": "Reflexion (2023)",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "codeact",
+      "source": "markdown/slides/lecture06.md",
+      "needle": "CodeAct (2024)",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "planning",
+      "source": "markdown/slides/lecture06.md",
+      "needle": "Planning then executing",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "plan-execute",
+      "source": "markdown/slides/lecture06.md",
+      "needle": "Planning then executing",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "prompt-chain",
+      "source": "markdown/slides/lecture06.md",
+      "needle": "Prompt Chaining",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "routing",
+      "source": "markdown/slides/lecture06.md",
+      "needle": "Routing",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "parallelization",
+      "source": "markdown/slides/lecture06.md",
+      "needle": "Parallelization",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "orchestrator-workers",
+      "source": "markdown/slides/lecture06.md",
+      "needle": "Orchestrator",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "critic-loop",
+      "source": "markdown/slides/lecture06.md",
+      "needle": "Evaluator",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "context-engineering",
+      "source": "markdown/slides/lecture06.md",
+      "needle": "Context Engineering",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "compaction",
+      "source": "markdown/slides/lecture06.md",
+      "needle": "Compaction",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "context-offload",
+      "source": "markdown/slides/lecture06.md",
+      "needle": "Memory Offloading",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "observation-masking",
+      "source": "markdown/slides/lecture06.md",
+      "needle": "Observation Masking",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "context-isolation",
+      "source": "markdown/slides/lecture06.md",
+      "needle": "Context Isolation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "progressive-disclosure",
+      "source": "markdown/slides/lecture06.md",
+      "needle": "Progressive Disclosure",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "memory",
+      "source": "markdown/slides/lecture07.md",
+      "needle": "Benefits of Agent Memory",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "working-memory",
+      "source": "markdown/slides/lecture07.md",
+      "needle": "Working Memory",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "episodic-memory",
+      "source": "markdown/slides/lecture07.md",
+      "needle": "Episodic Memory",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "semantic-memory",
+      "source": "markdown/slides/lecture07.md",
+      "needle": "Semantic Memory",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "procedural-memory",
+      "source": "markdown/slides/lecture07.md",
+      "needle": "Procedural",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "tiered-memory",
+      "source": "markdown/slides/lecture07.md",
+      "needle": "Pattern 2: Tiered Memory",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "memory-maintenance",
+      "source": "markdown/slides/lecture07.md",
+      "needle": "Pattern 4: Memory Maintenance",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "memory-eval",
+      "source": "markdown/slides/lecture07.md",
+      "needle": "Evaluating Agent Memory",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "personalization",
+      "source": "markdown/slides/lecture07.md",
+      "needle": "Personalization: Example",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "multi-agent",
+      "source": "markdown/slides/lecture08.md",
+      "needle": "What is a Multi-Agent System?",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "agent-handoff",
+      "source": "markdown/slides/lecture08.md",
+      "needle": "Handoff vs Agent-as-tool",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "agent-as-tool",
+      "source": "markdown/slides/lecture08.md",
+      "needle": "Agent-as-Tool",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "shared-memory",
+      "source": "markdown/slides/lecture08.md",
+      "needle": "Task Ledger",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "a2a",
+      "source": "markdown/slides/lecture08.md",
+      "needle": "Agent2Agent (A2A) Protocol",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "worktree-isolation",
+      "source": "markdown/slides/lecture08.md",
+      "needle": "Worktree Isolation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "multi-agent-failures",
+      "source": "markdown/slides/lecture08.md",
+      "needle": "Why Do Multi-Agent Systems Fail?",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "few-shot",
+      "source": "markdown/slides/lecture09.md",
+      "needle": "Fewshot Prompting",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "prompt-optimization",
+      "source": "markdown/slides/lecture09.md",
+      "needle": "Reflective Optimization",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "sft",
+      "source": "markdown/slides/lecture09.md",
+      "needle": "Supervised Finetuning",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "rl",
+      "source": "markdown/slides/lecture09.md",
+      "needle": "Reinforcement Learning",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "ppo",
+      "source": "markdown/slides/lecture09.md",
+      "needle": "GRPO vs PPO",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "grpo",
+      "source": "markdown/slides/lecture09.md",
+      "needle": "GRPO vs PPO",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "distillation",
+      "source": "markdown/slides/lecture09.md",
+      "needle": "On-Policy Distillation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "coding-agents",
+      "source": "markdown/slides/lecture10.md",
+      "needle": "TERMINAL-BENCH",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reward-hacking",
+      "source": "markdown/slides/lecture10.md",
+      "needle": "REWARD HACKING",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "synthetic-data",
+      "source": "markdown/slides/lecture11.md",
+      "needle": "Synthesized trajectories",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "human-demos",
+      "source": "markdown/slides/lecture11.md",
+      "needle": "Human Demonstrations",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "data-curation",
+      "source": "markdown/slides/lecture12.md",
+      "needle": "Which trajectories are worth imitating?",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "evaluation",
+      "source": "markdown/slides/lecture13.md",
+      "needle": "Agent Benchmarks",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "benchmark-design",
+      "source": "markdown/slides/lecture13.md",
+      "needle": "Task Formulation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "code-grader",
+      "source": "markdown/slides/lecture15.md",
+      "needle": "Code Based Graders",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "human-eval",
+      "source": "markdown/slides/lecture15.md",
+      "needle": "Human Graders",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "llm-judge",
+      "source": "markdown/slides/lecture15.md",
+      "needle": "LM-as-a-Judge Graders",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "judge-validation",
+      "source": "markdown/slides/lecture15.md",
+      "needle": "Biases + Validating Judgment",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "rubrics",
+      "source": "markdown/slides/lecture15.md",
+      "needle": "rubrics",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reliability",
+      "source": "markdown/slides/lecture15.md",
+      "needle": "Handling Nondeterminism",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "safety",
+      "source": "markdown/pages/index.md",
+      "needle": "Agent Safety & Guardrails",
+      "coverage": "planned"
+    },
+    {
+      "concept_id": "prompt-injection",
+      "source": "markdown/pages/index.md",
+      "needle": "indirect injection",
+      "coverage": "planned"
+    },
+    {
+      "concept_id": "privacy",
+      "source": "markdown/pages/index.md",
+      "needle": "Privacy risks of tool access",
+      "coverage": "planned"
+    },
+    {
+      "concept_id": "sandboxing",
+      "source": "markdown/pages/index.md",
+      "needle": "sandboxing and permission models",
+      "coverage": "planned"
+    },
+    {
+      "concept_id": "hitl",
+      "source": "markdown/pages/index.md",
+      "needle": "human-in-the-loop patterns",
+      "coverage": "planned"
+    },
+    {
+      "concept_id": "proactive",
+      "source": "markdown/pages/index.md",
+      "needle": "mixed initiative",
+      "coverage": "planned"
+    }
+  ]
+}

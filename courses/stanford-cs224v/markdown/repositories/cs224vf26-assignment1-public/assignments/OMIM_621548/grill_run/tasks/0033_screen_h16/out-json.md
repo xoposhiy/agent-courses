@@ -1,0 +1,77 @@
+# Homework 1 public teaching repository: assignments/OMIM_621548/grill_run/tasks/0033_screen_h16/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621548/grill_run/tasks/0033_screen_h16/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621548/grill_run/tasks/0033_screen_h16/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature directly demonstrates that dark-adapted full-field ERG abnormalities (electronegative or absent) occur in CLN3 disease but not in early-onset STGD1 at presentation.",
+  "confidence": 0.9,
+  "evidence": [
+    {
+      "text": "In a cohort of 38 children presenting with rapid vision loss (18 with CLN3 disease and 20 with early-onset STGD1), dark-adapted full-field ERG responses in CLN3 disease were either absent or electronegative, whereas in early-onset STGD1 they were generally unaffected and none had an electronegative ERG.",
+      "stance": "supports",
+      "source": {
+        "title": "Recognizing differentiating clinical signs of CLN3 disease (Batten disease) at presentation",
+        "authors": [
+          "WFE Kuper",
+          "HE Talsma"
+        ],
+        "year": 2021,
+        "journal": null,
+        "doi": "10.1111/aos.14630",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/aos.14630",
+        "quote": "In CLN3 disease, dark-adapted (DA) full-field electroretinogram (ERG) responses were either absent or electronegative. In early-onset STGD1, DA ERG responses were generally unaffected. None of the STGD1 patients had an electronegative ERG."
+      },
+      "numbers": [
+        {
+          "metric": "CLN3 cohort size",
+          "value": 18
+        },
+        {
+          "metric": "STGD1 cohort size",
+          "value": 20
+        },
+        {
+          "metric": "STGD1 patients with electronegative ERG",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "text": "All five confirmed CLN3 patients presenting with visual decline and maculopathy demonstrated electronegative ERGs on full-field electroretinography.",
+      "stance": "supports",
+      "source": {
+        "title": "Early recognition of CLN3 disease facilitated by visual electrophysiology and multimodal imaging",
+        "authors": [
+          "DH Sakti",
+          "EE Cornish",
+          "CL Fraser",
+          "BM Nash"
+        ],
+        "year": 2023,
+        "journal": null,
+        "doi": "10.1007/s10633-023-09930-1",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://link.springer.com/article/10.1007/s10633-023-09930-1",
+        "quote": "Electronegative ERGs were identified in all patients."
+      },
+      "numbers": [
+        {
+          "metric": "CLN3 cohort size",
+          "value": 5
+        },
+        {
+          "metric": "CLN3 patients with electronegative ERG",
+          "value": 5
+        }
+      ]
+    }
+  ]
+}
+```

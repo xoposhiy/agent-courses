@@ -1,0 +1,69 @@
+# Homework 1 public teaching repository: assignments/OMIM_621295/grill_run/tasks/0009_screen_h4/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621295/grill_run/tasks/0009_screen_h4/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621295/grill_run/tasks/0009_screen_h4/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature confirms heterozygous carriers of recessive NOTCH3 loss-of-function variants are predominantly asymptomatic without premature stroke.",
+  "confidence": 0.9,
+  "evidence": [
+    {
+      "text": "Systematic evaluation of biallelic NOTCH3 variants found that monoallelic carriers of loss-of-function variants are predominantly asymptomatic, with only rare reports of nonspecific headaches.",
+      "stance": "supports",
+      "source": {
+        "title": "Clinical and neuroradiological spectrum of biallelic variants in NOTCH3",
+        "authors": [
+          "P Iruzubieta",
+          "CAPF Alves",
+          "AM Al Shamsi"
+        ],
+        "year": 2024,
+        "journal": "eBioMedicine",
+        "doi": "10.1016/j.ebiom.2024.105297",
+        "pmid": "39191170",
+        "pmc": null,
+        "url": "https://www.thelancet.com/journals/ebiom/article/PIIS2352-3964(24)00333-5/fulltext?uuid=uuid%3A96be62e9-7005-4bb8-a3db-0ba3a222ee3a",
+        "quote": "Notably, monoallelic carriers of loss-of-function variants are predominantly asymptomatic, with only a few cases reporting nonspecific headaches."
+      },
+      "numbers": [
+        {
+          "metric": "patients with biallelic loss-of-function variants",
+          "value": 26
+        },
+        {
+          "metric": "total patients with biallelic variants analyzed",
+          "value": 50
+        }
+      ]
+    },
+    {
+      "text": "Biallelic null NOTCH3 variants exhibit an autosomal recessive inheritance pattern distinct from CADASIL, with heterozygous carrier parents and incidental heterozygous carriers presenting without premature stroke.",
+      "stance": "supports",
+      "source": {
+        "title": "Distinct neurological phenotypes associated with biallelic loss of NOTCH3 function: evidence for recessive inheritance",
+        "authors": [
+          "B Tasharrofi",
+          "A Najafi",
+          "E Pourbakhtyaran"
+        ],
+        "year": 2024,
+        "journal": "Molecular Biology Reports",
+        "doi": "10.1007/s11033-024-09560-z",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://link.springer.com/article/10.1007/s11033-024-09560-z",
+        "quote": "The consanguineous parents were confirmed as heterozygous variant carriers. In addition, three heterozygous NOTCH3 null variants were reported as incidental findings in three unrelated cases analyzed in our center."
+      },
+      "numbers": [
+        {
+          "metric": "incidental heterozygous cases identified",
+          "value": 3
+        }
+      ]
+    }
+  ]
+}
+```

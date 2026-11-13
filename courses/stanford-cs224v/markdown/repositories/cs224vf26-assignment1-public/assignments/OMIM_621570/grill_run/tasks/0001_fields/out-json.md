@@ -1,0 +1,18 @@
+# Homework 1 public teaching repository: assignments/OMIM_621570/grill_run/tasks/0001_fields/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621570/grill_run/tasks/0001_fields/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621570/grill_run/tasks/0001_fields/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "required_fields": [
+    "Clinical phenotypes reported in affected individuals with MAU2 variants (OMIM #621570), with original paper wording and corresponding standard HPO terms where identifiable",
+    "Frequency of each reported clinical phenotype given as exact numerator and denominator per cohort, attached to the specific cohort and a resolvable source (PMID or DOI)",
+    "Most discriminating clinical findings present in most affected individuals but uncommon in commonly confused overlapping disorders, naming those differential disorders and specifying the confidence of distinction",
+    "Clinical findings specifically assessed and found absent in affected individuals whose presence would argue against the diagnosis",
+    "Phenotype differences or correlations by variant type, variant position, age, or sex",
+    "Any contradictory clinical findings across papers where one report claims presence and another explicitly contradicts it"
+  ]
+}
+```

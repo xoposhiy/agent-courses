@@ -1,0 +1,377 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 3,
+    "text": "Welcome to this course on AI evaluation."
+  },
+  {
+    "startInSeconds": 3,
+    "endInSeconds": 8,
+    "text": "Knowing how to evaluate applications effectively has become a critical\nskill in AI engineering,"
+  },
+  {
+    "startInSeconds": 8,
+    "endInSeconds": 12,
+    "text": "and I'm excited to share the ideas and methods that will help you put\nthat skill into practice."
+  },
+  {
+    "startInSeconds": 12,
+    "endInSeconds": 15,
+    "text": "AI is giving software powerful new capabilities,"
+  },
+  {
+    "startInSeconds": 15,
+    "endInSeconds": 21,
+    "text": "but those capabilities also challenge some of the basic assumptions\nbehind how you build and test software."
+  },
+  {
+    "startInSeconds": 21,
+    "endInSeconds": 25,
+    "text": "To see why, let's look at the app you'll be seeing\nthroughout this course."
+  },
+  {
+    "startInSeconds": 25,
+    "endInSeconds": 29,
+    "text": "It's a support agent for Northwind Apparel,\na fictional clothing retailer."
+  },
+  {
+    "startInSeconds": 29,
+    "endInSeconds": 35,
+    "text": "The agent helps customers find suitable products,\nchecks what's in stock, and adds items to their carts."
+  },
+  {
+    "startInSeconds": 35,
+    "endInSeconds": 40,
+    "text": "As a responsible engineer, you need to know that the app does those\nthings correctly and reliably, so you need to test it."
+  },
+  {
+    "startInSeconds": 40,
+    "endInSeconds": 44,
+    "text": "With traditional code, you write explicit rules\nfor what should happen,"
+  },
+  {
+    "startInSeconds": 44,
+    "endInSeconds": 48,
+    "text": "then test different inputs to see whether you get\nthe results you expect."
+  },
+  {
+    "startInSeconds": 48,
+    "endInSeconds": 53,
+    "text": "And for deterministic code, the same inputs under the same conditions\ngive you the same results."
+  },
+  {
+    "startInSeconds": 53,
+    "endInSeconds": 58,
+    "text": "But imagine you want the app to recommend clothes for a customer's\nwinter camping trip by reading their request"
+  },
+  {
+    "startInSeconds": 58,
+    "endInSeconds": 61,
+    "text": "and making a judgment about what they'll need."
+  },
+  {
+    "startInSeconds": 61,
+    "endInSeconds": 65,
+    "text": "That's harder to write rules for and would typically\nrequire human intervention."
+  },
+  {
+    "startInSeconds": 65,
+    "endInSeconds": 71,
+    "text": "Of course, now an LLM can do that work and even explain why those\nclothes are a good fit for the trip."
+  },
+  {
+    "startInSeconds": 71,
+    "endInSeconds": 73,
+    "text": "And it can go beyond simple judgments."
+  },
+  {
+    "startInSeconds": 73,
+    "endInSeconds": 77,
+    "text": "You can give an agent the goal of helping a customer put together a\nnew winter camping outfit,"
+  },
+  {
+    "startInSeconds": 77,
+    "endInSeconds": 83,
+    "text": "along with Northwind's instructions and tools for searching the\ncatalog, checking stock, and adding items to the cart."
+  },
+  {
+    "startInSeconds": 83,
+    "endInSeconds": 88,
+    "text": "It can then decide how to use those tools as it works towards\nthat goal on the fly."
+  },
+  {
+    "startInSeconds": 88,
+    "endInSeconds": 94,
+    "text": "With LLMs, a relatively small set of new abilities opens up a huge\nrange of possibilities for what you can build."
+  },
+  {
+    "startInSeconds": 94,
+    "endInSeconds": 101,
+    "text": "But the same capabilities that let you build so much more also make it\nmuch harder to know whether you can trust what you've built."
+  },
+  {
+    "startInSeconds": 101,
+    "endInSeconds": 107,
+    "text": "Let's look at some of the reasons why.\nFor one, it's harder to predict how the model will behave."
+  },
+  {
+    "startInSeconds": 107,
+    "endInSeconds": 112,
+    "text": "When you test traditional code, you expect the same test to give you\nthe same result if nothing has changed."
+  },
+  {
+    "startInSeconds": 112,
+    "endInSeconds": 118,
+    "text": "But LLMs generate responses probabilistically,\nso even with the same input, you can get a different result."
+  },
+  {
+    "startInSeconds": 118,
+    "endInSeconds": 124,
+    "text": "For example, the Northwind agent might recommend suitable cold-weather\nclothing for a winter camping trip."
+  },
+  {
+    "startInSeconds": 124,
+    "endInSeconds": 128,
+    "text": "But run that same test again and it might recommend\ncargo shorts instead."
+  },
+  {
+    "startInSeconds": 128,
+    "endInSeconds": 134,
+    "text": "So, passing the test once doesn't tell you whether you can depend on\nit to keep making suitable recommendations."
+  },
+  {
+    "startInSeconds": 134,
+    "endInSeconds": 140,
+    "text": "And you can't guarantee consistent behavior just by writing better\nprompts because you're relying on a model to follow instructions,"
+  },
+  {
+    "startInSeconds": 140,
+    "endInSeconds": 144,
+    "text": "but they're not enforced the way a hard rule in code can be."
+  },
+  {
+    "startInSeconds": 144,
+    "endInSeconds": 151,
+    "text": "The second big reason is that mistakes can be harder to spot. With\nconventional code, you've written the process the application follows."
+  },
+  {
+    "startInSeconds": 151,
+    "endInSeconds": 155,
+    "text": "If the Northwind agent recommends some products and adds them to\nthe customer's cart,"
+  },
+  {
+    "startInSeconds": 155,
+    "endInSeconds": 158,
+    "text": "you might take that as a sign that your code is working."
+  },
+  {
+    "startInSeconds": 158,
+    "endInSeconds": 164,
+    "text": "But with LLMs, your code can run to completion while the agent goes\nabout the job in a completely incorrect way."
+  },
+  {
+    "startInSeconds": 164,
+    "endInSeconds": 171,
+    "text": "And you don't automatically see how it arrived at that result.\nYou just see that products were recommended and added to the cart."
+  },
+  {
+    "startInSeconds": 171,
+    "endInSeconds": 176,
+    "text": "What if the agent skipped checking the product details\nand hallucinated a convincing explanation for why cargo shorts"
+  },
+  {
+    "startInSeconds": 176,
+    "endInSeconds": 179,
+    "text": "would keep the customer warm on their winter trip?"
+  },
+  {
+    "startInSeconds": 179,
+    "endInSeconds": 182,
+    "text": "If you're only checking whether the recommendation\nand cart update completed,"
+  },
+  {
+    "startInSeconds": 182,
+    "endInSeconds": 187,
+    "text": "you won't see that it ignored the customer's needs\nand invented a product claim."
+  },
+  {
+    "startInSeconds": 187,
+    "endInSeconds": 190,
+    "text": "The agent is choosing actions on the fly to reach its goal,"
+  },
+  {
+    "startInSeconds": 190,
+    "endInSeconds": 194,
+    "text": "and it won't necessarily take those actions in the order\nor the way that you intended."
+  },
+  {
+    "startInSeconds": 194,
+    "endInSeconds": 200,
+    "text": "As we saw, its behavior is probabilistic,\nso it might not even do the same thing on the next run."
+  },
+  {
+    "startInSeconds": 200,
+    "endInSeconds": 208,
+    "text": "And on top of that, rules written only in a prompt aren't enforced the\nway rules in code can be. You're relying on the model to follow them."
+  },
+  {
+    "startInSeconds": 208,
+    "endInSeconds": 214,
+    "text": "So if you want to know whether your application is behaving\nas you expect, you need insight into what the agent actually did."
+  },
+  {
+    "startInSeconds": 214,
+    "endInSeconds": 218,
+    "text": "You can't tell all of that by just seeing that it reached the end\nand updated the cart."
+  },
+  {
+    "startInSeconds": 218,
+    "endInSeconds": 224,
+    "text": "And the third big reason these applications are harder to test is\nthat there's a much wider range of situations that they can encounter."
+  },
+  {
+    "startInSeconds": 224,
+    "endInSeconds": 227,
+    "text": "Once people can describe what they want in their own words,"
+  },
+  {
+    "startInSeconds": 227,
+    "endInSeconds": 232,
+    "text": "you can't articulate every way that they might ask or how\nthe agent will respond."
+  },
+  {
+    "startInSeconds": 232,
+    "endInSeconds": 238,
+    "text": "For example, the Northwind agent might recognize that a customer needs\nclothes for winter camping when they say it directly,"
+  },
+  {
+    "startInSeconds": 238,
+    "endInSeconds": 242,
+    "text": "then miss the winter part when it's buried in a longer\ndescription of the trip."
+  },
+  {
+    "startInSeconds": 242,
+    "endInSeconds": 247,
+    "text": "If your tests only used straightforward descriptions,\nyou wouldn't have caught that problem."
+  },
+  {
+    "startInSeconds": 247,
+    "endInSeconds": 251,
+    "text": "And those different requests can lead the agent to\ntake different actions."
+  },
+  {
+    "startInSeconds": 251,
+    "endInSeconds": 257,
+    "text": "It might ask a follow-up question, which gives the customer another\nopportunity to respond in a way you didn't anticipate."
+  },
+  {
+    "startInSeconds": 257,
+    "endInSeconds": 263,
+    "text": "That response affects what the agent does next,\nso the possibilities keep expanding as the interaction continues."
+  },
+  {
+    "startInSeconds": 263,
+    "endInSeconds": 269,
+    "text": "You're testing more than a single request followed by a single answer.\nThat makes choosing your test cases important."
+  },
+  {
+    "startInSeconds": 269,
+    "endInSeconds": 273,
+    "text": "You need them to reflect the variety of situations the\napp will actually face."
+  },
+  {
+    "startInSeconds": 273,
+    "endInSeconds": 281,
+    "text": "You won't be able to anticipate every request or every interaction, so\nyou also need to keep checking what happens when real people use it."
+  },
+  {
+    "startInSeconds": 281,
+    "endInSeconds": 287,
+    "text": "So overall, you're dealing with behavior that can change from run to\nrun, mistakes that can look like success,"
+  },
+  {
+    "startInSeconds": 287,
+    "endInSeconds": 291,
+    "text": "and a range of situations that you can't cover in a few examples."
+  },
+  {
+    "startInSeconds": 291,
+    "endInSeconds": 295,
+    "text": "Tests that only confirm your code and tools work can\nmiss these problems."
+  },
+  {
+    "startInSeconds": 295,
+    "endInSeconds": 301,
+    "text": "So, how do you build confidence that your application is ready for\nreal users? Through systematic evaluation."
+  },
+  {
+    "startInSeconds": 301,
+    "endInSeconds": 309,
+    "text": "You check your application's responses and actions against what the\ntask requires, across realistic situations and repeated runs."
+  },
+  {
+    "startInSeconds": 309,
+    "endInSeconds": 312,
+    "text": "That gives you evidence of where it performs well\nand where it falls short,"
+  },
+  {
+    "startInSeconds": 312,
+    "endInSeconds": 317,
+    "text": "so you can work on those problems and check whether your\nchanges actually help."
+  },
+  {
+    "startInSeconds": 317,
+    "endInSeconds": 323,
+    "text": "That makes evaluation useful throughout development. While you're\nbuilding, you're constantly deciding what to work on next."
+  },
+  {
+    "startInSeconds": 323,
+    "endInSeconds": 328,
+    "text": "Should you change the instructions, try another model,\nor give the agent a different tool?"
+  },
+  {
+    "startInSeconds": 328,
+    "endInSeconds": 333,
+    "text": "Understanding where the application struggles helps you decide\nwhere to put that effort."
+  },
+  {
+    "startInSeconds": 333,
+    "endInSeconds": 340,
+    "text": "Evaluating it again after a change helps you decide whether to keep\nthe change or try something else. And you can begin simply."
+  },
+  {
+    "startInSeconds": 340,
+    "endInSeconds": 346,
+    "text": "Looking closely at a few examples can reveal problems worth working on\nbefore you've built any formal evaluation system."
+  },
+  {
+    "startInSeconds": 346,
+    "endInSeconds": 348,
+    "text": "As you develop the application,"
+  },
+  {
+    "startInSeconds": 348,
+    "endInSeconds": 354,
+    "text": "more systematic evaluations help you check whether those improvements\nhold up across a wider range of situations."
+  },
+  {
+    "startInSeconds": 354,
+    "endInSeconds": 359,
+    "text": "And that's what you'll learn in this course,\nhow to build and use evals in your own projects."
+  },
+  {
+    "startInSeconds": 359,
+    "endInSeconds": 364,
+    "text": "We'll focus on why the methods work and give you practice with them in\nthe labs so you can keep applying what you learn"
+  },
+  {
+    "startInSeconds": 364,
+    "endInSeconds": 366,
+    "text": "as models and tools change."
+  },
+  {
+    "startInSeconds": 366,
+    "endInSeconds": 372,
+    "text": "Over the next two videos, you'll get an overview of how evals work\nand how to use them to understand and improve AI behavior."
+  }
+]

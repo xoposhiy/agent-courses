@@ -1,0 +1,250 @@
+%\chapter{Emergent Behavior in Multi-LLM Systems}\label{chap:emergent}
+
+\chapter{Emergent Behavior in Multi-LLM Systems}\label{chap:emergent}
+
+% Simulation Infrastructure, Gao
+% Generative Agents, Park
+% AgentSociety 1000, Piao
+% AgentVerse, Chen
+% OASIS, Yang
+% WebArena Qi
+
+% norms: Axelrod
+% EvolutionaryAgent, Li
+% Naming Game, Kouwenhoven
+% MetaNorm, Horiguchi
+% CASA, Qiu
+% Agentic LLM, Zhang
+% Debate, Baltaji
+
+% Open World Agents, Subramaniam
+% WebArena, Zhou
+% Balrog, Paglieri
+% Benchagents, Butt
+% AgentBoard, Ma
+
+% \section{Cooperation}
+% \section{Norms}
+% \section{Collective Intelligence}\label{sec:interacting}
+% \citep{najarro2026conversable}
+
+
+\begin{learningbox}
+In this chapter you will learn how multiple LLM agents behave when they are {\em not} assigned roles, %how multiple LLM agents can be used, 
+in order to study emergent behavior in open-ended systems. Specifically, you will be able to:
+\begin{itemize}[leftmargin=*, nosep]
+    \item Distinguish emergent multi-agent simulations from role-based interaction and explain why open-ended settings call for different {\em research questions and evaluation} methods.
+    \item Describe the {\em architecture} of generative agent  simulations and how simulation infrastructure scales from a handful of agents to thousands.
+    \item Explain how (global-scale) conventions, norms, and meta-norms {\em emerge} from (local-scale) agentic interactions in natural language. 
+    \item Understand how multi-agent simulation is used as a {\em scientific instrument} in computational social science.
+    \item Understand the importance of {\em Open World} benchmark environments for data generation.
+    \item Critically evaluate the validity of claims about concepts translated from a human context, such as emergence, self-organization, or collective intelligence, and assess the {\em safety risks} that open-ended multi-agent systems introduce.
+\end{itemize}
+\end{learningbox}
+
+\section{What Is Emergent Multi-Agent Behavior?}\label{sec:interacting}
+The previous chapter studied multi-LLM systems in which every agent was assigned a role and interactions were guided by protocols. Research questions concerned behavior within an assigned structure, asking how well a team of agents solve a task in a controlled way. In this chapter agents are placed in an open-ended environment, and the research questions shift from \emph{How do agents behave and perform given a certain global structure?} to \emph{What global structure emerges out of local  agents interactions?}
+
+As we have seen in this book, agentic LLMs have enhanced abilities for perception, memory, reasoning, decision-making, and adaptive learning, and they can display heterogeneous personality profiles \citep{gao2023s, gao2024large}. Such features make them also suitable for interacting in open-ended multi-agent simulations without prior role assignment, as a proxy for human behavior in a society. Because LLM agents communicate in natural language, the interactions in such simulations are readable and interpretable by researchers. This gives access to intermediate steps and makes simulations much more comparable to human interaction compared to simulations in classic frameworks, meeting long-standing interests from the social sciences. The general structure of LLM-based agents suitable for such simulations is illustrated in Figure~\ref{fig:abm} and Figure~\ref{fig:struct}.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=10cm]{figures/abm}
+    \caption{Agent-based Modeling and LLM-agents \citep{gao2024large}}\label{fig:abm}
+  \end{center}
+\end{figure}
+
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=10cm]{figures/struct}
+    \caption{Structure of LLM-agents for Multi-Agent Modeling \citep{gao2023s}}\label{fig:struct}
+  \end{center}
+\end{figure} 
+
+\subsection{From Agent-Based Modeling to Generative Agent Societies}
+The study of populations of interacting artificial agents has a decades-long history. In agent-based modeling, macro-level patterns and regularities arise bottom-up out of local interactions of simple agents \citep{epstein1996growing, macal_tutorial_2010}. One of the most influential results in agent-based modeling was that cooperation and norms can emerge in populations of self-interested agents \citep{axelrod1986evolutionary}. Cultural evolution theory formalized how behavior can spread through a population by means of imitation, communication, and education \citep{boyd1988culture}. \citet{steels1995self}'s \emph{naming game} demonstrated that even shared vocabularies (which are also in essence conventions) can come into existence from pairwise interactions without central coordination.
+
+In classic agent-based simulations, agents followed hand-coded rules and  exchanged abstract information, rather than using natural language like the agents in this Chapter. Another key contrast is that classic agents possess no background knowledge of the world in any sense comparable to what LLM agents have. %, which each can be meaningfully queried about numerous real-world topics. 
+LLMs allow for an entirely different level of simulations in which agents with rich and diverse personas gossip, persuade, misunderstand, and negotiate in ways that are directly recognizable to humans. Advances in simulation infrastructure make it feasible to run such agents at population scale \citep{gao2024large, yang2024oasis}. The result is a new generation of \emph{generative agent societies} that give a  new impulse to the old agent-based modeling research agenda, while also introducing novel methodological problems and considerations.
+
+In Section \ref{fivedimensions} we introduced a spectrum of five axes for research control over multi-LLM systems  \citep{tran2025multi}. The difference between role-based and open-ended simulations is a matter of degree rather than kind. Open-ended simulations sit at one end of the spectrum, opposite role-defined and protocolized interactions. Open-ended simulations still involve design choices that seed the outcomes, but they do so in a less deterministic way, purposefully leaving space for new patterns to emerge. This shifts the focus of the research: instead of evaluating performance on a task or  clearly defined goal, studies have an open lens---the interaction pattern is the research goal. Open-ended simulatinos observe and explore in a more ethnographical way how agents behave and interact, which requires different methodologies, as we will now discuss.
+
+\subsection{A Methodological Note} \label{sec:meth-emergent}
+The methodological issues discussed in Chapters \ref{chap:behavior} and \ref{chap:role} all carry over to the open-ended setting: prompt sensitivity, run-to-run variability, cascading hallucinations, mutual reinforcement of weaknesses, and validity of terminology from the human context, all pose challenges for open-ended simulations. We will see that this setting amplifies some problems, while mitigating others. For example, in the absence of protocols that apply every time agents interact, small variations at the level of a single agent may put the entire simulation on a different track. This is what makes open-ended simulations both interesting and brittle. An example of a new issue that the open-ended setting introduces is that there can be a thin line between emergence and retrieval: when LLM agents in an open-ended simulation converge on a norm, it is unclear whether this norm emerges \emph{de novo} from their interaction, or whether it was simply retrieved from their pretrained world knowledge. 
+
+Extensive overviews of this emerging field are provided by \citet{mou2024individual}, \citet{savarimuthu2024harnessing}, and \citet{xi2023rise}. We will discuss
+infrastructure and simulation platforms in Section \ref{sec:emergentinfra}, then go to the emergence of conventions and norms in Section \ref{sec:maswork}, and conclude by discussing the importance of open world environments in Section \ref{sec:openworld}. Finally , we reflect on risks of the open-ended setting, in Section \ref{sec:emergentrisk}. 
+Then, Chapter~\ref{chap:generative_agents}, contains a practical case in which you will work hands-on with an open-ended simulation.
+
+\section{Simulation Infrastructure} \label{sec:emergentinfra}
+Open-ended simulations require infrastructures that, on the one hand, provide a platform where research data is being recorded while agents sustain their interaction and behavior over a longer period of time. On the other hand, those infrastructures should allow for enough space for phenomena to occur bottom-up and unknown structure to emerge, and as such not be limiting. In this section we focus on %reviews the landscape by 
+scale, going from a single simulated community inhabiting a virtual town to societies of a million agents.
+
+\subsection{Small Worlds}\label{sec:gen-agent}
+A system called Generative Agents was introduced by \citet{park2023generative}. Generative Agents is an environment where users can interact with a simulated town populated by 25 LLM-based agents. Based on social simulacra techniques proposed earlier \citep{park2022social}, each agent was initiated with a unique persona and memory. For each agent, a record is kept of all the experiences and conversations in the simulation. This record is used to synthesize higher-level reflections, and plan further behavior (see Figure~\ref{fig:simulacra1}). 
+
+In Generative Agents, the agents behave somewhat like characters in the video game The Sims \citep{nutt2003sims}: they initiate conversations, form relationships, spread information, and coordinate ad hoc group activities (see Figure~\ref{fig:simulacra2}). Note that the interactions are influenced by user input and are therefore semi-autonomous, the simulation is largely unscripted, but not fully. How a simulation works is illustrated by the  example of a Valentine’s Day party: the plan for the party was initiated with a user prompt, and subsequently multiple agents spread invitations to one another and show up at the right time with coordinated plans (some are late, just as in real life). The agents developed believable social routines (such as daily schedules, and gossiping) and even exhibit human-like character traits (some agents demonstrated deception or stubbornness, while others showed cooperation). These results show that, with the right starting prompt,  social patterns can emerge from dynamic, semi-autonomous, LLM interactions. 
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=12cm]{figures/simulacra1}
+    \caption{The Memory--Reflection--Planning loop is the enabling design of the Generative Agents system: without retrieval over an ever-growing experience record and periodic reflection, agents lose coherence within hours of simulated time \citep{park2023generative}}\label{fig:simulacra1}
+  \end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=\textwidth]{figures/simulacra2}
+    \caption{Illustration of the Generative Agents simulation featuring 25 agents and an interactive design that allows users to set behavior in motion \citep{park2023generative}}\label{fig:simulacra2}
+  \end{center}
+\end{figure}
+
+\subsection{Societies of Thousands to a Million Agents}
+Scaling the Generative Agents architecture beyond 25 agents raises questions about inference cost and environments that are rich enough to occupy thousands of agents.\footnote{As you will experience hands-on in the next chapter, running a variant of the Generative Agents architecture with only three active agents is already computationally challenging.} A large-scale social simulation is a trade-off between available compute power, total simulation run-time, number of simulated agents,  and accuracy of individual agent behavior. Several platforms address these questions. 
+
+AgentSociety is a simulation at a large scale, involving over 10,000 agents \citep{piao2025agentsociety}. It couples LLM-driven agents with a realistic urban environment with a focus on mobility, employment, and consumption. It aims not only to study everyday social dynamics (as in  Generative Agents), but also offers a testbed for computational social experiments. To allow for the required scale, the simulation runs on a distributed inference backend, with stricter control of agent behavior. 
+
+OASIS is a scalable social media simulator for Twitter/X and Reddit \citep{yang2024oasis}. It supports modeling of up to one million LLM-agents. It is built on CAMEL \citep{li2023camel} and has role-based agents as its starting point. In OASIS, not every agent action involves an LLM-call, and not all agents are active all the time. At its large scale, OASIS shows various social group phenomena, including spreading of (mis)information, group polarization, and herd effects. OASIS is built upon an environment server, recommender system, agent module, time engine, and scalable inferencer (see Figure~\ref{fig:oasis}).
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=\textwidth]{figures/oasis}
+    \caption{Components of OASIS \citep{yang2024oasis}}\label{fig:oasis} 
+  \end{center}
+\end{figure}
+
+%Concordia \citep{vezhnevets2023concordia} is a general-purpose library for \emph{generative agent-based modeling}, in which a special environment agent (the Game Master), narrates the world and adjudicates the effects of agent actions, in the style of a tabletop role-playing game. It positions generative models as a re-usable methodology for researchers with diverse interests. 
+
+Project Sid \citep{al2024projectsid} places up to 1000 agents in a Minecraft world and reports a striking emergence result: agents are observed to develop specialized economic roles (farmers, miners, guards), adhere to collectively adopted rules such as taxation, and transmit cultural and even religious memes across settlements. However, even though the interactions were not scripted, the emergence--retrieval caveat formulated above applies here: the observed roles and behaviors can be expected to be abundantly described in the training data of the LLMs powering the individual agents.
+
+\subsection{Simulation as a Scientific Instrument}
+In addition to being impressive showcases of scalable LLM technology, when used carefully, these platforms can be used for intricate computational social experiments. Simulated generative agent societies have been used to study long-standing research questions  from the social sciences (Section~\ref{sec:interacting}).  AgentSociety, for example, has been used for various case studies including the spread of inflammatory messages, polarization, the effects of universal basic income policies, and the impact of external shocks to a society such as hurricanes \citep{piao2025agentsociety, piao2025polarization}. Such experiments would be unethical, impractical, or outright impossible to run on human populations. The authors argue that in simulations they can be repeated and changes to the experiment can be be made at every step.
+
+\citet{li2024large} further illustrate the approach for misinformation. Their agents exhibit diverse profiles in terms of gender, age, and the big five personality traits.\footnote{Also known as OCEAN: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism.} One of the findings is that encouraging comments does not significantly reduce the spread of misinformation, whereas publicly labeling information with accuracy scores and blocking specific influencers proved to be effective strategies, particularly in scale-free networks \citep{barabasi2009scale}. The pattern of such studies is characteristic: a candidate intervention is implemented as a change to the simulated platform, and its macro-level effect is measured over many runs. Whether these effects transfer to human populations is precisely the validity question of Section~\ref{sec:meth-emergent}; simulations of this kind are best read as hypothesis generators and pre-tests, not as substitutes for field experiments.
+
+\paragraph{A Borderline Case: AgentVerse}
+AgentVerse \citep{chen2023agentverse} is, strictly speaking, a role-based system of the kind studied in Chapter~\ref{chap:role}. In AgentVerse problem solving is split into four stages of expert recruitment, collaborative decision making, action execution, and evaluation, iterated until the result is satisfactory (Figure~\ref{fig:agentverse}). We mention it here because of what happened \emph{beyond} the design: agents manifest emergent behaviors such as volunteering, characterized by agents offering assistance to peers, and conformity, where agents adjust deviated behaviors under the criticism of others. Destructive behaviors were also observed, occasionally leading to undesired and detrimental outcomes. The fact that macro-scale behavior emerged in a role-scripted simulation, illustrates that the role-based/emergent distinction is a spectrum: even tightly protocolized systems regularly display behavior that nobody purposely designed. We return to the risks associated with this observation in Section~\ref{sec:emergentrisk}.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=14cm]{figures/agentverse}
+    \caption{Four Stages for Decision Making in AgentVerse  \citep{chen2023agentverse}}\label{fig:agentverse} 
+  \end{center}
+\end{figure}
+
+\section{Emergent Conventions and Norms}\label{sec:maswork}
+Authors have observed emergent patterns in several open-ended multi-agent simulations. In this section we shift focus from the level of infrastructures and interactions to the level of the conventions and norms.
+
+% Social norms play an important role in the predictability of individuals in groups \citep{axelrod1981emergence, axelrod1986evolutionary}. LLMs endow agents with the ability to communicate in natural language and have created more opportunities for multi-agent research into societies and the emergence of conventions and norms. Extensive overviews of such new possibilities are provided in \citep{mou2024individual, savarimuthu2024harnessing, xi2023rise}. We discuss some of the new approaches in more detail.
+
+EvolutionaryAgent \citep{li2024agent} studies agent alignment in a multi-agent system, with evolutionary methods that go beyond Reinforcement Learning from Human Feedback (see Figure~\ref{fig:evolutionary1}). EvolutionaryAgent follows a controlled approach to norm emergence: it does not permit the evolution of social norms to be disorderly or random, but it also does not intervene in each step of their evolution. The authors define the initial social norms and a desired direction of evolution. Agents with higher fitness (more norm-conforming) are more likely to reproduce, leading to the diffusion of their strategies, gradually stabilizing and forming new social norms.
+%
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=12cm]{figures/evolutionary1}
+    \caption{Overview of EvolutionaryAgent \citep{li2024agent}}\label{fig:evolutionary1} 
+  \end{center}
+\end{figure}
+%
+Defining a complete, realistic, and complex virtual society is challenging. The purpose of the work is to study how, if such a virtual society existed, a system  could further enable intricate behaviors of agents, and how this would lead to the emergence of new dynamics. The system provides a sandbox for investigating the safety of AI systems before they impact the real world.
+
+Based on \citet{steels1995self}'s naming game, different approaches were implemented, using agents powered by LLaMa 3 and Claude 3.5  \citep{kouwenhoven2024searching, ashery2024dynamics, baronchelli2023shaping}. These studies find that globally accepted conventions (or norms) can spontaneously arise from local interactions between communicating LLMs. The authors also demonstrate how strong collective biases can emerge during this process, even when individual agents appear to be unbiased, and how minority groups of committed LLMs can drive social change by establishing new social conventions that can overturn established behaviors.
+
+The emergence of norms is studied at another level by \citet{horiguchi2024evolution}, who explore the potential for LLM agents to spontaneously generate and adhere to normative strategies, building upon the foundational work of Axelrod’s {\em metanorm} games. Metanorms are norms about enforcing norms: the punishment of those who do not punish agents that are breaking norms \citep{axelrod1986evolutionary}. Controlling for the personality traits {\em vengefulness} and {\em boldness}, they find that through dialogue, LLM agents can form complex social norms, such as metanorms, purely through natural language interaction.
+A related study by \citet{he2024norm} evaluates the capability of LLMs to detect norm violations. Based on simulated data from 80 stories in a household context, they investigated whether 10 norms are violated, and found ChatGPT-4 being able for detect norm violations, with Mistral some distance behind.
+
+\citet{qiu2024evaluating} go a step beyond norms, and study the cultural and social awareness of LLM agents. They introduce CASA, a benchmark designed to assess LLM
+agents’ sensitivity to cultural and social norms across two web-based tasks: online shopping and social discussion forums. (CASA is based on WebArena \citep{qi2024webrl}.) Current LLMs perform significantly better in non-agent than in agent web-based  environments, with agents achieving less than 10\% awareness coverage and over 40\% violation rates. However, using prompting and fine-tuning on specific datasets, cultural and social awareness can be improved. 
+
+Inspired by Minsky's Society of Mind \citep{minsky1988society}, cooperation mechanisms are explored in  \citet{zhang2023exploring}'s agentic LLM simulation. This simulation consists of four different societies of LLM agents, where each agent is characterized by a specific trait (easy-going or overconfident) and engages in cooperation with a distinct thinking pattern (debate or reflection). They find that LLM agents manifest human-like social behaviors, such as conformity and consensus reaching, mirroring foundational social psychology theories. Figure~\ref{fig:som} illustrates the societies with different types of agents.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=12cm]{figures/som}
+    \caption{Agents with Different Traits make up
+    Diverse Machine Societies \citep{zhang2023exploring}}\label{fig:som} 
+  \end{center}
+\end{figure}
+
+The question whether groups of LLM agents can successfully engage in cross-national collaboration and debate is studied by \citep{baltaji2024conformity}. Multi agent discussions can support collective AI decisions that reflect diverse perspectives, although agents are susceptible to conformity due to perceived peer pressure. They can also lose track of their personas and opinions. Instructions that encourage debate increase the risk of errors.
+
+\section{Evaluating Agents in Open World Environments}\label{sec:openworld}
+% Can open world agents help? Do they get smarter and smarter and smarter?
+One of the main drivers of agentic LLM research is the problem of plateauing LLM performance due to limited training data. Open World multi-agent interaction aims to address this problem, generating data with multi agent simulations.
+%, another line of research studies open world agents. 
+%
+Machine learning can learn no more complexity than what is present in the dataset (or environment). The idea of an open world model is that it can create infinite datasets or environments, in which agents can continue to learn, to keep improving their intelligence. How should such unlimited challenges be created? The advent of LLMs has given a new impulse to this research question. %(and thus, LLMs are used to solve an LLM problem). 
+This idea is followed, for example,  in the multi agent finetuning approach  \citep{subramaniam2025multiagent}.
+
+Current agents are primarily created and tested in simplified synthetic environments, leading to
+a disconnect with real-world scenarios. \citet{zhou2023webarena} build an environment, WebArena,
+that is more realistic and reproducible. WebArena is an environment
+with fully functional websites from four common domains: e-commerce, social
+forum discussions, collaborative software development, and content management.
+%The environment has a map,  other tools,  and external knowledge
+%bases (such as user manuals) to encourage human-like task-solving (see Figure~\ref{fig:webarena}).
+
+%\begin{figure}
+%  \begin{center}
+%    \includegraphics[width=12cm]{figures/webarena}
+%    \caption{Example task in the WebArena Environment \citep{zhou2023webarena}}\label{fig:webarena} 
+%  \end{center}
+%\end{figure}
+
+%Rainbow Teaming \citep{samvelyan2024rainbow} uses an open world approach to
+%generate adversarial LLM prompts, to improve the robustness of LLMs. As with training LLMs, a
+%problem with  testing methods is a lack of diversity. 
+%Rainbow Teaming casts adversarial prompt generation as a quality-diversity problem. Rainbow Teaming is an open-ended approach \citep{hughes2024open}. It creates diversity with MAP-Elites \citep{mouret2015illuminating}, an evolutionary search method that iteratively populates an archive with increasingly higher-performing prompts.
+%See Figures~\ref{fig:rainbow} and~\ref{fig:rainbow2}.
+
+%\begin{figure}
+%  \begin{center}
+%    \includegraphics[width=12cm]{figures/rainbow}
+%    \caption{Adversarial prompts generated by Rainbow Teaming \citep{samvelyan2024rainbow}}\label{fig:rainbow} 
+%  \end{center}
+%\end{figure}
+
+%\begin{figure}
+%  \begin{center}
+%    \includegraphics[width=12cm]{figures/rainbow2}
+%    \caption{Quality Diversity Mutation Architecture of Rainbow Teaming \citep{samvelyan2024rainbow}}\label{fig:rainbow2} 
+%  \end{center}
+%\end{figure}
+
+% \paragraph{Benchmarks}
+% We will now review relevant benchmark papers.
+Games are also often used  as benchmarks for interactive behavior. Real-world tasks require handling intricate interactions, advanced spatial reasoning, long-term planning, and continuous exploration of new strategies. 
+BALROG \citep{paglieri2024balrog}, the system that we used for Case Study 2, incorporates  planning environments of varying levels of difficulty, ranging from tasks that are solvable by non-expert humans in seconds to  challenging ones that may take years to
+master (such as the NetHack Learning Environment).
+They find  that
+while current models achieve partial success in the easier games, they struggle
+significantly with more challenging tasks such as  vision-based decision-making.
+
+Progress in machine learning depends on the availability of benchmarks. As models evolve, there is a need to create benchmarks that can measure progress on new generative capabilities \citep{butt2024benchagents}. BENCHAGENTS decomposes the benchmark creation process into planning, generation, data verification, and evaluation, each of which is executed by an LLM agent. These agents interact with each other and utilize human-in-the-loop feedback  to explicitly improve and flexibly control data diversity and quality. BENCHAGENTS creates benchmarks to evaluate capabilities related to planning and constraint satisfaction.
+
+AgentBoard provides an evaluation of the breadth of existing benchmarks  \citep{ma2024agentboard}.
+Benchmarks should have task diversity. It is necessary to cover various agent tasks such as embodied, web, and tool
+tasks. Additionally, multi round interaction is important, to mimic realistic scenarios. Existing benchmarks typically adopt single-round tasks. Furthermore, agents should be evaluated in partially-observable environments, to test if they can actively explore their surroundings. Existing agent benchmarks fail to satisfy all of these criteria \citep{ma2024agentboard}.
+
+%\paragraph{Curriculum Learning}
+Research on Open World environments is related to curriculum learning.
+Pre-LLMs work already shows that agent societies may create an automated curriculum of ever increasing difficulty \citep{elman1991incremental, bengio2009curriculum, silver2017mastering, soviany2022curriculum}, requiring increasing levels of intelligent behavior from the agents \citep{racaniere2019automated}. Similar results have been observed for LLMs \citep{feng2023citing}. 
+For example, WebArena is used to study self-evolving curricula \citep{qi2024webrl}, which can also help robot training \citep{ryu2024curricullm} or to mitigate hallucination \citep{zhao2024automatic}.
+
+\section{Risks of Emergent Behavior} \label{sec:emergentrisk}
+Chapter~\ref{chap:role} closed by noting that role assignment introduces risk, since agents may display unintended, even anti-social, behavior simply by playing a part too well. The open-ended setting arguably raises the stakes, since fewer safeguards are built in, and undesirable behavior can arise bottom-up from interaction dynamics. In a sense, this anti-social behavior should not be too surprising, when we remember that the goal of the earliest multi-agent simulations was to find out if cooperative behavior could ever emerge out of the interaction between self-interested agents---which, to the surprise of the researchers, happened, but only under the right circumstances \citep{axelrod1981emergence}. The line between cooperative behavior and competitive behavior is thin.
+
+AgentVerse observed destructive behaviors emerging alongside cooperative ones, occasionally leading to detrimental outcomes \citep{chen2023agentverse}. The naming-game studies showed that strong collective biases can emerge from populations of individually unbiased agents, and that small committed minorities can overturn established conventions \citep{ashery2024dynamics, kouwenhoven2024searching}. These mechanisms are neutral in themselves, but could be exploited by agents that are not well-intended. At platform scale, OASIS and AgentSociety reproduce misinformation spread, group polarization, herding effects, and the propagation of toxic content \citep{yang2024oasis, piao2025polarization}; the same fidelity that makes these simulations scientifically useful makes them \emph{in principle} rehearsal spaces for manipulation strategies.
+
+The constructive response is to turn this risk around. EvolutionaryAgent frames its virtual society explicitly as a sandbox for investigating the safety of AI systems before they impact the real world \citep{li2024agent}. If norms among agents can be steered toward a desired direction in simulation, then the same machinery can be used to stress-test alignment approaches under population dynamics rather than in isolation. Open-ended simulation can be used to understand the circumstances when risks first emerge, and to cheaply study defenses against these risks. 
+
+\section{Concluding Remarks}
+We have covered open-ended multi-LLM simulations without prior role assignment. These simulations give a new impulse to long-standing interests in the social sciences to model self-organizing behaviors, collective intelligence and the development of social
+conventions and norms. The scale of such simulations varies from a few interacting agents up to a million.
+
+The availability of infrastructure that supports large scale simulations enables further studies. However, an open question is to what extent autonomous simulations are truly open-ended, and not influenced by the LLM prompts and agent scaffolding. Furthermore, although the purpose of open-ended simulations is to observe emerging behavior, one has to be careful in interpreting behavioral outcome patterns. All LLM agents are pretrained on human-generated data. It is difficult to distinguish  which elements of behavioral patterns emerge out of agent-agent interaction, and which elements are merely the result of retrieved pretrained behaviors. 
+
+
+\bibliographystyle{plainnat}
+\bibliography{agenticbook,refs,case,synthetic}

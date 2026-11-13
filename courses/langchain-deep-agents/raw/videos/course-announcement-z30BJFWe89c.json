@@ -1,0 +1,162 @@
+[
+  {
+    "text": "I'm excited to announce our latest\nLangChain Academy foundation course,",
+    "start": 0.0,
+    "duration": 4.037
+  },
+  {
+    "text": "Introduction to Deep Agents.",
+    "start": 4.037,
+    "duration": 1.935
+  },
+  {
+    "text": "As you use AI at work or in your daily\nlife, you're rarely interacting",
+    "start": 5.972,
+    "duration": 4.605
+  },
+  {
+    "text": "with an LLM directly.",
+    "start": 10.577,
+    "duration": 1.568
+  },
+  {
+    "text": "There's almost always a layer of software\nthat connects the model",
+    "start": 12.145,
+    "duration": 3.604
+  },
+  {
+    "text": "to the real world.",
+    "start": 15.749,
+    "duration": 1.434
+  },
+  {
+    "text": "That layer is often a harness.",
+    "start": 17.183,
+    "duration": 2.67
+  },
+  {
+    "text": "If you're curious about what a harness is,\nwhy agents need one,",
+    "start": 19.853,
+    "duration": 3.77
+  },
+  {
+    "text": "or how you can use\none for your own agents,",
+    "start": 23.623,
+    "duration": 3.103
+  },
+  {
+    "text": "this course is for you.",
+    "start": 26.726,
+    "duration": 1.735
+  },
+  {
+    "text": "In this course, we'll show you\nhow to build with Deep Agents,",
+    "start": 28.461,
+    "duration": 3.47
+  },
+  {
+    "text": "our open-source agent harness",
+    "start": 31.931,
+    "duration": 2.136
+  },
+  {
+    "text": "built in collaboration with\nthe open-source community.",
+    "start": 34.067,
+    "duration": 2.97
+  },
+  {
+    "text": "Deep Agents is built for\nlong-running tasks.",
+    "start": 37.037,
+    "duration": 2.902
+  },
+  {
+    "text": "It handles planning, context management,\nand multi-agent orchestration",
+    "start": 39.939,
+    "duration": 4.405
+  },
+  {
+    "text": "for complex work like research and coding.",
+    "start": 44.344,
+    "duration": 3.77
+  },
+  {
+    "text": "Deep Agents is a model-neutral\nand highly configurable.",
+    "start": 48.114,
+    "duration": 3.704
+  },
+  {
+    "text": "You can use any\nmodel provider, manage state,",
+    "start": 51.818,
+    "duration": 2.903
+  },
+  {
+    "text": "and add human-in-the-loop\nwhen you need it.",
+    "start": 54.721,
+    "duration": 2.502
+  },
+  {
+    "text": "Tracing and deployment\nalso work natively with LangSmith.",
+    "start": 57.223,
+    "duration": 4.605
+  },
+  {
+    "text": "We'll explore the four core\ncapabilities of a harness.",
+    "start": 61.828,
+    "duration": 3.036
+  },
+  {
+    "text": "So first, we have execution environments,\nincluding file systems, sandboxes,",
+    "start": 64.864,
+    "duration": 4.405
+  },
+  {
+    "text": "and code interpreters.",
+    "start": 69.269,
+    "duration": 1.434
+  },
+  {
+    "text": "Second, we have context management,\nwhich helps ensure",
+    "start": 70.703,
+    "duration": 2.803
+  },
+  {
+    "text": "the model gets the right information\nat the right time.",
+    "start": 73.506,
+    "duration": 2.87
+  },
+  {
+    "text": "Third, we have delegation,\nwhich helps agents plan long-running tasks",
+    "start": 76.376,
+    "duration": 3.704
+  },
+  {
+    "text": "and work through subagents.",
+    "start": 80.08,
+    "duration": 1.568
+  },
+  {
+    "text": "And finally steering,\nwhich keeps humans in the loop",
+    "start": 81.648,
+    "duration": 3.069
+  },
+  {
+    "text": "for critical actions.",
+    "start": 84.717,
+    "duration": 1.469
+  },
+  {
+    "text": "Along the way, you'll get hands-on\nexperience with each of these capabilities",
+    "start": 86.186,
+    "duration": 3.236
+  },
+  {
+    "text": "in Deep Agents, and learn\nhow to apply them in your own projects.",
+    "start": 89.422,
+    "duration": 3.704
+  },
+  {
+    "text": "I hope to see you in this course!",
+    "start": 93.126,
+    "duration": 1.902
+  }
+]

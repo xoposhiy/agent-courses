@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW 1 – Data Processing, Tokenization, and Training</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <style>
+        .overview, .short-answers, .submission-card {
+            background-color: #f8f9fa;
+            padding: 18px 20px;
+            border-radius: 12px;
+            border-left: 4px solid #6CACE4;
+            margin-bottom: 20px;
+        }
+
+        .main-content h1 {
+            margin-bottom: 8px;
+            font-size: 2.2rem;
+            text-shadow: none;
+            color: #1D4F91;
+        }
+
+        .overview ul {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .download-card {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .download-card a {
+            background-color: #1D4F91;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .download-card a:hover {
+            opacity: 0.9;
+        }
+
+        .short-answers ol {
+            padding-left: 20px;
+        }
+
+        .short-answers li {
+            margin-bottom: 12px;
+            line-height: 1.45;
+        }
+
+        .helper-block {
+            margin-top: 10px;
+            padding: 12px 16px;
+            border-left: 3px solid #e5e7eb;
+            background-color: #fff;
+            border: 1px solid #edeff2;
+            border-radius: 8px;
+        }
+
+        .helper-block-label {
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #1D4F91;
+        }
+
+        .code-block {
+            background-color: #fefefe;
+            color: #1f2933;
+            border: 1px solid #e5e7eb;
+            padding: 12px;
+            border-radius: 6px;
+            font-family: "SFMono-Regular", Consolas, "Lucida Console", monospace;
+            font-size: 0.78rem;
+            line-height: 1.35;
+            overflow-x: auto;
+            margin-top: 10px;
+        }
+
+        .submission-card ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .submission-card ol {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .submission-card li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="course-number">COMS 4995-15</div>
+            <h1>Introduction to Designing LLM Agents</h1>
+            <div class="nav-link">
+                <a href="index.html">← Back to Course Home</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <h1 style="margin-bottom: 12px;">Homework 1: Data Processing, Tokenization, and Training</h1>
+            <p style="margin: 0 0 18px 0;"><strong>Due:</strong> Monday, October 5 @ 11:59 PM Eastern Time</p>
+
+            <section class="overview">
+                <h2>Overview</h2>
+                <p>In this assignment, you will build an end-to-end model training pipeline. You will clean a corpus of raw restaurant reviews, write the tokenizer that turns them into model inputs, and train a small transformer to classify them.</p>
+                <p>The assignment includes three code files and four written responses, totaling 100 points.</p>
+                <ul>
+                    <li><strong>Part 1: Data processing (25 pts)</strong> — <code>part1_data_processing.py</code></li>
+                    <li><strong>Part 2: Tokenization (25 pts)</strong> — <code>part2_tokenizing.py</code></li>
+                    <li><strong>Part 3: Training a classifier (30 pts)</strong> — <code>part3_classifier.ipynb</code></li>
+                    <li><strong>Short answer questions (20 pts)</strong> — separate PDF</li>
+                </ul>
+                <div class="download-card">
+                    <div>
+                        <strong>Assignment files</strong>
+                        <p>Download the HW1 starter files and instructions.</p>
+                    </div>
+                    <a href="assets/HW1.zip" download>Download HW1.zip</a>
+                </div>
+            </section>
+
+            <section class="overview">
+                <h2>Setup</h2>
+                <p>You need Python 3.10 or newer.</p>
+                <div class="code-block"><pre><code>pip install transformers tokenizers torch</code></pre></div>
+                <p>Parts 1 and 2 are independent, so you may do them in either order. Complete Part 3 last, as it builds on functions you write in Parts 1 and 2.</p>
+                <p>All functions you have to implement yourself are marked with <code># TODO</code>. Each file also contains a small test function to help you check your work.</p>
+            </section>
+
+            <section class="overview">
+                <h2>Part 1 — Data Processing (25 pts)</h2>
+                <p><code>part1_data_processing.py</code></p>
+                <p>Clean a corpus of 1,000 restaurant reviews containing HTML, broken encodings, contact details, duplicates, and junk.</p>
+                <ul>
+                    <li><strong>1.0 Load:</strong> Load the corpus from JSONL.</li>
+                    <li><strong>1.1 Normalize:</strong> Strip markup, decode HTML entities, fix Unicode, and collapse whitespace.</li>
+                    <li><strong>1.2 Scrub PII:</strong> Replace emails, URLs, phone numbers, and handles with placeholders while leaving alone strings that only look like personal information.</li>
+                    <li><strong>1.3 Quality filter:</strong> Drop documents by length, by how little text is real language, and by near-duplication against documents already kept.</li>
+                    <li><strong>1.4–1.5 Pipeline:</strong> Run the stages in order and report how many records each stage drops.</li>
+                </ul>
+                <p>Run the file to score your work against 52 test cases in <code>data/test_cases.json</code>.</p>
+            </section>
+
+            <section class="overview">
+                <h2>Part 2 — Tokenization (25 pts)</h2>
+                <p><code>part2_tokenizing.py</code></p>
+                <ul>
+                    <li><strong>2.0–2.2:</strong> Load GPT-2, multilingual BERT, and T5, and measure tokens per word and bytes per token across six sentences.</li>
+                    <li><strong>2.3 Round-trip fidelity:</strong> Check whether text survives being encoded and decoded sequentially.</li>
+                    <li><strong>2.4 Byte pair encoding:</strong> Implement BPE yourself, then train a byte-level tokenizer on a corpus.</li>
+                </ul>
+                <p>Run the file to print all three comparison tables.</p>
+            </section>
+
+            <section class="overview">
+                <h2>Part 3 — Training a Classifier (30 pts)</h2>
+                <p><code>part3_classifier.ipynb</code></p>
+                <ul>
+                    <li><strong>3.0:</strong> Load your cleaned corpus and train a tokenizer on it.</li>
+                    <li><strong>3.1:</strong> Split into training and test sets, balanced across the two classes.</li>
+                    <li><strong>3.2:</strong> Build and train a small transformer with token and position embeddings, one self-attention block, mean pooling, and a linear classifier head.</li>
+                    <li><strong>3.3:</strong> Evaluate it on accuracy plus class-wise precision and recall.</li>
+                </ul>
+                <p>A GPU makes training faster but is not required. In Colab, upload the whole <code>hw1</code> folder and set Runtime &gt; Change runtime type &gt; T4 GPU. Uploading only the notebook will fail because it imports the Part 1 and Part 2 files from the same folder.</p>
+            </section>
+
+            <section class="short-answers">
+                <h2>Short Answer Questions (20 pts)</h2>
+                <p>Answer all four questions in a separate PDF. You will need to replace numbers in some functions and re-run your code, so plan your time accordingly.</p>
+                <ol>
+                    <li><strong>[Part 2] Tokenization.</strong> Using the output from the test function in Part 2, discuss how the different input sentences tokenized differently in terms of word-per-token and bytes-per-token. Which failed the round trip check? Why do you think that is?</li>
+                    <li><strong>[Part 2] Your trained BPE tokenizer.</strong> Train your BPE tokenizer using vocab sizes 300, 500, and 2000. Report the vocabulary you actually got at each size and account for any gap. Then tokenize the Part 2 sentences at each size. Which sentences improve as the vocabulary grows and which do not? What does that tell you about how a larger vocabulary would adapt to unseen text?</li>
+                    <li><strong>[Part 3] Training.</strong> Report your training loss at the first and last epoch, alongside your accuracy on the test split. Account for the gap between them. What would happen to the training accuracy if you trained the model for additional epochs? Why do we measure accuracy on the test split, and not train?</li>
+                    <li><strong>[Part 3] Model comparison.</strong> Experiment with the hidden state size in your transformer, decreasing it to 16 and increasing it to 128. Compare and contrast the resulting metrics. What are the tradeoffs as model size increases?</li>
+                </ol>
+            </section>
+
+            <section class="submission-card">
+                <h2>Submission Instructions</h2>
+                <p>Upload four files to Gradescope:</p>
+                <ol>
+                    <li><code>part1_data_processing.py</code></li>
+                    <li><code>part2_tokenizing.py</code></li>
+                    <li><code>part3_classifier.ipynb</code>, run top to bottom with all outputs visible</li>
+                    <li><code>HW1_short_answers.pdf</code></li>
+                </ol>
+            </section>
+
+            <section class="submission-card">
+                <h2>Policies</h2>
+                <ul>
+                    <li><strong>Generative AI:</strong> AI may be used for the coding parts as long as you understand and can explain everything you submit. For the short answers, AI may be used to organize your thoughts, but not to generate your responses.</li>
+                    <li><strong>Late days:</strong> Late days apply automatically from your remaining balance. Beyond that, late work is not accepted.</li>
+                    <li><strong>Collaboration:</strong> Homeworks should be completed individually.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

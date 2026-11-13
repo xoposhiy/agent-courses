@@ -1,0 +1,64 @@
+# Homework 1 public teaching repository: assignments/OMIM_621474/grill_run/tasks/0039_screen_h12/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621474/grill_run/tasks/0039_screen_h12/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621474/grill_run/tasks/0039_screen_h12/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "van Jaarsveld et al. (2023) established the foundational cohort of 21 individuals with DD/ID as universal, while structural organ defects occur variably.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "van Jaarsveld et al. delineated a cohort of 21 individuals with heterozygous (likely) pathogenic KDM2B variants, all presenting with developmental delay and/or intellectual disability alongside variable congenital anomalies of the heart, eyes, and urogenital system.",
+      "stance": "supports",
+      "source": {
+        "title": "Delineation of a KDM2B-related neurodevelopmental disorder and its associated DNA methylation signature",
+        "authors": [
+          "RH Van Jaarsveld",
+          "J Reilly",
+          "MC Cornips"
+        ],
+        "year": 2023,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.sciencedirect.com/science/article/pii/S109836002200942X",
+        "quote": "Our efforts resulted in a cohort of 21 individuals with heterozygous (likely) pathogenic variants. Individuals in this cohort present with developmental delay and/or intellectual disability; autism; attention deficit disorder/attention deficit hyperactivity disorder; congenital organ anomalies mainly of the heart, eyes, and urogenital system; and subtle facial dysmorphism."
+      },
+      "numbers": [
+        {
+          "metric": "cohort size of pathogenic variants",
+          "value": 21
+        }
+      ]
+    },
+    {
+      "text": "Subsequent studies confirmed that individuals with KDM2B haploinsufficiency have a less extensive organ phenotype than the CxxC-specific cohort, in which congenital heart defects are present in up to 78% of individuals.",
+      "stance": "supports",
+      "source": {
+        "title": "KDM2B variants in the CxxC domain impair its DNA-binding ability and cause a distinct neurodevelopmental syndrome",
+        "authors": [
+          "M Alders",
+          "RH van Jaarsveld"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://academic.oup.com/hmg/article-abstract/34/16/1353/8150966",
+        "quote": "The core phenotype of the KDM2B-CxxC cohort is more extensive as compared to that of individuals with KDM2B haploinsufficiency. All individuals with CxxC variants presented with developmental delay, mainly in the speech and motor domain, in addition to variable intellectual disability and mild facial dysmorphism. Congenital heart defects were observed in up to 78% of individuals"
+      },
+      "numbers": [
+        {
+          "metric": "percentage of congenital heart defects in CxxC cohort",
+          "value": "78%"
+        }
+      ]
+    }
+  ]
+}
+```

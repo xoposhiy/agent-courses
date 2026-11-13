@@ -1,0 +1,609 @@
+{
+  "source_id": "stanford-cs224v",
+  "summary": "A course on dependable agents for knowledge work. It emphasizes evidence, formal decisions, clinical matching, structured and unstructured data, research workflows, dialogue specifications, document transcription, and database reconciliation.",
+  "limitations": [
+    "Eleven slide decks and two homework descriptions are available.",
+    "Thousands of saved traces, input records, and vendored code files do not increase frequency.",
+    "The future context-management and harness-behavior sessions are schedule-only. A topic already supported by an available lecture or assignment is counted as taught.",
+    "Clinical examples are analyzed as course content, not as medical guidance."
+  ],
+  "new_concepts": [
+    {
+      "id": "knowledge-curation",
+      "label": "Knowledge curation and synthesis",
+      "kind": "topic",
+      "definition": "Search, organize, compare, and combine information into an evidence-based account.",
+      "aliases": [
+        "knowledge synthesis",
+        "evidence synthesis"
+      ],
+      "parent_id": "deep-research"
+    },
+    {
+      "id": "perspective-search",
+      "label": "Perspective-guided research",
+      "kind": "pattern",
+      "definition": "Use several viewpoints to generate questions and broaden evidence collection.",
+      "aliases": [
+        "multi-perspective research",
+        "perspective-guided question asking"
+      ],
+      "parent_id": "deep-research"
+    },
+    {
+      "id": "provenance",
+      "label": "Decision rationale and data provenance",
+      "kind": "concept",
+      "definition": "Record where facts came from and how evidence and assumptions support a decision.",
+      "aliases": [
+        "accountability",
+        "accountable decisions",
+        "faithful rationale"
+      ],
+      "parent_id": "grounding"
+    },
+    {
+      "id": "smt",
+      "label": "Formal reasoning with SMT",
+      "kind": "method",
+      "definition": "Translate constraints to logic and use a satisfiability-modulo-theories solver.",
+      "aliases": [
+        "satisfiability modulo theories",
+        "MaxSMT"
+      ],
+      "parent_id": "verification"
+    },
+    {
+      "id": "constraint-retrieval",
+      "label": "Constraint-satisfaction retrieval",
+      "kind": "method",
+      "definition": "Retrieve records whose formal constraints are satisfied instead of relying only on similarity.",
+      "aliases": [
+        "SatIR",
+        "satisfiability-based retrieval"
+      ],
+      "parent_id": "rag"
+    },
+    {
+      "id": "semantic-parsing",
+      "label": "Semantic parsing to formal queries",
+      "kind": "method",
+      "definition": "Translate natural language to a formal query or logical representation.",
+      "aliases": [
+        "text-to-SQL",
+        "text-to-SPARQL",
+        "NL-to-SMT"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "canonicalization",
+      "label": "Concept canonicalization and ontologies",
+      "kind": "method",
+      "definition": "Map varied terms to shared concepts and logical relations.",
+      "aliases": [
+        "terminology normalization",
+        "canonical concepts"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "imputation",
+      "label": "Missing-data imputation and assumptions",
+      "kind": "method",
+      "definition": "Fill missing facts using stated policies and expose the resulting assumptions.",
+      "aliases": [
+        "data imputation",
+        "salience-based imputation"
+      ],
+      "parent_id": "provenance"
+    },
+    {
+      "id": "clinical-agents",
+      "label": "Clinical decision and literature agents",
+      "kind": "application",
+      "definition": "Use agents to analyze clinical evidence, compare patient findings, or match trial criteria.",
+      "aliases": [
+        "clinical trial matching",
+        "rare-disease diagnosis"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "db-query",
+      "label": "Natural-language database and graph queries",
+      "kind": "application",
+      "definition": "Use language models to query structured databases and knowledge graphs.",
+      "aliases": [
+        "knowledge graph querying",
+        "database agents"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "hybrid-data",
+      "label": "Queries over structured and unstructured data",
+      "kind": "method",
+      "definition": "Compose database operations with free-text retrieval and language processing.",
+      "aliases": [
+        "SUQL",
+        "hybrid data queries"
+      ],
+      "parent_id": "db-query"
+    },
+    {
+      "id": "dialogue-state",
+      "label": "Dialogue state tracking and management",
+      "kind": "topic",
+      "definition": "Represent conversation facts, task state, and valid next actions.",
+      "aliases": [
+        "dialog state tracking",
+        "conversational management"
+      ],
+      "parent_id": "state"
+    },
+    {
+      "id": "declarative-agents",
+      "label": "Declarative task-oriented agent specifications",
+      "kind": "pattern",
+      "definition": "Define task fields, constraints, and policies and let a runtime manage the dialogue.",
+      "aliases": [
+        "Genie Worksheets",
+        "task-oriented dialogue"
+      ],
+      "parent_id": "harness"
+    },
+    {
+      "id": "structured-research",
+      "label": "Data-driven research and analysis",
+      "kind": "application",
+      "definition": "Use queries and analysis to form, test, and explain findings from structured data.",
+      "aliases": [
+        "data-driven deep research",
+        "DataSTORM"
+      ],
+      "parent_id": "deep-research"
+    },
+    {
+      "id": "research-reproduction",
+      "label": "Research result reproduction",
+      "kind": "method",
+      "definition": "Reproduce published claims using source data and executable analysis.",
+      "aliases": [
+        "scientific reproducibility",
+        "SEER-Repro"
+      ],
+      "parent_id": "structured-research"
+    },
+    {
+      "id": "schema-induction",
+      "label": "Schema induction and information extraction",
+      "kind": "method",
+      "definition": "Define or infer a structured schema and extract source evidence into it.",
+      "aliases": [
+        "automatic schematization",
+        "schema induction"
+      ],
+      "parent_id": "knowledge-curation"
+    },
+    {
+      "id": "data-reconciliation",
+      "label": "Database reconciliation and deduplication",
+      "kind": "method",
+      "definition": "Resolve duplicate, conflicting, or partial extracted records while keeping provenance.",
+      "aliases": [
+        "chunk and reconcile",
+        "data reconciliation"
+      ],
+      "parent_id": "knowledge-curation"
+    },
+    {
+      "id": "vlm",
+      "label": "Vision-language models",
+      "kind": "topic",
+      "definition": "Use models that combine visual inputs and language outputs.",
+      "aliases": [
+        "VLMs",
+        "multimodal language models"
+      ],
+      "parent_id": "llm-foundations"
+    },
+    {
+      "id": "document-transcription",
+      "label": "Historical document transcription",
+      "kind": "application",
+      "definition": "Extract structured text and layout from scans of printed or handwritten documents.",
+      "aliases": [
+        "OCR",
+        "CHURRO",
+        "document transcription"
+      ],
+      "parent_id": "vlm"
+    },
+    {
+      "id": "hypothesis-ledger",
+      "label": "Hypothesis and evidence ledger",
+      "kind": "pattern",
+      "definition": "Track competing hypotheses, supporting evidence, refutations, and open questions.",
+      "aliases": [
+        "belief ledger",
+        "hypothesis tracking"
+      ],
+      "parent_id": "deep-research"
+    }
+  ],
+  "coverage": [
+    {
+      "concept_id": "deep-research",
+      "source": "markdown/slides/i-deepresearch.md",
+      "needle": "What is a research agent?",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "knowledge-curation",
+      "source": "markdown/slides/i-deepresearch.md",
+      "needle": "knowledge curation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "perspective-search",
+      "source": "markdown/slides/i-deepresearch.md",
+      "needle": "perspective-guided question asking",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "planning",
+      "source": "markdown/slides/i-deepresearch.md",
+      "needle": "plan saved",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "orchestrator-workers",
+      "source": "markdown/slides/i-deepresearch.md",
+      "needle": "Planner + workers",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "multi-agent",
+      "source": "markdown/slides/i-deepresearch.md",
+      "needle": "workers search in parallel",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "parallelization",
+      "source": "markdown/slides/i-deepresearch.md",
+      "needle": "workers search in parallel",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "human-collaboration",
+      "source": "markdown/slides/i-deepresearch.md",
+      "needle": "human\u2013AI collaborative",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "proactive",
+      "source": "markdown/slides/i-deepresearch.md",
+      "needle": "mixed-initiative",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "personalization",
+      "source": "markdown/slides/i-deepresearch.md",
+      "needle": "user",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "context-offload",
+      "source": "markdown/slides/i-deepresearch.md",
+      "needle": "Plans, notes, files",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "provenance",
+      "source": "markdown/slides/l-smt-match.md",
+      "needle": "Decision + Rationale + Provenance",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "smt",
+      "source": "markdown/slides/l-smt-match.md",
+      "needle": "SMT/MaxSMT Solver",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "verification",
+      "source": "markdown/slides/l-freetext.md",
+      "needle": "Fact-Checking an LLM Response",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "imputation",
+      "source": "markdown/slides/l-smt-match.md",
+      "needle": "Imputations become assumptions",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "clinical-agents",
+      "source": "markdown/slides/l-smt-match.md",
+      "needle": "Clinical Trial Matching",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "retrieval-eval",
+      "source": "markdown/slides/l-smt-match.md",
+      "needle": "Retrieval has poor recall",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "constraint-retrieval",
+      "source": "markdown/slides/l-satir.md",
+      "needle": "Constraint-Satisfaction Based Retrieval",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "canonicalization",
+      "source": "markdown/slides/l-satir.md",
+      "needle": "Canonicalization is complex",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "semantic-parsing",
+      "source": "markdown/slides/l-satir.md",
+      "needle": "Semantic parsing: NL to SMT",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "rag",
+      "source": "markdown/slides/l-freetext.md",
+      "needle": "WikiChat Pipeline",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "grounding",
+      "source": "markdown/slides/l-freetext.md",
+      "needle": "Fact-Checking an LLM Response",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reflection",
+      "source": "markdown/slides/l-freetext.md",
+      "needle": "Draft + Refine",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "user-simulation",
+      "source": "markdown/slides/l-freetext.md",
+      "needle": "Simulation Prompt",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "evaluation",
+      "source": "markdown/slides/l-freetext.md",
+      "needle": "Design Analysis:",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "react",
+      "source": "markdown/slides/l-agentic.md",
+      "needle": "ReAct",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "db-query",
+      "source": "markdown/slides/l-agentic.md",
+      "needle": "SPARQL",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "tool-use",
+      "source": "markdown/assignments/cs224v-2026-hw2.md",
+      "needle": "Tool call questions",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "structured-research",
+      "source": "markdown/slides/l-data-driven-deep-research.md",
+      "needle": "thesis generation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "plan-execute",
+      "source": "markdown/slides/l-data-driven-deep-research.md",
+      "needle": "Planner\u2013executor decomposition",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "research-reproduction",
+      "source": "markdown/slides/l-data-driven-deep-research.md",
+      "needle": "published studies executable",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "human-eval",
+      "source": "markdown/slides/l-data-driven-deep-research.md",
+      "needle": "Human Evaluation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "hybrid-data",
+      "source": "markdown/slides/l-new-suql.md",
+      "needle": "Extends SQL to include free-text operations",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "dialogue-state",
+      "source": "markdown/slides/l-newworksheet.md",
+      "needle": "dialogue state",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "declarative-agents",
+      "source": "markdown/slides/l-newworksheet.md",
+      "needle": "Genie Worksheet Design Principles",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "state",
+      "source": "markdown/slides/l-newworksheet.md",
+      "needle": "What state to keep for the conversation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "vlm",
+      "source": "markdown/slides/l-churro.md",
+      "needle": "Recent Breakthroughs in VLMs",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "document-transcription",
+      "source": "markdown/slides/l-churro.md",
+      "needle": "Text Extraction from Historical",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "sft",
+      "source": "markdown/slides/l-churro.md",
+      "needle": "fine-tun",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "long-context",
+      "source": "markdown/slides/i-sliders.md",
+      "needle": "CONTEXT",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "long-horizon",
+      "source": "markdown/slides/i-sliders.md",
+      "needle": "long-horizon",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "schema-induction",
+      "source": "markdown/slides/i-sliders.md",
+      "needle": "Automatically-induced schema",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "data-reconciliation",
+      "source": "markdown/slides/i-sliders.md",
+      "needle": "Chunk and Reconcile",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "coding-agents",
+      "source": "markdown/slides/i-sliders.md",
+      "needle": "Autonomous database reconciliation coding agent",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "chunking",
+      "source": "markdown/slides/i-sliders.md",
+      "needle": "Chunk-based extraction",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "citation-eval",
+      "source": "markdown/slides/i-sliders.md",
+      "needle": "provenance and rationale",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "hypothesis-ledger",
+      "source": "markdown/assignments/cs224v-2026-hw1.md",
+      "needle": "maintaining a belief ledger",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "trajectory-eval",
+      "source": "markdown/assignments/cs224v-2026-hw1.md",
+      "needle": "trajectory of the GRILL agent",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "observability",
+      "source": "markdown/assignments/cs224v-2026-hw1.md",
+      "needle": "inspect its intermediate outputs",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reliability",
+      "source": "markdown/assignments/cs224v-2026-hw1.md",
+      "needle": "Repeated runs of GRILL",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "agent-architecture",
+      "source": "markdown/assignments/cs224v-2026-hw2.md",
+      "needle": "layered architecture",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "frameworks",
+      "source": "markdown/assignments/cs224v-2026-hw2.md",
+      "needle": "orchestrating agents",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "harness",
+      "source": "markdown/assignments/cs224v-2026-hw2.md",
+      "needle": "harness",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "filesystem",
+      "source": "markdown/assignments/cs224v-2026-hw2.md",
+      "needle": "semantic file system",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "context-engineering",
+      "source": "markdown/assignments/cs224v-2026-hw2.md",
+      "needle": "context management",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "structured-output",
+      "source": "markdown/assignments/cs224v-2026-hw2.md",
+      "needle": "Structured output A",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "prompting",
+      "source": "markdown/assignments/cs224v-2026-hw2.md",
+      "needle": "Agent Prompt",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "shared-memory",
+      "source": "markdown/assignments/cs224v-2026-hw2.md",
+      "needle": "shared workspaces",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "compaction",
+      "source": "markdown/pages/schedule.md",
+      "needle": "context compression",
+      "coverage": "planned"
+    },
+    {
+      "concept_id": "memory",
+      "source": "markdown/pages/schedule.md",
+      "needle": "long-term memory and skills",
+      "coverage": "planned"
+    },
+    {
+      "concept_id": "procedural-memory",
+      "source": "markdown/pages/schedule.md",
+      "needle": "long-term memory and skills",
+      "coverage": "planned"
+    },
+    {
+      "concept_id": "reward-hacking",
+      "source": "markdown/pages/schedule.md",
+      "needle": "reward-hacking behavior",
+      "coverage": "planned"
+    }
+  ]
+}

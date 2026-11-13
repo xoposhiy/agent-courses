@@ -1,0 +1,62 @@
+# Homework 1 public teaching repository: assignments/OMIM_620568/grill_run/tasks/0008_screen_h2/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620568/grill_run/tasks/0008_screen_h2/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620568/grill_run/tasks/0008_screen_h2/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature establishes BRD4 mutations as causing a milder or atypical/non-classic CdLS phenotype with less severe limb and cognitive involvement.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "BRD4 pathogenic variants are recognized as causing non-classic or milder forms of Cornelia de Lange syndrome compared to classic NIPBL-related presentations.",
+      "stance": "supports",
+      "source": {
+        "title": "Non-Classic Cornelia de Lange Syndrome Due to BRD4 Gene Alterations: A Literature Review",
+        "authors": [
+          "F Lonardo",
+          "M Falco",
+          "C Costabile",
+          "P Fontana"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.mdpi.com/2227-9067/12/11/1440",
+        "quote": "variations in several other genes, including BRD4, have been identified as causative factors for non-classic or milder forms of the syndrome."
+      },
+      "numbers": []
+    },
+    {
+      "text": "An international cohort study of 14 new patients with BRD4 alterations delineated the clinical dysmorphisms and phenotypic spectrum across ages, noting a distinct cohesinopathy pattern.",
+      "stance": "supports",
+      "source": {
+        "title": "Understanding the new BRD4\u2010related syndrome: Clinical and genomic delineation with an international cohort study",
+        "authors": [
+          "G Jouret",
+          "S Heide",
+          "A Sorlin",
+          "L Faivre"
+        ],
+        "year": 2022,
+        "journal": null,
+        "doi": "10.1111/cge.14141",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/cge.14141",
+        "quote": "We report the first cohort of patients with BRD4-related disorder and delineate the dysmorphic features at different ages. This work extends the phenotypic spectrum of cohesinopathies and characterize a new clinically relevant and recognizable pattern, distinguishable from the other cohesinopathies."
+      },
+      "numbers": [
+        {
+          "metric": "patients collected",
+          "value": 14
+        }
+      ]
+    }
+  ]
+}
+```

@@ -1,0 +1,14 @@
+# Homework 2 bundle: precomputed/sliders/sliders-OMIM_621201/phenotypic_differential_matching.csv
+
+[Course index](../../../../../../README.md) · [Original source](https://drive.google.com/file/d/1VPlTDJULw4qIkQuVcHxxPh4Q50Nvmi-z/view#archive-member=precomputed/sliders/sliders-OMIM_621201/phenotypic_differential_matching.csv) · [Raw file](../../../../../../raw/assignments/assignment2-course-bundle/precomputed/sliders/sliders-OMIM_621201/phenotypic_differential_matching.csv)
+
+Retrieved: 2026-11-13T17:00:50.402745+00:00
+
+```csv
+row_id,target_disease,mimic_disease,overlapping_phenotypes,discriminating_phenotype,discriminating_logic,diagnostic_confidence
+7941b86f1e4c8a7f:0:phenotypic_differential_matching:0,GTF3C3-Related Neurodevelopmental Disorder,POLR3-related leukodystrophies,"neurodevelopmental delay, microcephaly, seizures, cerebellar atrophy",Combined progressive cerebellar atrophy and frontal lobe hypoplasia,"GTF3C3 presents with structural midline and lobar hypoplasia rather than diffuse white matter signal abnormality (diffuse T2 hypomyelination), hypodontia, and hypogonadotropic hypogonadism seen in POLR3-related leukodystrophies.",high
+7941b86f1e4c8a7f:0:phenotypic_differential_matching:1,GTF3C3-Related Neurodevelopmental Disorder,GTF3C5-related disorder,"disrupts TFIIIC/Pol III-mediated transcription, cerebellar atrophy, thinning of corpus callosum",Primary frontal lobe hypoplasia,GTF3C5 presentation often emphasizes prominent leukoencephalopathy over primary frontal lobe hypoplasia.,moderate
+7941b86f1e4c8a7f:0:phenotypic_differential_matching:2,GTF3C3-Related Neurodevelopmental Disorder,ARX-related West syndrome,"severe cognitive disability, epileptic encephalopathy, language deficits",Profound expressive speech deficit exceeding motor impairment,"Profound expressive speech deficit/absent speech exceeds motor impairment, differentiating from milder syndromic intellectual disabilities, though overlapping with severe ARX-related epileptic encephalopathy.",moderate
+7941b86f1e4c8a7f:0:phenotypic_differential_matching:3,GTF3C3-Related Neurodevelopmental Disorder,CDK19-related neurodevelopmental disorder,"hypertelorism, broad or depressed nasal bridge, low-set ears, neurodevelopmental delay","Craniofacial dysmorphisms (hypertelorism, depressed nasal bridge, low-set ears)",Craniofacial features are highly indistinguishable from CDK19-related condition on physical exam alone; facial gestalt lacks specificity.,low
+
+```

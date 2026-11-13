@@ -1,0 +1,9342 @@
+[
+  {
+    "text": "Okay, uh welcome to uh lecture three. Uh",
+    "start": 5.48,
+    "duration": 5.36
+  },
+  {
+    "text": "today we are going to cover rag and",
+    "start": 8.72,
+    "duration": 3.56
+  },
+  {
+    "text": "agents.",
+    "start": 10.84,
+    "duration": 4.12
+  },
+  {
+    "text": "So, I will start this lecture by giving",
+    "start": 12.28,
+    "duration": 5.0
+  },
+  {
+    "text": "you a quick overview of the projects",
+    "start": 14.96,
+    "duration": 6.44
+  },
+  {
+    "text": "since we already got a lot of questions.",
+    "start": 17.28,
+    "duration": 6.72
+  },
+  {
+    "text": "Um overall, I think uh the general rule",
+    "start": 21.4,
+    "duration": 4.6
+  },
+  {
+    "text": "of thumb before projects is that we",
+    "start": 24.0,
+    "duration": 3.96
+  },
+  {
+    "text": "really hope that you can pick a topic",
+    "start": 26.0,
+    "duration": 4.0
+  },
+  {
+    "text": "that you are very very excited about",
+    "start": 27.96,
+    "duration": 4.76
+  },
+  {
+    "text": "yourself. Um so, think about questions",
+    "start": 30.0,
+    "duration": 6.24
+  },
+  {
+    "text": "such as what a task does your agent do?",
+    "start": 32.72,
+    "duration": 7.0
+  },
+  {
+    "text": "Um what are research questions drive it?",
+    "start": 36.24,
+    "duration": 6.36
+  },
+  {
+    "text": "Um what kind of data or API we have to",
+    "start": 39.72,
+    "duration": 5.96
+  },
+  {
+    "text": "support it? And which agent frameworks",
+    "start": 42.6,
+    "duration": 5.24
+  },
+  {
+    "text": "you are going to use? And more",
+    "start": 45.68,
+    "duration": 4.08
+  },
+  {
+    "text": "importantly, how would you evaluate",
+    "start": 47.84,
+    "duration": 4.32
+  },
+  {
+    "text": "that? So, those are some kind of guiding",
+    "start": 49.76,
+    "duration": 4.52
+  },
+  {
+    "text": "principles.",
+    "start": 52.16,
+    "duration": 5.0
+  },
+  {
+    "text": "And then um related to this, just to go",
+    "start": 54.28,
+    "duration": 5.52
+  },
+  {
+    "text": "a little bit uh deeper here, um the goal",
+    "start": 57.16,
+    "duration": 5.16
+  },
+  {
+    "text": "of this course or the goal of the course",
+    "start": 59.8,
+    "duration": 6.24
+  },
+  {
+    "text": "project is to help you to enable you to",
+    "start": 62.32,
+    "duration": 6.04
+  },
+  {
+    "text": "design, build, and evaluate uh agent",
+    "start": 66.04,
+    "duration": 4.32
+  },
+  {
+    "text": "systems of your own.",
+    "start": 68.36,
+    "duration": 4.24
+  },
+  {
+    "text": "And the focus here, uh we encourage you",
+    "start": 70.36,
+    "duration": 4.72
+  },
+  {
+    "text": "to think about the building agents using",
+    "start": 72.6,
+    "duration": 5.36
+  },
+  {
+    "text": "retrieval, tool use, memory, multi-agent",
+    "start": 75.08,
+    "duration": 5.52
+  },
+  {
+    "text": "systems, uh different optimization",
+    "start": 77.96,
+    "duration": 6.84
+  },
+  {
+    "text": "hardness, the data agents use, uh or the",
+    "start": 80.6,
+    "duration": 7.04
+  },
+  {
+    "text": "evaluation, and how to make agents safe.",
+    "start": 84.8,
+    "duration": 5.04
+  },
+  {
+    "text": "So, a lot of topics around that would be",
+    "start": 87.64,
+    "duration": 5.2
+  },
+  {
+    "text": "really good uh candidates for project.",
+    "start": 89.84,
+    "duration": 5.16
+  },
+  {
+    "text": "One thing I do want to highlight here is",
+    "start": 92.84,
+    "duration": 4.72
+  },
+  {
+    "text": "about the rigorous evaluation.",
+    "start": 95.0,
+    "duration": 4.92
+  },
+  {
+    "text": "Um so, in the end, we are going to see",
+    "start": 97.56,
+    "duration": 4.76
+  },
+  {
+    "text": "the demo presentation from you all. A",
+    "start": 99.92,
+    "duration": 5.12
+  },
+  {
+    "text": "demo that works once, just like it only",
+    "start": 102.32,
+    "duration": 4.68
+  },
+  {
+    "text": "happened to work during the final",
+    "start": 105.04,
+    "duration": 4.76
+  },
+  {
+    "text": "presentation, will not score highly. Uh",
+    "start": 107.0,
+    "duration": 4.6
+  },
+  {
+    "text": "we really want you to think about the",
+    "start": 109.8,
+    "duration": 4.04
+  },
+  {
+    "text": "rigor behind your system.",
+    "start": 111.6,
+    "duration": 4.44
+  },
+  {
+    "text": "Um think about like the task. Where does",
+    "start": 113.84,
+    "duration": 4.56
+  },
+  {
+    "text": "your data come from? What counts as",
+    "start": 116.04,
+    "duration": 4.092
+  },
+  {
+    "text": "success here?",
+    "start": 118.4,
+    "duration": 3.2
+  },
+  {
+    "text": "Think about",
+    "start": 120.132,
+    "duration": 4.16
+  },
+  {
+    "text": "uh how to really grade or evaluate your",
+    "start": 121.6,
+    "duration": 5.092
+  },
+  {
+    "text": "agents. You can think about LLMs a",
+    "start": 124.292,
+    "duration": 5.52
+  },
+  {
+    "text": "judge, different rubrics, human ratings,",
+    "start": 126.692,
+    "duration": 5.2
+  },
+  {
+    "text": "feasibility check, or just like a",
+    "start": 129.812,
+    "duration": 4.32
+  },
+  {
+    "text": "mixture of many of them.",
+    "start": 131.892,
+    "duration": 5.44
+  },
+  {
+    "text": "In terms of how to report the results,",
+    "start": 134.132,
+    "duration": 5.04
+  },
+  {
+    "text": "think about different type of task. It",
+    "start": 137.332,
+    "duration": 4.4
+  },
+  {
+    "text": "shouldn't just work on one single user",
+    "start": 139.172,
+    "duration": 5.16
+  },
+  {
+    "text": "or one single data point. Baselines you",
+    "start": 141.732,
+    "duration": 4.72
+  },
+  {
+    "text": "can incorporate and",
+    "start": 144.332,
+    "duration": 4.32
+  },
+  {
+    "text": "more importantly where your agents are",
+    "start": 146.452,
+    "duration": 4.72
+  },
+  {
+    "text": "fail. So those are some dimensions to",
+    "start": 148.652,
+    "duration": 4.8
+  },
+  {
+    "text": "think about.",
+    "start": 151.172,
+    "duration": 4.6
+  },
+  {
+    "text": "To give you some kind of sample or",
+    "start": 153.452,
+    "duration": 4.28
+  },
+  {
+    "text": "example topics.",
+    "start": 155.772,
+    "duration": 4.2
+  },
+  {
+    "text": "So if you read this long list, there are",
+    "start": 157.732,
+    "duration": 5.36
+  },
+  {
+    "text": "a lot of exciting topics you can look at",
+    "start": 159.972,
+    "duration": 5.84
+  },
+  {
+    "text": "such as evaluating agents,",
+    "start": 163.092,
+    "duration": 5.4
+  },
+  {
+    "text": "cost, latency, safety beyond task",
+    "start": 165.812,
+    "duration": 3.96
+  },
+  {
+    "text": "success.",
+    "start": 168.492,
+    "duration": 3.36
+  },
+  {
+    "text": "You can think about how to adapt agents",
+    "start": 169.772,
+    "duration": 5.16
+  },
+  {
+    "text": "to new environments, new tools,",
+    "start": 171.852,
+    "duration": 5.88
+  },
+  {
+    "text": "new APIs, new UIs.",
+    "start": 174.932,
+    "duration": 4.68
+  },
+  {
+    "text": "Robustness of agents to prompt",
+    "start": 177.732,
+    "duration": 3.36
+  },
+  {
+    "text": "injection,",
+    "start": 179.612,
+    "duration": 3.32
+  },
+  {
+    "text": "adversary attack.",
+    "start": 181.092,
+    "duration": 4.6
+  },
+  {
+    "text": "Why agents misuse tools,",
+    "start": 182.932,
+    "duration": 4.88
+  },
+  {
+    "text": "learning to use, learning a lot of",
+    "start": 185.692,
+    "duration": 4.48
+  },
+  {
+    "text": "capabilities for agents from limited",
+    "start": 187.812,
+    "duration": 3.64
+  },
+  {
+    "text": "data.",
+    "start": 190.172,
+    "duration": 4.4
+  },
+  {
+    "text": "Interpreting agent behaviors, long tail,",
+    "start": 191.452,
+    "duration": 5.56
+  },
+  {
+    "text": "long horizon, edge cases related to",
+    "start": 194.572,
+    "duration": 3.68
+  },
+  {
+    "text": "agents.",
+    "start": 197.012,
+    "duration": 4.12
+  },
+  {
+    "text": "Human agent or agent agent teaming, how",
+    "start": 198.252,
+    "duration": 5.04
+  },
+  {
+    "text": "can we get a group of agents to work",
+    "start": 201.132,
+    "duration": 4.88
+  },
+  {
+    "text": "well with each other and get agents and",
+    "start": 203.292,
+    "duration": 5.08
+  },
+  {
+    "text": "human workers to work together.",
+    "start": 206.012,
+    "duration": 4.88
+  },
+  {
+    "text": "Multi-agent systems around of memory,",
+    "start": 208.372,
+    "duration": 5.12
+  },
+  {
+    "text": "planning, over set, reward hacking,",
+    "start": 210.892,
+    "duration": 5.44
+  },
+  {
+    "text": "we'll have some lectures about safety",
+    "start": 213.492,
+    "duration": 6.28
+  },
+  {
+    "text": "later this quarter.",
+    "start": 216.332,
+    "duration": 5.84
+  },
+  {
+    "text": "If you read the website, we do offer",
+    "start": 219.772,
+    "duration": 5.04
+  },
+  {
+    "text": "some kind of example ideas. In the very",
+    "start": 222.172,
+    "duration": 4.68
+  },
+  {
+    "text": "beginning of designing this course, we",
+    "start": 224.812,
+    "duration": 3.52
+  },
+  {
+    "text": "really hope that",
+    "start": 226.852,
+    "duration": 3.72
+  },
+  {
+    "text": "students could build agents to make your",
+    "start": 228.332,
+    "duration": 4.8
+  },
+  {
+    "text": "life at a Stanford much easier.",
+    "start": 230.572,
+    "duration": 4.4
+  },
+  {
+    "text": "So you can think about the building",
+    "start": 233.132,
+    "duration": 4.72
+  },
+  {
+    "text": "agents that could read syllabus and then",
+    "start": 234.972,
+    "duration": 4.52
+  },
+  {
+    "text": "put the deadlines to your calendar",
+    "start": 237.852,
+    "duration": 3.68
+  },
+  {
+    "text": "automatically. You can think about",
+    "start": 239.492,
+    "duration": 4.042
+  },
+  {
+    "text": "course schedule optimizer for next",
+    "start": 241.532,
+    "duration": 4.082
+  },
+  {
+    "text": "quarter. You can think about research",
+    "start": 243.534,
+    "duration": 4.12
+  },
+  {
+    "text": "paper discovery and the summarization",
+    "start": 245.614,
+    "duration": 5.44
+  },
+  {
+    "text": "agent. Campus event aggregator and the",
+    "start": 247.654,
+    "duration": 6.28
+  },
+  {
+    "text": "recommendation system. Coding agent",
+    "start": 251.054,
+    "duration": 5.8
+  },
+  {
+    "text": "specialized for one specific coding code",
+    "start": 253.934,
+    "duration": 6.08
+  },
+  {
+    "text": "base, framework, or language, as well as",
+    "start": 256.854,
+    "duration": 5.92
+  },
+  {
+    "text": "rigorous evaluations",
+    "start": 260.014,
+    "duration": 6.6
+  },
+  {
+    "text": "around the figures and artifacts.",
+    "start": 262.774,
+    "duration": 7.04
+  },
+  {
+    "text": "So, a lot of topics you can choose from.",
+    "start": 266.614,
+    "duration": 4.12
+  },
+  {
+    "text": "One",
+    "start": 269.814,
+    "duration": 3.76
+  },
+  {
+    "text": "minor recommendation here, but actually",
+    "start": 270.734,
+    "duration": 5.16
+  },
+  {
+    "text": "turned out to be very important is you",
+    "start": 273.574,
+    "duration": 4.48
+  },
+  {
+    "text": "should always consider the availability",
+    "start": 275.894,
+    "duration": 4.88
+  },
+  {
+    "text": "of data, agentic frameworks,",
+    "start": 278.054,
+    "duration": 6.6
+  },
+  {
+    "text": "computation, compute, and evaluation.",
+    "start": 280.774,
+    "duration": 6.2
+  },
+  {
+    "text": "Missing any of them may lead your",
+    "start": 284.654,
+    "duration": 5.4
+  },
+  {
+    "text": "project to be not as successful.",
+    "start": 286.974,
+    "duration": 5.72
+  },
+  {
+    "text": "Some final recommendations here.",
+    "start": 290.054,
+    "duration": 3.88
+  },
+  {
+    "text": "So,",
+    "start": 292.694,
+    "duration": 3.92
+  },
+  {
+    "text": "start earlier and work on it every week",
+    "start": 293.934,
+    "duration": 4.68
+  },
+  {
+    "text": "rather than just like a rushing",
+    "start": 296.614,
+    "duration": 3.48
+  },
+  {
+    "text": "in the final week.",
+    "start": 298.614,
+    "duration": 4.32
+  },
+  {
+    "text": "Get your data first. Make sure what kind",
+    "start": 300.094,
+    "duration": 4.92
+  },
+  {
+    "text": "of agentic application you want to focus",
+    "start": 302.934,
+    "duration": 4.68
+  },
+  {
+    "text": "on, where you should get the data.",
+    "start": 305.014,
+    "duration": 4.64
+  },
+  {
+    "text": "We recommend that you have a very clear,",
+    "start": 307.614,
+    "duration": 4.68
+  },
+  {
+    "text": "well-defined research question.",
+    "start": 309.654,
+    "duration": 5.52
+  },
+  {
+    "text": "Novel, creative questions are highly",
+    "start": 312.294,
+    "duration": 4.72
+  },
+  {
+    "text": "recommended.",
+    "start": 315.174,
+    "duration": 4.52
+  },
+  {
+    "text": "You probably see that there is one",
+    "start": 317.014,
+    "duration": 6.12
+  },
+  {
+    "text": "sentence that I bolded bolded here is",
+    "start": 319.694,
+    "duration": 6.32
+  },
+  {
+    "text": "results should teach us something. So, I",
+    "start": 323.134,
+    "duration": 4.68
+  },
+  {
+    "text": "think you should use this as a guiding",
+    "start": 326.014,
+    "duration": 3.8
+  },
+  {
+    "text": "principle. When you build something,",
+    "start": 327.814,
+    "duration": 4.68
+  },
+  {
+    "text": "when tears or myself read it,",
+    "start": 329.814,
+    "duration": 5.96
+  },
+  {
+    "text": "what are we learning from your project?",
+    "start": 332.494,
+    "duration": 5.24
+  },
+  {
+    "text": "Present and visualize your results very",
+    "start": 335.774,
+    "duration": 4.2
+  },
+  {
+    "text": "well, and more importantly, come talk to",
+    "start": 337.734,
+    "duration": 4.84
+  },
+  {
+    "text": "us during office hours,",
+    "start": 339.974,
+    "duration": 5.48
+  },
+  {
+    "text": "and we will be very happy to help.",
+    "start": 342.574,
+    "duration": 4.08
+  },
+  {
+    "text": "Okay.",
+    "start": 345.454,
+    "duration": 5.04
+  },
+  {
+    "text": "Any quick questions about projects?",
+    "start": 346.654,
+    "duration": 3.84
+  },
+  {
+    "text": "Okay, since the content is very clear,",
+    "start": 352.694,
+    "duration": 5.08
+  },
+  {
+    "text": "now I'm going to move to",
+    "start": 355.414,
+    "duration": 4.6
+  },
+  {
+    "text": "the content today. We are going to focus",
+    "start": 357.774,
+    "duration": 3.8
+  },
+  {
+    "text": "on rag.",
+    "start": 360.014,
+    "duration": 3.92
+  },
+  {
+    "text": "I will first start with a motivation for",
+    "start": 361.574,
+    "duration": 4.521
+  },
+  {
+    "text": "rag, and then we will go deep into the",
+    "start": 363.934,
+    "duration": 3.161
+  },
+  {
+    "text": "rag",
+    "start": 366.095,
+    "duration": 3.48
+  },
+  {
+    "text": "pipeline. Uh we will talk about some",
+    "start": 367.095,
+    "duration": 4.8
+  },
+  {
+    "text": "very detailed uh building components",
+    "start": 369.575,
+    "duration": 4.8
+  },
+  {
+    "text": "such as how you do indexing,",
+    "start": 371.895,
+    "duration": 5.8
+  },
+  {
+    "text": "um how to do retrieval, and agentic rag,",
+    "start": 374.375,
+    "duration": 6.64
+  },
+  {
+    "text": "as well as some feeder mode here.",
+    "start": 377.695,
+    "duration": 5.72
+  },
+  {
+    "text": "Let's get it started. The learning",
+    "start": 381.015,
+    "duration": 6.0
+  },
+  {
+    "text": "objective uh as I wrote here is by the",
+    "start": 383.415,
+    "duration": 5.8
+  },
+  {
+    "text": "end of this class, you should know how",
+    "start": 387.015,
+    "duration": 5.36
+  },
+  {
+    "text": "the pipeline is built, where it breaks,",
+    "start": 389.215,
+    "duration": 5.56
+  },
+  {
+    "text": "where what to index, and how to index,",
+    "start": 392.375,
+    "duration": 4.2
+  },
+  {
+    "text": "and how to search it.",
+    "start": 394.775,
+    "duration": 3.72
+  },
+  {
+    "text": "This lecture is related to your homework",
+    "start": 396.575,
+    "duration": 4.24
+  },
+  {
+    "text": "one.",
+    "start": 398.495,
+    "duration": 2.32
+  },
+  {
+    "text": "Let's start with one example here that",
+    "start": 400.895,
+    "duration": 5.56
+  },
+  {
+    "text": "uh many of you probably uh recognize. Uh",
+    "start": 403.415,
+    "duration": 6.96
+  },
+  {
+    "text": "if you ask a LM when office hours are",
+    "start": 406.455,
+    "duration": 6.08
+  },
+  {
+    "text": "least crowded,",
+    "start": 410.375,
+    "duration": 4.04
+  },
+  {
+    "text": "and I think you'll get something like",
+    "start": 412.535,
+    "duration": 4.68
+  },
+  {
+    "text": "this, where it tells you that try the",
+    "start": 414.415,
+    "duration": 6.12
+  },
+  {
+    "text": "Wednesday afternoon sessions. Midweek uh",
+    "start": 417.215,
+    "duration": 6.84
+  },
+  {
+    "text": "office hours are usually uh quiet.",
+    "start": 420.535,
+    "duration": 5.84
+  },
+  {
+    "text": "Um and it look fine.",
+    "start": 424.055,
+    "duration": 4.32
+  },
+  {
+    "text": "Um it's a guess from the prior",
+    "start": 426.375,
+    "duration": 4.56
+  },
+  {
+    "text": "knowledge. There's nothing behind it.",
+    "start": 428.375,
+    "duration": 5.4
+  },
+  {
+    "text": "Now, if you give the same model with the",
+    "start": 430.935,
+    "duration": 5.48
+  },
+  {
+    "text": "the Q log that we have recorded in terms",
+    "start": 433.775,
+    "duration": 4.48
+  },
+  {
+    "text": "of how many people show up to office",
+    "start": 436.415,
+    "duration": 4.92
+  },
+  {
+    "text": "hours, it actually read that Tuesday at",
+    "start": 438.255,
+    "duration": 5.72
+  },
+  {
+    "text": "4:00 p.m. had a 14 people waiting and",
+    "start": 441.335,
+    "duration": 5.6
+  },
+  {
+    "text": "the Thursday at 9:00 only had a three.",
+    "start": 443.975,
+    "duration": 4.52
+  },
+  {
+    "text": "So, it tells you that you should go to",
+    "start": 446.935,
+    "duration": 3.84
+  },
+  {
+    "text": "Thursday morning uh office hour with",
+    "start": 448.495,
+    "duration": 3.68
+  },
+  {
+    "text": "those numbers.",
+    "start": 450.775,
+    "duration": 3.44
+  },
+  {
+    "text": "The difference is here is not about the",
+    "start": 452.175,
+    "duration": 4.64
+  },
+  {
+    "text": "fluency. Uh I think uh both answers are",
+    "start": 454.215,
+    "duration": 4.96
+  },
+  {
+    "text": "fluent here. The difference is actually",
+    "start": 456.815,
+    "duration": 5.04
+  },
+  {
+    "text": "about the evidence. The second uh",
+    "start": 459.175,
+    "duration": 5.16
+  },
+  {
+    "text": "response here, it actually tell you the",
+    "start": 461.855,
+    "duration": 5.12
+  },
+  {
+    "text": "actual data uh together with the model",
+    "start": 464.335,
+    "duration": 4.64
+  },
+  {
+    "text": "response. So, the answer is something",
+    "start": 466.975,
+    "duration": 5.56
+  },
+  {
+    "text": "that you can actually check.",
+    "start": 468.975,
+    "duration": 5.48
+  },
+  {
+    "text": "So, the idea behind the rag or the",
+    "start": 472.535,
+    "duration": 4.6
+  },
+  {
+    "text": "design principle behind the rag is that",
+    "start": 474.455,
+    "duration": 5.16
+  },
+  {
+    "text": "we do not want a models to memorize",
+    "start": 477.135,
+    "duration": 5.52
+  },
+  {
+    "text": "everything. Instead, we want them to uh",
+    "start": 479.615,
+    "duration": 5.56
+  },
+  {
+    "text": "think about finding the relevant",
+    "start": 482.655,
+    "duration": 5.602
+  },
+  {
+    "text": "information just in time at the moment",
+    "start": 485.175,
+    "duration": 5.122
+  },
+  {
+    "text": "where the model needed.",
+    "start": 488.257,
+    "duration": 4.32
+  },
+  {
+    "text": "And retrieval is actually a mechanism",
+    "start": 490.297,
+    "duration": 5.16
+  },
+  {
+    "text": "that achieve such goal here.",
+    "start": 492.577,
+    "duration": 5.84
+  },
+  {
+    "text": "Um two things I want you to remember.",
+    "start": 495.457,
+    "duration": 6.04
+  },
+  {
+    "text": "First is that this is a dynamic process,",
+    "start": 498.417,
+    "duration": 5.72
+  },
+  {
+    "text": "which means that when the facts change,",
+    "start": 501.497,
+    "duration": 5.24
+  },
+  {
+    "text": "you update the index, not not the",
+    "start": 504.137,
+    "duration": 3.64
+  },
+  {
+    "text": "weights.",
+    "start": 506.737,
+    "duration": 2.32
+  },
+  {
+    "text": "And then um",
+    "start": 507.777,
+    "duration": 3.76
+  },
+  {
+    "text": "it's also very interpretable because the",
+    "start": 509.057,
+    "duration": 5.24
+  },
+  {
+    "text": "model can point out like where the",
+    "start": 511.537,
+    "duration": 5.32
+  },
+  {
+    "text": "document they fetched the information.",
+    "start": 514.297,
+    "duration": 4.84
+  },
+  {
+    "text": "And this give you like citations. And it",
+    "start": 516.857,
+    "duration": 5.04
+  },
+  {
+    "text": "means that a human, if we want, we can",
+    "start": 519.137,
+    "duration": 4.88
+  },
+  {
+    "text": "actually go there and then verify the",
+    "start": 521.897,
+    "duration": 4.64
+  },
+  {
+    "text": "answer.",
+    "start": 524.017,
+    "duration": 2.52
+  },
+  {
+    "text": "So um I want to start with a very",
+    "start": 526.817,
+    "duration": 5.2
+  },
+  {
+    "text": "classic a setup. Uh this is actually uh",
+    "start": 529.057,
+    "duration": 5.04
+  },
+  {
+    "text": "earlier days, uh people are working on",
+    "start": 532.017,
+    "duration": 4.56
+  },
+  {
+    "text": "open domain question answering. And",
+    "start": 534.097,
+    "duration": 4.8
+  },
+  {
+    "text": "there are two stage that's very similar",
+    "start": 536.577,
+    "duration": 5.2
+  },
+  {
+    "text": "to the rag we are talking about today.",
+    "start": 538.897,
+    "duration": 4.72
+  },
+  {
+    "text": "Um if you have a question coming in",
+    "start": 541.777,
+    "duration": 4.64
+  },
+  {
+    "text": "here, um there is going to be a document",
+    "start": 543.617,
+    "duration": 5.8
+  },
+  {
+    "text": "retriever that runs over all possible",
+    "start": 546.417,
+    "duration": 5.64
+  },
+  {
+    "text": "Wikipedia pages, and then fetch a",
+    "start": 549.417,
+    "duration": 5.28
+  },
+  {
+    "text": "handful of articles.",
+    "start": 552.057,
+    "duration": 5.2
+  },
+  {
+    "text": "And then the document reader takes those",
+    "start": 554.697,
+    "duration": 5.52
+  },
+  {
+    "text": "articles and extract the answer.",
+    "start": 557.257,
+    "duration": 4.84
+  },
+  {
+    "text": "Uh so here you can see the particular",
+    "start": 560.217,
+    "duration": 3.24
+  },
+  {
+    "text": "number here.",
+    "start": 562.097,
+    "duration": 3.92
+  },
+  {
+    "text": "The division of labor is actually the",
+    "start": 563.457,
+    "duration": 4.68
+  },
+  {
+    "text": "the whole point here. The retriever",
+    "start": 566.017,
+    "duration": 4.08
+  },
+  {
+    "text": "basically narrow down millions of",
+    "start": 568.137,
+    "duration": 5.4
+  },
+  {
+    "text": "articles into a few, and then the reader",
+    "start": 570.097,
+    "duration": 5.76
+  },
+  {
+    "text": "does the very fine-grained processing on",
+    "start": 573.537,
+    "duration": 4.4
+  },
+  {
+    "text": "those few candidates.",
+    "start": 575.857,
+    "duration": 4.84
+  },
+  {
+    "text": "Um you need to have both in order to get",
+    "start": 577.937,
+    "duration": 6.28
+  },
+  {
+    "text": "the task done here.",
+    "start": 580.697,
+    "duration": 3.52
+  },
+  {
+    "text": "So if you go a little bit deep into the",
+    "start": 584.817,
+    "duration": 4.68
+  },
+  {
+    "text": "retriever reader framework, so let's",
+    "start": 587.337,
+    "duration": 4.72
+  },
+  {
+    "text": "just try to formulate them a little bit.",
+    "start": 589.497,
+    "duration": 4.32
+  },
+  {
+    "text": "Uh you have a large collection of",
+    "start": 592.057,
+    "duration": 4.08
+  },
+  {
+    "text": "documents D here. This could have been",
+    "start": 593.817,
+    "duration": 4.92
+  },
+  {
+    "text": "D1, D2, DN here.",
+    "start": 596.137,
+    "duration": 4.6
+  },
+  {
+    "text": "Uh N is in general very big. It could",
+    "start": 598.737,
+    "duration": 4.28
+  },
+  {
+    "text": "have been millions of documents. And you",
+    "start": 600.737,
+    "duration": 5.2
+  },
+  {
+    "text": "do have a question. We want the model to",
+    "start": 603.017,
+    "duration": 5.92
+  },
+  {
+    "text": "output a answer here, A.",
+    "start": 605.937,
+    "duration": 5.561
+  },
+  {
+    "text": "So if you use this formulation, what the",
+    "start": 608.937,
+    "duration": 5.321
+  },
+  {
+    "text": "retriever does is that it actually try",
+    "start": 611.498,
+    "duration": 6.24
+  },
+  {
+    "text": "to retrieve key top-ranked passages",
+    "start": 614.258,
+    "duration": 6.88
+  },
+  {
+    "text": "here. K here is very small, like 100,",
+    "start": 617.738,
+    "duration": 5.174
+  },
+  {
+    "text": "50, or 10.",
+    "start": 621.138,
+    "duration": 2.16
+  },
+  {
+    "text": ">> [clears throat]",
+    "start": 622.912,
+    "duration": 2.066
+  },
+  {
+    "text": ">> And then your reader is going to read",
+    "start": 623.298,
+    "duration": 5.0
+  },
+  {
+    "text": "those top passages here and then return",
+    "start": 624.978,
+    "duration": 6.68
+  },
+  {
+    "text": "you a specific answer.",
+    "start": 628.298,
+    "duration": 5.4
+  },
+  {
+    "text": "Very earlier days, the way how we",
+    "start": 631.658,
+    "duration": 4.4
+  },
+  {
+    "text": "implement a retriever is actually a very",
+    "start": 633.698,
+    "duration": 4.84
+  },
+  {
+    "text": "standard TF-IDF",
+    "start": 636.058,
+    "duration": 4.08
+  },
+  {
+    "text": "processing.",
+    "start": 638.538,
+    "duration": 4.0
+  },
+  {
+    "text": "This is through a fixed module.",
+    "start": 640.138,
+    "duration": 4.36
+  },
+  {
+    "text": "And then the reader is actually where a",
+    "start": 642.538,
+    "duration": 4.24
+  },
+  {
+    "text": "lot of the earlier neural network",
+    "start": 644.498,
+    "duration": 4.2
+  },
+  {
+    "text": "efforts were about.",
+    "start": 646.778,
+    "duration": 4.0
+  },
+  {
+    "text": "So, you can have your reader as a neural",
+    "start": 648.698,
+    "duration": 4.4
+  },
+  {
+    "text": "reading comprehension model. This could",
+    "start": 650.778,
+    "duration": 5.2
+  },
+  {
+    "text": "be trained on squad, which refers to",
+    "start": 653.098,
+    "duration": 5.52
+  },
+  {
+    "text": "Stanford question answering data set, or",
+    "start": 655.978,
+    "duration": 4.44
+  },
+  {
+    "text": "other type of like question answering",
+    "start": 658.618,
+    "duration": 3.44
+  },
+  {
+    "text": "data sets.",
+    "start": 660.418,
+    "duration": 3.48
+  },
+  {
+    "text": "Today, you can also use a zero-shot",
+    "start": 662.058,
+    "duration": 5.4
+  },
+  {
+    "text": "LLMs, ChatGPT, to do this kind of reader",
+    "start": 663.898,
+    "duration": 5.88
+  },
+  {
+    "text": "function.",
+    "start": 667.458,
+    "duration": 4.68
+  },
+  {
+    "text": "So, this is the very classic retriever",
+    "start": 669.778,
+    "duration": 4.08
+  },
+  {
+    "text": "reader framework.",
+    "start": 672.138,
+    "duration": 4.52
+  },
+  {
+    "text": "And now this comes",
+    "start": 673.858,
+    "duration": 6.0
+  },
+  {
+    "text": "to our main focus today called retrieval",
+    "start": 676.658,
+    "duration": 6.0
+  },
+  {
+    "text": "augmented generation, RAG, here. Let's",
+    "start": 679.858,
+    "duration": 4.92
+  },
+  {
+    "text": "just walk through this figure from left",
+    "start": 682.658,
+    "duration": 4.6
+  },
+  {
+    "text": "to right before I unpack many of the",
+    "start": 684.778,
+    "duration": 4.28
+  },
+  {
+    "text": "components here.",
+    "start": 687.258,
+    "duration": 4.08
+  },
+  {
+    "text": "So, let's see we have a specific query",
+    "start": 689.058,
+    "duration": 6.2
+  },
+  {
+    "text": "X. The query X actually goes into",
+    "start": 691.338,
+    "duration": 7.68
+  },
+  {
+    "text": "what we call a query encoder, QX, here.",
+    "start": 695.258,
+    "duration": 5.88
+  },
+  {
+    "text": "The vector actually runs against the",
+    "start": 699.018,
+    "duration": 5.0
+  },
+  {
+    "text": "document index with algorithms such as",
+    "start": 701.138,
+    "duration": 6.96
+  },
+  {
+    "text": "maximum inner product search, MIPS.",
+    "start": 704.018,
+    "duration": 7.44
+  },
+  {
+    "text": "This is the non-parametric process.",
+    "start": 708.098,
+    "duration": 4.96
+  },
+  {
+    "text": "And then you got those like top key",
+    "start": 711.458,
+    "duration": 4.52
+  },
+  {
+    "text": "documents. The top key documents will",
+    "start": 713.058,
+    "duration": 5.72
+  },
+  {
+    "text": "then go through this kind of generator,",
+    "start": 715.978,
+    "duration": 5.2
+  },
+  {
+    "text": "P theta, here, which is what we call a",
+    "start": 718.778,
+    "duration": 4.56
+  },
+  {
+    "text": "parametric part. And then we can",
+    "start": 721.178,
+    "duration": 4.44
+  },
+  {
+    "text": "marginalize over the documents to get",
+    "start": 723.338,
+    "duration": 4.16
+  },
+  {
+    "text": "the output.",
+    "start": 725.618,
+    "duration": 4.28
+  },
+  {
+    "text": "So, the important detail here is that",
+    "start": 727.498,
+    "duration": 4.84
+  },
+  {
+    "text": "this is actually a end-to-end training",
+    "start": 729.898,
+    "duration": 5.041
+  },
+  {
+    "text": "pipeline. The gradient is going to flow",
+    "start": 732.338,
+    "duration": 3.761
+  },
+  {
+    "text": "back",
+    "start": 734.939,
+    "duration": 4.0
+  },
+  {
+    "text": "through the generator and to the query",
+    "start": 736.099,
+    "duration": 4.12
+  },
+  {
+    "text": "encoder.",
+    "start": 738.939,
+    "duration": 3.64
+  },
+  {
+    "text": "The frozen part of this process is",
+    "start": 740.219,
+    "duration": 4.88
+  },
+  {
+    "text": "actually the document index because it's",
+    "start": 742.579,
+    "duration": 4.36
+  },
+  {
+    "text": "huge. We are not going to learn them",
+    "start": 745.099,
+    "duration": 3.88
+  },
+  {
+    "text": "like all the time.",
+    "start": 746.939,
+    "duration": 4.2
+  },
+  {
+    "text": "Um this is also the same model behind",
+    "start": 748.979,
+    "duration": 5.44
+  },
+  {
+    "text": "the many different task. So if you",
+    "start": 751.139,
+    "duration": 5.4
+  },
+  {
+    "text": "curious about the question answering,",
+    "start": 754.419,
+    "duration": 4.88
+  },
+  {
+    "text": "fact verification, even generating like",
+    "start": 756.539,
+    "duration": 5.16
+  },
+  {
+    "text": "Jeopardy-like questions, I think this is",
+    "start": 759.299,
+    "duration": 4.32
+  },
+  {
+    "text": "a framework to use.",
+    "start": 761.699,
+    "duration": 4.88
+  },
+  {
+    "text": "A lot of follow-up work was also built",
+    "start": 763.619,
+    "duration": 6.04
+  },
+  {
+    "text": "on top of ideas of RAG.",
+    "start": 766.579,
+    "duration": 7.36
+  },
+  {
+    "text": "So this is a very quick intro to RAG.",
+    "start": 769.659,
+    "duration": 5.32
+  },
+  {
+    "text": "Um",
+    "start": 773.939,
+    "duration": 3.56
+  },
+  {
+    "text": "having known that why we need a RAG, I'm",
+    "start": 774.979,
+    "duration": 4.96
+  },
+  {
+    "text": "now going to go through the detailed",
+    "start": 777.499,
+    "duration": 5.04
+  },
+  {
+    "text": "process. What the retriever does, what",
+    "start": 779.939,
+    "duration": 4.64
+  },
+  {
+    "text": "the generator does, and then how are we",
+    "start": 782.539,
+    "duration": 3.6
+  },
+  {
+    "text": "going to train those two components",
+    "start": 784.579,
+    "duration": 3.8
+  },
+  {
+    "text": "together.",
+    "start": 786.139,
+    "duration": 4.08
+  },
+  {
+    "text": "So um",
+    "start": 788.379,
+    "duration": 3.76
+  },
+  {
+    "text": "RAG, you can think about them as two",
+    "start": 790.219,
+    "duration": 4.04
+  },
+  {
+    "text": "components. As I mentioned, there is",
+    "start": 792.139,
+    "duration": 3.68
+  },
+  {
+    "text": "this retriever.",
+    "start": 794.259,
+    "duration": 4.36
+  },
+  {
+    "text": "So basically you have your context X and",
+    "start": 795.819,
+    "duration": 4.44
+  },
+  {
+    "text": "then um",
+    "start": 798.619,
+    "duration": 4.56
+  },
+  {
+    "text": "you want to return the top K documents",
+    "start": 800.259,
+    "duration": 5.32
+  },
+  {
+    "text": "for a specific query X.",
+    "start": 803.179,
+    "duration": 4.28
+  },
+  {
+    "text": "The generator is going to write the",
+    "start": 805.579,
+    "duration": 5.12
+  },
+  {
+    "text": "answer one token at a time giving the",
+    "start": 807.459,
+    "duration": 5.84
+  },
+  {
+    "text": "query X and then what you have retrieved",
+    "start": 810.699,
+    "duration": 4.72
+  },
+  {
+    "text": "so far that's relevant to the current",
+    "start": 813.299,
+    "duration": 3.48
+  },
+  {
+    "text": "query.",
+    "start": 815.419,
+    "duration": 3.44
+  },
+  {
+    "text": "So the high-level idea here can be",
+    "start": 816.779,
+    "duration": 5.08
+  },
+  {
+    "text": "really decomposed as for my",
+    "start": 818.859,
+    "duration": 6.88
+  },
+  {
+    "text": "query X, what is the answer Y here? And",
+    "start": 821.859,
+    "duration": 5.44
+  },
+  {
+    "text": "then you can actually decompose them",
+    "start": 825.739,
+    "duration": 3.44
+  },
+  {
+    "text": "into two components.",
+    "start": 827.299,
+    "duration": 5.2
+  },
+  {
+    "text": "First, how can we get a Z PZ giving X?",
+    "start": 829.179,
+    "duration": 6.16
+  },
+  {
+    "text": "Second component is once you have X and",
+    "start": 832.499,
+    "duration": 5.96
+  },
+  {
+    "text": "the Z, how should we generate Y here?",
+    "start": 835.339,
+    "duration": 5.68
+  },
+  {
+    "text": "So this is a very kind of high-level",
+    "start": 838.459,
+    "duration": 4.16
+  },
+  {
+    "text": "process.",
+    "start": 841.019,
+    "duration": 3.76
+  },
+  {
+    "text": "One minor thing here that I do want to",
+    "start": 842.619,
+    "duration": 3.72
+  },
+  {
+    "text": "mention is",
+    "start": 844.779,
+    "duration": 4.44
+  },
+  {
+    "text": "the actual process of RAG actually had a",
+    "start": 846.339,
+    "duration": 6.12
+  },
+  {
+    "text": "two variants here. One's called a RAG",
+    "start": 849.219,
+    "duration": 6.64
+  },
+  {
+    "text": "sequence. That is you pick one passage",
+    "start": 852.459,
+    "duration": 5.242
+  },
+  {
+    "text": "and then you generate the whole answer",
+    "start": 855.859,
+    "duration": 3.282
+  },
+  {
+    "text": "with it.",
+    "start": 857.701,
+    "duration": 3.44
+  },
+  {
+    "text": "Right a token means that",
+    "start": 859.141,
+    "duration": 3.88
+  },
+  {
+    "text": "every time we are going to re-weight the",
+    "start": 861.141,
+    "duration": 4.24
+  },
+  {
+    "text": "passage at every token of the answers.",
+    "start": 863.021,
+    "duration": 4.96
+  },
+  {
+    "text": "So, you do not kind of fix a passage for",
+    "start": 865.381,
+    "duration": 6.64
+  },
+  {
+    "text": "the entire answer generation.",
+    "start": 867.981,
+    "duration": 6.64
+  },
+  {
+    "text": "Let's go a little bit of deeper here.",
+    "start": 872.021,
+    "duration": 5.0
+  },
+  {
+    "text": "So, once you have this kind of retriever",
+    "start": 874.621,
+    "duration": 4.88
+  },
+  {
+    "text": "and a generator, we need to train this",
+    "start": 877.021,
+    "duration": 5.4
+  },
+  {
+    "text": "architecture. This is actually done in a",
+    "start": 879.501,
+    "duration": 5.08
+  },
+  {
+    "text": "joint training fashion where we jointly",
+    "start": 882.421,
+    "duration": 4.92
+  },
+  {
+    "text": "train the retriever and a generator to",
+    "start": 884.581,
+    "duration": 5.2
+  },
+  {
+    "text": "really just minimize the negative log",
+    "start": 887.341,
+    "duration": 5.08
+  },
+  {
+    "text": "likelihood here. This is should be very",
+    "start": 889.781,
+    "duration": 4.8
+  },
+  {
+    "text": "familiar to many of you.",
+    "start": 892.421,
+    "duration": 2.84
+  },
+  {
+    "text": "Um",
+    "start": 894.581,
+    "duration": 2.12
+  },
+  {
+    "text": "Basically, you have a ground truth",
+    "start": 895.261,
+    "duration": 3.16
+  },
+  {
+    "text": "answer and then you have a generated",
+    "start": 896.701,
+    "duration": 3.36
+  },
+  {
+    "text": "answer. We are going to see whether they",
+    "start": 898.421,
+    "duration": 6.0
+  },
+  {
+    "text": "match. That's the key idea here.",
+    "start": 900.061,
+    "duration": 4.36
+  },
+  {
+    "text": "Now, let's go a little bit of deeper",
+    "start": 905.341,
+    "duration": 5.2
+  },
+  {
+    "text": "into how retriever is is learned and how",
+    "start": 907.261,
+    "duration": 5.24
+  },
+  {
+    "text": "to even represent a retriever and a",
+    "start": 910.541,
+    "duration": 3.28
+  },
+  {
+    "text": "generator.",
+    "start": 912.501,
+    "duration": 4.52
+  },
+  {
+    "text": "So, in the classic rag fashion, the",
+    "start": 913.821,
+    "duration": 5.28
+  },
+  {
+    "text": "retriever is",
+    "start": 917.021,
+    "duration": 6.12
+  },
+  {
+    "text": "dense passage retriever here, DPR.",
+    "start": 919.101,
+    "duration": 6.72
+  },
+  {
+    "text": "We basically are going to use two BERT",
+    "start": 923.141,
+    "duration": 5.72
+  },
+  {
+    "text": "encoders here. BERT was used like",
+    "start": 925.821,
+    "duration": 5.64
+  },
+  {
+    "text": "frequently earlier days.",
+    "start": 928.861,
+    "duration": 4.92
+  },
+  {
+    "text": "So, basically, what it does is that we",
+    "start": 931.461,
+    "duration": 3.92
+  },
+  {
+    "text": "are going to",
+    "start": 933.781,
+    "duration": 5.08
+  },
+  {
+    "text": "pass the passage and question to",
+    "start": 935.381,
+    "duration": 6.4
+  },
+  {
+    "text": "different BERT encoder here. So, we get",
+    "start": 938.861,
+    "duration": 5.76
+  },
+  {
+    "text": "a query encoder. We also get a document",
+    "start": 941.781,
+    "duration": 5.48
+  },
+  {
+    "text": "encoder and then we look at the inner",
+    "start": 944.621,
+    "duration": 6.84
+  },
+  {
+    "text": "product of their those two vectors. This",
+    "start": 947.261,
+    "duration": 6.64
+  },
+  {
+    "text": "is basically the score we are going to",
+    "start": 951.461,
+    "duration": 5.2
+  },
+  {
+    "text": "use to rank documents.",
+    "start": 953.901,
+    "duration": 5.36
+  },
+  {
+    "text": "Those passage vectors, they can be",
+    "start": 956.661,
+    "duration": 5.24
+  },
+  {
+    "text": "computed at once and then stored in a",
+    "start": 959.261,
+    "duration": 5.4
+  },
+  {
+    "text": "index. So, this often is like in",
+    "start": 961.901,
+    "duration": 6.2
+  },
+  {
+    "text": "offline. So, at the query time, we only",
+    "start": 964.661,
+    "duration": 5.52
+  },
+  {
+    "text": "like encode the question and then run",
+    "start": 968.101,
+    "duration": 2.96
+  },
+  {
+    "text": "this",
+    "start": 970.181,
+    "duration": 4.64
+  },
+  {
+    "text": "MIPS search to gather the top K. So,",
+    "start": 971.061,
+    "duration": 5.801
+  },
+  {
+    "text": "basically, the document part is what we",
+    "start": 974.821,
+    "duration": 4.881
+  },
+  {
+    "text": "can actually process offline.",
+    "start": 976.862,
+    "duration": 5.4
+  },
+  {
+    "text": "Um then this exponential basically just",
+    "start": 979.702,
+    "duration": 5.6
+  },
+  {
+    "text": "like turns the score into a distribution",
+    "start": 982.262,
+    "duration": 6.0
+  },
+  {
+    "text": "over different retrieved passages here.",
+    "start": 985.302,
+    "duration": 5.04
+  },
+  {
+    "text": "And then that's what the sum on the",
+    "start": 988.262,
+    "duration": 5.64
+  },
+  {
+    "text": "right slice is about.",
+    "start": 990.342,
+    "duration": 3.56
+  },
+  {
+    "text": "The generator part, again this is a",
+    "start": 994.342,
+    "duration": 3.84
+  },
+  {
+    "text": "design choice. You can actually try",
+    "start": 996.342,
+    "duration": 4.28
+  },
+  {
+    "text": "different type of setups. I'm going to",
+    "start": 998.182,
+    "duration": 4.56
+  },
+  {
+    "text": "use BART which is a earlier",
+    "start": 1000.622,
+    "duration": 4.44
+  },
+  {
+    "text": "encoder-decoder architecture as an",
+    "start": 1002.742,
+    "duration": 3.84
+  },
+  {
+    "text": "illustration here.",
+    "start": 1005.062,
+    "duration": 3.68
+  },
+  {
+    "text": "Um but you can use any kind of sequence",
+    "start": 1006.582,
+    "duration": 4.72
+  },
+  {
+    "text": "to sequence model here.",
+    "start": 1008.742,
+    "duration": 4.92
+  },
+  {
+    "text": "The input is very simple. We basically",
+    "start": 1011.302,
+    "duration": 4.32
+  },
+  {
+    "text": "concatenated the question and then the",
+    "start": 1013.662,
+    "duration": 4.24
+  },
+  {
+    "text": "retrieved passenger. And then we feed",
+    "start": 1015.622,
+    "duration": 4.68
+  },
+  {
+    "text": "them into the encoder. And then we let",
+    "start": 1017.902,
+    "duration": 5.36
+  },
+  {
+    "text": "the decoder write the answer one token",
+    "start": 1020.302,
+    "duration": 4.76
+  },
+  {
+    "text": "at each time.",
+    "start": 1023.262,
+    "duration": 4.64
+  },
+  {
+    "text": "Uh there is no like special architecture",
+    "start": 1025.062,
+    "duration": 4.72
+  },
+  {
+    "text": "for retrieval. And then the retrieved",
+    "start": 1027.902,
+    "duration": 5.44
+  },
+  {
+    "text": "passage is just a actual text in the in",
+    "start": 1029.782,
+    "duration": 6.4
+  },
+  {
+    "text": "the context. And this is also why RAG",
+    "start": 1033.342,
+    "duration": 6.32
+  },
+  {
+    "text": "can easily transferred to modern LLMs",
+    "start": 1036.182,
+    "duration": 5.56
+  },
+  {
+    "text": "where we do the same thing just with a",
+    "start": 1039.662,
+    "duration": 4.68
+  },
+  {
+    "text": "prompt.",
+    "start": 1041.742,
+    "duration": 2.6
+  },
+  {
+    "text": "So let's look at some of the RAG",
+    "start": 1044.902,
+    "duration": 4.24
+  },
+  {
+    "text": "performance. Again, this is a little bit",
+    "start": 1046.582,
+    "duration": 5.2
+  },
+  {
+    "text": "more earlier days. Uh today I think a",
+    "start": 1049.142,
+    "duration": 4.96
+  },
+  {
+    "text": "model performance on those data sets are",
+    "start": 1051.782,
+    "duration": 3.72
+  },
+  {
+    "text": "much higher.",
+    "start": 1054.102,
+    "duration": 3.76
+  },
+  {
+    "text": "Uh there were two there were like two or",
+    "start": 1055.502,
+    "duration": 3.48
+  },
+  {
+    "text": "four",
+    "start": 1057.862,
+    "duration": 3.56
+  },
+  {
+    "text": "data sets that we use frequently.",
+    "start": 1058.982,
+    "duration": 4.6
+  },
+  {
+    "text": "Um natural questions is from Google,",
+    "start": 1061.422,
+    "duration": 4.72
+  },
+  {
+    "text": "TriviaQA, WebQuestions,",
+    "start": 1063.582,
+    "duration": 5.52
+  },
+  {
+    "text": "and Curated Track here. You can see that",
+    "start": 1066.142,
+    "duration": 6.68
+  },
+  {
+    "text": "compared to just simple DPR or the",
+    "start": 1069.102,
+    "duration": 6.0
+  },
+  {
+    "text": "earlier algorithm,",
+    "start": 1072.822,
+    "duration": 5.0
+  },
+  {
+    "text": "RAG based fashion actually lead to a lot",
+    "start": 1075.102,
+    "duration": 5.08
+  },
+  {
+    "text": "of boost here.",
+    "start": 1077.822,
+    "duration": 5.12
+  },
+  {
+    "text": "When you also give the output to humans",
+    "start": 1080.182,
+    "duration": 5.16
+  },
+  {
+    "text": "to let humans read for the for the",
+    "start": 1082.942,
+    "duration": 5.08
+  },
+  {
+    "text": "answers from RAG versus from earlier",
+    "start": 1085.342,
+    "duration": 5.16
+  },
+  {
+    "text": "BART or other systems, which one is",
+    "start": 1088.022,
+    "duration": 4.6
+  },
+  {
+    "text": "better? And you can see that from a",
+    "start": 1090.502,
+    "duration": 5.56
+  },
+  {
+    "text": "factuality factuality or specificity",
+    "start": 1092.622,
+    "duration": 6.44
+  },
+  {
+    "text": "perspective, RAG is written better most",
+    "start": 1096.062,
+    "duration": 4.76
+  },
+  {
+    "text": "of the time.",
+    "start": 1099.062,
+    "duration": 4.761
+  },
+  {
+    "text": "So I think it basically pointed out the",
+    "start": 1100.822,
+    "duration": 5.761
+  },
+  {
+    "text": "the key contribution of rag that is it",
+    "start": 1103.823,
+    "duration": 5.48
+  },
+  {
+    "text": "literally does better grounding compared",
+    "start": 1106.583,
+    "duration": 5.6
+  },
+  {
+    "text": "to a lot of the systems we have because",
+    "start": 1109.303,
+    "duration": 4.84
+  },
+  {
+    "text": "the retrieved the content is really",
+    "start": 1112.183,
+    "duration": 5.32
+  },
+  {
+    "text": "doing the work for us.",
+    "start": 1114.143,
+    "duration": 3.36
+  },
+  {
+    "text": "So, what I just went through is a very",
+    "start": 1117.543,
+    "duration": 6.36
+  },
+  {
+    "text": "classic first rag paper and rag actually",
+    "start": 1119.943,
+    "duration": 7.2
+  },
+  {
+    "text": "has evolved like like significantly in",
+    "start": 1123.903,
+    "duration": 6.32
+  },
+  {
+    "text": "the last few years. The very left side",
+    "start": 1127.143,
+    "duration": 5.48
+  },
+  {
+    "text": "is the naive rag fashion where you can",
+    "start": 1130.223,
+    "duration": 5.88
+  },
+  {
+    "text": "see user query documents, we do index,",
+    "start": 1132.623,
+    "duration": 6.6
+  },
+  {
+    "text": "we do retrieval, and then we can query",
+    "start": 1136.103,
+    "duration": 5.16
+  },
+  {
+    "text": "the model to answer it.",
+    "start": 1139.223,
+    "duration": 4.44
+  },
+  {
+    "text": "You can also add some kind of components",
+    "start": 1141.263,
+    "duration": 4.32
+  },
+  {
+    "text": "there to make rag more more",
+    "start": 1143.663,
+    "duration": 4.4
+  },
+  {
+    "text": "sophisticated and more powerful.",
+    "start": 1145.583,
+    "duration": 5.4
+  },
+  {
+    "text": "In the middle column, you can see that",
+    "start": 1148.063,
+    "duration": 5.44
+  },
+  {
+    "text": "pre-retrieval, you can actually do",
+    "start": 1150.983,
+    "duration": 6.08
+  },
+  {
+    "text": "something like query routing or query",
+    "start": 1153.503,
+    "duration": 5.92
+  },
+  {
+    "text": "rewriting, query expansion. You can",
+    "start": 1157.063,
+    "duration": 4.44
+  },
+  {
+    "text": "actually provide a lot of rich context",
+    "start": 1159.423,
+    "duration": 5.16
+  },
+  {
+    "text": "for your query to make it easily",
+    "start": 1161.503,
+    "duration": 4.92
+  },
+  {
+    "text": "like processable.",
+    "start": 1164.583,
+    "duration": 4.0
+  },
+  {
+    "text": "And then post-retrieval, you can also do",
+    "start": 1166.423,
+    "duration": 4.0
+  },
+  {
+    "text": "maybe you try the different approach to",
+    "start": 1168.583,
+    "duration": 3.8
+  },
+  {
+    "text": "do the retrieval. So, maybe you want to",
+    "start": 1170.423,
+    "duration": 4.16
+  },
+  {
+    "text": "combine them, you want to re-rank them,",
+    "start": 1172.383,
+    "duration": 3.92
+  },
+  {
+    "text": "you want to summarize them, you want to",
+    "start": 1174.583,
+    "duration": 3.92
+  },
+  {
+    "text": "fuse them together. So, there are a lot",
+    "start": 1176.303,
+    "duration": 4.36
+  },
+  {
+    "text": "of like techniques you can actually",
+    "start": 1178.503,
+    "duration": 5.8
+  },
+  {
+    "text": "introduce to make rag better.",
+    "start": 1180.663,
+    "duration": 6.76
+  },
+  {
+    "text": "I think like more recently this kind of",
+    "start": 1184.303,
+    "duration": 5.24
+  },
+  {
+    "text": "more modular rag",
+    "start": 1187.423,
+    "duration": 4.88
+  },
+  {
+    "text": "on the right part actually goes one step",
+    "start": 1189.543,
+    "duration": 5.56
+  },
+  {
+    "text": "further. It break everything into",
+    "start": 1192.303,
+    "duration": 5.52
+  },
+  {
+    "text": "modules, search, routing, rewrite,",
+    "start": 1195.103,
+    "duration": 5.68
+  },
+  {
+    "text": "re-rank, memory, and fusion. And then",
+    "start": 1197.823,
+    "duration": 5.12
+  },
+  {
+    "text": "you can compose them into patterns such",
+    "start": 1200.783,
+    "duration": 5.44
+  },
+  {
+    "text": "as retrieve and then read or iterate",
+    "start": 1202.943,
+    "duration": 6.36
+  },
+  {
+    "text": "iterative retrieve and then read.",
+    "start": 1206.223,
+    "duration": 5.76
+  },
+  {
+    "text": "So, this is just what do we have today?",
+    "start": 1209.303,
+    "duration": 4.52
+  },
+  {
+    "text": "I think you can do a lot of design",
+    "start": 1211.983,
+    "duration": 4.24
+  },
+  {
+    "text": "choices on top of those different",
+    "start": 1213.823,
+    "duration": 5.0
+  },
+  {
+    "text": "components.",
+    "start": 1216.223,
+    "duration": 4.96
+  },
+  {
+    "text": "Before we move to the specific index,",
+    "start": 1218.823,
+    "duration": 4.28
+  },
+  {
+    "text": "any quick question here?",
+    "start": 1221.183,
+    "duration": 3.842
+  },
+  {
+    "text": ">> For the slide where showed that RAG is",
+    "start": 1223.103,
+    "duration": 3.922
+  },
+  {
+    "text": "performing better than the other models.",
+    "start": 1225.025,
+    "duration": 3.56
+  },
+  {
+    "text": "When something like that is sort of",
+    "start": 1227.025,
+    "duration": 3.12
+  },
+  {
+    "text": "proposed for the first time, do we also",
+    "start": 1228.585,
+    "duration": 3.92
+  },
+  {
+    "text": "think of how much faster or is it due to",
+    "start": 1230.145,
+    "duration": 3.56
+  },
+  {
+    "text": "the other reasons?",
+    "start": 1232.505,
+    "duration": 2.52
+  },
+  {
+    "text": ">> Yeah, great question.",
+    "start": 1233.705,
+    "duration": 2.32
+  },
+  {
+    "text": "Um",
+    "start": 1235.025,
+    "duration": 2.52
+  },
+  {
+    "text": "The question is, in addition to",
+    "start": 1236.025,
+    "duration": 3.56
+  },
+  {
+    "text": "performance comparison, do we have any",
+    "start": 1237.545,
+    "duration": 4.52
+  },
+  {
+    "text": "benchmarking of speed and the memory and",
+    "start": 1239.585,
+    "duration": 4.44
+  },
+  {
+    "text": "even cost? Um",
+    "start": 1242.065,
+    "duration": 5.56
+  },
+  {
+    "text": "so uh in later in this lecture, I will",
+    "start": 1244.025,
+    "duration": 5.72
+  },
+  {
+    "text": "mention some of the different components",
+    "start": 1247.625,
+    "duration": 4.36
+  },
+  {
+    "text": "in terms of a latency and others when we",
+    "start": 1249.745,
+    "duration": 4.28
+  },
+  {
+    "text": "compare those methods. I do think that",
+    "start": 1251.985,
+    "duration": 3.76
+  },
+  {
+    "text": "this is a very key",
+    "start": 1254.025,
+    "duration": 3.72
+  },
+  {
+    "text": "uh difference. This is why when I was",
+    "start": 1255.745,
+    "duration": 4.0
+  },
+  {
+    "text": "talking about like for the document",
+    "start": 1257.745,
+    "duration": 3.64
+  },
+  {
+    "text": "index, this is something we can actually",
+    "start": 1259.745,
+    "duration": 4.68
+  },
+  {
+    "text": "process uh like offline. Uh when we have",
+    "start": 1261.385,
+    "duration": 4.92
+  },
+  {
+    "text": "more kind of encoders that I'm going to",
+    "start": 1264.425,
+    "duration": 3.8
+  },
+  {
+    "text": "talk about, you will see that uh some of",
+    "start": 1266.305,
+    "duration": 4.04
+  },
+  {
+    "text": "them you can actually precompute them.",
+    "start": 1268.225,
+    "duration": 4.68
+  },
+  {
+    "text": "Some of the other like BERT encoders,",
+    "start": 1270.345,
+    "duration": 4.36
+  },
+  {
+    "text": "you really cannot precompute them",
+    "start": 1272.905,
+    "duration": 3.76
+  },
+  {
+    "text": "because you need to put in the context",
+    "start": 1274.705,
+    "duration": 4.36
+  },
+  {
+    "text": "and document in the same matrix and then",
+    "start": 1276.665,
+    "duration": 4.96
+  },
+  {
+    "text": "do attention mechanism. So, this is",
+    "start": 1279.065,
+    "duration": 4.84
+  },
+  {
+    "text": "going to be a big consideration as we",
+    "start": 1281.625,
+    "duration": 4.6
+  },
+  {
+    "text": "move along.",
+    "start": 1283.905,
+    "duration": 3.24
+  },
+  {
+    "text": ">> Um",
+    "start": 1286.225,
+    "duration": 2.16
+  },
+  {
+    "text": "When you're using",
+    "start": 1287.145,
+    "duration": 5.48
+  },
+  {
+    "text": "API models on like say ChatGPT or like",
+    "start": 1288.385,
+    "duration": 7.92
+  },
+  {
+    "text": "um more frontier models, um is RAG",
+    "start": 1292.625,
+    "duration": 7.16
+  },
+  {
+    "text": "already implemented within them or",
+    "start": 1296.305,
+    "duration": 6.92
+  },
+  {
+    "text": "do we need to like add on more like",
+    "start": 1299.785,
+    "duration": 6.2
+  },
+  {
+    "text": "like extra RAG instructions within the",
+    "start": 1303.225,
+    "duration": 3.6
+  },
+  {
+    "text": "agent?",
+    "start": 1305.985,
+    "duration": 3.48
+  },
+  {
+    "text": ">> Yeah, uh the question is, for more than",
+    "start": 1306.825,
+    "duration": 5.44
+  },
+  {
+    "text": "models, are we going to still do RAG",
+    "start": 1309.465,
+    "duration": 5.6
+  },
+  {
+    "text": "explicitly or is it already built in",
+    "start": 1312.265,
+    "duration": 6.92
+  },
+  {
+    "text": "with them? Um so, the answer is uh RAG",
+    "start": 1315.065,
+    "duration": 7.08
+  },
+  {
+    "text": "as a principle, uh it can always work",
+    "start": 1319.185,
+    "duration": 5.6
+  },
+  {
+    "text": "even for frontier models. Let me give",
+    "start": 1322.145,
+    "duration": 4.4
+  },
+  {
+    "text": "you one example. Let's say you run a",
+    "start": 1324.785,
+    "duration": 4.04
+  },
+  {
+    "text": "company and the company is for specific",
+    "start": 1326.545,
+    "duration": 5.0
+  },
+  {
+    "text": "financial services. All the data, all",
+    "start": 1328.825,
+    "duration": 4.56
+  },
+  {
+    "text": "the specific database are just not",
+    "start": 1331.545,
+    "duration": 4.2
+  },
+  {
+    "text": "public online. So, in that situation,",
+    "start": 1333.385,
+    "duration": 4.16
+  },
+  {
+    "text": "it's really hard for the model to know",
+    "start": 1335.745,
+    "duration": 3.96
+  },
+  {
+    "text": "everything. Then when you use the model",
+    "start": 1337.545,
+    "duration": 4.16
+  },
+  {
+    "text": "there, you can give them access to",
+    "start": 1339.705,
+    "duration": 4.6
+  },
+  {
+    "text": "certain kind of like local database. In",
+    "start": 1341.705,
+    "duration": 5.401
+  },
+  {
+    "text": "this way, uh RAG still applies there and",
+    "start": 1344.305,
+    "duration": 4.921
+  },
+  {
+    "text": "you can use any kind of frontier models",
+    "start": 1347.106,
+    "duration": 5.44
+  },
+  {
+    "text": "here in in this uh perspective. I think",
+    "start": 1349.226,
+    "duration": 5.4
+  },
+  {
+    "text": "if it's really just about the general",
+    "start": 1352.546,
+    "duration": 4.24
+  },
+  {
+    "text": "internet search, uh I think uh since",
+    "start": 1354.626,
+    "duration": 3.84
+  },
+  {
+    "text": "GPT-4,",
+    "start": 1356.786,
+    "duration": 3.64
+  },
+  {
+    "text": "um many of the models already support",
+    "start": 1358.466,
+    "duration": 3.28
+  },
+  {
+    "text": "that. So, like if you're asking a",
+    "start": 1360.426,
+    "duration": 3.16
+  },
+  {
+    "text": "question of um",
+    "start": 1361.746,
+    "duration": 4.36
+  },
+  {
+    "text": "what's the weather today in in uh Palo",
+    "start": 1363.586,
+    "duration": 5.04
+  },
+  {
+    "text": "Alto, it actually can go fetch some of",
+    "start": 1366.106,
+    "duration": 4.72
+  },
+  {
+    "text": "the existing database and answer you the",
+    "start": 1368.626,
+    "duration": 4.56
+  },
+  {
+    "text": "question.",
+    "start": 1370.826,
+    "duration": 3.08
+  },
+  {
+    "text": "Okay.",
+    "start": 1373.186,
+    "duration": 2.56
+  },
+  {
+    "text": "Maybe last question.",
+    "start": 1373.906,
+    "duration": 3.8
+  },
+  {
+    "text": ">> Uh I was just wondering like",
+    "start": 1375.746,
+    "duration": 4.08
+  },
+  {
+    "text": "uh I'm wondering the retriever inside",
+    "start": 1377.706,
+    "duration": 5.16
+  },
+  {
+    "text": "RAG, like do we still use BERT behind",
+    "start": 1379.826,
+    "duration": 4.56
+  },
+  {
+    "text": "the scenes as a more advanced approach",
+    "start": 1382.866,
+    "duration": 3.16
+  },
+  {
+    "text": "or we are we are we are having better",
+    "start": 1384.386,
+    "duration": 2.56
+  },
+  {
+    "text": "options?",
+    "start": 1386.026,
+    "duration": 4.64
+  },
+  {
+    "text": ">> Yeah. So, I will go um detailed in terms",
+    "start": 1386.946,
+    "duration": 5.88
+  },
+  {
+    "text": "of different approach of how we encode",
+    "start": 1390.666,
+    "duration": 4.92
+  },
+  {
+    "text": "it. Uh so, I used BERT as one example",
+    "start": 1392.826,
+    "duration": 4.84
+  },
+  {
+    "text": "here, but uh we all know that the field",
+    "start": 1395.586,
+    "duration": 4.28
+  },
+  {
+    "text": "has changed dramatically. BERT now is",
+    "start": 1397.666,
+    "duration": 4.88
+  },
+  {
+    "text": "viewed as very historical. Uh so, we are",
+    "start": 1399.866,
+    "duration": 4.92
+  },
+  {
+    "text": "going to move to more modern methods",
+    "start": 1402.546,
+    "duration": 4.68
+  },
+  {
+    "text": "just in a few slides.",
+    "start": 1404.786,
+    "duration": 5.32
+  },
+  {
+    "text": "Okay, I'm going to continue. Um",
+    "start": 1407.226,
+    "duration": 6.12
+  },
+  {
+    "text": "So, uh I always love the questions.",
+    "start": 1410.106,
+    "duration": 6.12
+  },
+  {
+    "text": "Um now I want to go like one layer",
+    "start": 1413.346,
+    "duration": 5.16
+  },
+  {
+    "text": "deeper. Uh this is actually a technique",
+    "start": 1416.226,
+    "duration": 4.36
+  },
+  {
+    "text": "called indexing. Basically, when you",
+    "start": 1418.506,
+    "duration": 3.6
+  },
+  {
+    "text": "want to do retrieval, you need to have",
+    "start": 1420.586,
+    "duration": 3.4
+  },
+  {
+    "text": "the unit where you can",
+    "start": 1422.106,
+    "duration": 4.16
+  },
+  {
+    "text": "like provide embeddings for the unit.",
+    "start": 1423.986,
+    "duration": 4.44
+  },
+  {
+    "text": "And then, how do we make sure that each",
+    "start": 1426.266,
+    "duration": 5.44
+  },
+  {
+    "text": "chunk here uh carries enough context to",
+    "start": 1428.426,
+    "duration": 5.4
+  },
+  {
+    "text": "be found?",
+    "start": 1431.706,
+    "duration": 5.16
+  },
+  {
+    "text": "Um so, going back to what makes a good",
+    "start": 1433.826,
+    "duration": 4.56
+  },
+  {
+    "text": "retriever. Uh",
+    "start": 1436.866,
+    "duration": 4.76
+  },
+  {
+    "text": "so, still embedding is very popular. If",
+    "start": 1438.386,
+    "duration": 6.16
+  },
+  {
+    "text": "you think about a statical word um",
+    "start": 1441.626,
+    "duration": 5.8
+  },
+  {
+    "text": "examples such as word-to-vec or GloVe,",
+    "start": 1444.546,
+    "duration": 5.56
+  },
+  {
+    "text": "which we covered at the CS224N,",
+    "start": 1447.426,
+    "duration": 4.6
+  },
+  {
+    "text": "um here you are going to get embedding",
+    "start": 1450.106,
+    "duration": 4.84
+  },
+  {
+    "text": "for each word for each token.",
+    "start": 1452.026,
+    "duration": 4.72
+  },
+  {
+    "text": "Um you can also get a contextual",
+    "start": 1454.946,
+    "duration": 4.68
+  },
+  {
+    "text": "embedding uh such as using BERT. Uh you",
+    "start": 1456.746,
+    "duration": 4.4
+  },
+  {
+    "text": "can also use different architecture",
+    "start": 1459.626,
+    "duration": 3.8
+  },
+  {
+    "text": "here. Basically, this token",
+    "start": 1461.146,
+    "duration": 4.2
+  },
+  {
+    "text": "representation is going to take care of",
+    "start": 1463.426,
+    "duration": 4.401
+  },
+  {
+    "text": "the context. So, if you have a word like",
+    "start": 1465.346,
+    "duration": 5.481
+  },
+  {
+    "text": "a bank, um in this contextual uh",
+    "start": 1467.827,
+    "duration": 5.561
+  },
+  {
+    "text": "fashion, you are going to encode",
+    "start": 1470.827,
+    "duration": 4.201
+  },
+  {
+    "text": "the financial",
+    "start": 1473.388,
+    "duration": 4.719
+  },
+  {
+    "text": "connotation versus bank",
+    "start": 1475.028,
+    "duration": 6.039
+  },
+  {
+    "text": "its own may have different meanings.",
+    "start": 1478.107,
+    "duration": 5.48
+  },
+  {
+    "text": "You can also use the passage as a unit",
+    "start": 1481.067,
+    "duration": 5.04
+  },
+  {
+    "text": "here. You can do sentence bird. You can",
+    "start": 1483.587,
+    "duration": 4.801
+  },
+  {
+    "text": "do DPR that I mentioned earlier. You can",
+    "start": 1486.107,
+    "duration": 4.561
+  },
+  {
+    "text": "also try different architecture here.",
+    "start": 1488.388,
+    "duration": 5.4
+  },
+  {
+    "text": "Then the unit here is not a word. It's",
+    "start": 1490.668,
+    "duration": 6.12
+  },
+  {
+    "text": "not a token. It's actually a like",
+    "start": 1493.788,
+    "duration": 5.12
+  },
+  {
+    "text": "segment of text.",
+    "start": 1496.788,
+    "duration": 4.639
+  },
+  {
+    "text": "You can also have multimodal information",
+    "start": 1498.908,
+    "duration": 5.039
+  },
+  {
+    "text": "here. For example, clip.",
+    "start": 1501.427,
+    "duration": 4.721
+  },
+  {
+    "text": "This actually provides both encodings",
+    "start": 1503.947,
+    "duration": 5.16
+  },
+  {
+    "text": "for text and image tokens.",
+    "start": 1506.148,
+    "duration": 6.359
+  },
+  {
+    "text": "Here, you put a text and image into the",
+    "start": 1509.107,
+    "duration": 5.2
+  },
+  {
+    "text": "shared space.",
+    "start": 1512.507,
+    "duration": 4.44
+  },
+  {
+    "text": "You can also go towards like multimodal",
+    "start": 1514.307,
+    "duration": 5.841
+  },
+  {
+    "text": "where you have both audio, image, and",
+    "start": 1516.947,
+    "duration": 4.36
+  },
+  {
+    "text": "text.",
+    "start": 1520.148,
+    "duration": 4.76
+  },
+  {
+    "text": "So, this is just one specific example.",
+    "start": 1521.307,
+    "duration": 6.721
+  },
+  {
+    "text": "We can also go a bit deeper. Graph.",
+    "start": 1524.908,
+    "duration": 5.679
+  },
+  {
+    "text": "You can have node to vector, like node",
+    "start": 1528.028,
+    "duration": 4.839
+  },
+  {
+    "text": "to back. You can have like a different",
+    "start": 1530.587,
+    "duration": 4.48
+  },
+  {
+    "text": "graphic neural network graph neural",
+    "start": 1532.867,
+    "duration": 5.36
+  },
+  {
+    "text": "network encoder here, GM. And then you",
+    "start": 1535.067,
+    "duration": 5.201
+  },
+  {
+    "text": "your your like embedding is going to",
+    "start": 1538.227,
+    "duration": 4.48
+  },
+  {
+    "text": "capture the node information or the",
+    "start": 1540.268,
+    "duration": 4.799
+  },
+  {
+    "text": "relation between different node.",
+    "start": 1542.707,
+    "duration": 4.961
+  },
+  {
+    "text": "This page is just to show you that the",
+    "start": 1545.067,
+    "duration": 5.28
+  },
+  {
+    "text": "reason why rag or a lot of the design",
+    "start": 1547.668,
+    "duration": 4.439
+  },
+  {
+    "text": "principles behind the rag are still",
+    "start": 1550.347,
+    "duration": 4.321
+  },
+  {
+    "text": "powerful is because they do apply to a",
+    "start": 1552.107,
+    "duration": 6.52
+  },
+  {
+    "text": "lot of like task as we will see in the",
+    "start": 1554.668,
+    "duration": 6.6
+  },
+  {
+    "text": "next 10 minutes.",
+    "start": 1558.627,
+    "duration": 4.521
+  },
+  {
+    "text": "One thing that I do want to mention here",
+    "start": 1561.268,
+    "duration": 4.439
+  },
+  {
+    "text": "is that in order to make the retrieval",
+    "start": 1563.148,
+    "duration": 5.079
+  },
+  {
+    "text": "good, in addition to have a good",
+    "start": 1565.707,
+    "duration": 5.84
+  },
+  {
+    "text": "embedding representation per chunk, you",
+    "start": 1568.227,
+    "duration": 5.96
+  },
+  {
+    "text": "also need a similarity metric. In",
+    "start": 1571.547,
+    "duration": 5.52
+  },
+  {
+    "text": "general, people just use cosine or like",
+    "start": 1574.187,
+    "duration": 5.081
+  },
+  {
+    "text": "inner product here. And the simple",
+    "start": 1577.067,
+    "duration": 6.16
+  },
+  {
+    "text": "approach actually work very well.",
+    "start": 1579.268,
+    "duration": 3.959
+  },
+  {
+    "text": "So, now let's think about the chunking",
+    "start": 1583.587,
+    "duration": 4.76
+  },
+  {
+    "text": "process here. This is the basic unit in",
+    "start": 1585.507,
+    "duration": 5.882
+  },
+  {
+    "text": "retrieval. And you can imagine if I have",
+    "start": 1588.347,
+    "duration": 5.722
+  },
+  {
+    "text": "a really really long document, how can I",
+    "start": 1591.389,
+    "duration": 5.72
+  },
+  {
+    "text": "segment them into different pieces?",
+    "start": 1594.069,
+    "duration": 5.2
+  },
+  {
+    "text": "The first approach is very simple. Let's",
+    "start": 1597.109,
+    "duration": 5.28
+  },
+  {
+    "text": "just do a fixed size segmentation. You",
+    "start": 1599.269,
+    "duration": 5.24
+  },
+  {
+    "text": "can just segment it based on size. I'm",
+    "start": 1602.389,
+    "duration": 4.92
+  },
+  {
+    "text": "going to have 100 to 500 tokens per",
+    "start": 1604.509,
+    "duration": 4.28
+  },
+  {
+    "text": "segment.",
+    "start": 1607.309,
+    "duration": 3.88
+  },
+  {
+    "text": "If the segment is very small, then the",
+    "start": 1608.789,
+    "duration": 5.08
+  },
+  {
+    "text": "vector does not have enough context.",
+    "start": 1611.189,
+    "duration": 6.56
+  },
+  {
+    "text": "If the segment is very large, then a",
+    "start": 1613.869,
+    "duration": 6.64
+  },
+  {
+    "text": "vector may carry or average many many",
+    "start": 1617.749,
+    "duration": 5.24
+  },
+  {
+    "text": "topics. That's also not good. So we want",
+    "start": 1620.509,
+    "duration": 4.8
+  },
+  {
+    "text": "something in the middle and that in the",
+    "start": 1622.989,
+    "duration": 5.44
+  },
+  {
+    "text": "middle needs to be well configured.",
+    "start": 1625.309,
+    "duration": 5.04
+  },
+  {
+    "text": "You may also want to think about that,",
+    "start": 1628.429,
+    "duration": 3.68
+  },
+  {
+    "text": "okay, if I have this segment and that",
+    "start": 1630.349,
+    "duration": 3.24
+  },
+  {
+    "text": "segment,",
+    "start": 1632.109,
+    "duration": 3.92
+  },
+  {
+    "text": "how should I preserve information shared",
+    "start": 1633.589,
+    "duration": 3.6
+  },
+  {
+    "text": "between them?",
+    "start": 1636.029,
+    "duration": 3.44
+  },
+  {
+    "text": "This is a technique called overlap. In",
+    "start": 1637.189,
+    "duration": 4.8
+  },
+  {
+    "text": "general, we are going to have 10 to 20%",
+    "start": 1639.469,
+    "duration": 5.76
+  },
+  {
+    "text": "of the tokens kind of overlap. So those",
+    "start": 1641.989,
+    "duration": 5.64
+  },
+  {
+    "text": "two two like intervals will have some",
+    "start": 1645.229,
+    "duration": 4.72
+  },
+  {
+    "text": "overlap with each other. In this way, we",
+    "start": 1647.629,
+    "duration": 4.24
+  },
+  {
+    "text": "can actually preserve some of the",
+    "start": 1649.949,
+    "duration": 4.24
+  },
+  {
+    "text": "context or center sentence boundary",
+    "start": 1651.869,
+    "duration": 4.64
+  },
+  {
+    "text": "information.",
+    "start": 1654.189,
+    "duration": 4.36
+  },
+  {
+    "text": "Beyond that, you can also do some kind",
+    "start": 1656.509,
+    "duration": 4.72
+  },
+  {
+    "text": "of semantic segmentation where you can",
+    "start": 1658.549,
+    "duration": 4.84
+  },
+  {
+    "text": "just be like, I'm going to just use this",
+    "start": 1661.229,
+    "duration": 4.72
+  },
+  {
+    "text": "one sentence as one unit or this one",
+    "start": 1663.389,
+    "duration": 4.8
+  },
+  {
+    "text": "paragraph as one unit. Those are",
+    "start": 1665.949,
+    "duration": 4.84
+  },
+  {
+    "text": "different design choices.",
+    "start": 1668.189,
+    "duration": 4.36
+  },
+  {
+    "text": "Beyond that, you can also do something",
+    "start": 1670.789,
+    "duration": 3.76
+  },
+  {
+    "text": "even more sophisticated.",
+    "start": 1672.549,
+    "duration": 4.52
+  },
+  {
+    "text": "For example, people do this context",
+    "start": 1674.549,
+    "duration": 5.72
+  },
+  {
+    "text": "enriched chunking where each segment",
+    "start": 1677.069,
+    "duration": 6.0
+  },
+  {
+    "text": "actually carry additional metadata or",
+    "start": 1680.269,
+    "duration": 7.92
+  },
+  {
+    "text": "summaries from this particular segment.",
+    "start": 1683.069,
+    "duration": 7.48
+  },
+  {
+    "text": "Today, you can also get LLMs to help.",
+    "start": 1688.189,
+    "duration": 4.72
+  },
+  {
+    "text": "This is what we call a AI-driven dynamic",
+    "start": 1690.549,
+    "duration": 5.2
+  },
+  {
+    "text": "chunking. You can use LLMs to detect",
+    "start": 1692.909,
+    "duration": 5.56
+  },
+  {
+    "text": "natural kind of breakpoints. So in this",
+    "start": 1695.749,
+    "duration": 4.48
+  },
+  {
+    "text": "way, you get something that's very very",
+    "start": 1698.469,
+    "duration": 5.56
+  },
+  {
+    "text": "semantically meaningful.",
+    "start": 1700.229,
+    "duration": 6.2
+  },
+  {
+    "text": "Let me show you one example here just to",
+    "start": 1704.029,
+    "duration": 5.04
+  },
+  {
+    "text": "see how that really works. Let's see you",
+    "start": 1706.429,
+    "duration": 6.68
+  },
+  {
+    "text": "are curious about the greeting and uh",
+    "start": 1709.069,
+    "duration": 5.481
+  },
+  {
+    "text": "And then on my screen, this is the",
+    "start": 1713.109,
+    "duration": 3.641
+  },
+  {
+    "text": "example. Uh grading the project",
+    "start": 1714.55,
+    "duration": 4.44
+  },
+  {
+    "text": "milestone is due week six. This is",
+    "start": 1716.75,
+    "duration": 3.76
+  },
+  {
+    "text": "actually wrong information. Check out",
+    "start": 1718.99,
+    "duration": 3.84
+  },
+  {
+    "text": "website for correct information.",
+    "start": 1720.51,
+    "duration": 4.68
+  },
+  {
+    "text": "Um so, if you are going to only do fixed",
+    "start": 1722.83,
+    "duration": 4.4
+  },
+  {
+    "text": "size chunking, this is actually what you",
+    "start": 1725.19,
+    "duration": 3.72
+  },
+  {
+    "text": "have. You will just have this kind of",
+    "start": 1727.23,
+    "duration": 4.2
+  },
+  {
+    "text": "different uh segments of the original",
+    "start": 1728.91,
+    "duration": 4.4
+  },
+  {
+    "text": "document.",
+    "start": 1731.43,
+    "duration": 5.16
+  },
+  {
+    "text": "If you do uh fixed size with overlap,",
+    "start": 1733.31,
+    "duration": 4.72
+  },
+  {
+    "text": "you will see that some of those",
+    "start": 1736.59,
+    "duration": 3.68
+  },
+  {
+    "text": "information are actually overlap with",
+    "start": 1738.03,
+    "duration": 4.36
+  },
+  {
+    "text": "each other. This is the low-level",
+    "start": 1740.27,
+    "duration": 4.56
+  },
+  {
+    "text": "representation behind the scene.",
+    "start": 1742.39,
+    "duration": 4.8
+  },
+  {
+    "text": "And then if you want to do like semantic",
+    "start": 1744.83,
+    "duration": 4.8
+  },
+  {
+    "text": "um segmentation, just based on headings",
+    "start": 1747.19,
+    "duration": 4.48
+  },
+  {
+    "text": "of what our website, then you get the",
+    "start": 1749.63,
+    "duration": 4.0
+  },
+  {
+    "text": "entire block here.",
+    "start": 1751.67,
+    "duration": 4.96
+  },
+  {
+    "text": "So, this example is just to illustrate",
+    "start": 1753.63,
+    "duration": 5.32
+  },
+  {
+    "text": "that different segmentation technique",
+    "start": 1756.63,
+    "duration": 4.4
+  },
+  {
+    "text": "actually matters when it comes to this",
+    "start": 1758.95,
+    "duration": 4.12
+  },
+  {
+    "text": "very low-level representation for your",
+    "start": 1761.03,
+    "duration": 5.48
+  },
+  {
+    "text": "retrieval unit.",
+    "start": 1763.07,
+    "duration": 3.44
+  },
+  {
+    "text": "If you are paying attention to the",
+    "start": 1767.43,
+    "duration": 4.4
+  },
+  {
+    "text": "field, actually um one of the widely",
+    "start": 1768.99,
+    "duration": 4.36
+  },
+  {
+    "text": "used technique today is called a",
+    "start": 1771.83,
+    "duration": 3.72
+  },
+  {
+    "text": "contextual retrieval.",
+    "start": 1773.35,
+    "duration": 4.36
+  },
+  {
+    "text": "Uh so, if you read this query, what was",
+    "start": 1775.55,
+    "duration": 5.88
+  },
+  {
+    "text": "the revenue growth for ACME Corp in Q2",
+    "start": 1777.71,
+    "duration": 5.4
+  },
+  {
+    "text": "2023?",
+    "start": 1781.43,
+    "duration": 3.76
+  },
+  {
+    "text": "And this is actually the perfect segment",
+    "start": 1783.11,
+    "duration": 4.88
+  },
+  {
+    "text": "we are going to find from the coppers.",
+    "start": 1785.19,
+    "duration": 4.6
+  },
+  {
+    "text": "But if you read this",
+    "start": 1787.99,
+    "duration": 4.6
+  },
+  {
+    "text": "uh result, this is actually not a very",
+    "start": 1789.79,
+    "duration": 5.08
+  },
+  {
+    "text": "intuitive because",
+    "start": 1792.59,
+    "duration": 5.16
+  },
+  {
+    "text": "which company is this the company here?",
+    "start": 1794.87,
+    "duration": 5.48
+  },
+  {
+    "text": "Which quarter are we talking about? This",
+    "start": 1797.75,
+    "duration": 5.04
+  },
+  {
+    "text": "segment does not really carry much",
+    "start": 1800.35,
+    "duration": 3.88
+  },
+  {
+    "text": "information.",
+    "start": 1802.79,
+    "duration": 3.84
+  },
+  {
+    "text": "Um our query actually ask for this",
+    "start": 1804.23,
+    "duration": 4.64
+  },
+  {
+    "text": "specific company, specific quarter,",
+    "start": 1806.63,
+    "duration": 4.24
+  },
+  {
+    "text": "specific year, and all of those",
+    "start": 1808.87,
+    "duration": 4.28
+  },
+  {
+    "text": "information are just not there in my",
+    "start": 1810.87,
+    "duration": 4.68
+  },
+  {
+    "text": "like retrieved the content here.",
+    "start": 1813.15,
+    "duration": 4.2
+  },
+  {
+    "text": "So, how about we can actually have a",
+    "start": 1815.55,
+    "duration": 4.88
+  },
+  {
+    "text": "mechanism to put those words back? So,",
+    "start": 1817.35,
+    "duration": 5.84
+  },
+  {
+    "text": "on the right, what if the retrieved",
+    "start": 1820.43,
+    "duration": 5.44
+  },
+  {
+    "text": "segment for me is actually those words",
+    "start": 1823.19,
+    "duration": 4.84
+  },
+  {
+    "text": "highlighted in yellow here, and then",
+    "start": 1825.87,
+    "duration": 4.48
+  },
+  {
+    "text": "followed by the original segment",
+    "start": 1828.03,
+    "duration": 6.2
+  },
+  {
+    "text": "content? If we can have this, now now we",
+    "start": 1830.35,
+    "duration": 6.442
+  },
+  {
+    "text": "have both the company and timing",
+    "start": 1834.23,
+    "duration": 5.762
+  },
+  {
+    "text": "information in the text. And then mine",
+    "start": 1836.792,
+    "duration": 5.84
+  },
+  {
+    "text": "like vector index or my keyword index",
+    "start": 1839.992,
+    "duration": 4.88
+  },
+  {
+    "text": "can now just like match with each other.",
+    "start": 1842.632,
+    "duration": 3.68
+  },
+  {
+    "text": "So if we could have this, that's",
+    "start": 1844.872,
+    "duration": 2.56
+  },
+  {
+    "text": "amazing.",
+    "start": 1846.312,
+    "duration": 4.64
+  },
+  {
+    "text": "Uh how can we achieve that?",
+    "start": 1847.432,
+    "duration": 5.96
+  },
+  {
+    "text": "Um this is a technique uh proposed by",
+    "start": 1850.952,
+    "duration": 5.56
+  },
+  {
+    "text": "Anthropic. Uh so basically for each",
+    "start": 1853.392,
+    "duration": 5.72
+  },
+  {
+    "text": "segment, we are going to run a prompt",
+    "start": 1856.512,
+    "duration": 5.56
+  },
+  {
+    "text": "over the whole document and get back",
+    "start": 1859.112,
+    "duration": 7.119
+  },
+  {
+    "text": "around 50 to 100 tokens of the context",
+    "start": 1862.072,
+    "duration": 6.68
+  },
+  {
+    "text": "and then pre uh prepend it to the",
+    "start": 1866.231,
+    "duration": 5.0
+  },
+  {
+    "text": "segment themself.",
+    "start": 1868.752,
+    "duration": 4.08
+  },
+  {
+    "text": "And then we can index this",
+    "start": 1871.231,
+    "duration": 4.681
+  },
+  {
+    "text": "contextualized segment twice. Uh first",
+    "start": 1872.832,
+    "duration": 4.8
+  },
+  {
+    "text": "time we'll just run them through a",
+    "start": 1875.912,
+    "duration": 4.4
+  },
+  {
+    "text": "embedding model where we can get their",
+    "start": 1877.632,
+    "duration": 4.92
+  },
+  {
+    "text": "uh vector representation.",
+    "start": 1880.312,
+    "duration": 4.4
+  },
+  {
+    "text": "The other is that we are going to put it",
+    "start": 1882.552,
+    "duration": 5.64
+  },
+  {
+    "text": "into a BM25 here to get their sparse",
+    "start": 1884.712,
+    "duration": 5.2
+  },
+  {
+    "text": "index.",
+    "start": 1888.192,
+    "duration": 3.6
+  },
+  {
+    "text": "Um probably you noticed that we actually",
+    "start": 1889.912,
+    "duration": 4.24
+  },
+  {
+    "text": "did it twice. Why do we need a both of",
+    "start": 1891.792,
+    "duration": 3.32
+  },
+  {
+    "text": "them?",
+    "start": 1894.152,
+    "duration": 3.48
+  },
+  {
+    "text": "In practice, we actually want to use",
+    "start": 1895.112,
+    "duration": 5.64
+  },
+  {
+    "text": "both because embeddings in general give",
+    "start": 1897.632,
+    "duration": 6.2
+  },
+  {
+    "text": "us semantic meaning match. However,",
+    "start": 1900.752,
+    "duration": 6.92
+  },
+  {
+    "text": "TF-IDF BM25, despite it being a very",
+    "start": 1903.832,
+    "duration": 6.68
+  },
+  {
+    "text": "classic traditional metric, they are",
+    "start": 1907.672,
+    "duration": 5.24
+  },
+  {
+    "text": "actually very very powerful. They can",
+    "start": 1910.512,
+    "duration": 6.0
+  },
+  {
+    "text": "help us with exact numbers uh and then",
+    "start": 1912.912,
+    "duration": 5.16
+  },
+  {
+    "text": "you can you can just take the best of",
+    "start": 1916.512,
+    "duration": 5.28
+  },
+  {
+    "text": "both world and then merge them.",
+    "start": 1918.072,
+    "duration": 3.72
+  },
+  {
+    "text": "Um one thing I I do want to mention uh",
+    "start": 1922.112,
+    "duration": 4.8
+  },
+  {
+    "text": "as you can imagine, that is if you are",
+    "start": 1924.952,
+    "duration": 5.0
+  },
+  {
+    "text": "going to give a prompt and then to add",
+    "start": 1926.912,
+    "duration": 5.76
+  },
+  {
+    "text": "this additional context, then you",
+    "start": 1929.952,
+    "duration": 6.2
+  },
+  {
+    "text": "basically need to pay a cost per search",
+    "start": 1932.672,
+    "duration": 6.32
+  },
+  {
+    "text": "per uh segment. And then this is",
+    "start": 1936.152,
+    "duration": 5.12
+  },
+  {
+    "text": "actually something quite uh expensive",
+    "start": 1938.992,
+    "duration": 4.8
+  },
+  {
+    "text": "just to think about.",
+    "start": 1941.272,
+    "duration": 5.48
+  },
+  {
+    "text": "Uh now comes to the uh exciting uh",
+    "start": 1943.792,
+    "duration": 5.16
+  },
+  {
+    "text": "moment. How do you really achieve this",
+    "start": 1946.752,
+    "duration": 4.36
+  },
+  {
+    "text": "kind of uh context?",
+    "start": 1948.952,
+    "duration": 4.64
+  },
+  {
+    "text": "Well, you write a prompt. And this is",
+    "start": 1951.112,
+    "duration": 4.16
+  },
+  {
+    "text": "actually what it would look like. You",
+    "start": 1953.592,
+    "duration": 4.76
+  },
+  {
+    "text": "basically tell the model that here is",
+    "start": 1955.272,
+    "duration": 5.681
+  },
+  {
+    "text": "the chunk we want to um situate within",
+    "start": 1958.352,
+    "duration": 5.721
+  },
+  {
+    "text": "the whole document. Please give a short",
+    "start": 1960.953,
+    "duration": 6.4
+  },
+  {
+    "text": "uh sufficient context to uh situate this",
+    "start": 1964.073,
+    "duration": 5.16
+  },
+  {
+    "text": "chunk with the overall document. So, you",
+    "start": 1967.353,
+    "duration": 3.72
+  },
+  {
+    "text": "basically write a prompt, and then the",
+    "start": 1969.233,
+    "duration": 4.68
+  },
+  {
+    "text": "LM actually scan the entire documents,",
+    "start": 1971.073,
+    "duration": 6.08
+  },
+  {
+    "text": "give you a summary of the context.",
+    "start": 1973.913,
+    "duration": 5.8
+  },
+  {
+    "text": "Uh nothing sophisticated is here, and I",
+    "start": 1977.153,
+    "duration": 5.2
+  },
+  {
+    "text": "think like now you really leverage the",
+    "start": 1979.713,
+    "duration": 5.6
+  },
+  {
+    "text": "overall context, and then you also have",
+    "start": 1982.353,
+    "duration": 4.88
+  },
+  {
+    "text": "the specific segment. You combine both",
+    "start": 1985.313,
+    "duration": 5.6
+  },
+  {
+    "text": "of them. Now we are good.",
+    "start": 1987.233,
+    "duration": 3.68
+  },
+  {
+    "text": "Compared to uh a lot of the classic",
+    "start": 1991.433,
+    "duration": 5.36
+  },
+  {
+    "text": "approach, uh researchers show that uh",
+    "start": 1993.713,
+    "duration": 6.52
+  },
+  {
+    "text": "um contextual embeddings actually reduce",
+    "start": 1996.793,
+    "duration": 6.16
+  },
+  {
+    "text": "uh retrieve failure rate.",
+    "start": 2000.233,
+    "duration": 5.16
+  },
+  {
+    "text": "So, this metric I'm going to mention it",
+    "start": 2002.953,
+    "duration": 5.08
+  },
+  {
+    "text": "uh uh in a few slides later, uh but uh",
+    "start": 2005.393,
+    "duration": 5.28
+  },
+  {
+    "text": "they quantify this failed retrieval at",
+    "start": 2008.033,
+    "duration": 5.04
+  },
+  {
+    "text": "the 20. That is, if you look at the top",
+    "start": 2010.673,
+    "duration": 7.0
+  },
+  {
+    "text": "20 results, uh how many of them uh fail?",
+    "start": 2013.073,
+    "duration": 7.28
+  },
+  {
+    "text": "And then uh you can see that compared to",
+    "start": 2017.673,
+    "duration": 5.2
+  },
+  {
+    "text": "embedding, contextual embedding actually",
+    "start": 2020.353,
+    "duration": 7.56
+  },
+  {
+    "text": "uh drop the error rate from 5.7 to 3.7.",
+    "start": 2022.873,
+    "duration": 7.4
+  },
+  {
+    "text": "And then this is a combination, the",
+    "start": 2027.913,
+    "duration": 5.36
+  },
+  {
+    "text": "hybrid approach. Uh it also drops from 5",
+    "start": 2030.273,
+    "duration": 6.96
+  },
+  {
+    "text": "to 2.9. So, it's actually pretty um",
+    "start": 2033.273,
+    "duration": 7.28
+  },
+  {
+    "text": "like uh useful. And uh",
+    "start": 2037.233,
+    "duration": 5.8
+  },
+  {
+    "text": "also, I think you already noticed that",
+    "start": 2040.553,
+    "duration": 5.32
+  },
+  {
+    "text": "uh having both embedding, like you use",
+    "start": 2043.033,
+    "duration": 5.72
+  },
+  {
+    "text": "in uh embeddings and also BM25, the",
+    "start": 2045.873,
+    "duration": 4.92
+  },
+  {
+    "text": "combination of them actually give us",
+    "start": 2048.753,
+    "duration": 5.08
+  },
+  {
+    "text": "much better performance.",
+    "start": 2050.793,
+    "duration": 5.0
+  },
+  {
+    "text": "So, this is about uh more kind of like a",
+    "start": 2053.833,
+    "duration": 4.48
+  },
+  {
+    "text": "modern approach of doing uh",
+    "start": 2055.793,
+    "duration": 3.84
+  },
+  {
+    "text": "retrieval.",
+    "start": 2058.313,
+    "duration": 3.64
+  },
+  {
+    "text": "Uh the last thing that I or maybe not",
+    "start": 2059.633,
+    "duration": 4.6
+  },
+  {
+    "text": "the last, one of the last thing I'm",
+    "start": 2061.953,
+    "duration": 4.56
+  },
+  {
+    "text": "going to mention here is this technique",
+    "start": 2064.233,
+    "duration": 4.84
+  },
+  {
+    "text": "called late chunking here.",
+    "start": 2066.513,
+    "duration": 4.88
+  },
+  {
+    "text": "So, let's just look at the picture. The",
+    "start": 2069.073,
+    "duration": 5.24
+  },
+  {
+    "text": "naive uh segmentation I talked so far is",
+    "start": 2071.393,
+    "duration": 5.36
+  },
+  {
+    "text": "that you have a long document, and then",
+    "start": 2074.313,
+    "duration": 3.92
+  },
+  {
+    "text": "we segment them into different",
+    "start": 2076.753,
+    "duration": 3.84
+  },
+  {
+    "text": "components, and then for each component,",
+    "start": 2078.233,
+    "duration": 4.961
+  },
+  {
+    "text": "we are going to gather their embeddings,",
+    "start": 2080.593,
+    "duration": 4.361
+  },
+  {
+    "text": "and that's going to be the unit we use",
+    "start": 2083.194,
+    "duration": 4.68
+  },
+  {
+    "text": "for retrieval. So, late chunking was",
+    "start": 2084.954,
+    "duration": 5.04
+  },
+  {
+    "text": "asking, \"Well, if you do this",
+    "start": 2087.874,
+    "duration": 5.24
+  },
+  {
+    "text": "segmentation, you really lose the idea",
+    "start": 2089.994,
+    "duration": 5.44
+  },
+  {
+    "text": "of the entire document, right? Because",
+    "start": 2093.114,
+    "duration": 4.64
+  },
+  {
+    "text": "if you take each of them separately, you",
+    "start": 2095.434,
+    "duration": 5.12
+  },
+  {
+    "text": "only get to see the information there.\"",
+    "start": 2097.754,
+    "duration": 5.12
+  },
+  {
+    "text": "How can we actually get to know some",
+    "start": 2100.554,
+    "duration": 5.12
+  },
+  {
+    "text": "kind of document-level semantics?",
+    "start": 2102.874,
+    "duration": 4.44
+  },
+  {
+    "text": "So, then you can do this a late",
+    "start": 2105.674,
+    "duration": 4.28
+  },
+  {
+    "text": "chunking, where late chunking means that",
+    "start": 2107.314,
+    "duration": 4.72
+  },
+  {
+    "text": "we do the segmentation later in the",
+    "start": 2109.954,
+    "duration": 3.48
+  },
+  {
+    "text": "process.",
+    "start": 2112.034,
+    "duration": 4.12
+  },
+  {
+    "text": "Uh we got a long document, and we are",
+    "start": 2113.434,
+    "duration": 5.64
+  },
+  {
+    "text": "going to pass it to any embedding model.",
+    "start": 2116.154,
+    "duration": 5.12
+  },
+  {
+    "text": "And then you we are you already got like",
+    "start": 2119.074,
+    "duration": 4.68
+  },
+  {
+    "text": "rich embedding information. And then on",
+    "start": 2121.274,
+    "duration": 4.0
+  },
+  {
+    "text": "top of that, we are going to do",
+    "start": 2123.754,
+    "duration": 4.52
+  },
+  {
+    "text": "segmentation. In this way, the segments",
+    "start": 2125.274,
+    "duration": 5.12
+  },
+  {
+    "text": "actually carry some document-level",
+    "start": 2128.274,
+    "duration": 4.12
+  },
+  {
+    "text": "information.",
+    "start": 2130.394,
+    "duration": 4.12
+  },
+  {
+    "text": "Uh so, this is why you get like a richer",
+    "start": 2132.394,
+    "duration": 4.12
+  },
+  {
+    "text": "information from this kind of uh",
+    "start": 2134.514,
+    "duration": 4.24
+  },
+  {
+    "text": "segmentation.",
+    "start": 2136.514,
+    "duration": 4.72
+  },
+  {
+    "text": "Just to quickly show you, um",
+    "start": 2138.754,
+    "duration": 4.4
+  },
+  {
+    "text": "I think uh if you look at the naive",
+    "start": 2141.234,
+    "duration": 4.08
+  },
+  {
+    "text": "versus late chunking here, uh you",
+    "start": 2143.154,
+    "duration": 4.28
+  },
+  {
+    "text": "definitely see much better performance",
+    "start": 2145.314,
+    "duration": 4.92
+  },
+  {
+    "text": "from this kind of document-level uh",
+    "start": 2147.434,
+    "duration": 4.64
+  },
+  {
+    "text": "enrichment.",
+    "start": 2150.234,
+    "duration": 4.68
+  },
+  {
+    "text": "Uh one thing um that I'm going to point",
+    "start": 2152.074,
+    "duration": 6.96
+  },
+  {
+    "text": "out is um if you notice this trend here,",
+    "start": 2154.914,
+    "duration": 7.4
+  },
+  {
+    "text": "so the improvement from late chunking is",
+    "start": 2159.034,
+    "duration": 5.68
+  },
+  {
+    "text": "actually the largest when your chunk",
+    "start": 2162.314,
+    "duration": 4.8
+  },
+  {
+    "text": "size is small.",
+    "start": 2164.714,
+    "duration": 4.76
+  },
+  {
+    "text": "This makes sense, right? Because uh if",
+    "start": 2167.114,
+    "duration": 4.76
+  },
+  {
+    "text": "the the size the segment size is already",
+    "start": 2169.474,
+    "duration": 5.2
+  },
+  {
+    "text": "very big, then this kind of late",
+    "start": 2171.874,
+    "duration": 4.28
+  },
+  {
+    "text": "chunking is not going to add a lot of",
+    "start": 2174.674,
+    "duration": 3.88
+  },
+  {
+    "text": "information. If the size is very small,",
+    "start": 2176.154,
+    "duration": 4.64
+  },
+  {
+    "text": "then this kind of embedding from the",
+    "start": 2178.554,
+    "duration": 4.28
+  },
+  {
+    "text": "document is going to bring in a lot a",
+    "start": 2180.794,
+    "duration": 4.36
+  },
+  {
+    "text": "lot of value. So, this is something to",
+    "start": 2182.834,
+    "duration": 3.92
+  },
+  {
+    "text": "kind of think about from a practical",
+    "start": 2185.154,
+    "duration": 4.16
+  },
+  {
+    "text": "perspective.",
+    "start": 2186.754,
+    "duration": 5.32
+  },
+  {
+    "text": "Okay, now let's go a step further.",
+    "start": 2189.314,
+    "duration": 3.48
+  },
+  {
+    "text": "Uh",
+    "start": 2192.074,
+    "duration": 2.4
+  },
+  {
+    "text": "this is actually a very interesting",
+    "start": 2192.794,
+    "duration": 4.08
+  },
+  {
+    "text": "topic uh even just for a very specific",
+    "start": 2194.474,
+    "duration": 5.16
+  },
+  {
+    "text": "component uh called uh indexing.",
+    "start": 2196.874,
+    "duration": 5.44
+  },
+  {
+    "text": "Uh well, we all learned data structures,",
+    "start": 2199.634,
+    "duration": 5.362
+  },
+  {
+    "text": "uh algorithms. So, so far it's like a",
+    "start": 2202.314,
+    "duration": 5.002
+  },
+  {
+    "text": "very sequential. We just cut them into",
+    "start": 2204.996,
+    "duration": 3.96
+  },
+  {
+    "text": "smaller pieces.",
+    "start": 2207.316,
+    "duration": 3.6
+  },
+  {
+    "text": "What if we can actually make them more",
+    "start": 2208.956,
+    "duration": 4.68
+  },
+  {
+    "text": "hierarchical, tree-based? We can",
+    "start": 2210.916,
+    "duration": 6.08
+  },
+  {
+    "text": "leverage very nice properties of of",
+    "start": 2213.636,
+    "duration": 4.8
+  },
+  {
+    "text": "structures.",
+    "start": 2216.996,
+    "duration": 3.04
+  },
+  {
+    "text": "So, this is actually a research from",
+    "start": 2218.436,
+    "duration": 4.8
+  },
+  {
+    "text": "Stanford called a PeaKtor here. Uh",
+    "start": 2220.036,
+    "duration": 4.96
+  },
+  {
+    "text": "basically, what we are going to do is",
+    "start": 2223.236,
+    "duration": 5.16
+  },
+  {
+    "text": "that for questions whose answer is kind",
+    "start": 2224.996,
+    "duration": 6.64
+  },
+  {
+    "text": "of spread across the document, a single",
+    "start": 2228.396,
+    "duration": 6.92
+  },
+  {
+    "text": "segment may not be very helpful. So, how",
+    "start": 2231.636,
+    "duration": 5.4
+  },
+  {
+    "text": "about we actually take a hierarchical",
+    "start": 2235.316,
+    "duration": 3.0
+  },
+  {
+    "text": "approach here?",
+    "start": 2237.036,
+    "duration": 4.36
+  },
+  {
+    "text": "We can build a tree bottom-up. First, we",
+    "start": 2238.316,
+    "duration": 6.0
+  },
+  {
+    "text": "will embed each segment, and then we can",
+    "start": 2241.396,
+    "duration": 6.76
+  },
+  {
+    "text": "collapse them. We summarize them, and we",
+    "start": 2244.316,
+    "duration": 6.32
+  },
+  {
+    "text": "can then just embed the summaries and",
+    "start": 2248.156,
+    "duration": 4.84
+  },
+  {
+    "text": "repeat until we have kind of like a",
+    "start": 2250.636,
+    "duration": 4.64
+  },
+  {
+    "text": "root, like a tree here.",
+    "start": 2252.996,
+    "duration": 4.28
+  },
+  {
+    "text": "And then at the query time, we just",
+    "start": 2255.276,
+    "duration": 5.48
+  },
+  {
+    "text": "retrieve across all levels, and a detail",
+    "start": 2257.276,
+    "duration": 6.52
+  },
+  {
+    "text": "of question may match the leaf node, and",
+    "start": 2260.756,
+    "duration": 5.92
+  },
+  {
+    "text": "then a higher-level semantical question",
+    "start": 2263.796,
+    "duration": 5.32
+  },
+  {
+    "text": "will match a summary node",
+    "start": 2266.676,
+    "duration": 7.24
+  },
+  {
+    "text": "summary node that's like one layer up.",
+    "start": 2269.116,
+    "duration": 4.8
+  },
+  {
+    "text": "Um if you read a specific example here,",
+    "start": 2274.236,
+    "duration": 4.76
+  },
+  {
+    "text": "let's see for Cinderella, we have two",
+    "start": 2276.556,
+    "duration": 5.0
+  },
+  {
+    "text": "questions. What is the central theme of",
+    "start": 2278.996,
+    "duration": 4.84
+  },
+  {
+    "text": "the story, and how did she find a happy",
+    "start": 2281.556,
+    "duration": 3.56
+  },
+  {
+    "text": "ending?",
+    "start": 2283.836,
+    "duration": 3.72
+  },
+  {
+    "text": "Okay. So, if you read this kind of like",
+    "start": 2285.116,
+    "duration": 5.0
+  },
+  {
+    "text": "arrows here, DPR, you can see that it",
+    "start": 2287.556,
+    "duration": 4.68
+  },
+  {
+    "text": "only retrieve those specific like a leaf",
+    "start": 2290.116,
+    "duration": 3.4
+  },
+  {
+    "text": "node here.",
+    "start": 2292.236,
+    "duration": 4.0
+  },
+  {
+    "text": "But then in the PeaKtor example, it",
+    "start": 2293.516,
+    "duration": 5.16
+  },
+  {
+    "text": "actually the boxes we highlighted, it",
+    "start": 2296.236,
+    "duration": 5.28
+  },
+  {
+    "text": "actually find those kind of higher-level",
+    "start": 2298.676,
+    "duration": 5.16
+  },
+  {
+    "text": "box to represent the information.",
+    "start": 2301.516,
+    "duration": 4.04
+  },
+  {
+    "text": "Especially for the second question, how",
+    "start": 2303.836,
+    "duration": 4.12
+  },
+  {
+    "text": "did she find a happy ending? I think you",
+    "start": 2305.556,
+    "duration": 4.68
+  },
+  {
+    "text": "need to figure out like who's she, what",
+    "start": 2307.956,
+    "duration": 4.68
+  },
+  {
+    "text": "is a happy ending, etc. So, that",
+    "start": 2310.236,
+    "duration": 5.2
+  },
+  {
+    "text": "requires multiple layer of semantic",
+    "start": 2312.636,
+    "duration": 5.52
+  },
+  {
+    "text": "processing.",
+    "start": 2315.436,
+    "duration": 2.72
+  },
+  {
+    "text": "If you follow this kind of data",
+    "start": 2318.756,
+    "duration": 2.8
+  },
+  {
+    "text": "structure,",
+    "start": 2320.196,
+    "duration": 3.4
+  },
+  {
+    "text": "we we not talk about sequence, we talk",
+    "start": 2321.556,
+    "duration": 3.36
+  },
+  {
+    "text": "about tree.",
+    "start": 2323.596,
+    "duration": 4.881
+  },
+  {
+    "text": "Let's go a step further uh, into graph.",
+    "start": 2324.916,
+    "duration": 6.441
+  },
+  {
+    "text": "So, you can also think about how to uh,",
+    "start": 2328.477,
+    "duration": 4.84
+  },
+  {
+    "text": "really make sure that",
+    "start": 2331.357,
+    "duration": 2.52
+  },
+  {
+    "text": "um,",
+    "start": 2333.317,
+    "duration": 2.2
+  },
+  {
+    "text": "we we really leverage this kind of",
+    "start": 2333.877,
+    "duration": 3.64
+  },
+  {
+    "text": "high-level information since some",
+    "start": 2335.517,
+    "duration": 5.2
+  },
+  {
+    "text": "questions are not about one specific",
+    "start": 2337.517,
+    "duration": 6.56
+  },
+  {
+    "text": "paragraph or even not one document. They",
+    "start": 2340.717,
+    "duration": 6.12
+  },
+  {
+    "text": "need to be synthesized across many",
+    "start": 2344.077,
+    "duration": 4.44
+  },
+  {
+    "text": "documents.",
+    "start": 2346.837,
+    "duration": 4.28
+  },
+  {
+    "text": "Uh, no specific chunk or segment will",
+    "start": 2348.517,
+    "duration": 5.2
+  },
+  {
+    "text": "give you that answer. So, then what if",
+    "start": 2351.117,
+    "duration": 4.6
+  },
+  {
+    "text": "we can actually build a knowledge graph",
+    "start": 2353.717,
+    "duration": 3.12
+  },
+  {
+    "text": "first?",
+    "start": 2355.717,
+    "duration": 3.36
+  },
+  {
+    "text": "Uh, at indexing time we just segment the",
+    "start": 2356.837,
+    "duration": 5.24
+  },
+  {
+    "text": "documents, ask LLMs to get all the",
+    "start": 2359.077,
+    "duration": 4.76
+  },
+  {
+    "text": "entities, and then the relationship",
+    "start": 2362.077,
+    "duration": 3.08
+  },
+  {
+    "text": "between them.",
+    "start": 2363.837,
+    "duration": 2.96
+  },
+  {
+    "text": "Uh, we can then connect them into a",
+    "start": 2365.157,
+    "duration": 2.695
+  },
+  {
+    "text": "graph.",
+    "start": 2366.797,
+    "duration": 1.08
+  },
+  {
+    "text": ">> [snorts]",
+    "start": 2367.852,
+    "duration": 1.825
+  },
+  {
+    "text": ">> So, now you can actually do like graph",
+    "start": 2367.877,
+    "duration": 3.68
+  },
+  {
+    "text": "clusterings, like different community",
+    "start": 2369.677,
+    "duration": 4.24
+  },
+  {
+    "text": "detection algorithm here.",
+    "start": 2371.557,
+    "duration": 4.24
+  },
+  {
+    "text": "At a query time,",
+    "start": 2373.917,
+    "duration": 4.4
+  },
+  {
+    "text": "um, we do not search segments. We are",
+    "start": 2375.797,
+    "duration": 5.4
+  },
+  {
+    "text": "going to ask each community, each",
+    "start": 2378.317,
+    "duration": 5.48
+  },
+  {
+    "text": "cluster summary to answer the question,",
+    "start": 2381.197,
+    "duration": 4.6
+  },
+  {
+    "text": "and then merge those partial answers",
+    "start": 2383.797,
+    "duration": 4.32
+  },
+  {
+    "text": "into a global answer. So, this is",
+    "start": 2385.797,
+    "duration": 5.8
+  },
+  {
+    "text": "actually how you could do graph rag.",
+    "start": 2388.117,
+    "duration": 6.4
+  },
+  {
+    "text": "Um, to kind of summarize, uh, this is",
+    "start": 2391.597,
+    "duration": 5.0
+  },
+  {
+    "text": "the last page here.",
+    "start": 2394.517,
+    "duration": 4.72
+  },
+  {
+    "text": "In terms of graph rag, I think the",
+    "start": 2396.597,
+    "duration": 4.8
+  },
+  {
+    "text": "reason why this is powerful is because",
+    "start": 2399.237,
+    "duration": 5.16
+  },
+  {
+    "text": "you can really index across rich",
+    "start": 2401.397,
+    "duration": 6.64
+  },
+  {
+    "text": "modalities. Not only text, image, uh,",
+    "start": 2404.397,
+    "duration": 6.24
+  },
+  {
+    "text": "you can even apply that to um,",
+    "start": 2408.037,
+    "duration": 5.4
+  },
+  {
+    "text": "like biology structures, uh, molecules,",
+    "start": 2410.637,
+    "duration": 5.28
+  },
+  {
+    "text": "social network, citation network,",
+    "start": 2413.437,
+    "duration": 5.8
+  },
+  {
+    "text": "knowledge graph. So, uh, this is why the",
+    "start": 2415.917,
+    "duration": 5.68
+  },
+  {
+    "text": "design principle behind the rag can be",
+    "start": 2419.237,
+    "duration": 5.04
+  },
+  {
+    "text": "really really generalizable.",
+    "start": 2421.597,
+    "duration": 5.32
+  },
+  {
+    "text": "Okay, I think there was a question.",
+    "start": 2424.277,
+    "duration": 2.88
+  },
+  {
+    "text": "Yeah.",
+    "start": 2426.917,
+    "duration": 2.24
+  },
+  {
+    "text": ">> So, for something with these like more",
+    "start": 2427.157,
+    "duration": 4.88
+  },
+  {
+    "text": "complex structures, where we're actually",
+    "start": 2429.157,
+    "duration": 5.24
+  },
+  {
+    "text": "comparing against every chunk, is like",
+    "start": 2432.037,
+    "duration": 4.28
+  },
+  {
+    "text": "is it does it get harder to answer some",
+    "start": 2434.397,
+    "duration": 3.52
+  },
+  {
+    "text": "questions that are like really specific",
+    "start": 2436.317,
+    "duration": 3.56
+  },
+  {
+    "text": "because it's not actually looking at the",
+    "start": 2437.917,
+    "duration": 3.64
+  },
+  {
+    "text": "level that has actually encoded the",
+    "start": 2439.877,
+    "duration": 3.24
+  },
+  {
+    "text": "information? Does that make sense?",
+    "start": 2441.557,
+    "duration": 4.52
+  },
+  {
+    "text": ">> Yeah, so the question is about why we",
+    "start": 2443.117,
+    "duration": 5.44
+  },
+  {
+    "text": "need this uh, very sophisticated like",
+    "start": 2446.077,
+    "duration": 5.321
+  },
+  {
+    "text": "segmentation approach. Uh, the reason is",
+    "start": 2448.557,
+    "duration": 5.121
+  },
+  {
+    "text": "that if you think about the very earlier",
+    "start": 2451.398,
+    "duration": 4.76
+  },
+  {
+    "text": "kind of chunky segmentation, uh, they",
+    "start": 2453.678,
+    "duration": 5.2
+  },
+  {
+    "text": "are very kind of localized. Uh, they do",
+    "start": 2456.158,
+    "duration": 4.88
+  },
+  {
+    "text": "not take care of the broader document",
+    "start": 2458.878,
+    "duration": 4.28
+  },
+  {
+    "text": "information. This is why we want a",
+    "start": 2461.038,
+    "duration": 4.88
+  },
+  {
+    "text": "contextual retrieval. And then, uh,",
+    "start": 2463.158,
+    "duration": 5.4
+  },
+  {
+    "text": "sometimes you may also need to know",
+    "start": 2465.918,
+    "duration": 4.96
+  },
+  {
+    "text": "multiple, uh, segments in order to",
+    "start": 2468.558,
+    "duration": 4.28
+  },
+  {
+    "text": "derive the answer. This is why we need",
+    "start": 2470.878,
+    "duration": 4.36
+  },
+  {
+    "text": "to put them into a tree structure so",
+    "start": 2472.838,
+    "duration": 4.04
+  },
+  {
+    "text": "that we can get a something higher",
+    "start": 2475.238,
+    "duration": 2.68
+  },
+  {
+    "text": "level.",
+    "start": 2476.878,
+    "duration": 3.8
+  },
+  {
+    "text": "Uh, graph means that maybe it's not even",
+    "start": 2477.918,
+    "duration": 4.76
+  },
+  {
+    "text": "within the same document. You probably",
+    "start": 2480.678,
+    "duration": 4.52
+  },
+  {
+    "text": "need like 10 documents to figure out how",
+    "start": 2482.678,
+    "duration": 5.36
+  },
+  {
+    "text": "the public perceive a specific topic.",
+    "start": 2485.198,
+    "duration": 4.84
+  },
+  {
+    "text": "For question like that, you want to",
+    "start": 2488.038,
+    "duration": 4.12
+  },
+  {
+    "text": "really look over many different",
+    "start": 2490.038,
+    "duration": 3.48
+  },
+  {
+    "text": "documents.",
+    "start": 2492.158,
+    "duration": 3.48
+  },
+  {
+    "text": "It's more from a community perspective.",
+    "start": 2493.518,
+    "duration": 4.64
+  },
+  {
+    "text": "This is why you want to actually maybe",
+    "start": 2495.638,
+    "duration": 4.6
+  },
+  {
+    "text": "segments them based on some kind of",
+    "start": 2498.158,
+    "duration": 4.92
+  },
+  {
+    "text": "themes, topics, and then do, uh, this",
+    "start": 2500.238,
+    "duration": 5.2
+  },
+  {
+    "text": "kind of question answering with that.",
+    "start": 2503.078,
+    "duration": 4.72
+  },
+  {
+    "text": "Um, so as we go more and more",
+    "start": 2505.438,
+    "duration": 4.76
+  },
+  {
+    "text": "sophisticated, it's actually designed to",
+    "start": 2507.798,
+    "duration": 5.48
+  },
+  {
+    "text": "answer like more higher level questions",
+    "start": 2510.198,
+    "duration": 5.56
+  },
+  {
+    "text": "rather than exact answer match.",
+    "start": 2513.278,
+    "duration": 4.44
+  },
+  {
+    "text": "Uh, however, you can imagine going back",
+    "start": 2515.758,
+    "duration": 4.36
+  },
+  {
+    "text": "to some of the earlier question, uh,",
+    "start": 2517.718,
+    "duration": 4.28
+  },
+  {
+    "text": "different the chunking algorithm also",
+    "start": 2520.118,
+    "duration": 5.32
+  },
+  {
+    "text": "carry with cost. This is why, like",
+    "start": 2521.998,
+    "duration": 6.36
+  },
+  {
+    "text": "today, if you think about the commercial",
+    "start": 2525.438,
+    "duration": 5.0
+  },
+  {
+    "text": "or a lot of the large-scale, uh, QA",
+    "start": 2528.358,
+    "duration": 4.52
+  },
+  {
+    "text": "systems, they still prefer some of the",
+    "start": 2530.438,
+    "duration": 4.32
+  },
+  {
+    "text": "earlier technique that I mentioned since",
+    "start": 2532.878,
+    "duration": 4.64
+  },
+  {
+    "text": "it's very fast. It covers majority of",
+    "start": 2534.758,
+    "duration": 5.36
+  },
+  {
+    "text": "the questions we have.",
+    "start": 2537.518,
+    "duration": 3.56
+  },
+  {
+    "text": "Yes.",
+    "start": 2540.118,
+    "duration": 3.28
+  },
+  {
+    "text": ">> Given a query time, how do you choose",
+    "start": 2541.078,
+    "duration": 4.2
+  },
+  {
+    "text": "which communities you need to look at",
+    "start": 2543.398,
+    "duration": 3.16
+  },
+  {
+    "text": "for the question?",
+    "start": 2545.278,
+    "duration": 3.0
+  },
+  {
+    "text": "Or are all of them queried",
+    "start": 2546.558,
+    "duration": 2.48
+  },
+  {
+    "text": "simultaneously?",
+    "start": 2548.278,
+    "duration": 1.6
+  },
+  {
+    "text": ">> Yeah.",
+    "start": 2549.038,
+    "duration": 3.24
+  },
+  {
+    "text": "So, um, this is again, uh, think about",
+    "start": 2549.878,
+    "duration": 4.24
+  },
+  {
+    "text": "it from a The question is how do we",
+    "start": 2552.278,
+    "duration": 4.32
+  },
+  {
+    "text": "choose which community to focus?",
+    "start": 2554.118,
+    "duration": 4.48
+  },
+  {
+    "text": "Um, again, this is going to be a design",
+    "start": 2556.598,
+    "duration": 4.04
+  },
+  {
+    "text": "choice. Uh, you can define like a",
+    "start": 2558.598,
+    "duration": 5.32
+  },
+  {
+    "text": "relevance score here. If my question is,",
+    "start": 2560.638,
+    "duration": 5.52
+  },
+  {
+    "text": "uh, which sport should I look at this",
+    "start": 2563.918,
+    "duration": 4.08
+  },
+  {
+    "text": "weekend? Uh, which game should I look",
+    "start": 2566.158,
+    "duration": 4.56
+  },
+  {
+    "text": "at? And then you may want to fetch those",
+    "start": 2567.998,
+    "duration": 4.722
+  },
+  {
+    "text": "clusters that are talk about sports,",
+    "start": 2570.718,
+    "duration": 4.922
+  },
+  {
+    "text": "talk about games, etc. So, you can",
+    "start": 2572.72,
+    "duration": 5.4
+  },
+  {
+    "text": "define some kind of relevancy",
+    "start": 2575.64,
+    "duration": 4.64
+  },
+  {
+    "text": "estimation and use that. And then,",
+    "start": 2578.12,
+    "duration": 4.2
+  },
+  {
+    "text": "instead of only look at the one cluster",
+    "start": 2580.28,
+    "duration": 3.96
+  },
+  {
+    "text": "output, you can actually aggregate",
+    "start": 2582.32,
+    "duration": 4.28
+  },
+  {
+    "text": "partial answers from multiple clusters",
+    "start": 2584.24,
+    "duration": 5.32
+  },
+  {
+    "text": "to answer your question.",
+    "start": 2586.6,
+    "duration": 2.96
+  },
+  {
+    "text": ">> actual retrieval",
+    "start": 2589.96,
+    "duration": 4.04
+  },
+  {
+    "text": "uh you you need to use that LM to attend",
+    "start": 2591.64,
+    "duration": 5.2
+  },
+  {
+    "text": "the conference. So, here how important",
+    "start": 2594.0,
+    "duration": 4.96
+  },
+  {
+    "text": "is the quality of the LM? So, if you're",
+    "start": 2596.84,
+    "duration": 4.6
+  },
+  {
+    "text": "using a very cheap LM, does that affect",
+    "start": 2598.96,
+    "duration": 4.24
+  },
+  {
+    "text": "the quality a lot?",
+    "start": 2601.44,
+    "duration": 5.28
+  },
+  {
+    "text": ">> Yeah. Um the question is is LM uh",
+    "start": 2603.2,
+    "duration": 6.4
+  },
+  {
+    "text": "like is is the choice of LM sensitive to",
+    "start": 2606.72,
+    "duration": 4.76
+  },
+  {
+    "text": "the setup here and how should we think",
+    "start": 2609.6,
+    "duration": 4.36
+  },
+  {
+    "text": "about that? So, the LM definitely needs",
+    "start": 2611.48,
+    "duration": 4.84
+  },
+  {
+    "text": "to be somewhat capable, but it does not",
+    "start": 2613.96,
+    "duration": 4.4
+  },
+  {
+    "text": "need to be state-of-the-art. Uh you're",
+    "start": 2616.32,
+    "duration": 5.4
+  },
+  {
+    "text": "going to do a parental analysis in terms",
+    "start": 2618.36,
+    "duration": 5.28
+  },
+  {
+    "text": "of the accuracy of the retrieval, the",
+    "start": 2621.72,
+    "duration": 3.96
+  },
+  {
+    "text": "quality of the retrieval, and then the",
+    "start": 2623.64,
+    "duration": 5.32
+  },
+  {
+    "text": "cost of LMs or the speed of LMs, and",
+    "start": 2625.68,
+    "duration": 5.04
+  },
+  {
+    "text": "then you make a design choice based on",
+    "start": 2628.96,
+    "duration": 4.28
+  },
+  {
+    "text": "that. In general, the LM people use here",
+    "start": 2630.72,
+    "duration": 6.0
+  },
+  {
+    "text": "are quite uh I would say small, capable",
+    "start": 2633.24,
+    "duration": 4.92
+  },
+  {
+    "text": "uh rather than like a very large",
+    "start": 2636.72,
+    "duration": 4.68
+  },
+  {
+    "text": "commercial API-based models.",
+    "start": 2638.16,
+    "duration": 4.44
+  },
+  {
+    "text": "Yes.",
+    "start": 2641.4,
+    "duration": 2.16
+  },
+  {
+    "text": ">> So,",
+    "start": 2642.6,
+    "duration": 3.48
+  },
+  {
+    "text": "I'm wondering like is there like an",
+    "start": 2643.56,
+    "duration": 4.76
+  },
+  {
+    "text": "office where it goes back to the",
+    "start": 2646.08,
+    "duration": 4.96
+  },
+  {
+    "text": "original source and actually",
+    "start": 2648.32,
+    "duration": 5.04
+  },
+  {
+    "text": "is that an action like during the whole",
+    "start": 2651.04,
+    "duration": 5.36
+  },
+  {
+    "text": "processing, there might be errors the",
+    "start": 2653.36,
+    "duration": 4.6
+  },
+  {
+    "text": "errors",
+    "start": 2656.4,
+    "duration": 2.36
+  },
+  {
+    "text": "are",
+    "start": 2657.96,
+    "duration": 3.32
+  },
+  {
+    "text": "magnified and also quality.",
+    "start": 2658.76,
+    "duration": 4.64
+  },
+  {
+    "text": "Is there a way to reflect that",
+    "start": 2661.28,
+    "duration": 4.32
+  },
+  {
+    "text": "and then actually is like that?",
+    "start": 2663.4,
+    "duration": 4.2
+  },
+  {
+    "text": ">> Yeah, great question. So, the question",
+    "start": 2665.6,
+    "duration": 4.28
+  },
+  {
+    "text": "is that if you think about the rag, the",
+    "start": 2667.6,
+    "duration": 4.88
+  },
+  {
+    "text": "design pattern may suffer from compound",
+    "start": 2669.88,
+    "duration": 5.28
+  },
+  {
+    "text": "errors where the error may cascade along",
+    "start": 2672.48,
+    "duration": 4.84
+  },
+  {
+    "text": "the pipeline. And then, if we made a",
+    "start": 2675.16,
+    "duration": 3.88
+  },
+  {
+    "text": "wrong, let's say retrieval in the first",
+    "start": 2677.32,
+    "duration": 3.4
+  },
+  {
+    "text": "place, there's no way you are going to",
+    "start": 2679.04,
+    "duration": 3.92
+  },
+  {
+    "text": "get a good answer in the end.",
+    "start": 2680.72,
+    "duration": 4.56
+  },
+  {
+    "text": "So, we this is actually one of the",
+    "start": 2682.96,
+    "duration": 5.2
+  },
+  {
+    "text": "limitation of the rag approach. As we",
+    "start": 2685.28,
+    "duration": 5.52
+  },
+  {
+    "text": "move more towards a generic rag, we will",
+    "start": 2688.16,
+    "duration": 5.16
+  },
+  {
+    "text": "add some additional components such as",
+    "start": 2690.8,
+    "duration": 5.881
+  },
+  {
+    "text": "self-reflection or critique, etc. So,",
+    "start": 2693.32,
+    "duration": 5.161
+  },
+  {
+    "text": "we'll add some additional components to",
+    "start": 2696.681,
+    "duration": 4.4
+  },
+  {
+    "text": "make sure we do not suffer from that,",
+    "start": 2698.481,
+    "duration": 4.24
+  },
+  {
+    "text": "but in practice, this is still a",
+    "start": 2701.081,
+    "duration": 3.4
+  },
+  {
+    "text": "concern.",
+    "start": 2702.721,
+    "duration": 5.12
+  },
+  {
+    "text": "Okay, I will continue. Um so, we we now",
+    "start": 2704.481,
+    "duration": 5.08
+  },
+  {
+    "text": "finish um",
+    "start": 2707.841,
+    "duration": 3.72
+  },
+  {
+    "text": "uh chunking, uh which is a very exciting",
+    "start": 2709.561,
+    "duration": 4.48
+  },
+  {
+    "text": "topic, actually. Uh now, we are going to",
+    "start": 2711.561,
+    "duration": 5.04
+  },
+  {
+    "text": "a little bit higher level to the vector",
+    "start": 2714.041,
+    "duration": 3.96
+  },
+  {
+    "text": "search here.",
+    "start": 2716.601,
+    "duration": 2.92
+  },
+  {
+    "text": "So, if you think about the top K",
+    "start": 2718.001,
+    "duration": 4.8
+  },
+  {
+    "text": "selection for rag, uh you are provided",
+    "start": 2719.521,
+    "duration": 5.56
+  },
+  {
+    "text": "with a query vector, and you want to get",
+    "start": 2722.801,
+    "duration": 3.34
+  },
+  {
+    "text": "the top K",
+    "start": 2725.081,
+    "duration": 1.08
+  },
+  {
+    "text": ">> [clears throat]",
+    "start": 2726.141,
+    "duration": 0.7
+  },
+  {
+    "text": ">> um",
+    "start": 2726.161,
+    "duration": 1.88
+  },
+  {
+    "text": "segments.",
+    "start": 2726.841,
+    "duration": 4.04
+  },
+  {
+    "text": "Um you can definitely do a exact search.",
+    "start": 2728.041,
+    "duration": 5.32
+  },
+  {
+    "text": "This is going to be a very brute force",
+    "start": 2730.881,
+    "duration": 5.52
+  },
+  {
+    "text": "process, where if you have N documents",
+    "start": 2733.361,
+    "duration": 6.12
+  },
+  {
+    "text": "and then D dimension, your complexity is",
+    "start": 2736.401,
+    "duration": 6.76
+  },
+  {
+    "text": "like O N D here. N is in general like, I",
+    "start": 2739.481,
+    "duration": 5.88
+  },
+  {
+    "text": "don't know, like millions of records, so",
+    "start": 2743.161,
+    "duration": 4.68
+  },
+  {
+    "text": "it's going to be very, very expensive if",
+    "start": 2745.361,
+    "duration": 4.8
+  },
+  {
+    "text": "you do exact search.",
+    "start": 2747.841,
+    "duration": 4.96
+  },
+  {
+    "text": "Um again, like uh you can actually use",
+    "start": 2750.161,
+    "duration": 5.24
+  },
+  {
+    "text": "approximate algorithm here. Um people",
+    "start": 2752.801,
+    "duration": 5.04
+  },
+  {
+    "text": "use approximate nearest neighbor, like",
+    "start": 2755.401,
+    "duration": 4.84
+  },
+  {
+    "text": "ANN here. You trade a little bit of",
+    "start": 2757.841,
+    "duration": 5.12
+  },
+  {
+    "text": "recall with a lot of speed. So, we do",
+    "start": 2760.241,
+    "duration": 4.6
+  },
+  {
+    "text": "not need to search everything. We only",
+    "start": 2762.961,
+    "duration": 5.64
+  },
+  {
+    "text": "need to search for a small region.",
+    "start": 2764.841,
+    "duration": 5.96
+  },
+  {
+    "text": "Um different techniques have been",
+    "start": 2768.601,
+    "duration": 5.36
+  },
+  {
+    "text": "proposed, uh such as IVF here. You",
+    "start": 2770.801,
+    "duration": 5.6
+  },
+  {
+    "text": "basically cluster the index, and you",
+    "start": 2773.961,
+    "duration": 5.92
+  },
+  {
+    "text": "only do search probe in a nearest",
+    "start": 2776.401,
+    "duration": 5.32
+  },
+  {
+    "text": "neighbor region.",
+    "start": 2779.881,
+    "duration": 4.68
+  },
+  {
+    "text": "You can also do quantization here. Uh",
+    "start": 2781.721,
+    "duration": 5.72
+  },
+  {
+    "text": "you can compress each vector into a",
+    "start": 2784.561,
+    "duration": 4.8
+  },
+  {
+    "text": "quantized version. So, it's going to be",
+    "start": 2787.441,
+    "duration": 3.88
+  },
+  {
+    "text": "a much shorter code. You reduce the",
+    "start": 2789.361,
+    "duration": 4.12
+  },
+  {
+    "text": "dimension of D here.",
+    "start": 2791.321,
+    "duration": 4.04
+  },
+  {
+    "text": "Uh one approach I'm going to share you",
+    "start": 2793.481,
+    "duration": 5.6
+  },
+  {
+    "text": "here is called uh HNSW.",
+    "start": 2795.361,
+    "duration": 7.32
+  },
+  {
+    "text": "Uh hierarchical navigable small world.",
+    "start": 2799.081,
+    "duration": 5.4
+  },
+  {
+    "text": "This is actually one of the widely used",
+    "start": 2802.681,
+    "duration": 4.48
+  },
+  {
+    "text": "approach. Uh I will share the high-level",
+    "start": 2804.481,
+    "duration": 4.4
+  },
+  {
+    "text": "idea here, uh but I'm happy to talk",
+    "start": 2807.161,
+    "duration": 3.52
+  },
+  {
+    "text": "about the details.",
+    "start": 2808.881,
+    "duration": 4.2
+  },
+  {
+    "text": "So, what this does is that, since it's",
+    "start": 2810.681,
+    "duration": 5.6
+  },
+  {
+    "text": "really hard to do exact search, what if",
+    "start": 2813.081,
+    "duration": 6.002
+  },
+  {
+    "text": "we kind of arrange the information at",
+    "start": 2816.281,
+    "duration": 5.002
+  },
+  {
+    "text": "the different layers?",
+    "start": 2819.083,
+    "duration": 5.16
+  },
+  {
+    "text": "So, different layers, um first all",
+    "start": 2821.283,
+    "duration": 5.56
+  },
+  {
+    "text": "vectors we have will be in layer zero.",
+    "start": 2824.243,
+    "duration": 4.72
+  },
+  {
+    "text": "So, they are all the bottom.",
+    "start": 2826.843,
+    "duration": 4.519
+  },
+  {
+    "text": "As you move a little bit higher level",
+    "start": 2828.963,
+    "duration": 4.399
+  },
+  {
+    "text": "higher level, you have fewer and the",
+    "start": 2831.362,
+    "duration": 3.641
+  },
+  {
+    "text": "fewer samples.",
+    "start": 2833.362,
+    "duration": 3.32
+  },
+  {
+    "text": "So, when we do search, we actually",
+    "start": 2835.003,
+    "duration": 4.0
+  },
+  {
+    "text": "search from the top here. And then you",
+    "start": 2836.682,
+    "duration": 5.601
+  },
+  {
+    "text": "can greedy hope towards the query. Um if",
+    "start": 2839.003,
+    "duration": 5.0
+  },
+  {
+    "text": "you cannot find the answer, let's see at",
+    "start": 2842.283,
+    "duration": 4.0
+  },
+  {
+    "text": "the layer two, you go to layer one. If",
+    "start": 2844.003,
+    "duration": 4.159
+  },
+  {
+    "text": "you cannot find the answer here, you go",
+    "start": 2846.283,
+    "duration": 4.24
+  },
+  {
+    "text": "to layer zero. And at each layer, you",
+    "start": 2848.162,
+    "duration": 4.121
+  },
+  {
+    "text": "are just doing like a nearest neighbor",
+    "start": 2850.523,
+    "duration": 4.159
+  },
+  {
+    "text": "search. So, this kind of hierarchical",
+    "start": 2852.283,
+    "duration": 5.04
+  },
+  {
+    "text": "representation enable us to do very",
+    "start": 2854.682,
+    "duration": 7.281
+  },
+  {
+    "text": "fast. I think here like all n hops here.",
+    "start": 2857.323,
+    "duration": 7.24
+  },
+  {
+    "text": "log n, sorry.",
+    "start": 2861.963,
+    "duration": 4.88
+  },
+  {
+    "text": "This is the HNSW.",
+    "start": 2864.563,
+    "duration": 4.119
+  },
+  {
+    "text": "If you are curious like, \"Okay, how is",
+    "start": 2866.843,
+    "duration": 4.079
+  },
+  {
+    "text": "this actually constructed?\" Uh I",
+    "start": 2868.682,
+    "duration": 4.44
+  },
+  {
+    "text": "recommend you uh read the algorithm",
+    "start": 2870.922,
+    "duration": 3.921
+  },
+  {
+    "text": "yourself. It's actually a very",
+    "start": 2873.122,
+    "duration": 4.921
+  },
+  {
+    "text": "interesting random uh algorithm here. Uh",
+    "start": 2874.843,
+    "duration": 5.599
+  },
+  {
+    "text": "you basically insert a vector at each",
+    "start": 2878.043,
+    "duration": 5.319
+  },
+  {
+    "text": "time. And then you pick its top layer at",
+    "start": 2880.442,
+    "duration": 4.2
+  },
+  {
+    "text": "random.",
+    "start": 2883.362,
+    "duration": 3.76
+  },
+  {
+    "text": "Uh most of node will stay at layer zero.",
+    "start": 2884.642,
+    "duration": 5.321
+  },
+  {
+    "text": "And then few node will reach the top.",
+    "start": 2887.122,
+    "duration": 4.841
+  },
+  {
+    "text": "And then you basically link it at each",
+    "start": 2889.963,
+    "duration": 2.959
+  },
+  {
+    "text": "layer.",
+    "start": 2891.963,
+    "duration": 2.919
+  },
+  {
+    "text": "Um the nearest neighbors and then the",
+    "start": 2892.922,
+    "duration": 4.68
+  },
+  {
+    "text": "heuristic link across to another",
+    "start": 2894.882,
+    "duration": 5.441
+  },
+  {
+    "text": "cluster. So, that the greedy walk across",
+    "start": 2897.602,
+    "duration": 5.04
+  },
+  {
+    "text": "those different layers can happen. And",
+    "start": 2900.323,
+    "duration": 5.0
+  },
+  {
+    "text": "then you do not trap a specific node in",
+    "start": 2902.642,
+    "duration": 4.52
+  },
+  {
+    "text": "a specific layer. So, you can basically",
+    "start": 2905.323,
+    "duration": 4.52
+  },
+  {
+    "text": "construct a layered representation. And",
+    "start": 2907.162,
+    "duration": 4.28
+  },
+  {
+    "text": "then when you do the search, you go from",
+    "start": 2909.843,
+    "duration": 4.16
+  },
+  {
+    "text": "the top layer to middle layer to the",
+    "start": 2911.442,
+    "duration": 5.24
+  },
+  {
+    "text": "bottom layer.",
+    "start": 2914.003,
+    "duration": 4.879
+  },
+  {
+    "text": "Okay. So, this actually concludes our",
+    "start": 2916.682,
+    "duration": 5.281
+  },
+  {
+    "text": "indexing. Um this is again a very uh",
+    "start": 2918.882,
+    "duration": 5.201
+  },
+  {
+    "text": "kind of like specific component behind",
+    "start": 2921.963,
+    "duration": 3.8
+  },
+  {
+    "text": "the rack.",
+    "start": 2924.083,
+    "duration": 3.76
+  },
+  {
+    "text": "Yeah. And then I'm now going to go",
+    "start": 2925.763,
+    "duration": 4.76
+  },
+  {
+    "text": "towards our retrieval. This is actually",
+    "start": 2927.843,
+    "duration": 3.64
+  },
+  {
+    "text": "uh",
+    "start": 2930.523,
+    "duration": 2.8
+  },
+  {
+    "text": "a component that answers a lot of the",
+    "start": 2931.483,
+    "duration": 5.399
+  },
+  {
+    "text": "questions about why we need a DPR, do we",
+    "start": 2933.323,
+    "duration": 5.441
+  },
+  {
+    "text": "still need a BERT, what are some kind of",
+    "start": 2936.882,
+    "duration": 4.602
+  },
+  {
+    "text": "other choices here?",
+    "start": 2938.764,
+    "duration": 5.08
+  },
+  {
+    "text": "So, first, uh let's talk about different",
+    "start": 2941.484,
+    "duration": 4.84
+  },
+  {
+    "text": "type of retrievers. I already mentioned",
+    "start": 2943.844,
+    "duration": 5.76
+  },
+  {
+    "text": "those terms. You already see DPR. You",
+    "start": 2946.324,
+    "duration": 5.44
+  },
+  {
+    "text": "can do sentence vectors.",
+    "start": 2949.604,
+    "duration": 5.64
+  },
+  {
+    "text": "You can also do word overlap BM25.",
+    "start": 2951.764,
+    "duration": 5.56
+  },
+  {
+    "text": "You can use neural systems. You can use",
+    "start": 2955.244,
+    "duration": 4.24
+  },
+  {
+    "text": "L arms. Those are just like a different",
+    "start": 2957.324,
+    "duration": 5.08
+  },
+  {
+    "text": "type of retrievers we can have.",
+    "start": 2959.484,
+    "duration": 6.6
+  },
+  {
+    "text": "So, let's look at a BM25.",
+    "start": 2962.404,
+    "duration": 6.2
+  },
+  {
+    "text": "This is again the most widely used",
+    "start": 2966.084,
+    "duration": 5.56
+  },
+  {
+    "text": "approach. Very, very classic. It's from",
+    "start": 2968.604,
+    "duration": 4.64
+  },
+  {
+    "text": "1990s.",
+    "start": 2971.644,
+    "duration": 3.52
+  },
+  {
+    "text": "And it's still the baseline that every",
+    "start": 2973.244,
+    "duration": 4.88
+  },
+  {
+    "text": "retriever paper reports today.",
+    "start": 2975.164,
+    "duration": 5.68
+  },
+  {
+    "text": "I'm going to show you the results. This",
+    "start": 2978.124,
+    "duration": 5.36
+  },
+  {
+    "text": "is literally a TF-IDF-ish",
+    "start": 2980.844,
+    "duration": 6.84
+  },
+  {
+    "text": "setup. So, nothing is very sophisticated",
+    "start": 2983.484,
+    "duration": 5.72
+  },
+  {
+    "text": "here. We are just going to go through",
+    "start": 2987.684,
+    "duration": 2.8
+  },
+  {
+    "text": "this uh",
+    "start": 2989.204,
+    "duration": 2.56
+  },
+  {
+    "text": "one by one.",
+    "start": 2990.484,
+    "duration": 4.28
+  },
+  {
+    "text": "So, if you read this kind of score, BM25",
+    "start": 2991.764,
+    "duration": 4.4
+  },
+  {
+    "text": "score here,",
+    "start": 2994.764,
+    "duration": 3.84
+  },
+  {
+    "text": "it's literally two components. You have",
+    "start": 2996.164,
+    "duration": 6.12
+  },
+  {
+    "text": "IDF, you have the kind of like",
+    "start": 2998.604,
+    "duration": 6.72
+  },
+  {
+    "text": "TF here. So, often a [snorts] specific",
+    "start": 3002.284,
+    "duration": 7.08
+  },
+  {
+    "text": "word in the query QI",
+    "start": 3005.324,
+    "duration": 4.04
+  },
+  {
+    "text": "occurs in the document. And then you do",
+    "start": 3009.764,
+    "duration": 4.76
+  },
+  {
+    "text": "some kind of normalization here.",
+    "start": 3012.284,
+    "duration": 5.8
+  },
+  {
+    "text": "And then IDF is going to look at how",
+    "start": 3014.524,
+    "duration": 6.4
+  },
+  {
+    "text": "like NQI here refers to the docs that",
+    "start": 3018.084,
+    "duration": 4.72
+  },
+  {
+    "text": "contain QI.",
+    "start": 3020.924,
+    "duration": 2.76
+  },
+  {
+    "text": "So,",
+    "start": 3022.804,
+    "duration": 2.96
+  },
+  {
+    "text": "basically, the second piece is just like",
+    "start": 3023.684,
+    "duration": 5.12
+  },
+  {
+    "text": "a term frequency with some kind of like",
+    "start": 3025.764,
+    "duration": 5.2
+  },
+  {
+    "text": "length normalization here.",
+    "start": 3028.804,
+    "duration": 3.24
+  },
+  {
+    "text": "And then",
+    "start": 3030.964,
+    "duration": 3.48
+  },
+  {
+    "text": "with those two terms, we just like get",
+    "start": 3032.044,
+    "duration": 5.64
+  },
+  {
+    "text": "to the BM25.",
+    "start": 3034.444,
+    "duration": 4.88
+  },
+  {
+    "text": "I'm not going to go deep into those",
+    "start": 3037.684,
+    "duration": 4.2
+  },
+  {
+    "text": "different parameter choices here.",
+    "start": 3039.324,
+    "duration": 5.16
+  },
+  {
+    "text": "There are different variants of this.",
+    "start": 3041.884,
+    "duration": 5.16
+  },
+  {
+    "text": "The good thing about BM25 is that",
+    "start": 3044.484,
+    "duration": 5.08
+  },
+  {
+    "text": "there's no training, no vector, and it's",
+    "start": 3047.044,
+    "duration": 5.88
+  },
+  {
+    "text": "very hard to beat exact term",
+    "start": 3049.564,
+    "duration": 5.68
+  },
+  {
+    "text": "representation.",
+    "start": 3052.924,
+    "duration": 3.88
+  },
+  {
+    "text": "So,",
+    "start": 3055.244,
+    "duration": 2.96
+  },
+  {
+    "text": "I want to provide you some kind of",
+    "start": 3056.804,
+    "duration": 4.561
+  },
+  {
+    "text": "intuitions because if you look at this,",
+    "start": 3058.204,
+    "duration": 4.961
+  },
+  {
+    "text": "Uh, definitely feels like, \"Okay, this",
+    "start": 3061.365,
+    "duration": 3.96
+  },
+  {
+    "text": "is so complicated. How did they come up",
+    "start": 3063.165,
+    "duration": 5.8
+  },
+  {
+    "text": "with K1 here? What exactly is doing with",
+    "start": 3065.325,
+    "duration": 6.52
+  },
+  {
+    "text": "this kind of IDF? So, instead of walk",
+    "start": 3068.965,
+    "duration": 5.0
+  },
+  {
+    "text": "you through with the terms, let's look",
+    "start": 3071.845,
+    "duration": 5.08
+  },
+  {
+    "text": "at some intuitions behind this.",
+    "start": 3073.965,
+    "duration": 4.88
+  },
+  {
+    "text": "So, IDF, let's just take them as a",
+    "start": 3076.925,
+    "duration": 3.0
+  },
+  {
+    "text": "whole.",
+    "start": 3078.845,
+    "duration": 4.6
+  },
+  {
+    "text": "If you read the left side, so the x-axis",
+    "start": 3079.925,
+    "duration": 5.64
+  },
+  {
+    "text": "is a document frequency.",
+    "start": 3083.445,
+    "duration": 4.24
+  },
+  {
+    "text": "Uh, that is how often a term occurs in",
+    "start": 3085.565,
+    "duration": 5.36
+  },
+  {
+    "text": "document. And then the y-axis, we plot",
+    "start": 3087.685,
+    "duration": 7.36
+  },
+  {
+    "text": "the IDF score. So, as you can see, BM25",
+    "start": 3090.925,
+    "duration": 6.68
+  },
+  {
+    "text": "uh, here, um, this",
+    "start": 3095.045,
+    "duration": 5.16
+  },
+  {
+    "text": "this line.",
+    "start": 3097.605,
+    "duration": 2.6
+  },
+  {
+    "text": "It definitely has two shapes. So, when",
+    "start": 3100.925,
+    "duration": 4.0
+  },
+  {
+    "text": "it",
+    "start": 3104.125,
+    "duration": 3.48
+  },
+  {
+    "text": "when it is like less than 50% of the",
+    "start": 3104.925,
+    "duration": 5.4
+  },
+  {
+    "text": "document, the term has a positive value.",
+    "start": 3107.605,
+    "duration": 5.4
+  },
+  {
+    "text": "When a term occurs more than half of the",
+    "start": 3110.325,
+    "duration": 4.4
+  },
+  {
+    "text": "documents, it actually receive a",
+    "start": 3113.005,
+    "duration": 3.24
+  },
+  {
+    "text": "negative value.",
+    "start": 3114.725,
+    "duration": 3.28
+  },
+  {
+    "text": "Uh, so this is actually what we want. We",
+    "start": 3116.245,
+    "duration": 3.36
+  },
+  {
+    "text": "want to find the sense that's very",
+    "start": 3118.005,
+    "duration": 4.04
+  },
+  {
+    "text": "unique to the query. So, this is the",
+    "start": 3119.605,
+    "duration": 5.52
+  },
+  {
+    "text": "intuition behind the IDF score here.",
+    "start": 3122.045,
+    "duration": 5.56
+  },
+  {
+    "text": "Um, the term frequency, in the earlier",
+    "start": 3125.125,
+    "duration": 4.88
+  },
+  {
+    "text": "thing, you see this kind of like big box",
+    "start": 3127.605,
+    "duration": 5.08
+  },
+  {
+    "text": "here is refers to like term frequency.",
+    "start": 3130.005,
+    "duration": 4.76
+  },
+  {
+    "text": "It has some kind of normalization with",
+    "start": 3132.685,
+    "duration": 4.48
+  },
+  {
+    "text": "K1 here. So, let's just look at what a",
+    "start": 3134.765,
+    "duration": 4.08
+  },
+  {
+    "text": "K1 is doing.",
+    "start": 3137.165,
+    "duration": 5.0
+  },
+  {
+    "text": "If K1 is very small, like 0.5 here, so",
+    "start": 3138.845,
+    "duration": 5.84
+  },
+  {
+    "text": "that's the bottom line, versus K1 is",
+    "start": 3142.165,
+    "duration": 4.92
+  },
+  {
+    "text": "five, which is the top line.",
+    "start": 3144.685,
+    "duration": 3.68
+  },
+  {
+    "text": "Um,",
+    "start": 3147.085,
+    "duration": 3.92
+  },
+  {
+    "text": "this literally tells us about the term",
+    "start": 3148.365,
+    "duration": 5.0
+  },
+  {
+    "text": "frequency saturation. Um, you can see",
+    "start": 3151.005,
+    "duration": 5.36
+  },
+  {
+    "text": "that each term actually starts at one",
+    "start": 3153.365,
+    "duration": 5.32
+  },
+  {
+    "text": "here for a single mention. And then a",
+    "start": 3156.365,
+    "duration": 5.72
+  },
+  {
+    "text": "higher K1 will give more credits uh, for",
+    "start": 3158.685,
+    "duration": 7.44
+  },
+  {
+    "text": "repeats before it flattens. Uh, small",
+    "start": 3162.085,
+    "duration": 6.8
+  },
+  {
+    "text": "uh, K1 here is nearly like a binary. So,",
+    "start": 3166.125,
+    "duration": 5.28
+  },
+  {
+    "text": "the word is there or it is not. So, if",
+    "start": 3168.885,
+    "duration": 4.2
+  },
+  {
+    "text": "you look at this, it kind of converge",
+    "start": 3171.405,
+    "duration": 4.48
+  },
+  {
+    "text": "very earlier. It basically quantify is",
+    "start": 3173.085,
+    "duration": 6.52
+  },
+  {
+    "text": "the word there or is it not? So, IDF",
+    "start": 3175.885,
+    "duration": 6.2
+  },
+  {
+    "text": "decides which words matters, and then",
+    "start": 3179.605,
+    "duration": 5.202
+  },
+  {
+    "text": "the saturation actually stops any word",
+    "start": 3182.085,
+    "duration": 6.962
+  },
+  {
+    "text": "from being dominating in the output.",
+    "start": 3184.807,
+    "duration": 6.84
+  },
+  {
+    "text": "Okay, so this is just a very classic, as",
+    "start": 3189.047,
+    "duration": 4.48
+  },
+  {
+    "text": "I mentioned, like a very fast approach",
+    "start": 3191.647,
+    "duration": 5.2
+  },
+  {
+    "text": "to process information.",
+    "start": 3193.527,
+    "duration": 6.76
+  },
+  {
+    "text": "Now, if we go to this kind of DPR stage,",
+    "start": 3196.847,
+    "duration": 5.88
+  },
+  {
+    "text": "dense passage retrieval here.",
+    "start": 3200.287,
+    "duration": 4.6
+  },
+  {
+    "text": "In the offline, what we do is that for",
+    "start": 3202.727,
+    "duration": 4.88
+  },
+  {
+    "text": "different passages, we pass them through",
+    "start": 3204.887,
+    "duration": 5.64
+  },
+  {
+    "text": "an encoder. This could have been BERT",
+    "start": 3207.607,
+    "duration": 5.52
+  },
+  {
+    "text": "or Roberta or other type of architecture",
+    "start": 3210.527,
+    "duration": 5.36
+  },
+  {
+    "text": "here. You gather different vectors. You",
+    "start": 3213.127,
+    "duration": 6.12
+  },
+  {
+    "text": "store them into your vector index.",
+    "start": 3215.887,
+    "duration": 5.32
+  },
+  {
+    "text": "During the online fashion, whenever we",
+    "start": 3219.247,
+    "duration": 4.68
+  },
+  {
+    "text": "get a query, we pass it to a query",
+    "start": 3221.207,
+    "duration": 4.92
+  },
+  {
+    "text": "encoder. And then we can do the dot",
+    "start": 3223.927,
+    "duration": 4.32
+  },
+  {
+    "text": "product. And then you do the top key",
+    "start": 3226.127,
+    "duration": 5.32
+  },
+  {
+    "text": "here. So this is a neural approach. And",
+    "start": 3228.247,
+    "duration": 4.24
+  },
+  {
+    "text": "then",
+    "start": 3231.447,
+    "duration": 2.8
+  },
+  {
+    "text": "one thing I do want to mention is that",
+    "start": 3232.487,
+    "duration": 4.0
+  },
+  {
+    "text": "the passage encoder and the query",
+    "start": 3234.247,
+    "duration": 4.36
+  },
+  {
+    "text": "encoder, they are two separate BERTs",
+    "start": 3236.487,
+    "duration": 3.4
+  },
+  {
+    "text": "here.",
+    "start": 3238.607,
+    "duration": 2.28
+  },
+  {
+    "text": "Um",
+    "start": 3239.887,
+    "duration": 3.08
+  },
+  {
+    "text": "A quiz you need to answer yourself is",
+    "start": 3240.887,
+    "duration": 4.6
+  },
+  {
+    "text": "which side is expensive.",
+    "start": 3242.967,
+    "duration": 4.64
+  },
+  {
+    "text": "Is it this one or is this one? One's",
+    "start": 3245.487,
+    "duration": 5.72
+  },
+  {
+    "text": "done offline, one's done online.",
+    "start": 3247.607,
+    "duration": 5.76
+  },
+  {
+    "text": "Um one minor thing that I do want to",
+    "start": 3251.207,
+    "duration": 3.96
+  },
+  {
+    "text": "mention is that",
+    "start": 3253.367,
+    "duration": 4.32
+  },
+  {
+    "text": "if you want to go deep, you can also see",
+    "start": 3255.167,
+    "duration": 5.48
+  },
+  {
+    "text": "how we train DPR here.",
+    "start": 3257.687,
+    "duration": 5.28
+  },
+  {
+    "text": "Um so what do we do is that once you get",
+    "start": 3260.647,
+    "duration": 4.52
+  },
+  {
+    "text": "the representation from the question",
+    "start": 3262.967,
+    "duration": 5.0
+  },
+  {
+    "text": "coder, the passage encoder, we do a",
+    "start": 3265.167,
+    "duration": 5.72
+  },
+  {
+    "text": "inner product similarity here. And then",
+    "start": 3267.967,
+    "duration": 4.92
+  },
+  {
+    "text": "you can just pass them into a",
+    "start": 3270.887,
+    "duration": 3.8
+  },
+  {
+    "text": "normalization here.",
+    "start": 3272.887,
+    "duration": 4.2
+  },
+  {
+    "text": "Um so the loss function here is what we",
+    "start": 3274.687,
+    "duration": 4.8
+  },
+  {
+    "text": "call a contrastive loss. That is the",
+    "start": 3277.087,
+    "duration": 5.4
+  },
+  {
+    "text": "negative log soft max of the positive",
+    "start": 3279.487,
+    "duration": 5.8
+  },
+  {
+    "text": "retrievals against the negatives. So",
+    "start": 3282.487,
+    "duration": 5.56
+  },
+  {
+    "text": "that's referred as the P plus here",
+    "start": 3285.287,
+    "duration": 6.0
+  },
+  {
+    "text": "versus P minus.",
+    "start": 3288.047,
+    "duration": 5.16
+  },
+  {
+    "text": "So think about the idea. The idea is",
+    "start": 3291.287,
+    "duration": 5.2
+  },
+  {
+    "text": "that we want to promote those correct",
+    "start": 3293.207,
+    "duration": 7.24
+  },
+  {
+    "text": "search to be closer. And then we want to",
+    "start": 3296.487,
+    "duration": 6.76
+  },
+  {
+    "text": "penalize those incorrect or less",
+    "start": 3300.447,
+    "duration": 4.68
+  },
+  {
+    "text": "relevant search.",
+    "start": 3303.247,
+    "duration": 4.561
+  },
+  {
+    "text": "Um so one of the key design question",
+    "start": 3305.127,
+    "duration": 6.041
+  },
+  {
+    "text": "here is where do the negative come from?",
+    "start": 3307.808,
+    "duration": 5.84
+  },
+  {
+    "text": "I think you can use the other passages",
+    "start": 3311.168,
+    "duration": 4.72
+  },
+  {
+    "text": "in the same batch since you do batch",
+    "start": 3313.648,
+    "duration": 3.4
+  },
+  {
+    "text": "processing.",
+    "start": 3315.888,
+    "duration": 2.96
+  },
+  {
+    "text": "Uh, which This is what we call a",
+    "start": 3317.048,
+    "duration": 6.0
+  },
+  {
+    "text": "in-batch negative. Or you can use BM25",
+    "start": 3318.848,
+    "duration": 6.92
+  },
+  {
+    "text": "hard negatives. That is the passage that",
+    "start": 3323.048,
+    "duration": 5.48
+  },
+  {
+    "text": "the match the questions words, but do",
+    "start": 3325.768,
+    "duration": 4.92
+  },
+  {
+    "text": "not contain the answer. So, you give it",
+    "start": 3328.528,
+    "duration": 5.12
+  },
+  {
+    "text": "a really hard negative here. And those",
+    "start": 3330.688,
+    "duration": 5.44
+  },
+  {
+    "text": "hard negatives are what teach the model",
+    "start": 3333.648,
+    "duration": 5.56
+  },
+  {
+    "text": "to go beyond just like word overlap.",
+    "start": 3336.128,
+    "duration": 5.24
+  },
+  {
+    "text": "Um, so you can see that the right line",
+    "start": 3339.208,
+    "duration": 4.72
+  },
+  {
+    "text": "here, uh, this shows how the gradient",
+    "start": 3341.368,
+    "duration": 5.04
+  },
+  {
+    "text": "updates both encoders.",
+    "start": 3343.928,
+    "duration": 4.08
+  },
+  {
+    "text": "So, this is the architecture behind the",
+    "start": 3346.408,
+    "duration": 3.96
+  },
+  {
+    "text": "DPR.",
+    "start": 3348.008,
+    "duration": 4.44
+  },
+  {
+    "text": "I'm going to show you more equations,",
+    "start": 3350.368,
+    "duration": 4.24
+  },
+  {
+    "text": "but they literally means how we do the",
+    "start": 3352.448,
+    "duration": 5.32
+  },
+  {
+    "text": "evaluation since um, some people may get",
+    "start": 3354.608,
+    "duration": 5.6
+  },
+  {
+    "text": "a confused as we have so many many",
+    "start": 3357.768,
+    "duration": 5.32
+  },
+  {
+    "text": "different metrics whenever it comes to",
+    "start": 3360.208,
+    "duration": 4.24
+  },
+  {
+    "text": "rank.",
+    "start": 3363.088,
+    "duration": 3.44
+  },
+  {
+    "text": "Uh, let's start with a very simple one,",
+    "start": 3364.448,
+    "duration": 3.92
+  },
+  {
+    "text": "hit at K.",
+    "start": 3366.528,
+    "duration": 4.08
+  },
+  {
+    "text": "Again, as the name mentions, it",
+    "start": 3368.368,
+    "duration": 4.04
+  },
+  {
+    "text": "basically means that if I look at the",
+    "start": 3370.608,
+    "duration": 5.24
+  },
+  {
+    "text": "top K positions, uh, is that",
+    "start": 3372.408,
+    "duration": 5.88
+  },
+  {
+    "text": "content relevant or not. So, you",
+    "start": 3375.848,
+    "duration": 5.36
+  },
+  {
+    "text": "basically use this kind of um, index",
+    "start": 3378.288,
+    "duration": 5.56
+  },
+  {
+    "text": "function and then look at the whether",
+    "start": 3381.208,
+    "duration": 5.68
+  },
+  {
+    "text": "uh, the passage is relevant or not and",
+    "start": 3383.848,
+    "duration": 4.96
+  },
+  {
+    "text": "then you do a normalization. So, this is",
+    "start": 3386.888,
+    "duration": 5.96
+  },
+  {
+    "text": "very straightforward, hit at a K K.",
+    "start": 3388.808,
+    "duration": 7.24
+  },
+  {
+    "text": "Uh, field at a K. Again, same. Uh, you",
+    "start": 3392.848,
+    "duration": 5.84
+  },
+  {
+    "text": "just look at is this relevant or is this",
+    "start": 3396.048,
+    "duration": 4.96
+  },
+  {
+    "text": "not. This is the metric we mentioned",
+    "start": 3398.688,
+    "duration": 5.16
+  },
+  {
+    "text": "earlier for contrast retrieval and it",
+    "start": 3401.008,
+    "duration": 7.52
+  },
+  {
+    "text": "basically complements hit at a K here.",
+    "start": 3403.848,
+    "duration": 8.0
+  },
+  {
+    "text": "Okay, [snorts] a much uh, more common",
+    "start": 3408.528,
+    "duration": 6.08
+  },
+  {
+    "text": "metric, but look a little bit uh,",
+    "start": 3411.848,
+    "duration": 5.16
+  },
+  {
+    "text": "uh, scary, but let's unpack them.",
+    "start": 3414.608,
+    "duration": 6.28
+  },
+  {
+    "text": "Uh, so this is called a NC NDCG at K.",
+    "start": 3417.008,
+    "duration": 6.68
+  },
+  {
+    "text": "And then in order to understand this,",
+    "start": 3420.888,
+    "duration": 5.12
+  },
+  {
+    "text": "let's look at the DCG here.",
+    "start": 3423.688,
+    "duration": 4.76
+  },
+  {
+    "text": "It basically means that for the for the",
+    "start": 3426.008,
+    "duration": 5.601
+  },
+  {
+    "text": "current list, if I look at the top key",
+    "start": 3428.448,
+    "duration": 5.921
+  },
+  {
+    "text": "passages, this is their relevance. And",
+    "start": 3431.609,
+    "duration": 4.8
+  },
+  {
+    "text": "then you you basically like discount",
+    "start": 3434.369,
+    "duration": 4.44
+  },
+  {
+    "text": "them by their rank position. So, you",
+    "start": 3436.409,
+    "duration": 5.4
+  },
+  {
+    "text": "basically get like how relevant they are",
+    "start": 3438.809,
+    "duration": 5.0
+  },
+  {
+    "text": "with regarding to their ranking. So,",
+    "start": 3441.809,
+    "duration": 3.92
+  },
+  {
+    "text": "this give you a more accurate",
+    "start": 3443.809,
+    "duration": 4.32
+  },
+  {
+    "text": "description of the relevance.",
+    "start": 3445.729,
+    "duration": 4.84
+  },
+  {
+    "text": "Uh and then since you have ground truth,",
+    "start": 3448.129,
+    "duration": 5.6
+  },
+  {
+    "text": "the IDCG here refers to if you look at",
+    "start": 3450.569,
+    "duration": 5.44
+  },
+  {
+    "text": "your ground truth retrieval and then",
+    "start": 3453.729,
+    "duration": 4.16
+  },
+  {
+    "text": "give them the relevant score and rank",
+    "start": 3456.009,
+    "duration": 4.88
+  },
+  {
+    "text": "key what ideal situation. And then you",
+    "start": 3457.889,
+    "duration": 5.68
+  },
+  {
+    "text": "do a normalization here to refer to the",
+    "start": 3460.889,
+    "duration": 4.08
+  },
+  {
+    "text": "outcome.",
+    "start": 3463.569,
+    "duration": 4.36
+  },
+  {
+    "text": "So, again, nothing is is like really",
+    "start": 3464.969,
+    "duration": 4.68
+  },
+  {
+    "text": "new. We are just trying to walk through",
+    "start": 3467.929,
+    "duration": 4.16
+  },
+  {
+    "text": "the the matrix here.",
+    "start": 3469.649,
+    "duration": 4.0
+  },
+  {
+    "text": "Okay, I have two more metrics before we",
+    "start": 3472.089,
+    "duration": 5.16
+  },
+  {
+    "text": "finish. So, uh the next one is called uh",
+    "start": 3473.649,
+    "duration": 4.44
+  },
+  {
+    "text": "um",
+    "start": 3477.249,
+    "duration": 4.16
+  },
+  {
+    "text": "MRR here. Uh this is also a widely",
+    "start": 3478.089,
+    "duration": 5.8
+  },
+  {
+    "text": "used metric. So, you literally just",
+    "start": 3481.409,
+    "duration": 4.68
+  },
+  {
+    "text": "going to look at the rank of the",
+    "start": 3483.889,
+    "duration": 5.56
+  },
+  {
+    "text": "specific first relevant query and then",
+    "start": 3486.089,
+    "duration": 5.36
+  },
+  {
+    "text": "where is the rank? And then you do the",
+    "start": 3489.449,
+    "duration": 5.24
+  },
+  {
+    "text": "average across all queries.",
+    "start": 3491.449,
+    "duration": 6.08
+  },
+  {
+    "text": "Uh recall the key is also intuitive.",
+    "start": 3494.689,
+    "duration": 5.6
+  },
+  {
+    "text": "Like if you look at the top retrieved",
+    "start": 3497.529,
+    "duration": 4.04
+  },
+  {
+    "text": "content,",
+    "start": 3500.289,
+    "duration": 2.68
+  },
+  {
+    "text": "um",
+    "start": 3501.569,
+    "duration": 4.36
+  },
+  {
+    "text": "did we find those in the top K? And then",
+    "start": 3502.969,
+    "duration": 5.24
+  },
+  {
+    "text": "uh across all the relevant passage we",
+    "start": 3505.929,
+    "duration": 4.56
+  },
+  {
+    "text": "have for that query. So, this is a lot",
+    "start": 3508.209,
+    "duration": 5.0
+  },
+  {
+    "text": "of the metrics. Um you may encounter",
+    "start": 3510.489,
+    "duration": 6.2
+  },
+  {
+    "text": "some of those in your implementation.",
+    "start": 3513.209,
+    "duration": 5.72
+  },
+  {
+    "text": "With those contacts, now let's look at",
+    "start": 3516.689,
+    "duration": 6.48
+  },
+  {
+    "text": "the results. So, DPR is also a very uh",
+    "start": 3518.929,
+    "duration": 7.08
+  },
+  {
+    "text": "powerful technique. Uh when researchers",
+    "start": 3523.169,
+    "duration": 6.08
+  },
+  {
+    "text": "compared with BM25, you can see that it",
+    "start": 3526.009,
+    "duration": 5.2
+  },
+  {
+    "text": "actually outperforms",
+    "start": 3529.249,
+    "duration": 5.16
+  },
+  {
+    "text": "uh four out of five data sets.",
+    "start": 3531.209,
+    "duration": 5.6
+  },
+  {
+    "text": "Uh this is the match I think uh",
+    "start": 3534.409,
+    "duration": 4.08
+  },
+  {
+    "text": "um",
+    "start": 3536.809,
+    "duration": 4.84
+  },
+  {
+    "text": "Yes. So, here um the contrastive loss is",
+    "start": 3538.489,
+    "duration": 5.2
+  },
+  {
+    "text": "actually trained with two parts. The",
+    "start": 3541.649,
+    "duration": 4.68
+  },
+  {
+    "text": "in-batch negative as I mentioned as well",
+    "start": 3543.689,
+    "duration": 5.48
+  },
+  {
+    "text": "as BM25 hard negatives. So, this is a",
+    "start": 3546.329,
+    "duration": 5.8
+  },
+  {
+    "text": "trained DPR and you can see the results",
+    "start": 3549.169,
+    "duration": 5.362
+  },
+  {
+    "text": "uh compared to BM25 and then the",
+    "start": 3552.129,
+    "duration": 6.202
+  },
+  {
+    "text": "combination of both of them.",
+    "start": 3554.531,
+    "duration": 6.96
+  },
+  {
+    "text": "Um so single here refers to training the",
+    "start": 3558.331,
+    "duration": 5.96
+  },
+  {
+    "text": "DPR only use a individual data set and",
+    "start": 3561.491,
+    "duration": 4.52
+  },
+  {
+    "text": "then multi means that you are going to",
+    "start": 3564.291,
+    "duration": 3.68
+  },
+  {
+    "text": "combine different data sets to train the",
+    "start": 3566.011,
+    "duration": 4.08
+  },
+  {
+    "text": "DPR.",
+    "start": 3567.971,
+    "duration": 4.12
+  },
+  {
+    "text": "Um two more interesting things that I",
+    "start": 3570.091,
+    "duration": 4.88
+  },
+  {
+    "text": "want to highlight. So on this figure you",
+    "start": 3572.091,
+    "duration": 6.12
+  },
+  {
+    "text": "can see that with the top key accuracy",
+    "start": 3574.971,
+    "duration": 5.8
+  },
+  {
+    "text": "how it kind of like evolve over",
+    "start": 3578.211,
+    "duration": 5.28
+  },
+  {
+    "text": "different training size here. It turns",
+    "start": 3580.771,
+    "duration": 5.72
+  },
+  {
+    "text": "out that only 1,000",
+    "start": 3583.491,
+    "duration": 6.24
+  },
+  {
+    "text": "annotated pairs you can actually train",
+    "start": 3586.491,
+    "duration": 7.16
+  },
+  {
+    "text": "DPR much better than BM25 here.",
+    "start": 3589.731,
+    "duration": 5.92
+  },
+  {
+    "text": "And then again like more training",
+    "start": 3593.651,
+    "duration": 4.84
+  },
+  {
+    "text": "examples help. So you see this kind of",
+    "start": 3595.651,
+    "duration": 5.64
+  },
+  {
+    "text": "higher line here.",
+    "start": 3598.491,
+    "duration": 6.92
+  },
+  {
+    "text": "Um with no actual pre-training DPR with",
+    "start": 3601.291,
+    "duration": 7.28
+  },
+  {
+    "text": "the 1,000 or like 2,000 QA pairs",
+    "start": 3605.411,
+    "duration": 5.48
+  },
+  {
+    "text": "actually beats like a RAM which is a",
+    "start": 3608.571,
+    "duration": 4.2
+  },
+  {
+    "text": "earlier system from Google that it",
+    "start": 3610.891,
+    "duration": 4.48
+  },
+  {
+    "text": "trains the entire pipeline end-to-end.",
+    "start": 3612.771,
+    "duration": 5.36
+  },
+  {
+    "text": "So this is indeed a very very powerful",
+    "start": 3615.371,
+    "duration": 5.4
+  },
+  {
+    "text": "technique.",
+    "start": 3618.131,
+    "duration": 2.64
+  },
+  {
+    "text": "So last thing that I want to mention",
+    "start": 3621.331,
+    "duration": 6.48
+  },
+  {
+    "text": "here related to this kind of retrieval.",
+    "start": 3623.771,
+    "duration": 6.24
+  },
+  {
+    "text": "The two approach that I mentioned to you",
+    "start": 3627.811,
+    "duration": 6.68
+  },
+  {
+    "text": "so far BM25 they cannot handle semantic",
+    "start": 3630.011,
+    "duration": 6.44
+  },
+  {
+    "text": "paraphrase ish",
+    "start": 3634.491,
+    "duration": 5.48
+  },
+  {
+    "text": "scenarios. And then DPR they will miss",
+    "start": 3636.451,
+    "duration": 7.24
+  },
+  {
+    "text": "the exact match such as specific code,",
+    "start": 3639.971,
+    "duration": 7.52
+  },
+  {
+    "text": "numbers, product IDs, etc.",
+    "start": 3643.691,
+    "duration": 6.88
+  },
+  {
+    "text": "The reality is that we want to take the",
+    "start": 3647.491,
+    "duration": 5.8
+  },
+  {
+    "text": "best of both world. So what if we can do",
+    "start": 3650.571,
+    "duration": 5.0
+  },
+  {
+    "text": "a hybrid search? We can run both",
+    "start": 3653.291,
+    "duration": 5.16
+  },
+  {
+    "text": "retrievers and then fuse them",
+    "start": 3655.571,
+    "duration": 3.48
+  },
+  {
+    "text": "um",
+    "start": 3658.451,
+    "duration": 2.92
+  },
+  {
+    "text": "through their rank list.",
+    "start": 3659.051,
+    "duration": 4.76
+  },
+  {
+    "text": "And then one technique that you will",
+    "start": 3661.371,
+    "duration": 5.64
+  },
+  {
+    "text": "come across is called a reciprocal rank",
+    "start": 3663.811,
+    "duration": 4.4
+  },
+  {
+    "text": "fusion.",
+    "start": 3667.011,
+    "duration": 3.96
+  },
+  {
+    "text": "It give you approach to merge positions",
+    "start": 3668.211,
+    "duration": 5.28
+  },
+  {
+    "text": "instead of raw scores because the score",
+    "start": 3670.971,
+    "duration": 5.361
+  },
+  {
+    "text": "of ranking actually cannot be combined",
+    "start": 3673.491,
+    "duration": 4.921
+  },
+  {
+    "text": "easily. So, we are going to think about",
+    "start": 3676.332,
+    "duration": 5.48
+  },
+  {
+    "text": "how to merge positions here.",
+    "start": 3678.412,
+    "duration": 5.08
+  },
+  {
+    "text": "Um so,",
+    "start": 3681.812,
+    "duration": 4.16
+  },
+  {
+    "text": "again, this approach no per corpus",
+    "start": 3683.492,
+    "duration": 5.32
+  },
+  {
+    "text": "tuning and it works with any number of",
+    "start": 3685.972,
+    "duration": 4.32
+  },
+  {
+    "text": "retrievers.",
+    "start": 3688.812,
+    "duration": 3.72
+  },
+  {
+    "text": "Uh I'll stop here in case there are any",
+    "start": 3690.292,
+    "duration": 3.92
+  },
+  {
+    "text": "questions.",
+    "start": 3692.532,
+    "duration": 3.4
+  },
+  {
+    "text": ">> Um in the slide you just showed where",
+    "start": 3694.212,
+    "duration": 3.72
+  },
+  {
+    "text": "you're doing the dot product between the",
+    "start": 3695.932,
+    "duration": 4.0
+  },
+  {
+    "text": "query vector and the position vectors to",
+    "start": 3697.932,
+    "duration": 3.8
+  },
+  {
+    "text": "retrieve the top K",
+    "start": 3699.932,
+    "duration": 2.96
+  },
+  {
+    "text": "passages,",
+    "start": 3701.732,
+    "duration": 2.44
+  },
+  {
+    "text": "what is the what is the result like? Is",
+    "start": 3702.892,
+    "duration": 2.04
+  },
+  {
+    "text": "it the",
+    "start": 3704.172,
+    "duration": 2.88
+  },
+  {
+    "text": "index of those passages",
+    "start": 3704.932,
+    "duration": 5.28
+  },
+  {
+    "text": ">> Yeah, so purely you look at the index of",
+    "start": 3707.052,
+    "duration": 5.52
+  },
+  {
+    "text": "those passages, but like use the index",
+    "start": 3710.212,
+    "duration": 4.28
+  },
+  {
+    "text": "to gather their actual embeddings,",
+    "start": 3712.572,
+    "duration": 4.16
+  },
+  {
+    "text": "right? A lot of the embeddings for each",
+    "start": 3714.492,
+    "duration": 4.64
+  },
+  {
+    "text": "segment's passage already processed",
+    "start": 3716.732,
+    "duration": 4.68
+  },
+  {
+    "text": "offline. So, you use the index to get",
+    "start": 3719.132,
+    "duration": 4.04
+  },
+  {
+    "text": "their embeddings and then do the inner",
+    "start": 3721.412,
+    "duration": 4.64
+  },
+  {
+    "text": "product there.",
+    "start": 3723.172,
+    "duration": 2.88
+  },
+  {
+    "text": "Any other questions here?",
+    "start": 3728.132,
+    "duration": 4.0
+  },
+  {
+    "text": "I think those are a lot of the metrics,",
+    "start": 3729.972,
+    "duration": 4.24
+  },
+  {
+    "text": "but they literally are more from an",
+    "start": 3732.132,
+    "duration": 3.92
+  },
+  {
+    "text": "illustrative perspective. So, you can",
+    "start": 3734.212,
+    "duration": 3.92
+  },
+  {
+    "text": "use them to understand tables and",
+    "start": 3736.052,
+    "duration": 4.2
+  },
+  {
+    "text": "results.",
+    "start": 3738.132,
+    "duration": 5.16
+  },
+  {
+    "text": "Okay, uh if there is no more question,",
+    "start": 3740.252,
+    "duration": 5.16
+  },
+  {
+    "text": "I'm going to go a little bit deeper here",
+    "start": 3743.292,
+    "duration": 3.6
+  },
+  {
+    "text": "in terms of",
+    "start": 3745.412,
+    "duration": 3.16
+  },
+  {
+    "text": "encode encoder.",
+    "start": 3746.892,
+    "duration": 4.24
+  },
+  {
+    "text": "Uh so, this lecture literally contains",
+    "start": 3748.572,
+    "duration": 4.16
+  },
+  {
+    "text": "everything you need to know about the",
+    "start": 3751.132,
+    "duration": 4.24
+  },
+  {
+    "text": "retrieval. Uh so, it really contains",
+    "start": 3752.732,
+    "duration": 5.08
+  },
+  {
+    "text": "like many many different components.",
+    "start": 3755.372,
+    "duration": 4.32
+  },
+  {
+    "text": "Um so,",
+    "start": 3757.812,
+    "duration": 5.08
+  },
+  {
+    "text": "I would really divide a lot of the um",
+    "start": 3759.692,
+    "duration": 5.4
+  },
+  {
+    "text": "representation process into two parts.",
+    "start": 3762.892,
+    "duration": 3.76
+  },
+  {
+    "text": "First, you can have what do we call a",
+    "start": 3765.092,
+    "duration": 5.36
+  },
+  {
+    "text": "bi-encoder. Uh your query and passage,",
+    "start": 3766.652,
+    "duration": 6.64
+  },
+  {
+    "text": "they are encoded separately. Um you can",
+    "start": 3770.452,
+    "duration": 5.68
+  },
+  {
+    "text": "also think about what if we could have a",
+    "start": 3773.292,
+    "duration": 4.52
+  },
+  {
+    "text": "cross-encoder.",
+    "start": 3776.132,
+    "duration": 3.48
+  },
+  {
+    "text": "That is, instead of these like two",
+    "start": 3777.812,
+    "duration": 4.36
+  },
+  {
+    "text": "separate encoders for my query, for my",
+    "start": 3779.612,
+    "duration": 4.32
+  },
+  {
+    "text": "passage, I'm going to do this",
+    "start": 3782.172,
+    "duration": 4.96
+  },
+  {
+    "text": "cross-encoder. The query and passage go",
+    "start": 3783.932,
+    "duration": 5.28
+  },
+  {
+    "text": "through the model together and we do",
+    "start": 3787.132,
+    "duration": 4.36
+  },
+  {
+    "text": "full attention across both and then we",
+    "start": 3789.212,
+    "duration": 4.44
+  },
+  {
+    "text": "use the results to do some further",
+    "start": 3791.492,
+    "duration": 4.84
+  },
+  {
+    "text": "processing.",
+    "start": 3793.652,
+    "duration": 2.68
+  },
+  {
+    "text": "Similarly to late trunky, we also have",
+    "start": 3796.812,
+    "duration": 5.721
+  },
+  {
+    "text": "late interaction here. And this page is",
+    "start": 3799.733,
+    "duration": 4.36
+  },
+  {
+    "text": "actually very important, so I want to",
+    "start": 3802.533,
+    "duration": 3.76
+  },
+  {
+    "text": "decompose it a little bit.",
+    "start": 3804.093,
+    "duration": 5.24
+  },
+  {
+    "text": "So, the very left side, this is you have",
+    "start": 3806.293,
+    "duration": 5.44
+  },
+  {
+    "text": "a query, you have a document, you do",
+    "start": 3809.333,
+    "duration": 4.2
+  },
+  {
+    "text": "information processing of them",
+    "start": 3811.733,
+    "duration": 3.84
+  },
+  {
+    "text": "separately, and then you look at their",
+    "start": 3813.533,
+    "duration": 4.48
+  },
+  {
+    "text": "inner product.",
+    "start": 3815.573,
+    "duration": 4.28
+  },
+  {
+    "text": "Now, think about what may go wrong in",
+    "start": 3818.013,
+    "duration": 4.76
+  },
+  {
+    "text": "the process. Second is that I'm going to",
+    "start": 3819.853,
+    "duration": 5.96
+  },
+  {
+    "text": "maintain a big matrix here, query and",
+    "start": 3822.773,
+    "duration": 5.68
+  },
+  {
+    "text": "document, and then um I process",
+    "start": 3825.813,
+    "duration": 4.44
+  },
+  {
+    "text": "everything together.",
+    "start": 3828.453,
+    "duration": 5.28
+  },
+  {
+    "text": "Third is that what if I just concatenate",
+    "start": 3830.253,
+    "duration": 5.68
+  },
+  {
+    "text": "the query and document together,",
+    "start": 3833.733,
+    "duration": 4.16
+  },
+  {
+    "text": "pass it through a transformer or any",
+    "start": 3835.933,
+    "duration": 4.64
+  },
+  {
+    "text": "network, and do it together.",
+    "start": 3837.893,
+    "duration": 5.92
+  },
+  {
+    "text": "The last one is I pass the query through",
+    "start": 3840.573,
+    "duration": 5.72
+  },
+  {
+    "text": "a network, I pass the document at",
+    "start": 3843.813,
+    "duration": 4.6
+  },
+  {
+    "text": "through a network, and then I do some",
+    "start": 3846.293,
+    "duration": 6.2
+  },
+  {
+    "text": "kind of inner uh like product there in",
+    "start": 3848.413,
+    "duration": 5.84
+  },
+  {
+    "text": "interesting way, and then I got an",
+    "start": 3852.493,
+    "duration": 4.84
+  },
+  {
+    "text": "output. So, now think about what are the",
+    "start": 3854.253,
+    "duration": 7.0
+  },
+  {
+    "text": "pros and the cons of each setup.",
+    "start": 3857.333,
+    "duration": 6.6
+  },
+  {
+    "text": "Anyone want to give it a try?",
+    "start": 3861.253,
+    "duration": 5.08
+  },
+  {
+    "text": "Yes.",
+    "start": 3863.933,
+    "duration": 2.4
+  },
+  {
+    "text": ">> It's more faster.",
+    "start": 3867.413,
+    "duration": 4.96
+  },
+  {
+    "text": "It's the most It will lost resource. And",
+    "start": 3869.493,
+    "duration": 3.6
+  },
+  {
+    "text": "the",
+    "start": 3872.373,
+    "duration": 2.48
+  },
+  {
+    "text": "uh but it doesn't care about the",
+    "start": 3873.093,
+    "duration": 2.92
+  },
+  {
+    "text": "position.",
+    "start": 3874.853,
+    "duration": 2.08
+  },
+  {
+    "text": "Uh",
+    "start": 3876.013,
+    "duration": 2.68
+  },
+  {
+    "text": "the sequence that's why",
+    "start": 3876.933,
+    "duration": 5.52
+  },
+  {
+    "text": "the second one is going to be uh more uh",
+    "start": 3878.693,
+    "duration": 6.64
+  },
+  {
+    "text": "it's more complex, it take more time.",
+    "start": 3882.453,
+    "duration": 3.76
+  },
+  {
+    "text": "For each",
+    "start": 3885.333,
+    "duration": 2.28
+  },
+  {
+    "text": "query",
+    "start": 3886.213,
+    "duration": 3.44
+  },
+  {
+    "text": "it it's more difficult",
+    "start": 3887.613,
+    "duration": 2.96
+  },
+  {
+    "text": "for",
+    "start": 3889.653,
+    "duration": 3.8
+  },
+  {
+    "text": "attention to care about the positions",
+    "start": 3890.573,
+    "duration": 5.64
+  },
+  {
+    "text": "uh and the selection of the positions.",
+    "start": 3893.453,
+    "duration": 4.28
+  },
+  {
+    "text": ">> Yeah, that that's a that's a beautiful",
+    "start": 3896.213,
+    "duration": 4.12
+  },
+  {
+    "text": "answer. So, just to repeat, uh so, the",
+    "start": 3897.733,
+    "duration": 5.24
+  },
+  {
+    "text": "left side is actually very fast.",
+    "start": 3900.333,
+    "duration": 4.68
+  },
+  {
+    "text": "Actually, the most complicated one is",
+    "start": 3902.973,
+    "duration": 4.08
+  },
+  {
+    "text": "probably B and the C here, especially",
+    "start": 3905.013,
+    "duration": 3.92
+  },
+  {
+    "text": "for C, since you need to put the",
+    "start": 3907.053,
+    "duration": 3.84
+  },
+  {
+    "text": "document and the query together in the",
+    "start": 3908.933,
+    "duration": 4.92
+  },
+  {
+    "text": "same matrix. And then D is actually",
+    "start": 3910.893,
+    "duration": 5.36
+  },
+  {
+    "text": "somewhere in the middle. One thing you",
+    "start": 3913.853,
+    "duration": 4.88
+  },
+  {
+    "text": "do need to remember is that documents,",
+    "start": 3916.253,
+    "duration": 4.002
+  },
+  {
+    "text": "we have a lot of documents. So,",
+    "start": 3918.733,
+    "duration": 3.322
+  },
+  {
+    "text": "documents are representations in",
+    "start": 3920.255,
+    "duration": 4.2
+  },
+  {
+    "text": "general. If we can process them offline,",
+    "start": 3922.055,
+    "duration": 4.48
+  },
+  {
+    "text": "we prefer that. So, you also need to",
+    "start": 3924.455,
+    "duration": 5.16
+  },
+  {
+    "text": "think about decoupling of them. So, the",
+    "start": 3926.535,
+    "duration": 5.76
+  },
+  {
+    "text": "fashion we have in C, you really cannot",
+    "start": 3929.615,
+    "duration": 4.92
+  },
+  {
+    "text": "like pre-compute many of them in",
+    "start": 3932.295,
+    "duration": 5.6
+  },
+  {
+    "text": "advance, right? Versus D and A, you can",
+    "start": 3934.535,
+    "duration": 6.0
+  },
+  {
+    "text": "actually easily just like get this blue",
+    "start": 3937.895,
+    "duration": 4.84
+  },
+  {
+    "text": "part pre-processed,",
+    "start": 3940.535,
+    "duration": 4.88
+  },
+  {
+    "text": "and then later you just do a query at",
+    "start": 3942.735,
+    "duration": 4.72
+  },
+  {
+    "text": "inference time, and then their",
+    "start": 3945.415,
+    "duration": 4.48
+  },
+  {
+    "text": "product calculation there. So, this is",
+    "start": 3947.455,
+    "duration": 4.6
+  },
+  {
+    "text": "actually the key difference here.",
+    "start": 3949.895,
+    "duration": 4.6
+  },
+  {
+    "text": "Uh the later interaction I'm going to",
+    "start": 3952.055,
+    "duration": 5.72
+  },
+  {
+    "text": "mention for this Colbert here refers to",
+    "start": 3954.495,
+    "duration": 5.56
+  },
+  {
+    "text": "that we're going to keep one vector per",
+    "start": 3957.775,
+    "duration": 4.88
+  },
+  {
+    "text": "token, and we'll encode the query and",
+    "start": 3960.055,
+    "duration": 4.6
+  },
+  {
+    "text": "the passage still um",
+    "start": 3962.655,
+    "duration": 4.0
+  },
+  {
+    "text": "independently. But then we do an",
+    "start": 3964.655,
+    "duration": 5.24
+  },
+  {
+    "text": "interaction only at the scoring time.",
+    "start": 3966.655,
+    "duration": 5.6
+  },
+  {
+    "text": "And then this is actually what we call",
+    "start": 3969.895,
+    "duration": 5.8
+  },
+  {
+    "text": "max sim here. For each token in the",
+    "start": 3972.255,
+    "duration": 6.52
+  },
+  {
+    "text": "query, we're going to find the token in",
+    "start": 3975.695,
+    "duration": 5.6
+  },
+  {
+    "text": "the document that match this token the",
+    "start": 3978.775,
+    "duration": 5.56
+  },
+  {
+    "text": "most, and then we take that score, and",
+    "start": 3981.295,
+    "duration": 6.12
+  },
+  {
+    "text": "we add it across all the query terms.",
+    "start": 3984.335,
+    "duration": 4.88
+  },
+  {
+    "text": "So, this is actually the score we used",
+    "start": 3987.415,
+    "duration": 3.4
+  },
+  {
+    "text": "here.",
+    "start": 3989.215,
+    "duration": 2.36
+  },
+  {
+    "text": "Uh",
+    "start": 3990.815,
+    "duration": 3.76
+  },
+  {
+    "text": "just to zoom in a little bit. So, you",
+    "start": 3991.575,
+    "duration": 5.56
+  },
+  {
+    "text": "have both the query encoder, document",
+    "start": 3994.575,
+    "duration": 4.56
+  },
+  {
+    "text": "encoder. The document encoder is",
+    "start": 3997.135,
+    "duration": 4.48
+  },
+  {
+    "text": "something we can process offline. And",
+    "start": 3999.135,
+    "duration": 4.68
+  },
+  {
+    "text": "then each time we're going to take each",
+    "start": 4001.615,
+    "duration": 4.76
+  },
+  {
+    "text": "specific token, find the which token",
+    "start": 4003.815,
+    "duration": 5.56
+  },
+  {
+    "text": "match them first best from the document",
+    "start": 4006.375,
+    "duration": 5.16
+  },
+  {
+    "text": "encoder, and then do this for every",
+    "start": 4009.375,
+    "duration": 6.64
+  },
+  {
+    "text": "single token there in the query.",
+    "start": 4011.535,
+    "duration": 6.88
+  },
+  {
+    "text": "Um so, again, this is",
+    "start": 4016.015,
+    "duration": 5.68
+  },
+  {
+    "text": "a lot of content to remember,",
+    "start": 4018.415,
+    "duration": 5.96
+  },
+  {
+    "text": "um but the high-level idea is that",
+    "start": 4021.695,
+    "duration": 5.28
+  },
+  {
+    "text": "Colbert actually works pretty well.",
+    "start": 4024.375,
+    "duration": 5.32
+  },
+  {
+    "text": "Uh if you can see that compared to a lot",
+    "start": 4026.975,
+    "duration": 5.12
+  },
+  {
+    "text": "of the approach we mentioned earlier,",
+    "start": 4029.695,
+    "duration": 4.44
+  },
+  {
+    "text": "uh it definitely give you much higher",
+    "start": 4032.095,
+    "duration": 5.52
+  },
+  {
+    "text": "number compared to BM25 and a lot of the",
+    "start": 4034.135,
+    "duration": 5.04
+  },
+  {
+    "text": "baselines.",
+    "start": 4037.615,
+    "duration": 4.12
+  },
+  {
+    "text": "Um on this page you can also see latency",
+    "start": 4039.175,
+    "duration": 4.921
+  },
+  {
+    "text": "get a mention here, and the different",
+    "start": 4041.735,
+    "duration": 4.681
+  },
+  {
+    "text": "type of record.",
+    "start": 4044.096,
+    "duration": 6.72
+  },
+  {
+    "text": "Um to summarize this part, um so",
+    "start": 4046.416,
+    "duration": 6.64
+  },
+  {
+    "text": "there are different choices. Uh when you",
+    "start": 4050.816,
+    "duration": 4.12
+  },
+  {
+    "text": "build a rag, especially if your",
+    "start": 4053.056,
+    "duration": 4.08
+  },
+  {
+    "text": "application domain is very diverse, you",
+    "start": 4054.936,
+    "duration": 4.28
+  },
+  {
+    "text": "work with graph data, you work with",
+    "start": 4057.136,
+    "duration": 4.56
+  },
+  {
+    "text": "image data, you work with",
+    "start": 4059.216,
+    "duration": 5.48
+  },
+  {
+    "text": "different documents. A document on",
+    "start": 4061.696,
+    "duration": 4.52
+  },
+  {
+    "text": "social media is going to be very",
+    "start": 4064.696,
+    "duration": 3.72
+  },
+  {
+    "text": "different than a financial document that",
+    "start": 4066.216,
+    "duration": 5.24
+  },
+  {
+    "text": "contains a lot of specific entities.",
+    "start": 4068.416,
+    "duration": 5.28
+  },
+  {
+    "text": "Um so if you look at this, uh we need to",
+    "start": 4071.456,
+    "duration": 4.56
+  },
+  {
+    "text": "think about their pre- pre-compute",
+    "start": 4073.696,
+    "duration": 4.48
+  },
+  {
+    "text": "whether we can do them offline.",
+    "start": 4076.016,
+    "duration": 3.96
+  },
+  {
+    "text": "The query latency.",
+    "start": 4078.176,
+    "duration": 4.28
+  },
+  {
+    "text": "What a situation is best for which",
+    "start": 4079.976,
+    "duration": 4.76
+  },
+  {
+    "text": "specific retriever? And then where do",
+    "start": 4082.456,
+    "duration": 5.76
+  },
+  {
+    "text": "they fail or break? And then this table",
+    "start": 4084.736,
+    "duration": 6.0
+  },
+  {
+    "text": "actually give you some summarizations uh",
+    "start": 4088.216,
+    "duration": 4.96
+  },
+  {
+    "text": "based on the empirical results in the",
+    "start": 4090.736,
+    "duration": 6.16
+  },
+  {
+    "text": "two papers we just mentioned.",
+    "start": 4093.176,
+    "duration": 7.48
+  },
+  {
+    "text": "Okay, any quick questions here?",
+    "start": 4096.896,
+    "duration": 3.76
+  },
+  {
+    "text": "Um if not, we're going to finish um",
+    "start": 4102.016,
+    "duration": 5.52
+  },
+  {
+    "text": "with the agentic rag.",
+    "start": 4104.976,
+    "duration": 5.6
+  },
+  {
+    "text": "Um so so far, if you look at the rag",
+    "start": 4107.536,
+    "duration": 5.24
+  },
+  {
+    "text": "that I've mentioned, it's a lot of kind",
+    "start": 4110.576,
+    "duration": 6.08
+  },
+  {
+    "text": "of probability uh models, encoding,",
+    "start": 4112.776,
+    "duration": 8.24
+  },
+  {
+    "text": "index, etc. But we have AI and agents",
+    "start": 4116.656,
+    "duration": 5.8
+  },
+  {
+    "text": "right now. So",
+    "start": 4121.016,
+    "duration": 4.08
+  },
+  {
+    "text": "um everything so far feels like they are",
+    "start": 4122.456,
+    "duration": 5.2
+  },
+  {
+    "text": "not really have the initiative to do",
+    "start": 4125.096,
+    "duration": 5.2
+  },
+  {
+    "text": "something. Uh because the system cannot",
+    "start": 4127.656,
+    "duration": 6.52
+  },
+  {
+    "text": "decide whether to retrieve, what to ask,",
+    "start": 4130.296,
+    "duration": 6.76
+  },
+  {
+    "text": "and when to stop.",
+    "start": 4134.176,
+    "duration": 4.88
+  },
+  {
+    "text": "Um what if we could actually make a",
+    "start": 4137.056,
+    "duration": 4.16
+  },
+  {
+    "text": "retrieval an action that the agent",
+    "start": 4139.056,
+    "duration": 4.44
+  },
+  {
+    "text": "takes? So there will be three decisions",
+    "start": 4141.216,
+    "duration": 4.92
+  },
+  {
+    "text": "they need to make. Uh retrieve or answer",
+    "start": 4143.496,
+    "duration": 4.72
+  },
+  {
+    "text": "directly. Do I need actual information",
+    "start": 4146.136,
+    "duration": 3.2
+  },
+  {
+    "text": "or not?",
+    "start": 4148.216,
+    "duration": 3.08
+  },
+  {
+    "text": "What a query to issue if I need to",
+    "start": 4149.336,
+    "duration": 4.32
+  },
+  {
+    "text": "search additional information? Whether",
+    "start": 4151.296,
+    "duration": 4.44
+  },
+  {
+    "text": "the result is good enough that I should",
+    "start": 4153.656,
+    "duration": 4.48
+  },
+  {
+    "text": "stop. So this is more from a agentic",
+    "start": 4155.736,
+    "duration": 5.8
+  },
+  {
+    "text": "perspective to leverage rag.",
+    "start": 4158.136,
+    "duration": 6.0
+  },
+  {
+    "text": "And I'll share some of the widely used",
+    "start": 4161.536,
+    "duration": 4.962
+  },
+  {
+    "text": "uh agentic rag system here.",
+    "start": 4164.136,
+    "duration": 5.041
+  },
+  {
+    "text": "Uh the first one is called a self-rag.",
+    "start": 4166.498,
+    "duration": 5.319
+  },
+  {
+    "text": "So, how about we teach one model to",
+    "start": 4169.177,
+    "duration": 5.401
+  },
+  {
+    "text": "retrieve, critique, and then generate",
+    "start": 4171.817,
+    "duration": 5.201
+  },
+  {
+    "text": "here? Uh you can just give them some",
+    "start": 4174.578,
+    "duration": 4.679
+  },
+  {
+    "text": "special reflection tokens along with the",
+    "start": 4177.018,
+    "duration": 3.4
+  },
+  {
+    "text": "text.",
+    "start": 4179.257,
+    "duration": 2.52
+  },
+  {
+    "text": "So, if you look at this specific",
+    "start": 4180.418,
+    "duration": 2.679
+  },
+  {
+    "text": "example,",
+    "start": 4181.777,
+    "duration": 3.641
+  },
+  {
+    "text": "um how did the US states get their",
+    "start": 4183.097,
+    "duration": 3.68
+  },
+  {
+    "text": "names?",
+    "start": 4185.418,
+    "duration": 3.56
+  },
+  {
+    "text": "Uh step one, we're going to retrieve on",
+    "start": 4186.777,
+    "duration": 6.161
+  },
+  {
+    "text": "demand. The model starts writing and um",
+    "start": 4188.978,
+    "duration": 5.159
+  },
+  {
+    "text": "emits uh",
+    "start": 4192.938,
+    "duration": 4.0
+  },
+  {
+    "text": "retrieval token here when it decides",
+    "start": 4194.137,
+    "duration": 4.641
+  },
+  {
+    "text": "that it needs evidence to answer your",
+    "start": 4196.938,
+    "duration": 3.6
+  },
+  {
+    "text": "question.",
+    "start": 4198.778,
+    "duration": 4.0
+  },
+  {
+    "text": "Um step two here,",
+    "start": 4200.538,
+    "duration": 4.96
+  },
+  {
+    "text": "it actually generates a segment for each",
+    "start": 4202.778,
+    "duration": 5.28
+  },
+  {
+    "text": "retrieved passage in parallel.",
+    "start": 4205.498,
+    "duration": 4.04
+  },
+  {
+    "text": "In step three,",
+    "start": 4208.058,
+    "duration": 4.28
+  },
+  {
+    "text": "it actually critique each response or",
+    "start": 4209.538,
+    "duration": 5.52
+  },
+  {
+    "text": "each segment. And is the passage",
+    "start": 4212.338,
+    "duration": 5.52
+  },
+  {
+    "text": "relevant? Is the segment supported? You",
+    "start": 4215.058,
+    "duration": 4.88
+  },
+  {
+    "text": "ask a lot of question here.",
+    "start": 4217.858,
+    "duration": 4.64
+  },
+  {
+    "text": "It then rank the segments and keeps the",
+    "start": 4219.938,
+    "duration": 3.88
+  },
+  {
+    "text": "best.",
+    "start": 4222.498,
+    "duration": 3.0
+  },
+  {
+    "text": "So, decisions um",
+    "start": 4223.818,
+    "duration": 3.68
+  },
+  {
+    "text": "one and the three are actually trained",
+    "start": 4225.498,
+    "duration": 4.56
+  },
+  {
+    "text": "here into a generator itself.",
+    "start": 4227.498,
+    "duration": 4.56
+  },
+  {
+    "text": "Um the cost is the training pipeline",
+    "start": 4230.058,
+    "duration": 4.16
+  },
+  {
+    "text": "with the critique labeled data. So,",
+    "start": 4232.058,
+    "duration": 4.64
+  },
+  {
+    "text": "these are the parts we need to have uh",
+    "start": 4234.218,
+    "duration": 3.84
+  },
+  {
+    "text": "it ready.",
+    "start": 4236.698,
+    "duration": 3.439
+  },
+  {
+    "text": "So, through this process, you basically",
+    "start": 4238.058,
+    "duration": 4.599
+  },
+  {
+    "text": "combine um this kind of rag design",
+    "start": 4240.137,
+    "duration": 4.281
+  },
+  {
+    "text": "principle with a lot of the",
+    "start": 4242.657,
+    "duration": 4.641
+  },
+  {
+    "text": "self-critique, self-reflect",
+    "start": 4244.418,
+    "duration": 7.04
+  },
+  {
+    "text": "uh natures of agentic systems.",
+    "start": 4247.298,
+    "duration": 4.16
+  },
+  {
+    "text": "Um C-rag actually uh push it further or",
+    "start": 4251.698,
+    "duration": 5.24
+  },
+  {
+    "text": "take a very different approach. How",
+    "start": 4254.938,
+    "duration": 5.4
+  },
+  {
+    "text": "about we do not touch the generator, and",
+    "start": 4256.938,
+    "duration": 6.0
+  },
+  {
+    "text": "we put a evaluator between the retriever",
+    "start": 4260.338,
+    "duration": 4.08
+  },
+  {
+    "text": "and the generator?",
+    "start": 4262.938,
+    "duration": 3.8
+  },
+  {
+    "text": "This evaluator is going to grade the",
+    "start": 4264.418,
+    "duration": 5.48
+  },
+  {
+    "text": "retrieved documents and uh give us a",
+    "start": 4266.738,
+    "duration": 5.76
+  },
+  {
+    "text": "score, a confidence score, uh which map",
+    "start": 4269.898,
+    "duration": 5.56
+  },
+  {
+    "text": "to an action. Correct? If the score says",
+    "start": 4272.498,
+    "duration": 5.44
+  },
+  {
+    "text": "this is correct, then we'll keep them.",
+    "start": 4275.458,
+    "duration": 4.52
+  },
+  {
+    "text": "Um we can still refine them, split them",
+    "start": 4277.938,
+    "duration": 3.88
+  },
+  {
+    "text": "into different parts.",
+    "start": 4279.978,
+    "duration": 4.0
+  },
+  {
+    "text": "Um if it tells us that this is",
+    "start": 4281.818,
+    "duration": 3.92
+  },
+  {
+    "text": "incorrect, then we need to throw them",
+    "start": 4283.978,
+    "duration": 4.4
+  },
+  {
+    "text": "away, rewrite the query, and the search",
+    "start": 4285.738,
+    "duration": 4.641
+  },
+  {
+    "text": "the web again. So, there is more like a",
+    "start": 4288.378,
+    "duration": 3.841
+  },
+  {
+    "text": "judge there.",
+    "start": 4290.379,
+    "duration": 4.92
+  },
+  {
+    "text": "If the query is very ambiguous here,",
+    "start": 4292.219,
+    "duration": 5.48
+  },
+  {
+    "text": "then you need to do both.",
+    "start": 4295.299,
+    "duration": 4.28
+  },
+  {
+    "text": "So, this kind of design is really like a",
+    "start": 4297.699,
+    "duration": 4.88
+  },
+  {
+    "text": "plug-play on any kind of rack stack we",
+    "start": 4299.579,
+    "duration": 6.92
+  },
+  {
+    "text": "can we can we can implement. It answers",
+    "start": 4302.579,
+    "duration": 7.32
+  },
+  {
+    "text": "like a decision um tree with a separate",
+    "start": 4306.499,
+    "duration": 5.92
+  },
+  {
+    "text": "very lightweight model, and it does not",
+    "start": 4309.899,
+    "duration": 6.68
+  },
+  {
+    "text": "need to touch the generator at all.",
+    "start": 4312.419,
+    "duration": 4.16
+  },
+  {
+    "text": "So, with more and more like kind of",
+    "start": 4316.739,
+    "duration": 4.8
+  },
+  {
+    "text": "reasoning capabilities, uh people are",
+    "start": 4319.339,
+    "duration": 5.28
+  },
+  {
+    "text": "also looking at it. Can we use like R1",
+    "start": 4321.539,
+    "duration": 5.56
+  },
+  {
+    "text": "uh ish thinking to improve the the",
+    "start": 4324.619,
+    "duration": 4.0
+  },
+  {
+    "text": "search process?",
+    "start": 4327.099,
+    "duration": 3.36
+  },
+  {
+    "text": "So, this is a recent uh work called a",
+    "start": 4328.619,
+    "duration": 4.28
+  },
+  {
+    "text": "search R1. Instead of like hand",
+    "start": 4330.459,
+    "duration": 5.12
+  },
+  {
+    "text": "designing the loop, how about we learned",
+    "start": 4332.899,
+    "duration": 4.32
+  },
+  {
+    "text": "with RL?",
+    "start": 4335.579,
+    "duration": 3.64
+  },
+  {
+    "text": "Uh so, this is actually a real",
+    "start": 4337.219,
+    "duration": 4.4
+  },
+  {
+    "text": "trajectory from a search process. The",
+    "start": 4339.219,
+    "duration": 5.92
+  },
+  {
+    "text": "question is uh who is who is older here?",
+    "start": 4341.619,
+    "duration": 6.68
+  },
+  {
+    "text": "And the model thinks, search, read what",
+    "start": 4345.139,
+    "duration": 6.28
+  },
+  {
+    "text": "comes back, and then um think again,",
+    "start": 4348.299,
+    "duration": 5.32
+  },
+  {
+    "text": "search again, and eventually answer your",
+    "start": 4351.419,
+    "duration": 4.56
+  },
+  {
+    "text": "question. It actually searched three",
+    "start": 4353.619,
+    "duration": 5.48
+  },
+  {
+    "text": "times and refined the query each time.",
+    "start": 4355.979,
+    "duration": 5.6
+  },
+  {
+    "text": "And then um no one needs to write this",
+    "start": 4359.099,
+    "duration": 5.0
+  },
+  {
+    "text": "plan on how the agent should work. So,",
+    "start": 4361.579,
+    "duration": 4.52
+  },
+  {
+    "text": "remember the difference between workflow",
+    "start": 4364.099,
+    "duration": 3.84
+  },
+  {
+    "text": "and agents here.",
+    "start": 4366.099,
+    "duration": 4.04
+  },
+  {
+    "text": "Um so, one thing to point out here is",
+    "start": 4367.939,
+    "duration": 3.28
+  },
+  {
+    "text": "that",
+    "start": 4370.139,
+    "duration": 2.0
+  },
+  {
+    "text": "um",
+    "start": 4371.219,
+    "duration": 3.44
+  },
+  {
+    "text": "a lot of the um the passage we are going",
+    "start": 4372.139,
+    "duration": 5.24
+  },
+  {
+    "text": "to retrieve may get truncated here. So,",
+    "start": 4374.659,
+    "duration": 5.16
+  },
+  {
+    "text": "the trace that uh you see here does not",
+    "start": 4377.379,
+    "duration": 5.2
+  },
+  {
+    "text": "actually reflect the the detailed",
+    "start": 4379.819,
+    "duration": 5.36
+  },
+  {
+    "text": "process.",
+    "start": 4382.579,
+    "duration": 4.88
+  },
+  {
+    "text": "So, how do we train it? Um we are not",
+    "start": 4385.179,
+    "duration": 4.8
+  },
+  {
+    "text": "going to go deep into PPO and the uh",
+    "start": 4387.459,
+    "duration": 5.28
+  },
+  {
+    "text": "GRPO here. We we'll have some lectures",
+    "start": 4389.979,
+    "duration": 5.72
+  },
+  {
+    "text": "later this uh course. But, I only want",
+    "start": 4392.739,
+    "duration": 5.16
+  },
+  {
+    "text": "you to look at the architecture and uh",
+    "start": 4395.699,
+    "duration": 4.76
+  },
+  {
+    "text": "pay attention to the search module.",
+    "start": 4397.899,
+    "duration": 5.08
+  },
+  {
+    "text": "So, the entire process here is very",
+    "start": 4400.459,
+    "duration": 6.04
+  },
+  {
+    "text": "similar to a classic PPO or GRPO.",
+    "start": 4402.979,
+    "duration": 5.4
+  },
+  {
+    "text": "Instead, we only add those two",
+    "start": 4406.499,
+    "duration": 4.2
+  },
+  {
+    "text": "additional components here. So, whenever",
+    "start": 4408.379,
+    "duration": 6.001
+  },
+  {
+    "text": "you are going to uh get a policy, we",
+    "start": 4410.699,
+    "duration": 5.641
+  },
+  {
+    "text": "will do search first. So, that's the",
+    "start": 4414.38,
+    "duration": 5.0
+  },
+  {
+    "text": "only component we added there. Nothing",
+    "start": 4416.34,
+    "duration": 5.6
+  },
+  {
+    "text": "else here. So, basically during a roll",
+    "start": 4419.38,
+    "duration": 5.32
+  },
+  {
+    "text": "out, the policy generates text and every",
+    "start": 4421.94,
+    "duration": 6.12
+  },
+  {
+    "text": "time it will emit a search query and",
+    "start": 4424.7,
+    "duration": 5.081
+  },
+  {
+    "text": "that hit the search engine and then the",
+    "start": 4428.06,
+    "duration": 4.44
+  },
+  {
+    "text": "results come back into the context as",
+    "start": 4429.781,
+    "duration": 5.519
+  },
+  {
+    "text": "some information tokens. The reward is",
+    "start": 4432.5,
+    "duration": 5.281
+  },
+  {
+    "text": "going to be very classic as other type",
+    "start": 4435.3,
+    "duration": 4.88
+  },
+  {
+    "text": "of reward is only the outcome.",
+    "start": 4437.781,
+    "duration": 5.439
+  },
+  {
+    "text": "Is the final answer correct or not?",
+    "start": 4440.18,
+    "duration": 5.48
+  },
+  {
+    "text": "So, this is how you could potentially do",
+    "start": 4443.22,
+    "duration": 5.96
+  },
+  {
+    "text": "it with search R1.",
+    "start": 4445.66,
+    "duration": 3.52
+  },
+  {
+    "text": "The process actually works pretty well.",
+    "start": 4449.38,
+    "duration": 6.92
+  },
+  {
+    "text": "Researchers show that compared to R1 SFT",
+    "start": 4452.02,
+    "duration": 8.16
+  },
+  {
+    "text": "rag, search O1, search R1 actually have",
+    "start": 4456.3,
+    "duration": 8.4
+  },
+  {
+    "text": "much better performance in the process.",
+    "start": 4460.18,
+    "duration": 6.52
+  },
+  {
+    "text": "So, this is actually what do we have for",
+    "start": 4464.7,
+    "duration": 5.081
+  },
+  {
+    "text": "the agentic rag. So, rag as a design",
+    "start": 4466.7,
+    "duration": 5.0
+  },
+  {
+    "text": "principle, you can actually use it in",
+    "start": 4469.781,
+    "duration": 4.719
+  },
+  {
+    "text": "many many settings. This is why when",
+    "start": 4471.7,
+    "duration": 5.76
+  },
+  {
+    "text": "agentic systems come out, we can still",
+    "start": 4474.5,
+    "duration": 5.84
+  },
+  {
+    "text": "use similar principle here.",
+    "start": 4477.46,
+    "duration": 5.2
+  },
+  {
+    "text": "The last two minutes, I'm going to share",
+    "start": 4480.34,
+    "duration": 5.28
+  },
+  {
+    "text": "you some kind of figure mode here.",
+    "start": 4482.66,
+    "duration": 4.92
+  },
+  {
+    "text": "This actually goes back to some of the",
+    "start": 4485.62,
+    "duration": 5.56
+  },
+  {
+    "text": "question asked earlier. Rag is powerful.",
+    "start": 4487.58,
+    "duration": 5.52
+  },
+  {
+    "text": "Some people would see that a rag is out",
+    "start": 4491.18,
+    "duration": 3.36
+  },
+  {
+    "text": "of date today.",
+    "start": 4493.1,
+    "duration": 3.52
+  },
+  {
+    "text": "Others would see that it's really hard",
+    "start": 4494.54,
+    "duration": 4.32
+  },
+  {
+    "text": "to anticipate what may go wrong with",
+    "start": 4496.62,
+    "duration": 5.56
+  },
+  {
+    "text": "rag. So, here we break them into three",
+    "start": 4498.86,
+    "duration": 5.96
+  },
+  {
+    "text": "parts. The retrieval part, how rag would",
+    "start": 4502.18,
+    "duration": 3.64
+  },
+  {
+    "text": "have failed.",
+    "start": 4504.82,
+    "duration": 3.4
+  },
+  {
+    "text": "You can imagine maybe it didn't catch",
+    "start": 4505.82,
+    "duration": 6.32
+  },
+  {
+    "text": "the right evidence. Maybe the embedding,",
+    "start": 4508.22,
+    "duration": 5.92
+  },
+  {
+    "text": "the offline documents we have are just",
+    "start": 4512.14,
+    "duration": 3.68
+  },
+  {
+    "text": "so out of date.",
+    "start": 4514.14,
+    "duration": 4.96
+  },
+  {
+    "text": "Maybe the search actually look at some",
+    "start": 4515.82,
+    "duration": 7.04
+  },
+  {
+    "text": "content which we should not look at. So,",
+    "start": 4519.1,
+    "duration": 6.2
+  },
+  {
+    "text": "all of those questions may happen at the",
+    "start": 4522.86,
+    "duration": 4.12
+  },
+  {
+    "text": "retrieval side.",
+    "start": 4525.3,
+    "duration": 4.28
+  },
+  {
+    "text": "From a reader side, there may be like",
+    "start": 4526.98,
+    "duration": 4.6
+  },
+  {
+    "text": "lost in the middle.",
+    "start": 4529.58,
+    "duration": 5.162
+  },
+  {
+    "text": "Models may get distracted. Evidence we",
+    "start": 4531.58,
+    "duration": 5.402
+  },
+  {
+    "text": "have may conflict with each other. That",
+    "start": 4534.742,
+    "duration": 4.72
+  },
+  {
+    "text": "is, when Ragel go outside to fetch",
+    "start": 4536.982,
+    "duration": 4.36
+  },
+  {
+    "text": "evidence, they actually got two",
+    "start": 4539.462,
+    "duration": 4.2
+  },
+  {
+    "text": "evidence. They do not agree with each",
+    "start": 4541.342,
+    "duration": 4.12
+  },
+  {
+    "text": "other. So, how should we think about",
+    "start": 4543.662,
+    "duration": 3.12
+  },
+  {
+    "text": "that?",
+    "start": 4545.462,
+    "duration": 4.16
+  },
+  {
+    "text": "From a loop like retriever generator",
+    "start": 4546.782,
+    "duration": 4.92
+  },
+  {
+    "text": "perspective, there may be compound",
+    "start": 4549.622,
+    "duration": 3.52
+  },
+  {
+    "text": "errors.",
+    "start": 4551.702,
+    "duration": 3.68
+  },
+  {
+    "text": "Um, that is something",
+    "start": 4553.142,
+    "duration": 5.24
+  },
+  {
+    "text": "some mistake happened earlier may affect",
+    "start": 4555.382,
+    "duration": 4.92
+  },
+  {
+    "text": "later decisions.",
+    "start": 4558.382,
+    "duration": 4.96
+  },
+  {
+    "text": "Um, there may even be prompt injections",
+    "start": 4560.302,
+    "duration": 5.8
+  },
+  {
+    "text": "in the search process. What if bad",
+    "start": 4563.342,
+    "duration": 4.96
+  },
+  {
+    "text": "actors actually added something to your",
+    "start": 4566.102,
+    "duration": 4.64
+  },
+  {
+    "text": "search the documents and then really",
+    "start": 4568.302,
+    "duration": 5.16
+  },
+  {
+    "text": "attack your entire pipeline. So, those",
+    "start": 4570.742,
+    "duration": 5.88
+  },
+  {
+    "text": "are all the issues um, we can or we are",
+    "start": 4573.462,
+    "duration": 6.08
+  },
+  {
+    "text": "going to mention about Ragel later. Uh,",
+    "start": 4576.622,
+    "duration": 4.56
+  },
+  {
+    "text": "with that, this is all what we are going",
+    "start": 4579.542,
+    "duration": 3.36
+  },
+  {
+    "text": "to cover for today's class. Thank you",
+    "start": 4581.182,
+    "duration": 5.84
+  },
+  {
+    "text": "all and happy to take a more questions.",
+    "start": 4582.902,
+    "duration": 4.12
+  }
+]

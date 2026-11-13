@@ -1,0 +1,1858 @@
+{
+  "source_id": "cmu-11768",
+  "summary": "A broad technical course covering agent capabilities, coding and computer use, deep research, supervised training, reinforcement learning, runtime systems, safety, and multi-agent coordination.",
+  "limitations": [
+    "Eighteen lecture decks are available, including guest lectures; some scheduled sessions have no archived slides.",
+    "Hundreds of optional references and repository files are not treated as hundreds of teaching units.",
+    "Claims use teaching slides. Supporting papers are used only when a source is explicitly marked assigned."
+  ],
+  "new_concept_ids": [
+    "computer-use",
+    "visual-grounding",
+    "deep-research",
+    "citation-eval",
+    "kv-cache",
+    "long-context",
+    "serving",
+    "rl-credit",
+    "rl-policy-gradient",
+    "rl-exploration",
+    "rl-systems",
+    "skill-induction",
+    "checkpointing",
+    "trajectory-eval",
+    "regression-eval",
+    "best-of-n",
+    "multi-agent-debate",
+    "async-agents",
+    "user-simulation",
+    "human-collaboration",
+    "work-impact"
+  ],
+  "concepts": [
+    {
+      "concept_id": "agent-architecture",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-01-agents.md",
+          "line": 11,
+          "page": 1,
+          "excerpt": "What Are Agents?",
+          "material_id": "lecture-01-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-01-agents.pdf",
+          "sha256": "93a7ce66a0def76903ef555425cc083c989bc98f4a8148dfda0fc4606481f536"
+        }
+      ]
+    },
+    {
+      "concept_id": "react",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-01-agents.md",
+          "line": 408,
+          "page": 15,
+          "excerpt": "A minimal ReAct loop",
+          "material_id": "lecture-01-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-01-agents.pdf",
+          "sha256": "93a7ce66a0def76903ef555425cc083c989bc98f4a8148dfda0fc4606481f536"
+        }
+      ]
+    },
+    {
+      "concept_id": "tool-use",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-02-tool-use.md",
+          "line": 30,
+          "page": 3,
+          "excerpt": "Tool definition",
+          "material_id": "lecture-02-tool-use",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-02-tool-use.pdf",
+          "sha256": "841e2df5eedc962a9fac96549a285f7e72025193762539b216e1dbcfb229c4ef"
+        }
+      ]
+    },
+    {
+      "concept_id": "codeact",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-02-tool-use.md",
+          "line": 281,
+          "page": 16,
+          "excerpt": "CodeAct results",
+          "material_id": "lecture-02-tool-use",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-02-tool-use.pdf",
+          "sha256": "841e2df5eedc962a9fac96549a285f7e72025193762539b216e1dbcfb229c4ef"
+        }
+      ]
+    },
+    {
+      "concept_id": "structured-output",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-02-tool-use.md",
+          "line": 610,
+          "page": 26,
+          "excerpt": "Constrained decoding",
+          "material_id": "lecture-02-tool-use",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-02-tool-use.pdf",
+          "sha256": "841e2df5eedc962a9fac96549a285f7e72025193762539b216e1dbcfb229c4ef"
+        }
+      ]
+    },
+    {
+      "concept_id": "mcp",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-02-tool-use.md",
+          "line": 1068,
+          "page": 42,
+          "excerpt": "MCP connects a host to servers",
+          "material_id": "lecture-02-tool-use",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-02-tool-use.pdf",
+          "sha256": "841e2df5eedc962a9fac96549a285f7e72025193762539b216e1dbcfb229c4ef"
+        }
+      ]
+    },
+    {
+      "concept_id": "parallelization",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-02-tool-use.md",
+          "line": 1316,
+          "page": 50,
+          "excerpt": "Parallelize only without dependencies",
+          "material_id": "lecture-02-tool-use",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-02-tool-use.pdf",
+          "sha256": "841e2df5eedc962a9fac96549a285f7e72025193762539b216e1dbcfb229c4ef"
+        }
+      ]
+    },
+    {
+      "concept_id": "tool-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-02-tool-use.md",
+          "line": 1399,
+          "page": 54,
+          "excerpt": "Evaluate the whole stack",
+          "material_id": "lecture-02-tool-use",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-02-tool-use.pdf",
+          "sha256": "841e2df5eedc962a9fac96549a285f7e72025193762539b216e1dbcfb229c4ef"
+        }
+      ]
+    },
+    {
+      "concept_id": "error-recovery",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-02-tool-use.md",
+          "line": 1462,
+          "page": 56,
+          "excerpt": "Operational tool failures",
+          "material_id": "lecture-02-tool-use",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-02-tool-use.pdf",
+          "sha256": "841e2df5eedc962a9fac96549a285f7e72025193762539b216e1dbcfb229c4ef"
+        }
+      ]
+    },
+    {
+      "concept_id": "context-engineering",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-03-long-context.md",
+          "line": 60,
+          "page": 4,
+          "excerpt": "Agent prompt composition example",
+          "material_id": "lecture-03-long-context",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-03-long-context.pdf",
+          "sha256": "ba36ebe008febbd6c70458e4843a215079f0adf262765251c0f0fb4c044c910f"
+        }
+      ]
+    },
+    {
+      "concept_id": "transformer",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-03-long-context.md",
+          "line": 248,
+          "page": 10,
+          "excerpt": "Refresher: attention",
+          "material_id": "lecture-03-long-context",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-03-long-context.pdf",
+          "sha256": "ba36ebe008febbd6c70458e4843a215079f0adf262765251c0f0fb4c044c910f"
+        }
+      ]
+    },
+    {
+      "concept_id": "long-context",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-03-long-context.md",
+          "line": 297,
+          "page": 11,
+          "excerpt": "Advertised vs. effective context",
+          "material_id": "lecture-03-long-context",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-03-long-context.pdf",
+          "sha256": "ba36ebe008febbd6c70458e4843a215079f0adf262765251c0f0fb4c044c910f"
+        }
+      ]
+    },
+    {
+      "concept_id": "kv-cache",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-03-long-context.md",
+          "line": 1661,
+          "page": 37,
+          "excerpt": "Prompt and KV caching",
+          "material_id": "lecture-03-long-context",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-03-long-context.pdf",
+          "sha256": "ba36ebe008febbd6c70458e4843a215079f0adf262765251c0f0fb4c044c910f"
+        }
+      ]
+    },
+    {
+      "concept_id": "serving",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-03-long-context.md",
+          "line": 216,
+          "page": 9,
+          "excerpt": "Serving metrics",
+          "material_id": "lecture-03-long-context",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-03-long-context.pdf",
+          "sha256": "ba36ebe008febbd6c70458e4843a215079f0adf262765251c0f0fb4c044c910f"
+        }
+      ]
+    },
+    {
+      "concept_id": "compaction",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-03-long-context.md",
+          "line": 1981,
+          "page": 48,
+          "excerpt": "What survives compaction",
+          "material_id": "lecture-03-long-context",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-03-long-context.pdf",
+          "sha256": "ba36ebe008febbd6c70458e4843a215079f0adf262765251c0f0fb4c044c910f"
+        }
+      ]
+    },
+    {
+      "concept_id": "memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-04-memory-and-skills.md",
+          "line": 548,
+          "page": 17,
+          "excerpt": "Managing an external memory",
+          "material_id": "lecture-04-memory-and-skills",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-04-memory-and-skills.pdf",
+          "sha256": "45e50adfa3e5a735cb0a9ec516696c2d6728a78c6328b99921630f958d7f2b66"
+        }
+      ]
+    },
+    {
+      "concept_id": "procedural-memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-04-memory-and-skills.md",
+          "line": 248,
+          "page": 8,
+          "excerpt": "What is a skill?",
+          "material_id": "lecture-04-memory-and-skills",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-04-memory-and-skills.pdf",
+          "sha256": "45e50adfa3e5a735cb0a9ec516696c2d6728a78c6328b99921630f958d7f2b66"
+        }
+      ]
+    },
+    {
+      "concept_id": "progressive-disclosure",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-04-memory-and-skills.md",
+          "line": 374,
+          "page": 11,
+          "excerpt": "Progressive Disclosure: loading skills with tools",
+          "material_id": "lecture-04-memory-and-skills",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-04-memory-and-skills.pdf",
+          "sha256": "45e50adfa3e5a735cb0a9ec516696c2d6728a78c6328b99921630f958d7f2b66"
+        }
+      ]
+    },
+    {
+      "concept_id": "skill-induction",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-04-memory-and-skills.md",
+          "line": 663,
+          "page": 21,
+          "excerpt": "Inducing skills",
+          "material_id": "lecture-04-memory-and-skills",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-04-memory-and-skills.pdf",
+          "sha256": "45e50adfa3e5a735cb0a9ec516696c2d6728a78c6328b99921630f958d7f2b66"
+        }
+      ]
+    },
+    {
+      "concept_id": "memory-maintenance",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-04-memory-and-skills.md",
+          "line": 1383,
+          "page": 42,
+          "excerpt": "Memory consolidation",
+          "material_id": "lecture-04-memory-and-skills",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-04-memory-and-skills.pdf",
+          "sha256": "45e50adfa3e5a735cb0a9ec516696c2d6728a78c6328b99921630f958d7f2b66"
+        }
+      ]
+    },
+    {
+      "concept_id": "reflection",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-04-memory-and-skills.md",
+          "line": 1271,
+          "page": 38,
+          "excerpt": "Learning from failures",
+          "material_id": "lecture-04-memory-and-skills",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-04-memory-and-skills.pdf",
+          "sha256": "45e50adfa3e5a735cb0a9ec516696c2d6728a78c6328b99921630f958d7f2b66"
+        }
+      ]
+    },
+    {
+      "concept_id": "planning",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-05-planning.md",
+          "line": 157,
+          "page": 5,
+          "excerpt": "What is a plan (for LLM agents)?",
+          "material_id": "lecture-05-planning",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-05-planning.pdf",
+          "sha256": "0cef5e14f8e75c32755018c230ce85528c5bbb72b144f693caeaacc657e37a6c"
+        }
+      ]
+    },
+    {
+      "concept_id": "cot",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-05-planning.md",
+          "line": 213,
+          "page": 8,
+          "excerpt": "Chain-of-thought is a plan",
+          "material_id": "lecture-05-planning",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-05-planning.pdf",
+          "sha256": "0cef5e14f8e75c32755018c230ce85528c5bbb72b144f693caeaacc657e37a6c"
+        }
+      ]
+    },
+    {
+      "concept_id": "reasoning",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-05-planning.md",
+          "line": 707,
+          "page": 24,
+          "excerpt": "Thinking vs acting",
+          "material_id": "lecture-05-planning",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-05-planning.pdf",
+          "sha256": "0cef5e14f8e75c32755018c230ce85528c5bbb72b144f693caeaacc657e37a6c"
+        }
+      ]
+    },
+    {
+      "concept_id": "plan-execute",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-05-planning.md",
+          "line": 546,
+          "page": 19,
+          "excerpt": "Separating planner from executor",
+          "material_id": "lecture-05-planning",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-05-planning.pdf",
+          "sha256": "0cef5e14f8e75c32755018c230ce85528c5bbb72b144f693caeaacc657e37a6c"
+        }
+      ]
+    },
+    {
+      "concept_id": "long-horizon",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-05-planning.md",
+          "line": 860,
+          "page": 28,
+          "excerpt": "Long-horizon failures",
+          "material_id": "lecture-05-planning",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-05-planning.pdf",
+          "sha256": "0cef5e14f8e75c32755018c230ce85528c5bbb72b144f693caeaacc657e37a6c"
+        }
+      ]
+    },
+    {
+      "concept_id": "hitl",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-05-planning.md",
+          "line": 1040,
+          "page": 33,
+          "excerpt": "Control: human editing and approval",
+          "material_id": "lecture-05-planning",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-05-planning.pdf",
+          "sha256": "0cef5e14f8e75c32755018c230ce85528c5bbb72b144f693caeaacc657e37a6c"
+        }
+      ]
+    },
+    {
+      "concept_id": "coding-agents",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-06-coding-agents.md",
+          "line": 780,
+          "page": 33,
+          "excerpt": "The localize–edit–verify loop",
+          "material_id": "lecture-06-coding-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-06-coding-agents.pdf",
+          "sha256": "518a44306e3c50384503fdf60f0f675ba47a19eb2308a18ed52f1e868faeea05"
+        }
+      ]
+    },
+    {
+      "concept_id": "tokenization",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-06-coding-agents.md",
+          "line": 159,
+          "page": 9,
+          "excerpt": "Pre-training: splitting code into tokens",
+          "material_id": "lecture-06-coding-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-06-coding-agents.pdf",
+          "sha256": "518a44306e3c50384503fdf60f0f675ba47a19eb2308a18ed52f1e868faeea05"
+        }
+      ]
+    },
+    {
+      "concept_id": "code-grader",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-06-coding-agents.md",
+          "line": 514,
+          "page": 23,
+          "excerpt": "Checking behavior by running code",
+          "material_id": "lecture-06-coding-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-06-coding-agents.pdf",
+          "sha256": "518a44306e3c50384503fdf60f0f675ba47a19eb2308a18ed52f1e868faeea05"
+        }
+      ]
+    },
+    {
+      "concept_id": "reliability",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-06-coding-agents.md",
+          "line": 618,
+          "page": 26,
+          "excerpt": "Success across multiple attempts",
+          "material_id": "lecture-06-coding-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-06-coding-agents.pdf",
+          "sha256": "518a44306e3c50384503fdf60f0f675ba47a19eb2308a18ed52f1e868faeea05"
+        }
+      ]
+    },
+    {
+      "concept_id": "synthetic-data",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-06-coding-agents.md",
+          "line": 1234,
+          "page": 51,
+          "excerpt": "Creating repair tasks by injecting bugs",
+          "material_id": "lecture-06-coding-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-06-coding-agents.pdf",
+          "sha256": "518a44306e3c50384503fdf60f0f675ba47a19eb2308a18ed52f1e868faeea05"
+        }
+      ]
+    },
+    {
+      "concept_id": "computer-use",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-07-computer-use-agents.md",
+          "line": 21,
+          "page": 2,
+          "excerpt": "Computer Use Agents (CUAs)",
+          "material_id": "lecture-07-computer-use-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-07-computer-use-agents.pdf",
+          "sha256": "bacea665f348b9bc112c77ad5ce81e0cfef3ce18c1f4b2949cb6a85faed29ae3"
+        }
+      ]
+    },
+    {
+      "concept_id": "visual-grounding",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-07-computer-use-agents.md",
+          "line": 569,
+          "page": 20,
+          "excerpt": "ScreenSpot-Pro: Grounding in professional UIs",
+          "material_id": "lecture-07-computer-use-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-07-computer-use-agents.pdf",
+          "sha256": "bacea665f348b9bc112c77ad5ce81e0cfef3ce18c1f4b2949cb6a85faed29ae3"
+        }
+      ]
+    },
+    {
+      "concept_id": "human-demos",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-07-computer-use-agents.md",
+          "line": 2085,
+          "page": 62,
+          "excerpt": "Demonstration data: More scale, richer trajectories",
+          "material_id": "lecture-07-computer-use-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-07-computer-use-agents.pdf",
+          "sha256": "bacea665f348b9bc112c77ad5ce81e0cfef3ce18c1f4b2949cb6a85faed29ae3"
+        }
+      ]
+    },
+    {
+      "concept_id": "sft",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-08-sft.md",
+          "line": 350,
+          "page": 12,
+          "excerpt": "Which tokens carry the loss",
+          "material_id": "lecture-08-sft",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-08-sft.pdf",
+          "sha256": "6bcf9c54f6faedbd1e58d2f27ad8d631a35e1801b1ba761f4130875c391bf3f8"
+        }
+      ]
+    },
+    {
+      "concept_id": "model-training",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-08-sft.md",
+          "line": 151,
+          "page": 6,
+          "excerpt": "The full training pipeline",
+          "material_id": "lecture-08-sft",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-08-sft.pdf",
+          "sha256": "6bcf9c54f6faedbd1e58d2f27ad8d631a35e1801b1ba761f4130875c391bf3f8"
+        }
+      ]
+    },
+    {
+      "concept_id": "distillation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-08-sft.md",
+          "line": 671,
+          "page": 22,
+          "excerpt": "Distillation from a stronger model",
+          "material_id": "lecture-08-sft",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-08-sft.pdf",
+          "sha256": "6bcf9c54f6faedbd1e58d2f27ad8d631a35e1801b1ba761f4130875c391bf3f8"
+        }
+      ]
+    },
+    {
+      "concept_id": "data-curation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-08-sft.md",
+          "line": 30,
+          "page": 2,
+          "excerpt": "Choosing the trajectories",
+          "material_id": "lecture-08-sft",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-08-sft.pdf",
+          "sha256": "6bcf9c54f6faedbd1e58d2f27ad8d631a35e1801b1ba761f4130875c391bf3f8"
+        }
+      ]
+    },
+    {
+      "concept_id": "rl",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-09-rl-basics.md",
+          "line": 260,
+          "page": 7,
+          "excerpt": "Reinforcement learning",
+          "material_id": "lecture-09-rl-basics",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-09-rl-basics.pdf",
+          "sha256": "4891a31a08db52820173b63e36d05e3841e3a6676bce5eedbe68f2b41efa385e"
+        }
+      ]
+    },
+    {
+      "concept_id": "rl-policy-gradient",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-09-rl-basics.md",
+          "line": 1107,
+          "page": 22,
+          "excerpt": "Computing the policy gradient",
+          "material_id": "lecture-09-rl-basics",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-09-rl-basics.pdf",
+          "sha256": "4891a31a08db52820173b63e36d05e3841e3a6676bce5eedbe68f2b41efa385e"
+        }
+      ]
+    },
+    {
+      "concept_id": "rl-credit",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-09-rl-basics.md",
+          "line": 1312,
+          "page": 25,
+          "excerpt": "Baselines and advantages",
+          "material_id": "lecture-09-rl-basics",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-09-rl-basics.pdf",
+          "sha256": "4891a31a08db52820173b63e36d05e3841e3a6676bce5eedbe68f2b41efa385e"
+        }
+      ]
+    },
+    {
+      "concept_id": "grpo",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-09-rl-basics.md",
+          "line": 2060,
+          "page": 38,
+          "excerpt": "The GRPO update",
+          "material_id": "lecture-09-rl-basics",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-09-rl-basics.pdf",
+          "sha256": "4891a31a08db52820173b63e36d05e3841e3a6676bce5eedbe68f2b41efa385e"
+        }
+      ]
+    },
+    {
+      "concept_id": "ppo",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-09-rl-basics.md",
+          "line": 2405,
+          "page": 42,
+          "excerpt": "GRPO vs PPO",
+          "material_id": "lecture-09-rl-basics",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-09-rl-basics.pdf",
+          "sha256": "4891a31a08db52820173b63e36d05e3841e3a6676bce5eedbe68f2b41efa385e"
+        }
+      ]
+    },
+    {
+      "concept_id": "deep-research",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-10-deep-research-agents.md",
+          "line": 90,
+          "page": 6,
+          "excerpt": "Complex research needs many searches",
+          "material_id": "lecture-10-deep-research-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-10-deep-research-agents.pdf",
+          "sha256": "b9c28dbfdbc07405fa783fb3913419302c19a2201424dd9a4997a0e1f5853b2d"
+        }
+      ]
+    },
+    {
+      "concept_id": "rag",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-10-deep-research-agents.md",
+          "line": 117,
+          "page": 6,
+          "excerpt": "introduce OPENSCHOLAR, a specialized retrieval-augmented LM that answers",
+          "material_id": "lecture-10-deep-research-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-10-deep-research-agents.pdf",
+          "sha256": "b9c28dbfdbc07405fa783fb3913419302c19a2201424dd9a4997a0e1f5853b2d"
+        }
+      ]
+    },
+    {
+      "concept_id": "agentic-rag",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-10-deep-research-agents.md",
+          "line": 1926,
+          "page": 54,
+          "excerpt": "The search tool runs the generated query.",
+          "material_id": "lecture-10-deep-research-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-10-deep-research-agents.pdf",
+          "sha256": "b9c28dbfdbc07405fa783fb3913419302c19a2201424dd9a4997a0e1f5853b2d"
+        }
+      ]
+    },
+    {
+      "concept_id": "grounding",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-10-deep-research-agents.md",
+          "line": 119,
+          "page": 6,
+          "excerpt": "papers and synthesizing citation-backed responses. To evaluate OPENSCHOLAR,",
+          "material_id": "lecture-10-deep-research-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-10-deep-research-agents.pdf",
+          "sha256": "b9c28dbfdbc07405fa783fb3913419302c19a2201424dd9a4997a0e1f5853b2d"
+        }
+      ]
+    },
+    {
+      "concept_id": "citation-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-10-deep-research-agents.md",
+          "line": 1788,
+          "page": 49,
+          "excerpt": "Citation accuracy: 1/2 = 50%",
+          "material_id": "lecture-10-deep-research-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-10-deep-research-agents.pdf",
+          "sha256": "b9c28dbfdbc07405fa783fb3913419302c19a2201424dd9a4997a0e1f5853b2d"
+        }
+      ]
+    },
+    {
+      "concept_id": "rubrics",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-10-deep-research-agents.md",
+          "line": 3401,
+          "page": 90,
+          "excerpt": "How the rubrics evolve during training",
+          "material_id": "lecture-10-deep-research-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-10-deep-research-agents.pdf",
+          "sha256": "b9c28dbfdbc07405fa783fb3913419302c19a2201424dd9a4997a0e1f5853b2d"
+        }
+      ]
+    },
+    {
+      "concept_id": "embeddings",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-10-deep-research-agents.md",
+          "line": 3683,
+          "page": 101,
+          "excerpt": "Embedding retrieval finds nearby documents",
+          "material_id": "lecture-10-deep-research-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-10-deep-research-agents.pdf",
+          "sha256": "b9c28dbfdbc07405fa783fb3913419302c19a2201424dd9a4997a0e1f5853b2d"
+        }
+      ]
+    },
+    {
+      "concept_id": "sparse-retrieval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-10-deep-research-agents.md",
+          "line": 3650,
+          "page": 100,
+          "excerpt": "Lexical retriever",
+          "material_id": "lecture-10-deep-research-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-10-deep-research-agents.pdf",
+          "sha256": "b9c28dbfdbc07405fa783fb3913419302c19a2201424dd9a4997a0e1f5853b2d"
+        }
+      ]
+    },
+    {
+      "concept_id": "llm-judge",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-10-deep-research-agents.md",
+          "line": 3274,
+          "page": 87,
+          "excerpt": "Judge against the rubrics",
+          "material_id": "lecture-10-deep-research-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-10-deep-research-agents.pdf",
+          "sha256": "b9c28dbfdbc07405fa783fb3913419302c19a2201424dd9a4997a0e1f5853b2d"
+        }
+      ]
+    },
+    {
+      "concept_id": "rl-exploration",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-11-rl-advanced.md",
+          "line": 2044,
+          "page": 47,
+          "excerpt": "Exploration collapse",
+          "material_id": "lecture-11-rl-advanced",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-11-rl-advanced.pdf",
+          "sha256": "7c98badf42f84712ea5ed39eaf20158ac17e00bb26aa5d08baa57592cf03a9f3"
+        }
+      ]
+    },
+    {
+      "concept_id": "reward-hacking",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-11-rl-advanced.md",
+          "line": 1777,
+          "page": 41,
+          "excerpt": "False positives and reward hacking",
+          "material_id": "lecture-11-rl-advanced",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-11-rl-advanced.pdf",
+          "sha256": "7c98badf42f84712ea5ed39eaf20158ac17e00bb26aa5d08baa57592cf03a9f3"
+        }
+      ]
+    },
+    {
+      "concept_id": "rl-systems",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-12-rl-systems.md",
+          "line": 825,
+          "page": 25,
+          "excerpt": "Async RL",
+          "material_id": "lecture-12-rl-systems",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-12-rl-systems.pdf",
+          "sha256": "31b51d2c72162fccc2c8dd4e126236ee3a5112408f3038d8285ab242dbfa1f8b"
+        }
+      ]
+    },
+    {
+      "concept_id": "safety",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-13-agent-safety.md",
+          "line": 906,
+          "page": 39,
+          "excerpt": "Safety outcomes",
+          "material_id": "lecture-13-agent-safety",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-13-agent-safety.pdf",
+          "sha256": "079b7b130cbc0da07d8add2274b1bb327ab3bb1cf9b9d45f1596ae07776d671e"
+        }
+      ]
+    },
+    {
+      "concept_id": "prompt-injection",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-13-agent-safety.md",
+          "line": 194,
+          "page": 10,
+          "excerpt": "Prompt injection",
+          "material_id": "lecture-13-agent-safety",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-13-agent-safety.pdf",
+          "sha256": "079b7b130cbc0da07d8add2274b1bb327ab3bb1cf9b9d45f1596ae07776d671e"
+        }
+      ]
+    },
+    {
+      "concept_id": "privacy",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-13-agent-safety.md",
+          "line": 76,
+          "page": 5,
+          "excerpt": "Data exfiltration",
+          "material_id": "lecture-13-agent-safety",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-13-agent-safety.pdf",
+          "sha256": "079b7b130cbc0da07d8add2274b1bb327ab3bb1cf9b9d45f1596ae07776d671e"
+        }
+      ]
+    },
+    {
+      "concept_id": "sandboxing",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-13-agent-safety.md",
+          "line": 429,
+          "page": 20,
+          "excerpt": "Isolation boundaries",
+          "material_id": "lecture-13-agent-safety",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-13-agent-safety.pdf",
+          "sha256": "079b7b130cbc0da07d8add2274b1bb327ab3bb1cf9b9d45f1596ae07776d671e"
+        }
+      ]
+    },
+    {
+      "concept_id": "threat-modeling",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-13-agent-safety.md",
+          "line": 165,
+          "page": 8,
+          "excerpt": "Threat models",
+          "material_id": "lecture-13-agent-safety",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-13-agent-safety.pdf",
+          "sha256": "079b7b130cbc0da07d8add2274b1bb327ab3bb1cf9b9d45f1596ae07776d671e"
+        }
+      ]
+    },
+    {
+      "concept_id": "red-teaming",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-13-agent-safety.md",
+          "line": 267,
+          "page": 14,
+          "excerpt": "Human red teaming",
+          "material_id": "lecture-13-agent-safety",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-13-agent-safety.pdf",
+          "sha256": "079b7b130cbc0da07d8add2274b1bb327ab3bb1cf9b9d45f1596ae07776d671e"
+        }
+      ]
+    },
+    {
+      "concept_id": "harness",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-14-openhands.md",
+          "line": 237,
+          "page": 14,
+          "excerpt": "Model and tools",
+          "material_id": "lecture-14-openhands",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-14-openhands.pdf",
+          "sha256": "923bea35c46a294ecb7caf5eef490cea92d7917475e16fa749edc63ffe196360"
+        }
+      ]
+    },
+    {
+      "concept_id": "state",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-14-openhands.md",
+          "line": 325,
+          "page": 17,
+          "excerpt": "Conversation persistence",
+          "material_id": "lecture-14-openhands",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-14-openhands.pdf",
+          "sha256": "923bea35c46a294ecb7caf5eef490cea92d7917475e16fa749edc63ffe196360"
+        }
+      ]
+    },
+    {
+      "concept_id": "frameworks",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-14-openhands.md",
+          "line": 12,
+          "page": 1,
+          "excerpt": "OpenHands",
+          "material_id": "lecture-14-openhands",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-14-openhands.pdf",
+          "sha256": "923bea35c46a294ecb7caf5eef490cea92d7917475e16fa749edc63ffe196360"
+        }
+      ]
+    },
+    {
+      "concept_id": "workflow-agent",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-15-orchestration-and-monitoring.md",
+          "line": 56,
+          "page": 3,
+          "excerpt": "Single agents vs. workflows",
+          "material_id": "lecture-15-orchestration-and-monitoring",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-15-orchestration-and-monitoring.pdf",
+          "sha256": "6b0b8856899a73383f94b4fa66b68b299a1010853cd1f430d89f8fc34196a067"
+        }
+      ]
+    },
+    {
+      "concept_id": "routing",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-15-orchestration-and-monitoring.md",
+          "line": 213,
+          "page": 8,
+          "excerpt": "Conditional routing",
+          "material_id": "lecture-15-orchestration-and-monitoring",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-15-orchestration-and-monitoring.pdf",
+          "sha256": "6b0b8856899a73383f94b4fa66b68b299a1010853cd1f430d89f8fc34196a067"
+        }
+      ]
+    },
+    {
+      "concept_id": "shared-memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-15-orchestration-and-monitoring.md",
+          "line": 352,
+          "page": 11,
+          "excerpt": "Shared state",
+          "material_id": "lecture-15-orchestration-and-monitoring",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-15-orchestration-and-monitoring.pdf",
+          "sha256": "6b0b8856899a73383f94b4fa66b68b299a1010853cd1f430d89f8fc34196a067"
+        }
+      ]
+    },
+    {
+      "concept_id": "durable-execution",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-15-orchestration-and-monitoring.md",
+          "line": 537,
+          "page": 16,
+          "excerpt": "Recoverable progress",
+          "material_id": "lecture-15-orchestration-and-monitoring",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-15-orchestration-and-monitoring.pdf",
+          "sha256": "6b0b8856899a73383f94b4fa66b68b299a1010853cd1f430d89f8fc34196a067"
+        }
+      ]
+    },
+    {
+      "concept_id": "checkpointing",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-15-orchestration-and-monitoring.md",
+          "line": 562,
+          "page": 17,
+          "excerpt": "Checkpointing and resuming",
+          "material_id": "lecture-15-orchestration-and-monitoring",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-15-orchestration-and-monitoring.pdf",
+          "sha256": "6b0b8856899a73383f94b4fa66b68b299a1010853cd1f430d89f8fc34196a067"
+        }
+      ]
+    },
+    {
+      "concept_id": "observability",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-15-orchestration-and-monitoring.md",
+          "line": 595,
+          "page": 18,
+          "excerpt": "Monitoring with execution traces",
+          "material_id": "lecture-15-orchestration-and-monitoring",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-15-orchestration-and-monitoring.pdf",
+          "sha256": "6b0b8856899a73383f94b4fa66b68b299a1010853cd1f430d89f8fc34196a067"
+        }
+      ]
+    },
+    {
+      "concept_id": "regression-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-15-orchestration-and-monitoring.md",
+          "line": 691,
+          "page": 21,
+          "excerpt": "Workflow and regression tests",
+          "material_id": "lecture-15-orchestration-and-monitoring",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-15-orchestration-and-monitoring.pdf",
+          "sha256": "6b0b8856899a73383f94b4fa66b68b299a1010853cd1f430d89f8fc34196a067"
+        }
+      ]
+    },
+    {
+      "concept_id": "trajectory-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-15-orchestration-and-monitoring.md",
+          "line": 863,
+          "page": 28,
+          "excerpt": "Paired trajectories in Docent",
+          "material_id": "lecture-15-orchestration-and-monitoring",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-15-orchestration-and-monitoring.pdf",
+          "sha256": "6b0b8856899a73383f94b4fa66b68b299a1010853cd1f430d89f8fc34196a067"
+        }
+      ]
+    },
+    {
+      "concept_id": "multi-agent",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-18-multi-agent-systems.md",
+          "line": 24,
+          "page": 2,
+          "excerpt": "What are multi-agent systems?",
+          "material_id": "lecture-18-multi-agent-systems",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-18-multi-agent-systems.pdf",
+          "sha256": "b6fec6a02655a9d48cb31bb2d97472ad9e320f3fa5d4f97a9c72223eb5a14dcf"
+        }
+      ]
+    },
+    {
+      "concept_id": "orchestrator-workers",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-18-multi-agent-systems.md",
+          "line": 121,
+          "page": 5,
+          "excerpt": "Role-based decomposition",
+          "material_id": "lecture-18-multi-agent-systems",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-18-multi-agent-systems.pdf",
+          "sha256": "b6fec6a02655a9d48cb31bb2d97472ad9e320f3fa5d4f97a9c72223eb5a14dcf"
+        }
+      ]
+    },
+    {
+      "concept_id": "multi-agent-debate",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-18-multi-agent-systems.md",
+          "line": 204,
+          "page": 9,
+          "excerpt": "Multi-agent debate",
+          "material_id": "lecture-18-multi-agent-systems",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-18-multi-agent-systems.pdf",
+          "sha256": "b6fec6a02655a9d48cb31bb2d97472ad9e320f3fa5d4f97a9c72223eb5a14dcf"
+        }
+      ]
+    },
+    {
+      "concept_id": "async-agents",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-18-multi-agent-systems.md",
+          "line": 416,
+          "page": 16,
+          "excerpt": "Coordinating asynchronous agents",
+          "material_id": "lecture-18-multi-agent-systems",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-18-multi-agent-systems.pdf",
+          "sha256": "b6fec6a02655a9d48cb31bb2d97472ad9e320f3fa5d4f97a9c72223eb5a14dcf"
+        }
+      ]
+    },
+    {
+      "concept_id": "agent-as-tool",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-18-multi-agent-systems.md",
+          "line": 393,
+          "page": 14,
+          "excerpt": "Managed delegation to subagents",
+          "material_id": "lecture-18-multi-agent-systems",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-18-multi-agent-systems.pdf",
+          "sha256": "b6fec6a02655a9d48cb31bb2d97472ad9e320f3fa5d4f97a9c72223eb5a14dcf"
+        }
+      ]
+    },
+    {
+      "concept_id": "context-isolation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-18-multi-agent-systems.md",
+          "line": 382,
+          "page": 13,
+          "excerpt": "Delegating to subagents uses context effectively",
+          "material_id": "lecture-18-multi-agent-systems",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-18-multi-agent-systems.pdf",
+          "sha256": "b6fec6a02655a9d48cb31bb2d97472ad9e320f3fa5d4f97a9c72223eb5a14dcf"
+        }
+      ]
+    },
+    {
+      "concept_id": "user-simulation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-18-multi-agent-systems.md",
+          "line": 587,
+          "page": 28,
+          "excerpt": "User simulators",
+          "material_id": "lecture-18-multi-agent-systems",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-18-multi-agent-systems.pdf",
+          "sha256": "b6fec6a02655a9d48cb31bb2d97472ad9e320f3fa5d4f97a9c72223eb5a14dcf"
+        }
+      ]
+    },
+    {
+      "concept_id": "multi-agent-failures",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-18-multi-agent-systems.md",
+          "line": 633,
+          "page": 31,
+          "excerpt": "Overfitting and simulator collapse",
+          "material_id": "lecture-18-multi-agent-systems",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-18-multi-agent-systems.pdf",
+          "sha256": "b6fec6a02655a9d48cb31bb2d97472ad9e320f3fa5d4f97a9c72223eb5a14dcf"
+        }
+      ]
+    },
+    {
+      "concept_id": "abstention",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-18-multi-agent-systems.md",
+          "line": 718,
+          "page": 39,
+          "excerpt": "Expressing uncertainty in responses",
+          "material_id": "lecture-18-multi-agent-systems",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-18-multi-agent-systems.pdf",
+          "sha256": "b6fec6a02655a9d48cb31bb2d97472ad9e320f3fa5d4f97a9c72223eb5a14dcf"
+        }
+      ]
+    },
+    {
+      "concept_id": "inference-scaling",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-20-search-basics.md",
+          "line": 11,
+          "page": 1,
+          "excerpt": "Search over Trajectories",
+          "material_id": "lecture-20-search-basics",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-20-search-basics.pdf",
+          "sha256": "0f7a334dfaae91887086d28440b7e82ecf869c672269f2662007b94120db6078"
+        }
+      ]
+    },
+    {
+      "concept_id": "best-of-n",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-20-search-basics.md",
+          "line": 223,
+          "page": 8,
+          "excerpt": "Best-of-N",
+          "material_id": "lecture-20-search-basics",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-20-search-basics.pdf",
+          "sha256": "0f7a334dfaae91887086d28440b7e82ecf869c672269f2662007b94120db6078"
+        }
+      ]
+    },
+    {
+      "concept_id": "self-consistency",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-20-search-basics.md",
+          "line": 325,
+          "page": 13,
+          "excerpt": "Self-consistency",
+          "material_id": "lecture-20-search-basics",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-20-search-basics.pdf",
+          "sha256": "0f7a334dfaae91887086d28440b7e82ecf869c672269f2662007b94120db6078"
+        }
+      ]
+    },
+    {
+      "concept_id": "verification",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-20-search-basics.md",
+          "line": 245,
+          "page": 10,
+          "excerpt": "Verification signals",
+          "material_id": "lecture-20-search-basics",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-20-search-basics.pdf",
+          "sha256": "0f7a334dfaae91887086d28440b7e82ecf869c672269f2662007b94120db6078"
+        }
+      ]
+    },
+    {
+      "concept_id": "evaluation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/2026-10-27-zora-wang.md",
+          "line": 154,
+          "page": 16,
+          "excerpt": "Main Components: Environment, Task, Evaluation",
+          "material_id": "2026-10-27-zora-wang",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/2026-10-27-zora-wang.pdf",
+          "sha256": "ed6bd890a39d0163ca133c73c74201cba55fcb0386fe16edcdda3d0da48785c5"
+        }
+      ]
+    },
+    {
+      "concept_id": "benchmark-design",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/2026-10-27-zora-wang.md",
+          "line": 271,
+          "page": 24,
+          "excerpt": "Many Benchmarks Lack Construct Validity",
+          "material_id": "2026-10-27-zora-wang",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/2026-10-27-zora-wang.pdf",
+          "sha256": "ed6bd890a39d0163ca133c73c74201cba55fcb0386fe16edcdda3d0da48785c5"
+        }
+      ]
+    },
+    {
+      "concept_id": "human-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/2026-10-27-zora-wang.md",
+          "line": 445,
+          "page": 38,
+          "excerpt": "Human-expert annotated rubrics",
+          "material_id": "2026-10-27-zora-wang",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/2026-10-27-zora-wang.pdf",
+          "sha256": "ed6bd890a39d0163ca133c73c74201cba55fcb0386fe16edcdda3d0da48785c5"
+        }
+      ]
+    },
+    {
+      "concept_id": "judge-validation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/2026-10-27-zora-wang.md",
+          "line": 486,
+          "page": 42,
+          "excerpt": "Eval Challenge: LLM-as-a-Judge Scales but is Biased",
+          "material_id": "2026-10-27-zora-wang",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/2026-10-27-zora-wang.pdf",
+          "sha256": "ed6bd890a39d0163ca133c73c74201cba55fcb0386fe16edcdda3d0da48785c5"
+        }
+      ]
+    },
+    {
+      "concept_id": "human-collaboration",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/2026-10-27-zora-wang.md",
+          "line": 548,
+          "page": 48,
+          "excerpt": "Collaboration & Interaction with Humans",
+          "material_id": "2026-10-27-zora-wang",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/2026-10-27-zora-wang.pdf",
+          "sha256": "ed6bd890a39d0163ca133c73c74201cba55fcb0386fe16edcdda3d0da48785c5"
+        }
+      ]
+    },
+    {
+      "concept_id": "personalization",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/2026-10-27-zora-wang.md",
+          "line": 556,
+          "page": 49,
+          "excerpt": "Automatically Identify & Adapt to User Interaction Mode",
+          "material_id": "2026-10-27-zora-wang",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/2026-10-27-zora-wang.pdf",
+          "sha256": "ed6bd890a39d0163ca133c73c74201cba55fcb0386fe16edcdda3d0da48785c5"
+        }
+      ]
+    },
+    {
+      "concept_id": "work-impact",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/2026-10-27-zora-wang.md",
+          "line": 544,
+          "page": 47,
+          "excerpt": "Yijia Shao, et al. \"Future of Work with AI Agents: Auditing Automation and Augmentation Potential across the US Workforce.\" 2025",
+          "material_id": "2026-10-27-zora-wang",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/2026-10-27-zora-wang.pdf",
+          "sha256": "ed6bd890a39d0163ca133c73c74201cba55fcb0386fe16edcdda3d0da48785c5"
+        }
+      ]
+    },
+    {
+      "concept_id": "harness-optimization",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-20-search-basics.md",
+          "line": 776,
+          "page": 28,
+          "excerpt": "Harness search",
+          "material_id": "lecture-20-search-basics",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-20-search-basics.pdf",
+          "sha256": "0f7a334dfaae91887086d28440b7e82ecf869c672269f2662007b94120db6078"
+        }
+      ]
+    },
+    {
+      "concept_id": "reward-model",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-20-search-basics.md",
+          "line": 259,
+          "page": 10,
+          "excerpt": "Use a reward model (e.g. LLM-as-",
+          "material_id": "lecture-20-search-basics",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-20-search-basics.pdf",
+          "sha256": "0f7a334dfaae91887086d28440b7e82ecf869c672269f2662007b94120db6078"
+        }
+      ]
+    },
+    {
+      "concept_id": "context-offload",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-03-long-context.md",
+          "line": 2003,
+          "page": 48,
+          "excerpt": "Evidence store",
+          "material_id": "lecture-03-long-context",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-03-long-context.pdf",
+          "sha256": "ba36ebe008febbd6c70458e4843a215079f0adf262765251c0f0fb4c044c910f"
+        }
+      ]
+    },
+    {
+      "concept_id": "prompting",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-03-long-context.md",
+          "line": 1855,
+          "page": 44,
+          "excerpt": "Prompt design for cache reuse",
+          "material_id": "lecture-03-long-context",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-03-long-context.pdf",
+          "sha256": "ba36ebe008febbd6c70458e4843a215079f0adf262765251c0f0fb4c044c910f"
+        }
+      ]
+    },
+    {
+      "concept_id": "reflexion",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-04-memory-and-skills.md",
+          "line": 608,
+          "page": 19,
+          "excerpt": "GENERATED FEEDBACK",
+          "material_id": "lecture-04-memory-and-skills",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-04-memory-and-skills.pdf",
+          "sha256": "45e50adfa3e5a735cb0a9ec516696c2d6728a78c6328b99921630f958d7f2b66"
+        }
+      ]
+    },
+    {
+      "concept_id": "few-shot",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-04-memory-and-skills.md",
+          "line": 645,
+          "page": 20,
+          "excerpt": "include them as few-shot",
+          "material_id": "lecture-04-memory-and-skills",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-04-memory-and-skills.pdf",
+          "sha256": "45e50adfa3e5a735cb0a9ec516696c2d6728a78c6328b99921630f958d7f2b66"
+        }
+      ]
+    },
+    {
+      "concept_id": "langgraph",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-15-orchestration-and-monitoring.md",
+          "line": 202,
+          "page": 7,
+          "excerpt": "LangGraph connects functions implementing these steps.",
+          "material_id": "lecture-15-orchestration-and-monitoring",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-15-orchestration-and-monitoring.pdf",
+          "sha256": "6b0b8856899a73383f94b4fa66b68b299a1010853cd1f430d89f8fc34196a067"
+        }
+      ]
+    },
+    {
+      "concept_id": "error-analysis",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-15-orchestration-and-monitoring.md",
+          "line": 880,
+          "page": 29,
+          "excerpt": "Failure mode synthesis",
+          "material_id": "lecture-15-orchestration-and-monitoring",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-15-orchestration-and-monitoring.pdf",
+          "sha256": "6b0b8856899a73383f94b4fa66b68b299a1010853cd1f430d89f8fc34196a067"
+        }
+      ]
+    },
+    {
+      "concept_id": "programmatic-tools",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-02-tool-use.md",
+          "line": 251,
+          "page": 13,
+          "excerpt": "Programmatic tool calling",
+          "material_id": "lecture-02-tool-use",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-02-tool-use.pdf",
+          "sha256": "841e2df5eedc962a9fac96549a285f7e72025193762539b216e1dbcfb229c4ef"
+        }
+      ]
+    },
+    {
+      "concept_id": "auth",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-02-tool-use.md",
+          "line": 1136,
+          "page": 44,
+          "excerpt": "Static tokens are for teaching/development; production deployments should verify JWTs or use OAuth.",
+          "material_id": "lecture-02-tool-use",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-02-tool-use.pdf",
+          "sha256": "841e2df5eedc962a9fac96549a285f7e72025193762539b216e1dbcfb229c4ef"
+        }
+      ]
+    },
+    {
+      "concept_id": "deployment",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-14-openhands.md",
+          "line": 375,
+          "page": 19,
+          "excerpt": "Agent Server inside Docker",
+          "material_id": "lecture-14-openhands",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-14-openhands.pdf",
+          "sha256": "923bea35c46a294ecb7caf5eef490cea92d7917475e16fa749edc63ffe196360"
+        }
+      ]
+    },
+    {
+      "concept_id": "vlm",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-07-computer-use-agents.md",
+          "line": 1523,
+          "page": 47,
+          "excerpt": "A VLM predicts actions from visual history",
+          "material_id": "lecture-07-computer-use-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-07-computer-use-agents.pdf",
+          "sha256": "bacea665f348b9bc112c77ad5ce81e0cfef3ce18c1f4b2949cb6a85faed29ae3"
+        }
+      ]
+    },
+    {
+      "concept_id": "outcome-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-07-computer-use-agents.md",
+          "line": 1131,
+          "page": 35,
+          "excerpt": "OSWorld: Real desktops, custom end-state checks",
+          "material_id": "lecture-07-computer-use-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-07-computer-use-agents.pdf",
+          "sha256": "bacea665f348b9bc112c77ad5ce81e0cfef3ce18c1f4b2949cb6a85faed29ae3"
+        }
+      ]
+    },
+    {
+      "concept_id": "knowledge-curation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-10-deep-research-agents.md",
+          "line": 4557,
+          "page": 124,
+          "excerpt": "Deep research combines many searches with evidence synthesis.",
+          "material_id": "lecture-10-deep-research-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-10-deep-research-agents.pdf",
+          "sha256": "b9c28dbfdbc07405fa783fb3913419302c19a2201424dd9a4997a0e1f5853b2d"
+        }
+      ]
+    },
+    {
+      "concept_id": "speculative-decoding",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-12-rl-systems.md",
+          "line": 350,
+          "page": 12,
+          "excerpt": "Inference Optimizations: Speculative Decoding",
+          "material_id": "lecture-12-rl-systems",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-12-rl-systems.pdf",
+          "sha256": "31b51d2c72162fccc2c8dd4e126236ee3a5112408f3038d8285ab242dbfa1f8b"
+        }
+      ]
+    },
+    {
+      "concept_id": "world-models",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-06-coding-agents.md",
+          "line": 1980,
+          "page": 78,
+          "excerpt": "Building and using simulators",
+          "material_id": "lecture-06-coding-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-06-coding-agents.pdf",
+          "sha256": "518a44306e3c50384503fdf60f0f675ba47a19eb2308a18ed52f1e868faeea05"
+        }
+      ]
+    },
+    {
+      "concept_id": "cost-quality",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-06-coding-agents.md",
+          "line": 1963,
+          "page": 76,
+          "excerpt": "Compare task success AND total latency / tokens / tool calls.",
+          "material_id": "lecture-06-coding-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-06-coding-agents.pdf",
+          "sha256": "518a44306e3c50384503fdf60f0f675ba47a19eb2308a18ed52f1e868faeea05"
+        }
+      ]
+    },
+    {
+      "concept_id": "refactoring",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-06-coding-agents.md",
+          "line": 780,
+          "page": 33,
+          "excerpt": "The localize–edit–verify loop",
+          "material_id": "lecture-06-coding-agents",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-06-coding-agents.pdf",
+          "sha256": "518a44306e3c50384503fdf60f0f675ba47a19eb2308a18ed52f1e868faeea05"
+        }
+      ]
+    },
+    {
+      "concept_id": "emergent-norms",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-18-multi-agent-systems.md",
+          "line": 656,
+          "page": 33,
+          "excerpt": "Conventions and emergent communication",
+          "material_id": "lecture-18-multi-agent-systems",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-18-multi-agent-systems.pdf",
+          "sha256": "b6fec6a02655a9d48cb31bb2d97472ad9e320f3fa5d4f97a9c72223eb5a14dcf"
+        }
+      ]
+    },
+    {
+      "concept_id": "social-simulation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-18-multi-agent-systems.md",
+          "line": 700,
+          "page": 37,
+          "excerpt": "Simulating a town of generative agents",
+          "material_id": "lecture-18-multi-agent-systems",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-18-multi-agent-systems.pdf",
+          "sha256": "b6fec6a02655a9d48cb31bb2d97472ad9e320f3fa5d4f97a9c72223eb5a14dcf"
+        }
+      ]
+    },
+    {
+      "concept_id": "social-behavior",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/cmu-11768/markdown/slides/lecture-18-multi-agent-systems.md",
+          "line": 689,
+          "page": 36,
+          "excerpt": "Simulating an agentic marketplace",
+          "material_id": "lecture-18-multi-agent-systems",
+          "category": "slides",
+          "source_url": "https://www.cmu-agents.com/slides/lecture-18-multi-agent-systems.pdf",
+          "sha256": "b6fec6a02655a9d48cb31bb2d97472ad9e320f3fa5d4f97a9c72223eb5a14dcf"
+        }
+      ]
+    }
+  ]
+}

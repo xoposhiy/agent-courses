@@ -1,0 +1,64 @@
+# Homework 1 public teaching repository: assignments/OMIM_620511/grill_run/tasks/0051_judge_cov_final/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620511/grill_run/tasks/0051_judge_cov_final/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620511/grill_run/tasks/0051_judge_cov_final/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "fields": [
+    {
+      "field": "Clinical phenotypes reported in affected individuals with exact numerator and denominator per cohort (paper verbatim wording and standard HPO term if identifiable), attached to a resolvable source (PMID or DOI)",
+      "covered": false,
+      "contributing_aspects": []
+    },
+    {
+      "field": "Most discriminating clinical findings present in most affected individuals but uncommon in overlapping/confused disorders, including names of those disorders and confidence level of the distinction",
+      "covered": true,
+      "contributing_aspects": [
+        "differential-diagnosis",
+        "phenotypic-overlap",
+        "clinical discrimination",
+        "clinical-triad"
+      ]
+    },
+    {
+      "field": "Clinical findings looked for and found absent in affected individuals that argue against the diagnosis",
+      "covered": true,
+      "contributing_aspects": [
+        "exclusionary_findings",
+        "negative-criteria",
+        "neuroimaging",
+        "structural-brain-findings"
+      ]
+    },
+    {
+      "field": "Phenotype differences/correlations by variant type, variant position, age, or sex",
+      "covered": true,
+      "contributing_aspects": [
+        "genotype-phenotype",
+        "positional effect",
+        "truncating variants",
+        "inheritance",
+        "penetrance",
+        "variable expressivity"
+      ]
+    },
+    {
+      "field": "Findings reported in one paper and explicitly contradicted by another paper",
+      "covered": true,
+      "contributing_aspects": [
+        "literature_conflicts_and_variability",
+        "intellectual disability",
+        "penetrance",
+        "phenotypic spectrum"
+      ]
+    },
+    {
+      "field": "Cohort-level source attribution (PMID or DOI) for every reported phenotype frequency",
+      "covered": false,
+      "contributing_aspects": []
+    }
+  ]
+}
+```

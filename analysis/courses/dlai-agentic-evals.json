@@ -1,0 +1,533 @@
+{
+  "source_id": "dlai-agentic-evals",
+  "summary": "A focused evaluation course with a complete cycle from requirements and trace inspection to test sets, evaluators, action and outcome checks, controlled changes, and production regression tests.",
+  "limitations": [
+    "Five slide decks and 28 lesson transcripts are available.",
+    "Restricted labs and quizzes are not reconstructed or counted as available teaching content.",
+    "Improvement-test planning is evaluation work; it is not counted as agent task planning. A lesson about a judge is evaluation, while a persona exercise in another course is not automatically LLM-as-judge training."
+  ],
+  "new_concept_ids": [
+    "requirements",
+    "error-analysis",
+    "session-eval",
+    "outcome-eval",
+    "controlled-eval",
+    "production-eval",
+    "evaluator-metrics",
+    "cost-quality"
+  ],
+  "concepts": [
+    {
+      "concept_id": "evaluation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-1.md",
+          "line": 300,
+          "page": 15,
+          "excerpt": "Evaluate systematically",
+          "material_id": "slides/module-1",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/5/5/5511474bc19c467f66a1d5b76ae6301c58e464d5.pdf",
+          "sha256": "c6ae70afa3e20d0e464cf5662e91bc371a685b3ab0fefacd4d145c713894fc7e"
+        }
+      ]
+    },
+    {
+      "concept_id": "agent-architecture",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-1.md",
+          "line": 81,
+          "page": 6,
+          "excerpt": "An agent works toward a goal",
+          "material_id": "slides/module-1",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/5/5/5511474bc19c467f66a1d5b76ae6301c58e464d5.pdf",
+          "sha256": "c6ae70afa3e20d0e464cf5662e91bc371a685b3ab0fefacd4d145c713894fc7e"
+        }
+      ]
+    },
+    {
+      "concept_id": "observability",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-1.md",
+          "line": 988,
+          "page": 47,
+          "excerpt": "Each step in a trace is recorded as a span",
+          "material_id": "slides/module-1",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/5/5/5511474bc19c467f66a1d5b76ae6301c58e464d5.pdf",
+          "sha256": "c6ae70afa3e20d0e464cf5662e91bc371a685b3ab0fefacd4d145c713894fc7e"
+        }
+      ]
+    },
+    {
+      "concept_id": "reliability",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-1.md",
+          "line": 731,
+          "page": 37,
+          "excerpt": "Measure across cases and repeated runs",
+          "material_id": "slides/module-1",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/5/5/5511474bc19c467f66a1d5b76ae6301c58e464d5.pdf",
+          "sha256": "c6ae70afa3e20d0e464cf5662e91bc371a685b3ab0fefacd4d145c713894fc7e"
+        }
+      ]
+    },
+    {
+      "concept_id": "human-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-1.md",
+          "line": 709,
+          "page": 36,
+          "excerpt": "Check the evaluator against people",
+          "material_id": "slides/module-1",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/5/5/5511474bc19c467f66a1d5b76ae6301c58e464d5.pdf",
+          "sha256": "c6ae70afa3e20d0e464cf5662e91bc371a685b3ab0fefacd4d145c713894fc7e"
+        }
+      ]
+    },
+    {
+      "concept_id": "requirements",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-2.md",
+          "line": 176,
+          "page": 9,
+          "excerpt": "Make vague words explicit",
+          "material_id": "slides/module-2",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/4/2/42b96553ad0415e8fc965096711ee974d49f4196.pdf",
+          "sha256": "6ecb370929174335721f503c0d2662f1f2c3aea4b634142f01faf44c6d13a7ea"
+        }
+      ]
+    },
+    {
+      "concept_id": "benchmark-design",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-2.md",
+          "line": 1424,
+          "page": 51,
+          "excerpt": "What a complete benchmark case looks like",
+          "material_id": "slides/module-2",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/4/2/42b96553ad0415e8fc965096711ee974d49f4196.pdf",
+          "sha256": "6ecb370929174335721f503c0d2662f1f2c3aea4b634142f01faf44c6d13a7ea"
+        }
+      ]
+    },
+    {
+      "concept_id": "error-analysis",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-2.md",
+          "line": 641,
+          "page": 25,
+          "excerpt": "Use categories to label recurring failure patterns",
+          "material_id": "slides/module-2",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/4/2/42b96553ad0415e8fc965096711ee974d49f4196.pdf",
+          "sha256": "6ecb370929174335721f503c0d2662f1f2c3aea4b634142f01faf44c6d13a7ea"
+        }
+      ]
+    },
+    {
+      "concept_id": "synthetic-data",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-2.md",
+          "line": 924,
+          "page": 34,
+          "excerpt": "Use synthetic data for gaps you still can’t fill",
+          "material_id": "slides/module-2",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/4/2/42b96553ad0415e8fc965096711ee974d49f4196.pdf",
+          "sha256": "6ecb370929174335721f503c0d2662f1f2c3aea4b634142f01faf44c6d13a7ea"
+        }
+      ]
+    },
+    {
+      "concept_id": "code-grader",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-3.md",
+          "line": 47,
+          "page": 4,
+          "excerpt": "Use code when a rule decides the answer",
+          "material_id": "slides/module-3",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/d/0/d0a8a01b0dd03a3502bd9e3a03b6ea994cbc28df.pdf",
+          "sha256": "da834d3d5bfa0203bff4ecb361717cc12bbdff7483c612dd2ff3d5ef112e56e7"
+        }
+      ]
+    },
+    {
+      "concept_id": "llm-judge",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-3.md",
+          "line": 332,
+          "page": 15,
+          "excerpt": "A judge needs a model, a rubric and data",
+          "material_id": "slides/module-3",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/d/0/d0a8a01b0dd03a3502bd9e3a03b6ea994cbc28df.pdf",
+          "sha256": "da834d3d5bfa0203bff4ecb361717cc12bbdff7483c612dd2ff3d5ef112e56e7"
+        }
+      ]
+    },
+    {
+      "concept_id": "rubrics",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-3.md",
+          "line": 565,
+          "page": 23,
+          "excerpt": "A custom rubric has five parts",
+          "material_id": "slides/module-3",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/d/0/d0a8a01b0dd03a3502bd9e3a03b6ea994cbc28df.pdf",
+          "sha256": "da834d3d5bfa0203bff4ecb361717cc12bbdff7483c612dd2ff3d5ef112e56e7"
+        }
+      ]
+    },
+    {
+      "concept_id": "judge-validation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-3.md",
+          "line": 865,
+          "page": 33,
+          "excerpt": "Test on cases you didn’t use to build the rubric",
+          "material_id": "slides/module-3",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/d/0/d0a8a01b0dd03a3502bd9e3a03b6ea994cbc28df.pdf",
+          "sha256": "da834d3d5bfa0203bff4ecb361717cc12bbdff7483c612dd2ff3d5ef112e56e7"
+        }
+      ]
+    },
+    {
+      "concept_id": "evaluator-metrics",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-3.md",
+          "line": 930,
+          "page": 34,
+          "excerpt": "Precision and recall",
+          "material_id": "slides/module-3",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/d/0/d0a8a01b0dd03a3502bd9e3a03b6ea994cbc28df.pdf",
+          "sha256": "da834d3d5bfa0203bff4ecb361717cc12bbdff7483c612dd2ff3d5ef112e56e7"
+        }
+      ]
+    },
+    {
+      "concept_id": "structured-output",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-3.md",
+          "line": 701,
+          "page": 27,
+          "excerpt": "Part 5: Constrain the output",
+          "material_id": "slides/module-3",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/d/0/d0a8a01b0dd03a3502bd9e3a03b6ea994cbc28df.pdf",
+          "sha256": "da834d3d5bfa0203bff4ecb361717cc12bbdff7483c612dd2ff3d5ef112e56e7"
+        }
+      ]
+    },
+    {
+      "concept_id": "tool-use",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-4.md",
+          "line": 402,
+          "page": 14,
+          "excerpt": "Check the tool and its arguments",
+          "material_id": "slides/module-4",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/2/b/2bde11f1c30ca57f2de23cfe4e779fafc9de0b7c.pdf",
+          "sha256": "e8fbdc217ed9915cf30138bebc8cdc599cd0aed27f930b2e64cc2ade7e7795c9"
+        }
+      ]
+    },
+    {
+      "concept_id": "tool-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-4.md",
+          "line": 433,
+          "page": 15,
+          "excerpt": "Check selection, invocation, presence, and absence",
+          "material_id": "slides/module-4",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/2/b/2bde11f1c30ca57f2de23cfe4e779fafc9de0b7c.pdf",
+          "sha256": "e8fbdc217ed9915cf30138bebc8cdc599cd0aed27f930b2e64cc2ade7e7795c9"
+        }
+      ]
+    },
+    {
+      "concept_id": "trajectory-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-4.md",
+          "line": 540,
+          "page": 19,
+          "excerpt": "Evaluate how actions fit together",
+          "material_id": "slides/module-4",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/2/b/2bde11f1c30ca57f2de23cfe4e779fafc9de0b7c.pdf",
+          "sha256": "e8fbdc217ed9915cf30138bebc8cdc599cd0aed27f930b2e64cc2ade7e7795c9"
+        }
+      ]
+    },
+    {
+      "concept_id": "session-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-4.md",
+          "line": 896,
+          "page": 29,
+          "excerpt": "Evaluate across the session",
+          "material_id": "slides/module-4",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/2/b/2bde11f1c30ca57f2de23cfe4e779fafc9de0b7c.pdf",
+          "sha256": "e8fbdc217ed9915cf30138bebc8cdc599cd0aed27f930b2e64cc2ade7e7795c9"
+        }
+      ]
+    },
+    {
+      "concept_id": "outcome-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-4.md",
+          "line": 1345,
+          "page": 42,
+          "excerpt": "Verify the system outcome",
+          "material_id": "slides/module-4",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/2/b/2bde11f1c30ca57f2de23cfe4e779fafc9de0b7c.pdf",
+          "sha256": "e8fbdc217ed9915cf30138bebc8cdc599cd0aed27f930b2e64cc2ade7e7795c9"
+        }
+      ]
+    },
+    {
+      "concept_id": "user-simulation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-4.md",
+          "line": 1143,
+          "page": 36,
+          "excerpt": "Let a simulated user respond to the agent",
+          "material_id": "slides/module-4",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/2/b/2bde11f1c30ca57f2de23cfe4e779fafc9de0b7c.pdf",
+          "sha256": "e8fbdc217ed9915cf30138bebc8cdc599cd0aed27f930b2e64cc2ade7e7795c9"
+        }
+      ]
+    },
+    {
+      "concept_id": "hitl",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-4.md",
+          "line": 1018,
+          "page": 33,
+          "excerpt": "Wait for the customer to confirm the amount",
+          "material_id": "slides/module-4",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/2/b/2bde11f1c30ca57f2de23cfe4e779fafc9de0b7c.pdf",
+          "sha256": "e8fbdc217ed9915cf30138bebc8cdc599cd0aed27f930b2e64cc2ade7e7795c9"
+        }
+      ]
+    },
+    {
+      "concept_id": "safety",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-4.md",
+          "line": 373,
+          "page": 13,
+          "excerpt": "Some actions must not happen",
+          "material_id": "slides/module-4",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/2/b/2bde11f1c30ca57f2de23cfe4e779fafc9de0b7c.pdf",
+          "sha256": "e8fbdc217ed9915cf30138bebc8cdc599cd0aed27f930b2e64cc2ade7e7795c9"
+        }
+      ]
+    },
+    {
+      "concept_id": "abstention",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-4.md",
+          "line": 467,
+          "page": 16,
+          "excerpt": "Define what to do when information is missing",
+          "material_id": "slides/module-4",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/2/b/2bde11f1c30ca57f2de23cfe4e779fafc9de0b7c.pdf",
+          "sha256": "e8fbdc217ed9915cf30138bebc8cdc599cd0aed27f930b2e64cc2ade7e7795c9"
+        }
+      ]
+    },
+    {
+      "concept_id": "controlled-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-5.md",
+          "line": 170,
+          "page": 9,
+          "excerpt": "Change one thing, keep the comparison stable",
+          "material_id": "slides/module-5",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/b/f/bf828ca0e9d7ad63146803dca92ed5b3d204e39b.pdf",
+          "sha256": "6fe99ca6bbe05ee1d77c43541b0770b063605e8a6a78561531eee27defd867be"
+        }
+      ]
+    },
+    {
+      "concept_id": "regression-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-5.md",
+          "line": 901,
+          "page": 42,
+          "excerpt": "Compare three versions on the same benchmark",
+          "material_id": "slides/module-5",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/b/f/bf828ca0e9d7ad63146803dca92ed5b3d204e39b.pdf",
+          "sha256": "6fe99ca6bbe05ee1d77c43541b0770b063605e8a6a78561531eee27defd867be"
+        }
+      ]
+    },
+    {
+      "concept_id": "production-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-5.md",
+          "line": 1287,
+          "page": 56,
+          "excerpt": "Feed production evidence back into offline evals",
+          "material_id": "slides/module-5",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/b/f/bf828ca0e9d7ad63146803dca92ed5b3d204e39b.pdf",
+          "sha256": "6fe99ca6bbe05ee1d77c43541b0770b063605e8a6a78561531eee27defd867be"
+        }
+      ]
+    },
+    {
+      "concept_id": "cost-quality",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-5.md",
+          "line": 680,
+          "page": 32,
+          "excerpt": "Every added step has a cost",
+          "material_id": "slides/module-5",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/b/f/bf828ca0e9d7ad63146803dca92ed5b3d204e39b.pdf",
+          "sha256": "6fe99ca6bbe05ee1d77c43541b0770b063605e8a6a78561531eee27defd867be"
+        }
+      ]
+    },
+    {
+      "concept_id": "grounding",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-5.md",
+          "line": 144,
+          "page": 8,
+          "excerpt": "Test a grounding hypothesis",
+          "material_id": "slides/module-5",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/b/f/bf828ca0e9d7ad63146803dca92ed5b3d204e39b.pdf",
+          "sha256": "6fe99ca6bbe05ee1d77c43541b0770b063605e8a6a78561531eee27defd867be"
+        }
+      ]
+    },
+    {
+      "concept_id": "prompting",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-5.md",
+          "line": 561,
+          "page": 27,
+          "excerpt": "Clarify the requirement in the prompt",
+          "material_id": "slides/module-5",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/b/f/bf828ca0e9d7ad63146803dca92ed5b3d204e39b.pdf",
+          "sha256": "6fe99ca6bbe05ee1d77c43541b0770b063605e8a6a78561531eee27defd867be"
+        }
+      ]
+    },
+    {
+      "concept_id": "decoding",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-5.md",
+          "line": 739,
+          "page": 34,
+          "excerpt": "Tune sampling when variability is the problem",
+          "material_id": "slides/module-5",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/b/f/bf828ca0e9d7ad63146803dca92ed5b3d204e39b.pdf",
+          "sha256": "6fe99ca6bbe05ee1d77c43541b0770b063605e8a6a78561531eee27defd867be"
+        }
+      ]
+    },
+    {
+      "concept_id": "routing",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/dlai-agentic-evals/markdown/slides/module-5.md",
+          "line": 1437,
+          "page": 62,
+          "excerpt": "Routing instruction",
+          "material_id": "slides/module-5",
+          "category": "slides",
+          "source_url": "https://global.discourse-cdn.com/dlai/original/3X/b/f/bf828ca0e9d7ad63146803dca92ed5b3d204e39b.pdf",
+          "sha256": "6fe99ca6bbe05ee1d77c43541b0770b063605e8a6a78561531eee27defd867be"
+        }
+      ]
+    }
+  ]
+}

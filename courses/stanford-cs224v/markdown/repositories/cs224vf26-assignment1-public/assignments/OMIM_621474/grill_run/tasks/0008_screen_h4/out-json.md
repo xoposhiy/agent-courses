@@ -1,0 +1,68 @@
+# Homework 1 public teaching repository: assignments/OMIM_621474/grill_run/tasks/0008_screen_h4/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621474/grill_run/tasks/0008_screen_h4/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621474/grill_run/tasks/0008_screen_h4/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Phenotypic descriptions across KDM2B cohorts document mild or subtle dysmorphisms, organ anomalies, and neurodevelopmental delay, with absence of coarse storage features or severe limb reduction defects.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "Individuals with pathogenic KDM2B variants present with developmental delay, intellectual disability, subtle facial dysmorphism, and organ anomalies of the heart, eyes, and urogenital system, rather than coarse storage features or severe limb defects.",
+      "stance": "supports",
+      "source": {
+        "title": "Delineation of a KDM2B-related neurodevelopmental disorder and its associated DNA methylation signature",
+        "authors": [
+          "RH Van Jaarsveld",
+          "J Reilly",
+          "MC Cornips"
+        ],
+        "year": 2023,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.sciencedirect.com/science/article/pii/S109836002200942X",
+        "quote": "Individuals in this cohort present with developmental delay and/or intellectual disability; autism; attention deficit disorder/attention deficit hyperactivity disorder; congenital organ anomalies mainly of the heart, eyes, and urogenital system; and subtle facial dysmorphism."
+      },
+      "numbers": [
+        {
+          "metric": "heterozygous (likely) pathogenic variant cohort size",
+          "value": 21
+        }
+      ]
+    },
+    {
+      "text": "Individuals with KDM2B CxxC variants characteristically display speech and motor delay, variable intellectual disability, mild facial dysmorphism, and congenital heart defects, without reports of ectrodactyly or severe limb reductions.",
+      "stance": "supports",
+      "source": {
+        "title": "KDM2B variants in the CxxC domain impair its DNA-binding ability and cause a distinct neurodevelopmental syndrome",
+        "authors": [
+          "ASE van Oirsouw",
+          "MA Hadders"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://academic.oup.com/hmg/article-abstract/34/16/1353/8150966",
+        "quote": "All individuals with CxxC variants presented with developmental delay, mainly in the speech and motor domain, in addition to variable intellectual disability and mild facial dysmorphism. Congenital heart defects were observed in up to 78% of individuals, with additional common findings including musculoskeletal, ophthalmological, and urogenital anomalies"
+      },
+      "numbers": [
+        {
+          "metric": "cohort size",
+          "value": 19
+        },
+        {
+          "metric": "congenital heart defect frequency percentage",
+          "value": 78
+        }
+      ]
+    }
+  ]
+}
+```

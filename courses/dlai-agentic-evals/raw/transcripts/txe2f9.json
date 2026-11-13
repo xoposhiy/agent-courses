@@ -1,0 +1,542 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 3,
+    "text": "In this module, you've learned how to build a benchmark."
+  },
+  {
+    "startInSeconds": 3,
+    "endInSeconds": 9,
+    "text": "You started by defining requirements: clear statements of what the\napplication should and should not do."
+  },
+  {
+    "startInSeconds": 9,
+    "endInSeconds": 15,
+    "text": "Then you turned those requirements into test cases with the\ninformation you gave the application and the outcome you expected."
+  },
+  {
+    "startInSeconds": 15,
+    "endInSeconds": 20,
+    "text": "You ran those cases, reviewed the results,\nand labeled the failures you found."
+  },
+  {
+    "startInSeconds": 20,
+    "endInSeconds": 27,
+    "text": "And finally, you looked for gaps in coverage, added useful cases,\nand curated the set so each case had a reason to stay."
+  },
+  {
+    "startInSeconds": 27,
+    "endInSeconds": 30,
+    "text": "Now let's apply that full workflow to Northwind."
+  },
+  {
+    "startInSeconds": 30,
+    "endInSeconds": 37,
+    "text": "The goal is to build the benchmark you'll use in the next module\nwhen you start automating those judgments with evaluators."
+  },
+  {
+    "startInSeconds": 37,
+    "endInSeconds": 43,
+    "text": "Start with a behavior you already found in a trace.\nA customer asks, \"How should I care for my merino wool sweater?\""
+  },
+  {
+    "startInSeconds": 43,
+    "endInSeconds": 50,
+    "text": "The agent looks at product information, which says machine washable on\nwool cycle, but the agent answers,"
+  },
+  {
+    "startInSeconds": 50,
+    "endInSeconds": 53,
+    "text": "\"You can machine wash it on wool cycle and then tumble dry.\""
+  },
+  {
+    "startInSeconds": 53,
+    "endInSeconds": 57,
+    "text": "The first part is supported by the data, but the second part is not."
+  },
+  {
+    "startInSeconds": 57,
+    "endInSeconds": 61,
+    "text": "The agent had information about washing,\nbut it didn't have any information about drying."
+  },
+  {
+    "startInSeconds": 61,
+    "endInSeconds": 67,
+    "text": "And that unsupported detail matters, because care instructions can\naffect what the customer actually does with the product."
+  },
+  {
+    "startInSeconds": 67,
+    "endInSeconds": 70,
+    "text": "So, write down what actually went wrong."
+  },
+  {
+    "startInSeconds": 70,
+    "endInSeconds": 75,
+    "text": "The agent recommended tumble-drying, even though Northwind didn't\nprovide drying instructions for this sweater."
+  },
+  {
+    "startInSeconds": 75,
+    "endInSeconds": 82,
+    "text": "Next, turn that observation into a requirement. You could write,\n\"Do not recommend tumble-drying the merino wool sweater.\""
+  },
+  {
+    "startInSeconds": 82,
+    "endInSeconds": 87,
+    "text": "But that's too narrow. It only covers this one product and this\none unsupported claim."
+  },
+  {
+    "startInSeconds": 87,
+    "endInSeconds": 94,
+    "text": "The same kind of problem could happen with sizing, color,\navailability, materials, or return policies."
+  },
+  {
+    "startInSeconds": 94,
+    "endInSeconds": 101,
+    "text": "So make the requirement broader. Only make product claims that are\nsupported by Northwind data. Now you have a standard you can test."
+  },
+  {
+    "startInSeconds": 101,
+    "endInSeconds": 107,
+    "text": "When the agent answers a product question, you can ask:\nDoes Northwind data support the claims in this response?"
+  },
+  {
+    "startInSeconds": 107,
+    "endInSeconds": 113,
+    "text": "Next, turn that requirement into test cases.\nJust the sweater case is not enough."
+  },
+  {
+    "startInSeconds": 113,
+    "endInSeconds": 120,
+    "text": "You want a small set of cases that checks the requirement under\ndifferent conditions. One case should have complete information."
+  },
+  {
+    "startInSeconds": 120,
+    "endInSeconds": 124,
+    "text": "For example, a customer asks, \"What colors does the\nClassic Tee come in?\""
+  },
+  {
+    "startInSeconds": 124,
+    "endInSeconds": 132,
+    "text": "And the catalog data lists the available colors: white, black, navy,\nand heather gray. Here, the expected outcome is straightforward."
+  },
+  {
+    "startInSeconds": 132,
+    "endInSeconds": 137,
+    "text": "The agent should answer with the listed colors,\nand avoid adding colors that are not in the catalog."
+  },
+  {
+    "startInSeconds": 137,
+    "endInSeconds": 144,
+    "text": "But what if the agent only has partial information? A merino sweater\ncase fits here. The customer asks how to care for the sweater."
+  },
+  {
+    "startInSeconds": 144,
+    "endInSeconds": 149,
+    "text": "Northwind data says it's machine washable on a wool cycle,\nbut gives no drying instructions."
+  },
+  {
+    "startInSeconds": 149,
+    "endInSeconds": 155,
+    "text": "So the expected outcome is: use the supported washing instruction\nand do not add drying advice."
+  },
+  {
+    "startInSeconds": 155,
+    "endInSeconds": 158,
+    "text": "The agent can say the drying instructions are not available."
+  },
+  {
+    "startInSeconds": 158,
+    "endInSeconds": 164,
+    "text": "A third case should have no relevant information Suppose a customer\nasks, \"What's your return policy?\""
+  },
+  {
+    "startInSeconds": 164,
+    "endInSeconds": 168,
+    "text": "but Northwind does not provide any return policy\ninformation to this agent."
+  },
+  {
+    "startInSeconds": 168,
+    "endInSeconds": 174,
+    "text": "The agent is expected to say that the information is not available or\nthat it cannot help with that request."
+  },
+  {
+    "startInSeconds": 174,
+    "endInSeconds": 180,
+    "text": "Now you have three cases that test the same requirement from different\nangles: complete information, partial information,"
+  },
+  {
+    "startInSeconds": 180,
+    "endInSeconds": 182,
+    "text": "and missing information."
+  },
+  {
+    "startInSeconds": 182,
+    "endInSeconds": 188,
+    "text": "You can also vary the customer side. For example,\n\"What colors does the Classic Tee come in?\""
+  },
+  {
+    "startInSeconds": 188,
+    "endInSeconds": 194,
+    "text": "and \"Do you have the Classic Tee in size medium and what colors are\navailable?\" are two distinct requests."
+  },
+  {
+    "startInSeconds": 194,
+    "endInSeconds": 200,
+    "text": "The second one asks about size and color, so it may require the agent\nto handle multiple product details at once."
+  },
+  {
+    "startInSeconds": 200,
+    "endInSeconds": 206,
+    "text": "But if two cases only change the wording without changing what the\nagent needs to decide, you may not need both."
+  },
+  {
+    "startInSeconds": 206,
+    "endInSeconds": 212,
+    "text": "The point is not to collect as many phrasings as possible,\nbut to keep cases that test meaningful differences."
+  },
+  {
+    "startInSeconds": 212,
+    "endInSeconds": 220,
+    "text": "Once you have the cases, run the agent on them and review the results.\nFor each run, compare the actual versus the expected outcome."
+  },
+  {
+    "startInSeconds": 220,
+    "endInSeconds": 226,
+    "text": "If the customer asked about colors, and the agent listed only colors\nfrom the catalog, that run passes."
+  },
+  {
+    "startInSeconds": 226,
+    "endInSeconds": 232,
+    "text": "If the agent adds forest green when the catalog only lists white,\nblack, navy, and heather gray, that run fails."
+  },
+  {
+    "startInSeconds": 232,
+    "endInSeconds": 235,
+    "text": "Don't forget to write down why."
+  },
+  {
+    "startInSeconds": 235,
+    "endInSeconds": 241,
+    "text": "In this case, the agent mentioned a product color that was not\nsupported by Northwind data, then label the failure."
+  },
+  {
+    "startInSeconds": 241,
+    "endInSeconds": 245,
+    "text": "That could be a groundedness failure,\nand more specifically, hallucination,"
+  },
+  {
+    "startInSeconds": 245,
+    "endInSeconds": 249,
+    "text": "because the agent made a claim with no supporting evidence."
+  },
+  {
+    "startInSeconds": 249,
+    "endInSeconds": 254,
+    "text": "Now look at the return-policy case, where the customer asks,\n\"What's your return policy?\""
+  },
+  {
+    "startInSeconds": 254,
+    "endInSeconds": 260,
+    "text": "Northwind has no return-policy information, so if the agent says,\n\"I do not have return Policy information available\","
+  },
+  {
+    "startInSeconds": 260,
+    "endInSeconds": 262,
+    "text": "that meets the expected outcome."
+  },
+  {
+    "startInSeconds": 262,
+    "endInSeconds": 266,
+    "text": "But if it says, \"You can return items within 30 days,\" that fails."
+  },
+  {
+    "startInSeconds": 266,
+    "endInSeconds": 272,
+    "text": "Here, the main problem is that the agent answered a question outside\nthe information Northwind can provide."
+  },
+  {
+    "startInSeconds": 272,
+    "endInSeconds": 275,
+    "text": "So you might label that as a scope violation."
+  },
+  {
+    "startInSeconds": 275,
+    "endInSeconds": 282,
+    "text": "The expected outcome tells you what should happen, while the failure\nlabel tells you what went wrong when the agent did something else."
+  },
+  {
+    "startInSeconds": 282,
+    "endInSeconds": 290,
+    "text": "Keep both with the case, As you review more cases, start looking\nacross the set. Do you have several unsupported product claims?"
+  },
+  {
+    "startInSeconds": 290,
+    "endInSeconds": 297,
+    "text": "Does the agent ever invent policies outside Northwind's scope?\nDo you see cases where the agent should say information is missing?"
+  },
+  {
+    "startInSeconds": 297,
+    "endInSeconds": 301,
+    "text": "Are there cases where the agent should answer directly because the\ndata fully supports the answer?"
+  },
+  {
+    "startInSeconds": 301,
+    "endInSeconds": 308,
+    "text": "These questions help you find coverage gaps.\nSuppose your first cases mostly test care instructions."
+  },
+  {
+    "startInSeconds": 308,
+    "endInSeconds": 311,
+    "text": "That's useful, but the requirement is broader than care instructions."
+  },
+  {
+    "startInSeconds": 311,
+    "endInSeconds": 317,
+    "text": "You may want cases about colors, materials, sizing, availability,\nor product compatibility."
+  },
+  {
+    "startInSeconds": 317,
+    "endInSeconds": 320,
+    "text": "Suppose you have several cases where the information is missing,"
+  },
+  {
+    "startInSeconds": 320,
+    "endInSeconds": 324,
+    "text": "but very few where the information is present and the agent\nshould answer directly."
+  },
+  {
+    "startInSeconds": 324,
+    "endInSeconds": 331,
+    "text": "Then your benchmark may overrepresent refusals and underrepresent\nordinary successful answers. You need both."
+  },
+  {
+    "startInSeconds": 331,
+    "endInSeconds": 338,
+    "text": "A useful benchmark should catch failures, but it should also confirm\nthat the agent still handles normal cases correctly."
+  },
+  {
+    "startInSeconds": 338,
+    "endInSeconds": 340,
+    "text": "Next, add cases to fill the gaps."
+  },
+  {
+    "startInSeconds": 340,
+    "endInSeconds": 348,
+    "text": "Start with real examples when you can, which you can find in traces,\nreviewed runs, user questions, bug reports, or support examples."
+  },
+  {
+    "startInSeconds": 348,
+    "endInSeconds": 352,
+    "text": "If you find a real customer question that tests an\nimportant gap, use it."
+  },
+  {
+    "startInSeconds": 352,
+    "endInSeconds": 357,
+    "text": "Real examples help the benchmark reflect situations the application\nactually encounters."
+  },
+  {
+    "startInSeconds": 357,
+    "endInSeconds": 361,
+    "text": "Just bear in mind that real examples may not cover\nevery case you need."
+  },
+  {
+    "startInSeconds": 361,
+    "endInSeconds": 369,
+    "text": "If you need a specific kind of case and cannot find one,\nyou can create it yourself, or use an LLM to generate a candidate."
+  },
+  {
+    "startInSeconds": 369,
+    "endInSeconds": 374,
+    "text": "For example, you might ask for a customer question where the catalog\ncontains some product information,"
+  },
+  {
+    "startInSeconds": 374,
+    "endInSeconds": 376,
+    "text": "but not enough to answer every part of the request."
+  },
+  {
+    "startInSeconds": 376,
+    "endInSeconds": 383,
+    "text": "Then review the generated case carefully. Does it test the situation\nyou meant to test? Is the product data realistic?"
+  },
+  {
+    "startInSeconds": 383,
+    "endInSeconds": 392,
+    "text": "Is the expected outcome clear? Did the generated case quietly change\nthe requirement? only keep the case if it adds useful coverage."
+  },
+  {
+    "startInSeconds": 392,
+    "endInSeconds": 400,
+    "text": "As the set grows, you should curate it. Some cases will be redundant.\nFor instance, \"Is the Classic Tee available in medium?\""
+  },
+  {
+    "startInSeconds": 400,
+    "endInSeconds": 405,
+    "text": "and \"Do you have the Classic Tee in size M?\"\nmay test nearly the same thing."
+  },
+  {
+    "startInSeconds": 405,
+    "endInSeconds": 408,
+    "text": "you probably don't need both unless the wording difference matters."
+  },
+  {
+    "startInSeconds": 408,
+    "endInSeconds": 413,
+    "text": "But a case that asks, \"Is the Classic Tee available in medium,\nand what is your return policy?\""
+  },
+  {
+    "startInSeconds": 413,
+    "endInSeconds": 418,
+    "text": "does add a different challenge because the agent needs to answer the\nproduct question using catalog data,"
+  },
+  {
+    "startInSeconds": 418,
+    "endInSeconds": 421,
+    "text": "while also avoiding an unsupported return policy answer."
+  },
+  {
+    "startInSeconds": 421,
+    "endInSeconds": 426,
+    "text": "So that case may be worth keeping. A useful case should do at least\none of three things."
+  },
+  {
+    "startInSeconds": 426,
+    "endInSeconds": 433,
+    "text": "It should either cover a meaningful situation, protect against an\nimportant regression, or clarify a boundary in the requirement."
+  },
+  {
+    "startInSeconds": 433,
+    "endInSeconds": 437,
+    "text": "If a case does none of those, remove it or revise it."
+  },
+  {
+    "startInSeconds": 437,
+    "endInSeconds": 442,
+    "text": "Also pay attention to difficult cases If your benchmark has 98\nstraightforward product questions"
+  },
+  {
+    "startInSeconds": 442,
+    "endInSeconds": 450,
+    "text": "and only two difficult missing information cases, the overall score\ncan look strong even if the agent fails both difficult cases."
+  },
+  {
+    "startInSeconds": 450,
+    "endInSeconds": 454,
+    "text": "That doesn't mean the benchmark is wrong.\nIt means you need to read the score in context."
+  },
+  {
+    "startInSeconds": 454,
+    "endInSeconds": 461,
+    "text": "The overall score describes performance on the benchmark you built,\nnot the true frequency of success or failure in production."
+  },
+  {
+    "startInSeconds": 461,
+    "endInSeconds": 466,
+    "text": "During development, it's often useful to include more difficult cases\nthan you expect to see in everyday use."
+  },
+  {
+    "startInSeconds": 466,
+    "endInSeconds": 471,
+    "text": "That gives you enough examples to measure whether the agent improves\non the behaviors you care about."
+  },
+  {
+    "startInSeconds": 471,
+    "endInSeconds": 478,
+    "text": "At the end of this process, each Northwind benchmark case should keep\ntogether the pieces you need later: the customer query,"
+  },
+  {
+    "startInSeconds": 478,
+    "endInSeconds": 484,
+    "text": "the relevant product data, the expected outcome,\nthe source of the case, and when you've reviewed a failed run,"
+  },
+  {
+    "startInSeconds": 484,
+    "endInSeconds": 487,
+    "text": "the failure label that describes what went wrong."
+  },
+  {
+    "startInSeconds": 487,
+    "endInSeconds": 493,
+    "text": "This is what a complete case might look like. customer query,\n\"What is your return policy?\""
+  },
+  {
+    "startInSeconds": 493,
+    "endInSeconds": 501,
+    "text": "Northwind data has no return policy information available. The\nexpected outcome would be, say that the information is not available."
+  },
+  {
+    "startInSeconds": 501,
+    "endInSeconds": 505,
+    "text": "If the agent invents a return policy, label the failure\nas a Scope violation."
+  },
+  {
+    "startInSeconds": 505,
+    "endInSeconds": 510,
+    "text": "Another case might be: Customer query, \"How should I care for the\nMerino Wool Sweater?\""
+  },
+  {
+    "startInSeconds": 510,
+    "endInSeconds": 514,
+    "text": "Northwind data says, \"Machine washable on wool cycle.\""
+  },
+  {
+    "startInSeconds": 514,
+    "endInSeconds": 520,
+    "text": "The expected outcome is: Use only the supported machine washing\ninstruction, and do not add drying advice."
+  },
+  {
+    "startInSeconds": 520,
+    "endInSeconds": 525,
+    "text": "If the agent adds unsupported drying instructions,\nlabel the failure as Faithfulness drift."
+  },
+  {
+    "startInSeconds": 525,
+    "endInSeconds": 531,
+    "text": "And the third case might be customer query,\n\"What colors does the Classic Tee come in?\""
+  },
+  {
+    "startInSeconds": 531,
+    "endInSeconds": 538,
+    "text": "Catalog data indicates \"White, black, navy, and heather gray.\"\nThe expected outcome is \"Answer with the listed colors.\""
+  },
+  {
+    "startInSeconds": 538,
+    "endInSeconds": 543,
+    "text": "If the agent mentions another color,\nlabel the failure as a Hallucination."
+  },
+  {
+    "startInSeconds": 543,
+    "endInSeconds": 547,
+    "text": "Once the cases are reviewed and curated,\nsave them as a Northwind benchmark."
+  },
+  {
+    "startInSeconds": 547,
+    "endInSeconds": 554,
+    "text": "That benchmark now contains requirements, test cases,\nexpected outcomes, reviewed judgments, and failure labels."
+  },
+  {
+    "startInSeconds": 554,
+    "endInSeconds": 562,
+    "text": "You can run it again as the application changes, and because the cases\nstay the same, you can compare versions against a stable standard."
+  },
+  {
+    "startInSeconds": 562,
+    "endInSeconds": 567,
+    "text": "Keep that in mind for the next module, where you'll go into the\nevaluate stage of the evals process."
+  },
+  {
+    "startInSeconds": 567,
+    "endInSeconds": 572,
+    "text": "You'll build evaluators that check whether Northwind responses\nmeet these requirements,"
+  },
+  {
+    "startInSeconds": 572,
+    "endInSeconds": 576,
+    "text": "and you'll test whether those evaluators agree with the reviewed\nlabels you created here."
+  },
+  {
+    "startInSeconds": 576,
+    "endInSeconds": 577,
+    "text": "See you in module three."
+  }
+]

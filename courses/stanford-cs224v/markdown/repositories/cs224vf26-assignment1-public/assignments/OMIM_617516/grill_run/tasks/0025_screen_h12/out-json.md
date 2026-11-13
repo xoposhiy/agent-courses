@@ -1,0 +1,70 @@
+# Homework 1 public teaching repository: assignments/OMIM_617516/grill_run/tasks/0025_screen_h12/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_617516/grill_run/tasks/0025_screen_h12/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_617516/grill_run/tasks/0025_screen_h12/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature confirms large 17q24 microdeletions involving PSMD12 and adjacent genes like KPNA2 present prenatally with complex limb malformations such as talipes equinovarus.",
+  "confidence": 0.8,
+  "evidence": [
+    {
+      "text": "A 2.5 Mb de novo 17q24.1q24.2 deletion encompassing KPNA2 and PSMD12 was identified prenatally in a fetus presenting with craniofacial dysmorphism, talipes equinovarus, and syndactyly.",
+      "stance": "supports",
+      "source": {
+        "title": "Prenatal Diagnosis of a 2.5\u2009Mb De Novo 17q24.1q24.2 Deletion Encompassing KPNA2 and PSMD12 Genes in a Fetus with Craniofacial Dysmorphism\u00a0\u2026",
+        "authors": [
+          "ME Naud",
+          "L Tosca",
+          "J Martinovic",
+          "J Saada"
+        ],
+        "year": 2017,
+        "journal": null,
+        "doi": "10.1155/2017/7803136",
+        "pmid": "28465847",
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1155/2017/7803136",
+        "quote": "We report on a fetus with craniofacial dysmorphism, talipes equinovarus, and syndactyly associated with a de novo 2.5\u2009Mb 17q24.1q24.2 deletion. Among the deleted genes, KPNA2 and PSMD12 are discussed for the correlation with the fetal phenotype."
+      },
+      "numbers": [
+        {
+          "metric": "deletion size (Mb)",
+          "value": 2.5
+        }
+      ]
+    },
+    {
+      "text": "Microdeletions spanning 2.8 to 3.9 Mb in 17q24.2-q24.3 encompassing PSMD12 correlate with distinct syndromic features including extremity abnormalities and severe developmental delay.",
+      "stance": "supports",
+      "source": {
+        "title": "Association of 17q24. 2\u2010q24. 3 deletions with recognizable phenotype and short telomeres",
+        "authors": [
+          "M Hancarova",
+          "M Malikova",
+          "M Kotrova"
+        ],
+        "year": 2018,
+        "journal": null,
+        "doi": "10.1002/ajmg.a.38711",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ajmg.a.38711",
+        "quote": "We identified a girl with intellectual disability, growth retardation, dysmorphic features, and a de novo 2.8 Mb long deletion of 17q24.2-q24.3. Her phenotype was strikingly similar to one previously described boy with Dubowitz syndrome (MIM 223370) and a de novo 3.9 Mb long deletion encompassing the deletion of our patient."
+      },
+      "numbers": [
+        {
+          "metric": "patient deletion size (Mb)",
+          "value": 2.8
+        },
+        {
+          "metric": "comparator deletion size (Mb)",
+          "value": 3.9
+        }
+      ]
+    }
+  ]
+}
+```

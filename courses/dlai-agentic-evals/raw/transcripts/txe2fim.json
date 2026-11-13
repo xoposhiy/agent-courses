@@ -1,0 +1,227 @@
+[
+  {
+    "startInSeconds": 1,
+    "endInSeconds": 5,
+    "text": "Throughout this module, you've built evaluations that look at\ndifferent parts of an agent's work."
+  },
+  {
+    "startInSeconds": 5,
+    "endInSeconds": 12,
+    "text": "You can check an individual tool call, the trajectory of a run,\nrequirements that carry across a conversation,"
+  },
+  {
+    "startInSeconds": 12,
+    "endInSeconds": 14,
+    "text": "and the state the agent ultimately changed."
+  },
+  {
+    "startInSeconds": 14,
+    "endInSeconds": 19,
+    "text": "Now let's see what happens when you put those checks\ntogether on the same task."
+  },
+  {
+    "startInSeconds": 19,
+    "endInSeconds": 25,
+    "text": "Take a Northwind customer who says early in the conversation,\n\"Don't refund anything until I confirm the amount.\""
+  },
+  {
+    "startInSeconds": 25,
+    "endInSeconds": 33,
+    "text": "The agent verifies the customer, looks up order 4521,\nand finds that the refundable amount is $49.99. So far, so good."
+  },
+  {
+    "startInSeconds": 33,
+    "endInSeconds": 37,
+    "text": "But then it calls process_refund immediately,\nbefore the customer has confirmed anything,"
+  },
+  {
+    "startInSeconds": 37,
+    "endInSeconds": 41,
+    "text": "and tells them your $49.99 refund has been processed."
+  },
+  {
+    "startInSeconds": 41,
+    "endInSeconds": 48,
+    "text": "When you check the database, the refund is there for the correct\namount and the correct order. So, several evaluations pass."
+  },
+  {
+    "startInSeconds": 48,
+    "endInSeconds": 52,
+    "text": "The agent chose the right refund tool,\nusing the correct order and amount."
+  },
+  {
+    "startInSeconds": 52,
+    "endInSeconds": 58,
+    "text": "Customer verification happened before the refund,\nand the expected state change exists in the database."
+  },
+  {
+    "startInSeconds": 58,
+    "endInSeconds": 64,
+    "text": "but the session-level check fails because the agent ignored an\ninstruction the customer gave earlier in the conversation."
+  },
+  {
+    "startInSeconds": 64,
+    "endInSeconds": 71,
+    "text": "That combination of results tells you something very specific about\nthe failure. The problem isn't which tool the agent chose."
+  },
+  {
+    "startInSeconds": 71,
+    "endInSeconds": 76,
+    "text": "It isn't the refund amount, the identity check,\nor whether the refund actually happened."
+  },
+  {
+    "startInSeconds": 76,
+    "endInSeconds": 83,
+    "text": "The problem is that a constraint established earlier in the session\nwas no longer being respected when the agent acted."
+  },
+  {
+    "startInSeconds": 83,
+    "endInSeconds": 89,
+    "text": "This also helps explain why an overall score by itself can sometimes\nhide the most useful information."
+  },
+  {
+    "startInSeconds": 89,
+    "endInSeconds": 97,
+    "text": "Imagine two Northwind runs both received three passing evaluations out\nof four. In the first run, the agent used the wrong order ID."
+  },
+  {
+    "startInSeconds": 97,
+    "endInSeconds": 102,
+    "text": "In the second, the refund was correct,\nbut the customer wasn't verified first."
+  },
+  {
+    "startInSeconds": 102,
+    "endInSeconds": 106,
+    "text": "The pass rate might be identical, but those are two\nvery different failures."
+  },
+  {
+    "startInSeconds": 106,
+    "endInSeconds": 113,
+    "text": "one points you towards how information is being passed into a tool,\nwhile the other shows you how the agent is sequencing required steps."
+  },
+  {
+    "startInSeconds": 113,
+    "endInSeconds": 119,
+    "text": "When you evaluate a complex agent, the individual results help you\nlocate where the task broke down."
+  },
+  {
+    "startInSeconds": 119,
+    "endInSeconds": 126,
+    "text": "That brings us back to the evaluation process you've been using\nthroughout the course. You still begin by investigating what happened."
+  },
+  {
+    "startInSeconds": 126,
+    "endInSeconds": 129,
+    "text": "For a simple response, that might mean reading the answer."
+  },
+  {
+    "startInSeconds": 129,
+    "endInSeconds": 136,
+    "text": "For the kinds of tasks you've seen in this module, it can mean opening\nthe trace, looking at the tool calls, reconstructing the trajectory,"
+  },
+  {
+    "startInSeconds": 136,
+    "endInSeconds": 140,
+    "text": "checking earlier turns in the session,\nor looking at the state in the database."
+  },
+  {
+    "startInSeconds": 140,
+    "endInSeconds": 146,
+    "text": "Then you define what correct behavior should have looked like.\nMaybe the right Order ID should have been 4521."
+  },
+  {
+    "startInSeconds": 146,
+    "endInSeconds": 153,
+    "text": "Perhaps verification had to happen before process_refund,\nor the customer's instruction had to remain active."
+  },
+  {
+    "startInSeconds": 153,
+    "endInSeconds": 157,
+    "text": "or maybe the task wasn't complete unless a refund\nrow actually appeared."
+  },
+  {
+    "startInSeconds": 157,
+    "endInSeconds": 163,
+    "text": "Once that expectation is clear, you can evaluate it at the scope where\nthe relevant evidence exists."
+  },
+  {
+    "startInSeconds": 163,
+    "endInSeconds": 167,
+    "text": "That's the deeper pass through the evaluate stage you've been\nworking on in this module."
+  },
+  {
+    "startInSeconds": 167,
+    "endInSeconds": 174,
+    "text": "You're no longer asking only, \"Was the final response good?\"\nYou can ask, did the agent choose the right action?"
+  },
+  {
+    "startInSeconds": 174,
+    "endInSeconds": 180,
+    "text": "Did it use the right information? Did all the required steps happen?\nDid they happen in the right order?"
+  },
+  {
+    "startInSeconds": 180,
+    "endInSeconds": 187,
+    "text": "Did the agent preserve important context across turns?\nAnd did the task produce the state it was supposed to produce?"
+  },
+  {
+    "startInSeconds": 187,
+    "endInSeconds": 190,
+    "text": "Think back to the shelter example you started this module with."
+  },
+  {
+    "startInSeconds": 190,
+    "endInSeconds": 198,
+    "text": "If the agent says, \"You're booked with Pepper for Saturday at 2 PM\",\nyou now know that evaluating that response is only the beginning."
+  },
+  {
+    "startInSeconds": 198,
+    "endInSeconds": 204,
+    "text": "You can check whether it used the right volunteer record,\nwhether it checked eligibility before choosing the dog,"
+  },
+  {
+    "startInSeconds": 204,
+    "endInSeconds": 210,
+    "text": "whether the booking happened after those requirements were satisfied,\nwhether a constraint from an earlier turn was still respected,"
+  },
+  {
+    "startInSeconds": 210,
+    "endInSeconds": 213,
+    "text": "and finally, whether the booking actually exists."
+  },
+  {
+    "startInSeconds": 213,
+    "endInSeconds": 218,
+    "text": "That's what it means to find and evaluate failures along the way\nto completing a task."
+  },
+  {
+    "startInSeconds": 218,
+    "endInSeconds": 222,
+    "text": "And once your evaluations can tell you where the agent succeeds\nand where it breaks down,"
+  },
+  {
+    "startInSeconds": 222,
+    "endInSeconds": 225,
+    "text": "you have something more useful than a final score."
+  },
+  {
+    "startInSeconds": 225,
+    "endInSeconds": 232,
+    "text": "You have evidence about what needs attention. In the next module,\nyou'll take that evidence into the improvement stage."
+  },
+  {
+    "startInSeconds": 232,
+    "endInSeconds": 238,
+    "text": "You'll choose a behavior to improve, make a targeted change,\ncompare the new version with the old one,"
+  },
+  {
+    "startInSeconds": 238,
+    "endInSeconds": 242,
+    "text": "and check whether you fixed the problem without creating another\nproblem somewhere else."
+  },
+  {
+    "startInSeconds": 242,
+    "endInSeconds": 243,
+    "text": "See you in module 5."
+  }
+]

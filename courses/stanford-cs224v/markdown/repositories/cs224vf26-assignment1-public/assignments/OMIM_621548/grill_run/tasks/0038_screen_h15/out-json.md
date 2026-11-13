@@ -1,0 +1,64 @@
+# Homework 1 public teaching repository: assignments/OMIM_621548/grill_run/tasks/0038_screen_h15/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621548/grill_run/tasks/0038_screen_h15/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621548/grill_run/tasks/0038_screen_h15/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature and preclinical models support that inner retinal bipolar cell dysfunction and synaptic transmission failure cause electronegative ERGs in early CLN3 disease prior to late outer retinal loss.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "In a Cln3-deficient mouse model, decline in inner retinal function was caused by rod bipolar cell death, and inner retina-targeted AAV therapy rescued retinal function whereas photoreceptor-targeted therapy failed, supporting inner retinal/bipolar involvement prior to late photoreceptor loss.",
+      "stance": "supports",
+      "source": {
+        "title": "Gene therapy targeting the inner retina rescues the retinal phenotype in a mouse model of CLN3 Batten disease",
+        "authors": [
+          "SM kleine Holthaus",
+          "M Aristorena"
+        ],
+        "year": 2020,
+        "journal": null,
+        "doi": "10.1089/hum.2020.038",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://journals.sagepub.com/doi/abs/10.1089/hum.2020.038",
+        "quote": "treatment of photoreceptors, which are lost in patients at late disease stages, was not therapeutic in Cln3\u0394ex7/8 mice, underlining the notion that CLN3 disease is primarily a disease of the inner retina with secondary changes in the outer retina."
+      },
+      "numbers": []
+    },
+    {
+      "text": "All five confirmed CLN3 patients presenting early (median age 6.2 years) exhibited an electronegative ERG accompanying early maculopathy.",
+      "stance": "supports",
+      "source": {
+        "title": "Early recognition of CLN3 disease facilitated by visual electrophysiology and multimodal imaging",
+        "authors": [
+          "DH Sakti",
+          "EE Cornish",
+          "CL Fraser",
+          "BM Nash"
+        ],
+        "year": 2023,
+        "journal": null,
+        "doi": "10.1007/s10633-023-09930-1",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://link.springer.com/article/10.1007/s10633-023-09930-1",
+        "quote": "Electronegative ERGs were identified in all patients."
+      },
+      "numbers": [
+        {
+          "metric": "patients with electronegative ERG",
+          "value": "5/5"
+        },
+        {
+          "metric": "median age at assessment (years)",
+          "value": 6.2
+        }
+      ]
+    }
+  ]
+}
+```

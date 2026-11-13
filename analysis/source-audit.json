@@ -1,0 +1,251 @@
+[
+  {
+    "source_id": "stanford-cs329z",
+    "manifest_sha256": "d22a405b9f05ced047c9a4fda6309a4054ec4be06a7fda83e7a0cdf4f130a3be",
+    "material_categories": {
+      "pages": 3,
+      "slides": 14,
+      "videos": 4,
+      "readings": 60,
+      "metadata": 40,
+      "repositories": 155,
+      "assignments": 1,
+      "restricted": 2,
+      "references": 4
+    },
+    "evidence_files": [
+      "courses/stanford-cs329z/markdown/pages/index.md",
+      "courses/stanford-cs329z/markdown/slides/lecture01.md",
+      "courses/stanford-cs329z/markdown/slides/lecture02.md",
+      "courses/stanford-cs329z/markdown/slides/lecture03.md",
+      "courses/stanford-cs329z/markdown/slides/lecture04.md",
+      "courses/stanford-cs329z/markdown/slides/lecture05.md",
+      "courses/stanford-cs329z/markdown/slides/lecture06.md",
+      "courses/stanford-cs329z/markdown/slides/lecture07.md",
+      "courses/stanford-cs329z/markdown/slides/lecture08.md",
+      "courses/stanford-cs329z/markdown/slides/lecture09.md",
+      "courses/stanford-cs329z/markdown/slides/lecture10.md",
+      "courses/stanford-cs329z/markdown/slides/lecture11.md",
+      "courses/stanford-cs329z/markdown/slides/lecture12.md",
+      "courses/stanford-cs329z/markdown/slides/lecture13.md",
+      "courses/stanford-cs329z/markdown/slides/lecture15.md"
+    ]
+  },
+  {
+    "source_id": "columbia-coms4995",
+    "manifest_sha256": "d73a7f6a4503346cf48cea47163a964bef4dbcafc7c380dc6d6b8ef8a58a6763",
+    "material_categories": {
+      "pages": 2,
+      "assignments": 33,
+      "restricted": 1,
+      "slides": 8,
+      "activities": 14,
+      "references": 9
+    },
+    "evidence_files": [
+      "courses/columbia-coms4995/markdown/assignments/hw1.md",
+      "courses/columbia-coms4995/markdown/assignments/hw2.md",
+      "courses/columbia-coms4995/markdown/assignments/hw3.md",
+      "courses/columbia-coms4995/markdown/pages/index.md",
+      "courses/columbia-coms4995/markdown/slides/week1.md",
+      "courses/columbia-coms4995/markdown/slides/week2.md",
+      "courses/columbia-coms4995/markdown/slides/week3.md",
+      "courses/columbia-coms4995/markdown/slides/week4.md",
+      "courses/columbia-coms4995/markdown/slides/week5.md",
+      "courses/columbia-coms4995/markdown/slides/week6.md",
+      "courses/columbia-coms4995/markdown/slides/week7.md",
+      "courses/columbia-coms4995/markdown/slides/week9.md"
+    ]
+  },
+  {
+    "source_id": "cmu-11768",
+    "manifest_sha256": "06c7afd2a26e4c911582bdd9c87c55390214a2324baebedf8e19b07194390c28",
+    "material_categories": {
+      "pages": 7,
+      "metadata": 2,
+      "slides": 18,
+      "readings": 57,
+      "repositories": 272,
+      "videos": 11,
+      "restricted": 2,
+      "optional-readings": 368,
+      "references": 3
+    },
+    "evidence_files": [
+      "courses/cmu-11768/markdown/slides/2026-10-27-zora-wang.md",
+      "courses/cmu-11768/markdown/slides/lecture-01-agents.md",
+      "courses/cmu-11768/markdown/slides/lecture-02-tool-use.md",
+      "courses/cmu-11768/markdown/slides/lecture-03-long-context.md",
+      "courses/cmu-11768/markdown/slides/lecture-04-memory-and-skills.md",
+      "courses/cmu-11768/markdown/slides/lecture-05-planning.md",
+      "courses/cmu-11768/markdown/slides/lecture-06-coding-agents.md",
+      "courses/cmu-11768/markdown/slides/lecture-07-computer-use-agents.md",
+      "courses/cmu-11768/markdown/slides/lecture-08-sft.md",
+      "courses/cmu-11768/markdown/slides/lecture-09-rl-basics.md",
+      "courses/cmu-11768/markdown/slides/lecture-10-deep-research-agents.md",
+      "courses/cmu-11768/markdown/slides/lecture-11-rl-advanced.md",
+      "courses/cmu-11768/markdown/slides/lecture-12-rl-systems.md",
+      "courses/cmu-11768/markdown/slides/lecture-13-agent-safety.md",
+      "courses/cmu-11768/markdown/slides/lecture-14-openhands.md",
+      "courses/cmu-11768/markdown/slides/lecture-15-orchestration-and-monitoring.md",
+      "courses/cmu-11768/markdown/slides/lecture-18-multi-agent-systems.md",
+      "courses/cmu-11768/markdown/slides/lecture-20-search-basics.md"
+    ]
+  },
+  {
+    "source_id": "langchain-deep-agents",
+    "manifest_sha256": "63b20a16c7e382f8bdb77886bd93efea4673075aa0d83b0ab1141f6d5e3cfe59",
+    "material_categories": {
+      "pages": 1,
+      "repositories": 345,
+      "tutors": 27,
+      "videos": 79,
+      "examples": 1,
+      "readings": 125,
+      "lessons": 29,
+      "lesson-assets": 6
+    },
+    "evidence_files": [
+      "courses/langchain-deep-agents/markdown/lessons/m1.1-overview.md",
+      "courses/langchain-deep-agents/markdown/lessons/m1.2-running-a-deep-agent.md",
+      "courses/langchain-deep-agents/markdown/lessons/m1.3-models.md",
+      "courses/langchain-deep-agents/markdown/lessons/m1.4-system-prompt.md",
+      "courses/langchain-deep-agents/markdown/lessons/m1.5-tools.md",
+      "courses/langchain-deep-agents/markdown/lessons/m1.6-mcp.md",
+      "courses/langchain-deep-agents/markdown/lessons/m1.7-messages-threads-checkpointers.md",
+      "courses/langchain-deep-agents/markdown/lessons/m1.8-hitl.md",
+      "courses/langchain-deep-agents/markdown/lessons/m2.1-the-deep-agent-environment.md",
+      "courses/langchain-deep-agents/markdown/lessons/m2.2-filesystem-backends.md",
+      "courses/langchain-deep-agents/markdown/lessons/m2.3-sandboxes-and-localshell.md",
+      "courses/langchain-deep-agents/markdown/lessons/m2.4-interpreter.md",
+      "courses/langchain-deep-agents/markdown/lessons/m3.1-summarization-context-offloading.md",
+      "courses/langchain-deep-agents/markdown/lessons/m3.2-skills.md",
+      "courses/langchain-deep-agents/markdown/lessons/m3.3-memory.md",
+      "courses/langchain-deep-agents/markdown/lessons/m4.1-delegation.md",
+      "courses/langchain-deep-agents/markdown/lessons/m4.2-building-a-subagent-team.md",
+      "courses/langchain-deep-agents/markdown/lessons/m4.3-dynamic-subagents.md",
+      "courses/langchain-deep-agents/markdown/lessons/m5.1-putting-it-all-together.md",
+      "courses/langchain-deep-agents/markdown/lessons/m5.2-local-deployment.md",
+      "courses/langchain-deep-agents/markdown/lessons/m5.4-async-subagents.md",
+      "courses/langchain-deep-agents/markdown/lessons/m5.5-sandbox-async-agent.md",
+      "courses/langchain-deep-agents/markdown/lessons/m6.1-what-is-managed-deep-agents.md"
+    ]
+  },
+  {
+    "source_id": "stanford-cs224v",
+    "manifest_sha256": "cc374523861f271a684ee4d3b461589136c3219c54c6e7aec5c7d4b68f9fadd0",
+    "material_categories": {
+      "pages": 4,
+      "readings": 77,
+      "restricted": 4,
+      "slides": 11,
+      "assignments": 639,
+      "projects": 1,
+      "notebooks": 4,
+      "repositories": 6004,
+      "project-references": 27,
+      "metadata": 1
+    },
+    "evidence_files": [
+      "courses/stanford-cs224v/markdown/assignments/cs224v-2026-hw1.md",
+      "courses/stanford-cs224v/markdown/assignments/cs224v-2026-hw2.md",
+      "courses/stanford-cs224v/markdown/pages/schedule.md",
+      "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+      "courses/stanford-cs224v/markdown/slides/i-sliders.md",
+      "courses/stanford-cs224v/markdown/slides/l-agentic.md",
+      "courses/stanford-cs224v/markdown/slides/l-churro.md",
+      "courses/stanford-cs224v/markdown/slides/l-data-driven-deep-research.md",
+      "courses/stanford-cs224v/markdown/slides/l-freetext.md",
+      "courses/stanford-cs224v/markdown/slides/l-new-suql.md",
+      "courses/stanford-cs224v/markdown/slides/l-newworksheet.md",
+      "courses/stanford-cs224v/markdown/slides/l-satir.md",
+      "courses/stanford-cs224v/markdown/slides/l-smt-match.md"
+    ]
+  },
+  {
+    "source_id": "dlai-agentic-evals",
+    "manifest_sha256": "102f3dd224e1205fd9b56263053e70c0830bfd74276bf0d7d41a2f686d5047d5",
+    "material_categories": {
+      "pages": 3,
+      "metadata": 4,
+      "access-attempts": 5,
+      "slides": 5,
+      "lessons": 28,
+      "restricted": 24
+    },
+    "evidence_files": [
+      "courses/dlai-agentic-evals/markdown/slides/module-1.md",
+      "courses/dlai-agentic-evals/markdown/slides/module-2.md",
+      "courses/dlai-agentic-evals/markdown/slides/module-3.md",
+      "courses/dlai-agentic-evals/markdown/slides/module-4.md",
+      "courses/dlai-agentic-evals/markdown/slides/module-5.md"
+    ]
+  },
+  {
+    "source_id": "colorado-csci7000",
+    "manifest_sha256": "98e27fa89c6397c17e3bcc698a12c235d476f1bf3d65a20e5f359772876e885d",
+    "material_categories": {
+      "pages": 11,
+      "restricted": 3,
+      "slides": 1,
+      "readings": 33,
+      "optional-readings": 3
+    },
+    "evidence_files": [
+      "courses/colorado-csci7000/markdown/pages/page-index.md",
+      "courses/colorado-csci7000/markdown/pages/page-researchproject.md",
+      "courses/colorado-csci7000/markdown/readings/arxiv-2210-03629.md",
+      "courses/colorado-csci7000/markdown/readings/arxiv-2302-04761.md",
+      "courses/colorado-csci7000/markdown/readings/arxiv-2303-11366.md",
+      "courses/colorado-csci7000/markdown/readings/arxiv-2305-14325.md",
+      "courses/colorado-csci7000/markdown/readings/arxiv-2305-15334.md",
+      "courses/colorado-csci7000/markdown/readings/arxiv-2308-00352.md",
+      "courses/colorado-csci7000/markdown/readings/arxiv-2308-08155.md",
+      "courses/colorado-csci7000/markdown/readings/arxiv-2308-11432.md",
+      "courses/colorado-csci7000/markdown/readings/arxiv-2407-16741.md",
+      "courses/colorado-csci7000/markdown/readings/arxiv-2409-02977.md",
+      "courses/colorado-csci7000/markdown/readings/arxiv-2512-18552.md",
+      "courses/colorado-csci7000/markdown/readings/arxiv-2603-22327.md",
+      "courses/colorado-csci7000/markdown/readings/arxiv-2604-12147.md",
+      "courses/colorado-csci7000/markdown/readings/arxiv-2605-29442.md",
+      "courses/colorado-csci7000/markdown/readings/arxiv-2605-30777.md",
+      "courses/colorado-csci7000/markdown/readings/arxiv-2606-17799.md",
+      "courses/colorado-csci7000/markdown/readings/arxiv-2610-14224v1.md",
+      "courses/colorado-csci7000/markdown/readings/ref-0cfd55675bb9.md",
+      "courses/colorado-csci7000/markdown/slides/w1l1.md"
+    ]
+  },
+  {
+    "source_id": "agentic-large-language-models",
+    "manifest_sha256": "d73616d5b885e83300f693a382f17242e6bca93b5bac610b35b321c0dbcb3ebc",
+    "material_categories": {
+      "metadata": 1,
+      "book": 2,
+      "originals": 1,
+      "chapters": 23
+    },
+    "evidence_files": [
+      "courses/agentic-large-language-models/markdown/chapters/chapter-01-introduction.md",
+      "courses/agentic-large-language-models/markdown/chapters/chapter-02-foundations-of-language-modeling-with-llms.md",
+      "courses/agentic-large-language-models/markdown/chapters/chapter-03-the-large-language-model-training-pipeline.md",
+      "courses/agentic-large-language-models/markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+      "courses/agentic-large-language-models/markdown/chapters/chapter-05-case-study-1-building-llms-from-scratch.md",
+      "courses/agentic-large-language-models/markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+      "courses/agentic-large-language-models/markdown/chapters/chapter-07-vision-action-and-world-models.md",
+      "courses/agentic-large-language-models/markdown/chapters/chapter-08-metalearning.md",
+      "courses/agentic-large-language-models/markdown/chapters/chapter-09-interaction-styles-for-agentic-llms.md",
+      "courses/agentic-large-language-models/markdown/chapters/chapter-10-case-study-2-balrog-for-llm-reasoning-and-reflection.md",
+      "courses/agentic-large-language-models/markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md",
+      "courses/agentic-large-language-models/markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+      "courses/agentic-large-language-models/markdown/chapters/chapter-13-from-tools-to-assistants-real-world-applications.md",
+      "courses/agentic-large-language-models/markdown/chapters/chapter-14-case-study-3-building-a-multi-agent-diagnosis-framework.md",
+      "courses/agentic-large-language-models/markdown/chapters/chapter-15-studying-behavior-of-agentic-llms.md",
+      "courses/agentic-large-language-models/markdown/chapters/chapter-16-role-based-interaction-in-multi-llm-systems.md",
+      "courses/agentic-large-language-models/markdown/chapters/chapter-17-emergent-behavior-in-multi-llm-systems.md",
+      "courses/agentic-large-language-models/markdown/chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms.md",
+      "courses/agentic-large-language-models/markdown/chapters/chapter-20-advanced-transformer-and-agentic-architectures.md",
+      "courses/agentic-large-language-models/markdown/chapters/chapter-21-mechanistic-interpretability-for-llm-agents.md",
+      "courses/agentic-large-language-models/markdown/chapters/chapter-22-cognitive-perspectives-on-agentic-llms.md"
+    ]
+  }
+]

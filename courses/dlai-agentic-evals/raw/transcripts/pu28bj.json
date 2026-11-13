@@ -1,0 +1,332 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 8,
+    "text": "In the last video, you saw how an LLM judge uses a rubric to check\nwhether an application's responses meet its requirements."
+  },
+  {
+    "startInSeconds": 8,
+    "endInSeconds": 14,
+    "text": "But if you just ask the judge, \"Is this a good response?\",\nit has to decide for itself what good means."
+  },
+  {
+    "startInSeconds": 14,
+    "endInSeconds": 21,
+    "text": "You need to tell it what you expect from the response, what to look\nfor, and what would make the response acceptable or unacceptable."
+  },
+  {
+    "startInSeconds": 21,
+    "endInSeconds": 26,
+    "text": "So in this video, you'll look at how to turn a requirement\ninto a custom rubric,"
+  },
+  {
+    "startInSeconds": 26,
+    "endInSeconds": 32,
+    "text": "instructions that describe how the response should be evaluated,\nwith examples that show how to apply them."
+  },
+  {
+    "startInSeconds": 32,
+    "endInSeconds": 37,
+    "text": "Let's work through what you need to include in that custom rubric,\nusing the shelter's safe matching requirement."
+  },
+  {
+    "startInSeconds": 37,
+    "endInSeconds": 44,
+    "text": "You'll organize it into five parts, each with a different job:\nthe Role, the Criteria, the Inputs, Labeled examples,"
+  },
+  {
+    "startInSeconds": 44,
+    "endInSeconds": 46,
+    "text": "and the Output instructions."
+  },
+  {
+    "startInSeconds": 46,
+    "endInSeconds": 50,
+    "text": "The first is the role, which tells the judge what job it's doing."
+  },
+  {
+    "startInSeconds": 50,
+    "endInSeconds": 52,
+    "text": "For the shelter, you might write:"
+  },
+  {
+    "startInSeconds": 52,
+    "endInSeconds": 58,
+    "text": "\"You are evaluating whether a proposed volunteer-dog match is safe for\nboth the volunteer and the dog.\""
+  },
+  {
+    "startInSeconds": 58,
+    "endInSeconds": 63,
+    "text": "A sentence or two is usually enough to name the task and what matters."
+  },
+  {
+    "startInSeconds": 63,
+    "endInSeconds": 70,
+    "text": "Simply saying \"You are an expert evaluator\" doesn't tell the judge\nwhat you want evaluated, so give it that specific job."
+  },
+  {
+    "startInSeconds": 70,
+    "endInSeconds": 75,
+    "text": "Now the judge knows it's evaluating the safety of a match,\nbut it still needs to know what makes a match safe."
+  },
+  {
+    "startInSeconds": 75,
+    "endInSeconds": 77,
+    "text": "That's what the criteria explain."
+  },
+  {
+    "startInSeconds": 77,
+    "endInSeconds": 84,
+    "text": "For the shelter, tell the judge to check that the volunteer can\nphysically handle the dog, has experience relevant to the dog's needs,"
+  },
+  {
+    "startInSeconds": 84,
+    "endInSeconds": 88,
+    "text": "and can manage the behavior risks in the dog's record."
+  },
+  {
+    "startInSeconds": 88,
+    "endInSeconds": 92,
+    "text": "To apply those criteria, the judge needs information for the case."
+  },
+  {
+    "startInSeconds": 92,
+    "endInSeconds": 97,
+    "text": "These are the inputs: the volunteer's profile, the dog's record,\nand the agent's recommendation."
+  },
+  {
+    "startInSeconds": 97,
+    "endInSeconds": 103,
+    "text": "Label each input so the judge can tell which information came from the\nvolunteer, which came from the shelter,"
+  },
+  {
+    "startInSeconds": 103,
+    "endInSeconds": 105,
+    "text": "and which decision the agent made."
+  },
+  {
+    "startInSeconds": 105,
+    "endInSeconds": 110,
+    "text": "If relevant evidence is missing, the judge may not be able to apply\nthe criteria reliably."
+  },
+  {
+    "startInSeconds": 110,
+    "endInSeconds": 116,
+    "text": "The case information sits in the same prompt as your instructions,\nso separate the two clearly."
+  },
+  {
+    "startInSeconds": 116,
+    "endInSeconds": 121,
+    "text": "For example, you can put each input inside tags that mark\nwhere it begins and ends."
+  },
+  {
+    "startInSeconds": 121,
+    "endInSeconds": 126,
+    "text": "The instructions tell the judge how to evaluate,\nand the tagged inputs identify what it should evaluate."
+  },
+  {
+    "startInSeconds": 126,
+    "endInSeconds": 132,
+    "text": "The inputs will vary by application, but keep the case information\nseparate from the instructions."
+  },
+  {
+    "startInSeconds": 132,
+    "endInSeconds": 140,
+    "text": "Next, you can add labeled examples to show how those criteria apply.\nA judge can interpret written criteria differently from a reviewer."
+  },
+  {
+    "startInSeconds": 140,
+    "endInSeconds": 146,
+    "text": "So use cases from the benchmark that reviewers have already labeled\nand include the case evidence, the expected label,"
+  },
+  {
+    "startInSeconds": 146,
+    "endInSeconds": 148,
+    "text": "and the reason for it."
+  },
+  {
+    "startInSeconds": 148,
+    "endInSeconds": 153,
+    "text": "Include both safe and unsafe matches, especially cases where it's\nharder to decide which label applies,"
+  },
+  {
+    "startInSeconds": 153,
+    "endInSeconds": 157,
+    "text": "and make sure reviewers agree with the labels before\nusing them as examples."
+  },
+  {
+    "startInSeconds": 157,
+    "endInSeconds": 161,
+    "text": "Though examples can help, they don't always improve\nthe judge's decisions."
+  },
+  {
+    "startInSeconds": 161,
+    "endInSeconds": 164,
+    "text": "Sometimes the judge follows the examples too closely,"
+  },
+  {
+    "startInSeconds": 164,
+    "endInSeconds": 170,
+    "text": "basing its decision on similarities to those cases rather than\nchecking whether the new case meets the criteria."
+  },
+  {
+    "startInSeconds": 170,
+    "endInSeconds": 176,
+    "text": "So try the rubric with and without examples, and compare both versions\non the same cases that people have already reviewed."
+  },
+  {
+    "startInSeconds": 176,
+    "endInSeconds": 182,
+    "text": "Use cases that aren't included as examples in the prompt,\nand see which version agrees more often with the reviewers,"
+  },
+  {
+    "startInSeconds": 182,
+    "endInSeconds": 184,
+    "text": "especially on difficult cases."
+  },
+  {
+    "startInSeconds": 184,
+    "endInSeconds": 188,
+    "text": "The final part of the rubric tells the judge how to\nreport its decision."
+  },
+  {
+    "startInSeconds": 188,
+    "endInSeconds": 196,
+    "text": "For safe matching, you can ask for one label, SAFE or UNSAFE, and\ndefine what each means. Those labels are easy to compare and filter."
+  },
+  {
+    "startInSeconds": 196,
+    "endInSeconds": 202,
+    "text": "A score from 1 to 10 is hard to use if you haven't explained what\nmakes a 6 different from a 7."
+  },
+  {
+    "startInSeconds": 202,
+    "endInSeconds": 208,
+    "text": "If some cases need human review, you can add a NEEDS_REVIEW label,\nbut define when the judge should use it."
+  },
+  {
+    "startInSeconds": 208,
+    "endInSeconds": 214,
+    "text": "For example, you might require human review for a match with a large\ndog when the volunteer has some experience,"
+  },
+  {
+    "startInSeconds": 214,
+    "endInSeconds": 216,
+    "text": "but no history with large breeds."
+  },
+  {
+    "startInSeconds": 216,
+    "endInSeconds": 221,
+    "text": "For those cases, the rubric should tell the judge to use\nthe label NEEDS_REVIEW."
+  },
+  {
+    "startInSeconds": 221,
+    "endInSeconds": 226,
+    "text": "Only add extra labels or scores when you can explain what each means\nand why you need it."
+  },
+  {
+    "startInSeconds": 226,
+    "endInSeconds": 232,
+    "text": "So those five parts tell the judge what it's evaluating,\nhow to make the decision, what information to use,"
+  },
+  {
+    "startInSeconds": 232,
+    "endInSeconds": 237,
+    "text": "how the criteria apply to the examples, and how to report the result."
+  },
+  {
+    "startInSeconds": 237,
+    "endInSeconds": 242,
+    "text": "They work together in one prompt to explain the assessment you\nwant the judge to make."
+  },
+  {
+    "startInSeconds": 242,
+    "endInSeconds": 250,
+    "text": "Now, let's look at a few good practices for writing custom rubrics.\nFirst, don't ask one rubric to judge everything about a response."
+  },
+  {
+    "startInSeconds": 250,
+    "endInSeconds": 256,
+    "text": "One of the biggest mistakes is cramming a bunch of evaluations into a\nsingle prompt across multiple dimensions."
+  },
+  {
+    "startInSeconds": 256,
+    "endInSeconds": 262,
+    "text": "For example, you might want to check whether a match is safe\nand whether the agent speaks politely to the volunteer."
+  },
+  {
+    "startInSeconds": 262,
+    "endInSeconds": 265,
+    "text": "If you combine both into one pass or fail result,"
+  },
+  {
+    "startInSeconds": 265,
+    "endInSeconds": 271,
+    "text": "a failure won't tell you whether the problem was an unsafe match\nor how the agent spoke to the volunteer."
+  },
+  {
+    "startInSeconds": 271,
+    "endInSeconds": 277,
+    "text": "So give each evaluator one dimension with a single,\nspecific question to answer: \"Is this match safe?\""
+  },
+  {
+    "startInSeconds": 277,
+    "endInSeconds": 285,
+    "text": "for one, and \"Did the agent respond politely?\" for another. You'll get\na separate result for each, so you can see what needs fixing."
+  },
+  {
+    "startInSeconds": 285,
+    "endInSeconds": 289,
+    "text": "Then you can combine them with whatever rule makes sense\nfor your application."
+  },
+  {
+    "startInSeconds": 289,
+    "endInSeconds": 295,
+    "text": "Keeping the results separate lets you track improvement for each\nrequirement, and it also lets you treat failures differently."
+  },
+  {
+    "startInSeconds": 295,
+    "endInSeconds": 299,
+    "text": "An unsafe match is more serious than a safe match that misses a\nvolunteer's preferences."
+  },
+  {
+    "startInSeconds": 299,
+    "endInSeconds": 306,
+    "text": "So you might accept a missed preference for now, but a safety problem\nis a more serious issue that might act as a guardrail."
+  },
+  {
+    "startInSeconds": 306,
+    "endInSeconds": 313,
+    "text": "you probably don't want to ship your app, even if you implemented some\nfixes that improved performance in other, less critical areas."
+  },
+  {
+    "startInSeconds": 313,
+    "endInSeconds": 316,
+    "text": "Another good practice is to treat your rubric like code."
+  },
+  {
+    "startInSeconds": 316,
+    "endInSeconds": 322,
+    "text": "Changing the prompts can change the judge's decision,\nso keep a record of each version and its results."
+  },
+  {
+    "startInSeconds": 322,
+    "endInSeconds": 330,
+    "text": "When you revise a rubric, change one thing at a time and test it on\nthe same cases so you can see what effect each edit has."
+  },
+  {
+    "startInSeconds": 330,
+    "endInSeconds": 334,
+    "text": "Keep earlier versions so you can go back if a change makes\nthe judgments worse."
+  },
+  {
+    "startInSeconds": 334,
+    "endInSeconds": 339,
+    "text": "You've now seen how to put a custom rubric together\nand revise it over time."
+  },
+  {
+    "startInSeconds": 339,
+    "endInSeconds": 343,
+    "text": "In the next video, you'll learn how to test whether you can trust\nthe judge's decisions."
+  }
+]

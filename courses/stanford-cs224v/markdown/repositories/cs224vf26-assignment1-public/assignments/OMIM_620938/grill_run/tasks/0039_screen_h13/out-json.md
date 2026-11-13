@@ -1,0 +1,54 @@
+# Homework 1 public teaching repository: assignments/OMIM_620938/grill_run/tasks/0039_screen_h13/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620938/grill_run/tasks/0039_screen_h13/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620938/grill_run/tasks/0039_screen_h13/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "NFU1-related spastic paraplegia (SPG93) frequently features cerebellar ataxia, leukoencephalopathy, and complex neurological involvement in surviving patients.",
+  "confidence": 0.7,
+  "evidence": [
+    {
+      "text": "Hypomorphic variants in genes including NFU1 present with ataxia and/or spastic paraplegia in cohort screenings of inherited ataxia and related diseases.",
+      "stance": "supports",
+      "source": {
+        "title": "High rate of hypomorphic variants as the cause of inherited ataxia and related diseases: study of a cohort of 366 families",
+        "authors": [
+          "M Benkirane",
+          "C Marelli",
+          "C Guissart",
+          "A Roubertie"
+        ],
+        "year": 2021,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.nature.com/articles/s41436-021-01250-6",
+        "quote": "As exemplified in the NFU1, STUB1, and POLR3A cases, ataxia and/or spastic paraplegia"
+      },
+      "numbers": []
+    },
+    {
+      "text": "A milder NFU1-associated spastic paraplegia phenotype presents with progressive spastic paraparesis alongside other neurological features and white matter abnormalities, supporting complex HSP rather than a pure phenotype.",
+      "stance": "supports",
+      "source": {
+        "title": "New spastic paraplegia phenotype associated to mutation ...",
+        "authors": [
+          "D Tonduti"
+        ],
+        "year": 2015,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": "4333890",
+        "url": "https://europepmc.org/article/pmc/4333890",
+        "quote": "We report a new NFU1 mutated patient presenting with a milder phenotype characterized by a later onset, a slowly progressive spastic paraparesis with relapsing-remitting episodes, mild cognitive impairment and a long survival."
+      },
+      "numbers": []
+    }
+  ]
+}
+```

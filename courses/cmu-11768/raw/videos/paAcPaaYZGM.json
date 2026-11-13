@@ -1,0 +1,9047 @@
+[
+  {
+    "text": "Okay, so let's go ahead and get started.",
+    "start": 0.48,
+    "duration": 6.319
+  },
+  {
+    "text": "So today is going to be about an intro",
+    "start": 3.84,
+    "duration": 5.2
+  },
+  {
+    "text": "to reinforcement learning which will",
+    "start": 6.799,
+    "duration": 5.76
+  },
+  {
+    "text": "build on the SFT for agents uh that we",
+    "start": 9.04,
+    "duration": 5.519
+  },
+  {
+    "text": "had last week. This is going to be the",
+    "start": 12.559,
+    "duration": 3.841
+  },
+  {
+    "text": "first of three lectures that we'll have",
+    "start": 14.559,
+    "duration": 4.56
+  },
+  {
+    "text": "on reinforcement learning. And so in",
+    "start": 16.4,
+    "duration": 4.0
+  },
+  {
+    "text": "this first one, we're going to be",
+    "start": 19.119,
+    "duration": 3.361
+  },
+  {
+    "text": "talking about basic poly gradient",
+    "start": 20.4,
+    "duration": 4.799
+  },
+  {
+    "text": "methods, which are ways where agents",
+    "start": 22.48,
+    "duration": 4.879
+  },
+  {
+    "text": "interact with the environment and get",
+    "start": 25.199,
+    "duration": 4.08
+  },
+  {
+    "text": "feedback and then update their weights",
+    "start": 27.359,
+    "duration": 5.601
+  },
+  {
+    "text": "to make things that were successful that",
+    "start": 29.279,
+    "duration": 6.721
+  },
+  {
+    "text": "got high reward more likely and things",
+    "start": 32.96,
+    "duration": 5.759
+  },
+  {
+    "text": "that got low reward less likely. We'll",
+    "start": 36.0,
+    "duration": 4.719
+  },
+  {
+    "text": "then have a second lecture which will",
+    "start": 38.719,
+    "duration": 4.321
+  },
+  {
+    "text": "actually be next week on uh more",
+    "start": 40.719,
+    "duration": 5.36
+  },
+  {
+    "text": "advanced RL algorithms talking about off",
+    "start": 43.04,
+    "duration": 5.92
+  },
+  {
+    "text": "policy methods about um some of the",
+    "start": 46.079,
+    "duration": 4.64
+  },
+  {
+    "text": "things that you need to do to stabilize",
+    "start": 48.96,
+    "duration": 5.04
+  },
+  {
+    "text": "RL and get it to work. And then our",
+    "start": 50.719,
+    "duration": 6.0
+  },
+  {
+    "text": "third lecture will be on RL systems and",
+    "start": 54.0,
+    "duration": 4.079
+  },
+  {
+    "text": "going into some of the practical",
+    "start": 56.719,
+    "duration": 2.961
+  },
+  {
+    "text": "frameworks and you know things that you",
+    "start": 58.079,
+    "duration": 3.201
+  },
+  {
+    "text": "need to think about and pay attention to",
+    "start": 59.68,
+    "duration": 3.679
+  },
+  {
+    "text": "in hyperparameters when you're training",
+    "start": 61.28,
+    "duration": 4.56
+  },
+  {
+    "text": "these agents. And all of these should",
+    "start": 63.359,
+    "duration": 5.76
+  },
+  {
+    "text": "set you up uh pretty well for assignment",
+    "start": 65.84,
+    "duration": 5.52
+  },
+  {
+    "text": "three, which is going to be focused on",
+    "start": 69.119,
+    "duration": 4.641
+  },
+  {
+    "text": "training models with reinforcement",
+    "start": 71.36,
+    "duration": 5.439
+  },
+  {
+    "text": "learning in two settings. So the first",
+    "start": 73.76,
+    "duration": 5.039
+  },
+  {
+    "text": "setting is going to be a simple kind of",
+    "start": 76.799,
+    "duration": 4.081
+  },
+  {
+    "text": "sandboxed setting, which we'll actually",
+    "start": 78.799,
+    "duration": 3.68
+  },
+  {
+    "text": "use as a running example in this",
+    "start": 80.88,
+    "duration": 3.44
+  },
+  {
+    "text": "lecture. It's going to be called number",
+    "start": 82.479,
+    "duration": 3.601
+  },
+  {
+    "text": "search. And the second one is going to",
+    "start": 84.32,
+    "duration": 4.32
+  },
+  {
+    "text": "be like a simple kind of uh crafting",
+    "start": 86.08,
+    "duration": 4.079
+  },
+  {
+    "text": "environment that's a little bit like",
+    "start": 88.64,
+    "duration": 3.36
+  },
+  {
+    "text": "Minecraft. So for these, they're",
+    "start": 90.159,
+    "duration": 3.841
+  },
+  {
+    "text": "definitely going to require more compute",
+    "start": 92.0,
+    "duration": 4.72
+  },
+  {
+    "text": "than your previous assignments have. Um",
+    "start": 94.0,
+    "duration": 4.479
+  },
+  {
+    "text": "so you'll be using the compute credits",
+    "start": 96.72,
+    "duration": 4.48
+  },
+  {
+    "text": "more heavily, but uh you should have the",
+    "start": 98.479,
+    "duration": 5.201
+  },
+  {
+    "text": "foundations to get started on those",
+    "start": 101.2,
+    "duration": 4.0
+  },
+  {
+    "text": "assignments after these first two",
+    "start": 103.68,
+    "duration": 4.64
+  },
+  {
+    "text": "lectures. And um yeah, and we're looking",
+    "start": 105.2,
+    "duration": 5.599
+  },
+  {
+    "text": "forward to uh to seeing what you all do",
+    "start": 108.32,
+    "duration": 4.4
+  },
+  {
+    "text": "for those. We'll also have a guest",
+    "start": 110.799,
+    "duration": 4.721
+  },
+  {
+    "text": "lecture on Thursday from um Akari Asai",
+    "start": 112.72,
+    "duration": 5.439
+  },
+  {
+    "text": "who's a faculty here at CMU uh who's an",
+    "start": 115.52,
+    "duration": 4.639
+  },
+  {
+    "text": "expert on deep research and she'll be",
+    "start": 118.159,
+    "duration": 4.64
+  },
+  {
+    "text": "talking about that as another domain for",
+    "start": 120.159,
+    "duration": 5.121
+  },
+  {
+    "text": "agents uh that complements the the ones",
+    "start": 122.799,
+    "duration": 5.201
+  },
+  {
+    "text": "that we've talked about so far. Cool.",
+    "start": 125.28,
+    "duration": 5.44
+  },
+  {
+    "text": "Any uh any quick logistic questions",
+    "start": 128.0,
+    "duration": 6.2
+  },
+  {
+    "text": "before we get started?",
+    "start": 130.72,
+    "duration": 3.48
+  },
+  {
+    "text": "Okay. Yeah. So uh today we'll have a",
+    "start": 134.72,
+    "duration": 5.2
+  },
+  {
+    "text": "bridge from uh supervised fine-tuning to",
+    "start": 137.36,
+    "duration": 5.28
+  },
+  {
+    "text": "policy gradient methods which are kind",
+    "start": 139.92,
+    "duration": 5.36
+  },
+  {
+    "text": "of the most uh the most basic but also",
+    "start": 142.64,
+    "duration": 4.239
+  },
+  {
+    "text": "one of the most elegant forms of",
+    "start": 145.28,
+    "duration": 5.039
+  },
+  {
+    "text": "reinforcement learning.",
+    "start": 146.879,
+    "duration": 5.521
+  },
+  {
+    "text": "So the running example that we'll use is",
+    "start": 150.319,
+    "duration": 4.64
+  },
+  {
+    "text": "this task that we'll call number search",
+    "start": 152.4,
+    "duration": 4.96
+  },
+  {
+    "text": "which is basically like training an",
+    "start": 154.959,
+    "duration": 4.481
+  },
+  {
+    "text": "agent to guess a number based on",
+    "start": 157.36,
+    "duration": 3.84
+  },
+  {
+    "text": "feedback about whether you're too high",
+    "start": 159.44,
+    "duration": 4.0
+  },
+  {
+    "text": "or too low. So this is a pretty simple",
+    "start": 161.2,
+    "duration": 4.48
+  },
+  {
+    "text": "task but you know easy to understand and",
+    "start": 163.44,
+    "duration": 4.48
+  },
+  {
+    "text": "easy to come up with a reasonable policy",
+    "start": 165.68,
+    "duration": 5.44
+  },
+  {
+    "text": "for it. So the setup is there's this",
+    "start": 167.92,
+    "duration": 5.679
+  },
+  {
+    "text": "number which is part of the environment",
+    "start": 171.12,
+    "duration": 4.56
+  },
+  {
+    "text": "for this task but isn't known to the",
+    "start": 173.599,
+    "duration": 4.161
+  },
+  {
+    "text": "agent and it's an integer between 1 and",
+    "start": 175.68,
+    "duration": 4.32
+  },
+  {
+    "text": "16. The agent is going to get four",
+    "start": 177.76,
+    "duration": 4.96
+  },
+  {
+    "text": "attempts to guess the number. And after",
+    "start": 180.0,
+    "duration": 5.2
+  },
+  {
+    "text": "it makes a guess, the if it got it",
+    "start": 182.72,
+    "duration": 4.32
+  },
+  {
+    "text": "correct, the environment will say",
+    "start": 185.2,
+    "duration": 3.759
+  },
+  {
+    "text": "correct. But otherwise, the environment",
+    "start": 187.04,
+    "duration": 4.32
+  },
+  {
+    "text": "will say, uh, you should go higher or",
+    "start": 188.959,
+    "duration": 5.041
+  },
+  {
+    "text": "you should go lower. And then the agent",
+    "start": 191.36,
+    "duration": 4.56
+  },
+  {
+    "text": "can make another guess up to four",
+    "start": 194.0,
+    "duration": 4.56
+  },
+  {
+    "text": "guesses in total. If at any point the",
+    "start": 195.92,
+    "duration": 5.039
+  },
+  {
+    "text": "agent gets it correct, the task ends and",
+    "start": 198.56,
+    "duration": 5.52
+  },
+  {
+    "text": "it gets a reward of one. But if you",
+    "start": 200.959,
+    "duration": 4.881
+  },
+  {
+    "text": "reach the end of your four guesses and",
+    "start": 204.08,
+    "duration": 3.12
+  },
+  {
+    "text": "you haven't gotten it correct, then it's",
+    "start": 205.84,
+    "duration": 4.64
+  },
+  {
+    "text": "a reward of zero.",
+    "start": 207.2,
+    "duration": 6.56
+  },
+  {
+    "text": "Okay. So, a lot of the trajectories that",
+    "start": 210.48,
+    "duration": 5.759
+  },
+  {
+    "text": "we'll walk through are from an example",
+    "start": 213.76,
+    "duration": 4.479
+  },
+  {
+    "text": "of this where the hidden number is 11.",
+    "start": 216.239,
+    "duration": 3.681
+  },
+  {
+    "text": "So, the agent is going to try to guess",
+    "start": 218.239,
+    "duration": 3.441
+  },
+  {
+    "text": "that.",
+    "start": 219.92,
+    "duration": 4.56
+  },
+  {
+    "text": "And here's four possible attempts at",
+    "start": 221.68,
+    "duration": 5.279
+  },
+  {
+    "text": "this where in the first one the agent",
+    "start": 224.48,
+    "duration": 4.64
+  },
+  {
+    "text": "says 8, gets feedback, you should go",
+    "start": 226.959,
+    "duration": 4.321
+  },
+  {
+    "text": "higher. It says 12, gets feedback, you",
+    "start": 229.12,
+    "duration": 5.36
+  },
+  {
+    "text": "should go lower. uh 10 higher and then",
+    "start": 231.28,
+    "duration": 5.36
+  },
+  {
+    "text": "11 so it gets it correct on the last",
+    "start": 234.48,
+    "duration": 3.839
+  },
+  {
+    "text": "guess.",
+    "start": 236.64,
+    "duration": 3.679
+  },
+  {
+    "text": "In another attempt we might start with a",
+    "start": 238.319,
+    "duration": 4.961
+  },
+  {
+    "text": "lower number. So this is actually what's",
+    "start": 240.319,
+    "duration": 5.28
+  },
+  {
+    "text": "the optimal policy here? What's the best",
+    "start": 243.28,
+    "duration": 4.4
+  },
+  {
+    "text": "starting number?",
+    "start": 245.599,
+    "duration": 3.601
+  },
+  {
+    "text": "The middle, right? So it's kind of like",
+    "start": 247.68,
+    "duration": 3.279
+  },
+  {
+    "text": "20 questions. You want to like split the",
+    "start": 249.2,
+    "duration": 4.16
+  },
+  {
+    "text": "space, right? So the best first guess is",
+    "start": 250.959,
+    "duration": 6.321
+  },
+  {
+    "text": "eight. But uh and actually how many of",
+    "start": 253.36,
+    "duration": 6.32
+  },
+  {
+    "text": "you folks have played Wordle?",
+    "start": 257.28,
+    "duration": 3.84
+  },
+  {
+    "text": "you know the guessing game from the New",
+    "start": 259.68,
+    "duration": 3.2
+  },
+  {
+    "text": "York New York Times. It's a fun game.",
+    "start": 261.12,
+    "duration": 3.44
+  },
+  {
+    "text": "It's kind of in a similar space and",
+    "start": 262.88,
+    "duration": 3.92
+  },
+  {
+    "text": "there's like an optimal first guess that",
+    "start": 264.56,
+    "duration": 5.76
+  },
+  {
+    "text": "you can make which reduces the the the",
+    "start": 266.8,
+    "duration": 6.56
+  },
+  {
+    "text": "space in an information theoretic way.",
+    "start": 270.32,
+    "duration": 5.84
+  },
+  {
+    "text": "Similar concept here but simpler. So you",
+    "start": 273.36,
+    "duration": 4.48
+  },
+  {
+    "text": "could start off with a you know",
+    "start": 276.16,
+    "duration": 4.72
+  },
+  {
+    "text": "suboptimal first guess of four but you",
+    "start": 277.84,
+    "duration": 5.28
+  },
+  {
+    "text": "could still succeed in the task right by",
+    "start": 280.88,
+    "duration": 4.319
+  },
+  {
+    "text": "taking this feedback into account going",
+    "start": 283.12,
+    "duration": 4.639
+  },
+  {
+    "text": "higher then going higher then going you",
+    "start": 285.199,
+    "duration": 4.241
+  },
+  {
+    "text": "know lower and eventually getting it",
+    "start": 287.759,
+    "duration": 3.361
+  },
+  {
+    "text": "correct",
+    "start": 289.44,
+    "duration": 3.68
+  },
+  {
+    "text": "but you could also go wrong right so we",
+    "start": 291.12,
+    "duration": 4.56
+  },
+  {
+    "text": "could start with a very bad guess of 16",
+    "start": 293.12,
+    "duration": 4.799
+  },
+  {
+    "text": "and um unless we got that right the",
+    "start": 295.68,
+    "duration": 4.56
+  },
+  {
+    "text": "feedback's going to be lower and in this",
+    "start": 297.919,
+    "duration": 4.481
+  },
+  {
+    "text": "case we might time out so we don't get",
+    "start": 300.24,
+    "duration": 4.959
+  },
+  {
+    "text": "it within four guesses and similar",
+    "start": 302.4,
+    "duration": 4.32
+  },
+  {
+    "text": "Similarly, we could have another pretty",
+    "start": 305.199,
+    "duration": 3.84
+  },
+  {
+    "text": "bad policy of starting with one and then",
+    "start": 306.72,
+    "duration": 4.96
+  },
+  {
+    "text": "going two and three and four and um and",
+    "start": 309.039,
+    "duration": 5.041
+  },
+  {
+    "text": "timing out and failing at the task.",
+    "start": 311.68,
+    "duration": 5.359
+  },
+  {
+    "text": "Everybody clear on the the setup? Okay,",
+    "start": 314.08,
+    "duration": 5.2
+  },
+  {
+    "text": "great.",
+    "start": 317.039,
+    "duration": 3.761
+  },
+  {
+    "text": "So,",
+    "start": 319.28,
+    "duration": 3.68
+  },
+  {
+    "text": "we'll also have rewards for",
+    "start": 320.8,
+    "duration": 4.16
+  },
+  {
+    "text": "trajectories. And a reward is just a",
+    "start": 322.96,
+    "duration": 4.16
+  },
+  {
+    "text": "scalar value which tells you how good or",
+    "start": 324.96,
+    "duration": 5.519
+  },
+  {
+    "text": "bad that trajectory is. So in agentive",
+    "start": 327.12,
+    "duration": 5.6
+  },
+  {
+    "text": "settings, this might correspond to like",
+    "start": 330.479,
+    "duration": 4.241
+  },
+  {
+    "text": "did the code that you write pass all of",
+    "start": 332.72,
+    "duration": 4.319
+  },
+  {
+    "text": "the unit tests in like Swedbench for",
+    "start": 334.72,
+    "duration": 4.72
+  },
+  {
+    "text": "example and you get a reward of one if",
+    "start": 337.039,
+    "duration": 4.561
+  },
+  {
+    "text": "it passes all the tests a reward of zero",
+    "start": 339.44,
+    "duration": 4.24
+  },
+  {
+    "text": "if it doesn't pass all the tests or you",
+    "start": 341.6,
+    "duration": 4.56
+  },
+  {
+    "text": "could have you know like a value that's",
+    "start": 343.68,
+    "duration": 4.4
+  },
+  {
+    "text": "not zero or one that's not a binary",
+    "start": 346.16,
+    "duration": 3.84
+  },
+  {
+    "text": "reward too like what's the fraction of",
+    "start": 348.08,
+    "duration": 4.32
+  },
+  {
+    "text": "tests that you passed but in a lot of",
+    "start": 350.0,
+    "duration": 4.32
+  },
+  {
+    "text": "the domains that people are training on",
+    "start": 352.4,
+    "duration": 5.2
+  },
+  {
+    "text": "these days um in what's called RLVR like",
+    "start": 354.32,
+    "duration": 5.12
+  },
+  {
+    "text": "reinforcement learning with verified",
+    "start": 357.6,
+    "duration": 4.8
+  },
+  {
+    "text": "rewards. The rewards will be either zero",
+    "start": 359.44,
+    "duration": 5.28
+  },
+  {
+    "text": "or one. Um but the methods that we'll be",
+    "start": 362.4,
+    "duration": 4.16
+  },
+  {
+    "text": "talking about today are more general. Um",
+    "start": 364.72,
+    "duration": 3.759
+  },
+  {
+    "text": "they also apply to scaler valued",
+    "start": 366.56,
+    "duration": 4.919
+  },
+  {
+    "text": "rewards.",
+    "start": 368.479,
+    "duration": 3.0
+  },
+  {
+    "text": "So just a quick reminder of how SFT",
+    "start": 371.52,
+    "duration": 5.2
+  },
+  {
+    "text": "works. So in supervised fine-tuning, you",
+    "start": 374.4,
+    "duration": 5.519
+  },
+  {
+    "text": "have a demonstration of a task and",
+    "start": 376.72,
+    "duration": 5.039
+  },
+  {
+    "text": "you're training the agent to copy that",
+    "start": 379.919,
+    "duration": 4.321
+  },
+  {
+    "text": "demonstration by maximizing the",
+    "start": 381.759,
+    "duration": 5.121
+  },
+  {
+    "text": "probability of the demonstrated actions.",
+    "start": 384.24,
+    "duration": 4.32
+  },
+  {
+    "text": "Right? So if we break down one",
+    "start": 386.88,
+    "duration": 4.24
+  },
+  {
+    "text": "trajectory into these steps, we have a",
+    "start": 388.56,
+    "duration": 4.96
+  },
+  {
+    "text": "prompt that's given to the agent. Um we",
+    "start": 391.12,
+    "duration": 4.72
+  },
+  {
+    "text": "have a guess um feedback from the",
+    "start": 393.52,
+    "duration": 3.84
+  },
+  {
+    "text": "environment higher. We have another",
+    "start": 395.84,
+    "duration": 3.52
+  },
+  {
+    "text": "guess more feedback from the uh",
+    "start": 397.36,
+    "duration": 5.119
+  },
+  {
+    "text": "environment and so on. And our task is",
+    "start": 399.36,
+    "duration": 6.0
+  },
+  {
+    "text": "going to be given these demonstrated",
+    "start": 402.479,
+    "duration": 6.401
+  },
+  {
+    "text": "actions which we'll write a star. We",
+    "start": 405.36,
+    "duration": 5.92
+  },
+  {
+    "text": "want to maximize the probability that",
+    "start": 408.88,
+    "duration": 4.56
+  },
+  {
+    "text": "the agent assigns to those actions",
+    "start": 411.28,
+    "duration": 4.24
+  },
+  {
+    "text": "conditioned on all the past history up",
+    "start": 413.44,
+    "duration": 5.28
+  },
+  {
+    "text": "to that point. Right? And so this will",
+    "start": 415.52,
+    "duration": 4.72
+  },
+  {
+    "text": "be just you know the supervised",
+    "start": 418.72,
+    "duration": 4.0
+  },
+  {
+    "text": "fine-tuning loss is maximizing the log",
+    "start": 420.24,
+    "duration": 4.799
+  },
+  {
+    "text": "of the probability of that sequence",
+    "start": 422.72,
+    "duration": 4.08
+  },
+  {
+    "text": "which is the sum of the log of the",
+    "start": 425.039,
+    "duration": 4.56
+  },
+  {
+    "text": "probabilities of the individual actions",
+    "start": 426.8,
+    "duration": 5.119
+  },
+  {
+    "text": "right and there's a lot of ways we could",
+    "start": 429.599,
+    "duration": 3.841
+  },
+  {
+    "text": "get these target actions that we're",
+    "start": 431.919,
+    "duration": 4.0
+  },
+  {
+    "text": "trying to imitate. So they could be from",
+    "start": 433.44,
+    "duration": 4.479
+  },
+  {
+    "text": "a person who gives a demonstration from",
+    "start": 435.919,
+    "duration": 3.68
+  },
+  {
+    "text": "the task. They could be from like a",
+    "start": 437.919,
+    "duration": 3.84
+  },
+  {
+    "text": "stronger model that we're trying to copy",
+    "start": 439.599,
+    "duration": 4.961
+  },
+  {
+    "text": "to distill from today. They could also",
+    "start": 441.759,
+    "duration": 5.601
+  },
+  {
+    "text": "be from uh trajectories from the agent",
+    "start": 444.56,
+    "duration": 5.44
+  },
+  {
+    "text": "itself that we're trying to reinforce in",
+    "start": 447.36,
+    "duration": 4.88
+  },
+  {
+    "text": "the model.",
+    "start": 450.0,
+    "duration": 3.759
+  },
+  {
+    "text": "But this should hopefully be a review",
+    "start": 452.24,
+    "duration": 3.2
+  },
+  {
+    "text": "from you know your previous classes on",
+    "start": 453.759,
+    "duration": 4.401
+  },
+  {
+    "text": "LLM training and and from the SFT",
+    "start": 455.44,
+    "duration": 5.28
+  },
+  {
+    "text": "lecture.",
+    "start": 458.16,
+    "duration": 5.759
+  },
+  {
+    "text": "Okay. But SFT has some problems which",
+    "start": 460.72,
+    "duration": 4.879
+  },
+  {
+    "text": "reinforcement learning is going to",
+    "start": 463.919,
+    "duration": 4.241
+  },
+  {
+    "text": "address. So there's roughly like three",
+    "start": 465.599,
+    "duration": 4.641
+  },
+  {
+    "text": "of these that we'll focus on. The first",
+    "start": 468.16,
+    "duration": 4.08
+  },
+  {
+    "text": "one of these is what we might call task",
+    "start": 470.24,
+    "duration": 4.88
+  },
+  {
+    "text": "mismatch. So supervised fine-tuning",
+    "start": 472.24,
+    "duration": 5.2
+  },
+  {
+    "text": "maximizes the probability of",
+    "start": 475.12,
+    "duration": 4.32
+  },
+  {
+    "text": "demonstrated actions at each point in",
+    "start": 477.44,
+    "duration": 4.159
+  },
+  {
+    "text": "time. But what we're really interested",
+    "start": 479.44,
+    "duration": 4.319
+  },
+  {
+    "text": "in is maximizing the probability that",
+    "start": 481.599,
+    "duration": 4.16
+  },
+  {
+    "text": "the agent carries out the task",
+    "start": 483.759,
+    "duration": 3.521
+  },
+  {
+    "text": "successfully.",
+    "start": 485.759,
+    "duration": 3.921
+  },
+  {
+    "text": "And these are similar to each other, but",
+    "start": 487.28,
+    "duration": 5.039
+  },
+  {
+    "text": "they're not quite the same. And there's",
+    "start": 489.68,
+    "duration": 5.68
+  },
+  {
+    "text": "a couple reasons for this. So the first",
+    "start": 492.319,
+    "duration": 5.121
+  },
+  {
+    "text": "reason is that there are multiple ways",
+    "start": 495.36,
+    "duration": 4.16
+  },
+  {
+    "text": "to carry out the task successfully,",
+    "start": 497.44,
+    "duration": 4.72
+  },
+  {
+    "text": "right? So, uh, starting with eight is",
+    "start": 499.52,
+    "duration": 5.04
+  },
+  {
+    "text": "kind of the best thing to do, um, as a",
+    "start": 502.16,
+    "duration": 5.439
+  },
+  {
+    "text": "first guess, but, um, it would also be",
+    "start": 504.56,
+    "duration": 5.28
+  },
+  {
+    "text": "reasonable to start with, you know, four",
+    "start": 507.599,
+    "duration": 5.201
+  },
+  {
+    "text": "as long as you're able to, uh, take the",
+    "start": 509.84,
+    "duration": 6.24
+  },
+  {
+    "text": "feedback into account. And for this, you",
+    "start": 512.8,
+    "duration": 5.679
+  },
+  {
+    "text": "know, here after this first step of",
+    "start": 516.08,
+    "duration": 5.36
+  },
+  {
+    "text": "feedback, we have various reasonable",
+    "start": 518.479,
+    "duration": 5.601
+  },
+  {
+    "text": "actions that we could take as well. and",
+    "start": 521.44,
+    "duration": 4.88
+  },
+  {
+    "text": "a demonstration, whether that's, you",
+    "start": 524.08,
+    "duration": 4.0
+  },
+  {
+    "text": "know, from a person or another model,",
+    "start": 526.32,
+    "duration": 3.68
+  },
+  {
+    "text": "only shows one way of solving the task,",
+    "start": 528.08,
+    "duration": 4.72
+  },
+  {
+    "text": "but we want the agent to be able to um",
+    "start": 530.0,
+    "duration": 6.64
+  },
+  {
+    "text": "potentially use other ways as well.",
+    "start": 532.8,
+    "duration": 5.44
+  },
+  {
+    "text": "And a second problem is that some",
+    "start": 536.64,
+    "duration": 4.4
+  },
+  {
+    "text": "actions that you can take are worse than",
+    "start": 538.24,
+    "duration": 5.599
+  },
+  {
+    "text": "others, but to SFT, they all look the",
+    "start": 541.04,
+    "duration": 6.56
+  },
+  {
+    "text": "same. So it would be very bad for us to",
+    "start": 543.839,
+    "duration": 6.481
+  },
+  {
+    "text": "in response to the feedback you should",
+    "start": 547.6,
+    "duration": 4.72
+  },
+  {
+    "text": "go higher it would be very bad for us to",
+    "start": 550.32,
+    "duration": 4.959
+  },
+  {
+    "text": "like output a number below eight right",
+    "start": 552.32,
+    "duration": 5.36
+  },
+  {
+    "text": "but SFT doesn't make a distinction",
+    "start": 555.279,
+    "duration": 4.961
+  },
+  {
+    "text": "between the actions that weren't",
+    "start": 557.68,
+    "duration": 4.24
+  },
+  {
+    "text": "demonstrated",
+    "start": 560.24,
+    "duration": 4.4
+  },
+  {
+    "text": "and so it would get the same loss if um",
+    "start": 561.92,
+    "duration": 4.0
+  },
+  {
+    "text": "you know the agent had highest",
+    "start": 564.64,
+    "duration": 5.36
+  },
+  {
+    "text": "probability on um a lower alternative",
+    "start": 565.92,
+    "duration": 6.56
+  },
+  {
+    "text": "action rather than a higher alternative",
+    "start": 570.0,
+    "duration": 4.08
+  },
+  {
+    "text": "action that wasn't the one that was",
+    "start": 572.48,
+    "duration": 4.24
+  },
+  {
+    "text": "demonstrated.",
+    "start": 574.08,
+    "duration": 4.879
+  },
+  {
+    "text": "So that's one problem of the mismatch",
+    "start": 576.72,
+    "duration": 4.64
+  },
+  {
+    "text": "between this SFT loss and the objective",
+    "start": 578.959,
+    "duration": 4.0
+  },
+  {
+    "text": "that we're actually interested in of",
+    "start": 581.36,
+    "duration": 4.64
+  },
+  {
+    "text": "maximizing you know expected reward or",
+    "start": 582.959,
+    "duration": 6.481
+  },
+  {
+    "text": "the probability of success on the task.",
+    "start": 586.0,
+    "duration": 7.2
+  },
+  {
+    "text": "The second problem is data mismatch. So",
+    "start": 589.44,
+    "duration": 6.24
+  },
+  {
+    "text": "we'd like to be able to learn from um",
+    "start": 593.2,
+    "duration": 5.36
+  },
+  {
+    "text": "suboptimal data too. Even if we assume",
+    "start": 595.68,
+    "duration": 5.2
+  },
+  {
+    "text": "that our demonstrations are the best way",
+    "start": 598.56,
+    "duration": 5.6
+  },
+  {
+    "text": "to achieve a task, there's, you know, if",
+    "start": 600.88,
+    "duration": 6.48
+  },
+  {
+    "text": "we had access to other demonstrations",
+    "start": 604.16,
+    "duration": 6.239
+  },
+  {
+    "text": "that were less optimal or maybe even",
+    "start": 607.36,
+    "duration": 5.36
+  },
+  {
+    "text": "weren't successful, those could provide",
+    "start": 610.399,
+    "duration": 6.721
+  },
+  {
+    "text": "useful signal for our models too. So",
+    "start": 612.72,
+    "duration": 8.16
+  },
+  {
+    "text": "like uh say that we know that this is a",
+    "start": 617.12,
+    "duration": 6.32
+  },
+  {
+    "text": "bad trajectory like it times out. We",
+    "start": 620.88,
+    "duration": 4.48
+  },
+  {
+    "text": "wouldn't want to just do SFT on this,",
+    "start": 623.44,
+    "duration": 3.44
+  },
+  {
+    "text": "right? We wouldn't want to maximize the",
+    "start": 625.36,
+    "duration": 3.599
+  },
+  {
+    "text": "probability of those actions, but we",
+    "start": 626.88,
+    "duration": 4.24
+  },
+  {
+    "text": "might want to uh have some learning",
+    "start": 628.959,
+    "duration": 6.0
+  },
+  {
+    "text": "method that could um have the model not",
+    "start": 631.12,
+    "duration": 6.399
+  },
+  {
+    "text": "take trajectories like this. And",
+    "start": 634.959,
+    "duration": 4.0
+  },
+  {
+    "text": "reinforcement learning is going to be",
+    "start": 637.519,
+    "duration": 4.88
+  },
+  {
+    "text": "one way of doing that.",
+    "start": 638.959,
+    "duration": 5.681
+  },
+  {
+    "text": "The third problem is what's known as",
+    "start": 642.399,
+    "duration": 5.601
+  },
+  {
+    "text": "exposure bias. So in SFT, you're",
+    "start": 644.64,
+    "duration": 6.639
+  },
+  {
+    "text": "training a model to make predictions of",
+    "start": 648.0,
+    "duration": 5.68
+  },
+  {
+    "text": "the next action given a fixed sequence",
+    "start": 651.279,
+    "duration": 5.68
+  },
+  {
+    "text": "of past actions, right? And that fixed",
+    "start": 653.68,
+    "duration": 4.96
+  },
+  {
+    "text": "sequence of actions comes from",
+    "start": 656.959,
+    "duration": 3.361
+  },
+  {
+    "text": "somewhere.",
+    "start": 658.64,
+    "duration": 4.96
+  },
+  {
+    "text": "But then at evaluation time, the",
+    "start": 660.32,
+    "duration": 5.04
+  },
+  {
+    "text": "previous actions are going to be",
+    "start": 663.6,
+    "duration": 3.84
+  },
+  {
+    "text": "generated by the model itself, right?",
+    "start": 665.36,
+    "duration": 3.599
+  },
+  {
+    "text": "Because you have to produce actions one",
+    "start": 667.44,
+    "duration": 3.519
+  },
+  {
+    "text": "at a time. You have the actions you",
+    "start": 668.959,
+    "duration": 3.681
+  },
+  {
+    "text": "produced in the past. It's this auto",
+    "start": 670.959,
+    "duration": 3.681
+  },
+  {
+    "text": "reggressive process of interacting with",
+    "start": 672.64,
+    "duration": 3.439
+  },
+  {
+    "text": "the environment.",
+    "start": 674.64,
+    "duration": 3.28
+  },
+  {
+    "text": "So",
+    "start": 676.079,
+    "duration": 5.601
+  },
+  {
+    "text": "if the agent um produces an action that",
+    "start": 677.92,
+    "duration": 6.96
+  },
+  {
+    "text": "is very out of distribution from the",
+    "start": 681.68,
+    "duration": 5.68
+  },
+  {
+    "text": "histories that it was trained on, it",
+    "start": 684.88,
+    "duration": 5.519
+  },
+  {
+    "text": "might just not have the the response",
+    "start": 687.36,
+    "duration": 4.479
+  },
+  {
+    "text": "that it produces might just not be",
+    "start": 690.399,
+    "duration": 3.44
+  },
+  {
+    "text": "calibrated because it never saw data",
+    "start": 691.839,
+    "duration": 4.161
+  },
+  {
+    "text": "like that. So say that we only trained",
+    "start": 693.839,
+    "duration": 5.201
+  },
+  {
+    "text": "on demonstrations where uh the next",
+    "start": 696.0,
+    "duration": 6.16
+  },
+  {
+    "text": "integer was, you know, did match the",
+    "start": 699.04,
+    "duration": 4.799
+  },
+  {
+    "text": "feedback that we got. So it was always",
+    "start": 702.16,
+    "duration": 3.919
+  },
+  {
+    "text": "higher if the feedback was higher. Now",
+    "start": 703.839,
+    "duration": 4.161
+  },
+  {
+    "text": "if at generation time the model makes a",
+    "start": 706.079,
+    "duration": 4.161
+  },
+  {
+    "text": "mistake and samples a lower number, it",
+    "start": 708.0,
+    "duration": 3.839
+  },
+  {
+    "text": "might just totally throw it off because",
+    "start": 710.24,
+    "duration": 4.0
+  },
+  {
+    "text": "it didn't see data like that in training",
+    "start": 711.839,
+    "duration": 5.12
+  },
+  {
+    "text": "time if we only trained on these optimal",
+    "start": 714.24,
+    "duration": 4.24
+  },
+  {
+    "text": "policies.",
+    "start": 716.959,
+    "duration": 3.44
+  },
+  {
+    "text": "Does that make sense?",
+    "start": 718.48,
+    "duration": 3.599
+  },
+  {
+    "text": "So one way of viewing reinforcement",
+    "start": 720.399,
+    "duration": 3.601
+  },
+  {
+    "text": "learning is it's a way of letting the",
+    "start": 722.079,
+    "duration": 4.241
+  },
+  {
+    "text": "model generate its own training data and",
+    "start": 724.0,
+    "duration": 4.32
+  },
+  {
+    "text": "also learn how to recover from the",
+    "start": 726.32,
+    "duration": 4.48
+  },
+  {
+    "text": "mistakes that it makes so that it's",
+    "start": 728.32,
+    "duration": 4.8
+  },
+  {
+    "text": "prepared to handle its own mistakes when",
+    "start": 730.8,
+    "duration": 5.44
+  },
+  {
+    "text": "you generate from it. And um this",
+    "start": 733.12,
+    "duration": 5.36
+  },
+  {
+    "text": "property of having the model generate",
+    "start": 736.24,
+    "duration": 4.64
+  },
+  {
+    "text": "its own training data is called being on",
+    "start": 738.48,
+    "duration": 4.479
+  },
+  {
+    "text": "policy. It's generally a good thing to",
+    "start": 740.88,
+    "duration": 4.24
+  },
+  {
+    "text": "have um because it prepares the model to",
+    "start": 742.959,
+    "duration": 3.761
+  },
+  {
+    "text": "you know deal with its own mistakes and",
+    "start": 745.12,
+    "duration": 3.36
+  },
+  {
+    "text": "the supervision that you get is a good",
+    "start": 746.72,
+    "duration": 3.919
+  },
+  {
+    "text": "fit for what the model's able to",
+    "start": 748.48,
+    "duration": 4.799
+  },
+  {
+    "text": "currently predict. Um but it can have",
+    "start": 750.639,
+    "duration": 4.481
+  },
+  {
+    "text": "some efficiency trade-offs and in",
+    "start": 753.279,
+    "duration": 3.601
+  },
+  {
+    "text": "Graham's lecture we'll talk a little bit",
+    "start": 755.12,
+    "duration": 4.48
+  },
+  {
+    "text": "we'll talk a lot actually about um uh",
+    "start": 756.88,
+    "duration": 4.32
+  },
+  {
+    "text": "methods that relax these assumptions",
+    "start": 759.6,
+    "duration": 4.239
+  },
+  {
+    "text": "that go more off policy.",
+    "start": 761.2,
+    "duration": 5.12
+  },
+  {
+    "text": "Cool. So these are three problems with",
+    "start": 763.839,
+    "duration": 4.881
+  },
+  {
+    "text": "um supervised fine-tuning for agents and",
+    "start": 766.32,
+    "duration": 4.16
+  },
+  {
+    "text": "for sequential prediction generally. Any",
+    "start": 768.72,
+    "duration": 5.32
+  },
+  {
+    "text": "questions about them?",
+    "start": 770.48,
+    "duration": 3.56
+  },
+  {
+    "text": "All right. So, reinforcement learning",
+    "start": 775.279,
+    "duration": 4.56
+  },
+  {
+    "text": "the general idea is instead of having",
+    "start": 777.44,
+    "duration": 7.04
+  },
+  {
+    "text": "like a uh trajectory a fixed trajectory",
+    "start": 779.839,
+    "duration": 7.361
+  },
+  {
+    "text": "which you learn to imitate by you know",
+    "start": 784.48,
+    "duration": 4.479
+  },
+  {
+    "text": "maximizing the probability of the",
+    "start": 787.2,
+    "duration": 5.199
+  },
+  {
+    "text": "actions. We're going to have the agent",
+    "start": 788.959,
+    "duration": 6.401
+  },
+  {
+    "text": "or you know the model um generate its",
+    "start": 792.399,
+    "duration": 6.0
+  },
+  {
+    "text": "own actions and then we'll evaluate the",
+    "start": 795.36,
+    "duration": 5.36
+  },
+  {
+    "text": "reward of those actions in the",
+    "start": 798.399,
+    "duration": 5.281
+  },
+  {
+    "text": "trajectory and um then we'll adjust the",
+    "start": 800.72,
+    "duration": 5.84
+  },
+  {
+    "text": "parameters of the agent so that um it",
+    "start": 803.68,
+    "duration": 4.719
+  },
+  {
+    "text": "makes high reward trajectories more",
+    "start": 806.56,
+    "duration": 4.399
+  },
+  {
+    "text": "likely and lowreward trajectories less",
+    "start": 808.399,
+    "duration": 5.44
+  },
+  {
+    "text": "likely. So formally and we'll see you",
+    "start": 810.959,
+    "duration": 4.801
+  },
+  {
+    "text": "know the formulation of this in a little",
+    "start": 813.839,
+    "duration": 3.68
+  },
+  {
+    "text": "bit we're going to be training the agent",
+    "start": 815.76,
+    "duration": 5.6
+  },
+  {
+    "text": "to maximize its expected reward you know",
+    "start": 817.519,
+    "duration": 5.841
+  },
+  {
+    "text": "expectation in probability under the",
+    "start": 821.36,
+    "duration": 4.719
+  },
+  {
+    "text": "agent and under the environment.",
+    "start": 823.36,
+    "duration": 6.08
+  },
+  {
+    "text": "So for um just schematically if we have",
+    "start": 826.079,
+    "duration": 5.76
+  },
+  {
+    "text": "you know a task like this number search",
+    "start": 829.44,
+    "duration": 6.24
+  },
+  {
+    "text": "game with the underlying goal in the",
+    "start": 831.839,
+    "duration": 6.401
+  },
+  {
+    "text": "environment B to guess number 11 we",
+    "start": 835.68,
+    "duration": 4.48
+  },
+  {
+    "text": "would have the agent generate multiple",
+    "start": 838.24,
+    "duration": 5.44
+  },
+  {
+    "text": "trajectories just by um producing likely",
+    "start": 840.16,
+    "duration": 5.919
+  },
+  {
+    "text": "actions at each step from the agent. You",
+    "start": 843.68,
+    "duration": 4.159
+  },
+  {
+    "text": "know just in the way that we would",
+    "start": 846.079,
+    "duration": 3.601
+  },
+  {
+    "text": "typically evaluate the agent in the",
+    "start": 847.839,
+    "duration": 3.44
+  },
+  {
+    "text": "environment for each of those",
+    "start": 849.68,
+    "duration": 5.04
+  },
+  {
+    "text": "trajectories. uh we'll get a reward um",
+    "start": 851.279,
+    "duration": 5.441
+  },
+  {
+    "text": "by",
+    "start": 854.72,
+    "duration": 4.479
+  },
+  {
+    "text": "uh by executing these actions in the",
+    "start": 856.72,
+    "duration": 4.72
+  },
+  {
+    "text": "environment and then we'll use that",
+    "start": 859.199,
+    "duration": 4.64
+  },
+  {
+    "text": "reward as feedback for the reinforcement",
+    "start": 861.44,
+    "duration": 4.639
+  },
+  {
+    "text": "learning method which is going to change",
+    "start": 863.839,
+    "duration": 5.12
+  },
+  {
+    "text": "the parameters of the agent uh to make",
+    "start": 866.079,
+    "duration": 4.56
+  },
+  {
+    "text": "these highreward trajectories more",
+    "start": 868.959,
+    "duration": 4.481
+  },
+  {
+    "text": "likely.",
+    "start": 870.639,
+    "duration": 4.801
+  },
+  {
+    "text": "So this is going to address the three",
+    "start": 873.44,
+    "duration": 5.04
+  },
+  {
+    "text": "problems that we uh laid out with SFT.",
+    "start": 875.44,
+    "duration": 5.68
+  },
+  {
+    "text": "So task mismatch is addressed because",
+    "start": 878.48,
+    "duration": 4.96
+  },
+  {
+    "text": "we're now training the agent directly to",
+    "start": 881.12,
+    "duration": 4.48
+  },
+  {
+    "text": "maximize expected reward. I haven't",
+    "start": 883.44,
+    "duration": 3.759
+  },
+  {
+    "text": "shown you how that's done yet. A lot of",
+    "start": 885.6,
+    "duration": 3.12
+  },
+  {
+    "text": "the first part of the lecture is going",
+    "start": 887.199,
+    "duration": 3.2
+  },
+  {
+    "text": "to be about how we do that. We'll",
+    "start": 888.72,
+    "duration": 3.76
+  },
+  {
+    "text": "formulate expected reward. We'll take",
+    "start": 890.399,
+    "duration": 4.321
+  },
+  {
+    "text": "derivatives of it. We'll optimize it",
+    "start": 892.48,
+    "duration": 4.159
+  },
+  {
+    "text": "directly.",
+    "start": 894.72,
+    "duration": 4.32
+  },
+  {
+    "text": "It will also fix data mismatch because",
+    "start": 896.639,
+    "duration": 4.081
+  },
+  {
+    "text": "as we'll see especially towards the",
+    "start": 899.04,
+    "duration": 3.2
+  },
+  {
+    "text": "middle and end of the lecture, the agent",
+    "start": 900.72,
+    "duration": 3.04
+  },
+  {
+    "text": "will now be able to learn from all",
+    "start": 902.24,
+    "duration": 4.0
+  },
+  {
+    "text": "trajectories. So it will get some signal",
+    "start": 903.76,
+    "duration": 5.199
+  },
+  {
+    "text": "from these bad trajectories and will",
+    "start": 906.24,
+    "duration": 4.88
+  },
+  {
+    "text": "avoid taking actions that lead to",
+    "start": 908.959,
+    "duration": 5.281
+  },
+  {
+    "text": "trajectories like that in the future.",
+    "start": 911.12,
+    "duration": 5.6
+  },
+  {
+    "text": "And it will also help deal with exposure",
+    "start": 914.24,
+    "duration": 4.719
+  },
+  {
+    "text": "bias because the agent is now going to",
+    "start": 916.72,
+    "duration": 4.4
+  },
+  {
+    "text": "be generating these trajectories that",
+    "start": 918.959,
+    "duration": 4.161
+  },
+  {
+    "text": "are used in training. It's going to be",
+    "start": 921.12,
+    "duration": 4.48
+  },
+  {
+    "text": "on policy. So if it makes mistakes and",
+    "start": 923.12,
+    "duration": 4.719
+  },
+  {
+    "text": "sees that those mistakes lead to a bad",
+    "start": 925.6,
+    "duration": 4.4
+  },
+  {
+    "text": "reward, it will get penalized for that",
+    "start": 927.839,
+    "duration": 4.0
+  },
+  {
+    "text": "and then learn to avoid those in the",
+    "start": 930.0,
+    "duration": 3.92
+  },
+  {
+    "text": "future. So it's sort of being prepared",
+    "start": 931.839,
+    "duration": 6.321
+  },
+  {
+    "text": "to deal with its own errors.",
+    "start": 933.92,
+    "duration": 7.52
+  },
+  {
+    "text": "Yeah. And um yeah, like a lot of the",
+    "start": 938.16,
+    "duration": 4.96
+  },
+  {
+    "text": "issues that people had with like",
+    "start": 941.44,
+    "duration": 3.6
+  },
+  {
+    "text": "language models up to maybe like three",
+    "start": 943.12,
+    "duration": 4.32
+  },
+  {
+    "text": "or four years ago where they were um",
+    "start": 945.04,
+    "duration": 4.719
+  },
+  {
+    "text": "being like uh they had kind of",
+    "start": 947.44,
+    "duration": 4.399
+  },
+  {
+    "text": "repetition biases. They would get stuck",
+    "start": 949.759,
+    "duration": 4.481
+  },
+  {
+    "text": "in loops. A lot of those issues got",
+    "start": 951.839,
+    "duration": 4.481
+  },
+  {
+    "text": "fixed once people started doing a final",
+    "start": 954.24,
+    "duration": 4.0
+  },
+  {
+    "text": "post-training step with reinforcement",
+    "start": 956.32,
+    "duration": 3.92
+  },
+  {
+    "text": "learning where the models were now able",
+    "start": 958.24,
+    "duration": 6.519
+  },
+  {
+    "text": "to recover from their own mistakes.",
+    "start": 960.24,
+    "duration": 4.519
+  },
+  {
+    "text": "Okay. So we'll talk about how we you",
+    "start": 965.12,
+    "duration": 5.279
+  },
+  {
+    "text": "know formulate interactions with the",
+    "start": 968.639,
+    "duration": 3.44
+  },
+  {
+    "text": "environment as trajectories which will",
+    "start": 970.399,
+    "duration": 3.521
+  },
+  {
+    "text": "then let us set up the objectives that",
+    "start": 972.079,
+    "duration": 5.0
+  },
+  {
+    "text": "we optimize.",
+    "start": 973.92,
+    "duration": 3.159
+  },
+  {
+    "text": "Okay. So um we won't spend too much time",
+    "start": 979.759,
+    "duration": 4.161
+  },
+  {
+    "text": "on this because it's should just be a",
+    "start": 982.24,
+    "duration": 3.44
+  },
+  {
+    "text": "recap from the first part of the course.",
+    "start": 983.92,
+    "duration": 4.159
+  },
+  {
+    "text": "But we have an agent which is going to",
+    "start": 985.68,
+    "duration": 6.88
+  },
+  {
+    "text": "be uh represented um as a policy which",
+    "start": 988.079,
+    "duration": 7.68
+  },
+  {
+    "text": "we'll term um pi theta. Theta are the",
+    "start": 992.56,
+    "duration": 4.88
+  },
+  {
+    "text": "parameters of the language model that",
+    "start": 995.759,
+    "duration": 4.401
+  },
+  {
+    "text": "you know that drives the agent",
+    "start": 997.44,
+    "duration": 4.639
+  },
+  {
+    "text": "and the agent's going to be producing",
+    "start": 1000.16,
+    "duration": 5.039
+  },
+  {
+    "text": "actions um by sampling from the language",
+    "start": 1002.079,
+    "duration": 6.32
+  },
+  {
+    "text": "model and you know then applying those",
+    "start": 1005.199,
+    "duration": 5.841
+  },
+  {
+    "text": "um uh those samples in the harness that",
+    "start": 1008.399,
+    "duration": 4.88
+  },
+  {
+    "text": "it's operating in that will produce",
+    "start": 1011.04,
+    "duration": 4.239
+  },
+  {
+    "text": "actions um which you then take in the",
+    "start": 1013.279,
+    "duration": 4.161
+  },
+  {
+    "text": "environment and the environment gives",
+    "start": 1015.279,
+    "duration": 6.56
+  },
+  {
+    "text": "you back observations and also rewards.",
+    "start": 1017.44,
+    "duration": 6.079
+  },
+  {
+    "text": "A lot of the settings that we'll look at",
+    "start": 1021.839,
+    "duration": 3.681
+  },
+  {
+    "text": "only give you a reward at the end of the",
+    "start": 1023.519,
+    "duration": 4.32
+  },
+  {
+    "text": "task, like when you actually execute the",
+    "start": 1025.52,
+    "duration": 5.2
+  },
+  {
+    "text": "test cases. Um, but pretty much",
+    "start": 1027.839,
+    "duration": 4.561
+  },
+  {
+    "text": "everything that we talk about will also",
+    "start": 1030.72,
+    "duration": 3.92
+  },
+  {
+    "text": "apply to settings that have um",
+    "start": 1032.4,
+    "duration": 4.399
+  },
+  {
+    "text": "intermediate rewards where for",
+    "start": 1034.64,
+    "duration": 4.0
+  },
+  {
+    "text": "individual actions you take, you can",
+    "start": 1036.799,
+    "duration": 4.801
+  },
+  {
+    "text": "also get some reward about um the value",
+    "start": 1038.64,
+    "duration": 5.679
+  },
+  {
+    "text": "of that action. But just some examples",
+    "start": 1041.6,
+    "duration": 4.319
+  },
+  {
+    "text": "of how you can apply this general",
+    "start": 1044.319,
+    "duration": 4.321
+  },
+  {
+    "text": "framework for text generation. Um, the",
+    "start": 1045.919,
+    "duration": 4.801
+  },
+  {
+    "text": "task instance might be the prompt that",
+    "start": 1048.64,
+    "duration": 3.44
+  },
+  {
+    "text": "you're trying to produce a completion",
+    "start": 1050.72,
+    "duration": 4.8
+  },
+  {
+    "text": "to. The observation might be the tokens",
+    "start": 1052.08,
+    "duration": 5.68
+  },
+  {
+    "text": "you have so far. The action might be the",
+    "start": 1055.52,
+    "duration": 4.72
+  },
+  {
+    "text": "next token. And the reward might be the",
+    "start": 1057.76,
+    "duration": 4.4
+  },
+  {
+    "text": "score that you get from a judge model.",
+    "start": 1060.24,
+    "duration": 3.92
+  },
+  {
+    "text": "For example, if you're doing um",
+    "start": 1062.16,
+    "duration": 3.36
+  },
+  {
+    "text": "reinforcement learning from human",
+    "start": 1064.16,
+    "duration": 3.6
+  },
+  {
+    "text": "feedback",
+    "start": 1065.52,
+    "duration": 4.24
+  },
+  {
+    "text": "for a web agent, like the setting we",
+    "start": 1067.76,
+    "duration": 4.159
+  },
+  {
+    "text": "talked about a week or two ago, the task",
+    "start": 1069.76,
+    "duration": 4.159
+  },
+  {
+    "text": "instance might be the task and the",
+    "start": 1071.919,
+    "duration": 4.241
+  },
+  {
+    "text": "website. And here there's a difference",
+    "start": 1073.919,
+    "duration": 4.64
+  },
+  {
+    "text": "between the state of the environment,",
+    "start": 1076.16,
+    "duration": 4.72
+  },
+  {
+    "text": "sort of everything that determines the",
+    "start": 1078.559,
+    "duration": 4.161
+  },
+  {
+    "text": "environment and what the agent gets to",
+    "start": 1080.88,
+    "duration": 3.679
+  },
+  {
+    "text": "observe. There might be some hidden",
+    "start": 1082.72,
+    "duration": 4.0
+  },
+  {
+    "text": "state like what's the content of the",
+    "start": 1084.559,
+    "duration": 4.401
+  },
+  {
+    "text": "backing databases, but the agent only",
+    "start": 1086.72,
+    "duration": 3.92
+  },
+  {
+    "text": "gets to observe the page that it's",
+    "start": 1088.96,
+    "duration": 3.92
+  },
+  {
+    "text": "currently on. And it can take actions",
+    "start": 1090.64,
+    "duration": 4.72
+  },
+  {
+    "text": "like clicking, typing or scrolling. And",
+    "start": 1092.88,
+    "duration": 5.039
+  },
+  {
+    "text": "it might get reward like intermediate",
+    "start": 1095.36,
+    "duration": 4.319
+  },
+  {
+    "text": "reward like what are the number of",
+    "start": 1097.919,
+    "duration": 5.12
+  },
+  {
+    "text": "subtasks from the the task description",
+    "start": 1099.679,
+    "duration": 6.561
+  },
+  {
+    "text": "that it has completed so far. And for",
+    "start": 1103.039,
+    "duration": 5.601
+  },
+  {
+    "text": "number search we've uh seen the task",
+    "start": 1106.24,
+    "duration": 5.439
+  },
+  {
+    "text": "instance is the number that the agent is",
+    "start": 1108.64,
+    "duration": 4.399
+  },
+  {
+    "text": "trying to guess which is going to be",
+    "start": 1111.679,
+    "duration": 3.12
+  },
+  {
+    "text": "hidden from the agent. So in number",
+    "start": 1113.039,
+    "duration": 3.841
+  },
+  {
+    "text": "search every task looks the same to the",
+    "start": 1114.799,
+    "duration": 4.88
+  },
+  {
+    "text": "agent at the start. Um the observation",
+    "start": 1116.88,
+    "duration": 4.4
+  },
+  {
+    "text": "would be high or lower or correct.",
+    "start": 1119.679,
+    "duration": 3.441
+  },
+  {
+    "text": "Action would be the next guess. And the",
+    "start": 1121.28,
+    "duration": 4.399
+  },
+  {
+    "text": "reward is given if the agent gets it",
+    "start": 1123.12,
+    "duration": 5.36
+  },
+  {
+    "text": "correct that's a one or um if it times",
+    "start": 1125.679,
+    "duration": 6.681
+  },
+  {
+    "text": "out then it gets a zero.",
+    "start": 1128.48,
+    "duration": 3.88
+  },
+  {
+    "text": "So given these um these observations and",
+    "start": 1133.2,
+    "duration": 5.92
+  },
+  {
+    "text": "actions and tasks we can start to",
+    "start": 1136.96,
+    "duration": 4.0
+  },
+  {
+    "text": "formulate some notation which will let",
+    "start": 1139.12,
+    "duration": 4.88
+  },
+  {
+    "text": "us derive the um reward terms that we're",
+    "start": 1140.96,
+    "duration": 4.48
+  },
+  {
+    "text": "expected reward terms that we're trying",
+    "start": 1144.0,
+    "duration": 4.48
+  },
+  {
+    "text": "to maximize. So a trajectory is a",
+    "start": 1145.44,
+    "duration": 5.2
+  },
+  {
+    "text": "sequence of interled actions and",
+    "start": 1148.48,
+    "duration": 5.68
+  },
+  {
+    "text": "observations and we'll represent um the",
+    "start": 1150.64,
+    "duration": 5.68
+  },
+  {
+    "text": "sequence of observations and actions up",
+    "start": 1154.16,
+    "duration": 6.32
+  },
+  {
+    "text": "to a given time step as the history h.",
+    "start": 1156.32,
+    "duration": 7.04
+  },
+  {
+    "text": "So the history ht is going to have all",
+    "start": 1160.48,
+    "duration": 5.36
+  },
+  {
+    "text": "of the actions and observations up to",
+    "start": 1163.36,
+    "duration": 6.4
+  },
+  {
+    "text": "that point in time. And our agent policy",
+    "start": 1165.84,
+    "duration": 6.0
+  },
+  {
+    "text": "pi theta remember theta are the",
+    "start": 1169.76,
+    "duration": 3.919
+  },
+  {
+    "text": "parameters of the language model inside",
+    "start": 1171.84,
+    "duration": 3.839
+  },
+  {
+    "text": "the agent. that's going to give us a",
+    "start": 1173.679,
+    "duration": 4.641
+  },
+  {
+    "text": "distribution over the next actions that",
+    "start": 1175.679,
+    "duration": 5.601
+  },
+  {
+    "text": "I would take um g at a particular",
+    "start": 1178.32,
+    "duration": 4.64
+  },
+  {
+    "text": "history. Right? So you take the history,",
+    "start": 1181.28,
+    "duration": 3.36
+  },
+  {
+    "text": "you plug it into your agent framework,",
+    "start": 1182.96,
+    "duration": 4.88
+  },
+  {
+    "text": "you get a distribution over next tokens",
+    "start": 1184.64,
+    "duration": 4.88
+  },
+  {
+    "text": "which correspond to actions in the",
+    "start": 1187.84,
+    "duration": 6.64
+  },
+  {
+    "text": "environment. Any questions about that?",
+    "start": 1189.52,
+    "duration": 8.159
+  },
+  {
+    "text": "Okay. So we also have rewards and in the",
+    "start": 1194.48,
+    "duration": 4.48
+  },
+  {
+    "text": "most general setting you could be",
+    "start": 1197.679,
+    "duration": 3.921
+  },
+  {
+    "text": "getting rewards along the way after each",
+    "start": 1198.96,
+    "duration": 5.12
+  },
+  {
+    "text": "um action or observation that you take.",
+    "start": 1201.6,
+    "duration": 4.48
+  },
+  {
+    "text": "Those formulations whether it's after",
+    "start": 1204.08,
+    "duration": 3.92
+  },
+  {
+    "text": "actions or observations can be",
+    "start": 1206.08,
+    "duration": 4.479
+  },
+  {
+    "text": "equivalent to each other. Um in the",
+    "start": 1208.0,
+    "duration": 4.32
+  },
+  {
+    "text": "number search setting, we only get a",
+    "start": 1210.559,
+    "duration": 5.281
+  },
+  {
+    "text": "reward after you um either time out or",
+    "start": 1212.32,
+    "duration": 5.76
+  },
+  {
+    "text": "get the feedback that it was correct. So",
+    "start": 1215.84,
+    "duration": 3.6
+  },
+  {
+    "text": "in the number search setting, your",
+    "start": 1218.08,
+    "duration": 3.28
+  },
+  {
+    "text": "rewards will be binary and they'll just",
+    "start": 1219.44,
+    "duration": 5.28
+  },
+  {
+    "text": "come at the end of the trajectory.",
+    "start": 1221.36,
+    "duration": 5.679
+  },
+  {
+    "text": "And we'll write the reward of the",
+    "start": 1224.72,
+    "duration": 5.52
+  },
+  {
+    "text": "trajectory as the sum over the rewards",
+    "start": 1227.039,
+    "duration": 6.64
+  },
+  {
+    "text": "at all intermediate time steps. So toao",
+    "start": 1230.24,
+    "duration": 5.2
+  },
+  {
+    "text": "is going to represent trajectory which",
+    "start": 1233.679,
+    "duration": 3.441
+  },
+  {
+    "text": "is you know the sequence of these",
+    "start": 1235.44,
+    "duration": 5.92
+  },
+  {
+    "text": "observations actions and rewards.",
+    "start": 1237.12,
+    "duration": 7.52
+  },
+  {
+    "text": "Okay. So that's the notation and given",
+    "start": 1241.36,
+    "duration": 5.52
+  },
+  {
+    "text": "this we can also you know have",
+    "start": 1244.64,
+    "duration": 5.36
+  },
+  {
+    "text": "probabilities over trajectories and the",
+    "start": 1246.88,
+    "duration": 5.039
+  },
+  {
+    "text": "probability of a trajectory is going to",
+    "start": 1250.0,
+    "duration": 4.32
+  },
+  {
+    "text": "depend on two things. So the first thing",
+    "start": 1251.919,
+    "duration": 5.041
+  },
+  {
+    "text": "is the probabilities assigned by the",
+    "start": 1254.32,
+    "duration": 5.68
+  },
+  {
+    "text": "agent. So we can decompose this into a",
+    "start": 1256.96,
+    "duration": 6.24
+  },
+  {
+    "text": "product of probabilities over time steps",
+    "start": 1260.0,
+    "duration": 7.039
+  },
+  {
+    "text": "where um h sorry I dropped a p here but",
+    "start": 1263.2,
+    "duration": 7.2
+  },
+  {
+    "text": "uh there should be a p before this term",
+    "start": 1267.039,
+    "duration": 5.841
+  },
+  {
+    "text": "which is the probability from the",
+    "start": 1270.4,
+    "duration": 5.84
+  },
+  {
+    "text": "environment of getting this observation",
+    "start": 1272.88,
+    "duration": 6.0
+  },
+  {
+    "text": "and this reward conditioned on this",
+    "start": 1276.24,
+    "duration": 4.88
+  },
+  {
+    "text": "history the action taken by the agent at",
+    "start": 1278.88,
+    "duration": 5.039
+  },
+  {
+    "text": "that time step and the task and that",
+    "start": 1281.12,
+    "duration": 4.4
+  },
+  {
+    "text": "probability from the environment we're",
+    "start": 1283.919,
+    "duration": 3.841
+  },
+  {
+    "text": "going to multiply by the probability",
+    "start": 1285.52,
+    "duration": 5.12
+  },
+  {
+    "text": "ility from the agent policy of producing",
+    "start": 1287.76,
+    "duration": 5.84
+  },
+  {
+    "text": "this next particular action. So this is",
+    "start": 1290.64,
+    "duration": 5.84
+  },
+  {
+    "text": "just the chain rule um decomposing this",
+    "start": 1293.6,
+    "duration": 4.8
+  },
+  {
+    "text": "probability of producing this entire",
+    "start": 1296.48,
+    "duration": 4.319
+  },
+  {
+    "text": "trajectory into the product of its",
+    "start": 1298.4,
+    "duration": 5.2
+  },
+  {
+    "text": "component parts.",
+    "start": 1300.799,
+    "duration": 5.521
+  },
+  {
+    "text": "And a key thing in RL is we don't",
+    "start": 1303.6,
+    "duration": 5.84
+  },
+  {
+    "text": "actually know we we don't have to know",
+    "start": 1306.32,
+    "duration": 5.359
+  },
+  {
+    "text": "anything about the environment. We don't",
+    "start": 1309.44,
+    "duration": 3.84
+  },
+  {
+    "text": "have to know, you know, what's the",
+    "start": 1311.679,
+    "duration": 4.561
+  },
+  {
+    "text": "probability of getting correct as our",
+    "start": 1313.28,
+    "duration": 4.24
+  },
+  {
+    "text": "next observation or what's the",
+    "start": 1316.24,
+    "duration": 3.36
+  },
+  {
+    "text": "probability of getting a next",
+    "start": 1317.52,
+    "duration": 4.08
+  },
+  {
+    "text": "observation as I'm interacting with",
+    "start": 1319.6,
+    "duration": 4.8
+  },
+  {
+    "text": "Amazon.com or something. The key thing",
+    "start": 1321.6,
+    "duration": 5.36
+  },
+  {
+    "text": "about RL is we're going to interact with",
+    "start": 1324.4,
+    "duration": 4.639
+  },
+  {
+    "text": "the environment which will by taking",
+    "start": 1326.96,
+    "duration": 5.36
+  },
+  {
+    "text": "actions which will be a way of sampling",
+    "start": 1329.039,
+    "duration": 6.401
+  },
+  {
+    "text": "from this distribution over observations",
+    "start": 1332.32,
+    "duration": 5.44
+  },
+  {
+    "text": "and rewards. And that's actually going",
+    "start": 1335.44,
+    "duration": 4.88
+  },
+  {
+    "text": "to be enough information for us to be",
+    "start": 1337.76,
+    "duration": 7.12
+  },
+  {
+    "text": "able to learn how to differentiate um",
+    "start": 1340.32,
+    "duration": 6.719
+  },
+  {
+    "text": "an objective that depends on this with",
+    "start": 1344.88,
+    "duration": 4.0
+  },
+  {
+    "text": "respect to our parameters and update the",
+    "start": 1347.039,
+    "duration": 4.081
+  },
+  {
+    "text": "parameters. And that's kind of magic in",
+    "start": 1348.88,
+    "duration": 4.08
+  },
+  {
+    "text": "some sense, but it also makes",
+    "start": 1351.12,
+    "duration": 3.76
+  },
+  {
+    "text": "reinforcement learning algorithms a bit",
+    "start": 1352.96,
+    "duration": 3.76
+  },
+  {
+    "text": "slow because you kind of just have to",
+    "start": 1354.88,
+    "duration": 4.4
+  },
+  {
+    "text": "like try stuff and see what happens. Um,",
+    "start": 1356.72,
+    "duration": 4.24
+  },
+  {
+    "text": "and that's why reinforcement learning",
+    "start": 1359.28,
+    "duration": 3.6
+  },
+  {
+    "text": "takes a lot of compute to run because",
+    "start": 1360.96,
+    "duration": 4.48
+  },
+  {
+    "text": "you have to do these experiments um,",
+    "start": 1362.88,
+    "duration": 4.32
+  },
+  {
+    "text": "experiments with the environment, see",
+    "start": 1365.44,
+    "duration": 4.08
+  },
+  {
+    "text": "what happens, and use that as a somewhat",
+    "start": 1367.2,
+    "duration": 5.28
+  },
+  {
+    "text": "indirect source of feedback about how",
+    "start": 1369.52,
+    "duration": 6.88
+  },
+  {
+    "text": "your reward depends on your parameters.",
+    "start": 1372.48,
+    "duration": 6.64
+  },
+  {
+    "text": "Any questions about this?",
+    "start": 1376.4,
+    "duration": 5.72
+  },
+  {
+    "text": ">> Yeah.",
+    "start": 1379.12,
+    "duration": 3.0
+  },
+  {
+    "text": "Yeah.",
+    "start": 1386.64,
+    "duration": 4.88
+  },
+  {
+    "text": ">> Yeah. So I've uh rewritten this a bit",
+    "start": 1389.28,
+    "duration": 4.72
+  },
+  {
+    "text": "from so the question was in classical RL",
+    "start": 1391.52,
+    "duration": 5.279
+  },
+  {
+    "text": "there's a marov assumption which um says",
+    "start": 1394.0,
+    "duration": 5.28
+  },
+  {
+    "text": "that the transition to the next state",
+    "start": 1396.799,
+    "duration": 4.88
+  },
+  {
+    "text": "depends just on the previous state that",
+    "start": 1399.28,
+    "duration": 4.8
+  },
+  {
+    "text": "you're in and the actions. So we're",
+    "start": 1401.679,
+    "duration": 4.641
+  },
+  {
+    "text": "actually working with um a palm dp here",
+    "start": 1404.08,
+    "duration": 4.16
+  },
+  {
+    "text": "a partially observed marov decision",
+    "start": 1406.32,
+    "duration": 4.0
+  },
+  {
+    "text": "process um where there's a difference",
+    "start": 1408.24,
+    "duration": 4.0
+  },
+  {
+    "text": "between the underlying state which you",
+    "start": 1410.32,
+    "duration": 3.76
+  },
+  {
+    "text": "can't see and the observations that you",
+    "start": 1412.24,
+    "duration": 5.919
+  },
+  {
+    "text": "can. So in a palm dp um your probability",
+    "start": 1414.08,
+    "duration": 7.28
+  },
+  {
+    "text": "of the next observation has to depend on",
+    "start": 1418.159,
+    "duration": 5.52
+  },
+  {
+    "text": "all of the previous observations and",
+    "start": 1421.36,
+    "duration": 4.16
+  },
+  {
+    "text": "actions because you don't have access to",
+    "start": 1423.679,
+    "duration": 4.561
+  },
+  {
+    "text": "the state. Um but for a pom dp these",
+    "start": 1425.52,
+    "duration": 4.32
+  },
+  {
+    "text": "formulations should be equivalent and",
+    "start": 1428.24,
+    "duration": 2.88
+  },
+  {
+    "text": "this one's just a little bit easier to",
+    "start": 1429.84,
+    "duration": 4.48
+  },
+  {
+    "text": "work with for our purposes.",
+    "start": 1431.12,
+    "duration": 5.76
+  },
+  {
+    "text": "Good question.",
+    "start": 1434.32,
+    "duration": 5.839
+  },
+  {
+    "text": "Okay. Yeah, sorry about that P missing.",
+    "start": 1436.88,
+    "duration": 5.279
+  },
+  {
+    "text": "Okay, so our objective is going to be to",
+    "start": 1440.159,
+    "duration": 6.321
+  },
+  {
+    "text": "maximize the expected reward. Um, and so",
+    "start": 1442.159,
+    "duration": 7.921
+  },
+  {
+    "text": "what does this mean? So what we want to",
+    "start": 1446.48,
+    "duration": 7.28
+  },
+  {
+    "text": "do is we want to uh take samples from",
+    "start": 1450.08,
+    "duration": 6.4
+  },
+  {
+    "text": "our agent like we want to have the agent",
+    "start": 1453.76,
+    "duration": 4.399
+  },
+  {
+    "text": "generate trajectories through the",
+    "start": 1456.48,
+    "duration": 5.12
+  },
+  {
+    "text": "environment. Um and",
+    "start": 1458.159,
+    "duration": 6.0
+  },
+  {
+    "text": "like uh we're typically going to be",
+    "start": 1461.6,
+    "duration": 5.199
+  },
+  {
+    "text": "doing that by sampling um actions from",
+    "start": 1464.159,
+    "duration": 4.081
+  },
+  {
+    "text": "the language model and then feeding",
+    "start": 1466.799,
+    "duration": 2.801
+  },
+  {
+    "text": "those actions through the agent",
+    "start": 1468.24,
+    "duration": 4.48
+  },
+  {
+    "text": "framework, right? Um so we can write",
+    "start": 1469.6,
+    "duration": 6.4
+  },
+  {
+    "text": "that um as sampling a trajectory from",
+    "start": 1472.72,
+    "duration": 5.839
+  },
+  {
+    "text": "this distribution which is parameterized",
+    "start": 1476.0,
+    "duration": 5.76
+  },
+  {
+    "text": "by the language model itself. And for",
+    "start": 1478.559,
+    "duration": 4.641
+  },
+  {
+    "text": "each of those trajectories that we get",
+    "start": 1481.76,
+    "duration": 3.6
+  },
+  {
+    "text": "by sampling from that distribution, it's",
+    "start": 1483.2,
+    "duration": 4.0
+  },
+  {
+    "text": "a very complex distribution that depends",
+    "start": 1485.36,
+    "duration": 3.919
+  },
+  {
+    "text": "on the agent, on the language model, and",
+    "start": 1487.2,
+    "duration": 4.079
+  },
+  {
+    "text": "on the environment, we're going to get a",
+    "start": 1489.279,
+    "duration": 4.801
+  },
+  {
+    "text": "trajectory and we're going to evaluate",
+    "start": 1491.279,
+    "duration": 4.64
+  },
+  {
+    "text": "the reward of that trajectory that gives",
+    "start": 1494.08,
+    "duration": 5.76
+  },
+  {
+    "text": "us a number. And we want to maximize our",
+    "start": 1495.919,
+    "duration": 7.441
+  },
+  {
+    "text": "chance of getting a high reward here. So",
+    "start": 1499.84,
+    "duration": 4.88
+  },
+  {
+    "text": "that's going to be maximizing this",
+    "start": 1503.36,
+    "duration": 3.12
+  },
+  {
+    "text": "expectation. And we'll just write that",
+    "start": 1504.72,
+    "duration": 4.16
+  },
+  {
+    "text": "objective as J of theta because it's a",
+    "start": 1506.48,
+    "duration": 3.679
+  },
+  {
+    "text": "function of the parameters of our",
+    "start": 1508.88,
+    "duration": 4.08
+  },
+  {
+    "text": "language model.",
+    "start": 1510.159,
+    "duration": 7.12
+  },
+  {
+    "text": "So in our very simple setting um let's",
+    "start": 1512.96,
+    "duration": 6.4
+  },
+  {
+    "text": "uh you know we have this number search",
+    "start": 1517.279,
+    "duration": 4.481
+  },
+  {
+    "text": "we have say there's only four",
+    "start": 1519.36,
+    "duration": 3.919
+  },
+  {
+    "text": "trajectories which are actually",
+    "start": 1521.76,
+    "duration": 3.36
+  },
+  {
+    "text": "producible by the language model. So",
+    "start": 1523.279,
+    "duration": 3.52
+  },
+  {
+    "text": "it's learned kind of a very sharp",
+    "start": 1525.12,
+    "duration": 4.88
+  },
+  {
+    "text": "policy. Um say that it puts probability",
+    "start": 1526.799,
+    "duration": 6.561
+  },
+  {
+    "text": "of 0.3 on this first trajectory 0.2 on",
+    "start": 1530.0,
+    "duration": 5.84
+  },
+  {
+    "text": "the second and 0.25 25 on the third and",
+    "start": 1533.36,
+    "duration": 4.96
+  },
+  {
+    "text": "fourth. Uh generally blue is going to",
+    "start": 1535.84,
+    "duration": 4.88
+  },
+  {
+    "text": "mean success, a reward of one and red is",
+    "start": 1538.32,
+    "duration": 4.56
+  },
+  {
+    "text": "going to mean failure, a reward of zero.",
+    "start": 1540.72,
+    "duration": 5.04
+  },
+  {
+    "text": "So the expected reward if these are the",
+    "start": 1542.88,
+    "duration": 5.6
+  },
+  {
+    "text": "only four trajectories which the agent",
+    "start": 1545.76,
+    "duration": 5.76
+  },
+  {
+    "text": "can produce is going to be 0.5. Right?",
+    "start": 1548.48,
+    "duration": 4.88
+  },
+  {
+    "text": "So just you know taking a weighted sum",
+    "start": 1551.52,
+    "duration": 3.84
+  },
+  {
+    "text": "of these trajectory rewards weighted by",
+    "start": 1553.36,
+    "duration": 7.04
+  },
+  {
+    "text": "the probability under the agent policy",
+    "start": 1555.36,
+    "duration": 7.28
+  },
+  {
+    "text": "and the objective of training is going",
+    "start": 1560.4,
+    "duration": 4.8
+  },
+  {
+    "text": "to be to optimize this. So we want to",
+    "start": 1562.64,
+    "duration": 5.039
+  },
+  {
+    "text": "adjust the parameters theta to maximize",
+    "start": 1565.2,
+    "duration": 4.719
+  },
+  {
+    "text": "this expected reward. So you can think",
+    "start": 1567.679,
+    "duration": 5.201
+  },
+  {
+    "text": "of this as like this is kind of a bad",
+    "start": 1569.919,
+    "duration": 4.88
+  },
+  {
+    "text": "current agent because it has a pretty",
+    "start": 1572.88,
+    "duration": 4.88
+  },
+  {
+    "text": "high probability 0.5 of producing a",
+    "start": 1574.799,
+    "duration": 5.36
+  },
+  {
+    "text": "trajectory with zero reward. We want to",
+    "start": 1577.76,
+    "duration": 4.48
+  },
+  {
+    "text": "shift some of that probability. We want",
+    "start": 1580.159,
+    "duration": 4.561
+  },
+  {
+    "text": "to shift ideally all of that probability",
+    "start": 1582.24,
+    "duration": 5.28
+  },
+  {
+    "text": "to predicting trajectories that have",
+    "start": 1584.72,
+    "duration": 4.64
+  },
+  {
+    "text": "reward of one. So shifting the",
+    "start": 1587.52,
+    "duration": 5.44
+  },
+  {
+    "text": "probability mass from red to blue.",
+    "start": 1589.36,
+    "duration": 5.439
+  },
+  {
+    "text": "This is obviously simplified because you",
+    "start": 1592.96,
+    "duration": 4.319
+  },
+  {
+    "text": "know really the agent could produce an",
+    "start": 1594.799,
+    "duration": 4.161
+  },
+  {
+    "text": "inf",
+    "start": 1597.279,
+    "duration": 4.0
+  },
+  {
+    "text": "not infinite but like combinatorally",
+    "start": 1598.96,
+    "duration": 4.64
+  },
+  {
+    "text": "exponentially large number of possible",
+    "start": 1601.279,
+    "duration": 4.241
+  },
+  {
+    "text": "trajectories but we're just kind of",
+    "start": 1603.6,
+    "duration": 3.6
+  },
+  {
+    "text": "simplifying the visualization a bit",
+    "start": 1605.52,
+    "duration": 4.399
+  },
+  {
+    "text": "here.",
+    "start": 1607.2,
+    "duration": 5.839
+  },
+  {
+    "text": "So one way that you can do this is a",
+    "start": 1609.919,
+    "duration": 5.76
+  },
+  {
+    "text": "pretty simple modification to SFT that's",
+    "start": 1613.039,
+    "duration": 4.081
+  },
+  {
+    "text": "really well motivated. It's called",
+    "start": 1615.679,
+    "duration": 3.441
+  },
+  {
+    "text": "expert iteration.",
+    "start": 1617.12,
+    "duration": 5.52
+  },
+  {
+    "text": "And um a particular",
+    "start": 1619.12,
+    "duration": 5.36
+  },
+  {
+    "text": "uh type of expert iteration is called",
+    "start": 1622.64,
+    "duration": 4.72
+  },
+  {
+    "text": "reinforced self-training or rest for",
+    "start": 1624.48,
+    "duration": 5.92
+  },
+  {
+    "text": "short. So the idea in rest is going to",
+    "start": 1627.36,
+    "duration": 6.08
+  },
+  {
+    "text": "be that we will just generate data from",
+    "start": 1630.4,
+    "duration": 6.72
+  },
+  {
+    "text": "our current um policy from our current",
+    "start": 1633.44,
+    "duration": 6.64
+  },
+  {
+    "text": "parameters of the language model and",
+    "start": 1637.12,
+    "duration": 5.36
+  },
+  {
+    "text": "then we will choose the trajectories",
+    "start": 1640.08,
+    "duration": 5.04
+  },
+  {
+    "text": "that are successful and use those as",
+    "start": 1642.48,
+    "duration": 5.84
+  },
+  {
+    "text": "fine-tuning data and update the model on",
+    "start": 1645.12,
+    "duration": 5.039
+  },
+  {
+    "text": "those. And so that's where the",
+    "start": 1648.32,
+    "duration": 4.0
+  },
+  {
+    "text": "reinforced term comes from. It's going",
+    "start": 1650.159,
+    "duration": 3.921
+  },
+  {
+    "text": "to sort of reinforce the correct",
+    "start": 1652.32,
+    "duration": 3.44
+  },
+  {
+    "text": "behaviors that the agent is already",
+    "start": 1654.08,
+    "duration": 5.199
+  },
+  {
+    "text": "producing. Um so it has two steps which",
+    "start": 1655.76,
+    "duration": 6.96
+  },
+  {
+    "text": "are going to be iterated. Um rest em is",
+    "start": 1659.279,
+    "duration": 5.361
+  },
+  {
+    "text": "actually named like rest I think",
+    "start": 1662.72,
+    "duration": 3.76
+  },
+  {
+    "text": "expectation maximization because it",
+    "start": 1664.64,
+    "duration": 4.56
+  },
+  {
+    "text": "looks really similar to the em algorithm",
+    "start": 1666.48,
+    "duration": 4.319
+  },
+  {
+    "text": "uh which some of you might have seen in",
+    "start": 1669.2,
+    "duration": 4.56
+  },
+  {
+    "text": "an ML class. But the idea is we will",
+    "start": 1670.799,
+    "duration": 4.801
+  },
+  {
+    "text": "alternate between these two steps. The",
+    "start": 1673.76,
+    "duration": 4.32
+  },
+  {
+    "text": "first step is you sample trajectories",
+    "start": 1675.6,
+    "duration": 4.079
+  },
+  {
+    "text": "from the current policy. You get the",
+    "start": 1678.08,
+    "duration": 3.92
+  },
+  {
+    "text": "rewards of them. The second step is you",
+    "start": 1679.679,
+    "duration": 5.761
+  },
+  {
+    "text": "will um have the model make those uh",
+    "start": 1682.0,
+    "duration": 6.08
+  },
+  {
+    "text": "trajectories very likely by just doing a",
+    "start": 1685.44,
+    "duration": 4.479
+  },
+  {
+    "text": "bunch of SFT on those collected",
+    "start": 1688.08,
+    "duration": 4.8
+  },
+  {
+    "text": "trajectories. Um and then you repeat you",
+    "start": 1689.919,
+    "duration": 5.041
+  },
+  {
+    "text": "will get more trajectories from the",
+    "start": 1692.88,
+    "duration": 3.84
+  },
+  {
+    "text": "current policy and you add those",
+    "start": 1694.96,
+    "duration": 5.36
+  },
+  {
+    "text": "trajectories in to the existing set that",
+    "start": 1696.72,
+    "duration": 6.0
+  },
+  {
+    "text": "you have of good trajectories and then",
+    "start": 1700.32,
+    "duration": 4.4
+  },
+  {
+    "text": "you'll um train your model on all of",
+    "start": 1702.72,
+    "duration": 4.0
+  },
+  {
+    "text": "those. So you have this growing data set",
+    "start": 1704.72,
+    "duration": 4.959
+  },
+  {
+    "text": "which you are having the model um",
+    "start": 1706.72,
+    "duration": 6.079
+  },
+  {
+    "text": "iteratively get very good at producing.",
+    "start": 1709.679,
+    "duration": 5.12
+  },
+  {
+    "text": "Um yeah so that's kind of a high level",
+    "start": 1712.799,
+    "duration": 3.921
+  },
+  {
+    "text": "description",
+    "start": 1714.799,
+    "duration": 4.24
+  },
+  {
+    "text": "and uh the way this works mechanically",
+    "start": 1716.72,
+    "duration": 4.079
+  },
+  {
+    "text": "is you will generate a bunch of",
+    "start": 1719.039,
+    "duration": 4.88
+  },
+  {
+    "text": "trajectories. You will um evaluate the",
+    "start": 1720.799,
+    "duration": 6.081
+  },
+  {
+    "text": "reward of each one. You'll select um",
+    "start": 1723.919,
+    "duration": 5.041
+  },
+  {
+    "text": "using like a threshold and this is easy",
+    "start": 1726.88,
+    "duration": 4.24
+  },
+  {
+    "text": "if your reward is binary. Um, if it's",
+    "start": 1728.96,
+    "duration": 4.319
+  },
+  {
+    "text": "binary, you just keep the trajectories",
+    "start": 1731.12,
+    "duration": 4.08
+  },
+  {
+    "text": "that have a reward of one and throw out",
+    "start": 1733.279,
+    "duration": 4.321
+  },
+  {
+    "text": "the ones that have a reward of zero. And",
+    "start": 1735.2,
+    "duration": 4.479
+  },
+  {
+    "text": "then you combine all of these kept",
+    "start": 1737.6,
+    "duration": 4.799
+  },
+  {
+    "text": "trajectories across your instances. And",
+    "start": 1739.679,
+    "duration": 6.24
+  },
+  {
+    "text": "those are the um those are the next",
+    "start": 1742.399,
+    "duration": 6.961
+  },
+  {
+    "text": "iteration of your training set.",
+    "start": 1745.919,
+    "duration": 5.281
+  },
+  {
+    "text": "And so then the objective is just the",
+    "start": 1749.36,
+    "duration": 4.0
+  },
+  {
+    "text": "SFT objective. We want to maximize the",
+    "start": 1751.2,
+    "duration": 5.28
+  },
+  {
+    "text": "probability of these actions in these",
+    "start": 1753.36,
+    "duration": 5.439
+  },
+  {
+    "text": "cap trajectories. the one where the",
+    "start": 1756.48,
+    "duration": 7.12
+  },
+  {
+    "text": "reward is for binary rewards one.",
+    "start": 1758.799,
+    "duration": 6.161
+  },
+  {
+    "text": "Does that make sense? Any questions",
+    "start": 1763.6,
+    "duration": 4.079
+  },
+  {
+    "text": "about that?",
+    "start": 1764.96,
+    "duration": 4.4
+  },
+  {
+    "text": "So, schematically, this is actually",
+    "start": 1767.679,
+    "duration": 3.521
+  },
+  {
+    "text": "going to look quite a bit like the",
+    "start": 1769.36,
+    "duration": 3.84
+  },
+  {
+    "text": "reinforcement learning methods that we",
+    "start": 1771.2,
+    "duration": 4.16
+  },
+  {
+    "text": "will talk about. Um, this isn't like",
+    "start": 1773.2,
+    "duration": 4.4
+  },
+  {
+    "text": "technically referred to as reinforcement",
+    "start": 1775.36,
+    "duration": 5.36
+  },
+  {
+    "text": "learning. Um, but it really has a lot of",
+    "start": 1777.6,
+    "duration": 4.559
+  },
+  {
+    "text": "similarities to it because you're",
+    "start": 1780.72,
+    "duration": 4.0
+  },
+  {
+    "text": "generating data from the model. um",
+    "start": 1782.159,
+    "duration": 5.441
+  },
+  {
+    "text": "you're updating on that data in a way",
+    "start": 1784.72,
+    "duration": 5.6
+  },
+  {
+    "text": "that is determined by the reward of the",
+    "start": 1787.6,
+    "duration": 4.799
+  },
+  {
+    "text": "trajectories. And um we'll see how",
+    "start": 1790.32,
+    "duration": 3.68
+  },
+  {
+    "text": "reinforcement learning does this in a",
+    "start": 1792.399,
+    "duration": 3.601
+  },
+  {
+    "text": "little bit more of a fine grained way",
+    "start": 1794.0,
+    "duration": 3.84
+  },
+  {
+    "text": "later.",
+    "start": 1796.0,
+    "duration": 3.76
+  },
+  {
+    "text": "But this is a very simple and pretty",
+    "start": 1797.84,
+    "duration": 4.0
+  },
+  {
+    "text": "effective uh baseline that you can start",
+    "start": 1799.76,
+    "duration": 4.399
+  },
+  {
+    "text": "with which reuses all the same machinery",
+    "start": 1801.84,
+    "duration": 5.04
+  },
+  {
+    "text": "of um supervised fine-tuning and is a",
+    "start": 1804.159,
+    "duration": 7.4
+  },
+  {
+    "text": "good fit if you have binarized rewards.",
+    "start": 1806.88,
+    "duration": 4.679
+  },
+  {
+    "text": ">> Yeah. Why is that self?",
+    "start": 1812.72,
+    "duration": 6.079
+  },
+  {
+    "text": ">> So the difference from self distillation",
+    "start": 1816.72,
+    "duration": 4.24
+  },
+  {
+    "text": "is just that you're using the reward to",
+    "start": 1818.799,
+    "duration": 4.641
+  },
+  {
+    "text": "filter. Self-distillation could also",
+    "start": 1820.96,
+    "duration": 5.839
+  },
+  {
+    "text": "refer to um training on all of the",
+    "start": 1823.44,
+    "duration": 7.719
+  },
+  {
+    "text": "trajectories produced by the model.",
+    "start": 1826.799,
+    "duration": 4.36
+  },
+  {
+    "text": ">> Yeah. So self it's called selfraining",
+    "start": 1831.44,
+    "duration": 5.04
+  },
+  {
+    "text": "because it looks a lot like um you know",
+    "start": 1833.76,
+    "duration": 4.799
+  },
+  {
+    "text": "like that but it's reinforced because",
+    "start": 1836.48,
+    "duration": 3.6
+  },
+  {
+    "text": "you're using the reward and so you're",
+    "start": 1838.559,
+    "duration": 4.161
+  },
+  {
+    "text": "reinforcing the good trajectories.",
+    "start": 1840.08,
+    "duration": 3.599
+  },
+  {
+    "text": "Yeah.",
+    "start": 1842.72,
+    "duration": 2.72
+  },
+  {
+    "text": "I mean this is a more basic question but",
+    "start": 1843.679,
+    "duration": 3.6
+  },
+  {
+    "text": "how can you guarantee trajectories that",
+    "start": 1845.44,
+    "duration": 4.16
+  },
+  {
+    "text": "do have a positive reward?",
+    "start": 1847.279,
+    "duration": 4.161
+  },
+  {
+    "text": ">> What if like for example in the worst",
+    "start": 1849.6,
+    "duration": 3.28
+  },
+  {
+    "text": "case you just have a bunch of bad",
+    "start": 1851.44,
+    "duration": 3.599
+  },
+  {
+    "text": "trajectories?",
+    "start": 1852.88,
+    "duration": 3.76
+  },
+  {
+    "text": ">> Yeah. So that's a great question like",
+    "start": 1855.039,
+    "duration": 3.12
+  },
+  {
+    "text": "how do you guarantee that some of your",
+    "start": 1856.64,
+    "duration": 4.56
+  },
+  {
+    "text": "trajectories have good reward? Um if",
+    "start": 1858.159,
+    "duration": 5.041
+  },
+  {
+    "text": "your model can't produce trajectories",
+    "start": 1861.2,
+    "duration": 4.32
+  },
+  {
+    "text": "that have good reward then reinforcement",
+    "start": 1863.2,
+    "duration": 5.599
+  },
+  {
+    "text": "learning and this method um are probably",
+    "start": 1865.52,
+    "duration": 6.24
+  },
+  {
+    "text": "not a great fit. So there's a few things",
+    "start": 1868.799,
+    "duration": 6.801
+  },
+  {
+    "text": "you can do. one is you can um have some",
+    "start": 1871.76,
+    "duration": 5.68
+  },
+  {
+    "text": "demonstrations of good trajectories",
+    "start": 1875.6,
+    "duration": 4.559
+  },
+  {
+    "text": "which you train the model on. So you",
+    "start": 1877.44,
+    "duration": 6.56
+  },
+  {
+    "text": "know like um the R1 paper um and a lot",
+    "start": 1880.159,
+    "duration": 6.161
+  },
+  {
+    "text": "of reasoning models um will have an",
+    "start": 1884.0,
+    "duration": 4.32
+  },
+  {
+    "text": "initial what they call cold start stage",
+    "start": 1886.32,
+    "duration": 3.92
+  },
+  {
+    "text": "where they will train the model on",
+    "start": 1888.32,
+    "duration": 5.04
+  },
+  {
+    "text": "reasoning traces um before they start",
+    "start": 1890.24,
+    "duration": 4.64
+  },
+  {
+    "text": "doing reinforcement learning. So that",
+    "start": 1893.36,
+    "duration": 3.52
+  },
+  {
+    "text": "just makes it easier for RL or something",
+    "start": 1894.88,
+    "duration": 3.36
+  },
+  {
+    "text": "like this to be able to produce",
+    "start": 1896.88,
+    "duration": 3.679
+  },
+  {
+    "text": "trajectories that have high reward. You",
+    "start": 1898.24,
+    "duration": 4.96
+  },
+  {
+    "text": "can also like look at curriculum. So you",
+    "start": 1900.559,
+    "duration": 5.201
+  },
+  {
+    "text": "can um select problems that do have",
+    "start": 1903.2,
+    "duration": 4.479
+  },
+  {
+    "text": "enough trajectories which produce",
+    "start": 1905.76,
+    "duration": 3.68
+  },
+  {
+    "text": "reward. Train on those first and then as",
+    "start": 1907.679,
+    "duration": 3.281
+  },
+  {
+    "text": "the model gets better you're able to",
+    "start": 1909.44,
+    "duration": 3.599
+  },
+  {
+    "text": "tackle harder problems. You can also",
+    "start": 1910.96,
+    "duration": 4.079
+  },
+  {
+    "text": "have like intermediate rewards like if",
+    "start": 1913.039,
+    "duration": 3.281
+  },
+  {
+    "text": "you have some knowledge of the problem",
+    "start": 1915.039,
+    "duration": 3.921
+  },
+  {
+    "text": "and like know it's useful to explore the",
+    "start": 1916.32,
+    "duration": 4.719
+  },
+  {
+    "text": "code repo first. You could give the",
+    "start": 1918.96,
+    "duration": 4.16
+  },
+  {
+    "text": "model reward for doing that and then",
+    "start": 1921.039,
+    "duration": 3.681
+  },
+  {
+    "text": "hopefully like after it learns to do",
+    "start": 1923.12,
+    "duration": 3.439
+  },
+  {
+    "text": "that it'll kind of unlock solving the",
+    "start": 1924.72,
+    "duration": 3.76
+  },
+  {
+    "text": "whole task. But this is a really big",
+    "start": 1926.559,
+    "duration": 4.24
+  },
+  {
+    "text": "kind of issue that RL algorithms have to",
+    "start": 1928.48,
+    "duration": 3.84
+  },
+  {
+    "text": "grapple with and those are a few",
+    "start": 1930.799,
+    "duration": 4.0
+  },
+  {
+    "text": "solutions to it.",
+    "start": 1932.32,
+    "duration": 4.56
+  },
+  {
+    "text": "Yeah. Cool.",
+    "start": 1934.799,
+    "duration": 5.521
+  },
+  {
+    "text": "Okay. So now um let's uh actually get",
+    "start": 1936.88,
+    "duration": 6.56
+  },
+  {
+    "text": "into the policy gradient methods.",
+    "start": 1940.32,
+    "duration": 5.599
+  },
+  {
+    "text": "So we're interested to maximize this",
+    "start": 1943.44,
+    "duration": 5.839
+  },
+  {
+    "text": "quantity uh J of theta the expectation",
+    "start": 1945.919,
+    "duration": 6.721
+  },
+  {
+    "text": "of reward. And we can't just use back",
+    "start": 1949.279,
+    "duration": 6.161
+  },
+  {
+    "text": "propagation to do this uh for two",
+    "start": 1952.64,
+    "duration": 4.8
+  },
+  {
+    "text": "reasons. The first is that we are",
+    "start": 1955.44,
+    "duration": 6.079
+  },
+  {
+    "text": "sampling actions from our policy. And",
+    "start": 1957.44,
+    "duration": 6.239
+  },
+  {
+    "text": "the second reason is that we are then",
+    "start": 1961.519,
+    "duration": 4.321
+  },
+  {
+    "text": "executing these actions in this like",
+    "start": 1963.679,
+    "duration": 4.401
+  },
+  {
+    "text": "blackbox environment which is",
+    "start": 1965.84,
+    "duration": 4.24
+  },
+  {
+    "text": "potentially",
+    "start": 1968.08,
+    "duration": 3.439
+  },
+  {
+    "text": "which is almost always like",
+    "start": 1970.08,
+    "duration": 3.36
+  },
+  {
+    "text": "non-ifferiable.",
+    "start": 1971.519,
+    "duration": 5.361
+  },
+  {
+    "text": "Um and so this breaks our ability to do",
+    "start": 1973.44,
+    "duration": 6.239
+  },
+  {
+    "text": "back propagation to you know directly",
+    "start": 1976.88,
+    "duration": 4.24
+  },
+  {
+    "text": "you know like use the chain rule like",
+    "start": 1979.679,
+    "duration": 3.441
+  },
+  {
+    "text": "you saw in a machine learning class to",
+    "start": 1981.12,
+    "duration": 5.6
+  },
+  {
+    "text": "get the derivative of um your reward",
+    "start": 1983.12,
+    "duration": 6.96
+  },
+  {
+    "text": "with respect to the parameters. So um",
+    "start": 1986.72,
+    "duration": 4.959
+  },
+  {
+    "text": "actions are discrete and they're",
+    "start": 1990.08,
+    "duration": 4.64
+  },
+  {
+    "text": "sampled. So the derivative with respect",
+    "start": 1991.679,
+    "duration": 6.401
+  },
+  {
+    "text": "to um the parameters of a sample is zero",
+    "start": 1994.72,
+    "duration": 5.439
+  },
+  {
+    "text": "almost everywhere because you know the",
+    "start": 1998.08,
+    "duration": 4.16
+  },
+  {
+    "text": "parameters change the probabilities but",
+    "start": 2000.159,
+    "duration": 5.36
+  },
+  {
+    "text": "don't um until you get to kind of a step",
+    "start": 2002.24,
+    "duration": 5.439
+  },
+  {
+    "text": "point don't change the action sampled",
+    "start": 2005.519,
+    "duration": 4.0
+  },
+  {
+    "text": "and the environment is usually not",
+    "start": 2007.679,
+    "duration": 4.321
+  },
+  {
+    "text": "differentiable. So the general solution",
+    "start": 2009.519,
+    "duration": 4.721
+  },
+  {
+    "text": "to this is actually a pretty classic",
+    "start": 2012.0,
+    "duration": 4.96
+  },
+  {
+    "text": "method called reinforce um which was",
+    "start": 2014.24,
+    "duration": 7.12
+  },
+  {
+    "text": "from Williams in 1992 and um it's going",
+    "start": 2016.96,
+    "duration": 8.079
+  },
+  {
+    "text": "to use this uh definition of the",
+    "start": 2021.36,
+    "duration": 6.24
+  },
+  {
+    "text": "expected reward and then basically just",
+    "start": 2025.039,
+    "duration": 5.921
+  },
+  {
+    "text": "some algebra tricks in order to um",
+    "start": 2027.6,
+    "duration": 7.679
+  },
+  {
+    "text": "compute an estimate of this that uses um",
+    "start": 2030.96,
+    "duration": 7.28
+  },
+  {
+    "text": "samples from the model and um the same",
+    "start": 2035.279,
+    "duration": 5.441
+  },
+  {
+    "text": "back propagation procedures that we've",
+    "start": 2038.24,
+    "duration": 5.36
+  },
+  {
+    "text": "looked at before um to get par you know",
+    "start": 2040.72,
+    "duration": 4.88
+  },
+  {
+    "text": "to get partial derivatives with respect",
+    "start": 2043.6,
+    "duration": 5.279
+  },
+  {
+    "text": "to these parameters theta and we'll show",
+    "start": 2045.6,
+    "duration": 7.559
+  },
+  {
+    "text": "you how to do that on the next slide.",
+    "start": 2048.879,
+    "duration": 4.28
+  },
+  {
+    "text": "So this is the objective that we want to",
+    "start": 2053.52,
+    "duration": 5.359
+  },
+  {
+    "text": "optimize. It's this expectation over",
+    "start": 2056.72,
+    "duration": 4.72
+  },
+  {
+    "text": "trajectories from our environment and",
+    "start": 2058.879,
+    "duration": 4.96
+  },
+  {
+    "text": "our policy and the expectation of the",
+    "start": 2061.44,
+    "duration": 5.439
+  },
+  {
+    "text": "reward of those trajectories. So this is",
+    "start": 2063.839,
+    "duration": 5.76
+  },
+  {
+    "text": "a if you recall what an expectation is",
+    "start": 2066.879,
+    "duration": 6.641
+  },
+  {
+    "text": "it's a sum um over these things these",
+    "start": 2069.599,
+    "duration": 5.441
+  },
+  {
+    "text": "trajectories",
+    "start": 2073.52,
+    "duration": 4.24
+  },
+  {
+    "text": "uh of the term in here the reward but",
+    "start": 2075.04,
+    "duration": 5.44
+  },
+  {
+    "text": "weighted by the probability of that",
+    "start": 2077.76,
+    "duration": 5.76
+  },
+  {
+    "text": "trajectory. So this is a sum over a",
+    "start": 2080.48,
+    "duration": 5.119
+  },
+  {
+    "text": "really large space like all possible",
+    "start": 2083.52,
+    "duration": 4.399
+  },
+  {
+    "text": "trajectories from the language model.",
+    "start": 2085.599,
+    "duration": 4.32
+  },
+  {
+    "text": "We're almost never going to be able to",
+    "start": 2087.919,
+    "duration": 4.561
+  },
+  {
+    "text": "compute that exactly,",
+    "start": 2089.919,
+    "duration": 4.401
+  },
+  {
+    "text": "but this is what it would come out to be",
+    "start": 2092.48,
+    "duration": 5.2
+  },
+  {
+    "text": "if we wanted to compute it. Taking the",
+    "start": 2094.32,
+    "duration": 5.36
+  },
+  {
+    "text": "gradient of this. So we just, you know,",
+    "start": 2097.68,
+    "duration": 4.24
+  },
+  {
+    "text": "take the partial derivative with respect",
+    "start": 2099.68,
+    "duration": 5.2
+  },
+  {
+    "text": "to the parameters theta. Um, we can move",
+    "start": 2101.92,
+    "duration": 8.48
+  },
+  {
+    "text": "that uh inside the sum and this uh",
+    "start": 2104.88,
+    "duration": 7.6
+  },
+  {
+    "text": "reward term depends only on the",
+    "start": 2110.4,
+    "duration": 3.84
+  },
+  {
+    "text": "trajectory. So once we know the",
+    "start": 2112.48,
+    "duration": 4.0
+  },
+  {
+    "text": "trajectory, we know what the reward is.",
+    "start": 2114.24,
+    "duration": 3.839
+  },
+  {
+    "text": "it doesn't depend on the parameters",
+    "start": 2116.48,
+    "duration": 3.2
+  },
+  {
+    "text": "anymore. The parameters produce the",
+    "start": 2118.079,
+    "duration": 4.481
+  },
+  {
+    "text": "trajectory. Um but then the reward is",
+    "start": 2119.68,
+    "duration": 5.52
+  },
+  {
+    "text": "just a function of the trajectory. So um",
+    "start": 2122.56,
+    "duration": 4.4
+  },
+  {
+    "text": "this reward term is going to be",
+    "start": 2125.2,
+    "duration": 4.639
+  },
+  {
+    "text": "multiplied by this partial derivative of",
+    "start": 2126.96,
+    "duration": 5.84
+  },
+  {
+    "text": "this probability.",
+    "start": 2129.839,
+    "duration": 5.201
+  },
+  {
+    "text": "But this is still difficult because this",
+    "start": 2132.8,
+    "duration": 5.36
+  },
+  {
+    "text": "is a sum over like a potentially very",
+    "start": 2135.04,
+    "duration": 5.44
+  },
+  {
+    "text": "large number of trajectories. So we're",
+    "start": 2138.16,
+    "duration": 3.84
+  },
+  {
+    "text": "going to do an algebra trick here. And",
+    "start": 2140.48,
+    "duration": 4.08
+  },
+  {
+    "text": "this is called the score ratio trick. um",
+    "start": 2142.0,
+    "duration": 4.8
+  },
+  {
+    "text": "we're going to just uh multiply and",
+    "start": 2144.56,
+    "duration": 5.36
+  },
+  {
+    "text": "divide by this term p of theta. So we",
+    "start": 2146.8,
+    "duration": 5.12
+  },
+  {
+    "text": "have that over here and we also have",
+    "start": 2149.92,
+    "duration": 4.0
+  },
+  {
+    "text": "that in the denominator. Those cancel.",
+    "start": 2151.92,
+    "duration": 5.12
+  },
+  {
+    "text": "So this is the same as that. And then we",
+    "start": 2153.92,
+    "duration": 6.0
+  },
+  {
+    "text": "can use this trick which is um the",
+    "start": 2157.04,
+    "duration": 5.84
+  },
+  {
+    "text": "partial derivative of log p with respect",
+    "start": 2159.92,
+    "duration": 5.28
+  },
+  {
+    "text": "to theta. We can just use the chain rule",
+    "start": 2162.88,
+    "duration": 4.56
+  },
+  {
+    "text": "and it's get it's the partial derivative",
+    "start": 2165.2,
+    "duration": 6.399
+  },
+  {
+    "text": "of um p / p. So we can use that identity",
+    "start": 2167.44,
+    "duration": 6.96
+  },
+  {
+    "text": "here and we get this term. And this is",
+    "start": 2171.599,
+    "duration": 5.52
+  },
+  {
+    "text": "going to be kind of magical because we",
+    "start": 2174.4,
+    "duration": 6.0
+  },
+  {
+    "text": "now have this which is going to be an",
+    "start": 2177.119,
+    "duration": 6.161
+  },
+  {
+    "text": "expectation over trajectories",
+    "start": 2180.4,
+    "duration": 5.6
+  },
+  {
+    "text": "um times a reward term times this term",
+    "start": 2183.28,
+    "duration": 4.559
+  },
+  {
+    "text": "here.",
+    "start": 2186.0,
+    "duration": 5.04
+  },
+  {
+    "text": "And um this term is going to be this is",
+    "start": 2187.839,
+    "duration": 6.721
+  },
+  {
+    "text": "the same computation that we do in SFT.",
+    "start": 2191.04,
+    "duration": 5.76
+  },
+  {
+    "text": "Right? In SFT, we're also taking a",
+    "start": 2194.56,
+    "duration": 4.88
+  },
+  {
+    "text": "partial derivative of the log of a bunch",
+    "start": 2196.8,
+    "duration": 6.24
+  },
+  {
+    "text": "of unit tokens um with respect to the",
+    "start": 2199.44,
+    "duration": 7.679
+  },
+  {
+    "text": "parameters of the language model. And um",
+    "start": 2203.04,
+    "duration": 7.6
+  },
+  {
+    "text": "we're going to be able to uh estimate",
+    "start": 2207.119,
+    "duration": 7.121
+  },
+  {
+    "text": "this quantity by sampling trajectories",
+    "start": 2210.64,
+    "duration": 6.8
+  },
+  {
+    "text": "and then computing this term here. And",
+    "start": 2214.24,
+    "duration": 6.48
+  },
+  {
+    "text": "this will give us an estimate of the um",
+    "start": 2217.44,
+    "duration": 8.0
+  },
+  {
+    "text": "of the gradient of this uh expected",
+    "start": 2220.72,
+    "duration": 8.72
+  },
+  {
+    "text": "reward. Any questions about that?",
+    "start": 2225.44,
+    "duration": 5.679
+  },
+  {
+    "text": ">> So this is really general doesn't make",
+    "start": 2229.44,
+    "duration": 4.159
+  },
+  {
+    "text": "any assumptions about um the language",
+    "start": 2231.119,
+    "duration": 6.641
+  },
+  {
+    "text": "model or about the environment.",
+    "start": 2233.599,
+    "duration": 4.721
+  },
+  {
+    "text": ">> Yeah.",
+    "start": 2237.76,
+    "duration": 3.359
+  },
+  {
+    "text": ">> Are you going",
+    "start": 2238.32,
+    "duration": 4.48
+  },
+  {
+    "text": "the",
+    "start": 2241.119,
+    "duration": 3.441
+  },
+  {
+    "text": "series of states and actions but the",
+    "start": 2242.8,
+    "duration": 4.48
+  },
+  {
+    "text": "actions are generated by large",
+    "start": 2244.56,
+    "duration": 4.799
+  },
+  {
+    "text": "are also sequences of",
+    "start": 2247.28,
+    "duration": 4.16
+  },
+  {
+    "text": ">> yeah",
+    "start": 2249.359,
+    "duration": 3.921
+  },
+  {
+    "text": "normal way to reconcile that",
+    "start": 2251.44,
+    "duration": 3.52
+  },
+  {
+    "text": ">> yeah we'll we'll break that down in a",
+    "start": 2253.28,
+    "duration": 3.04
+  },
+  {
+    "text": "couple slides but yeah it's a good",
+    "start": 2254.96,
+    "duration": 3.36
+  },
+  {
+    "text": "question",
+    "start": 2256.32,
+    "duration": 4.48
+  },
+  {
+    "text": "yeah so um we'll just copy that term",
+    "start": 2258.32,
+    "duration": 4.64
+  },
+  {
+    "text": "here and then we'll um break this into",
+    "start": 2260.8,
+    "duration": 5.039
+  },
+  {
+    "text": "the component pieces so um these",
+    "start": 2262.96,
+    "duration": 5.2
+  },
+  {
+    "text": "trajectories are going to be sampled by",
+    "start": 2265.839,
+    "duration": 4.24
+  },
+  {
+    "text": "having the language model and the agent",
+    "start": 2268.16,
+    "duration": 3.76
+  },
+  {
+    "text": "on top of it interact with the",
+    "start": 2270.079,
+    "duration": 3.441
+  },
+  {
+    "text": "environment",
+    "start": 2271.92,
+    "duration": 3.84
+  },
+  {
+    "text": "um and that's you know the same",
+    "start": 2273.52,
+    "duration": 3.68
+  },
+  {
+    "text": "procedure that you would use when you're",
+    "start": 2275.76,
+    "duration": 3.28
+  },
+  {
+    "text": "just running this agent. That gives you",
+    "start": 2277.2,
+    "duration": 7.44
+  },
+  {
+    "text": "a trajectory. Um and we uh",
+    "start": 2279.04,
+    "duration": 10.16
+  },
+  {
+    "text": "uh this should be um a sum over this",
+    "start": 2284.64,
+    "duration": 6.719
+  },
+  {
+    "text": "should be an average over trajectories",
+    "start": 2289.2,
+    "duration": 4.639
+  },
+  {
+    "text": "because we can estimate an expectation",
+    "start": 2291.359,
+    "duration": 4.48
+  },
+  {
+    "text": "by drawing some number of samples from",
+    "start": 2293.839,
+    "duration": 5.601
+  },
+  {
+    "text": "this distribution and then averaging the",
+    "start": 2295.839,
+    "duration": 6.881
+  },
+  {
+    "text": "quantity inside the expectation. So if",
+    "start": 2299.44,
+    "duration": 5.84
+  },
+  {
+    "text": "we average over a bunch of trajectories",
+    "start": 2302.72,
+    "duration": 5.04
+  },
+  {
+    "text": "drawn from this distribution this",
+    "start": 2305.28,
+    "duration": 5.2
+  },
+  {
+    "text": "quantity here um then we will get an",
+    "start": 2307.76,
+    "duration": 5.839
+  },
+  {
+    "text": "estimate of this gradient.",
+    "start": 2310.48,
+    "duration": 6.4
+  },
+  {
+    "text": "So um what are these uh terms inside",
+    "start": 2313.599,
+    "duration": 6.401
+  },
+  {
+    "text": "here? Well it's um since this is a",
+    "start": 2316.88,
+    "duration": 5.68
+  },
+  {
+    "text": "trajectory we break this up into steps.",
+    "start": 2320.0,
+    "duration": 6.64
+  },
+  {
+    "text": "So it'll be a sum over time steps of um",
+    "start": 2322.56,
+    "duration": 6.559
+  },
+  {
+    "text": "the gradient that's due to that",
+    "start": 2326.64,
+    "duration": 4.8
+  },
+  {
+    "text": "particular action. And we'll see how to",
+    "start": 2329.119,
+    "duration": 5.041
+  },
+  {
+    "text": "compute that in a slide.",
+    "start": 2331.44,
+    "duration": 5.04
+  },
+  {
+    "text": "So yeah, so the three components here",
+    "start": 2334.16,
+    "duration": 4.08
+  },
+  {
+    "text": "are the trajectories. We get those by",
+    "start": 2336.48,
+    "duration": 4.879
+  },
+  {
+    "text": "sampling. Um the task level evaluation",
+    "start": 2338.24,
+    "duration": 5.44
+  },
+  {
+    "text": "which we get from the environment. And",
+    "start": 2341.359,
+    "duration": 5.521
+  },
+  {
+    "text": "then this gradient here which is going",
+    "start": 2343.68,
+    "duration": 5.04
+  },
+  {
+    "text": "to be produced using the same way that",
+    "start": 2346.88,
+    "duration": 3.84
+  },
+  {
+    "text": "we get gradients in in supervised",
+    "start": 2348.72,
+    "duration": 4.32
+  },
+  {
+    "text": "fine-tuning. But the key thing is these",
+    "start": 2350.72,
+    "duration": 4.879
+  },
+  {
+    "text": "actions here are going to be the ones",
+    "start": 2353.04,
+    "duration": 5.76
+  },
+  {
+    "text": "sampled from the agent rather than ones",
+    "start": 2355.599,
+    "duration": 6.081
+  },
+  {
+    "text": "that are demonstrated by uh you know",
+    "start": 2358.8,
+    "duration": 6.6
+  },
+  {
+    "text": "some ground truth.",
+    "start": 2361.68,
+    "duration": 3.72
+  },
+  {
+    "text": "Okay. So yeah, how do we get log",
+    "start": 2365.68,
+    "duration": 4.96
+  },
+  {
+    "text": "probabilities of trajectories? Uh I'll",
+    "start": 2367.92,
+    "duration": 4.4
+  },
+  {
+    "text": "go a little bit quickly through this.",
+    "start": 2370.64,
+    "duration": 4.08
+  },
+  {
+    "text": "The the key thing to keep in mind is",
+    "start": 2372.32,
+    "duration": 5.2
+  },
+  {
+    "text": "that the probability of a trajectory",
+    "start": 2374.72,
+    "duration": 5.44
+  },
+  {
+    "text": "depends both on the probability from the",
+    "start": 2377.52,
+    "duration": 5.28
+  },
+  {
+    "text": "language model plus agent but it also",
+    "start": 2380.16,
+    "duration": 5.76
+  },
+  {
+    "text": "depends on the probability of getting",
+    "start": 2382.8,
+    "duration": 5.279
+  },
+  {
+    "text": "the particular observations and rewards",
+    "start": 2385.92,
+    "duration": 4.48
+  },
+  {
+    "text": "that you did from the environment. But",
+    "start": 2388.079,
+    "duration": 3.76
+  },
+  {
+    "text": "the key thing is is that this",
+    "start": 2390.4,
+    "duration": 3.28
+  },
+  {
+    "text": "probability doesn't depend on the",
+    "start": 2391.839,
+    "duration": 3.601
+  },
+  {
+    "text": "parameters of the language model in any",
+    "start": 2393.68,
+    "duration": 5.2
+  },
+  {
+    "text": "way. So if we differentiate this log",
+    "start": 2395.44,
+    "duration": 6.56
+  },
+  {
+    "text": "probability of you know the uh",
+    "start": 2398.88,
+    "duration": 6.959
+  },
+  {
+    "text": "trajectory with respect to the um",
+    "start": 2402.0,
+    "duration": 6.4
+  },
+  {
+    "text": "parameters this entire term just goes",
+    "start": 2405.839,
+    "duration": 4.321
+  },
+  {
+    "text": "away because it's a constant with",
+    "start": 2408.4,
+    "duration": 3.92
+  },
+  {
+    "text": "respect to the parameters. So we can",
+    "start": 2410.16,
+    "duration": 6.48
+  },
+  {
+    "text": "just ignore it and this um gradient",
+    "start": 2412.32,
+    "duration": 7.92
+  },
+  {
+    "text": "uh for the trajectory is the sum of the",
+    "start": 2416.64,
+    "duration": 6.479
+  },
+  {
+    "text": "gradients for the actions within the",
+    "start": 2420.24,
+    "duration": 5.359
+  },
+  {
+    "text": "trajectory.",
+    "start": 2423.119,
+    "duration": 5.361
+  },
+  {
+    "text": "So this is mostly just kind of like uh",
+    "start": 2425.599,
+    "duration": 6.321
+  },
+  {
+    "text": "bookkeeping for rigor. Um but one thing",
+    "start": 2428.48,
+    "duration": 5.359
+  },
+  {
+    "text": "that is important to think about is",
+    "start": 2431.92,
+    "duration": 4.32
+  },
+  {
+    "text": "these actions that are being produced by",
+    "start": 2433.839,
+    "duration": 5.28
+  },
+  {
+    "text": "the agent um might correspond to",
+    "start": 2436.24,
+    "duration": 4.72
+  },
+  {
+    "text": "multiple tokens from your language",
+    "start": 2439.119,
+    "duration": 4.161
+  },
+  {
+    "text": "model, right? So like maybe you need to",
+    "start": 2440.96,
+    "duration": 6.0
+  },
+  {
+    "text": "say uh you need to say you're you're",
+    "start": 2443.28,
+    "duration": 5.76
+  },
+  {
+    "text": "making a complex tool call and that",
+    "start": 2446.96,
+    "duration": 4.8
+  },
+  {
+    "text": "splits up into multiple tokens. Um, of",
+    "start": 2449.04,
+    "duration": 4.88
+  },
+  {
+    "text": "course, the log probabilities of those",
+    "start": 2451.76,
+    "duration": 4.8
+  },
+  {
+    "text": "tokens are just going to be um summed up",
+    "start": 2453.92,
+    "duration": 4.64
+  },
+  {
+    "text": "to produce the log probability of the",
+    "start": 2456.56,
+    "duration": 5.32
+  },
+  {
+    "text": "entire action.",
+    "start": 2458.56,
+    "duration": 3.32
+  },
+  {
+    "text": "And when you have this uh gradient of a",
+    "start": 2462.319,
+    "duration": 7.681
+  },
+  {
+    "text": "trajectory, the gradient for a",
+    "start": 2467.68,
+    "duration": 5.12
+  },
+  {
+    "text": "trajectory, you can just multiply by the",
+    "start": 2470.0,
+    "duration": 7.119
+  },
+  {
+    "text": "reward, which is a scalar value from the",
+    "start": 2472.8,
+    "duration": 7.039
+  },
+  {
+    "text": "environment to get the contribution of",
+    "start": 2477.119,
+    "duration": 5.281
+  },
+  {
+    "text": "this trajectory that you sampled to the",
+    "start": 2479.839,
+    "duration": 5.561
+  },
+  {
+    "text": "expectation.",
+    "start": 2482.4,
+    "duration": 3.0
+  },
+  {
+    "text": "And how does this uh like actually look",
+    "start": 2488.48,
+    "duration": 4.08
+  },
+  {
+    "text": "if you are running this on a real",
+    "start": 2490.8,
+    "duration": 4.559
+  },
+  {
+    "text": "example. So you would um have your",
+    "start": 2492.56,
+    "duration": 5.2
+  },
+  {
+    "text": "trajectory which is sampled from the",
+    "start": 2495.359,
+    "duration": 5.601
+  },
+  {
+    "text": "agent. And um these blue tokens are the",
+    "start": 2497.76,
+    "duration": 5.12
+  },
+  {
+    "text": "ones that are actually generated by the",
+    "start": 2500.96,
+    "duration": 3.84
+  },
+  {
+    "text": "model. All the gray tokens are ones that",
+    "start": 2502.88,
+    "duration": 3.76
+  },
+  {
+    "text": "are either like part of the prompt or",
+    "start": 2504.8,
+    "duration": 5.12
+  },
+  {
+    "text": "part of the environment or added by the",
+    "start": 2506.64,
+    "duration": 4.88
+  },
+  {
+    "text": "scaffold. But these are the ones that",
+    "start": 2509.92,
+    "duration": 3.439
+  },
+  {
+    "text": "are actually produced by generating from",
+    "start": 2511.52,
+    "duration": 4.24
+  },
+  {
+    "text": "the language model. and those are going",
+    "start": 2513.359,
+    "duration": 5.841
+  },
+  {
+    "text": "to be the ones which um contribute to",
+    "start": 2515.76,
+    "duration": 6.88
+  },
+  {
+    "text": "the loss for policy gradient.",
+    "start": 2519.2,
+    "duration": 5.2
+  },
+  {
+    "text": "So we'll have all of these generated",
+    "start": 2522.64,
+    "duration": 5.28
+  },
+  {
+    "text": "tokens. We'll get um log probabilities",
+    "start": 2524.4,
+    "duration": 8.48
+  },
+  {
+    "text": "for those um of that generated action",
+    "start": 2527.92,
+    "duration": 7.439
+  },
+  {
+    "text": "selected from the distribution of the",
+    "start": 2532.88,
+    "duration": 5.6
+  },
+  {
+    "text": "language model over particular tokens at",
+    "start": 2535.359,
+    "duration": 6.081
+  },
+  {
+    "text": "that point. And then we will just scale",
+    "start": 2538.48,
+    "duration": 6.32
+  },
+  {
+    "text": "all of those um token log props by the",
+    "start": 2541.44,
+    "duration": 5.44
+  },
+  {
+    "text": "reward that corresponds to this",
+    "start": 2544.8,
+    "duration": 4.0
+  },
+  {
+    "text": "trajectory.",
+    "start": 2546.88,
+    "duration": 4.56
+  },
+  {
+    "text": "Does that make sense? And then if you",
+    "start": 2548.8,
+    "duration": 5.6
+  },
+  {
+    "text": "take the gradient of this, the gradient",
+    "start": 2551.44,
+    "duration": 6.0
+  },
+  {
+    "text": "passes inside and gets applied to this",
+    "start": 2554.4,
+    "duration": 5.919
+  },
+  {
+    "text": "log probability here. So that your",
+    "start": 2557.44,
+    "duration": 4.8
+  },
+  {
+    "text": "gradient is going to be the reward times",
+    "start": 2560.319,
+    "duration": 4.961
+  },
+  {
+    "text": "the gradient. So when I first looked at",
+    "start": 2562.24,
+    "duration": 5.359
+  },
+  {
+    "text": "the code that implemented reinforce on",
+    "start": 2565.28,
+    "duration": 5.52
+  },
+  {
+    "text": "like a pretty complex task, it was like",
+    "start": 2567.599,
+    "duration": 6.0
+  },
+  {
+    "text": "using RL to optimize dialogue models",
+    "start": 2570.8,
+    "duration": 5.2
+  },
+  {
+    "text": "from a paper called deal or no deal. It",
+    "start": 2573.599,
+    "duration": 4.401
+  },
+  {
+    "text": "was kind of like really surprising that",
+    "start": 2576.0,
+    "duration": 4.0
+  },
+  {
+    "text": "the implementation is so simple like you",
+    "start": 2578.0,
+    "duration": 4.319
+  },
+  {
+    "text": "just do basically an SFT gradient",
+    "start": 2580.0,
+    "duration": 3.92
+  },
+  {
+    "text": "computation and then multiply that",
+    "start": 2582.319,
+    "duration": 4.0
+  },
+  {
+    "text": "gradient by a reward or multiply the",
+    "start": 2583.92,
+    "duration": 4.399
+  },
+  {
+    "text": "loss by a reward and take the gradient",
+    "start": 2586.319,
+    "duration": 4.401
+  },
+  {
+    "text": "of that. But it it works and the math",
+    "start": 2588.319,
+    "duration": 5.361
+  },
+  {
+    "text": "works out.",
+    "start": 2590.72,
+    "duration": 5.599
+  },
+  {
+    "text": "Yeah. So we'll have a mask here which is",
+    "start": 2593.68,
+    "duration": 6.32
+  },
+  {
+    "text": "going to be you know you mask only to",
+    "start": 2596.319,
+    "duration": 5.841
+  },
+  {
+    "text": "select the tokens that you generate and",
+    "start": 2600.0,
+    "duration": 4.56
+  },
+  {
+    "text": "then you scale all of those by the",
+    "start": 2602.16,
+    "duration": 5.28
+  },
+  {
+    "text": "reward for the trajectory.",
+    "start": 2604.56,
+    "duration": 4.32
+  },
+  {
+    "text": "And that's how you implement the",
+    "start": 2607.44,
+    "duration": 5.2
+  },
+  {
+    "text": "reinforce policy gradient algorithm.",
+    "start": 2608.88,
+    "duration": 5.68
+  },
+  {
+    "text": "And so the training loop is just you",
+    "start": 2612.64,
+    "duration": 4.4
+  },
+  {
+    "text": "sample task instances you evaluate",
+    "start": 2614.56,
+    "duration": 5.2
+  },
+  {
+    "text": "reward on them. um get the loss using",
+    "start": 2617.04,
+    "duration": 5.2
+  },
+  {
+    "text": "that slide that we just showed you and",
+    "start": 2619.76,
+    "duration": 7.28
+  },
+  {
+    "text": "then um uh do an update on all of the",
+    "start": 2622.24,
+    "duration": 7.52
+  },
+  {
+    "text": "instances in your batch of examples",
+    "start": 2627.04,
+    "duration": 4.799
+  },
+  {
+    "text": "here.",
+    "start": 2629.76,
+    "duration": 5.04
+  },
+  {
+    "text": "Later on we'll uh when we cover gpo",
+    "start": 2631.839,
+    "duration": 4.641
+  },
+  {
+    "text": "we'll talk about how you could generate",
+    "start": 2634.8,
+    "duration": 3.84
+  },
+  {
+    "text": "multiple possible trajectories for a",
+    "start": 2636.48,
+    "duration": 4.8
+  },
+  {
+    "text": "given task example I and then use all of",
+    "start": 2638.64,
+    "duration": 5.04
+  },
+  {
+    "text": "those in the update. But if you're doing",
+    "start": 2641.28,
+    "duration": 4.72
+  },
+  {
+    "text": "just like standard reinforce, you would",
+    "start": 2643.68,
+    "duration": 4.32
+  },
+  {
+    "text": "just be using one trajectory for each",
+    "start": 2646.0,
+    "duration": 4.48
+  },
+  {
+    "text": "example and then um computing the update",
+    "start": 2648.0,
+    "duration": 5.2
+  },
+  {
+    "text": "from that. So your um batch size would",
+    "start": 2650.48,
+    "duration": 4.4
+  },
+  {
+    "text": "be the number of task instances that",
+    "start": 2653.2,
+    "duration": 3.52
+  },
+  {
+    "text": "you're training on. Um but when we get",
+    "start": 2654.88,
+    "duration": 4.719
+  },
+  {
+    "text": "to gpo um you will also have multiple",
+    "start": 2656.72,
+    "duration": 6.48
+  },
+  {
+    "text": "samples per task instance. Any questions",
+    "start": 2659.599,
+    "duration": 6.841
+  },
+  {
+    "text": "about this?",
+    "start": 2663.2,
+    "duration": 3.24
+  },
+  {
+    "text": "Okay.",
+    "start": 2669.76,
+    "duration": 4.48
+  },
+  {
+    "text": "Yeah. So um just very quickly with",
+    "start": 2671.68,
+    "duration": 4.88
+  },
+  {
+    "text": "binary rewards this looks a lot like the",
+    "start": 2674.24,
+    "duration": 4.8
+  },
+  {
+    "text": "rest um procedure that we talked about.",
+    "start": 2676.56,
+    "duration": 5.2
+  },
+  {
+    "text": "Both of these are just um scaling log",
+    "start": 2679.04,
+    "duration": 6.72
+  },
+  {
+    "text": "probabilities of actions by a reward.",
+    "start": 2681.76,
+    "duration": 6.48
+  },
+  {
+    "text": "The difference is is that this reinforce",
+    "start": 2685.76,
+    "duration": 4.64
+  },
+  {
+    "text": "method is like fully online. You're like",
+    "start": 2688.24,
+    "duration": 4.0
+  },
+  {
+    "text": "sampling these trajectories and then",
+    "start": 2690.4,
+    "duration": 4.24
+  },
+  {
+    "text": "updating on them directly. Whereas with",
+    "start": 2692.24,
+    "duration": 4.8
+  },
+  {
+    "text": "REST, you build up a very large data set",
+    "start": 2694.64,
+    "duration": 4.32
+  },
+  {
+    "text": "and then train on all of those and maybe",
+    "start": 2697.04,
+    "duration": 3.68
+  },
+  {
+    "text": "do like, you know, a full epoch or",
+    "start": 2698.96,
+    "duration": 3.44
+  },
+  {
+    "text": "multiple epochs on all of those",
+    "start": 2700.72,
+    "duration": 4.24
+  },
+  {
+    "text": "instances. But um the intuition behind",
+    "start": 2702.4,
+    "duration": 6.32
+  },
+  {
+    "text": "them is basically the same.",
+    "start": 2704.96,
+    "duration": 6.08
+  },
+  {
+    "text": "Okay, but this has a lot of issues too.",
+    "start": 2708.72,
+    "duration": 4.48
+  },
+  {
+    "text": "And so it's very rare for people to just",
+    "start": 2711.04,
+    "duration": 4.559
+  },
+  {
+    "text": "run standard reinforce policy gradient",
+    "start": 2713.2,
+    "duration": 4.72
+  },
+  {
+    "text": "out of the box.",
+    "start": 2715.599,
+    "duration": 5.76
+  },
+  {
+    "text": "So the biggest I think the the the way",
+    "start": 2717.92,
+    "duration": 6.08
+  },
+  {
+    "text": "of kind of the strongest motivation for",
+    "start": 2721.359,
+    "duration": 4.24
+  },
+  {
+    "text": "the next methods that we'll talk about",
+    "start": 2724.0,
+    "duration": 3.839
+  },
+  {
+    "text": "is thinking about how rewards should",
+    "start": 2725.599,
+    "duration": 4.48
+  },
+  {
+    "text": "really be the update that you do from",
+    "start": 2727.839,
+    "duration": 4.641
+  },
+  {
+    "text": "rewards should really be relative. So",
+    "start": 2730.079,
+    "duration": 3.841
+  },
+  {
+    "text": "let's look at these two different",
+    "start": 2732.48,
+    "duration": 5.52
+  },
+  {
+    "text": "trajectories. Um this one is successful",
+    "start": 2733.92,
+    "duration": 5.84
+  },
+  {
+    "text": "and so all the actions are going to be",
+    "start": 2738.0,
+    "duration": 4.24
+  },
+  {
+    "text": "upweighted by a reward of one if we use",
+    "start": 2739.76,
+    "duration": 4.72
+  },
+  {
+    "text": "the update rules we've talked about.",
+    "start": 2742.24,
+    "duration": 4.48
+  },
+  {
+    "text": "This one is unsuccessful.",
+    "start": 2744.48,
+    "duration": 4.72
+  },
+  {
+    "text": "So we had a bad first guess, we",
+    "start": 2746.72,
+    "duration": 4.24
+  },
+  {
+    "text": "eventually time out. And if we're just",
+    "start": 2749.2,
+    "duration": 4.639
+  },
+  {
+    "text": "using basic reinforce or arrest, we are",
+    "start": 2750.96,
+    "duration": 5.2
+  },
+  {
+    "text": "not going to do any update based on this",
+    "start": 2753.839,
+    "duration": 3.601
+  },
+  {
+    "text": "example at all. Right? Because it's",
+    "start": 2756.16,
+    "duration": 3.12
+  },
+  {
+    "text": "scaled by the reward. The reward is",
+    "start": 2757.44,
+    "duration": 4.72
+  },
+  {
+    "text": "zero. So but we actually want to be able",
+    "start": 2759.28,
+    "duration": 7.52
+  },
+  {
+    "text": "to learn not to do this, right? Um so",
+    "start": 2762.16,
+    "duration": 6.959
+  },
+  {
+    "text": "the intuition for the next part is going",
+    "start": 2766.8,
+    "duration": 5.44
+  },
+  {
+    "text": "to be about shifting our rewards so that",
+    "start": 2769.119,
+    "duration": 5.041
+  },
+  {
+    "text": "um we still get a correct estimate of",
+    "start": 2772.24,
+    "duration": 5.04
+  },
+  {
+    "text": "the gradient but um we're able to learn",
+    "start": 2774.16,
+    "duration": 6.64
+  },
+  {
+    "text": "from um uh rewards at all different um",
+    "start": 2777.28,
+    "duration": 7.52
+  },
+  {
+    "text": "scales or shifts. Um and another way of",
+    "start": 2780.8,
+    "duration": 5.44
+  },
+  {
+    "text": "thinking about this is that the update",
+    "start": 2784.8,
+    "duration": 3.279
+  },
+  {
+    "text": "that you do should depend on how well",
+    "start": 2786.24,
+    "duration": 4.96
+  },
+  {
+    "text": "the policy uh would be expected to do on",
+    "start": 2788.079,
+    "duration": 5.361
+  },
+  {
+    "text": "this example. So say that this is just",
+    "start": 2791.2,
+    "duration": 7.2
+  },
+  {
+    "text": "like an easy example and um it and the",
+    "start": 2793.44,
+    "duration": 7.84
+  },
+  {
+    "text": "model like 95% of the time gets a reward",
+    "start": 2798.4,
+    "duration": 6.56
+  },
+  {
+    "text": "of one on it. If 5% of the time you make",
+    "start": 2801.28,
+    "duration": 6.0
+  },
+  {
+    "text": "a really dumb mistake and get a reward",
+    "start": 2804.96,
+    "duration": 5.76
+  },
+  {
+    "text": "of zero, you should update very heavily",
+    "start": 2807.28,
+    "duration": 6.48
+  },
+  {
+    "text": "against those um costly but rare",
+    "start": 2810.72,
+    "duration": 5.68
+  },
+  {
+    "text": "mistakes. And um baselines and",
+    "start": 2813.76,
+    "duration": 4.079
+  },
+  {
+    "text": "advantages that we'll talk about next",
+    "start": 2816.4,
+    "duration": 3.28
+  },
+  {
+    "text": "will be a way of doing that which will",
+    "start": 2817.839,
+    "duration": 4.401
+  },
+  {
+    "text": "compare rewards to the reward that you",
+    "start": 2819.68,
+    "duration": 5.6
+  },
+  {
+    "text": "would expect to get from the policy",
+    "start": 2822.24,
+    "duration": 6.24
+  },
+  {
+    "text": "running on this example.",
+    "start": 2825.28,
+    "duration": 5.2
+  },
+  {
+    "text": "And the math for that looks like this.",
+    "start": 2828.48,
+    "duration": 4.48
+  },
+  {
+    "text": "We'll define an advantage which is going",
+    "start": 2830.48,
+    "duration": 5.359
+  },
+  {
+    "text": "to be a function of the history up to a",
+    "start": 2832.96,
+    "duration": 5.359
+  },
+  {
+    "text": "particular time step and an action. And",
+    "start": 2835.839,
+    "duration": 5.361
+  },
+  {
+    "text": "that's going to be um say that you take",
+    "start": 2838.319,
+    "duration": 5.28
+  },
+  {
+    "text": "this action from you take this",
+    "start": 2841.2,
+    "duration": 4.56
+  },
+  {
+    "text": "particular action and then you sample",
+    "start": 2843.599,
+    "duration": 4.081
+  },
+  {
+    "text": "from the language model for the rest of",
+    "start": 2845.76,
+    "duration": 3.92
+  },
+  {
+    "text": "the trajectory",
+    "start": 2847.68,
+    "duration": 4.72
+  },
+  {
+    "text": "that will tell you and you contrast that",
+    "start": 2849.68,
+    "duration": 5.36
+  },
+  {
+    "text": "against if you just sample from the",
+    "start": 2852.4,
+    "duration": 4.48
+  },
+  {
+    "text": "language model including that action and",
+    "start": 2855.04,
+    "duration": 4.24
+  },
+  {
+    "text": "then continue on. This will tell you how",
+    "start": 2856.88,
+    "duration": 5.68
+  },
+  {
+    "text": "good is this particular action um",
+    "start": 2859.28,
+    "duration": 6.079
+  },
+  {
+    "text": "relative to uh how good is the what's",
+    "start": 2862.56,
+    "duration": 4.96
+  },
+  {
+    "text": "the value of this particular action",
+    "start": 2865.359,
+    "duration": 4.081
+  },
+  {
+    "text": "taking into account that the language",
+    "start": 2867.52,
+    "duration": 3.52
+  },
+  {
+    "text": "model is going to take all the rest of",
+    "start": 2869.44,
+    "duration": 4.0
+  },
+  {
+    "text": "the actions in the future.",
+    "start": 2871.04,
+    "duration": 4.88
+  },
+  {
+    "text": "So maybe a concrete example will will",
+    "start": 2873.44,
+    "duration": 4.8
+  },
+  {
+    "text": "help with this. Let's say that we are",
+    "start": 2875.92,
+    "duration": 4.24
+  },
+  {
+    "text": "partway through this uh guessing game",
+    "start": 2878.24,
+    "duration": 3.76
+  },
+  {
+    "text": "and we've guessed eight and gotten",
+    "start": 2880.16,
+    "duration": 3.6
+  },
+  {
+    "text": "feedback higher, guessed 12, gotten",
+    "start": 2882.0,
+    "duration": 4.8
+  },
+  {
+    "text": "feedback lower. So um we know that the",
+    "start": 2883.76,
+    "duration": 6.4
+  },
+  {
+    "text": "numbers have to be between 8 and 12. So",
+    "start": 2886.8,
+    "duration": 7.76
+  },
+  {
+    "text": "they can either be 9, 10 or 11. So we",
+    "start": 2890.16,
+    "duration": 6.88
+  },
+  {
+    "text": "don't know exactly what this uh value",
+    "start": 2894.56,
+    "duration": 4.64
+  },
+  {
+    "text": "function is. It depends on what our",
+    "start": 2897.04,
+    "duration": 7.2
+  },
+  {
+    "text": "policy is. But we can think about um",
+    "start": 2899.2,
+    "duration": 7.919
+  },
+  {
+    "text": "it's probably something like 2/3 or one,",
+    "start": 2904.24,
+    "duration": 6.48
+  },
+  {
+    "text": "right? So like if the policy is is uh",
+    "start": 2907.119,
+    "duration": 6.24
+  },
+  {
+    "text": "does the best thing possible",
+    "start": 2910.72,
+    "duration": 5.04
+  },
+  {
+    "text": "uh always you should be able to just",
+    "start": 2913.359,
+    "duration": 4.881
+  },
+  {
+    "text": "always win from this situation. But if",
+    "start": 2915.76,
+    "duration": 4.48
+  },
+  {
+    "text": "it's a more random policy within the set",
+    "start": 2918.24,
+    "duration": 3.28
+  },
+  {
+    "text": "of things that are valid it might be",
+    "start": 2920.24,
+    "duration": 3.28
+  },
+  {
+    "text": "more like 2/3.",
+    "start": 2921.52,
+    "duration": 3.839
+  },
+  {
+    "text": "But we can think about the advantage",
+    "start": 2923.52,
+    "duration": 4.88
+  },
+  {
+    "text": "functions of particular guesses relative",
+    "start": 2925.359,
+    "duration": 6.321
+  },
+  {
+    "text": "to this baseline. So like a guess of 11",
+    "start": 2928.4,
+    "duration": 6.08
+  },
+  {
+    "text": "would be bad because",
+    "start": 2931.68,
+    "duration": 5.76
+  },
+  {
+    "text": "um it's at one end of this range and if",
+    "start": 2934.48,
+    "duration": 6.56
+  },
+  {
+    "text": "11 is not correct then we have two",
+    "start": 2937.44,
+    "duration": 5.44
+  },
+  {
+    "text": "candidates and one guess left so this",
+    "start": 2941.04,
+    "duration": 4.48
+  },
+  {
+    "text": "advantage should be low whereas 10 would",
+    "start": 2942.88,
+    "duration": 6.32
+  },
+  {
+    "text": "be good because whether or you know even",
+    "start": 2945.52,
+    "duration": 5.52
+  },
+  {
+    "text": "if this is wrong then we have one guess",
+    "start": 2949.2,
+    "duration": 3.68
+  },
+  {
+    "text": "left and we could go either higher or",
+    "start": 2951.04,
+    "duration": 4.84
+  },
+  {
+    "text": "lower.",
+    "start": 2952.88,
+    "duration": 3.0
+  },
+  {
+    "text": "So a lot of reinforcement learning",
+    "start": 2956.96,
+    "duration": 3.52
+  },
+  {
+    "text": "algorithms are derived from different",
+    "start": 2958.72,
+    "duration": 5.04
+  },
+  {
+    "text": "ways of estimating these advantage and",
+    "start": 2960.48,
+    "duration": 6.96
+  },
+  {
+    "text": "value th this advantage as a function of",
+    "start": 2963.76,
+    "duration": 6.0
+  },
+  {
+    "text": "uh this individual Q value for actions",
+    "start": 2967.44,
+    "duration": 5.6
+  },
+  {
+    "text": "and values and we'll talk about a few of",
+    "start": 2969.76,
+    "duration": 5.839
+  },
+  {
+    "text": "those for the rest of this lecture. But",
+    "start": 2973.04,
+    "duration": 6.0
+  },
+  {
+    "text": "a key idea is that if we don't know um",
+    "start": 2975.599,
+    "duration": 9.361
+  },
+  {
+    "text": "qpi or vpi, we can estimate them uh",
+    "start": 2979.04,
+    "duration": 9.2
+  },
+  {
+    "text": "by we can estimate the expected reward",
+    "start": 2984.96,
+    "duration": 6.399
+  },
+  {
+    "text": "of this particular action just by acting",
+    "start": 2988.24,
+    "duration": 7.28
+  },
+  {
+    "text": "and we can estimate um this value",
+    "start": 2991.359,
+    "duration": 6.48
+  },
+  {
+    "text": "of how well we would expect to do using",
+    "start": 2995.52,
+    "duration": 4.64
+  },
+  {
+    "text": "what we'll call a baseline function.",
+    "start": 2997.839,
+    "duration": 3.921
+  },
+  {
+    "text": "We'll see some examples of baseline",
+    "start": 3000.16,
+    "duration": 6.24
+  },
+  {
+    "text": "functions uh for the next few slides.",
+    "start": 3001.76,
+    "duration": 4.64
+  },
+  {
+    "text": "So a baseline is just a way of um",
+    "start": 3007.359,
+    "duration": 6.48
+  },
+  {
+    "text": "rescaling your rewards.",
+    "start": 3010.64,
+    "duration": 6.0
+  },
+  {
+    "text": "So this is the reinforce estimator of",
+    "start": 3013.839,
+    "duration": 6.801
+  },
+  {
+    "text": "the expected um return here. Um which",
+    "start": 3016.64,
+    "duration": 8.0
+  },
+  {
+    "text": "you know scales uh the reward by um the",
+    "start": 3020.64,
+    "duration": 6.88
+  },
+  {
+    "text": "log probabilities of which uses the",
+    "start": 3024.64,
+    "duration": 5.439
+  },
+  {
+    "text": "reward to rescale this gradient of the",
+    "start": 3027.52,
+    "duration": 5.36
+  },
+  {
+    "text": "log probabilities. And um these",
+    "start": 3030.079,
+    "duration": 5.441
+  },
+  {
+    "text": "advantage-based methods will generally",
+    "start": 3032.88,
+    "duration": 5.28
+  },
+  {
+    "text": "have this form here of um subtracting",
+    "start": 3035.52,
+    "duration": 6.559
+  },
+  {
+    "text": "off a baseline from this reward.",
+    "start": 3038.16,
+    "duration": 6.56
+  },
+  {
+    "text": "And these are different these are not",
+    "start": 3042.079,
+    "duration": 5.04
+  },
+  {
+    "text": "numerically equivalent to each other but",
+    "start": 3044.72,
+    "duration": 5.44
+  },
+  {
+    "text": "they are both different valid ways to",
+    "start": 3047.119,
+    "duration": 6.321
+  },
+  {
+    "text": "estimate the policy gradient. We'll uh",
+    "start": 3050.16,
+    "duration": 5.28
+  },
+  {
+    "text": "have a slide next that shows that this",
+    "start": 3053.44,
+    "duration": 6.32
+  },
+  {
+    "text": "is also a valid unbiased um estimator of",
+    "start": 3055.44,
+    "duration": 6.159
+  },
+  {
+    "text": "this same quantity.",
+    "start": 3059.76,
+    "duration": 4.319
+  },
+  {
+    "text": "But for different like baselines that we",
+    "start": 3061.599,
+    "duration": 4.881
+  },
+  {
+    "text": "can define um we'll get different",
+    "start": 3064.079,
+    "duration": 5.04
+  },
+  {
+    "text": "reinforcement learning algorithms. So",
+    "start": 3066.48,
+    "duration": 4.24
+  },
+  {
+    "text": "we'll have an example coming up which",
+    "start": 3069.119,
+    "duration": 3.44
+  },
+  {
+    "text": "kind of motivates why subtracting a",
+    "start": 3070.72,
+    "duration": 4.72
+  },
+  {
+    "text": "baseline uh can be a good thing to do.",
+    "start": 3072.559,
+    "duration": 5.52
+  },
+  {
+    "text": "Um so and in that example the baseline's",
+    "start": 3075.44,
+    "duration": 4.399
+  },
+  {
+    "text": "just going to be a constant. The",
+    "start": 3078.079,
+    "duration": 4.401
+  },
+  {
+    "text": "baseline could also be a running average",
+    "start": 3079.839,
+    "duration": 4.641
+  },
+  {
+    "text": "of all the rewards that you've gotten so",
+    "start": 3082.48,
+    "duration": 3.68
+  },
+  {
+    "text": "far from all the examples that you've",
+    "start": 3084.48,
+    "duration": 4.8
+  },
+  {
+    "text": "seen. It could also be a trained like",
+    "start": 3086.16,
+    "duration": 5.919
+  },
+  {
+    "text": "neural model and this is the case in",
+    "start": 3089.28,
+    "duration": 4.88
+  },
+  {
+    "text": "actor critic methods or a method called",
+    "start": 3092.079,
+    "duration": 4.321
+  },
+  {
+    "text": "PO which we may cover in the next",
+    "start": 3094.16,
+    "duration": 4.399
+  },
+  {
+    "text": "lecture. Um but you need a separate",
+    "start": 3096.4,
+    "duration": 4.959
+  },
+  {
+    "text": "model from your policy for that that can",
+    "start": 3098.559,
+    "duration": 5.441
+  },
+  {
+    "text": "be expensive. And in the final part of",
+    "start": 3101.359,
+    "duration": 5.441
+  },
+  {
+    "text": "this lecture we'll actually not have a",
+    "start": 3104.0,
+    "duration": 5.28
+  },
+  {
+    "text": "separate model but we will just estimate",
+    "start": 3106.8,
+    "duration": 6.16
+  },
+  {
+    "text": "this expected reward under the policy by",
+    "start": 3109.28,
+    "duration": 6.4
+  },
+  {
+    "text": "sampling from the policy itself. Um, and",
+    "start": 3112.96,
+    "duration": 6.92
+  },
+  {
+    "text": "that'll be the gpo algorithm.",
+    "start": 3115.68,
+    "duration": 4.2
+  },
+  {
+    "text": "Okay. So, any questions about this?",
+    "start": 3120.16,
+    "duration": 5.32
+  },
+  {
+    "text": "We'll see a little bit more motivation",
+    "start": 3126.48,
+    "duration": 4.0
+  },
+  {
+    "text": "for baselines in the next few slides,",
+    "start": 3128.24,
+    "duration": 4.005
+  },
+  {
+    "text": "too.",
+    "start": 3130.48,
+    "duration": 3.785
+  },
+  {
+    "text": "[snorts]",
+    "start": 3132.245,
+    "duration": 2.02
+  },
+  {
+    "text": "So, just a quick uh note about um about",
+    "start": 3136.0,
+    "duration": 8.319
+  },
+  {
+    "text": "uh baselines and bias.",
+    "start": 3141.76,
+    "duration": 4.16
+  },
+  {
+    "text": "So",
+    "start": 3144.319,
+    "duration": 6.24
+  },
+  {
+    "text": "both of these terms are estimates of the",
+    "start": 3145.92,
+    "duration": 7.36
+  },
+  {
+    "text": "underlying expected reward.",
+    "start": 3150.559,
+    "duration": 7.76
+  },
+  {
+    "text": "And um an estimate uh could have a bias.",
+    "start": 3153.28,
+    "duration": 7.039
+  },
+  {
+    "text": "Estimates have bias and variance, right?",
+    "start": 3158.319,
+    "duration": 5.921
+  },
+  {
+    "text": "A bias is like um how much is the mean",
+    "start": 3160.319,
+    "duration": 6.481
+  },
+  {
+    "text": "of this estimate potentially shifted",
+    "start": 3164.24,
+    "duration": 5.2
+  },
+  {
+    "text": "from the true value. And the variance is",
+    "start": 3166.8,
+    "duration": 5.12
+  },
+  {
+    "text": "like how much spread is there in the",
+    "start": 3169.44,
+    "duration": 4.879
+  },
+  {
+    "text": "values that I'm uh drawing for that",
+    "start": 3171.92,
+    "duration": 5.52
+  },
+  {
+    "text": "estimate. So uh you might be worried",
+    "start": 3174.319,
+    "duration": 7.52
+  },
+  {
+    "text": "about bias um in your estimator. And",
+    "start": 3177.44,
+    "duration": 7.04
+  },
+  {
+    "text": "there's this uh this lema that shows",
+    "start": 3181.839,
+    "duration": 5.041
+  },
+  {
+    "text": "that subtracting a baseline which",
+    "start": 3184.48,
+    "duration": 4.48
+  },
+  {
+    "text": "depends only on the history up to this",
+    "start": 3186.88,
+    "duration": 4.719
+  },
+  {
+    "text": "point which all of these baselines that",
+    "start": 3188.96,
+    "duration": 6.0
+  },
+  {
+    "text": "we've defined here do um does not bias",
+    "start": 3191.599,
+    "duration": 6.081
+  },
+  {
+    "text": "the gradient. So the way to see this is",
+    "start": 3194.96,
+    "duration": 5.52
+  },
+  {
+    "text": "this is our advantage our baseline based",
+    "start": 3197.68,
+    "duration": 7.52
+  },
+  {
+    "text": "estimate of the expected um return and",
+    "start": 3200.48,
+    "duration": 7.52
+  },
+  {
+    "text": "we can uh decompose this the expectation",
+    "start": 3205.2,
+    "duration": 6.8
+  },
+  {
+    "text": "of this into these terms here. So um",
+    "start": 3208.0,
+    "duration": 6.24
+  },
+  {
+    "text": "using just the associative property",
+    "start": 3212.0,
+    "duration": 4.48
+  },
+  {
+    "text": "putting this here um that's the",
+    "start": 3214.24,
+    "duration": 6.16
+  },
+  {
+    "text": "definition of uh the uh partial",
+    "start": 3216.48,
+    "duration": 8.16
+  },
+  {
+    "text": "derivative that's the that's the um the",
+    "start": 3220.4,
+    "duration": 7.36
+  },
+  {
+    "text": "gradient for J minus this expectation",
+    "start": 3224.64,
+    "duration": 9.12
+  },
+  {
+    "text": "here of B * this and this is going to be",
+    "start": 3227.76,
+    "duration": 10.24
+  },
+  {
+    "text": "um equal to this if this um expectation",
+    "start": 3233.76,
+    "duration": 7.2
+  },
+  {
+    "text": "of this term here is zero",
+    "start": 3238.0,
+    "duration": 5.04
+  },
+  {
+    "text": "And we can see that by just um taking",
+    "start": 3240.96,
+    "duration": 5.04
+  },
+  {
+    "text": "this term here and uh writing out the",
+    "start": 3243.04,
+    "duration": 5.36
+  },
+  {
+    "text": "expectation like this. Um it's the",
+    "start": 3246.0,
+    "duration": 6.319
+  },
+  {
+    "text": "expectation over um actions uh sampled",
+    "start": 3248.4,
+    "duration": 7.52
+  },
+  {
+    "text": "from this policy. Um and bringing out",
+    "start": 3252.319,
+    "duration": 6.401
+  },
+  {
+    "text": "this baseline term which does not depend",
+    "start": 3255.92,
+    "duration": 4.8
+  },
+  {
+    "text": "on anything other than the history up to",
+    "start": 3258.72,
+    "duration": 4.24
+  },
+  {
+    "text": "this point. We just get the sum over",
+    "start": 3260.72,
+    "duration": 4.16
+  },
+  {
+    "text": "actions of the probability of those",
+    "start": 3262.96,
+    "duration": 3.52
+  },
+  {
+    "text": "actions.",
+    "start": 3264.88,
+    "duration": 5.52
+  },
+  {
+    "text": "And um that's going to uh we can use",
+    "start": 3266.48,
+    "duration": 7.359
+  },
+  {
+    "text": "this same uh log derivative trick and",
+    "start": 3270.4,
+    "duration": 5.6
+  },
+  {
+    "text": "rewrite that as this. And then this will",
+    "start": 3273.839,
+    "duration": 5.601
+  },
+  {
+    "text": "just become one um and it'll be um a",
+    "start": 3276.0,
+    "duration": 6.559
+  },
+  {
+    "text": "bias term times the partial derivative",
+    "start": 3279.44,
+    "duration": 6.96
+  },
+  {
+    "text": "of one which is going to be zero.",
+    "start": 3282.559,
+    "duration": 6.321
+  },
+  {
+    "text": "So this tells you that you can uh",
+    "start": 3286.4,
+    "duration": 4.959
+  },
+  {
+    "text": "subtract um a baseline which depends",
+    "start": 3288.88,
+    "duration": 6.0
+  },
+  {
+    "text": "only on the history of um actions up to",
+    "start": 3291.359,
+    "duration": 5.2
+  },
+  {
+    "text": "that point, actions and observations up",
+    "start": 3294.88,
+    "duration": 3.92
+  },
+  {
+    "text": "to that point without biasing your",
+    "start": 3296.559,
+    "duration": 6.841
+  },
+  {
+    "text": "estimate of the policy gradient.",
+    "start": 3298.8,
+    "duration": 4.6
+  },
+  {
+    "text": "But let's look at an example of how",
+    "start": 3304.559,
+    "duration": 6.321
+  },
+  {
+    "text": "these like baselines can actually reduce",
+    "start": 3308.16,
+    "duration": 4.56
+  },
+  {
+    "text": "the noise in your estimate of the",
+    "start": 3310.88,
+    "duration": 3.84
+  },
+  {
+    "text": "gradient. And this is going to actually",
+    "start": 3312.72,
+    "duration": 5.28
+  },
+  {
+    "text": "be really important because uh a huge",
+    "start": 3314.72,
+    "duration": 4.879
+  },
+  {
+    "text": "amount of the work in reinforcement",
+    "start": 3318.0,
+    "duration": 4.16
+  },
+  {
+    "text": "learning is uh reducing the variance in",
+    "start": 3319.599,
+    "duration": 5.121
+  },
+  {
+    "text": "your estimates of the gradient um so",
+    "start": 3322.16,
+    "duration": 5.919
+  },
+  {
+    "text": "that learning is stable um and robust to",
+    "start": 3324.72,
+    "duration": 5.04
+  },
+  {
+    "text": "all the variation that you have from",
+    "start": 3328.079,
+    "duration": 4.161
+  },
+  {
+    "text": "sampling from the policy and from the",
+    "start": 3329.76,
+    "duration": 4.72
+  },
+  {
+    "text": "environment. But to motivate this we'll",
+    "start": 3332.24,
+    "duration": 5.119
+  },
+  {
+    "text": "look at just a very simple example um",
+    "start": 3334.48,
+    "duration": 5.359
+  },
+  {
+    "text": "where you just have two actions. Uh",
+    "start": 3337.359,
+    "duration": 5.041
+  },
+  {
+    "text": "there's no multiple time steps. There's",
+    "start": 3339.839,
+    "duration": 4.72
+  },
+  {
+    "text": "just a single decision that you make and",
+    "start": 3342.4,
+    "duration": 5.12
+  },
+  {
+    "text": "two actions. You're either guessing a or",
+    "start": 3344.559,
+    "duration": 6.24
+  },
+  {
+    "text": "b. And we'll have just a very simple",
+    "start": 3347.52,
+    "duration": 5.839
+  },
+  {
+    "text": "policy which only has one parameter",
+    "start": 3350.799,
+    "duration": 4.081
+  },
+  {
+    "text": "theta.",
+    "start": 3353.359,
+    "duration": 3.44
+  },
+  {
+    "text": "And we'll get a probabilistic policy",
+    "start": 3354.88,
+    "duration": 3.919
+  },
+  {
+    "text": "from this by applying the sigmoid",
+    "start": 3356.799,
+    "duration": 4.881
+  },
+  {
+    "text": "function to theta. So sigmoid is this",
+    "start": 3358.799,
+    "duration": 5.441
+  },
+  {
+    "text": "squashing function, right? Which um maps",
+    "start": 3361.68,
+    "duration": 4.72
+  },
+  {
+    "text": "a real value from negative infinity to",
+    "start": 3364.24,
+    "duration": 6.0
+  },
+  {
+    "text": "infinity um into a value between 0 and",
+    "start": 3366.4,
+    "duration": 5.84
+  },
+  {
+    "text": "one. and we'll take that value as the",
+    "start": 3370.24,
+    "duration": 5.52
+  },
+  {
+    "text": "probability of choosing a.",
+    "start": 3372.24,
+    "duration": 6.559
+  },
+  {
+    "text": "So say that for our current policy we",
+    "start": 3375.76,
+    "duration": 5.92
+  },
+  {
+    "text": "have this theta is negative 1.1 which",
+    "start": 3378.799,
+    "duration": 4.881
+  },
+  {
+    "text": "will give us these uh very convenient",
+    "start": 3381.68,
+    "duration": 6.879
+  },
+  {
+    "text": "probabilities of 0.25 for guessing a",
+    "start": 3383.68,
+    "duration": 7.52
+  },
+  {
+    "text": "which has reward of one and probability",
+    "start": 3388.559,
+    "duration": 6.24
+  },
+  {
+    "text": "0.75 of guessing B which has probability",
+    "start": 3391.2,
+    "duration": 5.84
+  },
+  {
+    "text": "zero. Is this a good policy or a bad",
+    "start": 3394.799,
+    "duration": 5.241
+  },
+  {
+    "text": "policy?",
+    "start": 3397.04,
+    "duration": 3.0
+  },
+  {
+    "text": "Think about how the probabilities",
+    "start": 3400.24,
+    "duration": 5.319
+  },
+  {
+    "text": "correspond to the rewards.",
+    "start": 3401.76,
+    "duration": 3.799
+  },
+  {
+    "text": "This is bad, right? Because it puts",
+    "start": 3408.88,
+    "duration": 4.239
+  },
+  {
+    "text": "higher probability on the option that",
+    "start": 3411.119,
+    "duration": 4.881
+  },
+  {
+    "text": "has no reward. So we want our policy",
+    "start": 3413.119,
+    "duration": 6.321
+  },
+  {
+    "text": "gradient to update this parameter theta.",
+    "start": 3416.0,
+    "duration": 5.359
+  },
+  {
+    "text": "Which way do we want theta to get",
+    "start": 3419.44,
+    "duration": 4.919
+  },
+  {
+    "text": "updated?",
+    "start": 3421.359,
+    "duration": 3.0
+  },
+  {
+    "text": "Yeah, we want it to become more",
+    "start": 3426.0,
+    "duration": 4.88
+  },
+  {
+    "text": "positive, right? Because um if theta is",
+    "start": 3427.92,
+    "duration": 4.72
+  },
+  {
+    "text": "larger, we'll be farther up on this",
+    "start": 3430.88,
+    "duration": 3.36
+  },
+  {
+    "text": "curve, we'll get a higher probability",
+    "start": 3432.64,
+    "duration": 4.159
+  },
+  {
+    "text": "for guessing A, which is the option that",
+    "start": 3434.24,
+    "duration": 4.64
+  },
+  {
+    "text": "has higher reward.",
+    "start": 3436.799,
+    "duration": 4.401
+  },
+  {
+    "text": "So let's compute our gradients uh",
+    "start": 3438.88,
+    "duration": 4.56
+  },
+  {
+    "text": "without using a baseline and see if",
+    "start": 3441.2,
+    "duration": 3.919
+  },
+  {
+    "text": "policy gradient tells us the right",
+    "start": 3443.44,
+    "duration": 5.2
+  },
+  {
+    "text": "thing. So um we can compute the um",
+    "start": 3445.119,
+    "duration": 6.801
+  },
+  {
+    "text": "expectation we can compute um the uh",
+    "start": 3448.64,
+    "duration": 6.08
+  },
+  {
+    "text": "values that we we would get um as",
+    "start": 3451.92,
+    "duration": 5.76
+  },
+  {
+    "text": "estimates of the policy gradient from",
+    "start": 3454.72,
+    "duration": 6.16
+  },
+  {
+    "text": "each of the actions that we could take",
+    "start": 3457.68,
+    "duration": 5.36
+  },
+  {
+    "text": "under the policy that we could sample.",
+    "start": 3460.88,
+    "duration": 5.04
+  },
+  {
+    "text": "So if we sample guess A, what's our",
+    "start": 3463.04,
+    "duration": 4.88
+  },
+  {
+    "text": "estimate of the gradient? Well, we get",
+    "start": 3465.92,
+    "duration": 4.32
+  },
+  {
+    "text": "this by multiplying the reward by the",
+    "start": 3467.92,
+    "duration": 5.12
+  },
+  {
+    "text": "partial derivative, which um using",
+    "start": 3470.24,
+    "duration": 4.559
+  },
+  {
+    "text": "properties of sigmoid, the partial",
+    "start": 3473.04,
+    "duration": 6.16
+  },
+  {
+    "text": "derivative here is 75. So the gradient",
+    "start": 3474.799,
+    "duration": 7.361
+  },
+  {
+    "text": "is just the product of those, it's 75.",
+    "start": 3479.2,
+    "duration": 4.96
+  },
+  {
+    "text": "We can do the same thing. Uh what's our",
+    "start": 3482.16,
+    "duration": 3.6
+  },
+  {
+    "text": "estimate of the gradient if instead of",
+    "start": 3484.16,
+    "duration": 4.959
+  },
+  {
+    "text": "sampling A, we sample B? That because",
+    "start": 3485.76,
+    "duration": 6.16
+  },
+  {
+    "text": "the reward is zero actually gives us a",
+    "start": 3489.119,
+    "duration": 6.24
+  },
+  {
+    "text": "zero gradient back. So this is kind of",
+    "start": 3491.92,
+    "duration": 4.96
+  },
+  {
+    "text": "looks like the trajectories that we saw",
+    "start": 3495.359,
+    "duration": 3.361
+  },
+  {
+    "text": "before where we didn't get any gradient",
+    "start": 3496.88,
+    "duration": 4.32
+  },
+  {
+    "text": "from ones with reward zero. Here we're",
+    "start": 3498.72,
+    "duration": 4.56
+  },
+  {
+    "text": "not getting any gradient if we sample",
+    "start": 3501.2,
+    "duration": 5.76
+  },
+  {
+    "text": "this action which has reward zero. But",
+    "start": 3503.28,
+    "duration": 6.319
+  },
+  {
+    "text": "um if you take kind of the exact",
+    "start": 3506.96,
+    "duration": 4.8
+  },
+  {
+    "text": "definition of the policy gradient which",
+    "start": 3509.599,
+    "duration": 4.561
+  },
+  {
+    "text": "is the expectation over all the actions",
+    "start": 3511.76,
+    "duration": 3.92
+  },
+  {
+    "text": "in this setting where there's only two",
+    "start": 3514.16,
+    "duration": 4.32
+  },
+  {
+    "text": "actions we can compute that exactly. we",
+    "start": 3515.68,
+    "duration": 5.04
+  },
+  {
+    "text": "can just uh multiply each of these",
+    "start": 3518.48,
+    "duration": 4.319
+  },
+  {
+    "text": "gradients by the probability of sampling",
+    "start": 3520.72,
+    "duration": 5.2
+  },
+  {
+    "text": "that action and that'll be like we'll",
+    "start": 3522.799,
+    "duration": 4.641
+  },
+  {
+    "text": "see the exact number in a couple slides",
+    "start": 3525.92,
+    "duration": 4.399
+  },
+  {
+    "text": "but I think it's like8",
+    "start": 3527.44,
+    "duration": 6.8
+  },
+  {
+    "text": "so the actual policy gradient the",
+    "start": 3530.319,
+    "duration": 7.441
+  },
+  {
+    "text": "expectation over all the actions is8",
+    "start": 3534.24,
+    "duration": 7.44
+  },
+  {
+    "text": "and um but we will only we'll have kind",
+    "start": 3537.76,
+    "duration": 7.359
+  },
+  {
+    "text": "of a very noisy estimate of that where",
+    "start": 3541.68,
+    "duration": 6.48
+  },
+  {
+    "text": "0.25% 25% of the time we will get a",
+    "start": 3545.119,
+    "duration": 5.521
+  },
+  {
+    "text": "sample of 75 which is much higher than",
+    "start": 3548.16,
+    "duration": 6.639
+  },
+  {
+    "text": "0.18 and then 75% of the time we'll get",
+    "start": 3550.64,
+    "duration": 7.439
+  },
+  {
+    "text": "zero as an estimate for it. And what we",
+    "start": 3554.799,
+    "duration": 5.52
+  },
+  {
+    "text": "really want is to have both of those",
+    "start": 3558.079,
+    "duration": 4.321
+  },
+  {
+    "text": "estimates that we could sample be much",
+    "start": 3560.319,
+    "duration": 5.841
+  },
+  {
+    "text": "closer to the true value.18.",
+    "start": 3562.4,
+    "duration": 7.12
+  },
+  {
+    "text": "So a baseline actually does this if um",
+    "start": 3566.16,
+    "duration": 5.12
+  },
+  {
+    "text": "so the modification from the past thing",
+    "start": 3569.52,
+    "duration": 4.24
+  },
+  {
+    "text": "is we're just subtracting a baseline",
+    "start": 3571.28,
+    "duration": 5.279
+  },
+  {
+    "text": "from our reward here and otherwise the",
+    "start": 3573.76,
+    "duration": 5.359
+  },
+  {
+    "text": "computation is the same and it works out",
+    "start": 3576.559,
+    "duration": 7.201
+  },
+  {
+    "text": "to be that if we sample um guess A we",
+    "start": 3579.119,
+    "duration": 6.96
+  },
+  {
+    "text": "now have an estimate for the gradient of",
+    "start": 3583.76,
+    "duration": 3.92
+  },
+  {
+    "text": "375",
+    "start": 3586.079,
+    "duration": 3.601
+  },
+  {
+    "text": "and if we sample B we have an estimate",
+    "start": 3587.68,
+    "duration": 4.879
+  },
+  {
+    "text": "for the gradient of.125.",
+    "start": 3589.68,
+    "duration": 6.0
+  },
+  {
+    "text": "So the expectation uh multiplied by the",
+    "start": 3592.559,
+    "duration": 4.881
+  },
+  {
+    "text": "probability of these actions is still",
+    "start": 3595.68,
+    "duration": 4.399
+  },
+  {
+    "text": "going to be like.18.",
+    "start": 3597.44,
+    "duration": 4.159
+  },
+  {
+    "text": "So it's going to be the same as what we",
+    "start": 3600.079,
+    "duration": 4.24
+  },
+  {
+    "text": "had before. But these individual samples",
+    "start": 3601.599,
+    "duration": 5.041
+  },
+  {
+    "text": "are much closer to that true value",
+    "start": 3604.319,
+    "duration": 4.161
+  },
+  {
+    "text": "because the baseline actually reduced",
+    "start": 3606.64,
+    "duration": 4.719
+  },
+  {
+    "text": "the variance in the samples that we get.",
+    "start": 3608.48,
+    "duration": 4.72
+  },
+  {
+    "text": "We'll have a visualization of this in",
+    "start": 3611.359,
+    "duration": 4.401
+  },
+  {
+    "text": "another slide. But the key thing here is",
+    "start": 3613.2,
+    "duration": 4.72
+  },
+  {
+    "text": "that that expectation does not change.",
+    "start": 3615.76,
+    "duration": 5.039
+  },
+  {
+    "text": "It just kind of like makes the um the",
+    "start": 3617.92,
+    "duration": 5.12
+  },
+  {
+    "text": "variance in the estimator more narrow,",
+    "start": 3620.799,
+    "duration": 3.76
+  },
+  {
+    "text": "which is a good thing because you're",
+    "start": 3623.04,
+    "duration": 4.4
+  },
+  {
+    "text": "going to be drawing these estimates on",
+    "start": 3624.559,
+    "duration": 4.721
+  },
+  {
+    "text": "real data, doing updates, and you don't",
+    "start": 3627.44,
+    "duration": 3.919
+  },
+  {
+    "text": "want your gradient to bounce you around",
+    "start": 3629.28,
+    "duration": 6.36
+  },
+  {
+    "text": "a bunch more than you need to.",
+    "start": 3631.359,
+    "duration": 4.281
+  },
+  {
+    "text": "Okay. Yeah. So, here's just a",
+    "start": 3635.839,
+    "duration": 4.561
+  },
+  {
+    "text": "visualization of this. Um if we have a",
+    "start": 3637.52,
+    "duration": 5.279
+  },
+  {
+    "text": "baseline of zero, here's our gradient",
+    "start": 3640.4,
+    "duration": 4.32
+  },
+  {
+    "text": "estimates. They have this expected",
+    "start": 3642.799,
+    "duration": 4.481
+  },
+  {
+    "text": "value, which is8.",
+    "start": 3644.72,
+    "duration": 5.92
+  },
+  {
+    "text": "And as we drag the baseline, we can see",
+    "start": 3647.28,
+    "duration": 6.48
+  },
+  {
+    "text": "that um we're more we get these",
+    "start": 3650.64,
+    "duration": 5.76
+  },
+  {
+    "text": "estimates for the gradient which um",
+    "start": 3653.76,
+    "duration": 4.16
+  },
+  {
+    "text": "converge",
+    "start": 3656.4,
+    "duration": 5.36
+  },
+  {
+    "text": "on this uh on this true value for the",
+    "start": 3657.92,
+    "duration": 6.56
+  },
+  {
+    "text": "expectation of the gradient.",
+    "start": 3661.76,
+    "duration": 4.72
+  },
+  {
+    "text": "And in all cases we are going to be",
+    "start": 3664.48,
+    "duration": 3.839
+  },
+  {
+    "text": "doing an update which makes the model",
+    "start": 3666.48,
+    "duration": 4.16
+  },
+  {
+    "text": "more correct. We're going to be doing an",
+    "start": 3668.319,
+    "duration": 4.321
+  },
+  {
+    "text": "update which shifts theta to be more",
+    "start": 3670.64,
+    "duration": 4.0
+  },
+  {
+    "text": "positive which is going to increase the",
+    "start": 3672.64,
+    "duration": 5.199
+  },
+  {
+    "text": "probability of a put more reward or put",
+    "start": 3674.64,
+    "duration": 5.439
+  },
+  {
+    "text": "more probability on the thing with",
+    "start": 3677.839,
+    "duration": 5.28
+  },
+  {
+    "text": "reward one. But um we're just going to",
+    "start": 3680.079,
+    "duration": 5.921
+  },
+  {
+    "text": "be doing that more quickly if we have",
+    "start": 3683.119,
+    "duration": 6.881
+  },
+  {
+    "text": "lower variance here in this estimate.",
+    "start": 3686.0,
+    "duration": 6.559
+  },
+  {
+    "text": "And here's a graph that shows that. So",
+    "start": 3690.0,
+    "duration": 4.319
+  },
+  {
+    "text": "um the purple line here is going to be",
+    "start": 3692.559,
+    "duration": 5.361
+  },
+  {
+    "text": "doing draws of um the estimate for the",
+    "start": 3694.319,
+    "duration": 5.52
+  },
+  {
+    "text": "gradient without using the baseline. So",
+    "start": 3697.92,
+    "duration": 4.879
+  },
+  {
+    "text": "no B term just advantages sorry just",
+    "start": 3699.839,
+    "duration": 6.72
+  },
+  {
+    "text": "scales of one or zero. And then the",
+    "start": 3702.799,
+    "duration": 6.641
+  },
+  {
+    "text": "green line is going to be estimates that",
+    "start": 3706.559,
+    "duration": 4.961
+  },
+  {
+    "text": "subtract a baseline just a very simple",
+    "start": 3709.44,
+    "duration": 6.0
+  },
+  {
+    "text": "baseline of 0.5 which was you know which",
+    "start": 3711.52,
+    "duration": 6.72
+  },
+  {
+    "text": "looked like this on this plot. So it's",
+    "start": 3715.44,
+    "duration": 5.359
+  },
+  {
+    "text": "moved them a little bit closer to this",
+    "start": 3718.24,
+    "duration": 4.8
+  },
+  {
+    "text": "true expectation.",
+    "start": 3720.799,
+    "duration": 4.8
+  },
+  {
+    "text": "So uh we'll just like draw some samples",
+    "start": 3723.04,
+    "duration": 5.759
+  },
+  {
+    "text": "and this simulates like doing steps of",
+    "start": 3725.599,
+    "duration": 5.2
+  },
+  {
+    "text": "policy gradient on the exact same",
+    "start": 3728.799,
+    "duration": 5.361
+  },
+  {
+    "text": "example over and over again.",
+    "start": 3730.799,
+    "duration": 6.881
+  },
+  {
+    "text": "So here are sampling in this case we",
+    "start": 3734.16,
+    "duration": 6.159
+  },
+  {
+    "text": "sampled guess A. So we got positive",
+    "start": 3737.68,
+    "duration": 6.8
+  },
+  {
+    "text": "gradient um and we got a much larger",
+    "start": 3740.319,
+    "duration": 6.48
+  },
+  {
+    "text": "gradient if we weren't using a baseline.",
+    "start": 3744.48,
+    "duration": 5.44
+  },
+  {
+    "text": "So we'll be taking a very large step",
+    "start": 3746.799,
+    "duration": 6.8
+  },
+  {
+    "text": "and we sample A again. And this line",
+    "start": 3749.92,
+    "duration": 5.6
+  },
+  {
+    "text": "here is going to be our running average",
+    "start": 3753.599,
+    "duration": 4.561
+  },
+  {
+    "text": "over all of the samples of the gradient",
+    "start": 3755.52,
+    "duration": 6.4
+  },
+  {
+    "text": "so far. So when we sample B, now we have",
+    "start": 3758.16,
+    "duration": 6.0
+  },
+  {
+    "text": "um a sample of the gradient that is",
+    "start": 3761.92,
+    "duration": 4.24
+  },
+  {
+    "text": "below the true value. So we're going to",
+    "start": 3764.16,
+    "duration": 3.919
+  },
+  {
+    "text": "be closer, our running average is going",
+    "start": 3766.16,
+    "duration": 4.56
+  },
+  {
+    "text": "to be closer to that true value. But you",
+    "start": 3768.079,
+    "duration": 5.28
+  },
+  {
+    "text": "can see here we're um we have less",
+    "start": 3770.72,
+    "duration": 4.8
+  },
+  {
+    "text": "variance when we have the baseline. So",
+    "start": 3773.359,
+    "duration": 4.561
+  },
+  {
+    "text": "our running average is already closer to",
+    "start": 3775.52,
+    "duration": 4.64
+  },
+  {
+    "text": "that true value.",
+    "start": 3777.92,
+    "duration": 5.12
+  },
+  {
+    "text": "And this continues like this. We happen",
+    "start": 3780.16,
+    "duration": 5.6
+  },
+  {
+    "text": "to sample a lot of guess B's in a row.",
+    "start": 3783.04,
+    "duration": 4.48
+  },
+  {
+    "text": "We sample guess A, it goes back up",
+    "start": 3785.76,
+    "duration": 4.799
+  },
+  {
+    "text": "again. And it does converge eventually,",
+    "start": 3787.52,
+    "duration": 4.88
+  },
+  {
+    "text": "but we're generally closer to it when",
+    "start": 3790.559,
+    "duration": 3.361
+  },
+  {
+    "text": "we've reduced the variance with this",
+    "start": 3792.4,
+    "duration": 3.28
+  },
+  {
+    "text": "baseline.",
+    "start": 3793.92,
+    "duration": 4.96
+  },
+  {
+    "text": "Any questions about this?",
+    "start": 3795.68,
+    "duration": 4.879
+  },
+  {
+    "text": "Okay. Hopefully this wasn't too in the",
+    "start": 3798.88,
+    "duration": 4.08
+  },
+  {
+    "text": "weeds, but like um baselines have always",
+    "start": 3800.559,
+    "duration": 4.321
+  },
+  {
+    "text": "been a little bit mysterious for me and",
+    "start": 3802.96,
+    "duration": 3.92
+  },
+  {
+    "text": "I wanted to make these visualizations",
+    "start": 3804.88,
+    "duration": 4.479
+  },
+  {
+    "text": "also to convince myself how they work.",
+    "start": 3806.88,
+    "duration": 3.919
+  },
+  {
+    "text": "Um hopefully they're helpful for you",
+    "start": 3809.359,
+    "duration": 5.361
+  },
+  {
+    "text": "too. The intuitions for this very simple",
+    "start": 3810.799,
+    "duration": 6.401
+  },
+  {
+    "text": "uh two armed bandit setting do um",
+    "start": 3814.72,
+    "duration": 5.76
+  },
+  {
+    "text": "transfer generally to these more complex",
+    "start": 3817.2,
+    "duration": 5.28
+  },
+  {
+    "text": "um you know sequential decision-m",
+    "start": 3820.48,
+    "duration": 4.319
+  },
+  {
+    "text": "settings too.",
+    "start": 3822.48,
+    "duration": 4.879
+  },
+  {
+    "text": "Yeah. So um baselines are helpful",
+    "start": 3824.799,
+    "duration": 4.641
+  },
+  {
+    "text": "because they can mark a trajectory as",
+    "start": 3827.359,
+    "duration": 5.2
+  },
+  {
+    "text": "better or worse than expected. And uh if",
+    "start": 3829.44,
+    "duration": 5.119
+  },
+  {
+    "text": "you've chosen a good baseline, a lot of",
+    "start": 3832.559,
+    "duration": 3.76
+  },
+  {
+    "text": "reinforcement learning is about choosing",
+    "start": 3834.559,
+    "duration": 3.681
+  },
+  {
+    "text": "good ways of representing this advantage",
+    "start": 3836.319,
+    "duration": 4.24
+  },
+  {
+    "text": "function. It can help to reduce gradient",
+    "start": 3838.24,
+    "duration": 3.92
+  },
+  {
+    "text": "variance and and stabilize your",
+    "start": 3840.559,
+    "duration": 5.04
+  },
+  {
+    "text": "learning. Um but you have some downsides",
+    "start": 3842.16,
+    "duration": 5.6
+  },
+  {
+    "text": "too and a lot of choices about what you",
+    "start": 3845.599,
+    "duration": 5.2
+  },
+  {
+    "text": "use for the baseline.",
+    "start": 3847.76,
+    "duration": 5.68
+  },
+  {
+    "text": "So with um and I'll skip over this um",
+    "start": 3850.799,
+    "duration": 4.721
+  },
+  {
+    "text": "other than just to say if you are",
+    "start": 3853.44,
+    "duration": 4.08
+  },
+  {
+    "text": "working in a setting that gives you",
+    "start": 3855.52,
+    "duration": 4.16
+  },
+  {
+    "text": "rewards at intermediate time steps",
+    "start": 3857.52,
+    "duration": 3.92
+  },
+  {
+    "text": "rather than just at the end of the",
+    "start": 3859.68,
+    "duration": 4.96
+  },
+  {
+    "text": "trajectory um you'll you'll replace your",
+    "start": 3861.44,
+    "duration": 7.359
+  },
+  {
+    "text": "reward scaling with um the reward to go",
+    "start": 3864.64,
+    "duration": 7.28
+  },
+  {
+    "text": "like the sum over rewards um over future",
+    "start": 3868.799,
+    "duration": 5.681
+  },
+  {
+    "text": "time steps and this will also help to",
+    "start": 3871.92,
+    "duration": 5.28
+  },
+  {
+    "text": "reduce the variance. Um, we'll have this",
+    "start": 3874.48,
+    "duration": 5.68
+  },
+  {
+    "text": "slide here and I we can also talk about",
+    "start": 3877.2,
+    "duration": 4.72
+  },
+  {
+    "text": "this offline if it's something that's",
+    "start": 3880.16,
+    "duration": 5.76
+  },
+  {
+    "text": "relevant to you. Um, but uh it's um how",
+    "start": 3881.92,
+    "duration": 5.919
+  },
+  {
+    "text": "you would handle not having all of your",
+    "start": 3885.92,
+    "duration": 5.479
+  },
+  {
+    "text": "rewards come at the end of the task.",
+    "start": 3887.839,
+    "duration": 4.161
+  },
+  {
+    "text": "[snorts]",
+    "start": 3891.399,
+    "duration": 2.601
+  },
+  {
+    "text": "Okay. So, with the last um bit of time",
+    "start": 3892.0,
+    "duration": 4.319
+  },
+  {
+    "text": "that we have, we'll cover a simplified",
+    "start": 3894.0,
+    "duration": 6.559
+  },
+  {
+    "text": "version of um GRPO um which is uh group",
+    "start": 3896.319,
+    "duration": 7.04
+  },
+  {
+    "text": "relative uh policy optimization I",
+    "start": 3900.559,
+    "duration": 6.401
+  },
+  {
+    "text": "believe. Um, and it's a way of um e of",
+    "start": 3903.359,
+    "duration": 5.281
+  },
+  {
+    "text": "getting this advantage function of",
+    "start": 3906.96,
+    "duration": 5.359
+  },
+  {
+    "text": "estimating a baseline that uses rollouts",
+    "start": 3908.64,
+    "duration": 8.399
+  },
+  {
+    "text": "from the model itself. Um,",
+    "start": 3912.319,
+    "duration": 6.961
+  },
+  {
+    "text": "and this was um this was actually",
+    "start": 3917.039,
+    "duration": 4.161
+  },
+  {
+    "text": "introduced pretty recently. So it was in",
+    "start": 3919.28,
+    "duration": 4.319
+  },
+  {
+    "text": "one of the papers from deepseek that was",
+    "start": 3921.2,
+    "duration": 4.56
+  },
+  {
+    "text": "training reasoning models um with a big",
+    "start": 3923.599,
+    "duration": 4.641
+  },
+  {
+    "text": "focus on efficiency. So a lot of past",
+    "start": 3925.76,
+    "duration": 6.24
+  },
+  {
+    "text": "work on um applying RL to language",
+    "start": 3928.24,
+    "duration": 6.96
+  },
+  {
+    "text": "models required a separate model to",
+    "start": 3932.0,
+    "duration": 4.96
+  },
+  {
+    "text": "predict this baseline. Predicting",
+    "start": 3935.2,
+    "duration": 4.0
+  },
+  {
+    "text": "baselines to you know reduce the",
+    "start": 3936.96,
+    "duration": 4.0
+  },
+  {
+    "text": "variance is very important but was",
+    "start": 3939.2,
+    "duration": 3.28
+  },
+  {
+    "text": "challenging and people were using",
+    "start": 3940.96,
+    "duration": 4.24
+  },
+  {
+    "text": "separate models for it. But DeepSeek was",
+    "start": 3942.48,
+    "duration": 5.44
+  },
+  {
+    "text": "very interested in efficiency um and",
+    "start": 3945.2,
+    "duration": 4.24
+  },
+  {
+    "text": "training models without using much",
+    "start": 3947.92,
+    "duration": 3.919
+  },
+  {
+    "text": "compute and having a separate model",
+    "start": 3949.44,
+    "duration": 5.84
+  },
+  {
+    "text": "takes a lot of compute. So they proposed",
+    "start": 3951.839,
+    "duration": 5.601
+  },
+  {
+    "text": "this approach which gets rid of the",
+    "start": 3955.28,
+    "duration": 4.64
+  },
+  {
+    "text": "separate model and just uses multiple",
+    "start": 3957.44,
+    "duration": 5.119
+  },
+  {
+    "text": "samples from the model itself to",
+    "start": 3959.92,
+    "duration": 5.84
+  },
+  {
+    "text": "estimate the expected value the expected",
+    "start": 3962.559,
+    "duration": 4.961
+  },
+  {
+    "text": "reward under the policy which is really",
+    "start": 3965.76,
+    "duration": 5.44
+  },
+  {
+    "text": "kind of elegant. Um so the idea is that",
+    "start": 3967.52,
+    "duration": 6.0
+  },
+  {
+    "text": "we can sample multiple times from the",
+    "start": 3971.2,
+    "duration": 4.879
+  },
+  {
+    "text": "model for a given instance and then get",
+    "start": 3973.52,
+    "duration": 5.839
+  },
+  {
+    "text": "the reward on each of those. Um and then",
+    "start": 3976.079,
+    "duration": 7.201
+  },
+  {
+    "text": "we can um center that reward by taking",
+    "start": 3979.359,
+    "duration": 6.561
+  },
+  {
+    "text": "the mean of the reward across all of",
+    "start": 3983.28,
+    "duration": 5.68
+  },
+  {
+    "text": "these instances in the group. We get a",
+    "start": 3985.92,
+    "duration": 6.96
+  },
+  {
+    "text": "mean. We um basically use that mean as",
+    "start": 3988.96,
+    "duration": 6.159
+  },
+  {
+    "text": "our baseline. And this makes sense,",
+    "start": 3992.88,
+    "duration": 4.0
+  },
+  {
+    "text": "right? Because you know the baseline is",
+    "start": 3995.119,
+    "duration": 5.281
+  },
+  {
+    "text": "your expected a good baseline is your",
+    "start": 3996.88,
+    "duration": 7.04
+  },
+  {
+    "text": "expected reward under the policy. And a",
+    "start": 4000.4,
+    "duration": 4.959
+  },
+  {
+    "text": "really good estimate of that is just",
+    "start": 4003.92,
+    "duration": 3.119
+  },
+  {
+    "text": "running the policy multiple times and",
+    "start": 4005.359,
+    "duration": 3.44
+  },
+  {
+    "text": "getting the reward taking the mean of",
+    "start": 4007.039,
+    "duration": 4.32
+  },
+  {
+    "text": "those. So we get our centered reward",
+    "start": 4008.799,
+    "duration": 6.8
+  },
+  {
+    "text": "here. And in the original GRPO paper,",
+    "start": 4011.359,
+    "duration": 7.281
+  },
+  {
+    "text": "they're also standardizing this. Um so",
+    "start": 4015.599,
+    "duration": 4.561
+  },
+  {
+    "text": "they're not just shifting it, they're",
+    "start": 4018.64,
+    "duration": 4.0
+  },
+  {
+    "text": "rescaling it. they compute the standard",
+    "start": 4020.16,
+    "duration": 6.32
+  },
+  {
+    "text": "deviation over the rewards in this group",
+    "start": 4022.64,
+    "duration": 7.199
+  },
+  {
+    "text": "of trajectories and then they divide by",
+    "start": 4026.48,
+    "duration": 6.4
+  },
+  {
+    "text": "that standard deviation um to get the",
+    "start": 4029.839,
+    "duration": 7.041
+  },
+  {
+    "text": "advantage functions. Now there's um like",
+    "start": 4032.88,
+    "duration": 6.719
+  },
+  {
+    "text": "actually it seems like dividing by the",
+    "start": 4036.88,
+    "duration": 5.28
+  },
+  {
+    "text": "reward is not necessary and a lot of",
+    "start": 4039.599,
+    "duration": 5.601
+  },
+  {
+    "text": "implementations of uh that that call",
+    "start": 4042.16,
+    "duration": 6.8
+  },
+  {
+    "text": "themselves GRPO actually get rid of this",
+    "start": 4045.2,
+    "duration": 6.159
+  },
+  {
+    "text": "um division by the standard deviation.",
+    "start": 4048.96,
+    "duration": 4.32
+  },
+  {
+    "text": "So it more closely matches the advantage",
+    "start": 4051.359,
+    "duration": 4.48
+  },
+  {
+    "text": "term. Um there's a paper we'll talk",
+    "start": 4053.28,
+    "duration": 5.839
+  },
+  {
+    "text": "about in a few slides called DRGP uh Dr.",
+    "start": 4055.839,
+    "duration": 7.041
+  },
+  {
+    "text": "gpo or done right gpo um which talks",
+    "start": 4059.119,
+    "duration": 6.321
+  },
+  {
+    "text": "more about the motivations for that um",
+    "start": 4062.88,
+    "duration": 4.239
+  },
+  {
+    "text": "but actually in a lot of implementations",
+    "start": 4065.44,
+    "duration": 4.24
+  },
+  {
+    "text": "of gpo they won't divide by the standard",
+    "start": 4067.119,
+    "duration": 4.48
+  },
+  {
+    "text": "deviation they will just subtract the",
+    "start": 4069.68,
+    "duration": 5.04
+  },
+  {
+    "text": "mean um",
+    "start": 4071.599,
+    "duration": 5.52
+  },
+  {
+    "text": "but yeah the gpo update is very simple",
+    "start": 4074.72,
+    "duration": 4.399
+  },
+  {
+    "text": "looks a lot like policy gradient that we",
+    "start": 4077.119,
+    "duration": 5.2
+  },
+  {
+    "text": "defined before but so you have like a",
+    "start": 4079.119,
+    "duration": 5.521
+  },
+  {
+    "text": "task instance which is you know like one",
+    "start": 4082.319,
+    "duration": 5.681
+  },
+  {
+    "text": "RL problem to solve you will generate",
+    "start": 4084.64,
+    "duration": 5.679
+  },
+  {
+    "text": "multiple rollouts from it. So you will",
+    "start": 4088.0,
+    "duration": 4.88
+  },
+  {
+    "text": "solve the same problem multiple times,",
+    "start": 4090.319,
+    "duration": 4.961
+  },
+  {
+    "text": "resetting the environment, um getting a",
+    "start": 4092.88,
+    "duration": 4.799
+  },
+  {
+    "text": "full trajectory by sampling from your",
+    "start": 4095.28,
+    "duration": 6.399
+  },
+  {
+    "text": "agent and um this will typically uh",
+    "start": 4097.679,
+    "duration": 5.841
+  },
+  {
+    "text": "Aorva in his lecture will give some",
+    "start": 4101.679,
+    "duration": 3.761
+  },
+  {
+    "text": "guidance on like choosing values for",
+    "start": 4103.52,
+    "duration": 4.08
+  },
+  {
+    "text": "this group size I believe, but this is",
+    "start": 4105.44,
+    "duration": 5.759
+  },
+  {
+    "text": "typically something like eight. Um and",
+    "start": 4107.6,
+    "duration": 6.079
+  },
+  {
+    "text": "uh you'll get the mean of rewards over",
+    "start": 4111.199,
+    "duration": 4.48
+  },
+  {
+    "text": "those rollouts and you'll get your",
+    "start": 4113.679,
+    "duration": 4.64
+  },
+  {
+    "text": "advantage estimates from that. Um, we'll",
+    "start": 4115.679,
+    "duration": 4.16
+  },
+  {
+    "text": "show two different ways of getting those",
+    "start": 4118.319,
+    "duration": 3.52
+  },
+  {
+    "text": "advantage estimates in another slide,",
+    "start": 4119.839,
+    "duration": 4.241
+  },
+  {
+    "text": "but that gives you a group of rollouts",
+    "start": 4121.839,
+    "duration": 4.4
+  },
+  {
+    "text": "for one trajectory along with advantages",
+    "start": 4124.08,
+    "duration": 6.0
+  },
+  {
+    "text": "for them. If you have room in your GPU",
+    "start": 4126.239,
+    "duration": 8.0
+  },
+  {
+    "text": "uh to fit in more examples, you can also",
+    "start": 4130.08,
+    "duration": 6.96
+  },
+  {
+    "text": "get groups of the same size for",
+    "start": 4134.239,
+    "duration": 5.761
+  },
+  {
+    "text": "additional instances. And you'll be",
+    "start": 4137.04,
+    "duration": 6.48
+  },
+  {
+    "text": "computing group means um only within",
+    "start": 4140.0,
+    "duration": 5.6
+  },
+  {
+    "text": "each example.",
+    "start": 4143.52,
+    "duration": 4.239
+  },
+  {
+    "text": "So this is important right because the",
+    "start": 4145.6,
+    "duration": 3.679
+  },
+  {
+    "text": "value function should just be an",
+    "start": 4147.759,
+    "duration": 4.48
+  },
+  {
+    "text": "estimate of how um it should be an",
+    "start": 4149.279,
+    "duration": 4.56
+  },
+  {
+    "text": "estimate of the reward on this",
+    "start": 4152.239,
+    "duration": 5.281
+  },
+  {
+    "text": "particular example. Um so our advantages",
+    "start": 4153.839,
+    "duration": 5.761
+  },
+  {
+    "text": "should only look at the reward within",
+    "start": 4157.52,
+    "duration": 4.4
+  },
+  {
+    "text": "this example.",
+    "start": 4159.6,
+    "duration": 4.559
+  },
+  {
+    "text": "But you will get an advantage for each",
+    "start": 4161.92,
+    "duration": 5.68
+  },
+  {
+    "text": "trajectory by um scaling the reward for",
+    "start": 4164.159,
+    "duration": 6.481
+  },
+  {
+    "text": "that trajectory using the um the formula",
+    "start": 4167.6,
+    "duration": 5.36
+  },
+  {
+    "text": "that shifts by the mean and maybe",
+    "start": 4170.64,
+    "duration": 4.719
+  },
+  {
+    "text": "divides by the standard deviation of the",
+    "start": 4172.96,
+    "duration": 6.399
+  },
+  {
+    "text": "rewards within that instance.",
+    "start": 4175.359,
+    "duration": 6.161
+  },
+  {
+    "text": "So for policy gradient loss we were just",
+    "start": 4179.359,
+    "duration": 5.521
+  },
+  {
+    "text": "taking a single sample for each um for",
+    "start": 4181.52,
+    "duration": 6.639
+  },
+  {
+    "text": "each instance and then rescaling. But in",
+    "start": 4184.88,
+    "duration": 7.68
+  },
+  {
+    "text": "gpo we are going to be um having",
+    "start": 4188.159,
+    "duration": 6.721
+  },
+  {
+    "text": "multiple instances in our batch and then",
+    "start": 4192.56,
+    "duration": 4.32
+  },
+  {
+    "text": "multiple trajectories within the group",
+    "start": 4194.88,
+    "duration": 4.88
+  },
+  {
+    "text": "for each instance and we'll get an",
+    "start": 4196.88,
+    "duration": 4.319
+  },
+  {
+    "text": "advantage for each of those. We'll use",
+    "start": 4199.76,
+    "duration": 4.0
+  },
+  {
+    "text": "that to rescale our log probabilities",
+    "start": 4201.199,
+    "duration": 5.601
+  },
+  {
+    "text": "before differentiating.",
+    "start": 4203.76,
+    "duration": 7.959
+  },
+  {
+    "text": "Any questions about this? Yeah.",
+    "start": 4206.8,
+    "duration": 4.919
+  },
+  {
+    "text": ">> Um is this unbiased? Yes, because um you",
+    "start": 4212.56,
+    "duration": 9.04
+  },
+  {
+    "text": "your advantage function here um",
+    "start": 4217.199,
+    "duration": 7.921
+  },
+  {
+    "text": "depends on nothing except the prompt and",
+    "start": 4221.6,
+    "duration": 6.079
+  },
+  {
+    "text": "the model. So your baseline function",
+    "start": 4225.12,
+    "duration": 5.84
+  },
+  {
+    "text": "here um which you're subtracting from",
+    "start": 4227.679,
+    "duration": 7.841
+  },
+  {
+    "text": "the reward is just um rollouts from the",
+    "start": 4230.96,
+    "duration": 9.199
+  },
+  {
+    "text": "language model. So this is unbiased.",
+    "start": 4235.52,
+    "duration": 8.92
+  },
+  {
+    "text": "Okay, cool.",
+    "start": 4240.159,
+    "duration": 4.281
+  },
+  {
+    "text": "Yeah. So, um, Dr. GRPO makes two changes",
+    "start": 4245.04,
+    "duration": 6.72
+  },
+  {
+    "text": "to to GRPO. And I should note too, GRPO",
+    "start": 4248.4,
+    "duration": 6.4
+  },
+  {
+    "text": "also, so what what I wrote here is not",
+    "start": 4251.76,
+    "duration": 6.08
+  },
+  {
+    "text": "the loss for GRPO as defined in the",
+    "start": 4254.8,
+    "duration": 5.68
+  },
+  {
+    "text": "paper. Um the loss in the paper has some",
+    "start": 4257.84,
+    "duration": 4.08
+  },
+  {
+    "text": "additional terms which I think Graham",
+    "start": 4260.48,
+    "duration": 3.36
+  },
+  {
+    "text": "will talk more about in his lecture",
+    "start": 4261.92,
+    "duration": 4.56
+  },
+  {
+    "text": "which also like clip the gradient so",
+    "start": 4263.84,
+    "duration": 4.56
+  },
+  {
+    "text": "that you don't take steps too far in one",
+    "start": 4266.48,
+    "duration": 4.8
+  },
+  {
+    "text": "direction or another and also regularize",
+    "start": 4268.4,
+    "duration": 5.839
+  },
+  {
+    "text": "the policy so that you don't uh deviate",
+    "start": 4271.28,
+    "duration": 4.8
+  },
+  {
+    "text": "too much from the policy that you",
+    "start": 4274.239,
+    "duration": 3.44
+  },
+  {
+    "text": "started with. Both of those are",
+    "start": 4276.08,
+    "duration": 3.44
+  },
+  {
+    "text": "additional things that help stabilize",
+    "start": 4277.679,
+    "duration": 3.52
+  },
+  {
+    "text": "training. We're not going to talk about",
+    "start": 4279.52,
+    "duration": 3.92
+  },
+  {
+    "text": "them today. We're just talking about the",
+    "start": 4281.199,
+    "duration": 5.921
+  },
+  {
+    "text": "advantage functions within GRPO. Um but",
+    "start": 4283.44,
+    "duration": 6.32
+  },
+  {
+    "text": "uh yeah, this will help you uh get",
+    "start": 4287.12,
+    "duration": 5.28
+  },
+  {
+    "text": "started on um assignment three when that",
+    "start": 4289.76,
+    "duration": 4.72
+  },
+  {
+    "text": "comes out.",
+    "start": 4292.4,
+    "duration": 4.72
+  },
+  {
+    "text": "Okay, great. So, we're good on time. Um",
+    "start": 4294.48,
+    "duration": 7.04
+  },
+  {
+    "text": "so, uh DRGRPO um makes two changes to",
+    "start": 4297.12,
+    "duration": 7.039
+  },
+  {
+    "text": "GRPO. Um and you will also do these in",
+    "start": 4301.52,
+    "duration": 4.719
+  },
+  {
+    "text": "your assignment. Um and they seem",
+    "start": 4304.159,
+    "duration": 5.441
+  },
+  {
+    "text": "generally helpful to do um",
+    "start": 4306.239,
+    "duration": 5.601
+  },
+  {
+    "text": "because they help avoid some biases",
+    "start": 4309.6,
+    "duration": 4.639
+  },
+  {
+    "text": "within GRPO. And the two changes are",
+    "start": 4311.84,
+    "duration": 4.0
+  },
+  {
+    "text": "just the first one we've talked about a",
+    "start": 4314.239,
+    "duration": 3.681
+  },
+  {
+    "text": "little bit already. It doesn't divide by",
+    "start": 4315.84,
+    "duration": 3.92
+  },
+  {
+    "text": "a standard deviation. It just subtracts",
+    "start": 4317.92,
+    "duration": 5.44
+  },
+  {
+    "text": "the mean of rewards within the group.",
+    "start": 4319.76,
+    "duration": 6.56
+  },
+  {
+    "text": "And um yeah, the motivation for that is",
+    "start": 4323.36,
+    "duration": 8.319
+  },
+  {
+    "text": "that uh uh if you're dividing by the um",
+    "start": 4326.32,
+    "duration": 8.16
+  },
+  {
+    "text": "standard deviation, your advantages are",
+    "start": 4331.679,
+    "duration": 5.281
+  },
+  {
+    "text": "no longer aware of the difficulty of the",
+    "start": 4334.48,
+    "duration": 5.12
+  },
+  {
+    "text": "problem. um because you're sort of like",
+    "start": 4336.96,
+    "duration": 6.08
+  },
+  {
+    "text": "rescaling all ranges of difficulties to",
+    "start": 4339.6,
+    "duration": 6.4
+  },
+  {
+    "text": "be standardized. Um so that can actually",
+    "start": 4343.04,
+    "duration": 7.52
+  },
+  {
+    "text": "be bad. GRPO also um divided by the",
+    "start": 4346.0,
+    "duration": 6.32
+  },
+  {
+    "text": "number of tokens generated which can",
+    "start": 4350.56,
+    "duration": 5.92
+  },
+  {
+    "text": "bias the model towards um uh towards uh",
+    "start": 4352.32,
+    "duration": 6.879
+  },
+  {
+    "text": "long wrong answers and so DRGRPO just",
+    "start": 4356.48,
+    "duration": 5.28
+  },
+  {
+    "text": "divides by a constant which is the max",
+    "start": 4359.199,
+    "duration": 3.841
+  },
+  {
+    "text": "number of tokens that could be",
+    "start": 4361.76,
+    "duration": 4.28
+  },
+  {
+    "text": "generated.",
+    "start": 4363.04,
+    "duration": 3.0
+  },
+  {
+    "text": "Okay. So, same figure that we saw",
+    "start": 4366.8,
+    "duration": 4.24
+  },
+  {
+    "text": "before. How does this actually look when",
+    "start": 4369.199,
+    "duration": 3.841
+  },
+  {
+    "text": "you're implementing it? You have your",
+    "start": 4371.04,
+    "duration": 4.56
+  },
+  {
+    "text": "generated tokens in blue. Uh, you",
+    "start": 4373.04,
+    "duration": 4.96
+  },
+  {
+    "text": "compute an advantage function which is",
+    "start": 4375.6,
+    "duration": 4.96
+  },
+  {
+    "text": "going to um take your reward for this",
+    "start": 4378.0,
+    "duration": 4.56
+  },
+  {
+    "text": "trajectory and just subtract off the",
+    "start": 4380.56,
+    "duration": 4.48
+  },
+  {
+    "text": "mean uh reward from all of your other",
+    "start": 4382.56,
+    "duration": 4.0
+  },
+  {
+    "text": "trajectories.",
+    "start": 4385.04,
+    "duration": 3.36
+  },
+  {
+    "text": "And then you get a per token reward",
+    "start": 4386.56,
+    "duration": 4.159
+  },
+  {
+    "text": "which just normalizes that by a constant",
+    "start": 4388.4,
+    "duration": 4.0
+  },
+  {
+    "text": "C, which is typically the number of",
+    "start": 4390.719,
+    "duration": 5.361
+  },
+  {
+    "text": "tokens that could have been generated.",
+    "start": 4392.4,
+    "duration": 5.36
+  },
+  {
+    "text": "And um you do this for all of the",
+    "start": 4396.08,
+    "duration": 3.68
+  },
+  {
+    "text": "rewards in your all the trajectories in",
+    "start": 4397.76,
+    "duration": 3.36
+  },
+  {
+    "text": "your group which could have varied",
+    "start": 4399.76,
+    "duration": 4.88
+  },
+  {
+    "text": "rewards positive or negative.",
+    "start": 4401.12,
+    "duration": 6.24
+  },
+  {
+    "text": "And the loss looks like this.",
+    "start": 4404.64,
+    "duration": 6.599
+  },
+  {
+    "text": "Any questions about this?",
+    "start": 4407.36,
+    "duration": 3.879
+  },
+  {
+    "text": "Yeah. And um yeah, so just to note again",
+    "start": 4413.6,
+    "duration": 6.0
+  },
+  {
+    "text": "the original paper also has like a a",
+    "start": 4416.48,
+    "duration": 5.679
+  },
+  {
+    "text": "ratio which helps regularize the policy",
+    "start": 4419.6,
+    "duration": 4.16
+  },
+  {
+    "text": "and clipping, but we won't talk about",
+    "start": 4422.159,
+    "duration": 4.241
+  },
+  {
+    "text": "those for now.",
+    "start": 4423.76,
+    "duration": 4.72
+  },
+  {
+    "text": "Okay, so we had a question before about",
+    "start": 4426.4,
+    "duration": 4.319
+  },
+  {
+    "text": "like what if all of your rewards are",
+    "start": 4428.48,
+    "duration": 6.48
+  },
+  {
+    "text": "zero? Um, that's bad because if all of",
+    "start": 4430.719,
+    "duration": 6.241
+  },
+  {
+    "text": "your trajectories fail, that means it's",
+    "start": 4434.96,
+    "duration": 3.759
+  },
+  {
+    "text": "just probably too hard for the current",
+    "start": 4436.96,
+    "duration": 3.92
+  },
+  {
+    "text": "policy and you're not going to get any",
+    "start": 4438.719,
+    "duration": 4.641
+  },
+  {
+    "text": "signal from that even if you have a",
+    "start": 4440.88,
+    "duration": 6.319
+  },
+  {
+    "text": "baseline. Um, you also have a problem if",
+    "start": 4443.36,
+    "duration": 6.48
+  },
+  {
+    "text": "all of your trajectories succeed because",
+    "start": 4447.199,
+    "duration": 4.801
+  },
+  {
+    "text": "they're too easy for the current policy.",
+    "start": 4449.84,
+    "duration": 3.839
+  },
+  {
+    "text": "So like you know if this is binary",
+    "start": 4452.0,
+    "duration": 4.56
+  },
+  {
+    "text": "rewards and um one is the best that we",
+    "start": 4453.679,
+    "duration": 6.881
+  },
+  {
+    "text": "could possibly do um it's bad um and",
+    "start": 4456.56,
+    "duration": 6.4
+  },
+  {
+    "text": "generally it's bad if we don't have any",
+    "start": 4460.56,
+    "duration": 6.08
+  },
+  {
+    "text": "spread um within our examples because",
+    "start": 4462.96,
+    "duration": 5.92
+  },
+  {
+    "text": "then we won't have any signal from the",
+    "start": 4466.64,
+    "duration": 6.48
+  },
+  {
+    "text": "advantage function as estimated by gRPO.",
+    "start": 4468.88,
+    "duration": 6.56
+  },
+  {
+    "text": "So what could we do if every you know",
+    "start": 4473.12,
+    "duration": 5.039
+  },
+  {
+    "text": "sample trajectory fails? We could choose",
+    "start": 4475.44,
+    "duration": 5.6
+  },
+  {
+    "text": "different task instances. We could um",
+    "start": 4478.159,
+    "duration": 5.361
+  },
+  {
+    "text": "inject some some knowledge into the",
+    "start": 4481.04,
+    "duration": 4.48
+  },
+  {
+    "text": "prompt that encourages the model to",
+    "start": 4483.52,
+    "duration": 4.719
+  },
+  {
+    "text": "produce more guided solutions that might",
+    "start": 4485.52,
+    "duration": 5.199
+  },
+  {
+    "text": "be correct. We could add demonstrations.",
+    "start": 4488.239,
+    "duration": 5.281
+  },
+  {
+    "text": "Um there's ways of doing off policy RL",
+    "start": 4490.719,
+    "duration": 5.44
+  },
+  {
+    "text": "that put like uh correct demonstrations",
+    "start": 4493.52,
+    "duration": 5.44
+  },
+  {
+    "text": "into the group. Um or more simply, you",
+    "start": 4496.159,
+    "duration": 4.56
+  },
+  {
+    "text": "could just fine-tune the model first on",
+    "start": 4498.96,
+    "duration": 3.68
+  },
+  {
+    "text": "those correct demonstrations before",
+    "start": 4500.719,
+    "duration": 3.921
+  },
+  {
+    "text": "running RL. Or you could have a more",
+    "start": 4502.64,
+    "duration": 4.559
+  },
+  {
+    "text": "informative reward which um uh",
+    "start": 4504.64,
+    "duration": 4.559
+  },
+  {
+    "text": "encourages the model to make correct",
+    "start": 4507.199,
+    "duration": 5.281
+  },
+  {
+    "text": "intermediate decisions before producing",
+    "start": 4509.199,
+    "duration": 4.96
+  },
+  {
+    "text": "an entire trajectory. That's called",
+    "start": 4512.48,
+    "duration": 3.92
+  },
+  {
+    "text": "reward shaping. So the like giving a",
+    "start": 4514.159,
+    "duration": 4.481
+  },
+  {
+    "text": "model reward for finding the correct",
+    "start": 4516.4,
+    "duration": 6.799
+  },
+  {
+    "text": "file could be an example of that.",
+    "start": 4518.64,
+    "duration": 7.12
+  },
+  {
+    "text": "Um we'll skip this because we'll uh",
+    "start": 4523.199,
+    "duration": 5.281
+  },
+  {
+    "text": "potentially talk more about PO later on.",
+    "start": 4525.76,
+    "duration": 5.36
+  },
+  {
+    "text": "But PO basically just um instead of",
+    "start": 4528.48,
+    "duration": 4.719
+  },
+  {
+    "text": "using the trajectories to compute the",
+    "start": 4531.12,
+    "duration": 4.64
+  },
+  {
+    "text": "advantage function has a separate model",
+    "start": 4533.199,
+    "duration": 5.601
+  },
+  {
+    "text": "which usually shares a backbone with the",
+    "start": 4535.76,
+    "duration": 8.919
+  },
+  {
+    "text": "policy um to predict the the baseline.",
+    "start": 4538.8,
+    "duration": 5.879
+  },
+  {
+    "text": "Okay. So",
+    "start": 4544.8,
+    "duration": 5.359
+  },
+  {
+    "text": "very quickly just comparing the methods",
+    "start": 4548.159,
+    "duration": 4.881
+  },
+  {
+    "text": "that we've seen so far. every method has",
+    "start": 4550.159,
+    "duration": 5.04
+  },
+  {
+    "text": "the agent take actions in the",
+    "start": 4553.04,
+    "duration": 5.04
+  },
+  {
+    "text": "environment and then we'll just um",
+    "start": 4555.199,
+    "duration": 5.921
+  },
+  {
+    "text": "compute a loss uh using those actions",
+    "start": 4558.08,
+    "duration": 5.76
+  },
+  {
+    "text": "produced by the agent. All of these look",
+    "start": 4561.12,
+    "duration": 4.48
+  },
+  {
+    "text": "like selftraining in some way but they",
+    "start": 4563.84,
+    "duration": 4.72
+  },
+  {
+    "text": "just differ in the way that they rewe",
+    "start": 4565.6,
+    "duration": 7.92
+  },
+  {
+    "text": "those generated actions. So restm um we",
+    "start": 4568.56,
+    "duration": 7.28
+  },
+  {
+    "text": "assume that we have binary rewards of",
+    "start": 4573.52,
+    "duration": 5.36
+  },
+  {
+    "text": "zero or one and we just filter to the",
+    "start": 4575.84,
+    "duration": 5.52
+  },
+  {
+    "text": "trajectories which are correct and then",
+    "start": 4578.88,
+    "duration": 6.24
+  },
+  {
+    "text": "do sftt on those. Um reinforce uses the",
+    "start": 4581.36,
+    "duration": 7.44
+  },
+  {
+    "text": "reward of the trajectory to rewe the",
+    "start": 4585.12,
+    "duration": 6.48
+  },
+  {
+    "text": "loss which corresponds to reweing the",
+    "start": 4588.8,
+    "duration": 4.32
+  },
+  {
+    "text": "gradient which we spent a lot of time",
+    "start": 4591.6,
+    "duration": 4.72
+  },
+  {
+    "text": "showing is correct. And then GRPO uh",
+    "start": 4593.12,
+    "duration": 5.2
+  },
+  {
+    "text": "uses these advantage functions where the",
+    "start": 4596.32,
+    "duration": 6.48
+  },
+  {
+    "text": "reward is um is uh shifted and",
+    "start": 4598.32,
+    "duration": 6.879
+  },
+  {
+    "text": "potentially also rescaled by the reward",
+    "start": 4602.8,
+    "duration": 4.32
+  },
+  {
+    "text": "of other trajectories sampled by the",
+    "start": 4605.199,
+    "duration": 5.201
+  },
+  {
+    "text": "model for the same example.",
+    "start": 4607.12,
+    "duration": 5.36
+  },
+  {
+    "text": "And all of these methods help to address",
+    "start": 4610.4,
+    "duration": 4.0
+  },
+  {
+    "text": "the three problems that we had at the",
+    "start": 4612.48,
+    "duration": 5.199
+  },
+  {
+    "text": "very beginning of the lecture. So um",
+    "start": 4614.4,
+    "duration": 5.759
+  },
+  {
+    "text": "task mismatch uh should now be solved",
+    "start": 4617.679,
+    "duration": 4.641
+  },
+  {
+    "text": "because we're now maximizing reward",
+    "start": 4620.159,
+    "duration": 5.201
+  },
+  {
+    "text": "directly. um expected reward directly",
+    "start": 4622.32,
+    "duration": 4.96
+  },
+  {
+    "text": "data mismatch. We can now learn from",
+    "start": 4625.36,
+    "duration": 3.839
+  },
+  {
+    "text": "trajectories that have reward zero as",
+    "start": 4627.28,
+    "duration": 3.36
+  },
+  {
+    "text": "long as we're doing baselines in the",
+    "start": 4629.199,
+    "duration": 4.401
+  },
+  {
+    "text": "appropriate way. And also um the on",
+    "start": 4630.64,
+    "duration": 4.64
+  },
+  {
+    "text": "policy nature of these methods helps",
+    "start": 4633.6,
+    "duration": 4.0
+  },
+  {
+    "text": "with exposure bias because the model's",
+    "start": 4635.28,
+    "duration": 4.399
+  },
+  {
+    "text": "like essentially driving at training",
+    "start": 4637.6,
+    "duration": 4.559
+  },
+  {
+    "text": "time. So it should be learning to",
+    "start": 4639.679,
+    "duration": 6.0
+  },
+  {
+    "text": "recover from its own errors. um it just",
+    "start": 4642.159,
+    "duration": 5.441
+  },
+  {
+    "text": "comes at the expense of you know you",
+    "start": 4645.679,
+    "duration": 3.601
+  },
+  {
+    "text": "have to actually just try stuff in the",
+    "start": 4647.6,
+    "duration": 3.92
+  },
+  {
+    "text": "environment which can be costly can",
+    "start": 4649.28,
+    "duration": 4.24
+  },
+  {
+    "text": "introduce some noise into your gradients",
+    "start": 4651.52,
+    "duration": 4.639
+  },
+  {
+    "text": "and we've covered some ways of trying to",
+    "start": 4653.52,
+    "duration": 4.88
+  },
+  {
+    "text": "make that process more robust but in the",
+    "start": 4656.159,
+    "duration": 4.721
+  },
+  {
+    "text": "next two lectures starting next week",
+    "start": 4658.4,
+    "duration": 4.799
+  },
+  {
+    "text": "we'll we'll talk about some others too",
+    "start": 4660.88,
+    "duration": 5.279
+  },
+  {
+    "text": "okay that's all we",
+    "start": 4663.199,
+    "duration": 2.96
+  }
+]

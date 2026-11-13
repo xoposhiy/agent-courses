@@ -1,0 +1,27 @@
+{
+  "course": {
+    "id": "stanford-cs224v",
+    "folder": "courses/stanford-cs224v",
+    "raw_files": 7266,
+    "markdown_files": 6747,
+    "bytes": 727802405,
+    "local_links_checked": 21780,
+    "broken_local_links": [],
+    "manifest_type": "dict",
+    "manifest_records": 6772,
+    "statuses": {
+      "downloaded": 6754,
+      "requires_login": 7,
+      "failed": 8,
+      "response_only": 3
+    },
+    "conversion_statuses": {
+      "converted": 6647,
+      "converted_with_limitations": 100,
+      "not_available": 7,
+      "failed": 18
+    },
+    "pdf_pages": 3327
+  },
+  "errors": []
+}

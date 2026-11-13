@@ -1,0 +1,27 @@
+# Homework 1 public teaching repository: assignments/OMIM_617516/grill_run/tasks/0004_ground_1/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_617516/grill_run/tasks/0004_ground_1/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_617516/grill_run/tasks/0004_ground_1/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "term": "PSMD12",
+  "definition": "A gene encoding a regulatory subunit of the 26S proteasome involved in ubiquitin-mediated protein degradation; heterozygous loss-of-function variants or copy-number deletions resulting in PSMD12 haploinsufficiency perturb intracellular proteostasis and cause Stankiewicz-Isidor syndrome (STISS), a congenital neurodevelopmental disorder characterized by developmental delay/intellectual disability, craniofacial dysmorphism, skeletal and limb abnormalities, and variable organ malformations.",
+  "source": {
+    "title": "Does It Run in Your Family? Inherited Truncating  PSMD12  Variants Broaden the Phenotypic Spectrum of Stankiewicz\u2010Isidor Syndrome",
+    "authors": [
+      "A Feresin",
+      "B Spedicati",
+      "S Zampieri"
+    ],
+    "year": 2025,
+    "journal": "Am J Med Genet A",
+    "doi": "10.1002/ajmg.a.63953",
+    "pmid": "39641441",
+    "pmc": null,
+    "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ajmg.a.63953",
+    "quote": "Haploinsufficiency of PSMD12, which encodes a subunit of the core component of the proteasome, causes Stankiewicz-Isidor syndrome (STISS), characterized by intellectual disability, autism spectrum disorder, craniofacial dysmorphisms, with or without other congenital anomalies, and autoinflammation."
+  }
+}
+```

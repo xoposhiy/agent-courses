@@ -1,0 +1,377 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 6,
+    "text": "In the last two videos, you made a change to Northwind,\nand then found out the change had a side effect."
+  },
+  {
+    "startInSeconds": 6,
+    "endInSeconds": 9,
+    "text": "Remember the question about the Merino Wool sweater?"
+  },
+  {
+    "startInSeconds": 9,
+    "endInSeconds": 13,
+    "text": "The agent was adding recommendations about caring for the wool\nthat weren't supported by the catalog."
+  },
+  {
+    "startInSeconds": 13,
+    "endInSeconds": 18,
+    "text": "So you added a grounding rule, and it worked.\nThe agent stopped adding ungrounded suggestions."
+  },
+  {
+    "startInSeconds": 18,
+    "endInSeconds": 24,
+    "text": "But on some sizing questions, it also started calling the product tool\nwhen it already had the information it needed."
+  },
+  {
+    "startInSeconds": 24,
+    "endInSeconds": 27,
+    "text": "That's a pretty normal place to end up when you're improving an agent."
+  },
+  {
+    "startInSeconds": 27,
+    "endInSeconds": 33,
+    "text": "The first change gives you a better system,\nbut it also gives you new evidence about what still needs work."
+  },
+  {
+    "startInSeconds": 33,
+    "endInSeconds": 36,
+    "text": "Let's use that evidence to make the next change more precise."
+  },
+  {
+    "startInSeconds": 36,
+    "endInSeconds": 44,
+    "text": "Go back to the sizing example you looked at earlier, and compare the\ntwo traces again. In the baseline, the customer asks for sizing help."
+  },
+  {
+    "startInSeconds": 44,
+    "endInSeconds": 51,
+    "text": "The agent already has the sizing information available,\nso it uses that information and answers directly."
+  },
+  {
+    "startInSeconds": 51,
+    "endInSeconds": 57,
+    "text": "After you add the grounding rule, the customer asks the same question,\nand the same sizing information is still available."
+  },
+  {
+    "startInSeconds": 57,
+    "endInSeconds": 59,
+    "text": "But now, the agent calls the product tool again."
+  },
+  {
+    "startInSeconds": 59,
+    "endInSeconds": 67,
+    "text": "The tool doesn't return anything useful that the agent didn't already\nhave, and the final answer ends up being essentially the same."
+  },
+  {
+    "startInSeconds": 67,
+    "endInSeconds": 74,
+    "text": "So where did the two agent versions actually start to diverge? It's\nnot the customer request or the information available to the agent."
+  },
+  {
+    "startInSeconds": 74,
+    "endInSeconds": 81,
+    "text": "Those two are the same, and the product tool itself is working.\nIt returns a result when the agent called it."
+  },
+  {
+    "startInSeconds": 81,
+    "endInSeconds": 86,
+    "text": "The first meaningful difference is that the updated version decides to\nmake an extra lookup."
+  },
+  {
+    "startInSeconds": 86,
+    "endInSeconds": 93,
+    "text": "Now think back to Hamel Husain's hierarchy from the last video.\nYou can start by asking whether this looks like a data problem."
+  },
+  {
+    "startInSeconds": 93,
+    "endInSeconds": 99,
+    "text": "In this case, probably not. The sizing information is already there.\nIs the tool broken? Again, no."
+  },
+  {
+    "startInSeconds": 99,
+    "endInSeconds": 106,
+    "text": "The lookup works; it just isn't necessary.\nActually, the behavior changed after you changed the prompt, right?"
+  },
+  {
+    "startInSeconds": 106,
+    "endInSeconds": 109,
+    "text": "So the prompt is the first place worth investigating."
+  },
+  {
+    "startInSeconds": 109,
+    "endInSeconds": 114,
+    "text": "That doesn't mean you've proven exactly what happened inside the\nmodel, but you've narrowed the problem considerably."
+  },
+  {
+    "startInSeconds": 114,
+    "endInSeconds": 120,
+    "text": "Instead of asking, \"Why is the agent behaving differently?\",\nyou can ask something much more specific."
+  },
+  {
+    "startInSeconds": 120,
+    "endInSeconds": 126,
+    "text": "Is the new grounding instruction making the agent think that every\nproduct claim requires a fresh tool lookup?"
+  },
+  {
+    "startInSeconds": 126,
+    "endInSeconds": 131,
+    "text": "Remember what that instruction says: \"Never state a product detail\nunless a tool result supports it.\""
+  },
+  {
+    "startInSeconds": 131,
+    "endInSeconds": 137,
+    "text": "That helped with the wool care case, because the agent had been adding\ndetails that no tool result supported."
+  },
+  {
+    "startInSeconds": 137,
+    "endInSeconds": 139,
+    "text": "But there's an ambiguity in the rule."
+  },
+  {
+    "startInSeconds": 139,
+    "endInSeconds": 146,
+    "text": "What if the information is already available from an earlier tool\nresult, or from the context the agent already has in front of it?"
+  },
+  {
+    "startInSeconds": 146,
+    "endInSeconds": 151,
+    "text": "The rule says the claim has to be supported,\nbut it doesn't say whether the agent can use evidence it already has,"
+  },
+  {
+    "startInSeconds": 151,
+    "endInSeconds": 154,
+    "text": "or whether it should retrieve that evidence again."
+  },
+  {
+    "startInSeconds": 154,
+    "endInSeconds": 159,
+    "text": "So a more precise version of the instruction could make\nthat distinction explicit."
+  },
+  {
+    "startInSeconds": 159,
+    "endInSeconds": 166,
+    "text": "For example, you might tell the agent, \"Never state a product detail\nunless supported by the information available to you from the catalog."
+  },
+  {
+    "startInSeconds": 166,
+    "endInSeconds": 173,
+    "text": "If the information available is insufficient, call the product tool to\nget additional information to support the answer.\""
+  },
+  {
+    "startInSeconds": 173,
+    "endInSeconds": 174,
+    "text": "That's a narrower candidate."
+  },
+  {
+    "startInSeconds": 174,
+    "endInSeconds": 178,
+    "text": "You're keeping the part of the rule that addressed the original\nfaithfulness problem,"
+  },
+  {
+    "startInSeconds": 178,
+    "endInSeconds": 182,
+    "text": "but you're adding guidance for the situation that\ncaused the regression."
+  },
+  {
+    "startInSeconds": 182,
+    "endInSeconds": 184,
+    "text": "And just like before, this is still a hypothesis."
+  },
+  {
+    "startInSeconds": 184,
+    "endInSeconds": 187,
+    "text": "It sounds reasonable based on the traces you've inspected,"
+  },
+  {
+    "startInSeconds": 187,
+    "endInSeconds": 194,
+    "text": "but you don't yet know whether the revised instruction will preserve\nthe grounding improvement and remove the unnecessary lookups."
+  },
+  {
+    "startInSeconds": 194,
+    "endInSeconds": 197,
+    "text": "So, run another experiment."
+  },
+  {
+    "startInSeconds": 197,
+    "endInSeconds": 204,
+    "text": "Now you have three versions you can compare: the original baseline,\nthe first grounding rule version, and this more precise version."
+  },
+  {
+    "startInSeconds": 204,
+    "endInSeconds": 206,
+    "text": "Keep the benchmark the same."
+  },
+  {
+    "startInSeconds": 206,
+    "endInSeconds": 212,
+    "text": "Run the wool care failure cases again because you want to make sure\nthe behavior you already improved stays improved."
+  },
+  {
+    "startInSeconds": 212,
+    "endInSeconds": 215,
+    "text": "Then run the known-good cases again,"
+  },
+  {
+    "startInSeconds": 215,
+    "endInSeconds": 223,
+    "text": "especially the sizing questions and keep using the same evaluators\nso you can compare the results directly."
+  },
+  {
+    "startInSeconds": 223,
+    "endInSeconds": 230,
+    "text": "At this point, there are a few things you want to check. First,\ndoes the refined version still avoid unsupported product claims?"
+  },
+  {
+    "startInSeconds": 230,
+    "endInSeconds": 237,
+    "text": "Second, on cases where the necessary information is already available,\ndoes the agent stop making those redundant lookups?"
+  },
+  {
+    "startInSeconds": 237,
+    "endInSeconds": 244,
+    "text": "And then, look beyond those two behaviors. Did anything else regress?\nDid tool usage change somewhere you didn't expect?"
+  },
+  {
+    "startInSeconds": 244,
+    "endInSeconds": 251,
+    "text": "What happened to latency or any other cost you're tracking?\nThis is the same comparison discipline you used for the first change."
+  },
+  {
+    "startInSeconds": 251,
+    "endInSeconds": 257,
+    "text": "The difference is that now your candidate is based on what you learned\nfrom the previous experiment."
+  },
+  {
+    "startInSeconds": 257,
+    "endInSeconds": 259,
+    "text": "Suppose the refined rule does what you hoped."
+  },
+  {
+    "startInSeconds": 259,
+    "endInSeconds": 266,
+    "text": "The wool care case still stays grounded, and the agent continues to\nuse only the product information that is actually supported."
+  },
+  {
+    "startInSeconds": 266,
+    "endInSeconds": 272,
+    "text": "But on sizing questions, when the relevant information is already\navailable, the extra lookup disappears."
+  },
+  {
+    "startInSeconds": 272,
+    "endInSeconds": 275,
+    "text": "If the rest of the known-good cases stay stable too,"
+  },
+  {
+    "startInSeconds": 275,
+    "endInSeconds": 280,
+    "text": "then you have stronger evidence that the second version is a better\nchange than the first one."
+  },
+  {
+    "startInSeconds": 280,
+    "endInSeconds": 285,
+    "text": "You kept the improvement you wanted while reducing the regression\ncaused by the first change."
+  },
+  {
+    "startInSeconds": 285,
+    "endInSeconds": 288,
+    "text": "If the results come back differently, that's useful, too."
+  },
+  {
+    "startInSeconds": 288,
+    "endInSeconds": 292,
+    "text": "Maybe the extra lookups go down, but a few unsupported claims return,"
+  },
+  {
+    "startInSeconds": 292,
+    "endInSeconds": 297,
+    "text": "or maybe the refined rule fixes the sizing cases and creates a new\nproblem somewhere else."
+  },
+  {
+    "startInSeconds": 297,
+    "endInSeconds": 303,
+    "text": "That just gives you the next thing to inspect.\nThis is why improvement tends to happen in iterations."
+  },
+  {
+    "startInSeconds": 303,
+    "endInSeconds": 306,
+    "text": "Your first change doesn't have to be perfect; it gives you evidence."
+  },
+  {
+    "startInSeconds": 306,
+    "endInSeconds": 313,
+    "text": "Then you look at what moved, inspect the cases that changed,\nand use that information to make the next candidate more specific."
+  },
+  {
+    "startInSeconds": 313,
+    "endInSeconds": 319,
+    "text": "There's one more thing worth doing once you find behavior\nthat is working reliably. Keep those cases."
+  },
+  {
+    "startInSeconds": 319,
+    "endInSeconds": 325,
+    "text": "The wool care question started as a capability case.\nIt represented something the agent could not do correctly."
+  },
+  {
+    "startInSeconds": 325,
+    "endInSeconds": 330,
+    "text": "Once you improve that behavior, you don't want a future change to\nquietly bring the failure back."
+  },
+  {
+    "startInSeconds": 330,
+    "endInSeconds": 336,
+    "text": "So that same case now becomes part of your regression protection.\nThe benchmark gets stronger as you work."
+  },
+  {
+    "startInSeconds": 336,
+    "endInSeconds": 340,
+    "text": "Failures you haven't fixed yet tell you what the agent\nstill needs to learn."
+  },
+  {
+    "startInSeconds": 340,
+    "endInSeconds": 344,
+    "text": "Behaviors you've already fixed tell you what future\nversions need to preserve."
+  },
+  {
+    "startInSeconds": 344,
+    "endInSeconds": 350,
+    "text": "Over time, that means every iteration is tested against more of what\nyou've learned about the agent."
+  },
+  {
+    "startInSeconds": 350,
+    "endInSeconds": 354,
+    "text": "And that's really the pattern to remember.\nYou start with a failure that matters."
+  },
+  {
+    "startInSeconds": 354,
+    "endInSeconds": 357,
+    "text": "You make a change that the evidence gives you a reason to try."
+  },
+  {
+    "startInSeconds": 357,
+    "endInSeconds": 363,
+    "text": "Then you compare the result, inspect whatever moved,\nand make the next change more precise."
+  },
+  {
+    "startInSeconds": 363,
+    "endInSeconds": 369,
+    "text": "So far, all of this has happened offline,\nbut once the agent is serving real users, more likely than not,"
+  },
+  {
+    "startInSeconds": 369,
+    "endInSeconds": 372,
+    "text": "they're going to find situations that never made\nit into your test set."
+  },
+  {
+    "startInSeconds": 372,
+    "endInSeconds": 376,
+    "text": "In the next video, you'll look at how those production cases become\nthe next source of improvements"
+  },
+  {
+    "startInSeconds": 376,
+    "endInSeconds": 379,
+    "text": "and how they feed back into the same optimization loop."
+  }
+]

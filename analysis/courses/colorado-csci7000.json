@@ -1,0 +1,836 @@
+{
+  "source_id": "colorado-csci7000",
+  "summary": "A graduate seminar on agentic software engineering. The main evidence is the assigned research literature, supported by one introduction deck and project instructions. It emphasizes tool use, coding agents, multi-agent work, safety, harness improvement, and the limits of benchmarks.",
+  "limitations": [
+    "Only the introductory slide deck is archived. Most substantive topics are marked assigned, not taught from lecture evidence.",
+    "The MCP downstream-failure paper and the agentic-refactoring paper are unavailable. Their scheduled topics are not counted as confirmed from those papers.",
+    "Survey readings support broad architecture topics. Their bibliographies do not establish additional course coverage.",
+    "The Kiro IDE sessions occur after the archive date and have no teaching materials in the archive."
+  ],
+  "new_concept_ids": [
+    "self-play",
+    "harness-optimization",
+    "refactoring",
+    "scientific-workflows",
+    "developer-alignment",
+    "research-methods"
+  ],
+  "concepts": [
+    {
+      "concept_id": "agent-architecture",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/slides/w1l1.md",
+          "line": 246,
+          "page": 21,
+          "excerpt": "A system is agentic if it:",
+          "material_id": "w1l1",
+          "category": "slides",
+          "source_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/pdfs/W1L1.pdf",
+          "sha256": "2df093b56a042ecdc6de8edcfafd72197a509b306f46bd42d8967c714dfac8de"
+        }
+      ]
+    },
+    {
+      "concept_id": "workflow-agent",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/slides/w1l1.md",
+          "line": 220,
+          "page": 19,
+          "excerpt": "• Control flow you don’t fully own",
+          "material_id": "w1l1",
+          "category": "slides",
+          "source_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/pdfs/W1L1.pdf",
+          "sha256": "2df093b56a042ecdc6de8edcfafd72197a509b306f46bd42d8967c714dfac8de"
+        }
+      ]
+    },
+    {
+      "concept_id": "state",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/slides/w1l1.md",
+          "line": 221,
+          "page": 19,
+          "excerpt": "• State that evolves unpredictably",
+          "material_id": "w1l1",
+          "category": "slides",
+          "source_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/pdfs/W1L1.pdf",
+          "sha256": "2df093b56a042ecdc6de8edcfafd72197a509b306f46bd42d8967c714dfac8de"
+        }
+      ]
+    },
+    {
+      "concept_id": "coding-agents",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/slides/w1l1.md",
+          "line": 124,
+          "page": 12,
+          "excerpt": "Smart coding agent in the IDE",
+          "material_id": "w1l1",
+          "category": "slides",
+          "source_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/pdfs/W1L1.pdf",
+          "sha256": "2df093b56a042ecdc6de8edcfafd72197a509b306f46bd42d8967c714dfac8de"
+        }
+      ]
+    },
+    {
+      "concept_id": "refactoring",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/slides/w1l1.md",
+          "line": 187,
+          "page": 18,
+          "excerpt": "Coordinated Refactoring Agent (Bellur et al., 2026)",
+          "material_id": "w1l1",
+          "category": "slides",
+          "source_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/pdfs/W1L1.pdf",
+          "sha256": "2df093b56a042ecdc6de8edcfafd72197a509b306f46bd42d8967c714dfac8de"
+        }
+      ]
+    },
+    {
+      "concept_id": "hitl",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/slides/w1l1.md",
+          "line": 205,
+          "page": 18,
+          "excerpt": "○human in the loop is crucial to reduce cascading errors by 4x",
+          "material_id": "w1l1",
+          "category": "slides",
+          "source_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/pdfs/W1L1.pdf",
+          "sha256": "2df093b56a042ecdc6de8edcfafd72197a509b306f46bd42d8967c714dfac8de"
+        }
+      ]
+    },
+    {
+      "concept_id": "research-methods",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/pages/page-researchproject.md",
+          "line": 12,
+          "page": null,
+          "excerpt": "You must complete a semester project that is (i) research-oriented or (ii) novel-industrial (if you are in the Professional Masters program)",
+          "material_id": "page-researchproject",
+          "category": "pages",
+          "source_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html",
+          "sha256": "4974f218e0e4979104714b41c87091c52d9d6790855494a17d4cb9b10ebe1111"
+        }
+      ]
+    },
+    {
+      "concept_id": "memory",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2308-11432.md",
+          "line": 191,
+          "page": 2,
+          "excerpt": "with human capabilities such as memory and plan-",
+          "material_id": "arxiv-2308-11432",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2308.11432",
+          "sha256": "18e27bb23de67ccb9687e64118f571543e47078a27a51dd72f0ff0bceb95b7c9"
+        }
+      ]
+    },
+    {
+      "concept_id": "planning",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2308-11432.md",
+          "line": 156,
+          "page": 2,
+          "excerpt": "complish tasks through self-directed planning and",
+          "material_id": "arxiv-2308-11432",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2308.11432",
+          "sha256": "18e27bb23de67ccb9687e64118f571543e47078a27a51dd72f0ff0bceb95b7c9"
+        }
+      ]
+    },
+    {
+      "concept_id": "reasoning",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2308-11432.md",
+          "line": 331,
+          "page": 4,
+          "excerpt": "Ø Single-path Reasoning",
+          "material_id": "arxiv-2308-11432",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2308.11432",
+          "sha256": "18e27bb23de67ccb9687e64118f571543e47078a27a51dd72f0ff0bceb95b7c9"
+        }
+      ]
+    },
+    {
+      "concept_id": "prompting",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2308-11432.md",
+          "line": 402,
+          "page": 4,
+          "excerpt": "are usually written into the prompt to influence",
+          "material_id": "arxiv-2308-11432",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2308.11432",
+          "sha256": "18e27bb23de67ccb9687e64118f571543e47078a27a51dd72f0ff0bceb95b7c9"
+        }
+      ]
+    },
+    {
+      "concept_id": "evaluation",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2308-11432.md",
+          "line": 49,
+          "page": 1,
+          "excerpt": "into the evaluation strategies commonly used for",
+          "material_id": "arxiv-2308-11432",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2308.11432",
+          "sha256": "18e27bb23de67ccb9687e64118f571543e47078a27a51dd72f0ff0bceb95b7c9"
+        }
+      ]
+    },
+    {
+      "concept_id": "reflection",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2308-11432.md",
+          "line": 315,
+          "page": 4,
+          "excerpt": "Ø Memory Reflection",
+          "material_id": "arxiv-2308-11432",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2308.11432",
+          "sha256": "18e27bb23de67ccb9687e64118f571543e47078a27a51dd72f0ff0bceb95b7c9"
+        }
+      ]
+    },
+    {
+      "concept_id": "react",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2210-03629.md",
+          "line": 13,
+          "page": 1,
+          "excerpt": "REACT: SYNERGIZING REASONING AND ACTING IN",
+          "material_id": "arxiv-2210-03629",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2210.03629",
+          "sha256": "5789e80a3374f38993d124da79a0f5db783510be775a71677e18b7fafea74d23"
+        }
+      ]
+    },
+    {
+      "concept_id": "reflexion",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2303-11366.md",
+          "line": 12,
+          "page": 1,
+          "excerpt": "Verbal Reinforcement Learning",
+          "material_id": "arxiv-2303-11366",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2303.11366",
+          "sha256": "197157dd4a15dd910d1ffd617db4160ffe3263dfcb8c7ae24baf700dc4682886"
+        }
+      ]
+    },
+    {
+      "concept_id": "episodic-memory",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2303-11366.md",
+          "line": 104,
+          "page": 2,
+          "excerpt": "interpretable form of episodic memory over prior experiences, and 4) it provides more explicit hints",
+          "material_id": "arxiv-2303-11366",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2303.11366",
+          "sha256": "197157dd4a15dd910d1ffd617db4160ffe3263dfcb8c7ae24baf700dc4682886"
+        }
+      ]
+    },
+    {
+      "concept_id": "tool-use",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2302-04761.md",
+          "line": 174,
+          "page": 2,
+          "excerpt": "Sample API Calls",
+          "material_id": "arxiv-2302-04761",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2302.04761",
+          "sha256": "45a2a3d502fc6c5c779b6c831f96f9ffbd5e60512bb9d2511bbe729b2fd3c490"
+        }
+      ]
+    },
+    {
+      "concept_id": "sft",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2302-04761.md",
+          "line": 216,
+          "page": 2,
+          "excerpt": "ﬁnetune the LM itself on the API calls that it con-",
+          "material_id": "arxiv-2302-04761",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2302.04761",
+          "sha256": "45a2a3d502fc6c5c779b6c831f96f9ffbd5e60512bb9d2511bbe729b2fd3c490"
+        }
+      ]
+    },
+    {
+      "concept_id": "tool-discovery",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2305-15334.md",
+          "line": 38,
+          "page": 1,
+          "excerpt": "the retrieval system with Gorilla demonstrates the potential for LLMs to use tools",
+          "material_id": "arxiv-2305-15334",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2305.15334",
+          "sha256": "bf1319e96a4c93891b97211f404236ab81bb58a527f632ca5a90374c67635775"
+        }
+      ]
+    },
+    {
+      "concept_id": "grounding",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2305-15334.md",
+          "line": 35,
+          "page": 1,
+          "excerpt": "hallucination, commonly encountered when prompting LLMs directly. To evaluate",
+          "material_id": "arxiv-2305-15334",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2305.15334",
+          "sha256": "bf1319e96a4c93891b97211f404236ab81bb58a527f632ca5a90374c67635775"
+        }
+      ]
+    },
+    {
+      "concept_id": "harness",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2610-14224v1.md",
+          "line": 21,
+          "page": 1,
+          "excerpt": "LLM agents’ capabilities depend not only on their underlying models but also on their execution harnesses.",
+          "material_id": "arxiv-2610-14224v1",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2610.14224v1",
+          "sha256": "bef0ac009297dd63ef5a1209f4cc110af6c17d9e323bb39ef086703883854f83"
+        }
+      ]
+    },
+    {
+      "concept_id": "frameworks",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2407-16741.md",
+          "line": 13,
+          "page": 1,
+          "excerpt": "OPENHANDS: AN OPEN PLATFORM FOR",
+          "material_id": "arxiv-2407-16741",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2407.16741",
+          "sha256": "a4e2b3744b4d6a9dd4b4209222fea5db7d1ccbe6b0c34e22fcd91bb28ea87a90"
+        }
+      ]
+    },
+    {
+      "concept_id": "sandboxing",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2407-16741.md",
+          "line": 44,
+          "page": 1,
+          "excerpt": "safe interaction with sandboxed environments for code execution, coordination",
+          "material_id": "arxiv-2407-16741",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2407.16741",
+          "sha256": "a4e2b3744b4d6a9dd4b4209222fea5db7d1ccbe6b0c34e22fcd91bb28ea87a90"
+        }
+      ]
+    },
+    {
+      "concept_id": "multi-agent",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2308-08155.md",
+          "line": 12,
+          "page": 1,
+          "excerpt": "Applications via Multi-Agent Conversation",
+          "material_id": "arxiv-2308-08155",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2308.08155",
+          "sha256": "8798d595b5ed3a320e440e1fcb597c167cb55f71ca82f3ebeb1bebd85fc4bf55"
+        }
+      ]
+    },
+    {
+      "concept_id": "agent-as-tool",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2407-16741.md",
+          "line": 484,
+          "page": 5,
+          "excerpt": "type AgentDelegateAction, which enables an agent to delegate a specific subtask to another",
+          "material_id": "arxiv-2407-16741",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2407.16741",
+          "sha256": "a4e2b3744b4d6a9dd4b4209222fea5db7d1ccbe6b0c34e22fcd91bb28ea87a90"
+        }
+      ]
+    },
+    {
+      "concept_id": "orchestrator-workers",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2308-00352.md",
+          "line": 41,
+          "page": 1,
+          "excerpt": "line paradigm to assign diverse roles to various agents, efficiently breaking down",
+          "material_id": "arxiv-2308-00352",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2308.00352",
+          "sha256": "c075bcf2f8e11a3dfb2362b541466bf6e7da71b69cc38ed65ab779ef338e614a"
+        }
+      ]
+    },
+    {
+      "concept_id": "multi-agent-debate",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2305-14325.md",
+          "line": 12,
+          "page": 1,
+          "excerpt": "Models through Multiagent Debate",
+          "material_id": "arxiv-2305-14325",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2305.14325",
+          "sha256": "c21a8077b11bfc18672be04789fc65ab292648a7d5b7d649fddba39a3881dfb7"
+        }
+      ]
+    },
+    {
+      "concept_id": "verification",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2305-14325.md",
+          "line": 11,
+          "page": 1,
+          "excerpt": "Improving Factuality and Reasoning in Language",
+          "material_id": "arxiv-2305-14325",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2305.14325",
+          "sha256": "c21a8077b11bfc18672be04789fc65ab292648a7d5b7d649fddba39a3881dfb7"
+        }
+      ]
+    },
+    {
+      "concept_id": "scientific-workflows",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/ref-0cfd55675bb9.md",
+          "line": 13,
+          "page": 1,
+          "excerpt": "MDCrow: automating molecular dynamics",
+          "material_id": "ref-0cfd55675bb9",
+          "category": "readings",
+          "source_url": "https://iopscience.iop.org/article/10.1088/2632-2153/ae4b07/pdf",
+          "sha256": "498c66c7f5aeac6e322684eea9c69b51423decd7765876b90f7fa5418d8c55cc"
+        }
+      ]
+    },
+    {
+      "concept_id": "safety",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2605-30777.md",
+          "line": 32,
+          "page": 1,
+          "excerpt": "operational safety properties remain poorly understood beyond",
+          "material_id": "arxiv-2605-30777",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2605.30777",
+          "sha256": "9e566c59550336681a9675ef644e71d0231a346cd10b1b8af72525ee582449da"
+        }
+      ]
+    },
+    {
+      "concept_id": "error-analysis",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2605-30777.md",
+          "line": 44,
+          "page": 1,
+          "excerpt": "corpora, we derive a multi-dimensional safety taxonomy of 33 oper-",
+          "material_id": "arxiv-2605-30777",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2605.30777",
+          "sha256": "9e566c59550336681a9675ef644e71d0231a346cd10b1b8af72525ee582449da"
+        }
+      ]
+    },
+    {
+      "concept_id": "trajectory-eval",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2604-12147.md",
+          "line": 55,
+          "page": 1,
+          "excerpt": "ysis of plan compliance in programming agents, examining 21,120",
+          "material_id": "arxiv-2604-12147",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2604.12147",
+          "sha256": "3891e461a18fa0d35d7002d0ce27011356571d5f511b01ad0ff82fdda48c0704"
+        }
+      ]
+    },
+    {
+      "concept_id": "knowledge-curation",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2603-22327.md",
+          "line": 43,
+          "page": 1,
+          "excerpt": "Systematic literature reviews (SLRs) are a demanding and high-stakes form of sci-",
+          "material_id": "arxiv-2603-22327",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2603.22327",
+          "sha256": "dcb8d50137170dd7f4e075e0c519a3b15525feddac946664246c49d888feaa36"
+        }
+      ]
+    },
+    {
+      "concept_id": "schema-induction",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2603-22327.md",
+          "line": 53,
+          "page": 1,
+          "excerpt": "hidden by aggregate benchmarks. Structured data extraction is a major bottleneck,",
+          "material_id": "arxiv-2603-22327",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2603.22327",
+          "sha256": "dcb8d50137170dd7f4e075e0c519a3b15525feddac946664246c49d888feaa36"
+        }
+      ]
+    },
+    {
+      "concept_id": "cost-quality",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2603-22327.md",
+          "line": 54,
+          "page": 1,
+          "excerpt": "with no model exceeding an average field-level F1 of 0.67. Estimated costs vary",
+          "material_id": "arxiv-2603-22327",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2603.22327",
+          "sha256": "dcb8d50137170dd7f4e075e0c519a3b15525feddac946664246c49d888feaa36"
+        }
+      ]
+    },
+    {
+      "concept_id": "human-eval",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2603-22327.md",
+          "line": 46,
+          "page": 1,
+          "excerpt": "harness comprising an SLR automation workflow and an expert annotated dataset",
+          "material_id": "arxiv-2603-22327",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2603.22327",
+          "sha256": "dcb8d50137170dd7f4e075e0c519a3b15525feddac946664246c49d888feaa36"
+        }
+      ]
+    },
+    {
+      "concept_id": "harness-optimization",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2610-14224v1.md",
+          "line": 27,
+          "page": 1,
+          "excerpt": "harnessing framework that addresses these challenges through two connected levels of recursion. Task-",
+          "material_id": "arxiv-2610-14224v1",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2610.14224v1",
+          "sha256": "bef0ac009297dd63ef5a1209f4cc110af6c17d9e323bb39ef086703883854f83"
+        }
+      ]
+    },
+    {
+      "concept_id": "benchmark-design",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2606-17799.md",
+          "line": 59,
+          "page": 1,
+          "excerpt": "equally valid alternatives; and (iii) the absence of signal at the level",
+          "material_id": "arxiv-2606-17799",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2606.17799",
+          "sha256": "65d8b7c6704e8c3969af33354c5aac7250f59720e1ef98b4129d075f3d8db434"
+        }
+      ]
+    },
+    {
+      "concept_id": "self-play",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2512-18552.md",
+          "line": 32,
+          "page": 1,
+          "excerpt": "RL in a self-play setting to inject and repair in-",
+          "material_id": "arxiv-2512-18552",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2512.18552",
+          "sha256": "1e5765e7b072f83187c0a1a5ff82f196010a8c0aef9fddb0ba981c5be7bc531f"
+        }
+      ]
+    },
+    {
+      "concept_id": "rl",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2512-18552.md",
+          "line": 20,
+          "page": 1,
+          "excerpt": "language models (LLMs) and reinforcement learn-",
+          "material_id": "arxiv-2512-18552",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2512.18552",
+          "sha256": "1e5765e7b072f83187c0a1a5ff82f196010a8c0aef9fddb0ba981c5be7bc531f"
+        }
+      ]
+    },
+    {
+      "concept_id": "synthetic-data",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2512-18552.md",
+          "line": 32,
+          "page": 1,
+          "excerpt": "RL in a self-play setting to inject and repair in-",
+          "material_id": "arxiv-2512-18552",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2512.18552",
+          "sha256": "1e5765e7b072f83187c0a1a5ff82f196010a8c0aef9fddb0ba981c5be7bc531f"
+        }
+      ]
+    },
+    {
+      "concept_id": "developer-alignment",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2605-29442.md",
+          "line": 34,
+          "page": 1,
+          "excerpt": "agents read projects, interpret developer intent,",
+          "material_id": "arxiv-2605-29442",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2605.29442",
+          "sha256": "aee88b6be54e46fe53176e71007af25d8e5fe8aa497ff7b8e597f4bf1e987f5a"
+        }
+      ]
+    },
+    {
+      "concept_id": "human-collaboration",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2605-29442.md",
+          "line": 40,
+          "page": 1,
+          "excerpt": "correction. Misalignment patterns also differ",
+          "material_id": "arxiv-2605-29442",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2605.29442",
+          "sha256": "aee88b6be54e46fe53176e71007af25d8e5fe8aa497ff7b8e597f4bf1e987f5a"
+        }
+      ]
+    },
+    {
+      "concept_id": "session-eval",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2605-29442.md",
+          "line": 142,
+          "page": 2,
+          "excerpt": "ment persists across adjacent sessions in the same",
+          "material_id": "arxiv-2605-29442",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2605.29442",
+          "sha256": "aee88b6be54e46fe53176e71007af25d8e5fe8aa497ff7b8e597f4bf1e987f5a"
+        }
+      ]
+    },
+    {
+      "concept_id": "mcp",
+      "coverage": "planned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/pages/page-index.md",
+          "line": 100,
+          "page": null,
+          "excerpt": "| Mon, 10/26 | Sushmey, Fahsai | - [Beyond Tool Selection:   Diagnosing Downstream Failures in MCP Tool-Using LLM Agents](https://openreview.net/pdf?id=PPculVvgEd) by Bae et al., ICML'26 - [Evaluating AI-based Scientific Knowledge Synthesis with Epidemiological Systematic Reviews](../readings/arxiv-2603-22327.md) by Padarha et al., NeurIPS'26 |",
+          "material_id": "page-index",
+          "category": "pages",
+          "source_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+          "sha256": "87d0086153841c1fbf09aa362d2d4390449d8c23f5dbed314d307f79ebf633b2"
+        }
+      ]
+    },
+    {
+      "concept_id": "langgraph",
+      "coverage": "planned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/pages/page-index.md",
+          "line": 93,
+          "page": null,
+          "excerpt": "| Wed, 09/30 | Abhiram, Students | - LangGraph tutorial/ walk-through.- [OpenHands: An Open Platform for AI Software Developers as Generalist Agents](../readings/arxiv-2407-16741.md) by Wang et al., ICLR'25. Then write a Tool Experience report (option #2 on [this page](page-papercritiques.md)). |",
+          "material_id": "page-index",
+          "category": "pages",
+          "source_url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+          "sha256": "87d0086153841c1fbf09aa362d2d4390449d8c23f5dbed314d307f79ebf633b2"
+        }
+      ]
+    },
+    {
+      "concept_id": "rag",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2409-02977.md",
+          "line": 1193,
+          "page": 10,
+          "excerpt": "umentations \\[112\\], \\[92\\]. Including the retrieved resources",
+          "material_id": "arxiv-2409-02977",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2409.02977",
+          "sha256": "d66e9ea3d1e356f12433567aad313398c6009d8b96b4cf0ad6baa3b48efbb059"
+        }
+      ]
+    },
+    {
+      "concept_id": "cot",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2409-02977.md",
+          "line": 930,
+          "page": 8,
+          "excerpt": "higher generation correctness. Chain-of-thought (CoT) \\[115\\]",
+          "material_id": "arxiv-2409-02977",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2409.02977",
+          "sha256": "d66e9ea3d1e356f12433567aad313398c6009d8b96b4cf0ad6baa3b48efbb059"
+        }
+      ]
+    },
+    {
+      "concept_id": "self-consistency",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2409-02977.md",
+          "line": 950,
+          "page": 8,
+          "excerpt": "prompt engineering strategies, such as self-consistency \\[119\\]",
+          "material_id": "arxiv-2409-02977",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2409.02977",
+          "sha256": "d66e9ea3d1e356f12433567aad313398c6009d8b96b4cf0ad6baa3b48efbb059"
+        }
+      ]
+    },
+    {
+      "concept_id": "shared-memory",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2308-00352.md",
+          "line": 206,
+          "page": 4,
+          "excerpt": "cutable feedback (right). Left: Agents use a shared message pool to publish structured messages.",
+          "material_id": "arxiv-2308-00352",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2308.00352",
+          "sha256": "c075bcf2f8e11a3dfb2362b541466bf6e7da71b69cc38ed65ab779ef338e614a"
+        }
+      ]
+    },
+    {
+      "concept_id": "context-engineering",
+      "coverage": "assigned",
+      "evidence": [
+        {
+          "source_path": "courses/colorado-csci7000/markdown/readings/arxiv-2308-11432.md",
+          "line": 341,
+          "page": 4,
+          "excerpt": "Memory Operation",
+          "material_id": "arxiv-2308-11432",
+          "category": "readings",
+          "source_url": "https://arxiv.org/pdf/2308.11432",
+          "sha256": "18e27bb23de67ccb9687e64118f571543e47078a27a51dd72f0ff0bceb95b7c9"
+        }
+      ]
+    }
+  ]
+}

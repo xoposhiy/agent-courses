@@ -1,0 +1,89 @@
+# Homework 1 public teaching repository: assignments/OMIM_621307/grill_run/tasks/0003_ground_0/meta.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621307/grill_run/tasks/0003_ground_0/meta.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621307/grill_run/tasks/0003_ground_0/meta.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "mode": "research",
+  "model": "gemini-3.8-flash",
+  "executor": "direct",
+  "queries": [
+    "\"Alsahan-Harris syndrome\" TBC1D32",
+    "Alsahan-Harris syndrome OMIM 621307 clinical features phenotype TBC1D32"
+  ],
+  "n_hits": 8,
+  "hits": [
+    {
+      "id": "https://omim.org/entry/621307",
+      "title": "Entry - #621307 - ALSAHAN-HARRIS SYNDROME; ALHAS",
+      "pmid": null,
+      "doi": null,
+      "url": "https://omim.org/entry/621307",
+      "abstract_chars": 0
+    },
+    {
+      "id": "https://www.malacards.org/card/alsahan_harris_syndrome",
+      "title": "Alsahan-Harris Syndrome (ALHAS)",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.malacards.org/card/alsahan_harris_syndrome",
+      "abstract_chars": 0
+    },
+    {
+      "id": "https://franklin.genoox.com/clinical-db/variant/snp/chr6-121401967-G-A?app=conditions",
+      "title": "Conditions Associated With TBC1D32",
+      "pmid": null,
+      "doi": null,
+      "url": "https://franklin.genoox.com/clinical-db/variant/snp/chr6-121401967-G-A?app=conditions",
+      "abstract_chars": 0
+    },
+    {
+      "id": "https://www.uniprot.org/diseases/DI-07071",
+      "title": "Alsahan-Harris syndrome | Human diseases",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.uniprot.org/diseases/DI-07071",
+      "abstract_chars": 0
+    },
+    {
+      "id": "https://panelapp.genomicsengland.co.uk/panels/entities/TBC1D32",
+      "title": "TBC1D32",
+      "pmid": null,
+      "doi": null,
+      "url": "https://panelapp.genomicsengland.co.uk/panels/entities/TBC1D32",
+      "abstract_chars": 0
+    },
+    {
+      "id": "42409022",
+      "title": "Bi-allelic variants in CDK20 cause a severe ciliopathy with midline brain and facial anomalies",
+      "pmid": "42409022",
+      "doi": "10.1016/j.ajhg.2026.06.009",
+      "url": "https://www.cell.com/ajhg/abstract/S0002-9297(26)00235-1",
+      "abstract_chars": 1033
+    },
+    {
+      "id": "https://omim.org/entry/615867",
+      "title": "615867 - TBC1 DOMAIN FAMILY, MEMBER 32; TBC1D32",
+      "pmid": null,
+      "doi": null,
+      "url": "https://omim.org/entry/615867",
+      "abstract_chars": 0
+    },
+    {
+      "id": "https://omim.org/clinicalSynopsis/621307",
+      "title": "Clinical Synopsis - ALSAHAN-HARRIS SYNDROME; ALHAS",
+      "pmid": null,
+      "doi": null,
+      "url": "https://omim.org/clinicalSynopsis/621307",
+      "abstract_chars": 0
+    }
+  ],
+  "input_tokens": 2218,
+  "output_tokens": 1439,
+  "usd": 0.00543,
+  "seconds": 11.0,
+  "ok": true
+}
+```

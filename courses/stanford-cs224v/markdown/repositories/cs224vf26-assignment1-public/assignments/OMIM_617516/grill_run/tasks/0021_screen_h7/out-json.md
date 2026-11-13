@@ -1,0 +1,42 @@
+# Homework 1 public teaching repository: assignments/OMIM_617516/grill_run/tasks/0021_screen_h7/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_617516/grill_run/tasks/0021_screen_h7/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_617516/grill_run/tasks/0021_screen_h7/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Reported cohorts demonstrate that cutaneous autoinflammatory manifestations such as chilblains occur in only a small fraction (e.g., 2/24, or ~8.3%) of PSMD12-related STISS patients.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "In a cohort of 24 additional unrelated patients with Stankiewicz-Isidor syndrome due to PSMD12 variants/deletions, only 2 individuals exhibited chilblains resembling signs seen in interferonopathies.",
+      "stance": "supports",
+      "source": {
+        "title": "Stankiewicz-Isidor syndrome: expanding the clinical and molecular phenotype",
+        "authors": [
+          "B Isidor",
+          "F Ebstein",
+          "A Hurst",
+          "M Vincent",
+          "I Bader"
+        ],
+        "year": 2022,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.sciencedirect.com/science/article/pii/S1098360021041320",
+        "quote": "We report 24 additional unrelated patients with STISS with various truncating single nucleotide variants or copy-number variant deletions involving PSMD12. ... Of note, 2 patients also showed chilblains resembling signs observed in interferonopathy."
+      },
+      "numbers": [
+        {
+          "metric": "patients with chilblains",
+          "value": "2/24"
+        }
+      ]
+    }
+  ]
+}
+```

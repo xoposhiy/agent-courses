@@ -1,0 +1,45 @@
+# Homework 1 public teaching repository: assignments/OMIM_621390/grill_run/tasks/0010_screen_h4/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621390/grill_run/tasks/0010_screen_h4/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621390/grill_run/tasks/0010_screen_h4/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "All 14 reported individuals in the index cohort carried de novo missense variants clustered specifically in the Kelch-type domain (mostly a recurrent p.Gly357Arg variant); biallelic loss-of-function variants have not yet been established in human disease.",
+  "confidence": 0.45,
+  "evidence": [
+    {
+      "text": "Fourteen patients with de novo missense variants in KLHL20 presented with mild to severe intellectual disability, febrile seizures or epilepsy, autism spectrum disorder, hyperactivity, and subtle dysmorphic facial features. Eleven of 14 patients had a recurrent missense variant (p.Gly357Arg), and all four distinct missense variants clustered within the Kelch-type beta-propeller domain.",
+      "stance": "neutral",
+      "source": {
+        "title": "De novo missense variants in the E3 ubiquitin ligase adaptor KLHL20 cause a developmental disorder with intellectual disability, epilepsy, and autism spectrum disorder",
+        "authors": [
+          "Y Sleyp",
+          "I Valenzuela",
+          "A Accogli",
+          "K Ballon"
+        ],
+        "year": 2022,
+        "journal": "Genetics in Medicine",
+        "doi": "10.1016/j.gim.2022.09.004",
+        "pmid": "36214804",
+        "pmc": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36214804/",
+        "quote": "We studied 14 patients with de novo missense variants in KLHL20, delineating a genetic syndrome with patients having mild to severe intellectual disability, febrile seizures or epilepsy, autism spectrum disorder, hyperactivity, and subtle dysmorphic facial features. We observed a recurrent de novo missense variant in 11 patients (NM_014458.4:c.1069G>A p.[Gly357Arg]). The recurrent missense and the 3 other missense variants all clustered in the Kelch-type \u03b2-propeller domain of the KLHL20 protein"
+      },
+      "numbers": [
+        {
+          "metric": "patients with de novo missense variants",
+          "value": 14
+        },
+        {
+          "metric": "patients carrying recurrent p.Gly357Arg variant",
+          "value": 11
+        }
+      ]
+    }
+  ]
+}
+```

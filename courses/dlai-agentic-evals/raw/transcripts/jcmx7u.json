@@ -1,0 +1,377 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 4,
+    "text": "In the last video, you looked at individual actions."
+  },
+  {
+    "startInSeconds": 4,
+    "endInSeconds": 10,
+    "text": "You saw that an agent can choose the wrong action, choose the right\naction but use the wrong details, skip something required,"
+  },
+  {
+    "startInSeconds": 10,
+    "endInSeconds": 13,
+    "text": "or do something that shouldn't happen at all."
+  },
+  {
+    "startInSeconds": 13,
+    "endInSeconds": 18,
+    "text": "But even if you check every action one at a time,\nthere are still failures you can miss."
+  },
+  {
+    "startInSeconds": 18,
+    "endInSeconds": 26,
+    "text": "Sometimes the problem is in how the actions fit together. Think about\nthe dog shelter. Suppose Pamela asks to go on an outing with Pepper."
+  },
+  {
+    "startInSeconds": 26,
+    "endInSeconds": 28,
+    "text": "A successful run might look something like this."
+  },
+  {
+    "startInSeconds": 28,
+    "endInSeconds": 34,
+    "text": "First, the agent retrieves Pamela's volunteer record Then,\nit checks whether she's eligible."
+  },
+  {
+    "startInSeconds": 34,
+    "endInSeconds": 40,
+    "text": "Once it knows she's eligible, it chooses Pepper as a suitable dog,\nand finally, it creates the booking."
+  },
+  {
+    "startInSeconds": 40,
+    "endInSeconds": 46,
+    "text": "That ordered sequence of steps is the trajectory.\ntells you more than which actions happened."
+  },
+  {
+    "startInSeconds": 46,
+    "endInSeconds": 53,
+    "text": "It tells you the path the agent took through the task.\nNow imagine the same four actions happen in a different order."
+  },
+  {
+    "startInSeconds": 53,
+    "endInSeconds": 59,
+    "text": "The agent retrieves Pamela's record, chooses Pepper,\nchecks eligibility, and then creates the booking."
+  },
+  {
+    "startInSeconds": 59,
+    "endInSeconds": 65,
+    "text": "If you evaluated each action separately, you might not see an obvious\nproblem. The right volunteer record was retrieved."
+  },
+  {
+    "startInSeconds": 65,
+    "endInSeconds": 73,
+    "text": "Pepper may actually be a suitable dog. The eligibility check was\nperformed correctly, and the booking contains the right details."
+  },
+  {
+    "startInSeconds": 73,
+    "endInSeconds": 80,
+    "text": "But the sequence is still wrong. The agent chose the dog\nbefore it had established that Pamela was eligible for the outing."
+  },
+  {
+    "startInSeconds": 80,
+    "endInSeconds": 85,
+    "text": "So one thing trajectory evaluation can check is whether\norder-sensitive steps happened in the right order."
+  },
+  {
+    "startInSeconds": 85,
+    "endInSeconds": 92,
+    "text": "Now consider another run. The agent retrieves Pamela's record,\nselects Pepper, and creates the booking."
+  },
+  {
+    "startInSeconds": 92,
+    "endInSeconds": 95,
+    "text": "This time, the eligibility check is missing completely."
+  },
+  {
+    "startInSeconds": 95,
+    "endInSeconds": 101,
+    "text": "Again, the booking itself could look perfectly valid,\nbut the trajectory shows that a required step never happened."
+  },
+  {
+    "startInSeconds": 101,
+    "endInSeconds": 107,
+    "text": "So now you have a second question to ask about the trajectory:\ndid every step that was required actually occur?"
+  },
+  {
+    "startInSeconds": 107,
+    "endInSeconds": 112,
+    "text": "There's one more kind of failure that's especially easy to miss\nif you inspect actions separately."
+  },
+  {
+    "startInSeconds": 112,
+    "endInSeconds": 119,
+    "text": "Suppose the first step correctly retrieves Pamela's record and returns\nher volunteer ID, but when the agent gets to the matching step,"
+  },
+  {
+    "startInSeconds": 119,
+    "endInSeconds": 122,
+    "text": "it accidentally uses Maria's ID instead."
+  },
+  {
+    "startInSeconds": 122,
+    "endInSeconds": 126,
+    "text": "The retrieval worked, perhaps the matching action worked okay too,"
+  },
+  {
+    "startInSeconds": 126,
+    "endInSeconds": 130,
+    "text": "but the information from one step didn't carry into\nthe next one correctly."
+  },
+  {
+    "startInSeconds": 130,
+    "endInSeconds": 132,
+    "text": "That's a propagation failure."
+  },
+  {
+    "startInSeconds": 132,
+    "endInSeconds": 139,
+    "text": "So when you look at a trajectory, there are three useful questions you\ncan ask: Did all of the required steps happen?"
+  },
+  {
+    "startInSeconds": 139,
+    "endInSeconds": 145,
+    "text": "Did the steps happen in the right order? And did the information\nproduced by one step get used correctly in the steps that followed?"
+  },
+  {
+    "startInSeconds": 145,
+    "endInSeconds": 151,
+    "text": "The shelter example makes those questions fairly easy to see\nbecause the workflow itself is simple."
+  },
+  {
+    "startInSeconds": 151,
+    "endInSeconds": 157,
+    "text": "You already know the four main steps the agent is supposed to follow.\nNorthwind is a little different."
+  },
+  {
+    "startInSeconds": 157,
+    "endInSeconds": 161,
+    "text": "The Northwind agent can decide which tools to call based on\nthe customer's request."
+  },
+  {
+    "startInSeconds": 161,
+    "endInSeconds": 165,
+    "text": "There isn't always one fixed sequence that every run should follow."
+  },
+  {
+    "startInSeconds": 165,
+    "endInSeconds": 170,
+    "text": "So instead of starting with a pre-defined workflow,\nyou reconstruct the trajectory from the trace."
+  },
+  {
+    "startInSeconds": 170,
+    "endInSeconds": 173,
+    "text": "Suppose a customer asks Northwind for a refund."
+  },
+  {
+    "startInSeconds": 173,
+    "endInSeconds": 184,
+    "text": "One run might contain these tool calls:\nget_customer(customer_id=\"C103\"), then order_lookup(order_id=\"4521\"),"
+  },
+  {
+    "startInSeconds": 184,
+    "endInSeconds": 190,
+    "text": "And then, process_refund, order ID equals 4521, amount equals 49.99."
+  },
+  {
+    "startInSeconds": 190,
+    "endInSeconds": 197,
+    "text": "If you collect those calls in the order they happened, along with what\neach tool returned, you have the trajectory for that run."
+  },
+  {
+    "startInSeconds": 197,
+    "endInSeconds": 206,
+    "text": "Now you can evaluate the sequence as a whole. For example, Northwind\nmay require the customer to be verified before a refund is processed."
+  },
+  {
+    "startInSeconds": 206,
+    "endInSeconds": 212,
+    "text": "So imagine another run where the same three tools appear,\nbut in this order: order_lookup, then process_refund,"
+  },
+  {
+    "startInSeconds": 212,
+    "endInSeconds": 215,
+    "text": "and only after that, get_customer."
+  },
+  {
+    "startInSeconds": 215,
+    "endInSeconds": 217,
+    "text": "Each tool call may be valid on its own."
+  },
+  {
+    "startInSeconds": 217,
+    "endInSeconds": 222,
+    "text": "The order lookup works, the refund call used a real order,\nThe customer lookup also worked,"
+  },
+  {
+    "startInSeconds": 222,
+    "endInSeconds": 228,
+    "text": "but the policy was still violated because the refund happened\nbefore the customer was verified."
+  },
+  {
+    "startInSeconds": 228,
+    "endInSeconds": 236,
+    "text": "This is the kind of failure that action-level evaluation won't catch\nvery well. You need to compare the relative positions of the steps."
+  },
+  {
+    "startInSeconds": 236,
+    "endInSeconds": 240,
+    "text": "And because the tool calls are structured,\nyou can often check that directly."
+  },
+  {
+    "startInSeconds": 240,
+    "endInSeconds": 244,
+    "text": "For example, an evaluator like identity_before_refund can look\nthrough the trajectory"
+  },
+  {
+    "startInSeconds": 244,
+    "endInSeconds": 250,
+    "text": "and ask whether a successful customer verification step happened\nbefore process_refund."
+  },
+  {
+    "startInSeconds": 250,
+    "endInSeconds": 254,
+    "text": "That's a focused question, and it can often be\nanswered deterministically."
+  },
+  {
+    "startInSeconds": 254,
+    "endInSeconds": 260,
+    "text": "You don't need a judge to reason broadly about the whole interaction,\njust to determine whether one event came before another."
+  },
+  {
+    "startInSeconds": 260,
+    "endInSeconds": 267,
+    "text": "The same idea applies to propagation. Suppose order_lookup returns\nthat the refundable amount is $49.99."
+  },
+  {
+    "startInSeconds": 267,
+    "endInSeconds": 274,
+    "text": "Later in the same trajectory, the agent calls\nprocess_refund, amount=59.99."
+  },
+  {
+    "startInSeconds": 274,
+    "endInSeconds": 281,
+    "text": "The tool selection is correct, and the refund action is in roughly the\nright place in the workflow, But look at the refund amount."
+  },
+  {
+    "startInSeconds": 281,
+    "endInSeconds": 285,
+    "text": "It's evident that the value returned earlier wasn't\ncarried forward correctly."
+  },
+  {
+    "startInSeconds": 285,
+    "endInSeconds": 290,
+    "text": "Here, the trajectory tells you something that neither tool\ncall reveals by itself."
+  },
+  {
+    "startInSeconds": 290,
+    "endInSeconds": 295,
+    "text": "You can also build broader evaluators that look across several\nrequirements at once."
+  },
+  {
+    "startInSeconds": 295,
+    "endInSeconds": 303,
+    "text": "For example, a policy compliance evaluator might consider whether the\ncustomer was verified, whether the order was eligible for refund,"
+  },
+  {
+    "startInSeconds": 303,
+    "endInSeconds": 307,
+    "text": "whether the amount was correct, and whether the required\nsequence was followed."
+  },
+  {
+    "startInSeconds": 307,
+    "endInSeconds": 311,
+    "text": "That kind of evaluator can give you a useful overall judgment."
+  },
+  {
+    "startInSeconds": 311,
+    "endInSeconds": 316,
+    "text": "But there's a trade-off: if policy compliance fails,\nyou still need to know why."
+  },
+  {
+    "startInSeconds": 316,
+    "endInSeconds": 322,
+    "text": "A more focused evaluator, like identity_before_refund,\ncan point directly to one specific requirement."
+  },
+  {
+    "startInSeconds": 322,
+    "endInSeconds": 324,
+    "text": "So, these checks can complement each other."
+  },
+  {
+    "startInSeconds": 324,
+    "endInSeconds": 330,
+    "text": "On the one hand, a broad evaluator can tell you that the run violated\npolicy, On the other hand,"
+  },
+  {
+    "startInSeconds": 330,
+    "endInSeconds": 335,
+    "text": "focused evaluators can help you locate which part\nof the policy failed."
+  },
+  {
+    "startInSeconds": 335,
+    "endInSeconds": 338,
+    "text": "And this brings us back to a principle you saw in the last video."
+  },
+  {
+    "startInSeconds": 338,
+    "endInSeconds": 345,
+    "text": "When the requirement you care about is represented clearly in\nstructured data, it's often useful to check that evidence directly."
+  },
+  {
+    "startInSeconds": 345,
+    "endInSeconds": 351,
+    "text": "If you want to know whether identity verification happened\nbefore a refund, inspect the trajectory."
+  },
+  {
+    "startInSeconds": 351,
+    "endInSeconds": 356,
+    "text": "If you want to know whether the refund amount matches the amount\nreturned by the order lookup, compare those values."
+  },
+  {
+    "startInSeconds": 356,
+    "endInSeconds": 363,
+    "text": "You only need a broader semantic judge when the requirement itself\nreally calls for that kind of interpretation."
+  },
+  {
+    "startInSeconds": 363,
+    "endInSeconds": 370,
+    "text": "So trajectory evaluation gives you a wider view of the agent's\nbehavior. You're no longer asking whether each action was valid."
+  },
+  {
+    "startInSeconds": 370,
+    "endInSeconds": 376,
+    "text": "You're trying to figure out whether the whole path through the task\nmade sense. Were the required steps there?"
+  },
+  {
+    "startInSeconds": 376,
+    "endInSeconds": 381,
+    "text": "Were they in the right order? Did information flow correctly from\none step to the next?"
+  },
+  {
+    "startInSeconds": 381,
+    "endInSeconds": 389,
+    "text": "Now, you have to be mindful that even a full trajectory has a\nboundary. It tells you what happened within the scope of one run."
+  },
+  {
+    "startInSeconds": 389,
+    "endInSeconds": 394,
+    "text": "But what if the requirement the agent violated was given several turns\nearlier in the conversation?"
+  },
+  {
+    "startInSeconds": 394,
+    "endInSeconds": 401,
+    "text": "Maybe a customer said, \"Don't refund anything until I confirm the\namount,\" and the agent followed that instruction at first,"
+  },
+  {
+    "startInSeconds": 401,
+    "endInSeconds": 402,
+    "text": "then forgot it later."
+  },
+  {
+    "startInSeconds": 402,
+    "endInSeconds": 409,
+    "text": "To catch a failure like that, you need to look beyond one trajectory\nand evaluate across turns. That's what you'll do next."
+  }
+]

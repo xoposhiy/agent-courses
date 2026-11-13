@@ -1,0 +1,1202 @@
+{
+  "source_id": "stanford-cs224v",
+  "summary": "A course on dependable agents for knowledge work. It emphasizes evidence, formal decisions, clinical matching, structured and unstructured data, research workflows, dialogue specifications, document transcription, and database reconciliation.",
+  "limitations": [
+    "Eleven slide decks and two homework descriptions are available.",
+    "Thousands of saved traces, input records, and vendored code files do not increase frequency.",
+    "The future context-management and harness-behavior sessions are schedule-only. A topic already supported by an available lecture or assignment is counted as taught.",
+    "Clinical examples are analyzed as course content, not as medical guidance."
+  ],
+  "new_concept_ids": [
+    "knowledge-curation",
+    "perspective-search",
+    "provenance",
+    "smt",
+    "constraint-retrieval",
+    "semantic-parsing",
+    "canonicalization",
+    "imputation",
+    "clinical-agents",
+    "db-query",
+    "hybrid-data",
+    "dialogue-state",
+    "declarative-agents",
+    "structured-research",
+    "research-reproduction",
+    "schema-induction",
+    "data-reconciliation",
+    "vlm",
+    "document-transcription",
+    "hypothesis-ledger"
+  ],
+  "concepts": [
+    {
+      "concept_id": "knowledge-curation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+          "line": 12,
+          "page": 1,
+          "excerpt": "Knowledge Curation",
+          "material_id": "slides/i-deepresearch",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+          "sha256": "73062f8895bab9eabb9291772fd04e49c64d52003983045af883f5d143fab208"
+        }
+      ]
+    },
+    {
+      "concept_id": "perspective-search",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+          "line": 386,
+          "page": 12,
+          "excerpt": "Breadth: perspective-guided question asking",
+          "material_id": "slides/i-deepresearch",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+          "sha256": "73062f8895bab9eabb9291772fd04e49c64d52003983045af883f5d143fab208"
+        }
+      ]
+    },
+    {
+      "concept_id": "planning",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+          "line": 1001,
+          "page": 23,
+          "excerpt": "Plan saved;",
+          "material_id": "slides/i-deepresearch",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+          "sha256": "73062f8895bab9eabb9291772fd04e49c64d52003983045af883f5d143fab208"
+        }
+      ]
+    },
+    {
+      "concept_id": "orchestrator-workers",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+          "line": 721,
+          "page": 19,
+          "excerpt": "Planner + workers",
+          "material_id": "slides/i-deepresearch",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+          "sha256": "73062f8895bab9eabb9291772fd04e49c64d52003983045af883f5d143fab208"
+        }
+      ]
+    },
+    {
+      "concept_id": "multi-agent",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+          "line": 787,
+          "page": 20,
+          "excerpt": "Orchestration: a lead agent plans, workers search in parallel",
+          "material_id": "slides/i-deepresearch",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+          "sha256": "73062f8895bab9eabb9291772fd04e49c64d52003983045af883f5d143fab208"
+        }
+      ]
+    },
+    {
+      "concept_id": "parallelization",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+          "line": 787,
+          "page": 20,
+          "excerpt": "Orchestration: a lead agent plans, workers search in parallel",
+          "material_id": "slides/i-deepresearch",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+          "sha256": "73062f8895bab9eabb9291772fd04e49c64d52003983045af883f5d143fab208"
+        }
+      ]
+    },
+    {
+      "concept_id": "human-collaboration",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+          "line": 1522,
+          "page": 36,
+          "excerpt": "Co-STORM was the first to propose mixed-initiative, human–AI collaborative knowledge",
+          "material_id": "slides/i-deepresearch",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+          "sha256": "73062f8895bab9eabb9291772fd04e49c64d52003983045af883f5d143fab208"
+        }
+      ]
+    },
+    {
+      "concept_id": "proactive",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+          "line": 1522,
+          "page": 36,
+          "excerpt": "Co-STORM was the first to propose mixed-initiative, human–AI collaborative knowledge",
+          "material_id": "slides/i-deepresearch",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+          "sha256": "73062f8895bab9eabb9291772fd04e49c64d52003983045af883f5d143fab208"
+        }
+      ]
+    },
+    {
+      "concept_id": "context-offload",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+          "line": 846,
+          "page": 21,
+          "excerpt": "Plans, notes, files (STORM: outline + references)",
+          "material_id": "slides/i-deepresearch",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+          "sha256": "73062f8895bab9eabb9291772fd04e49c64d52003983045af883f5d143fab208"
+        }
+      ]
+    },
+    {
+      "concept_id": "provenance",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-smt-match.md",
+          "line": 1057,
+          "page": 38,
+          "excerpt": "Decision + Rationale + Provenance",
+          "material_id": "slides/l-smt-match",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-SMT-match.pdf",
+          "sha256": "bb8aba97ebeec132c1ad08ab252876cf1a86d99e25b4c4d54d35d58cb4eeed3b"
+        }
+      ]
+    },
+    {
+      "concept_id": "smt",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-smt-match.md",
+          "line": 1079,
+          "page": 39,
+          "excerpt": "SMT/MaxSMT Solver reasons",
+          "material_id": "slides/l-smt-match",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-SMT-match.pdf",
+          "sha256": "bb8aba97ebeec132c1ad08ab252876cf1a86d99e25b4c4d54d35d58cb4eeed3b"
+        }
+      ]
+    },
+    {
+      "concept_id": "imputation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-smt-match.md",
+          "line": 567,
+          "page": 21,
+          "excerpt": "Imputations become assumptions: must disclose to expert, in case expert disagrees",
+          "material_id": "slides/l-smt-match",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-SMT-match.pdf",
+          "sha256": "bb8aba97ebeec132c1ad08ab252876cf1a86d99e25b4c4d54d35d58cb4eeed3b"
+        }
+      ]
+    },
+    {
+      "concept_id": "clinical-agents",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-smt-match.md",
+          "line": 19,
+          "page": 1,
+          "excerpt": "VERDICT: Clinical Trial Matching with SMT",
+          "material_id": "slides/l-smt-match",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-SMT-match.pdf",
+          "sha256": "bb8aba97ebeec132c1ad08ab252876cf1a86d99e25b4c4d54d35d58cb4eeed3b"
+        }
+      ]
+    },
+    {
+      "concept_id": "retrieval-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-smt-match.md",
+          "line": 333,
+          "page": 11,
+          "excerpt": "Retrieval has poor recall; matching accuracy is OK, poor accountability",
+          "material_id": "slides/l-smt-match",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-SMT-match.pdf",
+          "sha256": "bb8aba97ebeec132c1ad08ab252876cf1a86d99e25b4c4d54d35d58cb4eeed3b"
+        }
+      ]
+    },
+    {
+      "concept_id": "constraint-retrieval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-satir.md",
+          "line": 17,
+          "page": 1,
+          "excerpt": "Constraint-Satisfaction Based Retrieval",
+          "material_id": "slides/l-satir",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-SATIR.pdf",
+          "sha256": "66c3adf22e232fc3ebf44720924ccaba0b3caf85575e2981f9a2bbd9acb9159d"
+        }
+      ]
+    },
+    {
+      "concept_id": "canonicalization",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-satir.md",
+          "line": 457,
+          "page": 17,
+          "excerpt": "Canonicalization is complex! So many clinical terms!",
+          "material_id": "slides/l-satir",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-SATIR.pdf",
+          "sha256": "66c3adf22e232fc3ebf44720924ccaba0b3caf85575e2981f9a2bbd9acb9159d"
+        }
+      ]
+    },
+    {
+      "concept_id": "semantic-parsing",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-satir.md",
+          "line": 210,
+          "page": 7,
+          "excerpt": "2. Semantic parsing: NL to SMT for clinical trials",
+          "material_id": "slides/l-satir",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-SATIR.pdf",
+          "sha256": "66c3adf22e232fc3ebf44720924ccaba0b3caf85575e2981f9a2bbd9acb9159d"
+        }
+      ]
+    },
+    {
+      "concept_id": "rag",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-freetext.md",
+          "line": 316,
+          "page": 15,
+          "excerpt": "The 7-Stage WikiChat Pipeline",
+          "material_id": "slides/l-freetext",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-freetext.pdf",
+          "sha256": "ff5e931ec4606f3160b753b61f49004d2e50a0f27fdca4849ff0a3ebefa8ad90"
+        }
+      ]
+    },
+    {
+      "concept_id": "grounding",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-freetext.md",
+          "line": 624,
+          "page": 32,
+          "excerpt": "Fact-Checking an LLM Response",
+          "material_id": "slides/l-freetext",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-freetext.pdf",
+          "sha256": "ff5e931ec4606f3160b753b61f49004d2e50a0f27fdca4849ff0a3ebefa8ad90"
+        }
+      ]
+    },
+    {
+      "concept_id": "reflection",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-freetext.md",
+          "line": 692,
+          "page": 34,
+          "excerpt": "+ Draft + Refine",
+          "material_id": "slides/l-freetext",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-freetext.pdf",
+          "sha256": "ff5e931ec4606f3160b753b61f49004d2e50a0f27fdca4849ff0a3ebefa8ad90"
+        }
+      ]
+    },
+    {
+      "concept_id": "evaluation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-freetext.md",
+          "line": 1323,
+          "page": 51,
+          "excerpt": "Design Analysis: Do we need both IR and LLM?",
+          "material_id": "slides/l-freetext",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-freetext.pdf",
+          "sha256": "ff5e931ec4606f3160b753b61f49004d2e50a0f27fdca4849ff0a3ebefa8ad90"
+        }
+      ]
+    },
+    {
+      "concept_id": "react",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-agentic.md",
+          "line": 817,
+          "page": 33,
+          "excerpt": "ReAct: Synergizing Reasoning and Acting in Language Models, Yao et al, ICLR 2023",
+          "material_id": "slides/l-agentic",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-agentic.pdf",
+          "sha256": "beea1d2d6d4d49b54c470298988c952d8a33973300e3df9abf541ed03a5d63b4"
+        }
+      ]
+    },
+    {
+      "concept_id": "db-query",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-agentic.md",
+          "line": 43,
+          "page": 3,
+          "excerpt": "How to query them with SPARQL & SQL",
+          "material_id": "slides/l-agentic",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-agentic.pdf",
+          "sha256": "beea1d2d6d4d49b54c470298988c952d8a33973300e3df9abf541ed03a5d63b4"
+        }
+      ]
+    },
+    {
+      "concept_id": "tool-use",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/assignments/cs224v-2026-hw2.md",
+          "line": 96,
+          "page": 2,
+          "excerpt": "Tool call questions",
+          "material_id": "assignments/cs224v-2026-hw2",
+          "category": "assignments",
+          "source_url": "https://web.stanford.edu/class/cs224v/cs224v_2026_hw2.pdf",
+          "sha256": "9d89da518c47aa7ea09d89c2a9444aa45f7467199138638a2014b014d50a2fcc"
+        }
+      ]
+    },
+    {
+      "concept_id": "structured-research",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-data-driven-deep-research.md",
+          "line": 255,
+          "page": 10,
+          "excerpt": "• P1: Iterative hypothesis generation and testing",
+          "material_id": "slides/l-data-driven-deep-research",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-data-driven-deep-research.pdf",
+          "sha256": "c49f359f6c94a21a8d036bf938abac9fabf10d86431cf2f9b276fef738ec479d"
+        }
+      ]
+    },
+    {
+      "concept_id": "plan-execute",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-data-driven-deep-research.md",
+          "line": 337,
+          "page": 15,
+          "excerpt": "Planner–executor decomposition",
+          "material_id": "slides/l-data-driven-deep-research",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-data-driven-deep-research.pdf",
+          "sha256": "c49f359f6c94a21a8d036bf938abac9fabf10d86431cf2f9b276fef738ec479d"
+        }
+      ]
+    },
+    {
+      "concept_id": "research-reproduction",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-data-driven-deep-research.md",
+          "line": 1003,
+          "page": 42,
+          "excerpt": "SEER-Repro makes published studies executable",
+          "material_id": "slides/l-data-driven-deep-research",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-data-driven-deep-research.pdf",
+          "sha256": "c49f359f6c94a21a8d036bf938abac9fabf10d86431cf2f9b276fef738ec479d"
+        }
+      ]
+    },
+    {
+      "concept_id": "human-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-data-driven-deep-research.md",
+          "line": 810,
+          "page": 35,
+          "excerpt": "Human Evaluation",
+          "material_id": "slides/l-data-driven-deep-research",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-data-driven-deep-research.pdf",
+          "sha256": "c49f359f6c94a21a8d036bf938abac9fabf10d86431cf2f9b276fef738ec479d"
+        }
+      ]
+    },
+    {
+      "concept_id": "hybrid-data",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-new-suql.md",
+          "line": 306,
+          "page": 16,
+          "excerpt": "• Extends SQL to include free-text operations",
+          "material_id": "slides/l-new-suql",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-new-suql.pdf",
+          "sha256": "6df186e1a6297527216cf5cfe0929f77dd0eeb6bd237ae99e1af26bc291f6086"
+        }
+      ]
+    },
+    {
+      "concept_id": "dialogue-state",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-newworksheet.md",
+          "line": 892,
+          "page": 39,
+          "excerpt": "(dialogue state)",
+          "material_id": "slides/l-newworksheet",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-newWorksheet.pdf",
+          "sha256": "0886ea680742d99de4b0003373625eb36758131999f992231d07fa89d00d23ca"
+        }
+      ]
+    },
+    {
+      "concept_id": "declarative-agents",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-newworksheet.md",
+          "line": 471,
+          "page": 31,
+          "excerpt": "Genie Worksheet Design Principles",
+          "material_id": "slides/l-newworksheet",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-newWorksheet.pdf",
+          "sha256": "0886ea680742d99de4b0003373625eb36758131999f992231d07fa89d00d23ca"
+        }
+      ]
+    },
+    {
+      "concept_id": "state",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-newworksheet.md",
+          "line": 479,
+          "page": 31,
+          "excerpt": "What state to keep for the conversation",
+          "material_id": "slides/l-newworksheet",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-newWorksheet.pdf",
+          "sha256": "0886ea680742d99de4b0003373625eb36758131999f992231d07fa89d00d23ca"
+        }
+      ]
+    },
+    {
+      "concept_id": "vlm",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-churro.md",
+          "line": 242,
+          "page": 13,
+          "excerpt": "Recent Breakthroughs in VLMs",
+          "material_id": "slides/l-churro",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-churro.pdf",
+          "sha256": "61e87045f1e676e3f575b8eb907f2b30f102b49a3ec3f35cab5e558012ba3152"
+        }
+      ]
+    },
+    {
+      "concept_id": "document-transcription",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-churro.md",
+          "line": 196,
+          "page": 10,
+          "excerpt": "Text Extraction from Historical",
+          "material_id": "slides/l-churro",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-churro.pdf",
+          "sha256": "61e87045f1e676e3f575b8eb907f2b30f102b49a3ec3f35cab5e558012ba3152"
+        }
+      ]
+    },
+    {
+      "concept_id": "sft",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-churro.md",
+          "line": 749,
+          "page": 42,
+          "excerpt": "Fine-tuned on CHURRO-DS from 3B-parameter Qwen VL 2.5 model",
+          "material_id": "slides/l-churro",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-churro.pdf",
+          "sha256": "61e87045f1e676e3f575b8eb907f2b30f102b49a3ec3f35cab5e558012ba3152"
+        }
+      ]
+    },
+    {
+      "concept_id": "long-context",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-sliders.md",
+          "line": 184,
+          "page": 7,
+          "excerpt": "Long Context",
+          "material_id": "slides/i-sliders",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-sliders.pdf",
+          "sha256": "a68c9c36375b0c12b8765958ebcda1541e8e34418311fdf4fcddbef420da536a"
+        }
+      ]
+    },
+    {
+      "concept_id": "long-horizon",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-sliders.md",
+          "line": 1,
+          "page": null,
+          "excerpt": "# Long-Context Long-Horizon Deep Researcher",
+          "material_id": "slides/i-sliders",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-sliders.pdf",
+          "sha256": "a68c9c36375b0c12b8765958ebcda1541e8e34418311fdf4fcddbef420da536a"
+        }
+      ]
+    },
+    {
+      "concept_id": "schema-induction",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-sliders.md",
+          "line": 1036,
+          "page": 40,
+          "excerpt": "Automatically-induced schema with extraction rules",
+          "material_id": "slides/i-sliders",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-sliders.pdf",
+          "sha256": "a68c9c36375b0c12b8765958ebcda1541e8e34418311fdf4fcddbef420da536a"
+        }
+      ]
+    },
+    {
+      "concept_id": "data-reconciliation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-sliders.md",
+          "line": 1025,
+          "page": 40,
+          "excerpt": "Our Solution: Chunk and Reconcile",
+          "material_id": "slides/i-sliders",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-sliders.pdf",
+          "sha256": "a68c9c36375b0c12b8765958ebcda1541e8e34418311fdf4fcddbef420da536a"
+        }
+      ]
+    },
+    {
+      "concept_id": "coding-agents",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-sliders.md",
+          "line": 1047,
+          "page": 40,
+          "excerpt": "Autonomous database reconciliation coding agent",
+          "material_id": "slides/i-sliders",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-sliders.pdf",
+          "sha256": "a68c9c36375b0c12b8765958ebcda1541e8e34418311fdf4fcddbef420da536a"
+        }
+      ]
+    },
+    {
+      "concept_id": "chunking",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-sliders.md",
+          "line": 1177,
+          "page": 45,
+          "excerpt": "Reconciliation: Chunk-based extraction requires reconciliation",
+          "material_id": "slides/i-sliders",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-sliders.pdf",
+          "sha256": "a68c9c36375b0c12b8765958ebcda1541e8e34418311fdf4fcddbef420da536a"
+        }
+      ]
+    },
+    {
+      "concept_id": "citation-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-sliders.md",
+          "line": 1181,
+          "page": 45,
+          "excerpt": "provenance and rationale",
+          "material_id": "slides/i-sliders",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-sliders.pdf",
+          "sha256": "a68c9c36375b0c12b8765958ebcda1541e8e34418311fdf4fcddbef420da536a"
+        }
+      ]
+    },
+    {
+      "concept_id": "hypothesis-ledger",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/assignments/cs224v-2026-hw1.md",
+          "line": 41,
+          "page": 1,
+          "excerpt": "GRILL searches and reads the literature while maintaining a belief ledger: hypotheses, evidence for",
+          "material_id": "assignments/cs224v-2026-hw1",
+          "category": "assignments",
+          "source_url": "https://web.stanford.edu/class/cs224v/cs224v_2026_hw1.pdf",
+          "sha256": "282939bfb2a7d2863a944fb081a8a6ae05f9ddaa309b9fcdd2f80b59db4abd06"
+        }
+      ]
+    },
+    {
+      "concept_id": "trajectory-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/assignments/cs224v-2026-hw1.md",
+          "line": 86,
+          "page": 2,
+          "excerpt": "• Section 6: Error Analysis: You will look at the trajectory of the GRILL agent and fine",
+          "material_id": "assignments/cs224v-2026-hw1",
+          "category": "assignments",
+          "source_url": "https://web.stanford.edu/class/cs224v/cs224v_2026_hw1.pdf",
+          "sha256": "282939bfb2a7d2863a944fb081a8a6ae05f9ddaa309b9fcdd2f80b59db4abd06"
+        }
+      ]
+    },
+    {
+      "concept_id": "observability",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/assignments/cs224v-2026-hw1.md",
+          "line": 38,
+          "page": 1,
+          "excerpt": "Then you will then work through GRILL and inspect its intermediate outputs to understand what",
+          "material_id": "assignments/cs224v-2026-hw1",
+          "category": "assignments",
+          "source_url": "https://web.stanford.edu/class/cs224v/cs224v_2026_hw1.pdf",
+          "sha256": "282939bfb2a7d2863a944fb081a8a6ae05f9ddaa309b9fcdd2f80b59db4abd06"
+        }
+      ]
+    },
+    {
+      "concept_id": "reliability",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/assignments/cs224v-2026-hw1.md",
+          "line": 125,
+          "page": 2,
+          "excerpt": "Repeated runs of GRILL",
+          "material_id": "assignments/cs224v-2026-hw1",
+          "category": "assignments",
+          "source_url": "https://web.stanford.edu/class/cs224v/cs224v_2026_hw1.pdf",
+          "sha256": "282939bfb2a7d2863a944fb081a8a6ae05f9ddaa309b9fcdd2f80b59db4abd06"
+        }
+      ]
+    },
+    {
+      "concept_id": "agent-architecture",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/assignments/cs224v-2026-hw2.md",
+          "line": 36,
+          "page": 1,
+          "excerpt": "AOS is an open, accountable platform for agents with a layered architecture that includes a",
+          "material_id": "assignments/cs224v-2026-hw2",
+          "category": "assignments",
+          "source_url": "https://web.stanford.edu/class/cs224v/cs224v_2026_hw2.pdf",
+          "sha256": "9d89da518c47aa7ea09d89c2a9444aa45f7467199138638a2014b014d50a2fcc"
+        }
+      ]
+    },
+    {
+      "concept_id": "frameworks",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/assignments/cs224v-2026-hw2.md",
+          "line": 30,
+          "page": 1,
+          "excerpt": "we will learn how to use Agentic OS (AOS) for orchestrating agents.",
+          "material_id": "assignments/cs224v-2026-hw2",
+          "category": "assignments",
+          "source_url": "https://web.stanford.edu/class/cs224v/cs224v_2026_hw2.pdf",
+          "sha256": "9d89da518c47aa7ea09d89c2a9444aa45f7467199138638a2014b014d50a2fcc"
+        }
+      ]
+    },
+    {
+      "concept_id": "harness",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/assignments/cs224v-2026-hw2.md",
+          "line": 37,
+          "page": 1,
+          "excerpt": "semantic file system for retrieving and curating persistent knowledge and artifacts; a harness",
+          "material_id": "assignments/cs224v-2026-hw2",
+          "category": "assignments",
+          "source_url": "https://web.stanford.edu/class/cs224v/cs224v_2026_hw2.pdf",
+          "sha256": "9d89da518c47aa7ea09d89c2a9444aa45f7467199138638a2014b014d50a2fcc"
+        }
+      ]
+    },
+    {
+      "concept_id": "filesystem",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/assignments/cs224v-2026-hw2.md",
+          "line": 37,
+          "page": 1,
+          "excerpt": "semantic file system for retrieving and curating persistent knowledge and artifacts; a harness",
+          "material_id": "assignments/cs224v-2026-hw2",
+          "category": "assignments",
+          "source_url": "https://web.stanford.edu/class/cs224v/cs224v_2026_hw2.pdf",
+          "sha256": "9d89da518c47aa7ea09d89c2a9444aa45f7467199138638a2014b014d50a2fcc"
+        }
+      ]
+    },
+    {
+      "concept_id": "context-engineering",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/assignments/cs224v-2026-hw2.md",
+          "line": 38,
+          "page": 1,
+          "excerpt": "with experimental components to improve reasoning, context management, conversation man-",
+          "material_id": "assignments/cs224v-2026-hw2",
+          "category": "assignments",
+          "source_url": "https://web.stanford.edu/class/cs224v/cs224v_2026_hw2.pdf",
+          "sha256": "9d89da518c47aa7ea09d89c2a9444aa45f7467199138638a2014b014d50a2fcc"
+        }
+      ]
+    },
+    {
+      "concept_id": "structured-output",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/assignments/cs224v-2026-hw2.md",
+          "line": 99,
+          "page": 2,
+          "excerpt": "Structured output A",
+          "material_id": "assignments/cs224v-2026-hw2",
+          "category": "assignments",
+          "source_url": "https://web.stanford.edu/class/cs224v/cs224v_2026_hw2.pdf",
+          "sha256": "9d89da518c47aa7ea09d89c2a9444aa45f7467199138638a2014b014d50a2fcc"
+        }
+      ]
+    },
+    {
+      "concept_id": "prompting",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/assignments/cs224v-2026-hw2.md",
+          "line": 84,
+          "page": 2,
+          "excerpt": "Agent Prompt",
+          "material_id": "assignments/cs224v-2026-hw2",
+          "category": "assignments",
+          "source_url": "https://web.stanford.edu/class/cs224v/cs224v_2026_hw2.pdf",
+          "sha256": "9d89da518c47aa7ea09d89c2a9444aa45f7467199138638a2014b014d50a2fcc"
+        }
+      ]
+    },
+    {
+      "concept_id": "shared-memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/assignments/cs224v-2026-hw2.md",
+          "line": 39,
+          "page": 1,
+          "excerpt": "agement, and decision making; team workflow support for shared workspaces and collaboration.",
+          "material_id": "assignments/cs224v-2026-hw2",
+          "category": "assignments",
+          "source_url": "https://web.stanford.edu/class/cs224v/cs224v_2026_hw2.pdf",
+          "sha256": "9d89da518c47aa7ea09d89c2a9444aa45f7467199138638a2014b014d50a2fcc"
+        }
+      ]
+    },
+    {
+      "concept_id": "procedural-memory",
+      "coverage": "planned",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/pages/schedule.md",
+          "line": 32,
+          "page": null,
+          "excerpt": "| 11/16 | Agent Context Management | How do we manage the context of long-horizon agents? Designs of existing harnesses; context compression; external storage; long-term memory and skills. |  |  |",
+          "material_id": "pages/schedule",
+          "category": "pages",
+          "source_url": "https://web.stanford.edu/class/cs224v/schedule.html",
+          "sha256": "e80eb07811b7f2aff54e64d93c882e7355b35effef18df76b56737c55dda2dd5"
+        }
+      ]
+    },
+    {
+      "concept_id": "reward-hacking",
+      "coverage": "planned",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/pages/schedule.md",
+          "line": 33,
+          "page": null,
+          "excerpt": "| 11/18 | Behavior of LLM-based Harnesses | This lecture addresses how we should build agents in the face of many of the recent developments of frontier LLMs: Can coding agents perform general-purpose tasks? Can meta-optimizations improve custom-built agents? Can we trust the results of LLM outputs given their reward-hacking behavior? |  |  |",
+          "material_id": "pages/schedule",
+          "category": "pages",
+          "source_url": "https://web.stanford.edu/class/cs224v/schedule.html",
+          "sha256": "e80eb07811b7f2aff54e64d93c882e7355b35effef18df76b56737c55dda2dd5"
+        }
+      ]
+    },
+    {
+      "concept_id": "compaction",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+          "line": 843,
+          "page": 21,
+          "excerpt": "Summarize old turns; keep going",
+          "material_id": "slides/i-deepresearch",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+          "sha256": "73062f8895bab9eabb9291772fd04e49c64d52003983045af883f5d143fab208"
+        }
+      ]
+    },
+    {
+      "concept_id": "memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+          "line": 463,
+          "page": 14,
+          "excerpt": "Memory: an outline plus a reference pool",
+          "material_id": "slides/i-deepresearch",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+          "sha256": "73062f8895bab9eabb9291772fd04e49c64d52003983045af883f5d143fab208"
+        }
+      ]
+    },
+    {
+      "concept_id": "context-isolation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+          "line": 849,
+          "page": 21,
+          "excerpt": "Explore in a fresh window; return a summary",
+          "material_id": "slides/i-deepresearch",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+          "sha256": "73062f8895bab9eabb9291772fd04e49c64d52003983045af883f5d143fab208"
+        }
+      ]
+    },
+    {
+      "concept_id": "llm-judge",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+          "line": 2794,
+          "page": 66,
+          "excerpt": "Start with about 20 real queries and an LLM judge",
+          "material_id": "slides/i-deepresearch",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+          "sha256": "73062f8895bab9eabb9291772fd04e49c64d52003983045af883f5d143fab208"
+        }
+      ]
+    },
+    {
+      "concept_id": "rubrics",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+          "line": 2795,
+          "page": 66,
+          "excerpt": "with a rubric; humans catch what it misses.",
+          "material_id": "slides/i-deepresearch",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+          "sha256": "73062f8895bab9eabb9291772fd04e49c64d52003983045af883f5d143fab208"
+        }
+      ]
+    },
+    {
+      "concept_id": "judge-validation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+          "line": 2795,
+          "page": 66,
+          "excerpt": "with a rubric; humans catch what it misses.",
+          "material_id": "slides/i-deepresearch",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+          "sha256": "73062f8895bab9eabb9291772fd04e49c64d52003983045af883f5d143fab208"
+        }
+      ]
+    },
+    {
+      "concept_id": "user-simulation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+          "line": 2892,
+          "page": 68,
+          "excerpt": "communicate asynchronously, with simulated or real",
+          "material_id": "slides/i-deepresearch",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+          "sha256": "73062f8895bab9eabb9291772fd04e49c64d52003983045af883f5d143fab208"
+        }
+      ]
+    },
+    {
+      "concept_id": "work-impact",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+          "line": 2911,
+          "page": 68,
+          "excerpt": "What do workers actually want agents to do?",
+          "material_id": "slides/i-deepresearch",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+          "sha256": "73062f8895bab9eabb9291772fd04e49c64d52003983045af883f5d143fab208"
+        }
+      ]
+    },
+    {
+      "concept_id": "error-analysis",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+          "line": 2906,
+          "page": 68,
+          "excerpt": "Top failure modes: communication (65% of cases) and",
+          "material_id": "slides/i-deepresearch",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+          "sha256": "73062f8895bab9eabb9291772fd04e49c64d52003983045af883f5d143fab208"
+        }
+      ]
+    },
+    {
+      "concept_id": "multi-agent-failures",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+          "line": 2906,
+          "page": 68,
+          "excerpt": "Top failure modes: communication (65% of cases) and",
+          "material_id": "slides/i-deepresearch",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+          "sha256": "73062f8895bab9eabb9291772fd04e49c64d52003983045af883f5d143fab208"
+        }
+      ]
+    },
+    {
+      "concept_id": "personalization",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/i-deepresearch.md",
+          "line": 1614,
+          "page": 39,
+          "excerpt": "real users’ goals",
+          "material_id": "slides/i-deepresearch",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+          "sha256": "73062f8895bab9eabb9291772fd04e49c64d52003983045af883f5d143fab208"
+        }
+      ]
+    },
+    {
+      "concept_id": "embeddings",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-freetext.md",
+          "line": 361,
+          "page": 17,
+          "excerpt": "Highest similarity score between",
+          "material_id": "slides/l-freetext",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-freetext.pdf",
+          "sha256": "ff5e931ec4606f3160b753b61f49004d2e50a0f27fdca4849ff0a3ebefa8ad90"
+        }
+      ]
+    },
+    {
+      "concept_id": "sparse-retrieval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-freetext.md",
+          "line": 399,
+          "page": 18,
+          "excerpt": "Multifunctional: dense, multi-vector and sparse retrieval",
+          "material_id": "slides/l-freetext",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-freetext.pdf",
+          "sha256": "ff5e931ec4606f3160b753b61f49004d2e50a0f27fdca4849ff0a3ebefa8ad90"
+        }
+      ]
+    },
+    {
+      "concept_id": "reranking",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-freetext.md",
+          "line": 356,
+          "page": 17,
+          "excerpt": "ColBERT Information Retrieval (IR)",
+          "material_id": "slides/l-freetext",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-freetext.pdf",
+          "sha256": "ff5e931ec4606f3160b753b61f49004d2e50a0f27fdca4849ff0a3ebefa8ad90"
+        }
+      ]
+    },
+    {
+      "concept_id": "verification",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-freetext.md",
+          "line": 624,
+          "page": 32,
+          "excerpt": "Fact-Checking an LLM Response",
+          "material_id": "slides/l-freetext",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-freetext.pdf",
+          "sha256": "ff5e931ec4606f3160b753b61f49004d2e50a0f27fdca4849ff0a3ebefa8ad90"
+        }
+      ]
+    },
+    {
+      "concept_id": "hitl",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/slides/l-smt-match.md",
+          "line": 89,
+          "page": 5,
+          "excerpt": "We need human-in-the-loop: AI must provide a point-by-point rationale",
+          "material_id": "slides/l-smt-match",
+          "category": "slides",
+          "source_url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-SMT-match.pdf",
+          "sha256": "bb8aba97ebeec132c1ad08ab252876cf1a86d99e25b4c4d54d35d58cb4eeed3b"
+        }
+      ]
+    },
+    {
+      "concept_id": "deep-research",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/stanford-cs224v/markdown/assignments/cs224v-2026-hw1.md",
+          "line": 12,
+          "page": 1,
+          "excerpt": "Agentic Literature Research for Rare-Disease Diagnosis",
+          "material_id": "assignments/cs224v-2026-hw1",
+          "category": "assignments",
+          "source_url": "https://web.stanford.edu/class/cs224v/cs224v_2026_hw1.pdf",
+          "sha256": "282939bfb2a7d2863a944fb081a8a6ae05f9ddaa309b9fcdd2f80b59db4abd06"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+# Homework 1 public teaching repository: assignments/OMIM_621182/grill_run/tasks/0036_screen_h15/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621182/grill_run/tasks/0036_screen_h15/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621182/grill_run/tasks/0036_screen_h15/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Initial reporting shows microcephaly was documented across all 11 individuals carrying biallelic, de novo, or heterozygous NAV3 variants.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "In a study describing 11 individuals from seven families carrying biallelic, de novo, and heterozygous NAV3 variants, microcephaly was noted in all affected individuals.",
+      "stance": "supports",
+      "source": {
+        "title": "Variants of NAV3, a neuronal morphogenesis protein, cause intellectual disability, developmental delay, and microcephaly",
+        "authors": [
+          "A Ghaffar",
+          "T Akhter",
+          "P Str\u00f8mme",
+          "D Misceo"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": "10.1038/s42003-024-06466-1",
+        "pmid": "38977784",
+        "pmc": null,
+        "url": "https://www.nature.com/articles/s42003-024-06466-1",
+        "quote": "We report eleven individuals from seven families harboring predicted pathogenic biallelic, de novo, and heterozygous variants in the NAV3 gene, which encodes the microtubule positive tip protein neuron navigator 3 (NAV3). All affected individuals have intellectual disability (ID), microcephaly, skeletal deformities, ocular anomalies, and behavioral issues."
+      },
+      "numbers": [
+        {
+          "metric": "affected individuals with microcephaly",
+          "value": "11/11"
+        }
+      ]
+    }
+  ]
+}
+```

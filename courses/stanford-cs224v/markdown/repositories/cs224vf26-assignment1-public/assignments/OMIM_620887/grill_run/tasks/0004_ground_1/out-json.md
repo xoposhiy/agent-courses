@@ -1,0 +1,26 @@
+# Homework 1 public teaching repository: assignments/OMIM_620887/grill_run/tasks/0004_ground_1/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620887/grill_run/tasks/0004_ground_1/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620887/grill_run/tasks/0004_ground_1/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "term": "FDXR",
+  "definition": "FDXR encodes ferredoxin reductase, a mitochondrial iron-sulfur (Fe-S) cluster biogenesis protein that serves as an electron transfer partner (mediating electron donation alongside ferredoxin) critical for mitochondrial Fe-S cluster assembly; loss-of-function variants in this gene underlie mitochondrial disorders including multiple mitochondrial dysfunctions syndrome 9B.",
+  "source": {
+    "title": "Outlining the complex pathway of mammalian Fe-S cluster biogenesis",
+    "authors": [
+      "N Maio",
+      "TA Rouault"
+    ],
+    "year": 2020,
+    "journal": null,
+    "doi": "10.1016/j.tibs.2020.02.001",
+    "pmid": "32311335",
+    "pmc": null,
+    "url": "https://www.cell.com/trends/biochemical-sciences/abstract/S0968-0004(20)30034-7",
+    "quote": "Ferredoxin reductase that serves as first electron transfer protein that donates reducing \u2026 , and electron donation (mediated by FDX/FDXR), followed by binding of the chaperone/"
+  }
+}
+```

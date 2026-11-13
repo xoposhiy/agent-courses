@@ -1,0 +1,27 @@
+# Homework 1 public teaching repository: assignments/OMIM_620450/grill_run/tasks/0004_ground_1/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620450/grill_run/tasks/0004_ground_1/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620450/grill_run/tasks/0004_ground_1/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "term": "OMIM #620450",
+  "definition": "Intellectual developmental disorder, autosomal dominant 73 (OMIM #620450), also known as TAF4-related neurodevelopmental disorder, is an autosomal dominant condition caused by heterozygous variants in the TAF4 gene and primarily characterized by intellectual disability, developmental delay, speech and language deficits, behavioral abnormalities, and facial dysmorphisms.",
+  "source": {
+    "title": "Genome sequencing reveals high diagnostic yield in children with severe sporadic developmental language disorder",
+    "authors": [
+      "MGP Kennis",
+      "L van Haaften",
+      "K van Hulst"
+    ],
+    "year": 2026,
+    "journal": null,
+    "doi": null,
+    "pmid": null,
+    "pmc": null,
+    "url": "https://www.nature.com/articles/s41431-026-02214-7",
+    "quote": "TAF4 is associated with a developmental disorder (OMIM #620450), characterized by intellectual disability"
+  }
+}
+```

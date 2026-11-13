@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "sources": 8,
+  "concepts": 205,
+  "evidence_records": 624,
+  "local_links": 1755,
+  "checks": [
+    "canonical names and aliases are unique",
+    "parent graph has no cycles",
+    "evidence excerpts and hashes match local sources",
+    "course frequencies exclude the book and planned topics",
+    "frequencies match the course inventories",
+    "book evidence is outside bibliographies",
+    "source-concept records are unique",
+    "report links exist"
+  ]
+}

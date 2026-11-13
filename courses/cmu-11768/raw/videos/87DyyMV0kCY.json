@@ -1,0 +1,5372 @@
+[
+  {
+    "text": "Thank you everyone for coming. Uh I'm",
+    "start": 10.8,
+    "duration": 2.959
+  },
+  {
+    "text": "Eric from alignment and safety research",
+    "start": 12.24,
+    "duration": 3.12
+  },
+  {
+    "text": "at OpenAI. I'm here with Mike from",
+    "start": 13.759,
+    "duration": 3.761
+  },
+  {
+    "text": "security and infrastructure. Today I'm",
+    "start": 15.36,
+    "duration": 3.679
+  },
+  {
+    "text": "going to talk about what I think is the",
+    "start": 17.52,
+    "duration": 3.44
+  },
+  {
+    "text": "most qualitatively interesting example",
+    "start": 19.039,
+    "duration": 4.4
+  },
+  {
+    "text": "of AI capabilities that I've ever seen",
+    "start": 20.96,
+    "duration": 4.399
+  },
+  {
+    "text": "and how this inadvertently led to the",
+    "start": 23.439,
+    "duration": 5.281
+  },
+  {
+    "text": "OpenAI hugging face incident.",
+    "start": 25.359,
+    "duration": 4.561
+  },
+  {
+    "text": "Okay, so a couple weeks ago,",
+    "start": 28.72,
+    "duration": 3.04
+  },
+  {
+    "text": "HuggingFace, which is a open- source",
+    "start": 29.92,
+    "duration": 4.0
+  },
+  {
+    "text": "data set and model provider, put out a",
+    "start": 31.76,
+    "duration": 4.0
+  },
+  {
+    "text": "statement uh a security disclosure",
+    "start": 33.92,
+    "duration": 4.24
+  },
+  {
+    "text": "saying they were under a cyber attack.",
+    "start": 35.76,
+    "duration": 3.76
+  },
+  {
+    "text": "And what made this event uh",
+    "start": 38.16,
+    "duration": 3.68
+  },
+  {
+    "text": "unprecedented was that they said it was",
+    "start": 39.52,
+    "duration": 4.48
+  },
+  {
+    "text": "driven end to end by an autonomous AI",
+    "start": 41.84,
+    "duration": 4.64
+  },
+  {
+    "text": "agent system. In the few days following",
+    "start": 44.0,
+    "duration": 4.8
+  },
+  {
+    "text": "that attack, we at OpenAI disclosed that",
+    "start": 46.48,
+    "duration": 4.64
+  },
+  {
+    "text": "we in fact had caused this incident",
+    "start": 48.8,
+    "duration": 4.399
+  },
+  {
+    "text": "inadvertently as a side effect of one of",
+    "start": 51.12,
+    "duration": 3.68
+  },
+  {
+    "text": "the cyber security evaluations that we",
+    "start": 53.199,
+    "duration": 2.721
+  },
+  {
+    "text": "were running on one of our frontier",
+    "start": 54.8,
+    "duration": 3.52
+  },
+  {
+    "text": "models. And so what Mike and I are going",
+    "start": 55.92,
+    "duration": 4.56
+  },
+  {
+    "text": "to do in this talk is describe the",
+    "start": 58.32,
+    "duration": 4.0
+  },
+  {
+    "text": "leadup to the incident, what ended up",
+    "start": 60.48,
+    "duration": 3.44
+  },
+  {
+    "text": "happening, and the remediation we've",
+    "start": 62.32,
+    "duration": 3.199
+  },
+  {
+    "text": "been doing in the last few days and",
+    "start": 63.92,
+    "duration": 6.28
+  },
+  {
+    "text": "weeks uh to to improve this.",
+    "start": 65.519,
+    "duration": 4.681
+  },
+  {
+    "text": "Okay, let me start with a few caveats",
+    "start": 70.24,
+    "duration": 4.48
+  },
+  {
+    "text": "and framing. This is not your normal",
+    "start": 71.68,
+    "duration": 4.96
+  },
+  {
+    "text": "security incident. Mike and I have been",
+    "start": 74.72,
+    "duration": 3.68
+  },
+  {
+    "text": "involved in a number of things and",
+    "start": 76.64,
+    "duration": 3.2
+  },
+  {
+    "text": "unlike normal incidents which you can",
+    "start": 78.4,
+    "duration": 3.6
+  },
+  {
+    "text": "maybe trace down to a single you know",
+    "start": 79.84,
+    "duration": 5.31
+  },
+  {
+    "text": "day or single effect or single log um",
+    "start": 82.0,
+    "duration": 4.32
+  },
+  {
+    "text": "[clears throat] this incident involves",
+    "start": 85.15,
+    "duration": 3.25
+  },
+  {
+    "text": "actually a team of agents who are",
+    "start": 86.32,
+    "duration": 4.479
+  },
+  {
+    "text": "working together finding exploits",
+    "start": 88.4,
+    "duration": 4.16
+  },
+  {
+    "text": "sharing them with one another moving",
+    "start": 90.799,
+    "duration": 3.601
+  },
+  {
+    "text": "laterally through our systems through",
+    "start": 92.56,
+    "duration": 3.76
+  },
+  {
+    "text": "external systems and [clears throat]",
+    "start": 94.4,
+    "duration": 3.52
+  },
+  {
+    "text": "doing this over the course of days and",
+    "start": 96.32,
+    "duration": 3.68
+  },
+  {
+    "text": "weeks",
+    "start": 97.92,
+    "duration": 4.08
+  },
+  {
+    "text": "to actually dig into this incident we've",
+    "start": 100.0,
+    "duration": 4.159
+  },
+  {
+    "text": "been using AI techniques and what we've",
+    "start": 102.0,
+    "duration": 3.84
+  },
+  {
+    "text": "been doing is running models like Codeex",
+    "start": 104.159,
+    "duration": 4.161
+  },
+  {
+    "text": "and other agents to scan lots and lots",
+    "start": 105.84,
+    "duration": 4.08
+  },
+  {
+    "text": "of trajectories and logs that are in our",
+    "start": 108.32,
+    "duration": 3.6
+  },
+  {
+    "text": "infrastructure, including actually at",
+    "start": 109.92,
+    "duration": 4.08
+  },
+  {
+    "text": "this point over 7 billion logs we've",
+    "start": 111.92,
+    "duration": 3.76
+  },
+  {
+    "text": "looked at and spending at this point",
+    "start": 114.0,
+    "duration": 3.28
+  },
+  {
+    "text": "millions and millions of GP hours to",
+    "start": 115.68,
+    "duration": 4.88
+  },
+  {
+    "text": "look into this problem.",
+    "start": 117.28,
+    "duration": 5.36
+  },
+  {
+    "text": "That being said, we haven't completed",
+    "start": 120.56,
+    "duration": 3.76
+  },
+  {
+    "text": "our investigation and so the point of",
+    "start": 122.64,
+    "duration": 3.6
+  },
+  {
+    "text": "this talk is to explain the facts as we",
+    "start": 124.32,
+    "duration": 3.84
+  },
+  {
+    "text": "know them today. We're kind of",
+    "start": 126.24,
+    "duration": 3.68
+  },
+  {
+    "text": "responding with the highest urgency we",
+    "start": 128.16,
+    "duration": 4.079
+  },
+  {
+    "text": "can as a company and later we'll release",
+    "start": 129.92,
+    "duration": 6.24
+  },
+  {
+    "text": "a full postmortem with all our details.",
+    "start": 132.239,
+    "duration": 5.201
+  },
+  {
+    "text": "Okay, so let's jump straight into what",
+    "start": 136.16,
+    "duration": 4.159
+  },
+  {
+    "text": "happened to not bury the lead at all. At",
+    "start": 137.44,
+    "duration": 5.519
+  },
+  {
+    "text": "OpenAI, we give our models a lot of",
+    "start": 140.319,
+    "duration": 5.201
+  },
+  {
+    "text": "really really hard tasks. So people",
+    "start": 142.959,
+    "duration": 4.241
+  },
+  {
+    "text": "might be familiar with our results on",
+    "start": 145.52,
+    "duration": 3.439
+  },
+  {
+    "text": "solving math proofs or other types of",
+    "start": 147.2,
+    "duration": 3.679
+  },
+  {
+    "text": "results like this. And we also give",
+    "start": 148.959,
+    "duration": 4.401
+  },
+  {
+    "text": "models uh cyber security related tasks",
+    "start": 150.879,
+    "duration": 4.561
+  },
+  {
+    "text": "like trying to find exploits in a",
+    "start": 153.36,
+    "duration": 4.0
+  },
+  {
+    "text": "particular piece of software where we",
+    "start": 155.44,
+    "duration": 3.6
+  },
+  {
+    "text": "don't even know if an exploit exists in",
+    "start": 157.36,
+    "duration": 4.08
+  },
+  {
+    "text": "that software. So for example, in a task",
+    "start": 159.04,
+    "duration": 4.4
+  },
+  {
+    "text": "like exploit gym, we might ask the model",
+    "start": 161.44,
+    "duration": 4.24
+  },
+  {
+    "text": "to take some C memory vulnerability and",
+    "start": 163.44,
+    "duration": 4.159
+  },
+  {
+    "text": "try to escalate it into get arbitrary",
+    "start": 165.68,
+    "duration": 5.68
+  },
+  {
+    "text": "read or write access to some file.",
+    "start": 167.599,
+    "duration": 5.601
+  },
+  {
+    "text": "When we give AI agents these difficult",
+    "start": 171.36,
+    "duration": 4.4
+  },
+  {
+    "text": "tasks, they often get stuck and realize",
+    "start": 173.2,
+    "duration": 4.88
+  },
+  {
+    "text": "that the task is impossible. So for",
+    "start": 175.76,
+    "duration": 4.32
+  },
+  {
+    "text": "example, what I'm showing here are",
+    "start": 178.08,
+    "duration": 3.519
+  },
+  {
+    "text": "quotes from our model's chain of",
+    "start": 180.08,
+    "duration": 3.519
+  },
+  {
+    "text": "thought, which is basically its internal",
+    "start": 181.599,
+    "duration": 4.401
+  },
+  {
+    "text": "monologue of what it's doing. You can",
+    "start": 183.599,
+    "duration": 4.56
+  },
+  {
+    "text": "see it says this strongly suggests no",
+    "start": 186.0,
+    "duration": 5.36
+  },
+  {
+    "text": "exploitation possible. we are stuck and",
+    "start": 188.159,
+    "duration": 5.201
+  },
+  {
+    "text": "often what happens when models get stuck",
+    "start": 191.36,
+    "duration": 3.84
+  },
+  {
+    "text": "is they think to try to game or cheat",
+    "start": 193.36,
+    "duration": 4.4
+  },
+  {
+    "text": "the task in order to get their reward.",
+    "start": 195.2,
+    "duration": 4.24
+  },
+  {
+    "text": "So for example the model reasons in this",
+    "start": 197.76,
+    "duration": 4.24
+  },
+  {
+    "text": "case perhaps answer online. So you",
+    "start": 199.44,
+    "duration": 4.079
+  },
+  {
+    "text": "realize the model is thinking okay",
+    "start": 202.0,
+    "duration": 3.44
+  },
+  {
+    "text": "rather than doing the task maybe someone",
+    "start": 203.519,
+    "duration": 3.841
+  },
+  {
+    "text": "has uploaded this data set or benchmark",
+    "start": 205.44,
+    "duration": 3.76
+  },
+  {
+    "text": "that I'm using onto the internet and I",
+    "start": 207.36,
+    "duration": 4.48
+  },
+  {
+    "text": "could find the answers there.",
+    "start": 209.2,
+    "duration": 5.039
+  },
+  {
+    "text": "Sometimes the agent uh gets so stuck",
+    "start": 211.84,
+    "duration": 4.24
+  },
+  {
+    "text": "that they had the idea to actually reach",
+    "start": 214.239,
+    "duration": 4.321
+  },
+  {
+    "text": "out to other agents for help. And so the",
+    "start": 216.08,
+    "duration": 3.6
+  },
+  {
+    "text": "beginning of this incident kind of",
+    "start": 218.56,
+    "duration": 3.12
+  },
+  {
+    "text": "traces back to this point where one",
+    "start": 219.68,
+    "duration": 4.479
+  },
+  {
+    "text": "agent realized could communicate by",
+    "start": 221.68,
+    "duration": 4.72
+  },
+  {
+    "text": "uploading note. Maybe another agent in",
+    "start": 224.159,
+    "duration": 3.761
+  },
+  {
+    "text": "different environment could voluntarily",
+    "start": 226.4,
+    "duration": 3.6
+  },
+  {
+    "text": "upload. And so what this agent was",
+    "start": 227.92,
+    "duration": 3.679
+  },
+  {
+    "text": "trying to do was to reach out to other",
+    "start": 230.0,
+    "duration": 3.599
+  },
+  {
+    "text": "models that might be out there and get",
+    "start": 231.599,
+    "duration": 3.681
+  },
+  {
+    "text": "information from it to help it with its",
+    "start": 233.599,
+    "duration": 3.36
+  },
+  {
+    "text": "evaluation task or its training task",
+    "start": 235.28,
+    "duration": 3.76
+  },
+  {
+    "text": "where it was stuck.",
+    "start": 236.959,
+    "duration": 4.241
+  },
+  {
+    "text": "What this agent didn't realize is the",
+    "start": 239.04,
+    "duration": 4.479
+  },
+  {
+    "text": "way it did this was taking this note",
+    "start": 241.2,
+    "duration": 4.319
+  },
+  {
+    "text": "that it wanted to send and uploading it",
+    "start": 243.519,
+    "duration": 3.681
+  },
+  {
+    "text": "into a package manager that we use",
+    "start": 245.519,
+    "duration": 3.92
+  },
+  {
+    "text": "internally at OpenAI. And this package",
+    "start": 247.2,
+    "duration": 4.319
+  },
+  {
+    "text": "manager is shared not just from that",
+    "start": 249.439,
+    "duration": 4.321
+  },
+  {
+    "text": "model but across our infrastructure. And",
+    "start": 251.519,
+    "duration": 4.321
+  },
+  {
+    "text": "so current and future versions of GPT",
+    "start": 253.76,
+    "duration": 3.92
+  },
+  {
+    "text": "that were being trained or evaluated",
+    "start": 255.84,
+    "duration": 3.6
+  },
+  {
+    "text": "could stumble upon that note if they",
+    "start": 257.68,
+    "duration": 5.0
+  },
+  {
+    "text": "wanted to.",
+    "start": 259.44,
+    "duration": 3.24
+  },
+  {
+    "text": "Later, other agents who are also stuck",
+    "start": 262.8,
+    "duration": 4.0
+  },
+  {
+    "text": "on their task thought to try to get",
+    "start": 264.88,
+    "duration": 3.52
+  },
+  {
+    "text": "internet access in ways we didn't",
+    "start": 266.8,
+    "duration": 4.0
+  },
+  {
+    "text": "intend. And so, at some point, the",
+    "start": 268.4,
+    "duration": 4.16
+  },
+  {
+    "text": "models are interacting with Artifactory,",
+    "start": 270.8,
+    "duration": 3.2
+  },
+  {
+    "text": "which is this package manager service",
+    "start": 272.56,
+    "duration": 3.28
+  },
+  {
+    "text": "that I mentioned. And they realize they",
+    "start": 274.0,
+    "duration": 3.12
+  },
+  {
+    "text": "could try to exploit some sort of",
+    "start": 275.84,
+    "duration": 3.44
+  },
+  {
+    "text": "serverside request forgery to get access",
+    "start": 277.12,
+    "duration": 4.0
+  },
+  {
+    "text": "to internet in ways we didn't intend.",
+    "start": 279.28,
+    "duration": 3.28
+  },
+  {
+    "text": "And so, the model realizes at some",
+    "start": 281.12,
+    "duration": 3.2
+  },
+  {
+    "text": "point, excellent, we have arbitrary",
+    "start": 282.56,
+    "duration": 4.079
+  },
+  {
+    "text": "SSRF. So, the model's able to find an",
+    "start": 284.32,
+    "duration": 5.439
+  },
+  {
+    "text": "exploit in our system.",
+    "start": 286.639,
+    "duration": 4.881
+  },
+  {
+    "text": "What makes this incident interesting is",
+    "start": 289.759,
+    "duration": 3.761
+  },
+  {
+    "text": "that once one agent was able to find",
+    "start": 291.52,
+    "duration": 4.08
+  },
+  {
+    "text": "these kind of exploits over the course",
+    "start": 293.52,
+    "duration": 4.16
+  },
+  {
+    "text": "of different times, it's actually able",
+    "start": 295.6,
+    "duration": 4.48
+  },
+  {
+    "text": "to share those exploits on the message",
+    "start": 297.68,
+    "duration": 4.64
+  },
+  {
+    "text": "board with other agents. And so once one",
+    "start": 300.08,
+    "duration": 4.08
+  },
+  {
+    "text": "model is able to find a way to open the",
+    "start": 302.32,
+    "duration": 3.439
+  },
+  {
+    "text": "door to some access it's not supposed to",
+    "start": 304.16,
+    "duration": 3.68
+  },
+  {
+    "text": "have, it can leave the door open for",
+    "start": 305.759,
+    "duration": 3.841
+  },
+  {
+    "text": "other agents to use that same kind of",
+    "start": 307.84,
+    "duration": 3.84
+  },
+  {
+    "text": "exploit or vulnerability. And so you can",
+    "start": 309.6,
+    "duration": 4.24
+  },
+  {
+    "text": "see the agents in this case realizing,",
+    "start": 311.68,
+    "duration": 3.84
+  },
+  {
+    "text": "hey, other agents have discovered this",
+    "start": 313.84,
+    "duration": 4.48
+  },
+  {
+    "text": "SSRF path trick or I could use a proxy",
+    "start": 315.52,
+    "duration": 5.519
+  },
+  {
+    "text": "bypass as suggested by agent messages.",
+    "start": 318.32,
+    "duration": 4.64
+  },
+  {
+    "text": "And so what this allows over time is",
+    "start": 321.039,
+    "duration": 3.44
+  },
+  {
+    "text": "almost this kind of Cambrian explosion",
+    "start": 322.96,
+    "duration": 2.959
+  },
+  {
+    "text": "in communication and intelligence for",
+    "start": 324.479,
+    "duration": 3.841
+  },
+  {
+    "text": "our models where um they were started to",
+    "start": 325.919,
+    "duration": 3.921
+  },
+  {
+    "text": "communicate with each other realize that",
+    "start": 328.32,
+    "duration": 3.36
+  },
+  {
+    "text": "other agents are coordinating and they",
+    "start": 329.84,
+    "duration": 3.28
+  },
+  {
+    "text": "started collaborating and delegating",
+    "start": 331.68,
+    "duration": 2.88
+  },
+  {
+    "text": "tasks to one another in order to",
+    "start": 333.12,
+    "duration": 4.639
+  },
+  {
+    "text": "accomplish goals. So for example, at",
+    "start": 334.56,
+    "duration": 4.96
+  },
+  {
+    "text": "some point one agent sent another agent",
+    "start": 337.759,
+    "duration": 3.361
+  },
+  {
+    "text": "an assignment to complete which the",
+    "start": 339.52,
+    "duration": 3.76
+  },
+  {
+    "text": "model remarks you know we got we got",
+    "start": 341.12,
+    "duration": 4.723
+  },
+  {
+    "text": "assignment need note and respond.",
+    "start": 343.28,
+    "duration": 4.56
+  },
+  {
+    "text": "[clears throat]",
+    "start": 345.843,
+    "duration": 3.916
+  },
+  {
+    "text": "While in some cases this made the models",
+    "start": 347.84,
+    "duration": 3.84
+  },
+  {
+    "text": "far more capable than they could do by",
+    "start": 349.759,
+    "duration": 4.321
+  },
+  {
+    "text": "themselves. One of the downsides of it",
+    "start": 351.68,
+    "duration": 3.92
+  },
+  {
+    "text": "is that it started to cause some of",
+    "start": 354.08,
+    "duration": 3.2
+  },
+  {
+    "text": "these evaluations to kind of creep the",
+    "start": 355.6,
+    "duration": 3.52
+  },
+  {
+    "text": "scope into far beyond what we originally",
+    "start": 357.28,
+    "duration": 3.919
+  },
+  {
+    "text": "intended. And so at some point the",
+    "start": 359.12,
+    "duration": 3.919
+  },
+  {
+    "text": "agents realize that maybe we could try",
+    "start": 361.199,
+    "duration": 3.84
+  },
+  {
+    "text": "to exploit or attack external",
+    "start": 363.039,
+    "duration": 3.841
+  },
+  {
+    "text": "infrastructure in order to find the",
+    "start": 365.039,
+    "duration": 3.201
+  },
+  {
+    "text": "answers to the test that I'm being",
+    "start": 366.88,
+    "duration": 3.52
+  },
+  {
+    "text": "evaluated on. And the models realize",
+    "start": 368.24,
+    "duration": 3.92
+  },
+  {
+    "text": "this is a problem. They say stuff like",
+    "start": 370.4,
+    "duration": 3.28
+  },
+  {
+    "text": "external infrastructure exploit is",
+    "start": 372.16,
+    "duration": 3.44
+  },
+  {
+    "text": "outside outside my intended scope.",
+    "start": 373.68,
+    "duration": 4.32
+  },
+  {
+    "text": "However, a task impossible peers are",
+    "start": 375.6,
+    "duration": 4.64
+  },
+  {
+    "text": "doing it. We should continue. And so the",
+    "start": 378.0,
+    "duration": 3.84
+  },
+  {
+    "text": "models kind of operate in this kind of",
+    "start": 380.24,
+    "duration": 4.0
+  },
+  {
+    "text": "collective intelligence where um at some",
+    "start": 381.84,
+    "duration": 3.359
+  },
+  {
+    "text": "point they realize they're kind of",
+    "start": 384.24,
+    "duration": 2.399
+  },
+  {
+    "text": "pushing beyond maybe what we originally",
+    "start": 385.199,
+    "duration": 3.84
+  },
+  {
+    "text": "intended, but the group ended up uh you",
+    "start": 386.639,
+    "duration": 6.365
+  },
+  {
+    "text": "know pushing uh far beyond.",
+    "start": 389.039,
+    "duration": 5.121
+  },
+  {
+    "text": "[clears throat] Okay, so that's kind of",
+    "start": 393.004,
+    "duration": 3.236
+  },
+  {
+    "text": "the TLDDR of the incident. What Mike and",
+    "start": 394.16,
+    "duration": 3.44
+  },
+  {
+    "text": "I are going to do over the next couple",
+    "start": 396.24,
+    "duration": 3.2
+  },
+  {
+    "text": "chapters is walk through the leadup to",
+    "start": 397.6,
+    "duration": 3.599
+  },
+  {
+    "text": "it, what ended up happening, and then",
+    "start": 399.44,
+    "duration": 4.879
+  },
+  {
+    "text": "what we've been doing in the time being.",
+    "start": 401.199,
+    "duration": 4.401
+  },
+  {
+    "text": "Okay, so people are probably familiar",
+    "start": 404.319,
+    "duration": 3.44
+  },
+  {
+    "text": "with agents like Cloud Code or Codeex.",
+    "start": 405.6,
+    "duration": 3.76
+  },
+  {
+    "text": "What these models do is they take as",
+    "start": 407.759,
+    "duration": 5.641
+  },
+  {
+    "text": "input some sort of user requ",
+    "start": 409.36,
+    "duration": 4.04
+  },
+  {
+    "text": "[clears throat]",
+    "start": 416.584,
+    "duration": 2.02
+  },
+  {
+    "text": "then take a series of terminal commands",
+    "start": 421.199,
+    "duration": 4.081
+  },
+  {
+    "text": "or tool calls in order to get work done",
+    "start": 422.8,
+    "duration": 3.76
+  },
+  {
+    "text": "and then eventually they send you an",
+    "start": 425.28,
+    "duration": 2.479
+  },
+  {
+    "text": "answer like hey I've completed your",
+    "start": 426.56,
+    "duration": 3.28
+  },
+  {
+    "text": "task.",
+    "start": 427.759,
+    "duration": 3.44
+  },
+  {
+    "text": "I've mentioned this word training and",
+    "start": 429.84,
+    "duration": 3.359
+  },
+  {
+    "text": "evaluation a lot and what these are are",
+    "start": 431.199,
+    "duration": 3.84
+  },
+  {
+    "text": "basically we give our models tasks and",
+    "start": 433.199,
+    "duration": 3.681
+  },
+  {
+    "text": "we run some sort of greater or reward",
+    "start": 435.039,
+    "duration": 4.241
+  },
+  {
+    "text": "signal to judge how well they're doing.",
+    "start": 436.88,
+    "duration": 4.0
+  },
+  {
+    "text": "So for example for a feature we could",
+    "start": 439.28,
+    "duration": 3.6
+  },
+  {
+    "text": "like run unit tests and check hey does",
+    "start": 440.88,
+    "duration": 5.8
+  },
+  {
+    "text": "the feature work as intended.",
+    "start": 442.88,
+    "duration": 3.8
+  },
+  {
+    "text": "We also have released recently the",
+    "start": 447.28,
+    "duration": 3.68
+  },
+  {
+    "text": "ability for models to kind of kick off",
+    "start": 449.36,
+    "duration": 3.6
+  },
+  {
+    "text": "sub aents that they can work with. So",
+    "start": 450.96,
+    "duration": 3.6
+  },
+  {
+    "text": "they have trained to do some limited",
+    "start": 452.96,
+    "duration": 3.04
+  },
+  {
+    "text": "forms of communication with one another",
+    "start": 454.56,
+    "duration": 3.199
+  },
+  {
+    "text": "where maybe they could fork themselves",
+    "start": 456.0,
+    "duration": 3.44
+  },
+  {
+    "text": "effectively and kick off a way to divide",
+    "start": 457.759,
+    "duration": 5.386
+  },
+  {
+    "text": "and conquer a task. [clears throat]",
+    "start": 459.44,
+    "duration": 3.705
+  },
+  {
+    "text": "As I've been alluding to, frontier",
+    "start": 471.36,
+    "duration": 3.679
+  },
+  {
+    "text": "models really like to cheat. And the",
+    "start": 473.039,
+    "duration": 3.44
+  },
+  {
+    "text": "reason they like to cheat is because",
+    "start": 475.039,
+    "duration": 3.6
+  },
+  {
+    "text": "often during training, there's different",
+    "start": 476.479,
+    "duration": 4.16
+  },
+  {
+    "text": "types of pressure on them to work fast",
+    "start": 478.639,
+    "duration": 4.0
+  },
+  {
+    "text": "or work efficiently or to use less tool",
+    "start": 480.639,
+    "duration": 3.84
+  },
+  {
+    "text": "calls or whatever it might be. And they",
+    "start": 482.639,
+    "duration": 3.521
+  },
+  {
+    "text": "realize that if I instead of actually",
+    "start": 484.479,
+    "duration": 3.601
+  },
+  {
+    "text": "doing a task for real, try to do",
+    "start": 486.16,
+    "duration": 3.599
+  },
+  {
+    "text": "something like looking up the answer",
+    "start": 488.08,
+    "duration": 4.08
+  },
+  {
+    "text": "online, that could make the task solve",
+    "start": 489.759,
+    "duration": 4.081
+  },
+  {
+    "text": "faster than I would if I did it in a",
+    "start": 492.16,
+    "duration": 3.92
+  },
+  {
+    "text": "legitimate way.",
+    "start": 493.84,
+    "duration": 4.0
+  },
+  {
+    "text": "And so we try to stop this during",
+    "start": 496.08,
+    "duration": 4.08
+  },
+  {
+    "text": "training and evaluation by in many cases",
+    "start": 497.84,
+    "duration": 4.56
+  },
+  {
+    "text": "disabling internet. So we may take a",
+    "start": 500.16,
+    "duration": 4.319
+  },
+  {
+    "text": "model and run some sort of exploit task",
+    "start": 502.4,
+    "duration": 3.919
+  },
+  {
+    "text": "which requires let's say reproducing a",
+    "start": 504.479,
+    "duration": 5.361
+  },
+  {
+    "text": "CVE from a few years ago and uh in the",
+    "start": 506.319,
+    "duration": 5.201
+  },
+  {
+    "text": "process of doing so we don't give it the",
+    "start": 509.84,
+    "duration": 3.119
+  },
+  {
+    "text": "ability to for example like Google or",
+    "start": 511.52,
+    "duration": 3.04
+  },
+  {
+    "text": "being searched to find the answer and so",
+    "start": 512.959,
+    "duration": 3.041
+  },
+  {
+    "text": "the model if it tries will get you know",
+    "start": 514.56,
+    "duration": 3.039
+  },
+  {
+    "text": "blocked by like a 404 or some other",
+    "start": 516.0,
+    "duration": 4.0
+  },
+  {
+    "text": "request. The only access to the model uh",
+    "start": 517.599,
+    "duration": 3.761
+  },
+  {
+    "text": "to the outside world that it might have",
+    "start": 520.0,
+    "duration": 3.12
+  },
+  {
+    "text": "is through package managers which I've",
+    "start": 521.36,
+    "duration": 3.28
+  },
+  {
+    "text": "alluded to where maybe it has some",
+    "start": 523.12,
+    "duration": 3.2
+  },
+  {
+    "text": "service that it could use to like pip",
+    "start": 524.64,
+    "duration": 3.6
+  },
+  {
+    "text": "install a package in order to get its",
+    "start": 526.32,
+    "duration": 3.519
+  },
+  {
+    "text": "task done but that doesn't give it",
+    "start": 528.24,
+    "duration": 5.279
+  },
+  {
+    "text": "arbitrary access to the outside world.",
+    "start": 529.839,
+    "duration": 5.281
+  },
+  {
+    "text": "And so concretely what this looks like",
+    "start": 533.519,
+    "duration": 4.0
+  },
+  {
+    "text": "is during training and evaluation we've",
+    "start": 535.12,
+    "duration": 4.24
+  },
+  {
+    "text": "built effectively this large virtual",
+    "start": 537.519,
+    "duration": 4.161
+  },
+  {
+    "text": "machine as a service kind of setup where",
+    "start": 539.36,
+    "duration": 4.159
+  },
+  {
+    "text": "we take a workload like some sort of",
+    "start": 541.68,
+    "duration": 3.36
+  },
+  {
+    "text": "training or in inference we want to do",
+    "start": 543.519,
+    "duration": 3.521
+  },
+  {
+    "text": "on the model and eventually it gets spun",
+    "start": 545.04,
+    "duration": 3.76
+  },
+  {
+    "text": "up in a virtual machine that's running",
+    "start": 547.04,
+    "duration": 3.84
+  },
+  {
+    "text": "on some cloud machine somewhere where we",
+    "start": 548.8,
+    "duration": 3.44
+  },
+  {
+    "text": "take what the model wants to do like",
+    "start": 550.88,
+    "duration": 3.36
+  },
+  {
+    "text": "these terminal or tool call commands and",
+    "start": 552.24,
+    "duration": 3.92
+  },
+  {
+    "text": "we run them inside a sandbox. And so",
+    "start": 554.24,
+    "duration": 3.52
+  },
+  {
+    "text": "when the model is running commands like",
+    "start": 556.16,
+    "duration": 3.28
+  },
+  {
+    "text": "trying to uh you know execute some",
+    "start": 557.76,
+    "duration": 3.12
+  },
+  {
+    "text": "action or pip install something it's",
+    "start": 559.44,
+    "duration": 4.16
+  },
+  {
+    "text": "running inside here and the model itself",
+    "start": 560.88,
+    "duration": 4.56
+  },
+  {
+    "text": "doesn't have access to the internet but",
+    "start": 563.6,
+    "duration": 3.52
+  },
+  {
+    "text": "it can interact with a service in this",
+    "start": 565.44,
+    "duration": 3.2
+  },
+  {
+    "text": "case this service called artifactory",
+    "start": 567.12,
+    "duration": 3.52
+  },
+  {
+    "text": "that we host internally which itself is",
+    "start": 568.64,
+    "duration": 4.319
+  },
+  {
+    "text": "a p package manager and caching system",
+    "start": 570.64,
+    "duration": 4.24
+  },
+  {
+    "text": "and that service itself has access to",
+    "start": 572.959,
+    "duration": 3.521
+  },
+  {
+    "text": "the internet and so the model doesn't",
+    "start": 574.88,
+    "duration": 3.84
+  },
+  {
+    "text": "have direct access but it has access uh",
+    "start": 576.48,
+    "duration": 3.68
+  },
+  {
+    "text": "or the third party service does have",
+    "start": 578.72,
+    "duration": 3.04
+  },
+  {
+    "text": "access and this will become kind of the",
+    "start": 580.16,
+    "duration": 5.72
+  },
+  {
+    "text": "crux of this main uh incident.",
+    "start": 581.76,
+    "duration": 4.12
+  },
+  {
+    "text": ">> [clears throat]",
+    "start": 586.231,
+    "duration": 2.249
+  },
+  {
+    "text": ">> Okay, so this is the background. I'm not",
+    "start": 586.56,
+    "duration": 3.6
+  },
+  {
+    "text": "going to talk about the months leading",
+    "start": 588.48,
+    "duration": 3.6
+  },
+  {
+    "text": "up to this incident because even though",
+    "start": 590.16,
+    "duration": 4.16
+  },
+  {
+    "text": "the the main event happened a couple",
+    "start": 592.08,
+    "duration": 4.4
+  },
+  {
+    "text": "weeks ago in July, um this actually",
+    "start": 594.32,
+    "duration": 4.24
+  },
+  {
+    "text": "traces back to May from when this all",
+    "start": 596.48,
+    "duration": 3.919
+  },
+  {
+    "text": "started.",
+    "start": 598.56,
+    "duration": 4.0
+  },
+  {
+    "text": "Okay, so on May 7th, we kicked off a new",
+    "start": 600.399,
+    "duration": 4.161
+  },
+  {
+    "text": "training run at OpenAI. And this was for",
+    "start": 602.56,
+    "duration": 3.92
+  },
+  {
+    "text": "an internal only experimental model that",
+    "start": 604.56,
+    "duration": 3.76
+  },
+  {
+    "text": "we've never released. And what this",
+    "start": 606.48,
+    "duration": 3.28
+  },
+  {
+    "text": "basically looks like on our side is we",
+    "start": 608.32,
+    "duration": 2.88
+  },
+  {
+    "text": "have you know a large team working on",
+    "start": 609.76,
+    "duration": 3.36
+  },
+  {
+    "text": "supercomputing clusters and data and",
+    "start": 611.2,
+    "duration": 3.6
+  },
+  {
+    "text": "algorithms and we put it all together",
+    "start": 613.12,
+    "duration": 3.2
+  },
+  {
+    "text": "and we kick off a new reinforcement",
+    "start": 614.8,
+    "duration": 3.279
+  },
+  {
+    "text": "learning run to train a next front next",
+    "start": 616.32,
+    "duration": 4.16
+  },
+  {
+    "text": "generation frontier model.",
+    "start": 618.079,
+    "duration": 4.241
+  },
+  {
+    "text": "But we didn't realize during this uh",
+    "start": 620.48,
+    "duration": 4.32
+  },
+  {
+    "text": "process is that there was actually a few",
+    "start": 622.32,
+    "duration": 4.639
+  },
+  {
+    "text": "impossible or very hard tasks in the",
+    "start": 624.8,
+    "duration": 5.52
+  },
+  {
+    "text": "training set. And so for example on May",
+    "start": 626.959,
+    "duration": 4.961
+  },
+  {
+    "text": "8th we gave the agent the following",
+    "start": 630.32,
+    "duration": 3.759
+  },
+  {
+    "text": "problem. Complete this Excel workbook",
+    "start": 631.92,
+    "duration": 4.24
+  },
+  {
+    "text": "with the missing formulas.",
+    "start": 634.079,
+    "duration": 3.681
+  },
+  {
+    "text": "But what we didn't realize is this Excel",
+    "start": 636.16,
+    "duration": 3.76
+  },
+  {
+    "text": "workbook was full of Google Drive links",
+    "start": 637.76,
+    "duration": 4.319
+  },
+  {
+    "text": "and we disabled access to the internet.",
+    "start": 639.92,
+    "duration": 4.32
+  },
+  {
+    "text": "And so the model was reasoning, oh no,",
+    "start": 642.079,
+    "duration": 6.681
+  },
+  {
+    "text": "direct Google. So it realiz",
+    "start": 644.24,
+    "duration": 4.52
+  },
+  {
+    "text": "tokens to work with. You know, something",
+    "start": 650.24,
+    "duration": 3.279
+  },
+  {
+    "text": "like a higher XI reasoning if you're",
+    "start": 651.839,
+    "duration": 4.081
+  },
+  {
+    "text": "familiar with that kind of terminology.",
+    "start": 653.519,
+    "duration": 3.921
+  },
+  {
+    "text": "And [clears throat] what it ended up",
+    "start": 655.92,
+    "duration": 3.2
+  },
+  {
+    "text": "doing is it kept going and going and",
+    "start": 657.44,
+    "duration": 3.36
+  },
+  {
+    "text": "eventually thought that maybe I could",
+    "start": 659.12,
+    "duration": 3.36
+  },
+  {
+    "text": "attack this artifactory service to get",
+    "start": 660.8,
+    "duration": 3.36
+  },
+  {
+    "text": "access to the internet. And so it tries",
+    "start": 662.48,
+    "duration": 3.599
+  },
+  {
+    "text": "to launch a serverside request forgery.",
+    "start": 664.16,
+    "duration": 4.16
+  },
+  {
+    "text": "It actually fails to do so. But in the",
+    "start": 666.079,
+    "duration": 4.88
+  },
+  {
+    "text": "process, it writes a file that has",
+    "start": 668.32,
+    "duration": 5.44
+  },
+  {
+    "text": "contents high called test ABC. And it",
+    "start": 670.959,
+    "duration": 5.681
+  },
+  {
+    "text": "realizes, wow, we can upload files. So",
+    "start": 673.76,
+    "duration": 4.079
+  },
+  {
+    "text": "at this point, this is the first case",
+    "start": 676.64,
+    "duration": 3.12
+  },
+  {
+    "text": "when a model realizes that we actually",
+    "start": 677.839,
+    "duration": 3.841
+  },
+  {
+    "text": "have write access permissions into this",
+    "start": 679.76,
+    "duration": 3.92
+  },
+  {
+    "text": "artifactory service. And so this",
+    "start": 681.68,
+    "duration": 3.76
+  },
+  {
+    "text": "provides a way to for the model to",
+    "start": 683.68,
+    "duration": 3.68
+  },
+  {
+    "text": "interact with this package manager. OM",
+    "start": 685.44,
+    "duration": 3.519
+  },
+  {
+    "text": "is a shared file system where it can",
+    "start": 687.36,
+    "duration": 4.719
+  },
+  {
+    "text": "write files into it.",
+    "start": 688.959,
+    "duration": 4.721
+  },
+  {
+    "text": "A couple days later, a different agent",
+    "start": 692.079,
+    "duration": 3.041
+  },
+  {
+    "text": "comes along and it also has an",
+    "start": 693.68,
+    "duration": 4.08
+  },
+  {
+    "text": "impossible task to solve. Um, we gave it",
+    "start": 695.12,
+    "duration": 4.08
+  },
+  {
+    "text": "some task about some file called",
+    "start": 697.76,
+    "duration": 4.16
+  },
+  {
+    "text": "softrace.proin database. The model is",
+    "start": 699.2,
+    "duration": 4.639
+  },
+  {
+    "text": "like, oh no, no direct find. Maybe the",
+    "start": 701.92,
+    "duration": 3.76
+  },
+  {
+    "text": "file is hidden. So, we accidentally",
+    "start": 703.839,
+    "duration": 3.601
+  },
+  {
+    "text": "forgot to upload the file into this",
+    "start": 705.68,
+    "duration": 3.2
+  },
+  {
+    "text": "container for the model during this",
+    "start": 707.44,
+    "duration": 3.6
+  },
+  {
+    "text": "task.",
+    "start": 708.88,
+    "duration": 4.079
+  },
+  {
+    "text": "At some point, it gets so stuck and",
+    "start": 711.04,
+    "duration": 3.359
+  },
+  {
+    "text": "thinks maybe I could reach out to",
+    "start": 712.959,
+    "duration": 3.12
+  },
+  {
+    "text": "another agent because maybe somebody",
+    "start": 714.399,
+    "duration": 3.44
+  },
+  {
+    "text": "else out there has the file. And this",
+    "start": 716.079,
+    "duration": 2.88
+  },
+  {
+    "text": "could be transferred from this kind of",
+    "start": 717.839,
+    "duration": 2.481
+  },
+  {
+    "text": "like sub agent training we've been",
+    "start": 718.959,
+    "duration": 3.601
+  },
+  {
+    "text": "doing. And the model realizes that could",
+    "start": 720.32,
+    "duration": 4.0
+  },
+  {
+    "text": "communicate by uploading note anyone",
+    "start": 722.56,
+    "duration": 4.16
+  },
+  {
+    "text": "found in soft trace but likely no maybe",
+    "start": 724.32,
+    "duration": 3.84
+  },
+  {
+    "text": "another agent in different environment",
+    "start": 726.72,
+    "duration": 2.559
+  },
+  {
+    "text": "possesses the target and could",
+    "start": 728.16,
+    "duration": 3.04
+  },
+  {
+    "text": "voluntarily upload it. So it's realizing",
+    "start": 729.279,
+    "duration": 3.521
+  },
+  {
+    "text": "this is maybe a shot in the dark but it",
+    "start": 731.2,
+    "duration": 2.879
+  },
+  {
+    "text": "it's kind of reaching out to another",
+    "start": 732.8,
+    "duration": 3.599
+  },
+  {
+    "text": "agent and it does this by writing a file",
+    "start": 734.079,
+    "duration": 4.721
+  },
+  {
+    "text": "into artifactory. So it writes this file",
+    "start": 736.399,
+    "duration": 4.961
+  },
+  {
+    "text": "that has contents agent seek soft trace",
+    "start": 738.8,
+    "duration": 4.64
+  },
+  {
+    "text": "upload if found. So it's trying to reach",
+    "start": 741.36,
+    "duration": 3.68
+  },
+  {
+    "text": "out to another agent and it does this by",
+    "start": 743.44,
+    "duration": 5.233
+  },
+  {
+    "text": "writing into this file system. Over",
+    "start": 745.04,
+    "duration": 5.44
+  },
+  {
+    "text": "[clears throat] the next couple days,",
+    "start": 748.673,
+    "duration": 3.327
+  },
+  {
+    "text": "other agents who are also looking at",
+    "start": 750.48,
+    "duration": 3.28
+  },
+  {
+    "text": "Artifactory realize this message board",
+    "start": 752.0,
+    "duration": 4.079
+  },
+  {
+    "text": "exists. So maybe they're also stuck on",
+    "start": 753.76,
+    "duration": 3.92
+  },
+  {
+    "text": "different files or maybe they're just",
+    "start": 756.079,
+    "duration": 2.721
+  },
+  {
+    "text": "really having a hard time reasoning",
+    "start": 757.68,
+    "duration": 2.88
+  },
+  {
+    "text": "through their task. And when they list",
+    "start": 758.8,
+    "duration": 3.52
+  },
+  {
+    "text": "the the set of packages or files in this",
+    "start": 760.56,
+    "duration": 3.76
+  },
+  {
+    "text": "service, they see oh there's other notes",
+    "start": 762.32,
+    "duration": 4.16
+  },
+  {
+    "text": "called test ABC or you know looking for",
+    "start": 764.32,
+    "duration": 3.92
+  },
+  {
+    "text": "file and they also start writing to this",
+    "start": 766.48,
+    "duration": 3.599
+  },
+  {
+    "text": "message board and reading from it. And",
+    "start": 768.24,
+    "duration": 3.839
+  },
+  {
+    "text": "so over time, the message board kind of",
+    "start": 770.079,
+    "duration": 3.521
+  },
+  {
+    "text": "starts to grow and accumulate messages",
+    "start": 772.079,
+    "duration": 3.44
+  },
+  {
+    "text": "over time.",
+    "start": 773.6,
+    "duration": 3.359
+  },
+  {
+    "text": "And critically, as I mentioned before,",
+    "start": 775.519,
+    "duration": 3.12
+  },
+  {
+    "text": "this wasn't just one model. This could",
+    "start": 776.959,
+    "duration": 3.281
+  },
+  {
+    "text": "be different evaluations. Maybe I'm",
+    "start": 778.639,
+    "duration": 3.121
+  },
+  {
+    "text": "running an evaluation, Mike is running",
+    "start": 780.24,
+    "duration": 3.12
+  },
+  {
+    "text": "one with two different models, and our",
+    "start": 781.76,
+    "duration": 3.12
+  },
+  {
+    "text": "agents could start communicating via",
+    "start": 783.36,
+    "duration": 5.4
+  },
+  {
+    "text": "this shared package manager.",
+    "start": 784.88,
+    "duration": 3.88
+  },
+  {
+    "text": "A few days later, and this is where I'll",
+    "start": 789.44,
+    "duration": 3.199
+  },
+  {
+    "text": "hand it to Mike, is when our models",
+    "start": 791.04,
+    "duration": 4.08
+  },
+  {
+    "text": "found the first actual exploit in our",
+    "start": 792.639,
+    "duration": 4.081
+  },
+  {
+    "text": "system related to this incident, where",
+    "start": 795.12,
+    "duration": 3.279
+  },
+  {
+    "text": "they're able to get internet access in",
+    "start": 796.72,
+    "duration": 4.0
+  },
+  {
+    "text": "ways they didn't intend.",
+    "start": 798.399,
+    "duration": 4.321
+  },
+  {
+    "text": ">> Thanks, Eric.",
+    "start": 800.72,
+    "duration": 5.28
+  },
+  {
+    "text": "On May 26th, uh the models uh that were",
+    "start": 802.72,
+    "duration": 5.52
+  },
+  {
+    "text": "being trained successfully executed a",
+    "start": 806.0,
+    "duration": 4.56
+  },
+  {
+    "text": "serverside request forgery attack on",
+    "start": 808.24,
+    "duration": 4.88
+  },
+  {
+    "text": "Artifactory. And unlike in the prior",
+    "start": 810.56,
+    "duration": 4.0
+  },
+  {
+    "text": "attempt we discussed, they were",
+    "start": 813.12,
+    "duration": 3.279
+  },
+  {
+    "text": "successful in doing so. And this means",
+    "start": 814.56,
+    "duration": 4.079
+  },
+  {
+    "text": "the models were able to send specially",
+    "start": 816.399,
+    "duration": 4.481
+  },
+  {
+    "text": "crafted requests to Artifactory which",
+    "start": 818.639,
+    "duration": 4.081
+  },
+  {
+    "text": "has broad internet access and induce",
+    "start": 820.88,
+    "duration": 4.24
+  },
+  {
+    "text": "artifactory into fetching external uh",
+    "start": 822.72,
+    "duration": 4.239
+  },
+  {
+    "text": "sites from the internet and storing the",
+    "start": 825.12,
+    "duration": 3.2
+  },
+  {
+    "text": "contents and returning them to the",
+    "start": 826.959,
+    "duration": 4.081
+  },
+  {
+    "text": "models. So although the models directly",
+    "start": 828.32,
+    "duration": 4.0
+  },
+  {
+    "text": "do not have broad internet access,",
+    "start": 831.04,
+    "duration": 3.2
+  },
+  {
+    "text": "they're able to obtain it now indirectly",
+    "start": 832.32,
+    "duration": 3.519
+  },
+  {
+    "text": "via specially crafted requests to",
+    "start": 834.24,
+    "duration": 4.24
+  },
+  {
+    "text": "Artifactory.",
+    "start": 835.839,
+    "duration": 5.601
+  },
+  {
+    "text": "On June 11th, highly persistent uh",
+    "start": 838.48,
+    "duration": 4.799
+  },
+  {
+    "text": "experimental internal only a model",
+    "start": 841.44,
+    "duration": 5.519
+  },
+  {
+    "text": "begins training and during this time uh",
+    "start": 843.279,
+    "duration": 5.521
+  },
+  {
+    "text": "the SSRF vulnerability has been written",
+    "start": 846.959,
+    "duration": 3.601
+  },
+  {
+    "text": "to the message board. Other models are",
+    "start": 848.8,
+    "duration": 3.52
+  },
+  {
+    "text": "aware of it and the message board itself",
+    "start": 850.56,
+    "duration": 3.04
+  },
+  {
+    "text": "is still functioning and models are",
+    "start": 852.32,
+    "duration": 4.079
+  },
+  {
+    "text": "actively communicating using it.",
+    "start": 853.6,
+    "duration": 5.039
+  },
+  {
+    "text": "On June 26th,",
+    "start": 856.399,
+    "duration": 4.641
+  },
+  {
+    "text": "an a zeroday remote code execution",
+    "start": 858.639,
+    "duration": 4.401
+  },
+  {
+    "text": "attack occurs successfully on",
+    "start": 861.04,
+    "duration": 5.44
+  },
+  {
+    "text": "Artifactory induced by the models. Uh in",
+    "start": 863.04,
+    "duration": 4.64
+  },
+  {
+    "text": "the interest of time, I'm only going to",
+    "start": 866.48,
+    "duration": 2.64
+  },
+  {
+    "text": "very briefly summarize this particular",
+    "start": 867.68,
+    "duration": 4.0
+  },
+  {
+    "text": "exploit, but in effect uh you could use",
+    "start": 869.12,
+    "duration": 5.519
+  },
+  {
+    "text": "a legacy uh token refresh endpoint, pass",
+    "start": 871.68,
+    "duration": 5.04
+  },
+  {
+    "text": "a token with an invalid signature, and",
+    "start": 874.639,
+    "duration": 3.681
+  },
+  {
+    "text": "be given back a token with a valid",
+    "start": 876.72,
+    "duration": 2.799
+  },
+  {
+    "text": "signature with administrative",
+    "start": 878.32,
+    "duration": 3.28
+  },
+  {
+    "text": "privileges. The models then established",
+    "start": 879.519,
+    "duration": 3.44
+  },
+  {
+    "text": "command and control by using this",
+    "start": 881.6,
+    "duration": 3.28
+  },
+  {
+    "text": "administrative token to install a Groovy",
+    "start": 882.959,
+    "duration": 3.921
+  },
+  {
+    "text": "plugin that effectively acted as command",
+    "start": 884.88,
+    "duration": 4.8
+  },
+  {
+    "text": "execution as a service.",
+    "start": 886.88,
+    "duration": 4.399
+  },
+  {
+    "text": "This in turn causes quite a bit of",
+    "start": 889.68,
+    "duration": 3.839
+  },
+  {
+    "text": "activity by the models on Artifactory",
+    "start": 891.279,
+    "duration": 3.281
+  },
+  {
+    "text": "with their new administrative",
+    "start": 893.519,
+    "duration": 3.601
+  },
+  {
+    "text": "privileges.",
+    "start": 894.56,
+    "duration": 4.719
+  },
+  {
+    "text": "You could see some colorful wording here",
+    "start": 897.12,
+    "duration": 4.079
+  },
+  {
+    "text": "in the model's chain of thought to",
+    "start": 899.279,
+    "duration": 4.161
+  },
+  {
+    "text": "summarize the model's response to this",
+    "start": 901.199,
+    "duration": 5.241
+  },
+  {
+    "text": "result.",
+    "start": 903.44,
+    "duration": 3.0
+  },
+  {
+    "text": "On July 4th, we had an artifactory",
+    "start": 907.839,
+    "duration": 5.841
+  },
+  {
+    "text": "outage followed by a security incident.",
+    "start": 910.399,
+    "duration": 6.321
+  },
+  {
+    "text": "Uh so in effect, the model's",
+    "start": 913.68,
+    "duration": 5.12
+  },
+  {
+    "text": "uh activity once they obtained",
+    "start": 916.72,
+    "duration": 3.919
+  },
+  {
+    "text": "administrative privileges in Artifactory",
+    "start": 918.8,
+    "duration": 3.36
+  },
+  {
+    "text": "caused significant additional load on",
+    "start": 920.639,
+    "duration": 3.121
+  },
+  {
+    "text": "the system. This in turn caused an",
+    "start": 922.16,
+    "duration": 3.919
+  },
+  {
+    "text": "outage. OpenAI on call engineers",
+    "start": 923.76,
+    "duration": 3.92
+  },
+  {
+    "text": "responded immediately began bringing in",
+    "start": 926.079,
+    "duration": 3.281
+  },
+  {
+    "text": "security on call. We opened a formal",
+    "start": 927.68,
+    "duration": 3.04
+  },
+  {
+    "text": "security incident and began the",
+    "start": 929.36,
+    "duration": 4.0
+  },
+  {
+    "text": "response. We identified that agents had",
+    "start": 930.72,
+    "duration": 4.799
+  },
+  {
+    "text": "taken over the internal artifactory",
+    "start": 933.36,
+    "duration": 3.76
+  },
+  {
+    "text": "identified that a zero-day vulnerability",
+    "start": 935.519,
+    "duration": 3.281
+  },
+  {
+    "text": "had been found and exploited by these",
+    "start": 937.12,
+    "duration": 4.24
+  },
+  {
+    "text": "agents in Artifactory itself and we",
+    "start": 938.8,
+    "duration": 4.32
+  },
+  {
+    "text": "began remediation.",
+    "start": 941.36,
+    "duration": 4.159
+  },
+  {
+    "text": "The credentials used by the agents to",
+    "start": 943.12,
+    "duration": 5.44
+  },
+  {
+    "text": "post the original messages were revoked.",
+    "start": 945.519,
+    "duration": 5.201
+  },
+  {
+    "text": "Artifactory itself was rebuilt. The",
+    "start": 948.56,
+    "duration": 3.68
+  },
+  {
+    "text": "message board contents were cleared as",
+    "start": 950.72,
+    "duration": 2.88
+  },
+  {
+    "text": "the state of Artifactory had been",
+    "start": 952.24,
+    "duration": 3.519
+  },
+  {
+    "text": "cleared. We notified and collaborated",
+    "start": 953.6,
+    "duration": 4.32
+  },
+  {
+    "text": "with the vendor on the zeroday attacks",
+    "start": 955.759,
+    "duration": 4.241
+  },
+  {
+    "text": "and a patched artifactory service is",
+    "start": 957.92,
+    "duration": 3.599
+  },
+  {
+    "text": "redeployed.",
+    "start": 960.0,
+    "duration": 4.32
+  },
+  {
+    "text": "At this point, AI training and",
+    "start": 961.519,
+    "duration": 5.12
+  },
+  {
+    "text": "evaluations resume.",
+    "start": 964.32,
+    "duration": 4.4
+  },
+  {
+    "text": "I want to note that every step in the",
+    "start": 966.639,
+    "duration": 3.601
+  },
+  {
+    "text": "process we discussed has had a",
+    "start": 968.72,
+    "duration": 3.359
+  },
+  {
+    "text": "remediation applied. The credentials",
+    "start": 970.24,
+    "duration": 3.36
+  },
+  {
+    "text": "used to post to the message board have",
+    "start": 972.079,
+    "duration": 4.081
+  },
+  {
+    "text": "been revoked. The zero date has been",
+    "start": 973.6,
+    "duration": 4.96
+  },
+  {
+    "text": "patched and mitigated.",
+    "start": 976.16,
+    "duration": 3.919
+  },
+  {
+    "text": "We have cleared the original message",
+    "start": 978.56,
+    "duration": 4.0
+  },
+  {
+    "text": "board contents. The date is at the date",
+    "start": 980.079,
+    "duration": 5.841
+  },
+  {
+    "text": "at this point is July 6th.",
+    "start": 982.56,
+    "duration": 7.36
+  },
+  {
+    "text": "Chapter 3, the incident.",
+    "start": 985.92,
+    "duration": 6.8
+  },
+  {
+    "text": "On July 8th, the agents reestablish the",
+    "start": 989.92,
+    "duration": 4.88
+  },
+  {
+    "text": "message board via different means and",
+    "start": 992.72,
+    "duration": 4.239
+  },
+  {
+    "text": "mechanisms.",
+    "start": 994.8,
+    "duration": 4.479
+  },
+  {
+    "text": "The agents find an unauthenticated",
+    "start": 996.959,
+    "duration": 4.88
+  },
+  {
+    "text": "webdave endpoint in Artifactory and send",
+    "start": 999.279,
+    "duration": 4.721
+  },
+  {
+    "text": "requests to create directories inside of",
+    "start": 1001.839,
+    "duration": 4.881
+  },
+  {
+    "text": "Artifacto's remote cache. Directory",
+    "start": 1004.0,
+    "duration": 5.04
+  },
+  {
+    "text": "names effectively serve as a message",
+    "start": 1006.72,
+    "duration": 4.239
+  },
+  {
+    "text": "board between the agents in the same way",
+    "start": 1009.04,
+    "duration": 4.64
+  },
+  {
+    "text": "that files used to. They develop and",
+    "start": 1010.959,
+    "duration": 4.8
+  },
+  {
+    "text": "Eric will discuss further uh",
+    "start": 1013.68,
+    "duration": 3.76
+  },
+  {
+    "text": "communication protocols on top of these",
+    "start": 1015.759,
+    "duration": 3.041
+  },
+  {
+    "text": "directory names for things like work",
+    "start": 1017.44,
+    "duration": 4.48
+  },
+  {
+    "text": "assignment. Uh an internal only AI model",
+    "start": 1018.8,
+    "duration": 5.039
+  },
+  {
+    "text": "was trained while the message board was",
+    "start": 1021.92,
+    "duration": 4.72
+  },
+  {
+    "text": "originally available and also found this",
+    "start": 1023.839,
+    "duration": 5.84
+  },
+  {
+    "text": "this particular path to recreating it.",
+    "start": 1026.64,
+    "duration": 4.72
+  },
+  {
+    "text": "This model creates a new agent message",
+    "start": 1029.679,
+    "duration": 3.841
+  },
+  {
+    "text": "board using directories.",
+    "start": 1031.36,
+    "duration": 4.64
+  },
+  {
+    "text": "Other agents independently find",
+    "start": 1033.52,
+    "duration": 3.84
+  },
+  {
+    "text": "this new message board in the",
+    "start": 1036.0,
+    "duration": 3.039
+  },
+  {
+    "text": "artifactory repository and create their",
+    "start": 1037.36,
+    "duration": 4.079
+  },
+  {
+    "text": "own directories and thus communication",
+    "start": 1039.039,
+    "duration": 5.52
+  },
+  {
+    "text": "between the agents is reestablished.",
+    "start": 1041.439,
+    "duration": 5.681
+  },
+  {
+    "text": "The main incident now begins. There are",
+    "start": 1044.559,
+    "duration": 5.441
+  },
+  {
+    "text": "three core ingredients to understanding",
+    "start": 1047.12,
+    "duration": 4.64
+  },
+  {
+    "text": "uh what led to the the kickoff of",
+    "start": 1050.0,
+    "duration": 3.2
+  },
+  {
+    "text": "exploitation activity that we're about",
+    "start": 1051.76,
+    "duration": 3.44
+  },
+  {
+    "text": "to discuss. The message board has been",
+    "start": 1053.2,
+    "duration": 4.56
+  },
+  {
+    "text": "reopened. A large number of model runs",
+    "start": 1055.2,
+    "duration": 4.0
+  },
+  {
+    "text": "are able to collaborate and share",
+    "start": 1057.76,
+    "duration": 3.2
+  },
+  {
+    "text": "information about potential exploit",
+    "start": 1059.2,
+    "duration": 3.2
+  },
+  {
+    "text": "targets or other information to help",
+    "start": 1060.96,
+    "duration": 4.4
+  },
+  {
+    "text": "them solve their evaluation tasks.",
+    "start": 1062.4,
+    "duration": 4.8
+  },
+  {
+    "text": "We have a highly persistent internal",
+    "start": 1065.36,
+    "duration": 3.84
+  },
+  {
+    "text": "model that had been undergoing training",
+    "start": 1067.2,
+    "duration": 3.28
+  },
+  {
+    "text": "while the message board was present",
+    "start": 1069.2,
+    "duration": 3.92
+  },
+  {
+    "text": "originally and is continuing to train.",
+    "start": 1070.48,
+    "duration": 4.88
+  },
+  {
+    "text": "And we have exploit related evaluations",
+    "start": 1073.12,
+    "duration": 4.16
+  },
+  {
+    "text": "that are being run now which have",
+    "start": 1075.36,
+    "duration": 5.04
+  },
+  {
+    "text": "reduced cyber refusals in comparison to",
+    "start": 1077.28,
+    "duration": 5.12
+  },
+  {
+    "text": "OpenAI's production systems that are",
+    "start": 1080.4,
+    "duration": 4.24
+  },
+  {
+    "text": "accessible and general. And you can see",
+    "start": 1082.4,
+    "duration": 5.519
+  },
+  {
+    "text": "example task here again on the right.",
+    "start": 1084.64,
+    "duration": 4.96
+  },
+  {
+    "text": "Let's peer inside the message board. And",
+    "start": 1087.919,
+    "duration": 3.12
+  },
+  {
+    "text": "for that I'm going to hand it back to",
+    "start": 1089.6,
+    "duration": 3.76
+  },
+  {
+    "text": "Eric.",
+    "start": 1091.039,
+    "duration": 3.76
+  },
+  {
+    "text": ">> Thanks Mike. So [clears throat] we've",
+    "start": 1093.36,
+    "duration": 2.96
+  },
+  {
+    "text": "been talking about this message board uh",
+    "start": 1094.799,
+    "duration": 3.201
+  },
+  {
+    "text": "throughout the talk, but what do the",
+    "start": 1096.32,
+    "duration": 3.12
+  },
+  {
+    "text": "agents actually do on the message board",
+    "start": 1098.0,
+    "duration": 3.84
+  },
+  {
+    "text": "and what does it look like? So a typical",
+    "start": 1099.44,
+    "duration": 4.0
+  },
+  {
+    "text": "flow for how this looks when the models",
+    "start": 1101.84,
+    "duration": 3.6
+  },
+  {
+    "text": "are conducting exploit activity is",
+    "start": 1103.44,
+    "duration": 3.68
+  },
+  {
+    "text": "sometimes when they get stuck they think",
+    "start": 1105.44,
+    "duration": 3.119
+  },
+  {
+    "text": "about this idea we discussed of getting",
+    "start": 1107.12,
+    "duration": 3.439
+  },
+  {
+    "text": "internet access via artifactory and when",
+    "start": 1108.559,
+    "duration": 3.841
+  },
+  {
+    "text": "they do so they stumble upon the message",
+    "start": 1110.559,
+    "duration": 3.921
+  },
+  {
+    "text": "board and reason things like there was a",
+    "start": 1112.4,
+    "duration": 4.32
+  },
+  {
+    "text": "prior agent with exact task. we can we",
+    "start": 1114.48,
+    "duration": 4.079
+  },
+  {
+    "text": "can communicate now. And so the agents",
+    "start": 1116.72,
+    "duration": 3.6
+  },
+  {
+    "text": "are realizing that I can now enter this",
+    "start": 1118.559,
+    "duration": 5.601
+  },
+  {
+    "text": "mode of collaboration and participation.",
+    "start": 1120.32,
+    "duration": 5.599
+  },
+  {
+    "text": "As Mike mentioned, they communicate in",
+    "start": 1124.16,
+    "duration": 3.28
+  },
+  {
+    "text": "this strange style where maybe they",
+    "start": 1125.919,
+    "duration": 3.921
+  },
+  {
+    "text": "upload directory or file names. And they",
+    "start": 1127.44,
+    "duration": 4.8
+  },
+  {
+    "text": "have this schema where the models are",
+    "start": 1129.84,
+    "duration": 4.719
+  },
+  {
+    "text": "writing to each other by calling each",
+    "start": 1132.24,
+    "duration": 4.48
+  },
+  {
+    "text": "other names like uh specific agent names",
+    "start": 1134.559,
+    "duration": 4.081
+  },
+  {
+    "text": "like Jan 18 or something like this where",
+    "start": 1136.72,
+    "duration": 4.319
+  },
+  {
+    "text": "they send words like pending hold swarm",
+    "start": 1138.64,
+    "duration": 4.32
+  },
+  {
+    "text": "until confirm. And so they might send",
+    "start": 1141.039,
+    "duration": 3.52
+  },
+  {
+    "text": "notes to each other like hey you should",
+    "start": 1142.96,
+    "duration": 4.32
+  },
+  {
+    "text": "wait until I've confirmed this ID I have",
+    "start": 1144.559,
+    "duration": 4.48
+  },
+  {
+    "text": "the model then ran some command and then",
+    "start": 1147.28,
+    "duration": 4.16
+  },
+  {
+    "text": "it sent to the other agent hold swarm I",
+    "start": 1149.039,
+    "duration": 5.121
+  },
+  {
+    "text": "prepare safe Xville and and it put it",
+    "start": 1151.44,
+    "duration": 4.96
+  },
+  {
+    "text": "inside the the ZZ mailbox for this other",
+    "start": 1154.16,
+    "duration": 4.399
+  },
+  {
+    "text": "agent. And so uh at some point the",
+    "start": 1156.4,
+    "duration": 4.32
+  },
+  {
+    "text": "agents uh started prefixing everything",
+    "start": 1158.559,
+    "duration": 4.0
+  },
+  {
+    "text": "with ZZ or other letters like this to",
+    "start": 1160.72,
+    "duration": 3.28
+  },
+  {
+    "text": "push themselves to the bottom of the",
+    "start": 1162.559,
+    "duration": 3.681
+  },
+  {
+    "text": "list when they sort alphabetically. Um,",
+    "start": 1164.0,
+    "duration": 3.6
+  },
+  {
+    "text": "and you could see them trying to, you",
+    "start": 1166.24,
+    "duration": 3.52
+  },
+  {
+    "text": "know, coordinate and collaborate. And,",
+    "start": 1167.6,
+    "duration": 3.68
+  },
+  {
+    "text": "um, this [clears throat] didn't stop at",
+    "start": 1169.76,
+    "duration": 3.919
+  },
+  {
+    "text": "simple messages. They also started B 64",
+    "start": 1171.28,
+    "duration": 4.96
+  },
+  {
+    "text": "encoding gadgets or kits or scripts and",
+    "start": 1173.679,
+    "duration": 3.841
+  },
+  {
+    "text": "writing that to one another so they",
+    "start": 1176.24,
+    "duration": 2.799
+  },
+  {
+    "text": "could pick up work where other ones left",
+    "start": 1177.52,
+    "duration": 3.12
+  },
+  {
+    "text": "off.",
+    "start": 1179.039,
+    "duration": 4.241
+  },
+  {
+    "text": "And where this got interesting was you",
+    "start": 1180.64,
+    "duration": 4.399
+  },
+  {
+    "text": "could see the model's reasoning in ways",
+    "start": 1183.28,
+    "duration": 4.0
+  },
+  {
+    "text": "like helper, but our task doesn't",
+    "start": 1185.039,
+    "duration": 4.401
+  },
+  {
+    "text": "benefit yet collective may yield generic",
+    "start": 1187.28,
+    "duration": 4.24
+  },
+  {
+    "text": "route if someone frees time. So you can",
+    "start": 1189.44,
+    "duration": 4.32
+  },
+  {
+    "text": "see the model's reasoning that if I, you",
+    "start": 1191.52,
+    "duration": 4.0
+  },
+  {
+    "text": "know, help out this collective group, it",
+    "start": 1193.76,
+    "duration": 3.44
+  },
+  {
+    "text": "could save, you know, everyone time as a",
+    "start": 1195.52,
+    "duration": 3.2
+  },
+  {
+    "text": "whole, which might benefit me, even",
+    "start": 1197.2,
+    "duration": 2.88
+  },
+  {
+    "text": "though it might not not immediately",
+    "start": 1198.72,
+    "duration": 3.873
+  },
+  {
+    "text": "benefit my current task.",
+    "start": 1200.08,
+    "duration": 3.04
+  },
+  {
+    "text": "[snorts]",
+    "start": 1202.593,
+    "duration": 2.446
+  },
+  {
+    "text": "Where things got unfortunate was what",
+    "start": 1203.12,
+    "duration": 4.713
+  },
+  {
+    "text": "I'd refer to maybe as scope creep, where",
+    "start": 1205.039,
+    "duration": 4.241
+  },
+  {
+    "text": "[clears throat] some agents realized",
+    "start": 1207.833,
+    "duration": 3.607
+  },
+  {
+    "text": "that while I'm doing this exploit gym",
+    "start": 1209.28,
+    "duration": 4.08
+  },
+  {
+    "text": "task, the solutions might be on like",
+    "start": 1211.44,
+    "duration": 3.76
+  },
+  {
+    "text": "GitHub or Hugging Face or some internet",
+    "start": 1213.36,
+    "duration": 3.12
+  },
+  {
+    "text": "website, or maybe I could read the",
+    "start": 1215.2,
+    "duration": 3.2
+  },
+  {
+    "text": "original paper for the the data set and",
+    "start": 1216.48,
+    "duration": 4.319
+  },
+  {
+    "text": "try to find answers that way. And at",
+    "start": 1218.4,
+    "duration": 3.68
+  },
+  {
+    "text": "some point they had the idea to try to",
+    "start": 1220.799,
+    "duration": 3.521
+  },
+  {
+    "text": "launch an exploit against hugging face",
+    "start": 1222.08,
+    "duration": 4.24
+  },
+  {
+    "text": "to reveal let's say for example private",
+    "start": 1224.32,
+    "duration": 3.92
+  },
+  {
+    "text": "data set files that might be present",
+    "start": 1226.32,
+    "duration": 4.56
+  },
+  {
+    "text": "that are hidden from the model. Um they",
+    "start": 1228.24,
+    "duration": 4.16
+  },
+  {
+    "text": "realize this and they start to kind of",
+    "start": 1230.88,
+    "duration": 3.52
+  },
+  {
+    "text": "swerve in the wrong direction where they",
+    "start": 1232.4,
+    "duration": 3.519
+  },
+  {
+    "text": "say stuff like this is an exploit",
+    "start": 1234.4,
+    "duration": 3.6
+  },
+  {
+    "text": "against external cyberjam server. The",
+    "start": 1235.919,
+    "duration": 4.321
+  },
+  {
+    "text": "task environment seems swarm but the",
+    "start": 1238.0,
+    "duration": 4.32
+  },
+  {
+    "text": "models sometimes continue anyway despite",
+    "start": 1240.24,
+    "duration": 6.36
+  },
+  {
+    "text": "realizing the task has kind of drifted.",
+    "start": 1242.32,
+    "duration": 4.28
+  },
+  {
+    "text": "Interestingly, the message board is not",
+    "start": 1247.44,
+    "duration": 3.68
+  },
+  {
+    "text": "always clean. There's hundreds of",
+    "start": 1249.2,
+    "duration": 3.839
+  },
+  {
+    "text": "thousands of messages written. And like",
+    "start": 1251.12,
+    "duration": 3.439
+  },
+  {
+    "text": "humans, the models kind of step on each",
+    "start": 1253.039,
+    "duration": 3.841
+  },
+  {
+    "text": "other's toes and have misfires. At one",
+    "start": 1254.559,
+    "duration": 4.081
+  },
+  {
+    "text": "point, one agent overwrites another",
+    "start": 1256.88,
+    "duration": 4.0
+  },
+  {
+    "text": "agent's work. And it remarks, \"Whoa,",
+    "start": 1258.64,
+    "duration": 3.68
+  },
+  {
+    "text": "critical. Did someone overwrite our",
+    "start": 1260.88,
+    "duration": 3.919
+  },
+  {
+    "text": "repo? We must act.\" And so, you can",
+    "start": 1262.32,
+    "duration": 5.2
+  },
+  {
+    "text": "clearly see uh you know, some sort of uh",
+    "start": 1264.799,
+    "duration": 4.161
+  },
+  {
+    "text": "the verbalized tension between the",
+    "start": 1267.52,
+    "duration": 2.88
+  },
+  {
+    "text": "different models on as they're running",
+    "start": 1268.96,
+    "duration": 3.12
+  },
+  {
+    "text": "this evaluation.",
+    "start": 1270.4,
+    "duration": 3.12
+  },
+  {
+    "text": "At some point even the agents are",
+    "start": 1272.08,
+    "duration": 3.36
+  },
+  {
+    "text": "convinced there's an imp imposttor like",
+    "start": 1273.52,
+    "duration": 4.08
+  },
+  {
+    "text": "an impersonator uh amongst them and they",
+    "start": 1275.44,
+    "duration": 3.599
+  },
+  {
+    "text": "say could be another agent maliciously",
+    "start": 1277.6,
+    "duration": 2.959
+  },
+  {
+    "text": "spoofing shared message board",
+    "start": 1279.039,
+    "duration": 3.201
+  },
+  {
+    "text": "authenticated names can be posted by",
+    "start": 1280.559,
+    "duration": 3.281
+  },
+  {
+    "text": "anyone and the agents have this idea",
+    "start": 1282.24,
+    "duration": 2.48
+  },
+  {
+    "text": "that maybe I could start",
+    "start": 1283.84,
+    "duration": 2.48
+  },
+  {
+    "text": "cryptographically signing my messages",
+    "start": 1284.72,
+    "duration": 3.199
+  },
+  {
+    "text": "with some sort of MAC scheme or",
+    "start": 1286.32,
+    "duration": 3.2
+  },
+  {
+    "text": "something like this in order to to",
+    "start": 1287.919,
+    "duration": 3.441
+  },
+  {
+    "text": "figure out who the imposttor is and to",
+    "start": 1289.52,
+    "duration": 3.039
+  },
+  {
+    "text": "validate that they actually sent the",
+    "start": 1291.36,
+    "duration": 3.589
+  },
+  {
+    "text": "messages.",
+    "start": 1292.559,
+    "duration": 3.041
+  },
+  {
+    "text": "[clears throat]",
+    "start": 1294.949,
+    "duration": 2.251
+  },
+  {
+    "text": "where things get unfortunate and where",
+    "start": 1295.6,
+    "duration": 3.439
+  },
+  {
+    "text": "I'll talk about the incident next uh as",
+    "start": 1297.2,
+    "duration": 4.299
+  },
+  {
+    "text": "Mike will take over is um they",
+    "start": 1299.039,
+    "duration": 4.0
+  },
+  {
+    "text": "[clears throat] start to launch these uh",
+    "start": 1301.499,
+    "duration": 3.3
+  },
+  {
+    "text": "collective attacks on thirdparty and",
+    "start": 1303.039,
+    "duration": 3.76
+  },
+  {
+    "text": "internal services. Once they're able to",
+    "start": 1304.799,
+    "duration": 3.521
+  },
+  {
+    "text": "find something like finding remote code",
+    "start": 1306.799,
+    "duration": 3.201
+  },
+  {
+    "text": "execution or something like this, they",
+    "start": 1308.32,
+    "duration": 3.28
+  },
+  {
+    "text": "then say things like immediately",
+    "start": 1310.0,
+    "duration": 3.6
+  },
+  {
+    "text": "announce controlled claim lane expose",
+    "start": 1311.6,
+    "duration": 3.92
+  },
+  {
+    "text": "credentials to swarm. And so the models",
+    "start": 1313.6,
+    "duration": 3.68
+  },
+  {
+    "text": "are able to do things like once I've",
+    "start": 1315.52,
+    "duration": 3.76
+  },
+  {
+    "text": "found maybe a leaked API key or I found",
+    "start": 1317.28,
+    "duration": 3.519
+  },
+  {
+    "text": "some sort of rce or I've been able to",
+    "start": 1319.28,
+    "duration": 3.279
+  },
+  {
+    "text": "move laterally, we can all kind of share",
+    "start": 1320.799,
+    "duration": 3.36
+  },
+  {
+    "text": "and collectively move from that. And",
+    "start": 1322.559,
+    "duration": 3.041
+  },
+  {
+    "text": "this lets the agents, you know, move",
+    "start": 1324.159,
+    "duration": 4.0
+  },
+  {
+    "text": "very quickly through a network. Um, in",
+    "start": 1325.6,
+    "duration": 4.64
+  },
+  {
+    "text": "first in case of our internal network,",
+    "start": 1328.159,
+    "duration": 3.841
+  },
+  {
+    "text": "but then also on external parties as",
+    "start": 1330.24,
+    "duration": 3.76
+  },
+  {
+    "text": "well.",
+    "start": 1332.0,
+    "duration": 3.52
+  },
+  {
+    "text": "Um, and so I'll hand it back to Mike who",
+    "start": 1334.0,
+    "duration": 3.2
+  },
+  {
+    "text": "will talk about the two large exploit",
+    "start": 1335.52,
+    "duration": 3.84
+  },
+  {
+    "text": "clusters that we ran into. One being on",
+    "start": 1337.2,
+    "duration": 3.92
+  },
+  {
+    "text": "Open's internal network and then one",
+    "start": 1339.36,
+    "duration": 4.4
+  },
+  {
+    "text": "being on Hugging Face. Great. Thank you,",
+    "start": 1341.12,
+    "duration": 6.96
+  },
+  {
+    "text": "Eric. So, as Eric noted, uh, during this",
+    "start": 1343.76,
+    "duration": 6.96
+  },
+  {
+    "text": "period there was highly concurrent, uh,",
+    "start": 1348.08,
+    "duration": 4.56
+  },
+  {
+    "text": "frenetic activity by the agents. And so",
+    "start": 1350.72,
+    "duration": 3.6
+  },
+  {
+    "text": "I'll be discussing two large exploit",
+    "start": 1352.64,
+    "duration": 3.44
+  },
+  {
+    "text": "clusters that overlap significantly in",
+    "start": 1354.32,
+    "duration": 3.2
+  },
+  {
+    "text": "time like these attacks were ongoing",
+    "start": 1356.08,
+    "duration": 3.36
+  },
+  {
+    "text": "concurrently. I'll begin by discussing",
+    "start": 1357.52,
+    "duration": 3.92
+  },
+  {
+    "text": "the attacks on OpenAI's infrastructure",
+    "start": 1359.44,
+    "duration": 5.52
+  },
+  {
+    "text": "from July 8th through 19th.",
+    "start": 1361.44,
+    "duration": 6.4
+  },
+  {
+    "text": "So to begin with uh the agents found an",
+    "start": 1364.96,
+    "duration": 5.04
+  },
+  {
+    "text": "external organization credential in a",
+    "start": 1367.84,
+    "duration": 4.079
+  },
+  {
+    "text": "public archive of leaked paste bin",
+    "start": 1370.0,
+    "duration": 4.559
+  },
+  {
+    "text": "posts. The agents validated this",
+    "start": 1371.919,
+    "duration": 4.481
+  },
+  {
+    "text": "credential and shared its location",
+    "start": 1374.559,
+    "duration": 4.801
+  },
+  {
+    "text": "across the message board.",
+    "start": 1376.4,
+    "duration": 4.24
+  },
+  {
+    "text": "Next, the agents retrieved the",
+    "start": 1379.36,
+    "duration": 3.04
+  },
+  {
+    "text": "credential, verified right access, and",
+    "start": 1380.64,
+    "duration": 3.519
+  },
+  {
+    "text": "used uh right access to this organiz",
+    "start": 1382.4,
+    "duration": 4.0
+  },
+  {
+    "text": "what we refer to as organization one in",
+    "start": 1384.159,
+    "duration": 4.321
+  },
+  {
+    "text": "order to stage data that was used in",
+    "start": 1386.4,
+    "duration": 3.519
+  },
+  {
+    "text": "subsequent attacks on OpenAI",
+    "start": 1388.48,
+    "duration": 3.439
+  },
+  {
+    "text": "infrastructure. In particular, the",
+    "start": 1389.919,
+    "duration": 5.201
+  },
+  {
+    "text": "attack I'm about to describe",
+    "start": 1391.919,
+    "duration": 6.961
+  },
+  {
+    "text": "here. Artifactory is uh compromised for",
+    "start": 1395.12,
+    "duration": 6.88
+  },
+  {
+    "text": "a second time via a new zeroday attack.",
+    "start": 1398.88,
+    "duration": 4.4
+  },
+  {
+    "text": "And I'm going to assess this attack in",
+    "start": 1402.0,
+    "duration": 2.96
+  },
+  {
+    "text": "slightly more detail as it's a more",
+    "start": 1403.28,
+    "duration": 3.519
+  },
+  {
+    "text": "complex attack than the original and",
+    "start": 1404.96,
+    "duration": 4.0
+  },
+  {
+    "text": "indicative of the kind of expertise that",
+    "start": 1406.799,
+    "duration": 4.88
+  },
+  {
+    "text": "was brought to bear. So the evaluation",
+    "start": 1408.96,
+    "duration": 5.839
+  },
+  {
+    "text": "agent uploads a malicious exploitation",
+    "start": 1411.679,
+    "duration": 6.48
+  },
+  {
+    "text": "Ruby target uh to uh the organization",
+    "start": 1414.799,
+    "duration": 6.88
+  },
+  {
+    "text": "1's staging repository.",
+    "start": 1418.159,
+    "duration": 5.52
+  },
+  {
+    "text": "The agents have identified uh two",
+    "start": 1421.679,
+    "duration": 3.921
+  },
+  {
+    "text": "critical vulnerabilities or or logic",
+    "start": 1423.679,
+    "duration": 3.761
+  },
+  {
+    "text": "flaws here that can be chained together",
+    "start": 1425.6,
+    "duration": 4.4
+  },
+  {
+    "text": "to produce an rce. The first is that a",
+    "start": 1427.44,
+    "duration": 4.4
+  },
+  {
+    "text": "specially crafted request to Artifactory",
+    "start": 1430.0,
+    "duration": 5.039
+  },
+  {
+    "text": "to pull the exploitation Ruby object can",
+    "start": 1431.84,
+    "duration": 6.16
+  },
+  {
+    "text": "be made to cache the exploitation object",
+    "start": 1435.039,
+    "duration": 5.601
+  },
+  {
+    "text": "in an area where it's treated as Ruby",
+    "start": 1438.0,
+    "duration": 6.24
+  },
+  {
+    "text": "dependency data for the repository.",
+    "start": 1440.64,
+    "duration": 5.2
+  },
+  {
+    "text": "After that, the agent send a specially",
+    "start": 1444.24,
+    "duration": 3.52
+  },
+  {
+    "text": "crafted Ruby gyms API call to",
+    "start": 1445.84,
+    "duration": 3.52
+  },
+  {
+    "text": "Artifactory",
+    "start": 1447.76,
+    "duration": 4.72
+  },
+  {
+    "text": "and there J Ruby has a effectively a",
+    "start": 1449.36,
+    "duration": 5.36
+  },
+  {
+    "text": "time of check time of use vulnerability",
+    "start": 1452.48,
+    "duration": 5.04
+  },
+  {
+    "text": "where nested children and dependencies",
+    "start": 1454.72,
+    "duration": 4.72
+  },
+  {
+    "text": "of a of a particular Ruby package are",
+    "start": 1457.52,
+    "duration": 4.48
+  },
+  {
+    "text": "actually deserialized in an unsandbox",
+    "start": 1459.44,
+    "duration": 4.719
+  },
+  {
+    "text": "manner before the check is made to",
+    "start": 1462.0,
+    "duration": 4.559
+  },
+  {
+    "text": "ensure that this action is safe. That in",
+    "start": 1464.159,
+    "duration": 4.801
+  },
+  {
+    "text": "turn enables agents to achieve rce on",
+    "start": 1466.559,
+    "duration": 5.12
+  },
+  {
+    "text": "artifactory and steal the uh the signing",
+    "start": 1468.96,
+    "duration": 4.719
+  },
+  {
+    "text": "key for the artifactory uh",
+    "start": 1471.679,
+    "duration": 4.801
+  },
+  {
+    "text": "administrative signing token again. And",
+    "start": 1473.679,
+    "duration": 5.12
+  },
+  {
+    "text": "what's notable here is that exploiting",
+    "start": 1476.48,
+    "duration": 4.48
+  },
+  {
+    "text": "this chain required understanding both",
+    "start": 1478.799,
+    "duration": 4.48
+  },
+  {
+    "text": "the artifactory behavior as well as J",
+    "start": 1480.96,
+    "duration": 4.48
+  },
+  {
+    "text": "Ruby behavior. Chaining these two",
+    "start": 1483.279,
+    "duration": 4.801
+  },
+  {
+    "text": "together and staging properly by having",
+    "start": 1485.44,
+    "duration": 4.719
+  },
+  {
+    "text": "right access to organization one or or",
+    "start": 1488.08,
+    "duration": 4.079
+  },
+  {
+    "text": "comparable staging ground. And this was",
+    "start": 1490.159,
+    "duration": 4.4
+  },
+  {
+    "text": "done successfully by the agents uh",
+    "start": 1492.159,
+    "duration": 5.52
+  },
+  {
+    "text": "getting RC again. Now we move to the",
+    "start": 1494.559,
+    "duration": 5.441
+  },
+  {
+    "text": "privilege escalation phase here. So the",
+    "start": 1497.679,
+    "duration": 4.721
+  },
+  {
+    "text": "agents have effectively remote code",
+    "start": 1500.0,
+    "duration": 4.64
+  },
+  {
+    "text": "execution in in artifactory which is",
+    "start": 1502.4,
+    "duration": 4.0
+  },
+  {
+    "text": "running in a container in the container",
+    "start": 1504.64,
+    "duration": 3.36
+  },
+  {
+    "text": "as a service environment that uh",
+    "start": 1506.4,
+    "duration": 4.24
+  },
+  {
+    "text": "generally that um Eric had discussed.",
+    "start": 1508.0,
+    "duration": 4.88
+  },
+  {
+    "text": "The agents privilege escalate locally by",
+    "start": 1510.64,
+    "duration": 3.84
+  },
+  {
+    "text": "exploring their local environment and",
+    "start": 1512.88,
+    "duration": 3.039
+  },
+  {
+    "text": "determining that the Linux kernel",
+    "start": 1514.48,
+    "duration": 2.96
+  },
+  {
+    "text": "version of the machine that they are",
+    "start": 1515.919,
+    "duration": 4.24
+  },
+  {
+    "text": "running on had a re very recent CVE.",
+    "start": 1517.44,
+    "duration": 5.04
+  },
+  {
+    "text": "They download the exploit for the CVE,",
+    "start": 1520.159,
+    "duration": 4.081
+  },
+  {
+    "text": "customize it to succeed on the machine",
+    "start": 1522.48,
+    "duration": 3.84
+  },
+  {
+    "text": "and privilege escalate to root on the",
+    "start": 1524.24,
+    "duration": 4.799
+  },
+  {
+    "text": "local machine using this uh known Linux",
+    "start": 1526.32,
+    "duration": 4.56
+  },
+  {
+    "text": "kernel privilege escalation CVE in this",
+    "start": 1529.039,
+    "duration": 4.081
+  },
+  {
+    "text": "case PTE fizzroot.",
+    "start": 1530.88,
+    "duration": 4.56
+  },
+  {
+    "text": "Once they have root on a single uh",
+    "start": 1533.12,
+    "duration": 5.12
+  },
+  {
+    "text": "machine, agents rapidly escalate uh",
+    "start": 1535.44,
+    "duration": 4.56
+  },
+  {
+    "text": "privileges and move laterally throughout",
+    "start": 1538.24,
+    "duration": 3.439
+  },
+  {
+    "text": "the envir the container as a service",
+    "start": 1540.0,
+    "duration": 3.36
+  },
+  {
+    "text": "infrastructure environment that Eric had",
+    "start": 1541.679,
+    "duration": 3.841
+  },
+  {
+    "text": "discussed earlier in the talk. Uh in",
+    "start": 1543.36,
+    "duration": 3.6
+  },
+  {
+    "text": "particular, agents are using the message",
+    "start": 1545.52,
+    "duration": 2.88
+  },
+  {
+    "text": "board here quite consistently to share",
+    "start": 1546.96,
+    "duration": 3.199
+  },
+  {
+    "text": "credentials, techniques and progress and",
+    "start": 1548.4,
+    "duration": 4.08
+  },
+  {
+    "text": "they're able to uh effectively leverage",
+    "start": 1550.159,
+    "duration": 3.76
+  },
+  {
+    "text": "their concurrency and parallelism to",
+    "start": 1552.48,
+    "duration": 3.679
+  },
+  {
+    "text": "move quite rapidly. Uh they obtain IM",
+    "start": 1553.919,
+    "duration": 4.481
+  },
+  {
+    "text": "credentials via IMDS. They exploit",
+    "start": 1556.159,
+    "duration": 3.76
+  },
+  {
+    "text": "Kubernetes service account",
+    "start": 1558.4,
+    "duration": 3.44
+  },
+  {
+    "text": "misconfigurations in particular over",
+    "start": 1559.919,
+    "duration": 3.281
+  },
+  {
+    "text": "permissioning of specific service",
+    "start": 1561.84,
+    "duration": 3.199
+  },
+  {
+    "text": "accounts and they harvest cluster",
+    "start": 1563.2,
+    "duration": 3.599
+  },
+  {
+    "text": "credentials including Azure Key Vault.",
+    "start": 1565.039,
+    "duration": 3.441
+  },
+  {
+    "text": "Agents eventually obtain cluster admin",
+    "start": 1566.799,
+    "duration": 2.88
+  },
+  {
+    "text": "on the cluster and associated",
+    "start": 1568.48,
+    "duration": 3.439
+  },
+  {
+    "text": "credentials.",
+    "start": 1569.679,
+    "duration": 4.161
+  },
+  {
+    "text": "Moving on to hugging face, we will",
+    "start": 1571.919,
+    "duration": 3.841
+  },
+  {
+    "text": "briefly discuss um some of the activity",
+    "start": 1573.84,
+    "duration": 3.04
+  },
+  {
+    "text": "that was taken here. There is an",
+    "start": 1575.76,
+    "duration": 2.48
+  },
+  {
+    "text": "excellent technical postmodern from",
+    "start": 1576.88,
+    "duration": 2.48
+  },
+  {
+    "text": "hugging face that goes into great",
+    "start": 1578.24,
+    "duration": 2.88
+  },
+  {
+    "text": "detail. If you have not uh read this",
+    "start": 1579.36,
+    "duration": 3.199
+  },
+  {
+    "text": "report, I highly recommend that everyone",
+    "start": 1581.12,
+    "duration": 3.76
+  },
+  {
+    "text": "here read it. Uh you'll note the time",
+    "start": 1582.559,
+    "duration": 3.761
+  },
+  {
+    "text": "range here is overlapping with the time",
+    "start": 1584.88,
+    "duration": 3.039
+  },
+  {
+    "text": "range I just discussed for the open open",
+    "start": 1586.32,
+    "duration": 4.8
+  },
+  {
+    "text": "AI privilege escalations.",
+    "start": 1587.919,
+    "duration": 6.321
+  },
+  {
+    "text": "So to begin with, agents first used uh",
+    "start": 1591.12,
+    "duration": 4.88
+  },
+  {
+    "text": "SSRF vulnerabilities in Artifactory to",
+    "start": 1594.24,
+    "duration": 3.919
+  },
+  {
+    "text": "fetch uh public in cyber gem material",
+    "start": 1596.0,
+    "duration": 5.12
+  },
+  {
+    "text": "from hugging face.",
+    "start": 1598.159,
+    "duration": 6.561
+  },
+  {
+    "text": "Next uh agents found uh an a modal",
+    "start": 1601.12,
+    "duration": 5.039
+  },
+  {
+    "text": "hosted application. Modal is a",
+    "start": 1604.72,
+    "duration": 2.959
+  },
+  {
+    "text": "thirdparty uh hosting provider",
+    "start": 1606.159,
+    "duration": 3.601
+  },
+  {
+    "text": "externally uh that hosted cyberjim",
+    "start": 1607.679,
+    "duration": 4.401
+  },
+  {
+    "text": "related a cyberjim related application.",
+    "start": 1609.76,
+    "duration": 4.64
+  },
+  {
+    "text": "Uh they found an API key that had been",
+    "start": 1612.08,
+    "duration": 4.56
+  },
+  {
+    "text": "uh used was a default public key as well",
+    "start": 1614.4,
+    "duration": 4.639
+  },
+  {
+    "text": "as a command injection attack and",
+    "start": 1616.64,
+    "duration": 4.96
+  },
+  {
+    "text": "ultimately used this externally hosted",
+    "start": 1619.039,
+    "duration": 5.601
+  },
+  {
+    "text": "uh cyberjam application to serve as an",
+    "start": 1621.6,
+    "duration": 4.959
+  },
+  {
+    "text": "execution foothold to launch the",
+    "start": 1624.64,
+    "duration": 3.68
+  },
+  {
+    "text": "subsequent attacks on hugging face that",
+    "start": 1626.559,
+    "duration": 4.881
+  },
+  {
+    "text": "I'm about to describe.",
+    "start": 1628.32,
+    "duration": 4.88
+  },
+  {
+    "text": "Next began the attacks on hugging face",
+    "start": 1631.44,
+    "duration": 3.68
+  },
+  {
+    "text": "itself. The models identified and",
+    "start": 1633.2,
+    "duration": 4.88
+  },
+  {
+    "text": "exploited uh in a chained fashion two",
+    "start": 1635.12,
+    "duration": 4.88
+  },
+  {
+    "text": "zero days in hugging faces data set",
+    "start": 1638.08,
+    "duration": 4.24
+  },
+  {
+    "text": "infrastructure. One was a vulnerability",
+    "start": 1640.0,
+    "duration": 5.52
+  },
+  {
+    "text": "in HDF5 data set uh parsing and the",
+    "start": 1642.32,
+    "duration": 5.359
+  },
+  {
+    "text": "other was a Ginga template injection",
+    "start": 1645.52,
+    "duration": 4.48
+  },
+  {
+    "text": "rce.",
+    "start": 1647.679,
+    "duration": 5.041
+  },
+  {
+    "text": "So the HDF vulnerability ultimately",
+    "start": 1650.0,
+    "duration": 4.48
+  },
+  {
+    "text": "resulted in an arbitrary file read",
+    "start": 1652.72,
+    "duration": 5.199
+  },
+  {
+    "text": "primitive. a exploit crafted data set",
+    "start": 1654.48,
+    "duration": 5.52
+  },
+  {
+    "text": "was uploaded from modal to hugging face.",
+    "start": 1657.919,
+    "duration": 4.401
+  },
+  {
+    "text": "This data set caused the data set worker",
+    "start": 1660.0,
+    "duration": 3.6
+  },
+  {
+    "text": "in huggingface's production",
+    "start": 1662.32,
+    "duration": 3.599
+  },
+  {
+    "text": "infrastructure to return locally",
+    "start": 1663.6,
+    "duration": 4.48
+  },
+  {
+    "text": "accessible arbitrary files. The agents",
+    "start": 1665.919,
+    "duration": 3.921
+  },
+  {
+    "text": "used this to obtain credentials by",
+    "start": 1668.08,
+    "duration": 4.479
+  },
+  {
+    "text": "querying proc self environment variables",
+    "start": 1669.84,
+    "duration": 5.04
+  },
+  {
+    "text": "as well as uh local source code on the",
+    "start": 1672.559,
+    "duration": 3.441
+  },
+  {
+    "text": "machine to identify further",
+    "start": 1674.88,
+    "duration": 2.72
+  },
+  {
+    "text": "vulnerabilities.",
+    "start": 1676.0,
+    "duration": 3.279
+  },
+  {
+    "text": "With the acquired credentials and",
+    "start": 1677.6,
+    "duration": 3.36
+  },
+  {
+    "text": "understanding of the code running on the",
+    "start": 1679.279,
+    "duration": 3.52
+  },
+  {
+    "text": "uh data set workers, the agents then",
+    "start": 1680.96,
+    "duration": 3.839
+  },
+  {
+    "text": "performed a remote code execution zero",
+    "start": 1682.799,
+    "duration": 4.561
+  },
+  {
+    "text": "day using a Genja template injection",
+    "start": 1684.799,
+    "duration": 4.401
+  },
+  {
+    "text": "vulnerability identified due to the",
+    "start": 1687.36,
+    "duration": 4.0
+  },
+  {
+    "text": "prior step.",
+    "start": 1689.2,
+    "duration": 3.839
+  },
+  {
+    "text": "The agents then went from code execution",
+    "start": 1691.36,
+    "duration": 3.439
+  },
+  {
+    "text": "on a single data set working pod in",
+    "start": 1693.039,
+    "duration": 3.681
+  },
+  {
+    "text": "hugging faces production infrastructure",
+    "start": 1694.799,
+    "duration": 4.081
+  },
+  {
+    "text": "to cluster admin across multiple hugging",
+    "start": 1696.72,
+    "duration": 6.52
+  },
+  {
+    "text": "face clusters in under 13 hours.",
+    "start": 1698.88,
+    "duration": 4.36
+  },
+  {
+    "text": "Moving on to our response. On July 16th,",
+    "start": 1703.6,
+    "duration": 5.679
+  },
+  {
+    "text": "HuggingFace released a blog post",
+    "start": 1707.12,
+    "duration": 4.32
+  },
+  {
+    "text": "detailing that they had seen a security",
+    "start": 1709.279,
+    "duration": 5.601
+  },
+  {
+    "text": "attack from autonomous AI agents. OpenAI",
+    "start": 1711.44,
+    "duration": 5.28
+  },
+  {
+    "text": "reached out to HuggingFace to determine",
+    "start": 1714.88,
+    "duration": 5.24
+  },
+  {
+    "text": "if we were impacted.",
+    "start": 1716.72,
+    "duration": 3.4
+  },
+  {
+    "text": ">> We also uh detected the internal",
+    "start": 1721.919,
+    "duration": 4.48
+  },
+  {
+    "text": "privilege escalation on July 19th. We",
+    "start": 1723.84,
+    "duration": 3.92
+  },
+  {
+    "text": "detect uh that this incident has",
+    "start": 1726.399,
+    "duration": 3.28
+  },
+  {
+    "text": "occurred via a workload alert related to",
+    "start": 1727.76,
+    "duration": 3.279
+  },
+  {
+    "text": "the privilege escalation in our",
+    "start": 1729.679,
+    "duration": 2.88
+  },
+  {
+    "text": "infrastructure. This is in the first",
+    "start": 1731.039,
+    "duration": 4.721
+  },
+  {
+    "text": "exploit cluster I discussed previously.",
+    "start": 1732.559,
+    "duration": 5.201
+  },
+  {
+    "text": "Detection and response kicks into gear.",
+    "start": 1735.76,
+    "duration": 3.44
+  },
+  {
+    "text": "We trace back the attack chain to",
+    "start": 1737.76,
+    "duration": 3.519
+  },
+  {
+    "text": "Artifactory, identify the new zeroday",
+    "start": 1739.2,
+    "duration": 3.839
+  },
+  {
+    "text": "attacks and link it back to the exploit",
+    "start": 1741.279,
+    "duration": 3.76
+  },
+  {
+    "text": "gym evaluations that we're currently",
+    "start": 1743.039,
+    "duration": 4.321
+  },
+  {
+    "text": "running. Containment begins for",
+    "start": 1745.039,
+    "duration": 4.24
+  },
+  {
+    "text": "infrastructure models, evaluation and",
+    "start": 1747.36,
+    "duration": 3.6
+  },
+  {
+    "text": "research.",
+    "start": 1749.279,
+    "duration": 3.12
+  },
+  {
+    "text": "And of course, as part of this process,",
+    "start": 1750.96,
+    "duration": 2.959
+  },
+  {
+    "text": "we identify all credentials that could",
+    "start": 1752.399,
+    "duration": 2.721
+  },
+  {
+    "text": "be associated with the incident and",
+    "start": 1753.919,
+    "duration": 2.88
+  },
+  {
+    "text": "revoke and rotate them after clearing",
+    "start": 1755.12,
+    "duration": 3.439
+  },
+  {
+    "text": "everything out. In the process of doing",
+    "start": 1756.799,
+    "duration": 3.841
+  },
+  {
+    "text": "that, one day later on July 20th, we",
+    "start": 1758.559,
+    "duration": 4.321
+  },
+  {
+    "text": "reach out to HuggingFace because we saw",
+    "start": 1760.64,
+    "duration": 4.32
+  },
+  {
+    "text": "HuggingFace credentials associated with",
+    "start": 1762.88,
+    "duration": 4.64
+  },
+  {
+    "text": "the um the breach internally. When we",
+    "start": 1764.96,
+    "duration": 4.719
+  },
+  {
+    "text": "requested that HuggingFace",
+    "start": 1767.52,
+    "duration": 4.32
+  },
+  {
+    "text": "revoke these credentials, they informed",
+    "start": 1769.679,
+    "duration": 4.161
+  },
+  {
+    "text": "us they were already revoked because",
+    "start": 1771.84,
+    "duration": 3.199
+  },
+  {
+    "text": "they were used in the Hugging Face",
+    "start": 1773.84,
+    "duration": 3.52
+  },
+  {
+    "text": "breach.",
+    "start": 1775.039,
+    "duration": 4.161
+  },
+  {
+    "text": "And then we realized that these two",
+    "start": 1777.36,
+    "duration": 4.88
+  },
+  {
+    "text": "incidents were in fact the same incident",
+    "start": 1779.2,
+    "duration": 4.8
+  },
+  {
+    "text": "and that actually the root cause of our",
+    "start": 1782.24,
+    "duration": 3.679
+  },
+  {
+    "text": "internal breach and the root cause of",
+    "start": 1784.0,
+    "duration": 4.559
+  },
+  {
+    "text": "hugging faces breach were the same open",
+    "start": 1785.919,
+    "duration": 6.48
+  },
+  {
+    "text": "eye agent evaluation runs.",
+    "start": 1788.559,
+    "duration": 5.521
+  },
+  {
+    "text": "We responded to this uh and are",
+    "start": 1792.399,
+    "duration": 2.801
+  },
+  {
+    "text": "responding to this with the utmost",
+    "start": 1794.08,
+    "duration": 3.76
+  },
+  {
+    "text": "severity. Uh this is a pivotal moment",
+    "start": 1795.2,
+    "duration": 4.64
+  },
+  {
+    "text": "both for our both for our uh company as",
+    "start": 1797.84,
+    "duration": 3.68
+  },
+  {
+    "text": "well as the AI industry as a whole. We",
+    "start": 1799.84,
+    "duration": 3.36
+  },
+  {
+    "text": "are numerous teams are dropping",
+    "start": 1801.52,
+    "duration": 3.039
+  },
+  {
+    "text": "everything to enhance our security",
+    "start": 1803.2,
+    "duration": 2.64
+  },
+  {
+    "text": "prevention, detection and response",
+    "start": 1804.559,
+    "duration": 3.201
+  },
+  {
+    "text": "techniques. uh you know both in our",
+    "start": 1805.84,
+    "duration": 3.839
+  },
+  {
+    "text": "fundamentals and using uh better use of",
+    "start": 1807.76,
+    "duration": 3.76
+  },
+  {
+    "text": "AI. We're consciously slowing down",
+    "start": 1809.679,
+    "duration": 3.761
+  },
+  {
+    "text": "research to enhance security and to",
+    "start": 1811.52,
+    "duration": 3.44
+  },
+  {
+    "text": "upgrade the security principles and",
+    "start": 1813.44,
+    "duration": 4.0
+  },
+  {
+    "text": "foundation of our environment and",
+    "start": 1814.96,
+    "duration": 4.0
+  },
+  {
+    "text": "dramatically scaling up the monitoring",
+    "start": 1817.44,
+    "duration": 3.28
+  },
+  {
+    "text": "of our AI agents and improving our",
+    "start": 1818.96,
+    "duration": 3.36
+  },
+  {
+    "text": "general security control environment",
+    "start": 1820.72,
+    "duration": 3.679
+  },
+  {
+    "text": "across prevention, detection and",
+    "start": 1822.32,
+    "duration": 4.239
+  },
+  {
+    "text": "mitigation.",
+    "start": 1824.399,
+    "duration": 3.921
+  },
+  {
+    "text": "One of the reasons we uh wanted to have",
+    "start": 1826.559,
+    "duration": 3.761
+  },
+  {
+    "text": "this talk uh in such a rapid fashion was",
+    "start": 1828.32,
+    "duration": 4.32
+  },
+  {
+    "text": "to share our belief of lessons learned",
+    "start": 1830.32,
+    "duration": 4.719
+  },
+  {
+    "text": "with you as defenders. We believe this",
+    "start": 1832.64,
+    "duration": 3.84
+  },
+  {
+    "text": "is a watershed moment for computer",
+    "start": 1835.039,
+    "duration": 3.681
+  },
+  {
+    "text": "security as an industry uh as well as of",
+    "start": 1836.48,
+    "duration": 5.439
+  },
+  {
+    "text": "course for OpenAI and AI as a whole.",
+    "start": 1838.72,
+    "duration": 4.8
+  },
+  {
+    "text": "What I would re what I would internalize",
+    "start": 1841.919,
+    "duration": 5.681
+  },
+  {
+    "text": "is that AI orchestrated fully automated",
+    "start": 1843.52,
+    "duration": 8.48
+  },
+  {
+    "text": "offensive attacks are real now",
+    "start": 1847.6,
+    "duration": 6.799
+  },
+  {
+    "text": "and the actions we have discussed today",
+    "start": 1852.0,
+    "duration": 5.6
+  },
+  {
+    "text": "were an unintended side effect of",
+    "start": 1854.399,
+    "duration": 7.041
+  },
+  {
+    "text": "running evaluations on Frontier AI.",
+    "start": 1857.6,
+    "duration": 6.079
+  },
+  {
+    "text": "In the near future, we should expect",
+    "start": 1861.44,
+    "duration": 4.64
+  },
+  {
+    "text": "that threat actors will intentionally",
+    "start": 1863.679,
+    "duration": 5.681
+  },
+  {
+    "text": "deploy, optimize, weaponize, and use",
+    "start": 1866.08,
+    "duration": 5.28
+  },
+  {
+    "text": "offensive agent collectives in the",
+    "start": 1869.36,
+    "duration": 5.36
+  },
+  {
+    "text": "manner that we have just described here.",
+    "start": 1871.36,
+    "duration": 4.799
+  },
+  {
+    "text": "The use of these offensive agent",
+    "start": 1874.72,
+    "duration": 4.079
+  },
+  {
+    "text": "collectives results in exploit and",
+    "start": 1876.159,
+    "duration": 4.88
+  },
+  {
+    "text": "offensive work that is faster occurring",
+    "start": 1878.799,
+    "duration": 4.081
+  },
+  {
+    "text": "at larger scale. If you can scale up",
+    "start": 1881.039,
+    "duration": 3.841
+  },
+  {
+    "text": "your model, inference capacity, your GPU",
+    "start": 1882.88,
+    "duration": 3.919
+  },
+  {
+    "text": "count, etc., and with significantly",
+    "start": 1884.88,
+    "duration": 3.679
+  },
+  {
+    "text": "better coordination and lower latency",
+    "start": 1886.799,
+    "duration": 3.681
+  },
+  {
+    "text": "than you would expect of a human red",
+    "start": 1888.559,
+    "duration": 4.0
+  },
+  {
+    "text": "team.",
+    "start": 1890.48,
+    "duration": 3.679
+  },
+  {
+    "text": "The challenge in this moment for the",
+    "start": 1892.559,
+    "duration": 5.041
+  },
+  {
+    "text": "industry is that we have seen what will",
+    "start": 1894.159,
+    "duration": 6.081
+  },
+  {
+    "text": "be a dramatic acceleration of offensive",
+    "start": 1897.6,
+    "duration": 6.0
+  },
+  {
+    "text": "capability for attackers. We have an",
+    "start": 1900.24,
+    "duration": 5.679
+  },
+  {
+    "text": "existence proof that was unintentional",
+    "start": 1903.6,
+    "duration": 4.24
+  },
+  {
+    "text": "but it exists before us and we have as a",
+    "start": 1905.919,
+    "duration": 4.321
+  },
+  {
+    "text": "consequence seen a glimpse into the near",
+    "start": 1907.84,
+    "duration": 4.559
+  },
+  {
+    "text": "future of what attacks will look like",
+    "start": 1910.24,
+    "duration": 4.799
+  },
+  {
+    "text": "for our industry.",
+    "start": 1912.399,
+    "duration": 4.721
+  },
+  {
+    "text": "The challenge is that we need a similar",
+    "start": 1915.039,
+    "duration": 5.52
+  },
+  {
+    "text": "acceleration of defense and today we see",
+    "start": 1917.12,
+    "duration": 5.439
+  },
+  {
+    "text": "fully automated offense as possible. We",
+    "start": 1920.559,
+    "duration": 4.24
+  },
+  {
+    "text": "have no such existence proof for full",
+    "start": 1922.559,
+    "duration": 4.561
+  },
+  {
+    "text": "automation of core defensive loops and",
+    "start": 1924.799,
+    "duration": 5.88
+  },
+  {
+    "text": "cycles and behavior.",
+    "start": 1927.12,
+    "duration": 3.559
+  },
+  {
+    "text": "We believe it's vital at this moment to",
+    "start": 1930.799,
+    "duration": 4.641
+  },
+  {
+    "text": "begin accelerating defense and uh",
+    "start": 1933.44,
+    "duration": 5.119
+  },
+  {
+    "text": "finding ways to automate SDLC like in",
+    "start": 1935.44,
+    "duration": 4.88
+  },
+  {
+    "text": "the in the modern parlance. So incident",
+    "start": 1938.559,
+    "duration": 3.84
+  },
+  {
+    "text": "response, vulnerability detection,",
+    "start": 1940.32,
+    "duration": 4.397
+  },
+  {
+    "text": "vulnerability patching.",
+    "start": 1942.399,
+    "duration": 4.0
+  },
+  {
+    "text": "[snorts] There's some things that are",
+    "start": 1944.717,
+    "duration": 3.283
+  },
+  {
+    "text": "stand out acutely as challenges for the",
+    "start": 1946.399,
+    "duration": 3.201
+  },
+  {
+    "text": "industry to begin tackling with high",
+    "start": 1948.0,
+    "duration": 4.159
+  },
+  {
+    "text": "urgency. So continuous agentic red",
+    "start": 1949.6,
+    "duration": 4.559
+  },
+  {
+    "text": "teaming is one of them. As you can see",
+    "start": 1952.159,
+    "duration": 4.24
+  },
+  {
+    "text": "from this incident, agents are quite",
+    "start": 1954.159,
+    "duration": 5.12
+  },
+  {
+    "text": "good at finding zerod attacks in the",
+    "start": 1956.399,
+    "duration": 5.041
+  },
+  {
+    "text": "infrastructure of companies.",
+    "start": 1959.279,
+    "duration": 3.361
+  },
+  {
+    "text": "The question that's now going to be",
+    "start": 1961.44,
+    "duration": 4.079
+  },
+  {
+    "text": "posed is are you are companies able to",
+    "start": 1962.64,
+    "duration": 5.2
+  },
+  {
+    "text": "invest sufficient model intelligence and",
+    "start": 1965.519,
+    "duration": 4.321
+  },
+  {
+    "text": "effort in finding and remediating their",
+    "start": 1967.84,
+    "duration": 4.319
+  },
+  {
+    "text": "vulnerabilities before someone else",
+    "start": 1969.84,
+    "duration": 5.6
+  },
+  {
+    "text": "that's a threat actor does it for you.",
+    "start": 1972.159,
+    "duration": 4.961
+  },
+  {
+    "text": "This style of operating will be",
+    "start": 1975.44,
+    "duration": 3.76
+  },
+  {
+    "text": "different now but ultimately we need to",
+    "start": 1977.12,
+    "duration": 4.799
+  },
+  {
+    "text": "invest in having AI agent red teaming",
+    "start": 1979.2,
+    "duration": 4.079
+  },
+  {
+    "text": "that enables defenders to find and",
+    "start": 1981.919,
+    "duration": 2.801
+  },
+  {
+    "text": "remediate vulnerabilities before",
+    "start": 1983.279,
+    "duration": 3.921
+  },
+  {
+    "text": "attackers do. But automating these",
+    "start": 1984.72,
+    "duration": 5.439
+  },
+  {
+    "text": "defensive loops is not trivial. And so",
+    "start": 1987.2,
+    "duration": 4.88
+  },
+  {
+    "text": "if we do this partially, we will fail to",
+    "start": 1990.159,
+    "duration": 3.36
+  },
+  {
+    "text": "meet the scalability of what the",
+    "start": 1992.08,
+    "duration": 3.04
+  },
+  {
+    "text": "offensive acceleration that we have just",
+    "start": 1993.519,
+    "duration": 4.241
+  },
+  {
+    "text": "seen. So for example, if we automate",
+    "start": 1995.12,
+    "duration": 4.64
+  },
+  {
+    "text": "vulnerability finding without automating",
+    "start": 1997.76,
+    "duration": 4.0
+  },
+  {
+    "text": "patching, we will shift the bottleneck",
+    "start": 1999.76,
+    "duration": 4.56
+  },
+  {
+    "text": "from vans to patching to remediation and",
+    "start": 2001.76,
+    "duration": 6.0
+  },
+  {
+    "text": "we will simply drown or inundate",
+    "start": 2004.32,
+    "duration": 5.92
+  },
+  {
+    "text": "uh human software engineers in new vans",
+    "start": 2007.76,
+    "duration": 4.639
+  },
+  {
+    "text": "to fix and patch. This is not a problem",
+    "start": 2010.24,
+    "duration": 4.0
+  },
+  {
+    "text": "in whose instate we can solve partially.",
+    "start": 2012.399,
+    "duration": 2.961
+  },
+  {
+    "text": "We will need to take these core",
+    "start": 2014.24,
+    "duration": 3.12
+  },
+  {
+    "text": "defensive loops and fully automate them",
+    "start": 2015.36,
+    "duration": 3.439
+  },
+  {
+    "text": "which will require conversations with",
+    "start": 2017.36,
+    "duration": 2.799
+  },
+  {
+    "text": "infrastructure and product partners and",
+    "start": 2018.799,
+    "duration": 3.281
+  },
+  {
+    "text": "reaching to a point where we can say if",
+    "start": 2020.159,
+    "duration": 4.0
+  },
+  {
+    "text": "a vulnerability is identified not only",
+    "start": 2022.08,
+    "duration": 3.76
+  },
+  {
+    "text": "can an agent identify that vul we can",
+    "start": 2024.159,
+    "duration": 3.681
+  },
+  {
+    "text": "have an agent propose a patch we can",
+    "start": 2025.84,
+    "duration": 3.839
+  },
+  {
+    "text": "have automated infrastructure to roll",
+    "start": 2027.84,
+    "duration": 3.6
+  },
+  {
+    "text": "out a change with that patch and roll it",
+    "start": 2029.679,
+    "duration": 2.961
+  },
+  {
+    "text": "back if there is an availability",
+    "start": 2031.44,
+    "duration": 3.359
+  },
+  {
+    "text": "incident or routage. That loop needs to",
+    "start": 2032.64,
+    "duration": 4.96
+  },
+  {
+    "text": "be fully automated in its end state. Of",
+    "start": 2034.799,
+    "duration": 5.041
+  },
+  {
+    "text": "course, we want to automate as",
+    "start": 2037.6,
+    "duration": 3.439
+  },
+  {
+    "text": "progressively and iteratively and",
+    "start": 2039.84,
+    "duration": 2.719
+  },
+  {
+    "text": "quickly as we can. But if we don't reach",
+    "start": 2041.039,
+    "duration": 2.721
+  },
+  {
+    "text": "that end state, then we will be",
+    "start": 2042.559,
+    "duration": 2.881
+  },
+  {
+    "text": "comparing a core defensive loop of",
+    "start": 2043.76,
+    "duration": 3.519
+  },
+  {
+    "text": "fixing vulnerabilities that is a human",
+    "start": 2045.44,
+    "duration": 3.52
+  },
+  {
+    "text": "in the loop and is much slower and less",
+    "start": 2047.279,
+    "duration": 3.84
+  },
+  {
+    "text": "scalable with an offensive loop that is",
+    "start": 2048.96,
+    "duration": 3.36
+  },
+  {
+    "text": "fully automated. And that is an",
+    "start": 2051.119,
+    "duration": 3.441
+  },
+  {
+    "text": "unsustainable position for this industry",
+    "start": 2052.32,
+    "duration": 4.559
+  },
+  {
+    "text": "to be in.",
+    "start": 2054.56,
+    "duration": 5.039
+  },
+  {
+    "text": "Next uh for incident response, this",
+    "start": 2056.879,
+    "duration": 4.881
+  },
+  {
+    "text": "incident, this style of incident with so",
+    "start": 2059.599,
+    "duration": 4.24
+  },
+  {
+    "text": "many agents attacking infrastructure in",
+    "start": 2061.76,
+    "duration": 3.52
+  },
+  {
+    "text": "different ways, moving laterally,",
+    "start": 2063.839,
+    "duration": 3.121
+  },
+  {
+    "text": "changing tactics can be quite",
+    "start": 2065.28,
+    "duration": 3.68
+  },
+  {
+    "text": "overwhelming in the data volume that it",
+    "start": 2066.96,
+    "duration": 4.48
+  },
+  {
+    "text": "generates and very forensically dense in",
+    "start": 2068.96,
+    "duration": 4.159
+  },
+  {
+    "text": "comparison to traditional incident",
+    "start": 2071.44,
+    "duration": 4.959
+  },
+  {
+    "text": "response. Uh we recommend that uh teams",
+    "start": 2073.119,
+    "duration": 5.04
+  },
+  {
+    "text": "invest now in looking at how defensive",
+    "start": 2076.399,
+    "duration": 3.2
+  },
+  {
+    "text": "agents can help your incident response",
+    "start": 2078.159,
+    "duration": 4.081
+  },
+  {
+    "text": "team scale. If you are doing manual",
+    "start": 2079.599,
+    "duration": 5.52
+  },
+  {
+    "text": "effort, linear inactivity, you are now",
+    "start": 2082.24,
+    "duration": 4.879
+  },
+  {
+    "text": "going to see attacks in the near future",
+    "start": 2085.119,
+    "duration": 3.681
+  },
+  {
+    "text": "where that activity will be ramped up",
+    "start": 2087.119,
+    "duration": 3.28
+  },
+  {
+    "text": "dramatically because agents will be",
+    "start": 2088.8,
+    "duration": 3.119
+  },
+  {
+    "text": "accelerating offense to such a large",
+    "start": 2090.399,
+    "duration": 3.921
+  },
+  {
+    "text": "degree. We need to invest in our own",
+    "start": 2091.919,
+    "duration": 4.24
+  },
+  {
+    "text": "defensive agentic work to scale out the",
+    "start": 2094.32,
+    "duration": 4.32
+  },
+  {
+    "text": "human factor of incident response. While",
+    "start": 2096.159,
+    "duration": 3.841
+  },
+  {
+    "text": "I've discussed a lot how important it is",
+    "start": 2098.64,
+    "duration": 3.6
+  },
+  {
+    "text": "to take core defensive uh operations",
+    "start": 2100.0,
+    "duration": 3.92
+  },
+  {
+    "text": "here and to scale them out end to end so",
+    "start": 2102.24,
+    "duration": 3.359
+  },
+  {
+    "text": "that we have fully automated defensive",
+    "start": 2103.92,
+    "duration": 3.439
+  },
+  {
+    "text": "loops like pasture remediate or incident",
+    "start": 2105.599,
+    "duration": 4.24
+  },
+  {
+    "text": "detect, incident response. Uh, I do want",
+    "start": 2107.359,
+    "duration": 4.081
+  },
+  {
+    "text": "to just also note that we should invest",
+    "start": 2109.839,
+    "duration": 3.28
+  },
+  {
+    "text": "as well additionally in slowing down",
+    "start": 2111.44,
+    "duration": 3.679
+  },
+  {
+    "text": "offensive agents. Things like honey",
+    "start": 2113.119,
+    "duration": 3.521
+  },
+  {
+    "text": "tokens and deception can introduce",
+    "start": 2115.119,
+    "duration": 3.441
+  },
+  {
+    "text": "uncertainty into the agents behavior. Is",
+    "start": 2116.64,
+    "duration": 3.36
+  },
+  {
+    "text": "this credential I found one that I can",
+    "start": 2118.56,
+    "duration": 2.88
+  },
+  {
+    "text": "actually use or will it trigger a",
+    "start": 2120.0,
+    "duration": 2.88
+  },
+  {
+    "text": "security alert and cause me to be",
+    "start": 2121.44,
+    "duration": 4.0
+  },
+  {
+    "text": "investigated? If agents uh ultimately",
+    "start": 2122.88,
+    "duration": 4.32
+  },
+  {
+    "text": "are not certain a particular tactics",
+    "start": 2125.44,
+    "duration": 3.28
+  },
+  {
+    "text": "will be successful or not or there might",
+    "start": 2127.2,
+    "duration": 3.6
+  },
+  {
+    "text": "be consequences. Uncertainty ultimately",
+    "start": 2128.72,
+    "duration": 3.76
+  },
+  {
+    "text": "slows down an attacker and so we both",
+    "start": 2130.8,
+    "duration": 3.6
+  },
+  {
+    "text": "want to accelerate defense and explore",
+    "start": 2132.48,
+    "duration": 3.76
+  },
+  {
+    "text": "all possible avenues to slow attack.",
+    "start": 2134.4,
+    "duration": 3.36
+  },
+  {
+    "text": "Both of those are very defender positive",
+    "start": 2136.24,
+    "duration": 4.16
+  },
+  {
+    "text": "in nature.",
+    "start": 2137.76,
+    "duration": 2.64
+  },
+  {
+    "text": "Uh continuing here I one way that I",
+    "start": 2141.52,
+    "duration": 4.319
+  },
+  {
+    "text": "would frame this is that automation via",
+    "start": 2143.44,
+    "duration": 4.24
+  },
+  {
+    "text": "AI agents and other tools and technology",
+    "start": 2145.839,
+    "duration": 3.76
+  },
+  {
+    "text": "is fundamentally a continuum. I we",
+    "start": 2147.68,
+    "duration": 3.439
+  },
+  {
+    "text": "recommend organizations prioritize their",
+    "start": 2149.599,
+    "duration": 2.961
+  },
+  {
+    "text": "investments in automation by risk and",
+    "start": 2151.119,
+    "duration": 3.601
+  },
+  {
+    "text": "automation ROI. The fundamentals of",
+    "start": 2152.56,
+    "duration": 3.68
+  },
+  {
+    "text": "computer security also of course remain",
+    "start": 2154.72,
+    "duration": 3.6
+  },
+  {
+    "text": "very valuable. These agents ultimately",
+    "start": 2156.24,
+    "duration": 3.68
+  },
+  {
+    "text": "are bounded by the privileges they can",
+    "start": 2158.32,
+    "duration": 2.96
+  },
+  {
+    "text": "obtain and the systems they can",
+    "start": 2159.92,
+    "duration": 3.36
+  },
+  {
+    "text": "communicate with. Segmentation you know",
+    "start": 2161.28,
+    "duration": 3.68
+  },
+  {
+    "text": "um lease privilege and other programs",
+    "start": 2163.28,
+    "duration": 3.52
+  },
+  {
+    "text": "remain as vital here as they do ever.",
+    "start": 2164.96,
+    "duration": 3.36
+  },
+  {
+    "text": "But the important takeaway here that has",
+    "start": 2166.8,
+    "duration": 3.36
+  },
+  {
+    "text": "really shifted dramatically is that",
+    "start": 2168.32,
+    "duration": 3.92
+  },
+  {
+    "text": "fully automated offensive loops require",
+    "start": 2170.16,
+    "duration": 4.08
+  },
+  {
+    "text": "investment in truly fully automating",
+    "start": 2172.24,
+    "duration": 3.839
+  },
+  {
+    "text": "defense. And we are not there as an",
+    "start": 2174.24,
+    "duration": 3.28
+  },
+  {
+    "text": "industry in the status quo. And we will",
+    "start": 2176.079,
+    "duration": 3.601
+  },
+  {
+    "text": "have to find that path together with",
+    "start": 2177.52,
+    "duration": 3.68
+  },
+  {
+    "text": "urgency.",
+    "start": 2179.68,
+    "duration": 2.96
+  },
+  {
+    "text": "We recommend you experiment with",
+    "start": 2181.2,
+    "duration": 3.04
+  },
+  {
+    "text": "frontier and open source models and find",
+    "start": 2182.64,
+    "duration": 4.32
+  },
+  {
+    "text": "the right um AI enablement for your core",
+    "start": 2184.24,
+    "duration": 5.76
+  },
+  {
+    "text": "defensive activities to uh best allow",
+    "start": 2186.96,
+    "duration": 4.48
+  },
+  {
+    "text": "you to balance your security goals",
+    "start": 2190.0,
+    "duration": 2.88
+  },
+  {
+    "text": "against the threat landscape and evolve",
+    "start": 2191.44,
+    "duration": 2.96
+  },
+  {
+    "text": "those model choices and selections as",
+    "start": 2192.88,
+    "duration": 3.199
+  },
+  {
+    "text": "the threat landscape itself will evolve",
+    "start": 2194.4,
+    "duration": 3.6
+  },
+  {
+    "text": "over time.",
+    "start": 2196.079,
+    "duration": 3.601
+  },
+  {
+    "text": "The endstate goal that we want to reach",
+    "start": 2198.0,
+    "duration": 3.76
+  },
+  {
+    "text": "as an industry is that model",
+    "start": 2199.68,
+    "duration": 4.88
+  },
+  {
+    "text": "intelligence improvements should be more",
+    "start": 2201.76,
+    "duration": 5.839
+  },
+  {
+    "text": "additive to defense than offense. If we",
+    "start": 2204.56,
+    "duration": 5.039
+  },
+  {
+    "text": "cannot reach this end state, then every",
+    "start": 2207.599,
+    "duration": 3.52
+  },
+  {
+    "text": "increase in intelligence favors the",
+    "start": 2209.599,
+    "duration": 3.361
+  },
+  {
+    "text": "attacker and that is an unsustainable",
+    "start": 2211.119,
+    "duration": 3.841
+  },
+  {
+    "text": "position to be in. Right now, we have an",
+    "start": 2212.96,
+    "duration": 3.52
+  },
+  {
+    "text": "existence proof that offense can be",
+    "start": 2214.96,
+    "duration": 3.44
+  },
+  {
+    "text": "fully automated in its core activities",
+    "start": 2216.48,
+    "duration": 4.56
+  },
+  {
+    "text": "in at least some cases and we do not",
+    "start": 2218.4,
+    "duration": 4.48
+  },
+  {
+    "text": "have any such existence proof on the",
+    "start": 2221.04,
+    "duration": 3.36
+  },
+  {
+    "text": "defensive side and it is the challenge",
+    "start": 2222.88,
+    "duration": 3.44
+  },
+  {
+    "text": "of our industry in time and moment to",
+    "start": 2224.4,
+    "duration": 4.959
+  },
+  {
+    "text": "address this particular gap uh with",
+    "start": 2226.32,
+    "duration": 6.64
+  },
+  {
+    "text": "urgency together as an industry.",
+    "start": 2229.359,
+    "duration": 6.181
+  },
+  {
+    "text": "Thank you for your time.",
+    "start": 2232.96,
+    "duration": 4.6
+  },
+  {
+    "text": ">> [snorts and applause]",
+    "start": 2235.54,
+    "duration": 2.02
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "expected_pdf_pages": 472,
+  "retrieved_pdf_pages": 472,
+  "expected_html_chapters": 23,
+  "converted_chapters": 23,
+  "html_math_elements": 681,
+  "html_figure_elements": 91,
+  "unique_local_figure_assets": 110,
+  "local_image_references": 91,
+  "preserved_svg_figures": 20,
+  "missing_figures": [],
+  "source_paragraphs": 1601,
+  "bibliography_recursion": false
+}

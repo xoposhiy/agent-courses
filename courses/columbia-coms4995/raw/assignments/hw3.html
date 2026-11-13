@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW 3 - Build Your First Agent</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <style>
+        .overview, .module-card, .submission-card {
+            background-color: #f8f9fa;
+            padding: 18px 20px;
+            border-radius: 12px;
+            border-left: 4px solid #6CACE4;
+            margin-bottom: 20px;
+        }
+
+        .main-content h1 {
+            margin-bottom: 8px;
+            font-size: 2.2rem;
+            text-shadow: none;
+            color: #1D4F91;
+        }
+
+        .module-card ul, .submission-card ul, .overview ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .module-card li, .submission-card li, .overview li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .impl-subsection {
+            border-top: 1px solid #dfe3e8;
+            padding-top: 12px;
+            margin-top: 12px;
+        }
+
+        .impl-subsection:first-of-type {
+            border-top: none;
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        .impl-subsection h3 {
+            margin: 0 0 6px 0;
+            color: #1D4F91;
+        }
+
+        .impl-subsection p {
+            margin: 0 0 6px 0;
+            line-height: 1.25;
+        }
+
+        .impl-subsection ul {
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+
+        .impl-subsection li {
+            margin-bottom: 6px;
+            line-height: 1.25;
+        }
+
+        .download-card {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .download-card a {
+            background-color: #1D4F91;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .download-card a:hover {
+            opacity: 0.9;
+        }
+
+        .writeup-list li {
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="course-number">COMS 4995-15</div>
+            <h1>Introduction to Designing LLM Agents</h1>
+            <div class="nav-link">
+                <a href="index.html">← Back to Course Home</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <h1 style="margin-bottom: 12px;">Homework 3: Build Your First Agent</h1>
+            <p style="margin: 0 0 4px 0;"><strong>Released:</strong> Monday, October 12</p>
+            <p style="margin: 0 0 18px 0;"><strong>Due:</strong> Monday, November 2 @ 11:59 PM ET (submit on Gradescope)</p>
+
+            <section class="overview">
+                <h2>Overview</h2>
+                <p>
+                    You will build a conversational agent that embodies a celebrity: a politician, actor, musician, influencer, or any public figure with enough reliable information online to build a memory store.
+                </p>
+                <p>
+                    Your agent must (1) store information about the celebrity from public sources, (2) decide what to say using that information, (3) respond in the celebrity's style, (4) say it doesn't know when asked about something the celebrity wouldn't know, and (5) end the conversation with an in-character goodbye. Users chat with it through a web app where they can start new conversations and continue old ones.
+                </p>
+                <p>
+                    The skeleton repo defines the module boundaries and function interfaces. Keep your implementation consistent with them.
+                </p>
+                <div class="download-card">
+                    <div>
+                        <strong>Starter Code</strong>
+                        <p>Download the skeleton repo for HW3.</p>
+                    </div>
+                    <a href="assets/celebrity_agent.zip" download>Download celebrity_agent.zip</a>
+                </div>
+                <p style="margin-top: 12px;">
+                    <strong>You may add any functionality beyond the skeleton, as long as your agent meets the core requirements.</strong>
+                </p>
+            </section>
+
+            <section class="module-card">
+                <h2>Implementation Instructions</h2>
+
+                <div class="impl-subsection">
+                    <h3>Part 1: Memory Store</h3>
+                    <p><strong>Goal:</strong> Build a searchable memory of the celebrity from public web content.</p>
+                    <ul>
+                        <li>Collect public sources (Wikipedia pages, interview transcripts, profiles, talks).</li>
+                        <li>Split the sources into <code>MemoryChunk</code>s and store them in a <code>MemoryStore</code>.</li>
+                        <li>Implement <code>MemoryStore.retrieve(query)</code>. You may reuse your retriever from HW2 Part 3.</li>
+                        <li>Build and load the store with <code>build_memory_store(...)</code> and <code>load_memory_store(...)</code>.</li>
+                    </ul>
+                    <p><strong>Output:</strong> the chunks relevant to a query, with metadata.</p>
+                </div>
+
+                <div class="impl-subsection">
+                    <h3>Part 2: Content Module</h3>
+                    <p><strong>Goal:</strong> Decide what the response says.</p>
+                    <ul>
+                        <li>Work out what information the user's message needs. Follow-ups ("what happened after that?") depend on the conversation so far.</li>
+                        <li>Turn the retrieved chunks into a content plan in <code>make_content_plan(user_message, retrieved, history)</code>.</li>
+                        <li><code>content_step(memory, user_message, history)</code> runs retrieval and planning together.</li>
+                    </ul>
+                    <p><strong>Output:</strong> a grounded content plan for the style module.</p>
+                </div>
+
+                <div class="impl-subsection">
+                    <h3>Part 3: Style Module</h3>
+                    <p><strong>Goal:</strong> Say it the way the celebrity would.</p>
+                    <ul>
+                        <li>Write a style specification: tone, sentence structure, typical phrasing, conversational habits.</li>
+                        <li>Turn the content plan into a response in <code>stylize(content_plan)</code>.</li>
+                        <li>Add no factual claims beyond the content plan.</li>
+                    </ul>
+                    <p><strong>Output:</strong> the final user-facing message.</p>
+                </div>
+
+                <div class="impl-subsection">
+                    <h3>Part 4: Guardrails</h3>
+                    <p><strong>Goal:</strong> Say "I don't know" when the celebrity wouldn't know.</p>
+                    <ul>
+                        <li>Pick a knowledge cutoff date, such as their death, their retirement, or your most recent source. The agent should not know about later events.</li>
+                        <li>Decide what falls outside their expertise. A pop star should not debug Python or interpret a lab result.</li>
+                        <li>Detect both in <code>out_of_scope(user_message, history)</code> and respond in character in <code>decline(user_message)</code>.</li>
+                    </ul>
+                </div>
+
+                <div class="impl-subsection">
+                    <h3>Part 5: Conversations and Sign-off</h3>
+                    <p><strong>Goal:</strong> Track multiple conversations and end each one naturally.</p>
+                    <ul>
+                        <li>Save conversations to disk in <code>conversations.py</code> so users can start new ones and continue old ones, even after the app restarts.</li>
+                        <li>End a conversation automatically at a natural endpoint (e.g., the user says "thanks" or "bye") in <code>should_end(user_message, history)</code>. Ended conversations are read-only.</li>
+                        <li>Add an in-character sign-off in <code>add_signoff(response)</code>.</li>
+                        <li>Run one full turn in <code>respond(memory, conversation, user_message)</code>.</li>
+                    </ul>
+                </div>
+
+                <div class="impl-subsection">
+                    <h3>Part 6: Web App</h3>
+                    <p><strong>Goal:</strong> Build a web interface for chatting with your agent.</p>
+                    <ul>
+                        <li>Frontend: a frontend framework of your choice, in <code>frontend/</code>. Some options are <a href="https://react.dev">React</a>, <a href="https://vuejs.org">Vue</a>, and <a href="https://svelte.dev">Svelte</a>.</li>
+                        <li>Backend: a server of your choice that exposes your agent and conversation store. Some options are <a href="https://fastapi.tiangolo.com">FastAPI</a> and <a href="https://flask.palletsprojects.com">Flask</a>.</li>
+                        <li>Users must be able to start a conversation, browse past ones, continue one, and see when the agent has ended one.</li>
+                        <li>Put the install and launch commands in <code>README.md</code>.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="submission-card">
+                <h2>Submission Guidelines</h2>
+                <p>
+                    Zip the <code>celebrity_agent</code> folder. It should launch after unzipping by following <code>README.md</code>. Leave out installed dependencies (e.g. <code>node_modules/</code>, virtual environments), build output, and your API key.
+                </p>
+                <p><strong>Your writeup, <code>celebrity_agent.pdf</code>, should explain each design choice and why you made it, covering:</strong></p>
+                <ul class="writeup-list">
+                    <li>Celebrity: who, why, and what defines their voice.</li>
+                    <li>Data: your sources and how you collected them.</li>
+                    <li>Memory store: cleaning, chunking, indexing, and retrieval.</li>
+                    <li>Content module: query parsing, retrieval strategy, and what happens when nothing relevant is found.</li>
+                    <li>Style module: style specification, prompt engineering, and how you preserve content.</li>
+                    <li>Guardrails: your knowledge cutoff and why, what counts as outside their expertise, how you detect both, and questions your guardrails get wrong.</li>
+                    <li>Conversations: storage, how earlier turns reach the agent, and ending logic.</li>
+                    <li>Web app: framework, how the frontend and backend connect, and a screenshot of the conversation list.</li>
+                    <li>A short transcript showing retrieval, stylized output, a declined question, and a natural goodbye.</li>
+                    <li>Any other design decisions (temperature, response length, model choice, etc.) and why.</li>
+                </ul>
+                <p style="margin-top: 12px;"><strong>Due Date:</strong> Monday, November 2 @ 11:59 PM ET (submit on Gradescope under "HW 3")</p>
+                <p style="margin-top: 12px;"><strong>Files to Upload:</strong></p>
+                <ul>
+                    <li><code>celebrity_agent.zip</code> — your code.</li>
+                    <li><code>celebrity_agent.pdf</code> — your writeup.</li>
+                </ul>
+                <p style="margin-top: 12px;"><strong>Late policy:</strong> Late days apply automatically; otherwise late work is not accepted.</p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

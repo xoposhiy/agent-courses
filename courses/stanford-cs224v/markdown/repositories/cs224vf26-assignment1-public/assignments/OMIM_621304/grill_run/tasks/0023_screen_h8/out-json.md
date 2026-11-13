@@ -1,0 +1,75 @@
+# Homework 1 public teaching repository: assignments/OMIM_621304/grill_run/tasks/0023_screen_h8/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621304/grill_run/tasks/0023_screen_h8/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621304/grill_run/tasks/0023_screen_h8/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Pathogenic dominant de novo RNU2-2 variants were directly reported in 4 of 672 (0.6%) patients with DEEs of unknown cause, directly within the hypothesized 0.5-2.0% range.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "In a cohort of patients with developmental and epileptic encephalopathies of unknown cause, recurrent pathogenic RNU2-2 variants were identified in 4 of 672 (0.6%) individuals.",
+      "stance": "supports",
+      "source": {
+        "title": "Pathogenic Variants in RNU2\u20102, a Non\u2010coding Spliceosomal RNA, Cause a Distinctive Developmental and Epileptic Encephalopathy",
+        "authors": [
+          "ATG Chiu",
+          "MF Bennett",
+          "H Thiyagarajah"
+        ],
+        "year": 2026,
+        "journal": "Annals of Neurology",
+        "doi": "10.1002/ana.78071",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ana.78071",
+        "quote": "We identified recurrent pathogenic RNU2-2 variants in 4 of 672 (0.6%) patients with developmental and epileptic encephalopathies (DEEs) of unknown cause."
+      },
+      "numbers": [
+        {
+          "metric": "diagnostic yield in unsolved DEE cohort",
+          "value": 0.006
+        },
+        {
+          "metric": "identified cases",
+          "value": 4
+        },
+        {
+          "metric": "cohort size",
+          "value": 672
+        }
+      ]
+    },
+    {
+      "text": "Systematic evaluation of 34,329 individuals identified recurrent dominant pathogenic RNU2-2 variants (35 individuals) alongside recessive forms, showing RNU2-2 is a major contributor to NDD/DEE cohorts, nearly as prevalent as ReNU syndrome.",
+      "stance": "supports",
+      "source": {
+        "title": "Systematic analysis of snRNA genes reveals frequent RNU2-2 variants in dominant and recessive developmental and epileptic encephalopathies",
+        "authors": [
+          "C de Vanssay de Blavous Legendre"
+        ],
+        "year": 2026,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.nature.com/articles/s41588-026-02547-5",
+        "quote": "We report RNU2-2 variants in 141 individuals, including 35 with recurrent dominant pathogenic variants and 91 affected members from 73 families with biallelic variants."
+      },
+      "numbers": [
+        {
+          "metric": "individuals with dominant pathogenic variants",
+          "value": 35
+        },
+        {
+          "metric": "total cohort size",
+          "value": 34329
+        }
+      ]
+    }
+  ]
+}
+```

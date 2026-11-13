@@ -1,0 +1,73 @@
+# Homework 1 public teaching repository: assignments/OMIM_617560/grill_run/tasks/0010_screen_h4/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_617560/grill_run/tasks/0010_screen_h4/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_617560/grill_run/tasks/0010_screen_h4/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature establishes a broad spectrum from severe infantile hypomyelination to milder childhood-onset spastic ataxia, but studies disagree on whether variant type (truncating vs missense) strictly correlates with severity.",
+  "confidence": 0.6,
+  "evidence": [
+    {
+      "text": "Analysis of a cohort with homozygous NKX6-2 variants and comparison to previously published cases failed to identify clear genotype-phenotype correlations across clinical presentations.",
+      "stance": "contradicts",
+      "source": {
+        "title": "Expanding the clinical and genetic spectra of NKX6\u20102\u2010related disorder",
+        "authors": [
+          "C Baldi",
+          "AM Bertoli\u2010Avella",
+          "N Al\u2010Sannaa"
+        ],
+        "year": 2018,
+        "journal": null,
+        "doi": "10.1111/cge.13221",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/cge.13221",
+        "quote": "Comparative analysis of our 10 patients and the 15 reported previously did, however, not reveal clear evidence for a genotype-phenotype correlation."
+      },
+      "numbers": [
+        {
+          "metric": "patients analyzed in study cohort",
+          "value": 10
+        },
+        {
+          "metric": "previously reported patients analyzed",
+          "value": 15
+        }
+      ]
+    },
+    {
+      "text": "Characterization of NKX6-2 cases demonstrated a broad phenotypic spectrum ranging from severe neonatal onset with global delay to childhood onset with a milder, predominantly motor spastic ataxia phenotype.",
+      "stance": "supports",
+      "source": {
+        "title": "Genetic and phenotypic characterization of NKX6\u20102\u2010related spastic ataxia and hypomyelination",
+        "authors": [
+          "V Chelban",
+          "M Alsagob",
+          "K Kloth"
+        ],
+        "year": 2020,
+        "journal": null,
+        "doi": "10.1111/ene.14082",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/ene.14082",
+        "quote": "Our data reveal a phenotype spectrum with neonatal onset, global psychomotor delay and worse prognosis at the severe end and a childhood onset with mainly motor phenotype at the milder end."
+      },
+      "numbers": [
+        {
+          "metric": "new cases identified",
+          "value": 11
+        },
+        {
+          "metric": "families identified",
+          "value": 8
+        }
+      ]
+    }
+  ]
+}
+```

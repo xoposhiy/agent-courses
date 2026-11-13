@@ -1,0 +1,105 @@
+# Homework 1 public teaching repository: assignments/OMIM_618089/grill_run/tasks/0029_deep_h10/meta.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_618089/grill_run/tasks/0029_deep_h10/meta.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_618089/grill_run/tasks/0029_deep_h10/meta.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "mode": "research",
+  "model": "gemini-3.8-flash",
+  "executor": "direct",
+  "queries": [
+    "\"FBXO11\" \"trichorhinophalangeal syndrome\" phenotype",
+    "FBXO11 missense variant phenocopy trichorhinophalangeal syndrome TRPS"
+  ],
+  "n_hits": 10,
+  "hits": [
+    {
+      "id": "https://www.sciencedirect.com/science/article/pii/S1769721224000363",
+      "title": "How many phenotypes for the FBXO11 related disease? Report on a new patient with a tricho-rhino-phalangeal like phenotype",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.sciencedirect.com/science/article/pii/S1769721224000363",
+      "abstract_chars": 1168
+    },
+    {
+      "id": "10.1002/jcp.27246",
+      "title": "MicroRNAs and breast cancer stem cells: potential role in breast cancer therapy",
+      "pmid": null,
+      "doi": "10.1002/jcp.27246",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/jcp.27246",
+      "abstract_chars": 986
+    },
+    {
+      "id": "https://www.cell.com/ajhg/fulltext/S0002-9297(20)30230-5",
+      "title": "Interpretable clinical genomics with a likelihood ratio paradigm",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.cell.com/ajhg/fulltext/S0002-9297(20)30230-5",
+      "abstract_chars": 1500
+    },
+    {
+      "id": "https://s-space.snu.ac.kr/handle/10371/188348",
+      "title": "Clinical and Sociodemographic analysis, and Diagnostic Research of Undiagnosed Pediatric Patients Suspected to Have Genetic Disorders",
+      "pmid": null,
+      "doi": null,
+      "url": "https://s-space.snu.ac.kr/handle/10371/188348",
+      "abstract_chars": 0
+    },
+    {
+      "id": "https://www.sciencedirect.com/science/article/pii/S152515782030297X",
+      "title": "Low-pass genome sequencing: validation and diagnostic utility from 409 clinical cases of low-pass genome sequencing for the detection of copy number\u00a0\u2026",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.sciencedirect.com/science/article/pii/S152515782030297X",
+      "abstract_chars": 1637
+    },
+    {
+      "id": "https://pubmed.ncbi.nlm.nih.gov/38679370/",
+      "title": "How many phenotypes for the FBXO11 related disease? ...",
+      "pmid": null,
+      "doi": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38679370/",
+      "abstract_chars": 1168
+    },
+    {
+      "id": "https://allie.dbcls.jp/pubmed/TRPS%3BTrichorhinophalangeal%20syndrome.html?lang=ja",
+      "title": "Trichorhinophalangeal syndrome (TRPS)",
+      "pmid": null,
+      "doi": null,
+      "url": "https://allie.dbcls.jp/pubmed/TRPS%3BTrichorhinophalangeal%20syndrome.html?lang=ja",
+      "abstract_chars": 1206
+    },
+    {
+      "id": "https://www.ncbi.nlm.nih.gov/medgen/377912",
+      "title": "Pear-shaped nose (Concept Id: C1853482)",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.ncbi.nlm.nih.gov/medgen/377912",
+      "abstract_chars": 0
+    },
+    {
+      "id": "https://www.sciencedirect.com/science/article/abs/pii/S1091853122001446",
+      "title": "New ocular findings in a patient with a novel pathogenic ...",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1091853122001446",
+      "abstract_chars": 1121
+    },
+    {
+      "id": "42705688",
+      "title": "Trichorhinophalangeal Syndrome - GeneReviews - NCBI - NIH",
+      "pmid": "42705688",
+      "doi": "10.1136/bcr-2025-270257",
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK425926/",
+      "abstract_chars": 634
+    }
+  ],
+  "input_tokens": 6075,
+  "output_tokens": 2263,
+  "usd": 0.00983,
+  "seconds": 20.8,
+  "ok": true
+}
+```

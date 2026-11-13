@@ -1,0 +1,69 @@
+# Homework 1 public teaching repository: assignments/OMIM_618443/grill_run/tasks/0021_screen_h9/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_618443/grill_run/tasks/0021_screen_h9/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_618443/grill_run/tasks/0021_screen_h9/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature confirms Iwasawa et al. 2019 reported 5 individuals across 4 families with recurrent missense variants presenting with intellectual disability, while broader cohort studies confirm a variable cognitive spectrum.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "Iwasawa et al. identified 5 individuals from 4 families with recurrent de novo missense variants in MAPK8IP3, with intellectual disability among the core clinical phenotype features.",
+      "stance": "supports",
+      "source": {
+        "title": "Recurrent de novo MAPK8IP3 variants cause neurological ...",
+        "authors": [],
+        "year": 2019,
+        "journal": "Annals of Neurology",
+        "doi": null,
+        "pmid": "30945334",
+        "pmc": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30945334/",
+        "quote": "We identified 5 individuals from four families with recurrent de novo variants c.1732C>T (p.Arg578Cys) and c.3436C>T (p.Arg1146Cys) in MAPK8IP3. The core phenotype includes spastic diplegia, intellectual disability, cerebral atrophy, and corpus callosum hypoplasia."
+      },
+      "numbers": [
+        {
+          "metric": "affected individuals evaluated",
+          "value": 5
+        },
+        {
+          "metric": "families",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "text": "Cognitive performance across individuals with heterozygous pathogenic MAPK8IP3 variants exhibits a broad spectrum, with a mean DAS-II General Conceptual Ability score of 62.5 +/- 26.5.",
+      "stance": "supports",
+      "source": {
+        "title": "Comprehensive Clinical Characteristics, Longitudinal Adaptive Functioning, and Electroencephalogram Activity in MAPK8IP3\u2010Related Neurodevelopmental Disorder",
+        "authors": [
+          "KK Sudnawa",
+          "A Geltzeiler",
+          "CH Kanner"
+        ],
+        "year": 2026,
+        "journal": "Clinical Genetics",
+        "doi": "10.1111/cge.70032",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/cge.70032",
+        "quote": "The mean DAS-II General Conceptual Ability score was 62.5 \u00b1 26.5."
+      },
+      "numbers": [
+        {
+          "metric": "mean DAS-II General Conceptual Ability score",
+          "value": 62.5
+        },
+        {
+          "metric": "total cohort size",
+          "value": 32
+        }
+      ]
+    }
+  ]
+}
+```

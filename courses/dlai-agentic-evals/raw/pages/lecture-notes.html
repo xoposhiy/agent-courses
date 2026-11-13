@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Evals Lecture Notes - Evals Resources - DeepLearning.AI</title>
+    <meta name="description" content="Lecture notes for the Evaluating &amp; Improving Agentic Applications course. 
+Note: These slides haven’t been maintained, and you might find missing topics and incorrect information in them, as opposed to lecture videos, wh…">
+    <meta name="generator" content="Discourse 2026.11.0-latest.1 - https://github.com/discourse/discourse version 2769139d59ca8284ff148fdc54094d414092700e">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/dlai/optimized/1X/7ffdac4759e95c8945939943bd85b8aca342d961_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/dlai/optimized/1X/7ffdac4759e95c8945939943bd85b8aca342d961_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://community.deeplearning.ai/t/evals-lecture-notes/896118" />
+
+<meta name="discourse-track-view-session-id" content="5hBpoO7mxOionVmnEkv6hHximjZe0pJ5">
+  <link rel="search" type="application/opensearchdescription+xml" href="https://community.deeplearning.ai/opensearch.xml" title="DeepLearning.AI Search">
+
+    
+    <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/color_definitions_light-default_-1_29_6928966556bebc1bf9e62606734d2211f11e4317.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" class="light-scheme"/>
+
+<link href="https://sea1.discourse-cdn.com/dlai/stylesheets/common_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="common"  />
+
+
+
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/automation_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="automation"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/boards_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="boards"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/chat_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="chat"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/checklist_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-adplugin_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-ai_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-cakeday_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-code-review_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-code-review"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-data-explorer_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-data-explorer"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-details_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-events_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-events"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-gamification_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-gamification"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-github_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-github"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-graphviz_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-graphviz"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-lazy-videos_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-local-dates_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-math_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-math"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-narrative-bot_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-policy_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-policy"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-post-voting_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-post-voting"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-presence_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-reactions_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-reactions"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-solved_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-templates_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-templates"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-topic-voting_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-user-notes_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="discourse-user-notes"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/footnote_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/hosted-site_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/poll_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/spoiler-alert_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/chat_mobile_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="(width < 40rem)" rel="stylesheet" data-target="chat_mobile"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-ai_mobile_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="(width < 40rem)" rel="stylesheet" data-target="discourse-ai_mobile"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-events_mobile_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="(width < 40rem)" rel="stylesheet" data-target="discourse-events_mobile"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-gamification_mobile_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="(width < 40rem)" rel="stylesheet" data-target="discourse-gamification_mobile"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-reactions_mobile_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="(width < 40rem)" rel="stylesheet" data-target="discourse-reactions_mobile"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/chat_desktop_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="(width >= 40rem)" rel="stylesheet" data-target="chat_desktop"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-ai_desktop_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="(width >= 40rem)" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-events_desktop_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="(width >= 40rem)" rel="stylesheet" data-target="discourse-events_desktop"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-gamification_desktop_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="(width >= 40rem)" rel="stylesheet" data-target="discourse-gamification_desktop"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/discourse-reactions_desktop_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="(width >= 40rem)" rel="stylesheet" data-target="discourse-reactions_desktop"  />
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/poll_desktop_bfb9e799a5f18e3f8212740dc350e6e07c3a3722.css?__ws=community.deeplearning.ai" media="(width >= 40rem)" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/common_theme_19_473cc54f88c20ebe881948d1ad7616922af6e270.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="19" data-theme-name="easy footer (revamp)"/>
+<link href="https://sea1.discourse-cdn.com/dlai/stylesheets/common_theme_25_595cf83868cfaf8a5a1c4ead2f840327db9c924f.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="25" data-theme-name="icon header links (revamp)"/>
+<link href="https://sea1.discourse-cdn.com/dlai/stylesheets/common_theme_38_6f08155437edce4924874b6404080c4b8d6d8bca.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="38" data-theme-name="new topic button permission classes"/>
+<link href="https://sea1.discourse-cdn.com/dlai/stylesheets/common_theme_26_bf980db102006d5a5c5201fbd1aeadd321c32f48.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="26" data-theme-name="tag icons (revamp)"/>
+<link href="https://sea1.discourse-cdn.com/dlai/stylesheets/common_theme_29_9191c1496f9a5db7742bbc39e3d0d799e7c35720.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="29" data-theme-name="deeplearningai (new - git repo)"/>
+<link href="https://sea1.discourse-cdn.com/dlai/stylesheets/common_theme_22_51915c3fa2c4b95eefc1706fe91cfbc117dd9754.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="22" data-theme-name="custom-icon-color-sidebar-links (revamp)"/>
+<link href="https://sea1.discourse-cdn.com/dlai/stylesheets/common_theme_40_0c8c282e3df1b8308c51b0119cb3546a3fe99c29.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="40" data-theme-name="hide category description"/>
+<link href="https://sea1.discourse-cdn.com/dlai/stylesheets/common_theme_33_712c3d5ca2fc317fae0b82d4900beb3b3b5c9b9f.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="33" data-theme-name="hide llmops description"/>
+<link href="https://sea1.discourse-cdn.com/dlai/stylesheets/common_theme_39_c049879889f84ad255087f9fd1247d319625ef94.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="39" data-theme-name="new topic button styles"/>
+<link href="https://sea1.discourse-cdn.com/dlai/stylesheets/common_theme_32_ac17864e233b1fc812f20bba17393f71f32dae17.css?__ws=community.deeplearning.ai" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="32" data-theme-name="order tag groups and hide sidebar categories"/>
+  <link href="https://sea1.discourse-cdn.com/dlai/stylesheets/mobile_theme_31_e06d4ed37d14f349487cfce9c718791eeeadd31e.css?__ws=community.deeplearning.ai" media="(width < 40rem)" rel="stylesheet" data-target="mobile_theme" data-theme-id="31" data-theme-name="ux: mobile fix"/>
+  
+
+
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Evals Lecture Notes&#39;" href="https://community.deeplearning.ai/t/evals-lecture-notes/896118.rss" />
+    <meta property="og:site_name" content="DeepLearning.AI" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/dlai/original/1X/7ffdac4759e95c8945939943bd85b8aca342d961.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/dlai/original/1X/7ffdac4759e95c8945939943bd85b8aca342d961.png" />
+<meta property="og:url" content="https://community.deeplearning.ai/t/evals-lecture-notes/896118" />
+<meta name="twitter:url" content="https://community.deeplearning.ai/t/evals-lecture-notes/896118" />
+<meta property="og:title" content="Evals Lecture Notes" />
+<meta name="twitter:title" content="Evals Lecture Notes" />
+<meta property="og:description" content="Lecture notes for the Evaluating &amp; Improving Agentic Applications course.  Note: These slides haven’t been maintained, and you might find missing topics and incorrect information in them, as opposed to lecture videos, where we try to update the misinformation or errors as soon as we are aware of them. We encourage you to make your own notes.  Module 1: Foundations of Evals   M1-Evals.pdf (3.8 MB)  Module 2: Observing and Benchmarking Agents   M2-Evals.pdf (3.6 MB)  Module 3: Building Evaluators ..." />
+<meta name="twitter:description" content="Lecture notes for the Evaluating &amp; Improving Agentic Applications course.  Note: These slides haven’t been maintained, and you might find missing topics and incorrect information in them, as opposed to lecture videos, where we try to update the misinformation or errors as soon as we are aware of them. We encourage you to make your own notes.  Module 1: Foundations of Evals   M1-Evals.pdf (3.8 MB)  Module 2: Observing and Benchmarking Agents   M2-Evals.pdf (3.6 MB)  Module 3: Building Evaluators ..." />
+<meta property="og:article:section" content="Course Q&amp;A" />
+<meta property="og:article:section:color" content="0088CC" />
+<meta property="og:article:section" content="Evaluating &amp; Improving Agentic Applications" />
+<meta property="og:article:section:color" content="0088CC" />
+<meta property="og:article:section" content="Evals Resources" />
+<meta property="og:article:section:color" content="0088CC" />
+<meta property="og:article:tag" content="evals-resources" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 min 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="8 ❤" />
+<meta property="article:published_time" content="2026-11-02T18:14:11+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <link rel="alternate" type="text/markdown" href="https://community.deeplearning.ai/t/evals-lecture-notes/896118.md">
+    
+
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">DeepLearning.AI</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/evals-lecture-notes/896118">Evals Lecture Notes</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/course-q-a/406" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0088CC'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Course Q&amp;A</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/course-q-a/evaluating-improving-agentic-applications/634" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0088CC'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Evaluating &amp; Improving Agentic Applications</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/course-q-a/evaluating-improving-agentic-applications/evals-resources/635" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0088CC'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Evals Resources</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="3" />
+          </span>
+        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <meta itemprop="name" content="Evals Lecture Notes" />
+          <link itemprop="item" href="https://community.deeplearning.ai/t/evals-lecture-notes/896118" />
+          <meta itemprop="position" content="4" />
+        </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://community.deeplearning.ai/tag/evals-resources' class='discourse-tag' rel="tag">evals-resources</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope="itemscope" itemtype="http://schema.org/DiscussionForumPosting">
+      <meta itemprop='headline' content='Evals Lecture Notes'>
+      <link itemprop='url' href='https://community.deeplearning.ai/t/evals-lecture-notes/896118'>
+      <meta itemprop='datePublished' content='2026-11-02T18:14:10Z'>
+      <meta itemprop='keywords' content='evals-resources'>
+          <meta itemprop='articleSection' content='Evals Resources'>
+        <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+          <meta itemprop='name' content='DeepLearning.AI'>
+            <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+              <meta itemprop='url' content='https://global.discourse-cdn.com/dlai/original/1X/39e35de07884401e91ac02759d0d7088bca93cf9.png'>
+            </div>
+        </div>
+
+      
+
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://community.deeplearning.ai/u/recuadrala'><span itemprop="name">recuadrala</span></a>
+                  <meta itemprop='url' content='https://community.deeplearning.ai/u/recuadrala'>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://community.deeplearning.ai/t/evals-lecture-notes/896118">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2026-11-02T18:14:11Z' class='post-time'>
+                    November 2, 2026,  6:14pm
+                  </time>
+                  <meta itemprop='dateModified' content='2026-11-05T23:53:58Z'>
+              <span itemprop="position">1</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>Lecture notes for the <strong>Evaluating &amp; Improving Agentic Applications</strong> course.</p>
+<p><strong>Note:</strong> These slides haven’t been maintained, and you might find missing topics and incorrect information in them, as opposed to lecture videos, where we try to update the misinformation or errors as soon as we are aware of them. <strong>We encourage you to make your own notes.</strong></p>
+<p><strong>Module 1: Foundations of Evals</strong></p>
+<ul>
+<li><a class="attachment" href="/uploads/short-url/c8xBrMPWqkILoU6CWXklx4kFs8Z.pdf">M1-Evals.pdf</a> (3.8 MB)</li>
+</ul>
+<p><strong>Module 2: Observing and Benchmarking Agents</strong></p>
+<ul>
+<li><a class="attachment" href="/uploads/short-url/9wgIKm0rLjWcOnUJdsVphq2ms98.pdf">M2-Evals.pdf</a> (3.6 MB)</li>
+</ul>
+<p><strong>Module 3: Building Evaluators You Can Trust</strong></p>
+<ul>
+<li><a class="attachment" href="/uploads/short-url/tLSAIa9bPtyFDEq1AqLAkqDmyfR.pdf">M3-Evals.pdf</a> (5.9 MB)</li>
+</ul>
+<p><strong>Module 4: Evaluating Agent Actions and Outcomes</strong></p>
+<ul>
+<li><a class="attachment" href="/uploads/short-url/6g4jtQ0QNcMsyIOESETOiLUWS1m.pdf">M4-Evals.pdf</a> (1.8 MB)</li>
+</ul>
+<p><strong>Module 5: Improving Agentic Applications</strong></p>
+<ul>
+<li><a class="attachment" href="/uploads/short-url/rkaTE0Pcgkuc0v9pBgWMsTHy9bd.pdf">M5-Evals.pdf</a> (2.5 MB)</li>
+</ul>
+            </div>
+
+              <div itemprop="interactionStatistic" itemscope="itemscope" itemtype="http://schema.org/InteractionCounter">
+                  <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+                  <meta itemprop="userInteractionCount" content="5" />
+                <span class='post-likes'>5 Likes</span>
+              </div>
+
+
+            
+
+
+          </div>
+          <div id='post_2' itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://community.deeplearning.ai/u/TMosh'><span itemprop="name">TMosh</span></a>
+                  <meta itemprop='url' content='https://community.deeplearning.ai/u/TMosh'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2026-11-05T00:23:33Z' class='post-time'>
+                    November 5, 2026, 12:23am
+                  </time>
+                  <meta itemprop='dateModified' content='2026-11-05T00:23:33Z'>
+              <span itemprop="position">2</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>Is “Evals” a good shortcut name for this course?</p>
+<p>Seems to me that students searching the forums are  going to use “evaluating” as a search term rather than “evals”. And they’ll get zero search results.</p>
+            </div>
+
+              <div itemprop="interactionStatistic" itemscope="itemscope" itemtype="http://schema.org/InteractionCounter">
+                  <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+                  <meta itemprop="userInteractionCount" content="2" />
+                <span class='post-likes'>2 Likes</span>
+              </div>
+
+
+            
+
+
+          </div>
+          <div id='post_3' itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://community.deeplearning.ai/u/omarWael'><span itemprop="name">omarWael</span></a>
+                  <meta itemprop='url' content='https://community.deeplearning.ai/u/omarWael'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2026-11-05T06:12:00Z' class='post-time'>
+                    November 5, 2026,  6:12am
+                  </time>
+                  <meta itemprop='dateModified' content='2026-11-05T06:12:00Z'>
+              <span itemprop="position">3</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>I totally agree with that . i see that use ‘‘evaluating’’ shortcut name , will be more good than “Evals” . my point of view .</p>
+            </div>
+
+              <div itemprop="interactionStatistic" itemscope="itemscope" itemtype="http://schema.org/InteractionCounter">
+                  <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+                  <meta itemprop="userInteractionCount" content="1" />
+                <span class='post-likes'>1 Like</span>
+              </div>
+
+
+            
+
+
+          </div>
+
+    </div>
+
+
+    <div id="related-topics" class="more-topics__list " role="complementary" aria-labelledby="related-topics-title">
+  <h3 id="related-topics-title" class="more-topics__list-title">
+    Related topics
+  </h3>
+  <div class="topic-list-container" itemscope itemtype='http://schema.org/ItemList'>
+    <meta itemprop='itemListOrder' content='http://schema.org/ItemListOrderDescending'>
+    <table class='topic-list'>
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th></th>
+          <th class="replies">Replies</th>
+          <th class="views">Views</th>
+          <th>Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="topic-list-item" id="topic-list-item-896117">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='1'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://community.deeplearning.ai/t/evaluating-and-improving-agentic-applications/896117' class='title raw-link raw-topic-link'>Evaluating and Improving Agentic Applications</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/course-q-a/406' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #0088CC'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Course Q&amp;A</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>0</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>40</span>
+            </td>
+            <td>
+              November 2, 2026
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-896149">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='2'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://community.deeplearning.ai/t/new-course-enroll-in-evaluating-and-improving-agentic-applications/896149' class='title raw-link raw-topic-link'>✨ New Course! Enroll in Evaluating and Improving Agentic Applications</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/news-and-announcements/24' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #F65B66'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>News and Announcements</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                      <a href='https://community.deeplearning.ai/tag/ai-discussions/19' class='discourse-tag'>ai-discussions</a>
+                      ,&nbsp;
+                      <a href='https://community.deeplearning.ai/tag/dl-ai-learning-platform/179' class='discourse-tag'>dl-ai-learning-platform</a>
+                      
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>0</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>135</span>
+            </td>
+            <td>
+              November 4, 2026
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-773080">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='3'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://community.deeplearning.ai/t/new-course-enroll-in-evaluating-ai-agents/773080' class='title raw-link raw-topic-link'>✨ New course! Enroll in Evaluating AI Agents</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/news-and-announcements/24' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #F65B66'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>News and Announcements</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                      <a href='https://community.deeplearning.ai/tag/short-course/68' class='discourse-tag'>short-course</a>
+                      ,&nbsp;
+                      <a href='https://community.deeplearning.ai/tag/agents/178' class='discourse-tag'>agents</a>
+                      ,&nbsp;
+                      <a href='https://community.deeplearning.ai/tag/dl-ai-learning-platform/179' class='discourse-tag'>dl-ai-learning-platform</a>
+                      
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>8</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>987</span>
+            </td>
+            <td>
+              June 1, 2026
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-891624">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='4'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://community.deeplearning.ai/t/course-slides-agentic-ai/891624' class='title raw-link raw-topic-link'>Course Slides - Agentic AI</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/course-q-a/agentic-ai/567' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #1C74EB'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Agentic AI</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                      <a href='https://community.deeplearning.ai/tag/week-module-1/10' class='discourse-tag'>week-module-1</a>
+                      ,&nbsp;
+                      <a href='https://community.deeplearning.ai/tag/dl-ai-learning-platform/179' class='discourse-tag'>dl-ai-learning-platform</a>
+                      
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>2</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>750</span>
+            </td>
+            <td>
+              April 20, 2026
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-880807">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='5'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://community.deeplearning.ai/t/few-follow-up-questions-on-agents-evaluation/880807' class='title raw-link raw-topic-link'>Few follow up questions on Agents evaluation</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/short-course-q-a/building-and-evaluating-data-agents/566' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #A12F9D'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Building and Evaluating Data Agents</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>0</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>60</span>
+            </td>
+            <td>
+              October 6, 2025
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='https://community.deeplearning.ai/c/faq/terms-and-services/396' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='https://community.deeplearning.ai/t/about-the-privacy-category/522460' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

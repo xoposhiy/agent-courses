@@ -1,0 +1,75 @@
+# Homework 1 public teaching repository: assignments/OMIM_621548/grill_run/tasks/0009_screen_h1/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621548/grill_run/tasks/0009_screen_h1/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621548/grill_run/tasks/0009_screen_h1/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "CLN3-associated isolated retinal degeneration (RP101) presents as a rod-cone dystrophy often featuring early macular changes or bull's-eye maculopathy.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "In a cohort of 10 patients with isolated nonsyndromic retinal disease due to CLN3 mutations, patients exhibited rod-cone dystrophy with onset ranging from early to late, features of bull's-eye maculopathy or macular atrophy, and electroretinography revealing rod-cone dysfunction or undetectable responses.",
+      "stance": "supports",
+      "source": {
+        "title": "Detailed Clinical Phenotype and Molecular Genetic Findings in CLN3-Associated Isolated Retinal Degeneration",
+        "authors": [
+          "CA Ku",
+          "S Hull",
+          "G Arno",
+          "A Vincent",
+          "K Carss"
+        ],
+        "year": 2017,
+        "journal": null,
+        "doi": "10.1001/jamaophthalmol.2017.1401",
+        "pmid": "28542676",
+        "pmc": null,
+        "url": "https://jamanetwork.com/journals/jamaophthalmology/article-abstract/2629120",
+        "quote": "Electroretinography revealed a rod-cone pattern of dysfunction in 6 patients and were completely undetectable in 2 patients."
+      },
+      "numbers": [
+        {
+          "metric": "affected patients in cohort",
+          "value": 10
+        },
+        {
+          "metric": "patients with rod-cone pattern dysfunction on ERG",
+          "value": 6
+        }
+      ]
+    },
+    {
+      "text": "Among 15 patients harboring biallelic CLN3 variants with isolated retinal degeneration, two patterns of rod-cone degeneration were identified, including severe retinal degeneration with early macular atrophic changes.",
+      "stance": "supports",
+      "source": {
+        "title": "Retinal Phenotype of Patients With Isolated Retinal Degeneration Due to CLN3 Pathogenic Variants in a French Retinitis Pigmentosa Cohort",
+        "authors": [
+          "VM Smirnov",
+          "M Nassisi",
+          "C Solis Hernandez"
+        ],
+        "year": 2021,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://jamanetwork.com/journals/jamaophthalmology/article-abstract/2775583",
+        "quote": "Two distinct patterns of retinal disease could be identified: a mild rod-cone degeneration of middle-age onset (n = 6; legal blindness threshold reached by 70s) and a severe retinal degeneration with early macular atrophic changes (n = 9; legal blindness threshold reached by 40s)."
+      },
+      "numbers": [
+        {
+          "metric": "total cases with isolated retinal degeneration and biallelic CLN3 variants",
+          "value": 15
+        },
+        {
+          "metric": "severe retinal degeneration with early macular atrophic changes",
+          "value": 9
+        }
+      ]
+    }
+  ]
+}
+```

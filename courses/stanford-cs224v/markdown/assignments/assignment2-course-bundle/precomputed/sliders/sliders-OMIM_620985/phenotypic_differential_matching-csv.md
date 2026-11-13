@@ -1,0 +1,12 @@
+# Homework 2 bundle: precomputed/sliders/sliders-OMIM_620985/phenotypic_differential_matching.csv
+
+[Course index](../../../../../../README.md) · [Original source](https://drive.google.com/file/d/1VPlTDJULw4qIkQuVcHxxPh4Q50Nvmi-z/view#archive-member=precomputed/sliders/sliders-OMIM_620985/phenotypic_differential_matching.csv) · [Raw file](../../../../../../raw/assignments/assignment2-course-bundle/precomputed/sliders/sliders-OMIM_620985/phenotypic_differential_matching.csv)
+
+Retrieved: 2026-11-13T17:00:50.402745+00:00
+
+```csv
+row_id,target_disease,mimic_disease,overlapping_phenotypes,discriminating_phenotype,discriminating_logic,diagnostic_confidence
+b2af255bc26b9ae3:0:phenotypic_differential_matching:0,Karayol-Borroto-Haghshenas neurodevelopmental syndrome,Basilicata-Akhtar syndrome,"neurodevelopmental delay, intellectual disability, hypotonia",Autism spectrum behaviors (~64%),"Autistic traits occur in 64.3% of MSL2 mutation individuals, distinctly higher than in MSL3-related Basilicata-Akhtar syndrome.",low
+b2af255bc26b9ae3:0:phenotypic_differential_matching:1,Karayol-Borroto-Haghshenas neurodevelopmental syndrome,KAT8-related disorders,"motor impairment, neurodevelopmental delay",Qualitative Neuromotor Deficit Profile,"Motor impairment in MSL2 is dominated by early feeding difficulties (81.3%), axial/truncal hypotonia (76.5%), and gait ataxia (44%) rather than early-onset refractory epileptic encephalopathy or progressive hypertonic spasticity seen in severe KAT8 mutations.",moderate
+
+```

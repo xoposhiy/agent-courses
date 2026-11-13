@@ -1,0 +1,175 @@
+# E2B sandbox lifecycle
+
+[Course index](../../README.md) · [Original source](https://docs.e2b.dev/sandbox) · [Raw file](../../raw/optional-readings/ref-abe4ecf03936.html)
+
+Retrieved: 2026-11-13T16:57:21.814256+00:00
+
+Sandbox
+
+# Sandbox lifecycle
+
+Copy pageCopy page
+
+The sandbox lifecycle: create, connect to, pause, resume, and kill an isolated Linux VM for your agent, and control what happens when its timeout expires.
+
+Copy pageCopy page
+
+Sandboxes stay running as long as you need them. When their timeout expires, they can automatically pause to save resources — preserving their full state so you can resume at any time. You can also configure an explicit timeout or shut down a sandbox manually.
+
+Sandboxes can run continuously for up to 24 hours (Pro) or 1 hour (Hobby). For longer workloads, use [pause and resume](ref-85b9cb4e727d.md) - pausing resets the runtime window, and your sandbox’s full state is preserved indefinitely.This limit is about the sandbox, not about a single stream to it. See [Stream connections](https://docs.e2b.dev/faq/sandbox-lifetime#stream-connections).
+
+JavaScript & TypeScript
+
+Python
+
+```
+import { Sandbox } from 'e2b'
+
+// Create sandbox with and keep it running for 60 seconds.
+// 🚨 Note: The units are milliseconds.
+const sandbox = await Sandbox.create({
+  timeoutMs: 60_000,
+})
+```
+
+```
+from e2b import Sandbox
+
+# Create sandbox with and keep it running for 60 seconds.
+# 🚨 Note: The units are seconds.
+sandbox = Sandbox.create(
+  timeout=60,
+)
+```
+
+## Change sandbox timeout during runtime
+
+You can change the sandbox timeout when it’s running by calling the `setTimeout` method in JavaScript or `set_timeout` method in Python.
+When you call the set timeout method, the sandbox timeout will be reset to the new value that you specified.
+This can be useful if you want to extend the sandbox lifetime when it’s already running.
+You can for example start with a sandbox with 1 minute timeout and then periodically call set timeout every time a user interacts with it in your app.
+
+JavaScript & TypeScript
+
+Python
+
+```
+import { Sandbox } from 'e2b'
+
+// Create sandbox with and keep it running for 60 seconds.
+const sandbox = await Sandbox.create({ timeoutMs: 60_000 })
+
+// Change the sandbox timeout to 30 seconds.
+// 🚨 The new timeout will be 30 seconds from now.
+await sandbox.setTimeout(30_000)
+```
+
+```
+from e2b import Sandbox
+
+# Create sandbox with and keep it running for 60 seconds.
+sandbox = Sandbox.create(timeout=60)
+
+# Change the sandbox timeout to 30 seconds.
+# 🚨 The new timeout will be 30 seconds from now.
+sandbox.set_timeout(30)
+```
+
+## Retrieve sandbox information
+
+You can retrieve sandbox information like sandbox ID, template, metadata, started at/end at date by calling the `getInfo` method in JavaScript or `get_info` method in Python.
+
+JavaScript & TypeScript
+
+Python
+
+```
+import { Sandbox } from 'e2b'
+
+// Create sandbox with and keep it running for 60 seconds.
+const sandbox = await Sandbox.create({ timeoutMs: 60_000 })
+
+// Retrieve sandbox information.
+const info = await sandbox.getInfo()
+
+console.log(info)
+
+// {
+//   sandboxId: 'iiny0783cype8gmoawzmx',
+//   templateId: 'rki5dems9wqfm4r03t7g',
+//   name: 'base',
+//   metadata: {},
+//   allowInternetAccess: undefined,
+//   envdVersion: '0.6.10',
+//   startedAt: 2026-10-04T11:21:01.301Z,
+//   endAt: 2026-10-04T11:22:01.301Z,
+//   state: 'running',
+//   cpuCount: 2,
+//   memoryMB: 512,
+//   network: undefined,
+//   lifecycle: { onTimeout: 'kill', autoResume: false },
+//   sandboxDomain: undefined,
+//   volumeMounts: []
+// }
+```
+
+```
+from e2b import Sandbox
+
+# Create sandbox with and keep it running for 60 seconds.
+sandbox = Sandbox.create(timeout=60)
+
+# Retrieve sandbox information.
+info = sandbox.get_info()
+
+print(info)
+
+# SandboxInfo(sandbox_id='ig6f1yt6idvxkxl562scj',
+#   sandbox_domain=None,
+#   template_id='rki5dems9wqfm4r03t7g',
+#   name='base',
+#   metadata={},
+#   started_at=datetime.datetime(2026, 10, 4, 11, 21, 3, 40545, tzinfo=tzutc()),
+#   end_at=datetime.datetime(2026, 10, 4, 11, 22, 3, 40545, tzinfo=tzutc()),
+#   state=<SandboxState.RUNNING: 'running'>,
+#   cpu_count=2,
+#   memory_mb=512,
+#   envd_version='0.6.10',
+#   allow_internet_access=None,
+#   network=None,
+#   lifecycle={'on_timeout': <SandboxOnTimeout.KILL: 'kill'>, 'auto_resume': False},
+#   volume_mounts=[]
+# )
+```
+
+## Shutdown sandbox
+
+You can shut down the sandbox any time even before the timeout is up by calling the `kill` method.
+
+JavaScript & TypeScript
+
+Python
+
+```
+import { Sandbox } from 'e2b'
+
+// Create sandbox with and keep it running for 60 seconds.
+const sandbox = await Sandbox.create({ timeoutMs: 60_000 })
+
+// Shutdown the sandbox immediately.
+await sandbox.kill()
+```
+
+```
+from e2b import Sandbox
+
+# Create sandbox with and keep it running for 60 seconds.
+sandbox = Sandbox.create(timeout=60)
+
+# Shutdown the sandbox immediately.
+sandbox.kill()
+```
+
+Was this page helpful?
+
+YesNo

@@ -1,0 +1,63 @@
+# Homework 1 public teaching repository: assignments/OMIM_620511/grill_run/tasks/0021_screen_h7/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620511/grill_run/tasks/0021_screen_h7/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620511/grill_run/tasks/0021_screen_h7/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature confirms cognitive abilities in SCAF4-associated disorder range from normal IQ to severe ID, with speech impairment and developmental delay being prominent and consistently reported.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "In an expanded cohort of 50 individuals with SCAF4 alterations, frequent clinical findings included mild developmental delay with speech impairment, whereas cognitive abilities varied widely from normal IQ to severe intellectual disability, with borderline to mild ID in the majority.",
+      "stance": "supports",
+      "source": {
+        "title": "Further delineation of the SCAF4-associated neurodevelopmental disorder",
+        "authors": [
+          "F Tran Mau"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.nature.com/articles/s41431-024-01760-2",
+        "quote": "Frequent clinical findings were mild developmental delay with speech impairment, seizures, and skeletal abnormalities such as clubfoot, scoliosis or hip dysplasia. Cognitive abilities ranged from normal IQ to severe intellectual disability (ID), with borderline to mild ID in the majority of individuals."
+      },
+      "numbers": [
+        {
+          "metric": "novel individuals evaluated",
+          "value": 50
+        }
+      ]
+    },
+    {
+      "text": "Initial characterization of individuals with SCAF4 pathogenic variants noted developmental delay and mild intellectual disability, with speech being more severely affected than motor milestones.",
+      "stance": "supports",
+      "source": {
+        "title": "Variants in SCAF4 cause a neurodevelopmental disorder and are associated with impaired mRNA processing",
+        "authors": [
+          "A Fliedner",
+          "P Kirchner",
+          "A Wiesener"
+        ],
+        "year": 2020,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.cell.com/ajhg/fulltext/S0002-9297(20)30228-7",
+        "quote": "Speech was more severely affected than motor development\u2026 developmental delay and intellectual disability and frequently"
+      },
+      "numbers": [
+        {
+          "metric": "germline variants identified",
+          "value": 9
+        }
+      ]
+    }
+  ]
+}
+```

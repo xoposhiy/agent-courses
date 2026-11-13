@@ -1,0 +1,65 @@
+# Homework 1 public teaching repository: assignments/OMIM_621307/grill_run/tasks/0020_screen_h9/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621307/grill_run/tasks/0020_screen_h9/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621307/grill_run/tasks/0020_screen_h9/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Harris et al. (2023) associate TBC1D32 with severe prenatal life-limiting anomalies specifically highlighting hypothalamic/pituitary and midline defects over primary oligohydramnios-associated renal failure.",
+  "confidence": 0.75,
+  "evidence": [
+    {
+      "text": "TBC1D32 is involved in cilia development/function and is strongly expressed in the developing hypothalamus and pituitary gland, presenting with severe prenatal life-limiting congenital anomalies.",
+      "stance": "supports",
+      "source": {
+        "title": "Diagnosis of TBC1D32\u2010associated conditions: Expanding the phenotypic spectrum of a complex ciliopathy",
+        "authors": [
+          "SC Harris",
+          "K Chong",
+          "D Chitayat"
+        ],
+        "year": 2023,
+        "journal": null,
+        "doi": "10.1002/ajmg.a.63150",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ajmg.a.63150",
+        "quote": "TBC1D32 is involved in the development and function of cilia and is expressed in the developing hypothalamus and pituitary gland. We provide additional data to expand the phenotype correlated with TBC1D32 variants, including a severe prenatal phenotype associated with life-limiting congenital anomalies."
+      },
+      "numbers": [
+        {
+          "metric": "unpublished probands described",
+          "value": 7
+        },
+        {
+          "metric": "fetal probands",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "text": "Alsahan-Harris syndrome (ALHAS, OMIM #621307) is characterized as an autosomal recessive severe prenatal phenotype associated with life-limiting congenital anomalies.",
+      "stance": "supports",
+      "source": {
+        "title": "Entry - #621307 - ALSAHAN-HARRIS SYNDROME; ALHAS",
+        "authors": [],
+        "year": null,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://omim.org/entry/621307",
+        "quote": "Alsahan-Harris syndrome (ALHAS) is an autosomal recessive severe prenatal phenotype associated with life-limiting congenital anomalies."
+      },
+      "numbers": [
+        {
+          "metric": "OMIM ID",
+          "value": "621307"
+        }
+      ]
+    }
+  ]
+}
+```

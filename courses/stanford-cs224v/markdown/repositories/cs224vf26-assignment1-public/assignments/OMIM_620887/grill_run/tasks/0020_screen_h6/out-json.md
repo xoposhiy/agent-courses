@@ -1,0 +1,73 @@
+# Homework 1 public teaching repository: assignments/OMIM_620887/grill_run/tasks/0020_screen_h6/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620887/grill_run/tasks/0020_screen_h6/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620887/grill_run/tasks/0020_screen_h6/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature confirms a wide spectrum in FDXR deficiency from isolated optic-acoustic neuropathy to severe infantile Leigh syndrome with microcephaly and elevated CSF/plasma lactate.",
+  "confidence": 0.8,
+  "evidence": [
+    {
+      "text": "Patients with FDXR deficiency present with a broad phenotypic spectrum ranging from Leigh syndrome with early demise and severe infantile-onset encephalopathy, microcephaly, and elevated CSF lactate, to milder movement disorders and optic atrophy/acoustic neuropathy.",
+      "stance": "supports",
+      "source": {
+        "title": "Expanding the clinical and genetic spectrum of FDXR deficiency by functional validation of variants of uncertain significance",
+        "authors": [
+          "SL Stenton",
+          "D Piekutowska\u2010Abramczuk"
+        ],
+        "year": 2021,
+        "journal": null,
+        "doi": "10.1002/humu.24160",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/humu.24160",
+        "quote": "Physical examination revealed microcephaly, slight facial \u2026 CSF lactate, in addition to features frequent to FDXR"
+      },
+      "numbers": [
+        {
+          "metric": "unpublished patients identified",
+          "value": 7
+        },
+        {
+          "metric": "independent families",
+          "value": 6
+        }
+      ]
+    },
+    {
+      "text": "FDXR mutations were initially reported in individuals presenting primarily with auditory neuropathy and optic atrophy without prominent early infantile Leigh-like encephalopathy.",
+      "stance": "supports",
+      "source": {
+        "title": "FDXR mutations cause sensorial neuropathies and expand the spectrum of mitochondrial Fe-S-synthesis diseases",
+        "authors": [
+          "A Paul",
+          "A Drecourt",
+          "F Petit",
+          "DD Deguine"
+        ],
+        "year": 2017,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.cell.com/ajhg/fulltext/S0002-9297(17)30376-2",
+        "quote": "Here, we report on eight subjects from four independent families affected by auditory neuropathy and optic atrophy."
+      },
+      "numbers": [
+        {
+          "metric": "affected subjects",
+          "value": 8
+        },
+        {
+          "metric": "independent families",
+          "value": 4
+        }
+      ]
+    }
+  ]
+}
+```

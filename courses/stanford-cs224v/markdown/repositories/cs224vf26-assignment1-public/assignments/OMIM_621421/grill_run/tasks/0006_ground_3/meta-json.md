@@ -1,0 +1,65 @@
+# Homework 1 public teaching repository: assignments/OMIM_621421/grill_run/tasks/0006_ground_3/meta.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621421/grill_run/tasks/0006_ground_3/meta.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621421/grill_run/tasks/0006_ground_3/meta.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "mode": "research",
+  "model": "gemini-3.8-flash",
+  "executor": "direct",
+  "queries": [
+    "\"spliceosomopathy\" \"TRA2B\" \"Ramond-Elliott\"",
+    "Ramond-Elliott neurodevelopmental syndrome TRA2B spliceosomopathy"
+  ],
+  "n_hits": 5,
+  "hits": [
+    {
+      "id": "https://omim.org/entry/621421",
+      "title": "621421 - RAMOND-ELLIOTT NEURODEVELOPMENTAL ...",
+      "pmid": null,
+      "doi": null,
+      "url": "https://omim.org/entry/621421",
+      "abstract_chars": 0
+    },
+    {
+      "id": "37958557",
+      "title": "TRA2B Gene Splice Variant Linked to Seizures and ...",
+      "pmid": "37958557",
+      "doi": "10.3390/ijms242115572",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37958557/",
+      "abstract_chars": 1115
+    },
+    {
+      "id": "36549593",
+      "title": "Clustered variants in the 5\u2032 coding region of TRA2B ...",
+      "pmid": "36549593",
+      "doi": "10.1016/j.gim.2022.100003",
+      "url": "https://www.sciencedirect.com/science/article/pii/S109836002201070X",
+      "abstract_chars": 1765
+    },
+    {
+      "id": "https://www.gimjournal.org/article/S1098-3600(22)01070-X/pdf",
+      "title": "Journal Pre-proof",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.gimjournal.org/article/S1098-3600(22)01070-X/pdf",
+      "abstract_chars": 0
+    },
+    {
+      "id": "https://omim.org/clinicalSynopsis/621421",
+      "title": "Clinical Synopsis - #621421 - RAMOND-ELLIOTT ...",
+      "pmid": null,
+      "doi": null,
+      "url": "https://omim.org/clinicalSynopsis/621421",
+      "abstract_chars": 0
+    }
+  ],
+  "input_tokens": 2351,
+  "output_tokens": 2827,
+  "usd": 0.00966,
+  "seconds": 16.2,
+  "ok": true
+}
+```

@@ -1,0 +1,75 @@
+# Homework 1 public teaching repository: assignments/OMIM_621548/grill_run/tasks/0037_screen_h12/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621548/grill_run/tasks/0037_screen_h12/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621548/grill_run/tasks/0037_screen_h12/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Macular edema is frequently observed in isolated CLN3 cohorts (e.g., 4 of 10 patients in Ku et al.), supporting further testing of its discriminatory value.",
+  "confidence": 0.7,
+  "evidence": [
+    {
+      "text": "In a series of 10 patients with isolated CLN3-associated retinal degeneration (4 late-onset, 6 early-onset), ophthalmoscopic features included macular edema in 4 patients, with 3 of the 4 occurring in late-onset cases.",
+      "stance": "supports",
+      "source": {
+        "title": "Detailed Clinical Phenotype and Molecular Genetic Findings in CLN3-Associated Isolated Retinal Degeneration",
+        "authors": [
+          "CA Ku",
+          "S Hull",
+          "G Arno",
+          "A Vincent",
+          "K Carss"
+        ],
+        "year": 2017,
+        "journal": null,
+        "doi": "10.1001/jamaophthalmol.2017.1401",
+        "pmid": "28542676",
+        "pmc": null,
+        "url": "https://jamanetwork.com/journals/jamaophthalmology/article-abstract/2629120",
+        "quote": "Three of these 4 patients had late-onset disease, suggesting cystoid macular edema as an early clinical feature that progress to macular atrophy."
+      },
+      "numbers": [
+        {
+          "metric": "Patients with macular edema",
+          "value": 4
+        },
+        {
+          "metric": "Total cohort size",
+          "value": 10
+        }
+      ]
+    },
+    {
+      "text": "In a cohort of 15 patients with isolated CLN3 retinal degeneration, 9 presented with severe retinal degeneration characterized by early macular atrophic changes rather than edema.",
+      "stance": "neutral",
+      "source": {
+        "title": "Retinal Phenotype of Patients With Isolated Retinal Degeneration Due to CLN3 Pathogenic Variants in a French Retinitis Pigmentosa Cohort",
+        "authors": [
+          "VM Smirnov",
+          "M Nassisi",
+          "C Solis Hernandez"
+        ],
+        "year": 2021,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": "PMC7844693",
+        "url": "https://jamanetwork.com/journals/jamaophthalmology/article-abstract/2775583",
+        "quote": "Two distinct patterns of retinal disease could be identified: a mild rod-cone degeneration of middle-age onset (n = 6; legal blindness threshold reached by 70s) and a severe retinal degeneration with early macular atrophic changes (n = 9; legal blindness threshold reached by 40s)."
+      },
+      "numbers": [
+        {
+          "metric": "Patients with early macular atrophy",
+          "value": 9
+        },
+        {
+          "metric": "Total cohort size",
+          "value": 15
+        }
+      ]
+    }
+  ]
+}
+```

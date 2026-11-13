@@ -1,0 +1,65 @@
+# Homework 1 public teaching repository: assignments/OMIM_618428/grill_run/tasks/0045_screen_h19/meta.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_618428/grill_run/tasks/0045_screen_h19/meta.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_618428/grill_run/tasks/0045_screen_h19/meta.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "mode": "research",
+  "model": "gemini-3.8-flash",
+  "executor": "direct",
+  "queries": [
+    "\"Popov-Chang\" \"YWHAZ\" \"cardiofaciocutaneous\" ectodermal skin",
+    "YWHAZ Popov-Chang syndrome ectodermal skin manifestations phenotype"
+  ],
+  "n_hits": 5,
+  "hits": [
+    {
+      "id": "PMC6465419",
+      "title": "A YWHAZ Variant Associated With Cardiofaciocutaneous ...",
+      "pmid": null,
+      "doi": null,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6465419/",
+      "abstract_chars": 1620
+    },
+    {
+      "id": "https://www.findzebra.com/details/Oww987X-popov-chang-syndrome?q=",
+      "title": "Popov-Chang Syndrome",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.findzebra.com/details/Oww987X-popov-chang-syndrome?q=",
+      "abstract_chars": 0
+    },
+    {
+      "id": "https://www.researchgate.net/figure/YWHAZ-and-YWHAZS230W-do-not-promote-membrane-recruitment-of-Raf-A-Craf-GFP-is_fig4_332295509",
+      "title": "YWHAZ and YWHAZ(S230W) do not promote membrane ...",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.researchgate.net/figure/YWHAZ-and-YWHAZS230W-do-not-promote-membrane-recruitment-of-Raf-A-Craf-GFP-is_fig4_332295509",
+      "abstract_chars": 0
+    },
+    {
+      "id": "38136934",
+      "title": "The Cardiofaciocutaneous Syndrome: From Genetics to ...",
+      "pmid": "38136934",
+      "doi": "10.3390/genes14122111",
+      "url": "https://www.mdpi.com/2073-4425/14/12/2111",
+      "abstract_chars": 1361
+    },
+    {
+      "id": "https://sysndd.dbmr.unibe.ch/Genes/HGNC:12855?returnTo=%2FEntities%3Fsort%3D-entry_date%26page_size%3D10",
+      "title": "Gene: YWHAZ | SysNDD - Universit\u00e4t Bern",
+      "pmid": null,
+      "doi": null,
+      "url": "https://sysndd.dbmr.unibe.ch/Genes/HGNC:12855?returnTo=%2FEntities%3Fsort%3D-entry_date%26page_size%3D10",
+      "abstract_chars": 0
+    }
+  ],
+  "input_tokens": 3233,
+  "output_tokens": 1339,
+  "usd": 0.00563,
+  "seconds": 10.7,
+  "ok": true
+}
+```

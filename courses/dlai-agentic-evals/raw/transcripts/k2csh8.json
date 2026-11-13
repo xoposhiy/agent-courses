@@ -1,0 +1,357 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 2,
+    "text": "Welcome to Module 5."
+  },
+  {
+    "startInSeconds": 2,
+    "endInSeconds": 6,
+    "text": "So far, you've learned how to collect traces, build datasets,"
+  },
+  {
+    "startInSeconds": 6,
+    "endInSeconds": 11,
+    "text": "and create evaluators that help you see where your agent\nsucceeds and where it fails."
+  },
+  {
+    "startInSeconds": 11,
+    "endInSeconds": 18,
+    "text": "Now, you're going to use all of that to improve the agent itself.\nThis is the improvement stage of the evaluation process."
+  },
+  {
+    "startInSeconds": 18,
+    "endInSeconds": 22,
+    "text": "And there's a little more to that than finding a bad response\nand changing the prompt."
+  },
+  {
+    "startInSeconds": 22,
+    "endInSeconds": 26,
+    "text": "A change can fix the failure you noticed and cause a new\nproblem somewhere else."
+  },
+  {
+    "startInSeconds": 26,
+    "endInSeconds": 31,
+    "text": "Or you can make several changes at once, see the score go up,\nand have no idea which change actually helped."
+  },
+  {
+    "startInSeconds": 31,
+    "endInSeconds": 35,
+    "text": "So before you start changing things, it helps to have a plan."
+  },
+  {
+    "startInSeconds": 35,
+    "endInSeconds": 40,
+    "text": "You need to decide what behavior you want to improve,\nchoose a change that might help,"
+  },
+  {
+    "startInSeconds": 40,
+    "endInSeconds": 43,
+    "text": "and set up a comparison that will tell you what happened."
+  },
+  {
+    "startInSeconds": 43,
+    "endInSeconds": 50,
+    "text": "Let's start with what you want to improve. Suppose you run the shelter\nagent on your eval set and find several failed matches."
+  },
+  {
+    "startInSeconds": 50,
+    "endInSeconds": 58,
+    "text": "Here's one of them: a volunteer has experience handling large dogs.\nThe dog is a very large Cane Corso that pulls strongly on walks."
+  },
+  {
+    "startInSeconds": 58,
+    "endInSeconds": 65,
+    "text": "The agent sees the volunteer's experience and approves the match.\nBut the evaluator rejects it. Why?"
+  },
+  {
+    "startInSeconds": 65,
+    "endInSeconds": 68,
+    "text": "Because experience with large dogs is useful information,"
+  },
+  {
+    "startInSeconds": 68,
+    "endInSeconds": 73,
+    "text": "but the agent never checked whether the volunteer can physically\nhandle this particular dog now."
+  },
+  {
+    "startInSeconds": 73,
+    "endInSeconds": 82,
+    "text": "So that gives you one failure. Now look at a few more. One evaluator\nexplanation says the volunteer's physical capacity wasn't assessed."
+  },
+  {
+    "startInSeconds": 82,
+    "endInSeconds": 88,
+    "text": "Another says experience with large dogs was treated as sufficient.\nAnother says the dog's pulling strength wasn't considered."
+  },
+  {
+    "startInSeconds": 88,
+    "endInSeconds": 93,
+    "text": "Those explanations sound a little different,\nbut they're pointing to the same underlying problem."
+  },
+  {
+    "startInSeconds": 93,
+    "endInSeconds": 99,
+    "text": "The agent is treating past experience as enough evidence\nthat the volunteer can physically handle the dog."
+  },
+  {
+    "startInSeconds": 99,
+    "endInSeconds": 106,
+    "text": "Now you have something much more useful than a collection of failed\nscores. You have a behavior you can try to improve."
+  },
+  {
+    "startInSeconds": 106,
+    "endInSeconds": 113,
+    "text": "You want the agent to consider current physical handling ability,\nrather than approving a match based on previous experience alone."
+  },
+  {
+    "startInSeconds": 113,
+    "endInSeconds": 116,
+    "text": "That's one way an improvement target can emerge."
+  },
+  {
+    "startInSeconds": 116,
+    "endInSeconds": 124,
+    "text": "You start with failures you've already observed, read the examples\nand the evaluator explanations, and look for a pattern worth fixing."
+  },
+  {
+    "startInSeconds": 124,
+    "endInSeconds": 128,
+    "text": "Sometimes though, you already know about a capability you\nwant the agent to gain."
+  },
+  {
+    "startInSeconds": 128,
+    "endInSeconds": 133,
+    "text": "Maybe you want the shelter agent to remember that a volunteer said,\n\"Don't schedule me for walks after six,\""
+  },
+  {
+    "startInSeconds": 133,
+    "endInSeconds": 137,
+    "text": "and respect that constraint throughout the rest of the conversation."
+  },
+  {
+    "startInSeconds": 137,
+    "endInSeconds": 144,
+    "text": "You can write an evaluation for that behavior before the agent can\nreliably do it. At first, you may expect it to fail."
+  },
+  {
+    "startInSeconds": 144,
+    "endInSeconds": 151,
+    "text": "Then you have a target to work towards as you improve the agent.\nYou'll sometimes hear this called eval-driven development."
+  },
+  {
+    "startInSeconds": 151,
+    "endInSeconds": 155,
+    "text": "An eval that tracks that a previous ability stays around is\ncalled a regression eval."
+  },
+  {
+    "startInSeconds": 155,
+    "endInSeconds": 160,
+    "text": "An eval that is looking for a new ability is called a capability eval."
+  },
+  {
+    "startInSeconds": 160,
+    "endInSeconds": 166,
+    "text": "So whether the target comes from a failure you've already seen,\nor a capability you want to add, the next question is the same."
+  },
+  {
+    "startInSeconds": 166,
+    "endInSeconds": 175,
+    "text": "what changes are worth trying. For that, let's switch to Northwind.\nWe'll use this example for the experiment in the next video."
+  },
+  {
+    "startInSeconds": 175,
+    "endInSeconds": 179,
+    "text": "A customer has bought a merino wool sweater\nand asks how to care for it."
+  },
+  {
+    "startInSeconds": 179,
+    "endInSeconds": 186,
+    "text": "The product tool returns one instruction, Machine washable on wool\ncycle, but the agent gives a much longer answer."
+  },
+  {
+    "startInSeconds": 186,
+    "endInSeconds": 192,
+    "text": "It recommends cool water, wool-specific detergent,\ncedar blocks for moths, and several other things."
+  },
+  {
+    "startInSeconds": 192,
+    "endInSeconds": 196,
+    "text": "Those suggestions may sound reasonable,\nbut the catalog didn't provide them."
+  },
+  {
+    "startInSeconds": 196,
+    "endInSeconds": 201,
+    "text": "So the faithfulness evaluator flags the response because some of the\nproduct claims aren't supported by the information"
+  },
+  {
+    "startInSeconds": 201,
+    "endInSeconds": 203,
+    "text": "the agent retrieved."
+  },
+  {
+    "startInSeconds": 203,
+    "endInSeconds": 210,
+    "text": "Now look at the agent's instructions. The current prompt doesn't say\nthat product details have to be supported by tool results."
+  },
+  {
+    "startInSeconds": 210,
+    "endInSeconds": 217,
+    "text": "That gives you a reasonable change to test. You could add,\nnever state a product detail unless a tool result supports it."
+  },
+  {
+    "startInSeconds": 217,
+    "endInSeconds": 222,
+    "text": "For the sweater question, that should push the agent to stick to the\ncare instruction it actually retrieved."
+  },
+  {
+    "startInSeconds": 222,
+    "endInSeconds": 225,
+    "text": "But be careful not to jump to any conclusions at this point."
+  },
+  {
+    "startInSeconds": 225,
+    "endInSeconds": 230,
+    "text": "The missing instruction doesn't prove that it caused the agent to add\nthose extra recommendations."
+  },
+  {
+    "startInSeconds": 230,
+    "endInSeconds": 237,
+    "text": "And adding the new rule doesn't prove the problem will go away.\nWhat you have is a hypothesis and a specific change you can test."
+  },
+  {
+    "startInSeconds": 237,
+    "endInSeconds": 245,
+    "text": "Now you need to decide how you'll test it. Suppose you update the\nprompt, run your evals again, and the score goes up by eight points."
+  },
+  {
+    "startInSeconds": 245,
+    "endInSeconds": 252,
+    "text": "That sounds good, but imagine that you also changed the test cases,\nor rewrote the evaluator, or switched models at the same time."
+  },
+  {
+    "startInSeconds": 252,
+    "endInSeconds": 258,
+    "text": "Now, it's much harder to tell what produced the improvement.\nSo for this experiment, keep the comparison stable."
+  },
+  {
+    "startInSeconds": 258,
+    "endInSeconds": 263,
+    "text": "Run the original agent and the updated agent on the same cases,\nusing the same evaluators."
+  },
+  {
+    "startInSeconds": 263,
+    "endInSeconds": 269,
+    "text": "And because you're testing a prompt change, keep the model\nand the rest of the agent configuration the same, too."
+  },
+  {
+    "startInSeconds": 269,
+    "endInSeconds": 274,
+    "text": "You want the new grounding rule to be the meaningful difference\nbetween the two versions."
+  },
+  {
+    "startInSeconds": 274,
+    "endInSeconds": 279,
+    "text": "There's another piece to planning the comparison.\nThink about which cases you're going to include."
+  },
+  {
+    "startInSeconds": 279,
+    "endInSeconds": 281,
+    "text": "You definitely want failures you're trying to improve."
+  },
+  {
+    "startInSeconds": 281,
+    "endInSeconds": 284,
+    "text": "For Northwind, that includes the wool care question,"
+  },
+  {
+    "startInSeconds": 284,
+    "endInSeconds": 289,
+    "text": "and other cases where the agent added product details that weren't\nsupported by the tool results."
+  },
+  {
+    "startInSeconds": 289,
+    "endInSeconds": 294,
+    "text": "Those cases answer one question: does the updated agent handle\nsomething the original agent got wrong?"
+  },
+  {
+    "startInSeconds": 294,
+    "endInSeconds": 298,
+    "text": "But if those are the only cases you test,\nyou're missing half of the picture."
+  },
+  {
+    "startInSeconds": 298,
+    "endInSeconds": 306,
+    "text": "A prompt change can improve those failures and still damage behavior\nthat was already working. So you also want some known-good cases."
+  },
+  {
+    "startInSeconds": 306,
+    "endInSeconds": 313,
+    "text": "Maybe the original agent already handles basic sizing questions\nand straightforward product-information requests correctly."
+  },
+  {
+    "startInSeconds": 313,
+    "endInSeconds": 320,
+    "text": "Keep those too. Now you can ask a second question:\ndoes the updated agent still handle the things it was already good at?"
+  },
+  {
+    "startInSeconds": 320,
+    "endInSeconds": 328,
+    "text": "You can think of the first group as your capability cases. You want to\nsee those improve. The second group protects you against regressions."
+  },
+  {
+    "startInSeconds": 328,
+    "endInSeconds": 334,
+    "text": "You want to keep those working. And before you start iterating,\ndecide what kind of result would actually be good enough."
+  },
+  {
+    "startInSeconds": 334,
+    "endInSeconds": 341,
+    "text": "That depends on your application. For one agent,\na small improvement might be enough to justify a change."
+  },
+  {
+    "startInSeconds": 341,
+    "endInSeconds": 348,
+    "text": "For another, a particular safety or policy requirement may need to be\nalmost perfectly reliable before you're comfortable shipping it."
+  },
+  {
+    "startInSeconds": 348,
+    "endInSeconds": 353,
+    "text": "The important thing is to decide what matters before you\nlook at the new results."
+  },
+  {
+    "startInSeconds": 353,
+    "endInSeconds": 358,
+    "text": "Otherwise, it's very easy to keep changing the system simply\nbecause you can still find something to improve."
+  },
+  {
+    "startInSeconds": 358,
+    "endInSeconds": 361,
+    "text": "So now you have the pieces you need for the experiment."
+  },
+  {
+    "startInSeconds": 361,
+    "endInSeconds": 366,
+    "text": "You know the behavior you want to improve, You have a candidate change\nbased on the evidence you saw,"
+  },
+  {
+    "startInSeconds": 366,
+    "endInSeconds": 373,
+    "text": "and you have a comparison that can tell you whether the target\nbehavior gets better and whether something else gets worse."
+  },
+  {
+    "startInSeconds": 373,
+    "endInSeconds": 376,
+    "text": "In the next video, you'll run that comparison on Northwind."
+  },
+  {
+    "startInSeconds": 376,
+    "endInSeconds": 381,
+    "text": "You'll save the cases, test the new grounding rule,\nand then look closely at what changed."
+  },
+  {
+    "startInSeconds": 381,
+    "endInSeconds": 385,
+    "text": "As you'll see, the answer is a little more interesting than\njust the score went up."
+  }
+]

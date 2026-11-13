@@ -1,0 +1,45 @@
+# Homework 1 public teaching repository: assignments/OMIM_620401/grill_run/tasks/0036_screen_h13/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620401/grill_run/tasks/0036_screen_h13/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620401/grill_run/tasks/0036_screen_h13/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Birnbaum et al. (2024) identified 13 affected individuals across 8 Ashkenazi Jewish families carrying the identical homozygous frameshift founder variant in SGSM3.",
+  "confidence": 0.98,
+  "evidence": [
+    {
+      "text": "Birnbaum et al. identified 13 patients across 8 distinct families of Ashkenazi Jewish ancestry who all carried the identical homozygous frameshift founder variant in the SGSM3 gene.",
+      "stance": "supports",
+      "source": {
+        "title": "Intellectual disability syndrome associated with a homozygous founder variant in SGSM3 in Ashkenazi Jews",
+        "authors": [
+          "R Birnbaum",
+          "S Ezer",
+          "NS Lotan",
+          "A Eilat"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://jmg.bmj.com/content/61/3/289.abstract",
+        "quote": "8 families of Ashkenazi Jewish origin who all carried the same homozygous frameshift variant in SGSM3"
+      },
+      "numbers": [
+        {
+          "metric": "families",
+          "value": 8
+        },
+        {
+          "metric": "patients",
+          "value": 13
+        }
+      ]
+    }
+  ]
+}
+```

@@ -1,0 +1,54 @@
+# Homework 1 public teaching repository: assignments/OMIM_621201/grill_run/tasks/0009_screen_h4/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621201/grill_run/tasks/0009_screen_h4/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621201/grill_run/tasks/0009_screen_h4/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "GTF3C3-related disorder presents with dysmorphic facial features such as hypertelorism and depressed/broad nasal bridge, though Abdel et al. suggest facial features may be recognizable in early childhood.",
+  "confidence": 0.75,
+  "evidence": [
+    {
+      "text": "Patients with biallelic GTF3C3 variants presented with microcephaly, developmental delay, intellectual disability, and distinctive dysmorphic facies that appear recognizable in very young children, alongside brain anomalies and seizures in half of the patients.",
+      "stance": "contradicts",
+      "source": {
+        "title": "Biallelic variants in GTF3C3 encoding a subunit of the TFIIIC2 complex are associated with neurodevelopmental phenotypes in humans and zebrafish",
+        "authors": [
+          "MS Abdel"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://academic.oup.com/braincomms/article-abstract/7/1/fcaf055/8002734",
+        "quote": "The patients exhibited microcephaly, developmental delay, intellectual disability and distinctive dysmorphic facies that appear recognizable in very young children."
+      },
+      "numbers": [
+        {
+          "metric": "affected patients described",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "text": "PanelApp clinical curation for GTF3C3 associated with neurodevelopmental disorder with dysmorphic facies includes phenotypes such as hypertelorism and depressed/broad nasal bridge.",
+      "stance": "supports",
+      "source": {
+        "title": "Activity",
+        "authors": [],
+        "year": null,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://panelapp.genomicsengland.co.uk/panels/activity/?panel=285&entity=TH",
+        "quote": "Phenotypes for gene: GTF3C3 were changed from Neurodevelopmental disorder with dysmorphic facies ... hypertelorism, depressed/broad nasal ..."
+      },
+      "numbers": []
+    }
+  ]
+}
+```

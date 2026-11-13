@@ -1,0 +1,4 @@
+row_id,disease_name,rule_or_step_title,phenotype_name,rule_category,phenotype_status_required,matching_criterion_description,cohort_frequency
+e390468191466629:0:phenotypic_matching_rules:0,Distal Hereditary Motor Neuronopathy 11,Juvenile-onset distal motor weakness / neuropathy,Distal muscle weakness,inclusion_criterion,must_be_present,Characterized by distal amyotrophy and distal muscle weakness.,13/13
+e390468191466629:0:phenotypic_matching_rules:1,Distal Hereditary Motor Neuronopathy 11,Rule Out Pertinent Negatives,Intractable Epilepsy or Infantile Seizures,exclusion_criterion,must_be_absent,Evaluated and confirmed absent in all reported dHMN11 individuals.,0/33
+e390468191466629:0:phenotypic_matching_rules:2,Distal Hereditary Motor Neuronopathy 11,Rule Out Pertinent Negatives,Intellectual Disability or Global Developmental Delay,exclusion_criterion,must_be_absent,Affected individuals achieve normal intellectual milestones and display no cognitive impairment.,

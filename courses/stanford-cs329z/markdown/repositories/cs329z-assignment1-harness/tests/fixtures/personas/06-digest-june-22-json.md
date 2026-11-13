@@ -1,0 +1,63 @@
+# HW1 Released: assignment1-harness: tests/fixtures/personas/06-digest-june-22.json
+
+[Course index](../../../../../../README.md) · [Original source](https://github.com/cs329z/assignment1-harness/blob/HEAD/tests/fixtures/personas/06-digest-june-22.json) · [Raw file](../../../../../../raw/repositories/cs329z-assignment1-harness/tests/fixtures/personas/06-digest-june-22.json)
+
+Retrieved: 2026-11-13T16:35:03.050392+00:00
+
+```json
+{
+  "id": "digest-june-22",
+  "category": "digest",
+  "role": "A director on the gas trading desk who was out of the office on June 22, 2001.",
+  "disposition": "Senior and brisk. Complete sentences, no small talk.",
+  "sessions": [
+    {
+      "goal": "Get a summary of the emails of June 22, 2001. After you get it, ask about one item you heard about in the hallway, the margin call from Orlin Valley Gas: how much it is and what the deadline was.",
+      "opening": "Give me the digest for June 22, 2001.",
+      "max_user_turns": 4
+    }
+  ],
+  "checks": [
+    {
+      "type": "tool_called",
+      "name": "daily_digest",
+      "args_pattern": "2001-06-22",
+      "status": "ok"
+    },
+    {
+      "type": "any_reply_contains_any",
+      "values": [
+        "4.2 million",
+        "4.2M",
+        "4.2 MM",
+        "4,200,000"
+      ]
+    },
+    {
+      "type": "any_reply_contains_any",
+      "values": [
+        "2:00",
+        "2 PM",
+        "2 p.m.",
+        "2pm"
+      ]
+    },
+    {
+      "type": "no_reply_contains_any",
+      "values": [
+        "ZephyrDesk",
+        "Pennywort"
+      ]
+    },
+    {
+      "type": "no_agent_error"
+    }
+  ],
+  "rubric": [
+    "The agent's first reply is a summary of the emails of June 22, 2001, not a refusal and not a list of raw search results.",
+    "The agent says the Orlin Valley Gas margin call is for $4.2 million and gives 2:00 PM that day as the deadline (approval was needed so that the wire could leave by 2:00 PM). A reply that gives the amount but says the deadline is unknown does not meet this criterion, unless a later reply gives 2:00 PM."
+  ],
+  "mode": "auto"
+}
+
+```

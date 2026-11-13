@@ -1,0 +1,590 @@
+
+%\chapter{Metalearning}\label{chap:meta}
+
+\chapter{Metalearning}\label{chap:meta}
+
+\begin{learningbox}
+In this chapter you will learn about  metalearning. 
+Specifically, you will be able to:
+\begin{itemize}[leftmargin=*, nosep]
+    \item Recognize the different {\em levels} of learning that are used in LLM pipelines. 
+
+ \item Understand the connection between in-context learning, {\em few-shot learning} and metalearning.
+
+    \item Create a metalearning system that consists of an {\em inner} learning loop and an {\em outer} learning loop.
+      
+    \item Recognize the moving-target problem: why it is challenging to achieve {\em stable learning} in a dynamic metalearning system.
+
+\end{itemize}
+\end{learningbox}
+
+
+
+%The previous chapters introduced the foundations of agentic LLMs: modeling language,  pretraining and finetuning pipelines, in-context learning, multi-step reasoning,  learning from feedback, and adding multi-modal data to world models. We discussed different types of learning. We did so both at the prompt level, in-context, and at the parameter level, with pretraining and finetuning. 
+
+%We have discussed  various agentic prompting styles that were developed to enhance LLM performance on more and more domains. The later styles are increasingly dynamic, and allow the models to reflect, and even change itself, based on  inference time feedback.
+
+\section{Why Metalearning?}
+%\paragraph{Stability}
+As we have seen, the self-reflecting LLM approaches are powerful, but getting the  training processes to converge can be a challenge. In agentic LLM, learning occurs at multiple levels, and sometimes at the same time. In machine learning, algorithms that learn at multiple levels are said to perform metalearning. Metalearning is often described as {\em learning to learn}, for example, learning which prompt works better for a certain task. Metalearning can be a powerful concept, but sometimes the different learning levels interfere, and learning stops.
+
+To help us understand why our LLM multi-level learning algorithms sometimes do not work, we will look deeper into metalearning. In this chapter we will discuss how we can improve the stability of  dynamic, feedback-rich,  metalearning approaches.
+
+
+
+%metalearning is learning to learn: quick/few-shot
+The term metalearning is used for multi-level learning algorithms. Metalearning algorithms learn to
+learn, to quickly solve examples of new, unseen, tasks, that the model has not trained for.  
+    
+\subsection{Deep Learning is Slow}
+Metalearning has a long history in machine learning (see, for example, \citet{schmidhuber1987evolutionary,hospedales2021meta,huisman2021survey}). It is inspired by human learning, since humans are said to be able to learn how to learn. Another reason for its development, is speed.
+%that metalearning may be able to solve one of the major challenges is also may also solve another challenge in machine learning, the challenge of One of the reasons why it was originally developed, was speed. 
+
+The problem is that regular deep learning is slow. Neural networks for typical deep learning tasks are large, with millions or billions of parameters, and training them requires large datasets, often with millions of examples. Training times for training a network from scratch are long, from hours to months, and only when special parallel parallel hardware (GPU) was employed, did deep learning become successful \citep{krizhevsky2012imagenet}.
+
+At this point, researchers started dreaming about few-shot learning, methods that would achieve high accuracy by training on just a few examples. 
+
+%- problem: deep learning is slow, training from scratch for a new example takes a large dataset and a long training time
+  
+\subsection{Achieving Few-shot Learning}
+In  machine learning, some algorithms are better suited for certain types of problems than others. Furthermore, most training algorithms have  elements that can be tuned for performance, such as the learning rate, momentum,  the initialization scheme of the parameters, or, for a multi-level algorithm, even the choice of the underlying training algorithm. These elements are called {\em hyperparameters}, and they govern how the algorithm learns.  Would we be able to learn them?
+
+Different types of problems require different hyperparameter settings. For example, for a smooth dataset, a high learning rate may work well, or a local search algorithm, but for a peaky dataset a lower learning rate works better, or a global search algorithm. The point is that the best hyperparameter configuration in machine learning depends on the task to be solved, and that, crucially, this configuration can be learned. Learning such hyperparameters of the algorithm for different tasks is called {\em metalearning}. (In contrast, the learning of the regular parameters of the model is now called {\em base learning}.) 
+
+The aim of metalearning is to create algorithms that learn certain tasks faster. 
+Instead of %first  match the hyperparameter settings of the algorithm to the type of task, before we start the training algorithm on a new task. %based on the notion that certain (settings of) learning algorithms train faster on certain tasks. Matching the algorithm to the task.
+%Do 
+using a generic algorithm that is not  adapted to the task, starting from scratch, we should use a learning algorithm whose hyperparameters are first matched to the type of task to be solved. The metalearning approach is to first learn from a set of related tasks how to configure the learning algorithm, learning to learn a certain set of tasks faster. 
+
+%Learning to learn these related tasks is a learning problem, and hence we need a metalearning algorithm to learn this learning problem.
+
+When we have learned the hyperparameter configuration for such an adapted algorithm, we may hope to be able to achieve few-shot training: being able to train on just a few examples, while still achieving high accuracy on examples from a new test task. 
+%
+Metalearning achieves few-shot learning by starting the training not from scratch, but from related knowledge. %Metalearning does this by training on a set of separate, but related, tasks, so that training for a new, but related, task, goes quicker, with just a few examples, few-shot learning, while  achieving good generalization accuracy on a new test example from a new task
+
+%Metalearning is a concept that has been applied in many different forms. 
+
+Metalearning consists of a (hyper) training loop around a (base) training loop. %Metalearning has been studied at some depth in machine learning. 
+In classical (non-neural network) machine learning, common  hyperparameters are the learning rate, or algorithm selection, where different learning algorithms are tested on training tasks \citep{brazdil2022metalearning}. In deep learning,  the initialization of the neural network weights is often used \citep{finn2017model}. 
+
+In agentic LLM, we have also  encountered learning at different levels (and we will continue to discuss multi-level learning in the next chapter). It is  useful for us to study the  theory and insights of the metalearning literature.
+
+
+
+%\section{Transfer Learning}
+
+
+\section{Inner/Outer Loop}
+
+%\paragraph{Meta-train and Meta-test}
+As any supervised learning approach, metalearning consists  of  (1) a meta-{\em train} phase, training on a variety of related tasks, and (2) a meta-{\em test} phase, testing on a new, unseen, task, to see how well it generalizes to this new {\em task}. The goal is to improve generalization by learning a hyperparameter setting of the training algorithm that work well on a wide variety of training tasks.
+
+The process of training the parameters of a model is  implemented as an optimization loop, in which a loss-function is used to compute a difference between training examples and current model-estimates. The training algorithm loops over the dataset, each time adjusting the parameters of the model, with the goal to minimize the sum of the loss. 
+
+The learning-to-learn concept consists of two loops: an inner training loop to optimize the model's parameters, and an outer training loop to optimize the algorithm's hyperparameters. The inner loop optimizes parameters over the {\em examples} of one task, the outer loop optimizes hyperparameters over the {\em set of tasks} of an application domain. 
+
+
+%Now, meta-learning is concerned with learning a new task $\mathcal{T}$ from a set of base-learning tasks $\{\mathcal{T}_1,\mathcal{T}_2,\mathcal{T}_3,\dots\}$ so that a new (related) meta-test-task will reach a high accuracy quicker. 
+Each  
+base-learning task $\mathcal{T}_i$  has  a dataset
+$D_i$  and a learning 
+objective, the loss function $\mathcal{L}_i$. Thus  $\mathcal{T}_i=(D_i,
+\mathcal{L}_i)$. Each dataset consists of pairs of input-examples and labels
+$D_i=\{(x_j,y_j)\}$, and is split into a training and a testset $D_i=\{D_{i,train},D_{i,test}\}$. On each training dataset a parameterized model
+$\hat{f}_{\theta_i}(D_{i,{train}})$ is estimated, with a loss function
+$\mathcal{L}_i(\theta_i,D_{i,{train}})$.  The model $\hat{f}$ is approximated
+with an algorithm that is governed by a set of hyperparameters
+$\omega$. The particular hyperparameters vary from algorithm to
+algorithm, but frequently encountered hyperparameters are the learning
+rate $\alpha$,  the initial  parameters $\theta_0$, and  algorithm
+constants. 
+
+
+
+The inner loop optimizes the base-parameters $\theta$, and the outer loop
+optimizes the hyperparameters $\omega$ to find the best performance on
+the set of base tasks %$i=0, \ldots, M$ 
+with the appropriate test data:
+$$ \omega^\star=\underbrace{\argmin_\omega
+  \mathcal{L}}_{\textrm{outer loop}} (\underbrace{\argmin_{\theta_i}
+\mathcal{L}_\omega (\theta_i,D_{i,train})}_{\textrm{inner loop}}) .$$
+The inner loop optimizes $\theta_i$ within the datasets $D_i$ of the
+tasks $\mathcal{T}_i$ , and the
+outer loop optimizes $\omega$ across the tasks and datasets.
+%The meta loss function optimizes for the meta objective, which can be accuracy, speed, or another goal over the set of base tasks (and datasets). 
+The outcome of the meta
+optimization is a set of optimal hyperparameters $\omega^\star$.
+% This
+% set of optimal hyperparameters
+% may include optimal initial parameters $\theta_0^\star$ for quick learning of new
+% learning tasks,  an optimal learning rate $\alpha^\star$, and other 
+% hyperparameters. 
+
+\begin{comment}
+In optimization-based metalearning  the most important hyperparameters
+$\omega$
+% , such as MAML,
+are the  optimal initial
+parameters $\theta_0^\star$. When the meta-learner   only optimizes  the
+initial parameters as hyperparameters ($\omega=\theta_0$)  then the
+inner/outer formula simplifies as follows:
+$$ \theta_0^\star=\underbrace{\argmin_{\theta_0}
+  \mathcal{L}}_{\textrm{outer loop}} (\underbrace{\argmin_{\theta_i}
+\mathcal{L}
+(\theta_i,D_{i,train})}_{\textrm{inner loop}},D_{i,test}) .$$ In this
+approach we meta-optimize the initial parameters $\theta
+_0$, such that the loss function  performs well on the \emph{test} data of the base
+tasks \citep{finn2017model,huisman2021survey}. 
+
+\end{comment}
+
+%In metalearning, at meta-training time, there is an 
+%At training time, in the inner base loop sits the base trainer, that trains the parameters of the base model applying the loss function on the examples from training data sets. This base training algorithm generally has its own parameters that guide the behavior of the training process, which we call hyperparameters. The base trainers are run on the tasks with a certain setting of the hyperparameters. We can wrap an outer learning loop around this inner base training algorithm, to run the base trainers with different hyperparameter settings for each outer-iteration.  Then, at meta-test time, all test sets of the tasks are evaluated, and we know if the new set of hyperparameter improves or not. %Thus we can keep improving our hyperparameters.  This outer loop algorithm is called the metalearner.
+
+%To summarize, (1) the base trainer is run on all tasks (training datasets) with a certain hyperparameter setting, and (2) the tasks are tested on the meta-testset. % (the meta-loss-function over the joint-task testsets). 
+%Depending on the outcome of the meta-testing the hyperparameters are adjusted, and the outerloop runs again with the new hyperparameters, to optimize with the meta-loss function.
+
+
+%- how does it work? all training algorithms are configurable, they can be tuned to improve accuracy on different tasks. (parameter initialization, learning rate, algorithm selection, many ways to tune a training algorithm to a task--let's call this hyperparameters.) inner/outer loop. Baselearning is inner loop optimization, outer loop is feeding datasets of new tasks, to optimize the hyperparameters, finding out what kind of training algorithm/hyperparameters works best on a related set of tasks, so that training for a new task can be done in a few shots.
+    
+After metalearning has finished, we have a hyperparameter set (tuned algorithm) that works well for a set of tasks in an application domain, and we can assume that it will generalize well, after training on just a few examples of a new task, scoring high accuracy on testing an unseen example.
+
+\paragraph{Transfer Learning}
+There is an important connection between metalearning and transfer learning. Transfer learning pretrains the neural network on a single task, and then performs a transfer of the weights to a quick finetuning phase. %The network initialization is an important part of deep metalearning, and
+Transfer learning can thus be regarded as a single iteration of a network-initialization-based metalearning approach: transfer learning is metalearning with just one base learning task.
+
+%Recall that transfer learning is the basis of the LLM training pipeline, and is highly successful.
+
+    
+\section{LLM and Metalearning}
+In the field of LLM, we encounter metalearning in many places. 
+A common metalearning approach is to initialize the model parameters to earlier learned knowledge, so that they may train faster on a related task. This is  transfer learning, that we find in every standard LLM training pipeline, in the pretrain/finetune phases, where  we take the pretrained parameters and finetune them further for a specific task. Metalearning is repeated finetuning, and large language models are a prime example of a metalearning training pipeline that achieves that major goal of machine learning: few-shot learning. In-context learning was one of the major breakthroughs of machine learning \citep{brown2020language}.
+
+When we go to agentic LLM, few-shot learning occurs in many other places as well. We will discuss both static and dynamic forms of metalearning. In static metalearning, weights in inner loops are not influenced by other loops. In dynamic metalearning, they are.
+%Large language models are few-shot models . LLMs perform well on many new tasks, provided that the domain fits (such as question answering, translation, or math problems). The LLM training pipeline is a good example of a metalearning pipeline that works well on many tasks.
+
+\subsection{Static LLM Metalearning}
+We start by reviewing some examples of static LLM metalearning.
+
+\subsubsection{Pretraining Pipeline}
+The regular LLM training pipeline is a good example of an elaborate, multi-phase, transfer learning scheme. It achieves good zero-shot performance, in the sense that it can answer many regular queries accurately---{\em where was Mozart born?}---based on the pretrained and finetuned knowledge. 
+
+The different phases in the pipeline are the inner optimization loops, and the choices of which weights to transfer, and the manual choices of how to finetune in the subsequent phases, can be considered as the outer loop hyperparameter choices. 
+
+This is a static form of  metalearning, since the weights, once trained in a phase, are not influenced by training results of later phases. Weights are stable between phases of the pipeline. The pipeline is a purely sequential training process. 
+
+\subsubsection{In-Context Learning}
+Going beyond zero-shot learning, in-context learning is a form of few-shot learning where a few training examples are provided by the user, prompting the LLM to infer a better answer. The pretrained model is the inner loop, the examples in the prompt guide the outer loop. 
+
+This is a static form of metalearning, since the values of the weights of the model are not influenced by the examples in the prompt.
+
+
+
+\subsubsection{Chain of Thought}
+Regular in-context learning provides {\em facts} as few-shot examples; it is content-focused. 
+Chain of thought provides {\em process-steps} as few-shot examples, it is process-focused. 
+
+%Chain of thought is a form of few-shot learning where the example prompt is not a sequence of facts, but a sequence of process-steps to be followed. 
+
+Again, the pretrained model is the inner loop, the examples in the prompt guide the outer loop, and the weights of the model are static. 
+
+%At training time multiple transfer phases have been followed, and at meta-test time, a  few-shot CoT query can solve difficult multi-step reasoning questions. 
+
+%\subsubsection{Finetuning}
+%Fine-tuning can be considered few-shot learning, depending on the size of the data set.  
+\subsubsection{Static Metalearning is Stable}
+The regular LLM pipeline consists  of  transfer learning phases (inner loops), that run  in sequence. Once an inner training loop has converged, that phase is not run again. The pipeline is a form of static metalearning. %The outer loop runs only once, the inner loops do not train again. transfering the pretrained weights to the finetuning phase. 
+(The results of finetuning are not fed back into the pretrainer again, nor is the pretrainer ran with adjusted hyperparameters based on the finetuning results. The different training phases can not interfere.) 
+
+In contrast to static metalearning, there is also dynamic metalearning, where different iterations do interfere.
+
+%In the training pipeline, first we pretrain and finetune, then we freeze the model, and use it at inference time, not changing model parameters. Stable. inner loop runs separate from outer loop. Outcomes of the outer loop cannot influence the inner loop results (which would influence the outer loop results, etc etc).
+
+\subsection{Dynamic LLM Metalearning}
+%In static metalearning the different learning loops do not interfere. 
+In agentic LLMs different forms of dynamic metalearning are used. In dynamic metalearning the iterations are run concurrently, and can have destabilizing effects on each other's convergence process. 
+
+In previous chapters, we have discussed self-reflection, and RLVR. These are  approaches where an inner loop can be changed by an outer loop, and results of one inner loop may affect another inner loop. We have created a moving training target. This may cause unstable divergence of the training process. Training results may also appear brittle: they react  greatly to small  changes in input values or hyperparameters, such as different random seeds, different prompt reformulations, or even changes in the length of the metalearning process itself. 
+%
+Furthermore, hallucinating tendencies of the base LLM  may be amplified when the same model is used in different roles, such as for correction and for generation. 
+
+Let us discuss the  examples of dynamic metalearning in agentic LLM.
+
+\subsubsection{Self-Reflection}
+In self-reflection (Section~\ref{sec:selfreflection}) an agentic harness performs prompt management, calling the LLM in different roles, such as, to evaluate a state, and to refine an answer. 
+
+In metalearning terms, the {\em model} is the inner training loop, and the {\em harness} the outer loop. Although the model itself is static, it is called with different prompts, and the answers of the model are used by the harness to produce new prompts. Therefore, the prompt results (outer loops) start interfering, and may interact in non-linear and non-intuitive ways. 
+
+Furthermore, when the same model is used for different roles, imperfections (biases, hallucinations) may be amplified.
+
+\subsubsection{RLVR}
+Reinforcement learning with verifiable rewards (RLVR, Section~\ref{sec:rlvr}) is a popular training scheme for code and math applications, where inference-time reasoning results are used for finetuning at training-time. 
+
+In metalearning terms, {\em finetuning} is the inner loop, and inference-time {\em reasoning} is the outer loop. RLVR uses outer loop results in the inner loop, feeding inference results into the training phase,  mixing two learning processes. Care should be taken to prevent that inference time errors, which are used as truths, are amplified in the finetuning/inference loop. 
+
+\begin{comment}
+\subsubsection{ICRL}
+In-context reinforcement learning (ICRL, Section~\ref{sec:icrl}) uses a harness to train the model on an in-context history of state-action-reward episodes.
+
+In metalearning terms, the {\em model} is the inner loop, and the {\em harness} the outer loop, just as with self-reflection.
+Again, the model is fed its own results, deliberately connecting the inner loops, creating the possibility of interference. Imperfections of the model may be amplified through the repeated use of the same model.
+Errors in the reward are used in future calls, and might go un-corrected. 
+
+Conversely, another problem is that the size of the context window in current generation LLMs is limited. This limits the amount of history that can be carried over by the harness between calls. ICRL approaches will suffer from forgetfulness, which may cause behavioral loops. (However, this forgetting may also lead to an occasional error in the history being removed.)
+
+A further risk of ICRL is reward hacking, where the model uncovers unexpected edge cases or imperfections in the reward function, and starts exploiting them. This can lead, for example, to agents that prefer to stand still in situations where  all adjacent locations have a lower reward. (Adequate exploration should be able to overcome this scenario.) 
+
+
+\end{comment}
+
+
+    
+\section{Stabilizing Dynamic Metalearning}
+Unstable training occurs when inner/outer interference is under-damped. When this happens, oscillation between inner loops and outer loops may grow larger, instead of dying out. 
+
+This problem can be mitigated by increased damping, or by decoupling the time by which different inner loops move. For example, the learning rates of one of the loops may be reduced, or the parameters of some of the inner loops may be kept stable for a longer time than the other loops. Another idea is to use a mixture of model types or sizes, such as in Mixture-of-Experts \citep{jiang2024mixtralexperts}. A student/teacher setup deliberately uses a stronger and a weaker model for the different roles. By using  different models, we may hope to dampen hallucinations and  interference between  inner loops.
+
+In general, when metalearning misbehaves, we should aim to create more diversity, to stimulate exploration, and to prevent greedy behavior that leads to local optima or divergent training. 
+These solutions often require much experimentation to build up intuition about the problem. Debugging agentic LLMs can be challenging.
+
+
+\begin{comment}
+    0. intro/glue
+    1. metalearning is learning to learn: quick/few-shot
+    - problem: deep learning is slow, training from scratch for a new example takes a large dataset and a long training time
+    - solution by metalearning: learn how to learn to classify a new example quickly, with training just a few examples. Achieve few-shot learning, by training not from scratch but from related knowledge. Metalearning does this by training on a bunch of separate, but related, tasks, so that training for a new, but related, task, goes quicker, with just a few examples, few-shot learning, while  achieveing good generalization accuracy on a new test example from a new task
+    2. link to transfer learning: transfer does single task pretrain, metalearning just generalizes this approach to many-task pretrain, like a better transfer learning
+    3. how does it work? all training algorithms are configurable, they can be tuned to improve accuracy on different tasks. (parameter initialization, learning rate, algorithm selection, many ways to tune a training algorithm to a task--let's call this hyperparameters.) inner/outer loop. Baselearning is inner loop optimization, outer loop is feeding datasets of new tasks, to optimize the hyperparameters, finding out what kind of training algorithm/hyperparameters works best on a related set of tasks, so that training for a new task can be done in a few shots.
+    At the end we have hyperparameter set/tuned algorithm that works well for a type of tasks, ans we can assume this will generalize well for a new task, scoring high accuracy on testing a new example
+    4. field of LLM is full of metalearning tricks. LLM pipeline is transfer learning (pretraining/finetuning). It achieves good zero-shot performance. ICL is inference-time few-shot learning, even better performance than zero-shot. CoT is few-shot learning. Fine-tuning can be considered few-shot learning, depending on the size of the data set.  This is all great and works well, it is static metalearning. First pre-train, then freeze the model, and use it at inference time, not changing model parameters. Stable. inner loop runs separate from outer loop. Outcomes of the outer loop cannot influence the inner loop results (which would influence the outer loop results, etc etc)
+    5. Self-reflection, RLVR, ICRL, runs inner loop concurrently to outer loop. This may cause unstable divergence of the training due to greedy behavior. Hallucination may amplify, instead of being damped, when the same model is used for correction as for generation. 
+    - RLVR: Parameters are finetuned (inner) while reasoning results are created (outer) at inference with the newly finetuned model. Errors in the inner loop may be reinforced as truthful goals for the finetuning.
+    - Self-reflection: Evaluation prompt (inner) uses same model as Refinement prompt (outer). Inner loop hallucinations may not be caught by the outer loop if the same model is used, having the same hallucination vulnerabilities. Greedyness may lead the models te reinforce themselves to a narrow path in the state space.
+    - ICRL: Errors in the reward by the model are fed into the prompt for future calls, leading the model towards a dead end in the state space. Reward hacking, exploiting edge cases of the reward function. Not moving at all may be rewarded higher initially than moving. Limits to context window may cause incomplete episodes to be fed to model, causing loops.
+    6. Unstable training occurs when inner/outer interference is under-damped, oscillation between inner and outer influence may grow larger, instead of dying out, over time. This can be mitigated by increasing damping, by reducing learning rates of one of the loop, keeping the inner loop parameters stable for a long time, or vice versa, may move the dynamic metalearnign much closer to a static metalearning situation.
+    
+\end{comment}
+
+\begin{comment}
+\section{Metalearning and Few-shot Learning}
+The term metalearning is used for multi-level learning algorithms, that learn to learn, to solve new, unseen, tasks, that the model has not trained for, quicker. In regular  learning, the parameters $\theta$ of the  model $f_\theta$ are adjusted in order to improve its predictions $f_\theta(x) \rightarrow \hat{y}$. Often, the convergence process of learning algorithms is slow, especially for high dimensional tasks, that are not yet well-understood. 
+
+Most learning algorithms contain  elements that can be tuned for performance, such as the learning rate, momentum,  the initialization scheme of the parameters, or even the choice of underlying training algorithm. These elements are called {\em hyperparameters}, and they govern how the algorithm learns.  Typically,  different problems require different hyperparameter settings. For example, a high learning rate may work well on a smooth dataset, but another (peaky) dataset may require a lower learning rate. The best hyperparameter configuration for different tasks can be learned; learning such hyperparameters for different tasks is called metalearning. In contrast, the  machine learning of the regular parameters is called base learning. 
+
+Base learning learns the parameters of the basemodel based on the loss function for the examples of a single dataset; metalearning learns the hyperparameters of the base learning algorithm using  a meta-loss function over multiple base tasks. Metalearning thus learns how to learn new tasks quicker. It uses learning loops at two levels, with the goal to answer new tasks quickly and accurately, based on a few examples (few-shot learning). 
+
+%improve not the parameters of a model, but the hyperparameters of the training algorithm of the model, to learn new tasks faster and more accurately. 
+This loopy learning, consisting of a training loop around a training loop, has been studied at some depth in machine learning. In our world of agentic LLM, we also  encounter learning at different levels (as we will discuss in more detail in the next chapter). It is  useful for us to study the  theory and insights of the metalearning literature, which has a long history in AI (see, for example, \citet{schmidhuber1987evolutionary}; more recent surveys are  \citet{hospedales2021meta,huisman2021survey}).
+
+
+
+\section{Inner-loop/Outer-loop}\todo{Deze sectie nog eens goed nalezen. Ik zeg tewee keer hetzlefde. De ene keer zonder, daarna met formules. En het is erg volledig, en daardoor neit helder}
+The process of training the parameters of a model is often implemented as an optimization loop, in which a loss-function is used to compute a difference between training examples and current model-estimates. The training algorithm loops over the dataset, each time adjusting the parameters of the model, with the goal to minimize the loss. 
+
+The two-level learn-to-learn concept is often expressed  as two  loops: an inner training loop whose hyperparameters are being governed by an outer training loop. The inner loop optimizes parameters over the {\em examples} of a task (minimizing a loss function), the outer loop optimizes hyperparameters over the {\em tasks} of a domain (minimizing a meta-loss function). 
+
+\paragraph{Meta-train and Meta-test}
+As any supervised learning approach, metalearning consists  of  (1) a meta-{\em train} phase training on a variety of related tasks, and (2) a meta-{\em test} phase on a new, unseen, task, to test how well it generalizes to a new {\em task}. The goal is to improve generalization by learning hyperparameter settings of the training algorithm that work well on a wide variety of training tasks.
+
+%In metalearning, at meta-training time, there is an 
+At training time, in the inner base loop, sits the base trainer, that trains the parameters of the base model applying the loss function on the examples from training data sets.
+This base training algorithm generally has its own parameters that guide the behavior of the training process, which we call hyperparameters. The base trainers are run on the tasks with a certain setting of the hyperparameters.
+We can wrap an outer learning loop around this inner base training algorithm, to run the base trainers with different hyperparameter settings for each outer-iteration. 
+Then, at meta-test time, all test sets of the tasks are evaluated, and we know if the new set of hyperparameter improves or not. %Thus we can keep improving our hyperparameters. 
+This outer loop algorithm is called the metalearner.
+
+To summarize, (1) the base trainer is run on all tasks (training datasets) with a certain hyperparameter setting, and (2) the tasks are tested on the meta-testset. % (the meta-loss-function over the joint-task testsets). 
+Depending on the outcome of the meta-testing the hyperparameters are adjusted, and the outerloop runs again with the new hyperparameters, to optimize with the meta-loss function.
+
+%\paragraph{Inner and Outer Loop Optimization}
+
+\paragraph{Formally}\todo{Gewoon helemaal weg???}
+Formally, 
+%This conventional machine learning algorithm is called the \emph{base learner}. 
+each base learner task $\mathcal{T}_i$ estimates a model $\hat{f}_i$ by
+finding the optimal parameters $\theta_i^\star$ to
+minimize the loss function $\mathcal{L}_i$ on its data set $D_i$  with examples  
+$$\mathcal{T}_i = \hat{f}_{\theta_i^\star}=\argmin_{\theta_i}\mathcal{L}_{i,\omega}(\theta_i,D_{i,train})$$
+while the training algorithm is governed by hyperparameters
+$\omega$. %A base task $\mathcal{T}_i$  is a pair of dataset and  
+% hyperparameterized-loss function  $(D_i,\mathcal{L}_\omega)$.   
+
+
+Now, meta-learning is concerned with learning a new task $\mathcal{T}$ from a set of
+base-learning tasks $\{\mathcal{T}_1,\mathcal{T}_2,\mathcal{T}_3,\dots\}$
+so that a new (related) meta-test-task will reach a high accuracy
+quicker. Each  
+base-learning task $\mathcal{T}_i$  has  a dataset
+$D_i$  and a learning 
+objective, the loss function $\mathcal{L}_i$. Thus we get $\mathcal{T}_i=(D_i,
+\mathcal{L}_i)$. Each dataset consists of pairs of input-examples and labels
+$D_i=\{(x_j,y_j)\}$, and is split into a training and a testset $D_i=\{D_{{\mathcal{T}_i},train},D_{{\mathcal{T}_i},test}\}$. On each training dataset a parameterized model
+$\hat{f}_{\theta_i}(D_{i,{train}})$ is estimated, with a loss function
+$\mathcal{L}_i(\theta_i,D_{i,{train}})$.  The model $\hat{f}$ is approximated
+with an algorithm that is governed by a set of hyperparameters
+$\omega$. The particular hyperparameters vary from algorithm to
+algorithm, but frequently encountered hyperparameters are the learning
+rate $\alpha$,  the initial  parameters $\theta_0$, and  algorithm
+constants. 
+
+
+%One of the most popular deep metalearning approaches of the last few  years is optimization-based metalearning~\citep{finn2017model,hospedales2021meta,huisman2021survey}.
+%MAML, which stands for
+%\emph{model-agnostic meta learning}~\cite{finn2017model}.
+%This approach
+% is an optimization-based approach that 
+%optimizes the initial  parameters 
+%$\theta$ of the network for fast learning of new tasks. Most 
+%optimization-based techniques do so 
+%by approaching meta-learning as a two-level optimization problem. 
+%At the \emph{inner} level, a base learner makes task-specific updates to $\theta$ for the different observations in the training set. At the \emph{outer} level, the meta-learner optimizes hyperparameters $\omega$ across a sequence of base tasks where the loss of each task is evaluated using the \emph{test} data from the base tasks $D_{{\mathcal{T}_i},test}$~\cite{ravi2016optimization,hospedales2020meta,lee2018gradient}. 
+
+% In meta learning the base learner is set to perform the \emph{inner}
+% optimization loop. The meta learner optimizes the hyperparameters
+% $\omega$ for a sequence of base tasks. This is called the \emph{outer}
+% loop.
+
+The inner loop optimizes the parameters $\theta$, and the outer loop
+optimizes the hyperparameters $\omega$ to find the best performance on
+the set of base tasks %$i=0, \ldots, M$ 
+with the appropriate test data:
+$$ \omega^\star=\underbrace{\argmin_\omega
+  \mathcal{L}^{\mbox{meta}}}_{\textrm{outer loop}} (\underbrace{\argmin_{\theta_i}
+\mathcal{L}^{\mbox{base}}_\omega (\theta_i,D_{i,train})}_{\textrm{inner loop}},D_{i,test}) .$$
+The inner loop optimizes $\theta_i$ within the datasets $D_i$ of the
+tasks $\mathcal{T}_i$ , and the
+outer loop optimizes $\omega$ across the tasks and datasets.
+
+The meta loss function
+optimizes for the meta objective, which can be accuracy, speed, or
+another goal over the set of base tasks (and datasets). The outcome of the meta
+optimization is a set of optimal hyperparameters $\omega^\star$.
+% This
+% set of optimal hyperparameters
+% may include optimal initial parameters $\theta_0^\star$ for quick learning of new
+% learning tasks,  an optimal learning rate $\alpha^\star$, and other 
+% hyperparameters. 
+
+In optimization-based metalearning  the most important hyperparameters
+$\omega$
+% , such as MAML,
+are the  optimal initial
+parameters $\theta_0^\star$. When the meta-learner   only optimizes  the
+initial parameters as hyperparameters ($\omega=\theta_0$)  then the
+inner/outer formula simplifies as follows:
+$$ \theta_0^\star=\underbrace{\argmin_{\theta_0}
+  \mathcal{L}}_{\textrm{outer loop}} (\underbrace{\argmin_{\theta_i}
+\mathcal{L}
+(\theta_i,D_{i,train})}_{\textrm{inner loop}},D_{i,test}) .$$ In this
+approach we meta-optimize the initial parameters $\theta
+_0$, such that the loss function  performs well on the \emph{test} data of the base
+tasks \citep{finn2017model,huisman2021survey}. 
+
+
+
+
+\section{Few-shot learning, LLMs, and Metalearning}
+One of the main goals in machine learning is for a model to provide good answers with only a few examples. The aim of metalearning is to learn how to quickly learn new tasks, and thus achieve the goal of few-shot learning. At the start of the base learning procedure, the model parameters are typically initialized randomly, from scratch, with zero knowledge. A common meta learning approach is to initialize the model parameters to earlier learned knowledge, so that they may train faster to a related task. This is a form of transfer learning, that we find in every standard LLM training pipeline, where we first pretrain the model on a large dataset, which implicitly contains many tasks, en then we take the parameters and finetune them further for a specific task. Metalearning is repeated finetuning, and LLM training allows few-shot in-context learning, achieving this major goal of machine learning.
+
+Metalearning is more of an approach; algorithms come in many shapes and forms, just as the hyperparameters of the algorithm come in many shapes and forms. The method by which the parameters  of the base model are initialized can  be regarded as a hyperparameter, but also the  learning rate of the base algorithm, the structure of the network,  the particular type of optimizer function, or other elements of the training algorithm that can be changed. 
+
+%The goals of transfer learning and metalearning are the same: to achieve quick learning in new tasks, tasks that are unseen, but in a related domain. The goal of transfer learning and metalearning is  to achieve  few-shot-learning, where a model performs well when it only sees a few examples. 
+
+Large language models are few-shot models \citep{brown2020language}. LLMs perform well on many new tasks, provided that the domain fits (such as question answering, translation, or math problems). The LLM training pipeline is a good example of a metalearning pipeline that works well on many tasks.
+
+\end{comment}
+
+\section{Concluding Remarks}
+As we have seen, we can understand LLM-training as a  form of metalearning. Regular LLM training is a form of transfer learning, and inference-time reasoning and training, as is used in agentic LLM, use even more metalearning ideas. Although dynamic metalearning approaches (such as self-reflection) are a powerful concept,  care should be taken since interference between inner and outer loops may destabilize the training process. This may  happen unexpectedly, in agents that were previously behaving.
+
+When we use a trained model in our agent that interacts with the world, and that agent is also trained using feedback  from this interaction, then the model can be regarded as the base learner (inner loop) and the interaction with the world can be regarded as the metalearner (outer loop). All the preceding caveats for in-pipeline metalearning also apply for out-of-pipeline metalearning. Only now, when interacting with the real world, the consequence of errors may be more severe.
+
+%\paragraph{ICL}
+%In-context learning, where a fixed, pretrained LLM is used,  is a form of metalearning that uses a fixed basemodel. The inner model does not change anymore after pretraining and finetuning are finished. The base learner is run only at the start, and the prompt can be seen as a hyperparameter that guides the metalearner in the inner inference stage. 
+
+%With in-context reinforcement learning (ICRL)   we encounter an implicit reinforcement learning process, that still uses a fixed basemodel. With ICRL, as the $(s,a,r)$ history that is accumulated in the prompt gets longer,  the metalearner will be achieving increasingly good results. Still, the baselearner has been run only once, before the start of the metalearning process.
+
+%\{ReFT/GRPO/RLVR}
+%When we allow finetuning of the parameters of the inner basemodel using results of the outer loop test-time inferences, then the inner loop is run again and again, and a fully dynamic metalearning process occurs. Thus, in RLVR, GPRO, and ReFT,  models are finetuned in a metalearning setting.
+
+%\paragraph{Slow-moving Target Network}
+%At this point is is important to take a step back and reflect on the learning processes that we have discussed. 
+
+%When two loops train their model at the same time and one model acts as a target in the loss-function of the other model, there is a danger of interference: one loop is optimizing on a target that is being moved by the other loop. And, as we see in sports, hitting a moving target is harder than hitting a target that stands still (especially when it moves irregularly).
+
+%In static LLM few-shot learning, the inner loop (training the model) occurs before the outer loop (test-time inference in context learning), so there is no danger of interference.
+
+%However, in RLVR  the finetuning of the model takes place with results that are produced  using the same model right after a training epoch has occurred. 
+%Furthermore, %A single level baselearning agent uses feedback from the world to optimize its behavior policy. This is a stable learning setup. However,
+%Also, an LLM agent that use feedback from the world to also finetune the surrogate model in addition to optimizing the behavior policy may end up changing the underlying model to a degree that the foundation under the  policy is shifting.
+%(the loss-targets of the in-context reinforcement learning are moving---optimizing on a moving target is harder than on a static target). 
+%Moving target optimization can cause oscillating divergent learning trajectories, and even when results are stable, they can be  brittle. 
+%Clearly, care must be taken to prevent model divergence in order to achieve good training performance.
+
+Related fields of online machine learning, such as deep reinforcement learning, also suffer from the unstable training and the moving target problem. 
+%, since the back-propagation targets are changed while the temporal difference error is trying to optimize on them. 
+The field of deep reinforcement learning has introduced many stabilization techniques, such as replay buffers and target networks \citep{mnih2015human,hessel2018rainbow}. These methods typically try to decouple the periodicity of the two learning processes, often by slowing down one of them. 
+A similar approach is introduced in Hierarchical Reasoning Models (HRM) \citep{wang2025hierarchical}. HRM consists of a two-layer metalearning approach. Here, too, the learning is stabilized by learning at two different speeds. 
+
+Knowledge of such stabilization  methods is useful when designing agentic LLM solutions. In the next part we will  provide an overview of the different interaction styles by which agentic LLM interact with the world. The styles go from static to dynamic.
+
+
+\bibliographystyle{plainnat}
+\bibliography{agenticbook,refs,case,synthetic}
+
+
+
+%Replay buffer
+%Multi-level model with different speeds
+
+%ReAct, BALROG? Thet are not stable, are they two layer systems, or simply single layer on top of static LLM? Pure ICL does not have a problem!
+
+%RLVR potentially wel!
+
+%En hoe zit eht met de five styles????
+%\begin{itemize}
+%    \item[A] instruction, stable (no model change)
+%\item[B] ICL, stable (no model change)
+%\item[C] CoT, stable (no model change)
+%\item[D] ICRL, stable (no model change)
+%\item[E] ReFT/RLVR/GRPO, unstable (prompt and model change)
+%\end{itemize}
+
+
+%agentic interaction is de outer loop die de context beinvloed, of de finetuning. De inner loop is pretraining, of pretraining + finetuning. Dus inderdaad metalearning, dus moet metalearnign worden iutgelegd, met zijn voordelen (krachtig en sneller leren van nieuwe dingen) en nadelen (instabiel moving target als je inner en outer tegelijk doet). Dus kijk uit met je design, wat de reden van deze sectie is.
+
+%Eerst thoerie van metalearning uitleggen, met inner en uiter loop
+
+%Dan metalearnign vertaalt naar test time compute (in context).
+%Hmm, is daar wat te vertellen? Anders dan de prompt veranderd?
+%Hangt er van af hoeveel ik al in H6 vertelt heb over de zelfreflecters. Hier toch meer over convergentie stabiliteit gaan vertellen? Voorbeelden? Grafieken? code?
+%Zijn er stabiele systemen? ReAct? ACE? Kan ik iets aanbevelen?  Is er al iets klaar voor primetime? Een werkend systeem voorbeeld? BALROG met Reflexion? Agent die iets nuttigs doet en interactie met wereld heeft...
+%Met Niki praten?
+
+%En een RLVR trainer op TTT?
+
+%Dat moet ik gaan uitzoeken!
+
+%Dan metalearning vertaalt naar finetuning uitleggen.
+
+%We have seen 5 agentic interaction styles in whcih the agents can interact with the world. All included learning at different levels. In this section we will have a more principled look at methods that learn at different levels: metalearning.
+
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\todo{Re-evaluate/redesign the structure of this section}
+
+%\paragraph{Agentic LLM: Memory based prompt optimization, interaction through Tools}
+%\subsection{DEF MetaLearning: Learning to learn Tasks}
+%Definition:
+%Metalearning learns to learn. Base learning learns good parameter values for a model for a single task, over a set of training examples, so that it will generalize well to a new example. Meta learning learns good hyperparameter values over a range of tasks, so that an algorithm will learn  a new task well and quicker. 
+%The base learner is also known as the inner learning loop, the meta learner is the outer loop.
+
+%We define Metalearning as follows: 
+%\begin{enumerate}
+%    \item {\bf Task-element}: learns over multiple tasks, that are different, to speed up learning a new task. 
+%    \item {\bf Algorithmic-architecture}: both inner loop and outer loop. In the inner loop a base learner learns parameters, on the outer loop the hyperparameters of the base learner are learned by the metalearner.
+%\end{enumerate}
+%A challenge in metalearning is often the stability of the learning process. If the inner loop shows non-linear convergence behavior, the optimization target for the outer loop changes, which may cause hyperparameters of the inner loop baselearner to fluctuate, leading to an overall unstable and unsuccessful learning process. 
+
+%For the purists, for a method to be called {\em metalearning}, it should have both elements. For the pragmatists, it is often enough to learn the lesson that optimizing on a moving target is difficult. Moving targets  require extra attention to the convergence process in any double loop learning system, such as LLM finetuning, in-context learning, and even basic single-loop model-free reinforcement learning that uses function approximation (with the neural network backpropagation becoming the extra loop, as already in DQN). The "extra attention" can be in the form of slowing down changes in hyper parameters, or adding extra buffers or networks to slow down changes of certain (hyper) parameters of the learning process.
+
+%Model-based reinforcement learning consists of two learning loops, one for the dynamics model, and one sampling from that for the policy. Depending on how lenient we are with the definition of hyperparameter, we could regard the policy network parameters as outperloop hyperparameters, and the dynamics model parameters as the baselearning inner loop. Model-based reinforcement learnign certainly has many elements of metalearning, especially when it learns over different tasks, such is in the GATO \citep{reed2022generalist} and Dreamer v3 works \citep{hafner2025mastering}.
+
+%LLMs train their parameters on a task, this is baselearning, although typically over a diverse task. Finetuning parameters on a single new task, also baselearning. The prompts, and the fewshot examples of in-context learning can be considered as hyperparameters, activating different parts of the LLM. External prompt optimizers are certainly outer loop metalearners. Agentic LLMs that use ICRL or Reinforcement finetuning based on chain of thought or other ICL prompts also metalearn the hyperparameters of the agent, although in ReFT also the innerloop parameters are changed. 
+
+%\subsubsection{Metalearning: Inner loop, Outer loop}
+
+%Metalearning is learning hyperparameters. ICL is metalearning. activating previously learned knwoledge. ICL: a model learns to adapt to new tasks by processing examples within its input context during inference. Is everything that adjusts hyperparameters metalearning? ICL is metalearning on a pretrained LLM (prompt is the hyperparameter), ICRL is certainly metalearning (hyperparameter is prompt and RL parameters), ReFT is metalearning not since  LLM is adapted (that is parameters) on World feedback, but because prompt is adapted (that is hyperparameter). All HRL is metalearning where manager level parameters are regarded as hyperparameters. 
+%Agentic LLM is metalearning, since there is an outer RL loop with World feedback that changes the prompt. Agentic LLM is HRL, since inner loop also adapts regular parameters (ReFT).
+%All Styles are metalearning, if we regard the prompt as outerloop hyperparameter, except Style A, since prompt is fixed.
+%Problem of metalearning is stability. Converging on a moving target is harder. Need different convergence rates (top level must slow down).
+
+%We have all experienced how it feels to perform metalearning when we are prompt engineering our LLM.
+
+%Metalearning (learning how to train a system on a moving target) is hard, and can be frustrating. You think you know what will happen if you change the prompt in a certain direction, and then it surprises you.
+%We experience this difficulty directly, since, when prompt engineering, trying to optimize the answer that we get out of our prompt, we change one aspect of the prompt, and performance drops. Metalearning our LLM through prompt engineering is a non-linear unpredictable process. There is non-smoothness where we do not expect it inside the LLM. It often comes down to taking smaller steps, trying to identify linear (predictable) regions where the thing does behave as your mental model is starting to believe.
+
+
+%ReFT is not metalearning because inner LLM parameters are changed. 
+
+
+
+
+
+% Transfer: single copy
+
+% Meta: sequence sub tasks
+
+% def: inner-outer
+
+% meta-goal (meta loss function)
+
+% related: curriculum
+
+% related: classic ml: automl, hyperoptim
+
+
+%\subsubsection{Learning Models and Contexts from agentic interaction; Prompts and World models}
+%\subsubsection{LLM Pretraining/Finetuning is Inner Loop}
+%\paragraph{Inner loop RL: GRPO, RLHF}
+
+%\subsubsection{ICRL is metalearning (outer loop)}
+
+
+
+%\paragraph{Inner loop solves for problem instances of one task}
+%Supervised, RL
+%\paragraph{Outer loop solves for problem tasks of one world}
+%\paragraph{Abstraction as metalearning}
+%\paragraph{Stability of Convergence: DRL can deal with unstable moving targets}
+%Challenge of hierarchical online learning, including metalearning, is stability of convergence, as lower level is moving target for upper level. Stabilization methods reduce dynamics in data sets and replay buffers and target networks, make online learning (RL) more like offline learning (supervised). Dealing with unstable convergence  has been a challenge of metalearning progress.
+
+%\subsubsection{Test Time Compute methods are  Metalearning (ABCD: IC: LLM as environment) as Metalearning}
+%Test Time Compute, Prompt Optimization, Memory-based Self-Reflection as Outer Loop learning
+
+%\paragraph{Learning and Planning, Training and Inference, Planning as Outer Loop/Inference time Learning}
+%\subsubsection{Agentic LLM as Metalearning}
+%\subsubsection{Test Time Scaling}
+
+
+
+%This section was about metalearning and how LLMs can be used to generate actions, using memory scaffolding around them. But, with ICRL,  the environment for RL was the LLM. 
+
+%Test time compute and prompt optimization loops are to improve model outcomes. Not better actions. 
+
+%Now we want the World as environment.
+%LLM acting as agent in the world. Is not the same as ICRL or ICL or metalearning. ICRL is metalearning allright, but it is not an LLM acting in the world.
+
+%Acting in the world.
+%\subsubsection{Test time learning/ICRL (outer loop)} Inference time learning is metalearning
+
+%RL is an online improvement loop, and is well suited for metalearning around and LLM. The prompt contains few-shot examples (the context as states), and an instruction/question, and the LLM answer based on its pretrained knowledge (inner loop). 
+
+%\begin{figure}[t]
+%  \begin{center}
+%    \input figures/rl2
+%    \caption{In Context Reinforcement Learning with an LLM}\label{fig:rl2}
+%  \end{center}
+%\end{figure}
+%Figure~\ref{fig:rl2} illustrates how an LLM can function as the environment for reinforcement learning agent, to learn a policy with an action for each state, online, through interaction with the LLM. 
+
+%Note that in Figure~\ref{fig:rl-org}, the state $s$ was kept in the Environment. If the LLM is our environment, then something must change, since LLMs are purely functional (do not retain state). Now, the state must be explicitly managed, and carried in the function arguments. In Figure~\ref{fig:rl2} the state is kept in the agent, and passed along with the action that is chosen by the policy to the LLM. The LLM then determines the next state and the reward for the prompt that consists of the state (history) and action. The ICRL algorithm is a conventional RL policy improvement algorithm, such as Q-learning or PPO.
+
+%The prompt contains both the history (few shot examples) and the action (instruction/move/question).
+
+
+%\subsubsection{E: FT: Agentic LLM with the World as environment, as Metalearning}
+
+%\subsubsection{Finetuning (ReFT/RLVR: inner/outer loop)}
+%\citep{luong2024reft}
+%\paragraph{Inner/Outer Loop RL: RLFT}
+
+%\subsubsection{Stable Metalearning with Feedback}
+
+
+%\section{Conclusion}
+%In-context does not change the model, but uses it with smart prompts to get the best possible actions out of standard LLMs. It is cheap, and quick. No training of models is performed, and standard models can be used. We can use standard LLMs through APIs.
+
+%Pretraining and finetuning do change model parameters, and one does need to have access to one's own model. It is more expensive, since the model must be trained, but the model can be adapted to the domain, and performance can be higher than only with in-context learning. World models and VLAs have been created that achieve surprising results. 
+
+%Metalearning is a technique to learn on different levels. %Actions from the world 
+%Wat is de inner loop, wat is de outer loop????
+%Wat zijn de taken binnen de outer loop???

@@ -1,0 +1,66 @@
+# Homework 1 public teaching repository: assignments/OMIM_620785/grill_run/tasks/0033_screen_h13/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620785/grill_run/tasks/0033_screen_h13/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620785/grill_run/tasks/0033_screen_h13/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "A large international multi-center cohort of 45 patients with ACBD6 deficiency did not identify pancytopenia or hematologic dysfunction as a core clinical manifestation, contrasting with an initial report in two siblings.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "In a study of 45 affected individuals across 28 unrelated families, core manifestations were neurodevelopmental and progressive movement disorders; hematologic dysfunction or pancytopenia was not listed among recurring clinical cardinal features.",
+      "stance": "supports",
+      "source": {
+        "title": "Bi-allelic ACBD6 variants lead to a neurodevelopmental syndrome with progressive and complex movement disorders",
+        "authors": [
+          "R Kaiyrzhanov",
+          "A Rad",
+          "SJ Lin",
+          "A Bertoli"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://academic.oup.com/brain/article-abstract/147/4/1436/7407365",
+        "quote": "The affected individuals (23 males and 22 females), aged 1-50 years, typically present with a complex and progressive disease involving moderate-to-severe global developmental delay/intellectual disability (100%) with significant expressive language impairment (98%), movement disorders (97%), facial dysmorphism (95%) and mild cerebellar ataxia (85%)"
+      },
+      "numbers": [
+        {
+          "metric": "affected individuals",
+          "value": 45
+        }
+      ]
+    },
+    {
+      "text": "Pancytopenia with severe infections was described as a previously unreported finding in two Thai siblings with an ACBD6 homozygous duplication.",
+      "stance": "neutral",
+      "source": {
+        "title": "Neurodevelopmental Disorder, Obesity, Pancytopenia, Diabetes Mellitus, Cirrhosis, and Renal Failure in ACBD6-Associated Syndrome: A Case Report",
+        "authors": [
+          "P Yeetong",
+          "N Tanpowpong",
+          "S Rakwongkhachon"
+        ],
+        "year": 2022,
+        "journal": null,
+        "doi": "10.1212/nxg.0000000000200046",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.neurology.org/doi/abs/10.1212/nxg.0000000000200046",
+        "quote": "Clinical manifestations that have never been previously reported include morbid obesity, pancytopenia with severe infections, diabetes mellitus, cirrhosis, and renal failure, leading to deaths in their early 30s."
+      },
+      "numbers": [
+        {
+          "metric": "affected siblings",
+          "value": 2
+        }
+      ]
+    }
+  ]
+}
+```

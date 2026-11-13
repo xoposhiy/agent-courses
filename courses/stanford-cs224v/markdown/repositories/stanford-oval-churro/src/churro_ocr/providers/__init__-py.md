@@ -1,0 +1,104 @@
+# Project code: stanford-oval/Churro: src/churro_ocr/providers/__init__.py
+
+[Course index](../../../../../../README.md) · [Original source](https://github.com/stanford-oval/Churro/blob/HEAD/src/churro_ocr/providers/__init__.py) · [Raw file](../../../../../../raw/repositories/stanford-oval-churro/src/churro_ocr/providers/__init__.py)
+
+Retrieved: 2026-11-13T17:04:51.902331+00:00
+
+```python
+"""Public OCR builders and page detection backends."""
+
+from __future__ import annotations
+
+from importlib import import_module
+from typing import TYPE_CHECKING
+
+from churro_ocr.ocr import BatchOCRBackend
+
+if TYPE_CHECKING:
+    from churro_ocr.providers.builder import build_ocr_backend
+    from churro_ocr.providers.page_detection import (
+        AzurePageDetector,
+        LLMPageDetector,
+        locate_text_block_bbox_with_llm,
+        locate_text_block_bbox_with_llm_sync,
+    )
+    from churro_ocr.providers.specs import (
+        DEFAULT_OCR_MAX_TOKENS,
+        AzureDocumentIntelligenceOptions,
+        HuggingFaceOptions,
+        LiteLLMTransportConfig,
+        MistralOptions,
+        OCRBackendSpec,
+        OCRModelProfile,
+        OpenAICompatibleOptions,
+        resolve_ocr_profile,
+    )
+
+
+_LAZY_EXPORTS = {
+    "AzureDocumentIntelligenceOptions": (
+        "churro_ocr.providers.specs",
+        "AzureDocumentIntelligenceOptions",
+    ),
+    "AzurePageDetector": ("churro_ocr.providers.page_detection", "AzurePageDetector"),
+    "build_ocr_backend": ("churro_ocr.providers.builder", "build_ocr_backend"),
+    "DEFAULT_OCR_MAX_TOKENS": ("churro_ocr.providers.specs", "DEFAULT_OCR_MAX_TOKENS"),
+    "HuggingFaceOptions": ("churro_ocr.providers.specs", "HuggingFaceOptions"),
+    "LiteLLMTransportConfig": ("churro_ocr.providers.specs", "LiteLLMTransportConfig"),
+    "LLMPageDetector": ("churro_ocr.providers.page_detection", "LLMPageDetector"),
+    "locate_text_block_bbox_with_llm": (
+        "churro_ocr.providers.page_detection",
+        "locate_text_block_bbox_with_llm",
+    ),
+    "locate_text_block_bbox_with_llm_sync": (
+        "churro_ocr.providers.page_detection",
+        "locate_text_block_bbox_with_llm_sync",
+    ),
+    "MistralOptions": ("churro_ocr.providers.specs", "MistralOptions"),
+    "OCRBackendSpec": ("churro_ocr.providers.specs", "OCRBackendSpec"),
+    "OCRModelProfile": ("churro_ocr.providers.specs", "OCRModelProfile"),
+    "OpenAICompatibleOptions": ("churro_ocr.providers.specs", "OpenAICompatibleOptions"),
+    "resolve_ocr_profile": ("churro_ocr.providers.specs", "resolve_ocr_profile"),
+}
+
+__all__ = [
+    "DEFAULT_OCR_MAX_TOKENS",
+    "AzureDocumentIntelligenceOptions",
+    "AzurePageDetector",
+    "BatchOCRBackend",
+    "HuggingFaceOptions",
+    "LLMPageDetector",
+    "LiteLLMTransportConfig",
+    "MistralOptions",
+    "OCRBackendSpec",
+    "OCRModelProfile",
+    "OpenAICompatibleOptions",
+    "build_ocr_backend",
+    "locate_text_block_bbox_with_llm",
+    "locate_text_block_bbox_with_llm_sync",
+    "resolve_ocr_profile",
+]
+
+
+def _attribute_error(message: str) -> AttributeError:
+    return AttributeError(message)
+
+
+def __getattr__(name: str) -> object:
+    """Lazy-load provider exports to avoid circular imports during package init."""
+    try:
+        module_name, attr_name = _LAZY_EXPORTS[name]
+    except KeyError as exc:
+        message = f"module {__name__!r} has no attribute {name!r}"
+        raise _attribute_error(message) from exc
+
+    value = getattr(import_module(module_name), attr_name)
+    globals()[name] = value
+    return value
+
+
+def __dir__() -> list[str]:
+    """Expose the lazy exports to interactive tooling."""
+    return sorted(set(globals()) | set(__all__))
+
+```

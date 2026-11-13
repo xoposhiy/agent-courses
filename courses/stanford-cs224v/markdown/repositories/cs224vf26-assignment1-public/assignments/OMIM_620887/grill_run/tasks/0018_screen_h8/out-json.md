@@ -1,0 +1,73 @@
+# Homework 1 public teaching repository: assignments/OMIM_620887/grill_run/tasks/0018_screen_h8/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620887/grill_run/tasks/0018_screen_h8/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620887/grill_run/tasks/0018_screen_h8/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "FDXR mutations characteristically present as auditory neuropathy spectrum disorder and optic atrophy (sensorial neuropathy) rather than early fatal neonatal metabolic collapse typical of MMDS1-3.",
+  "confidence": 0.9,
+  "evidence": [
+    {
+      "text": "Biallelic FDXR mutations cause sensorial neuropathy presenting with auditory neuropathy and optic atrophy, demonstrating a distinct sensory neuropathy phenotype within mitochondrial Fe-S synthesis disorders.",
+      "stance": "supports",
+      "source": {
+        "title": "FDXR mutations cause sensorial neuropathies and expand the spectrum of mitochondrial Fe-S-synthesis diseases",
+        "authors": [
+          "A Paul",
+          "A Drecourt",
+          "F Petit",
+          "DD Deguine"
+        ],
+        "year": 2017,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.cell.com/ajhg/fulltext/S0002-9297(17)30376-2",
+        "quote": "Here, we report on eight subjects from four independent families affected by auditory neuropathy and optic atrophy. Whole-exome sequencing revealed biallelic mutations in FDXR in affected subjects of each family."
+      },
+      "numbers": [
+        {
+          "metric": "affected subjects with auditory neuropathy and optic atrophy",
+          "value": 8
+        },
+        {
+          "metric": "independent families",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "text": "A literature review of 46 individuals with biallelic FDXR variants found that auditory neuropathy and optic atrophy are the predominant clinical hallmarks.",
+      "stance": "supports",
+      "source": {
+        "title": "Biallelic FDXR mutations induce ferroptosis in a rare mitochondrial disease with ataxia",
+        "authors": [
+          "J Wang",
+          "R Zhao",
+          "J Ma",
+          "J Qin",
+          "H Zhang",
+          "J Guo"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.sciencedirect.com/science/article/pii/S0891584925000875",
+        "quote": "clinical phenotypes of the 46 reported patients with FDXR variants [2,3,[32], [33], [34], [35], [36], [37]]. The most prevalent clinical features included auditory neuropathy and optic atrophy"
+      },
+      "numbers": [
+        {
+          "metric": "reported patients with FDXR variants",
+          "value": 46
+        }
+      ]
+    }
+  ]
+}
+```

@@ -1,0 +1,66 @@
+# Homework 1 public teaching repository: assignments/OMIM_617988/grill_run/tasks/0038_screen_h17/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_617988/grill_run/tasks/0038_screen_h17/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_617988/grill_run/tasks/0038_screen_h17/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "A 2024 literature review identified sparse hair in 26 of 28 reported individuals with Jaberi-Elahi syndrome (~93%), supporting its role as a high-sensitivity hallmark.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "In a comprehensive literature review of 28 individuals with Jaberi-Elahi syndrome, sparse hair was documented in 26 of 28 patients (92.9%), ranking alongside motor development delay as the most frequent clinical manifestation.",
+      "stance": "supports",
+      "source": {
+        "title": "Jaberi-Elahi syndrome: Exploring a novel GTPBP2 mutation and a literature review",
+        "authors": [
+          "J Manoochehri",
+          "A Shiri",
+          "S Khoddam"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.sciencedirect.com/science/article/pii/S1769721224000454",
+        "quote": "A large numbers of patients manifest motor development delay (26/28), sparse hair (26/28), and speech disorder (24/28)."
+      },
+      "numbers": [
+        {
+          "metric": "prevalence of sparse hair",
+          "value": "26/28"
+        }
+      ]
+    },
+    {
+      "text": "A 4-month-old infant presenting with early-onset features of Jaberi-Elahi syndrome showed no overt ectodermal manifestations, consistent with ectodermal findings becoming prominent after early infancy.",
+      "stance": "supports",
+      "source": {
+        "title": "A Novel Homozygous Frameshift GTPBP2 Variant in Jaberi-Elahi Syndrome: First Case Report from T\u00fcrkiye",
+        "authors": [
+          "M So\u011fukp\u0131nar",
+          "Y Ata\u015f",
+          "G \u00dcner",
+          "P Arslan"
+        ],
+        "year": 2026,
+        "journal": null,
+        "doi": "10.1159/000552675/949444",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://karger.com/msy/article-abstract/doi/10.1159/000552675/949444",
+        "quote": "We report a 4-month-old female infant born to consanguineous parents... No overt ectodermal abnormalities were observed."
+      },
+      "numbers": [
+        {
+          "metric": "age of infant lacking ectodermal abnormalities",
+          "value": "4 months"
+        }
+      ]
+    }
+  ]
+}
+```

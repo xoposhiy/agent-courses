@@ -1,0 +1,37 @@
+{
+  "source_id": "dlai-agentic-evals",
+  "materials": 69,
+  "markdown_files": 38,
+  "raw_files": 98,
+  "local_links_checked": 227,
+  "raw_checksums_checked": 59,
+  "converted_html_checked": 31,
+  "broken_local_links": [],
+  "errors": [],
+  "course": {
+    "id": "dlai-agentic-evals",
+    "folder": "courses/dlai-agentic-evals",
+    "raw_files": 98,
+    "markdown_files": 38,
+    "bytes": 32180951,
+    "local_links_checked": 228,
+    "broken_local_links": [],
+    "manifest_type": "dict",
+    "manifest_records": 69,
+    "statuses": {
+      "downloaded": 40,
+      "failed": 5,
+      "requires_login": 14,
+      "requires_subscription": 10
+    },
+    "conversion_statuses": {
+      "converted": 33,
+      "failed": 5,
+      "converted_with_limitations": 5,
+      "not_applicable": 2,
+      "not_available": 24
+    },
+    "pdf_pages": 288
+  },
+  "structural_checked_at": "2026-11-13T17:39:24.846270+00:00"
+}

@@ -1,0 +1,40 @@
+# Homework 1 public teaching repository: assignments/OMIM_620985/grill_run/tasks/0008_screen_h2/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620985/grill_run/tasks/0008_screen_h2/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620985/grill_run/tasks/0008_screen_h2/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Karayol et al. (2024) describe 25 individuals with global developmental delay and motor deficits, making severe language impairment plausible though exact disproportionate frequencies require detailed cohort review.",
+  "confidence": 0.65,
+  "evidence": [
+    {
+      "text": "In a cohort of 25 individuals with de novo MSL2 variants, neurodevelopmental phenotypes included global developmental delay, intellectual disability, hypotonia, and motor issues, though specific disproportion of speech delay relative to motor delay is not detailed in the abstract.",
+      "stance": "neutral",
+      "source": {
+        "title": "MSL2 variants lead to a neurodevelopmental syndrome with lack of coordination, epilepsy, specific dysmorphisms, and a distinct episignature",
+        "authors": [
+          "R Karayol",
+          "MC Borroto",
+          "S Haghshenas"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": "PMC11267526",
+        "url": "https://www.cell.com/ajhg/fulltext/S0002-9297(24)00164-2",
+        "quote": "Using exome sequencing, here we identify a cohort of 25 individuals with heterozygous de novo variants in MSL complex member MSL2. MSL2 variants were associated with NDD phenotypes including global developmental delay, intellectual disability, hypotonia, and motor issues such as coordination problems, feeding difficulties, and gait disturbance."
+      },
+      "numbers": [
+        {
+          "metric": "cohort_size",
+          "value": 25
+        }
+      ]
+    }
+  ]
+}
+```

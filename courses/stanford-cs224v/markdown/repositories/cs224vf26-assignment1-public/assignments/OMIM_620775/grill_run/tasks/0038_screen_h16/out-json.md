@@ -1,0 +1,66 @@
+# Homework 1 public teaching repository: assignments/OMIM_620775/grill_run/tasks/0038_screen_h16/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620775/grill_run/tasks/0038_screen_h16/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620775/grill_run/tasks/0038_screen_h16/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Primary reports of FILIP1-related congenital myopathy show recurrent infections or later respiratory decline rather than universal neonatal respiratory distress.",
+  "confidence": 0.75,
+  "evidence": [
+    {
+      "text": "Recurrent respiratory infections were documented in two patients out of five reported with homozygous FILIP1 variants, rather than mandatory neonatal respiratory distress.",
+      "stance": "supports",
+      "source": {
+        "title": "Bi-allelic variants of FILIP1 cause congenital myopathy, dysmorphism and neurological defects",
+        "authors": [
+          "A Roos",
+          "PFM van der Ven",
+          "H Alrohaif",
+          "H K\u00f6lbel",
+          "L Heil"
+        ],
+        "year": 2023,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://academic.oup.com/brain/article-abstract/146/10/4200/7159317",
+        "quote": "Recurrent respiratory infections occurred in two patients and \u2026"
+      },
+      "numbers": [
+        {
+          "metric": "patients with recurrent respiratory infections",
+          "value": 2
+        },
+        {
+          "metric": "total cohort size",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "text": "Respiratory failure in FILIP1-associated neuromuscular disorder can develop over time rather than presenting universally at birth, necessitating longer-term follow-up.",
+      "stance": "supports",
+      "source": {
+        "title": "FILIP1-associated neuromuscular disorder and phenotypic blending due to paternal UPD6",
+        "authors": [
+          "LM Watts",
+          "DJ Bunyan",
+          "E Giacopuzzi"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://academic.oup.com/braincomms/article-abstract/6/5/fcae330/7774821",
+        "quote": "Further longer-term follow-up is needed to assess whether respiratory \u2026"
+      },
+      "numbers": []
+    }
+  ]
+}
+```

@@ -1,0 +1,32 @@
+{
+  "scope": "All unique links in official schedule and deadline tables; speaker personal pages excluded. Linked readings are collected one level, not recursively.",
+  "discovered_links": 84,
+  "excluded_links": [
+    {
+      "url": "https://ryanmarten.com",
+      "title": "Ryan Marten",
+      "reason": "Speaker personal page"
+    },
+    {
+      "url": "https://www.alexgshaw.com",
+      "title": "Alex Shaw",
+      "reason": "Speaker personal page"
+    },
+    {
+      "url": "https://www.andrewng.org",
+      "title": "Andrew Ng",
+      "reason": "Speaker personal page"
+    },
+    {
+      "url": "https://www.carlosejimenez.com",
+      "title": "Carlos Jimenez",
+      "reason": "Speaker personal page"
+    },
+    {
+      "url": "https://codecreator.github.io",
+      "title": "Alexander Wettig",
+      "reason": "Speaker personal page"
+    }
+  ],
+  "missing_links": []
+}

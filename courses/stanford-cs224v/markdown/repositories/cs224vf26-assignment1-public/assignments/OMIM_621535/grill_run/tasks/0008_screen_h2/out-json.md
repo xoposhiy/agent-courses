@@ -1,0 +1,56 @@
+# Homework 1 public teaching repository: assignments/OMIM_621535/grill_run/tasks/0008_screen_h2/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621535/grill_run/tasks/0008_screen_h2/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621535/grill_run/tasks/0008_screen_h2/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "SCA52 is recognized as an early-onset cerebellar ataxia associated with RAB3A, fitting within nonprogressive or indolent congenital ataxia presentations similar to SCA29.",
+  "confidence": 0.75,
+  "evidence": [
+    {
+      "text": "OMIM entry #621535 designates Spinocerebellar Ataxia 52 as being caused by variants in RAB3A, expanding the spectrum from cerebellar ataxia to spastic paraplegia.",
+      "stance": "supports",
+      "source": {
+        "title": "Entry - #621535 - SPINOCEREBELLAR ATAXIA 52; SCA52",
+        "authors": [],
+        "year": null,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://omim.org/entry/621535",
+        "quote": "Expanding the clinical spectrum of RAB3A: from cerebellar ataxia to spastic paraplegia. ... SPINOCEREBELLAR ATAXIA 52; SCA52."
+      },
+      "numbers": [
+        {
+          "metric": "OMIM phenotypic MIM number",
+          "value": 621535
+        }
+      ]
+    },
+    {
+      "text": "Nonprogressive congenital ataxias (NPCA) feature infantile or early-onset ataxia preceded by muscular hypotonia and delayed motor milestones, with static courses overlapping across dominant genes like ITPR1.",
+      "stance": "supports",
+      "source": {
+        "title": "Nonprogressive congenital ataxias",
+        "authors": [
+          "E Bertini",
+          "G Zanni",
+          "E Boltshauser"
+        ],
+        "year": 2018,
+        "journal": null,
+        "doi": "10.1016/b978-0-444-64189-2.00006-8",
+        "pmid": "29891079",
+        "pmc": null,
+        "url": "https://books.google.com/books?hl=en&lr=&id=WjZfDwAAQBAJ&oi=fnd&pg=PA91&dq=Spinocerebellar+ataxia+52+RAB3A+clinical+phenotype+hypotonia+nonprogressive&ots=f0sjHgmEOK&sig=5PEhCV87t474UZGc9nFewif6mXI",
+        "quote": "The terminology of nonprogressive congenital ataxia (NPCA) refers to a clinically and genetically heterogeneous group of disorders characterized by congenital or early-onset ataxia, but no progression or even improvement on follow-up. Ataxia is preceded by muscular hypotonia and delayed motor (and usually language) milestones."
+      },
+      "numbers": []
+    }
+  ]
+}
+```

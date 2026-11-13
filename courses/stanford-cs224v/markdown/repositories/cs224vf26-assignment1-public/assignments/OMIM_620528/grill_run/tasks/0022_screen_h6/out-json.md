@@ -1,0 +1,61 @@
+# Homework 1 public teaching repository: assignments/OMIM_620528/grill_run/tasks/0022_screen_h6/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620528/grill_run/tasks/0022_screen_h6/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620528/grill_run/tasks/0022_screen_h6/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "SPTAN1 null and structural variants are established in the literature as causing autosomal dominant distal hereditary motor neuronopathy 11 (dHMN11), distinguishing it from severe dominant-negative encephalopathies.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "Mutations in SPTAN1 have been identified in three separate dominant hereditary motor neuropathy families via next-generation sequencing.",
+      "stance": "supports",
+      "source": {
+        "title": "Distal hereditary motor neuropathies",
+        "authors": [
+          "M Tazir",
+          "S Nouioua"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.sciencedirect.com/science/article/pii/S0035378723011116",
+        "quote": "spectrin gene, SPTAN1, in three separate dominant hereditary motor neuropathy families, were recently identified via next-generation sequencing [18]. SPTAN1 allelic disorders include \u2026"
+      },
+      "numbers": [
+        {
+          "metric": "families identified with dominant hereditary motor neuropathy from SPTAN1 variants",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "text": "Structural variants and deletions disrupting SPTAN1 cause distal hereditary motor neuronopathy 11 (HMND11).",
+      "stance": "supports",
+      "source": {
+        "title": "The hidden burden of structural variants in neurodegenerative and neuromuscular disorders",
+        "authors": [
+          "G Monahan",
+          "CK Scriba",
+          "J Chew",
+          "J Baker",
+          "C Vo"
+        ],
+        "year": 2026,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.nature.com/articles/s41598-026-69714-w",
+        "quote": "\u2026 SPTAN1 is associated with distal hereditary motor neuronopathy 11 (HMND11, MIM: \u2026 5 are also caused by de novo variants in SPTAN155. The deletion presented in this family is \u2026"
+      },
+      "numbers": []
+    }
+  ]
+}
+```

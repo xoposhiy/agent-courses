@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Multi-Agent Reinforcement Learning: Foundations and Modern Approaches</title>
+<meta name="description" content="The first comprehensive textbook on multi-agent reinforcement learning, by Stefano V. Albrecht, Filippos Christianos and Lukas Schäfer (MIT Press, 2024). Free PDF, algorithm code and lecture slides.">
+<meta name="keywords" content="multi-agent reinforcement learning, MARL, deep reinforcement learning, deep learning, multi-agent systems, game theory, textbook, MIT Press">
+<meta name="author" content="Stefano V. Albrecht, Filippos Christianos, Lukas Schäfer">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.marl-book.com/">
+
+<meta property="og:type" content="book">
+<meta property="og:site_name" content="Multi-Agent Reinforcement Learning">
+<meta property="og:title" content="Multi-Agent Reinforcement Learning: Foundations and Modern Approaches">
+<meta property="og:description" content="The first comprehensive textbook on multi-agent reinforcement learning. MIT Press, 2024. Free PDF, algorithm code and lecture slides.">
+<meta property="og:url" content="https://www.marl-book.com/">
+<meta property="og:image" content="https://www.marl-book.com/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Multi-Agent Reinforcement Learning: Foundations and Modern Approaches — MIT Press, 2024">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Multi-Agent Reinforcement Learning: Foundations and Modern Approaches">
+<meta name="twitter:description" content="The first comprehensive textbook on multi-agent reinforcement learning. MIT Press, 2024. Free PDF, algorithm code and lecture slides.">
+<meta name="twitter:image" content="https://www.marl-book.com/assets/img/og-image.jpg">
+
+<meta name="theme-color" content="#0d1418">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/img/icon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Multi-Agent Reinforcement Learning: Foundations and Modern Approaches",
+  "url": "https://www.marl-book.com/",
+  "image": "https://www.marl-book.com/assets/img/marl-book-cover.jpg",
+  "bookFormat": "https://schema.org/Hardcover",
+  "inLanguage": "en",
+  "isbn": "9780262049375",
+  "datePublished": "2024",
+  "genre": "Textbook",
+  "description": "The first comprehensive introduction to multi-agent reinforcement learning, an area of machine learning in which multiple decision-making agents learn to optimally interact in a shared environment.",
+  "author": [
+    { "@type": "Person", "name": "Stefano V. Albrecht", "url": "https://agents-lab.org/stefano-albrecht/" },
+    { "@type": "Person", "name": "Filippos Christianos", "url": "https://fchristianos.com/" },
+    { "@type": "Person", "name": "Lukas Schäfer", "url": "https://www.lukaschaefer.com/" }
+  ],
+  "publisher": { "@type": "Organization", "name": "MIT Press", "url": "https://mitpress.mit.edu/" },
+  "about": ["Multi-agent reinforcement learning", "Deep reinforcement learning", "Game theory", "Multi-agent systems"]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="7" cy="17" r="4.6"/>
+        <circle cx="17" cy="7" r="4.6"/>
+        <rect x="10.4" y="4.6" width="3.2" height="14.8" transform="rotate(45 12 12)"/>
+      </svg>
+      <span class="brand-text">MARL<span class="brand-dim">&nbsp;Book</span></span>
+    </a>
+
+    <nav class="nav" id="primaryNav" aria-label="Primary">
+      <ul>
+        <li><a href="#top">Download</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contents">Contents</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#resources">Code</a></li>
+        <li><a href="#resources">Slides</a></li>
+        <li><a href="#praise">Praise</a></li>
+        <li><a href="#cite">Citation</a></li>
+      </ul>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">MIT Press&ensp;2024</p>
+        <h1>Multi-Agent<br>Reinforcement Learning</h1>
+        <p class="subtitle">Foundations and Modern Approaches</p>
+        <p class="byline">
+          <a href="https://agents-lab.org/stefano-albrecht/">Stefano V. Albrecht</a><span class="sep">/</span><a href="https://fchristianos.com/">Filippos Christianos</a><span class="sep">/</span><a href="https://www.lukaschaefer.com/">Lukas Schäfer</a>
+        </p>
+        <p class="lede">The first comprehensive introduction to multi-agent reinforcement learning.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="download/">Download the PDF<span class="btn-meta">color, 8&nbsp;MB</span></a>
+          <a class="btn btn-ghost" href="https://mitpress.mit.edu/9780262049375/multi-agent-reinforcement-learning/">Order the book<span class="btn-meta">MIT Press</span></a>
+        </div>
+        <p class="hero-errata"><a href="errata.txt">Errata for the second printing</a> &middot; report issues to <span class="mail">issues~at~marl-book~dot~com</span></p>
+      </div>
+
+      <div class="hero-cover">
+        <img src="assets/img/marl-book-cover.jpg" width="320" height="480" alt="Book cover of Multi-Agent Reinforcement Learning: Foundations and Modern Approaches" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div>
+          <h2 class="section-title">About the book</h2>
+          <p>Multi-agent reinforcement learning (MARL) is an area of machine learning in which multiple decision-making agents learn to optimally interact in a shared environment. The book gives an introduction to the models, solution concepts, algorithmic ideas, and technical challenges in MARL, and describes modern approaches that integrate deep learning to produce scalable learning algorithms. It comes with a codebase written in Python that implements several of the algorithms discussed, along with a chapter describing how they are implemented. Readers are assumed to have an undergraduate background in basic mathematics and a basic familiarity with programming to use the codebase.</p>
+        </div>
+        <aside class="note-card">
+          <h3>About the cover</h3>
+          <p>The cover represents a learning process between two agents (shown as dots) that interact repeatedly (edges between dots), spiraling toward a fixed-point solution in the center. For example, two agents repeatedly playing Rock-Paper-Scissors will eventually learn to play the Nash equilibrium strategy of uniformly randomizing between the three actions.</p>
+        </aside>
+      </div>
+
+      <ul class="fact-row">
+        <li><span class="fact-key">Publisher</span><span class="fact-val">MIT Press, 2024</span></li>
+        <li><span class="fact-key">Chapters</span><span class="fact-val">11 chapters, in two parts</span></li>
+        <li><span class="fact-key">PDF</span><span class="fact-val">Free to download</span></li>
+        <li><span class="fact-key">Extras</span><span class="fact-val">Code &amp; lecture slides</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ CONTENTS ============ -->
+  <section class="section section-alt" id="contents">
+    <div class="wrap">
+      <h2 class="section-title">Table of contents</h2>
+      <p class="section-lede">Summary of Notation&ensp;&middot;&ensp;List of Figures&ensp;&middot;&ensp;Preface</p>
+
+      <div class="toc-grid">
+        <div class="toc-col toc-intro">
+          <ol class="toc-list" start="1">
+            <li><span class="ch-num">1</span> Introduction</li>
+          </ol>
+        </div>
+
+        <div class="toc-col">
+          <h3 class="part-title"><span class="part-label">Part 1</span> Foundations of Multi-Agent Reinforcement Learning</h3>
+          <ol class="toc-list" start="2">
+            <li><span class="ch-num">2</span> Reinforcement Learning</li>
+            <li><span class="ch-num">3</span> Games: Models of Multi-Agent Interaction</li>
+            <li><span class="ch-num">4</span> Solution Concepts for Games</li>
+            <li><span class="ch-num">5</span> Multi-Agent Reinforcement Learning in Games: First Steps and Challenges</li>
+            <li><span class="ch-num">6</span> Multi-Agent Reinforcement Learning: Foundational Algorithms</li>
+          </ol>
+        </div>
+
+        <div class="toc-col">
+          <h3 class="part-title"><span class="part-label">Part 2</span> Multi-Agent Deep Reinforcement Learning: Algorithms and Practice</h3>
+          <ol class="toc-list" start="7">
+            <li><span class="ch-num">7</span> Deep Learning</li>
+            <li><span class="ch-num">8</span> Deep Reinforcement Learning</li>
+            <li><span class="ch-num">9</span> Multi-Agent Deep Reinforcement Learning</li>
+            <li><span class="ch-num">10</span> Multi-Agent Deep Reinforcement Learning in Practice</li>
+            <li><span class="ch-num">11</span> Multi-Agent Environments</li>
+          </ol>
+        </div>
+      </div>
+
+      <p class="appendix">Appendix A: Surveys on Multi-Agent Reinforcement Learning</p>
+    </div>
+  </section>
+
+  <!-- ============ NEWS ============ -->
+  <section class="section" id="news">
+    <div class="wrap">
+      <h2 class="section-title">News</h2>
+      <p class="section-lede">Follow the authors for updates: <a href="https://x.com/s_albrecht">Stefano</a>, <a href="https://x.com/f_christianos">Filippos</a>, <a href="https://x.com/LukasSchaefer96">Lukas</a></p>
+
+      <ol class="news-list">
+        <li class="news-item">
+          <p>The Chinese translated edition of the book, published by China Machine Press, is now available (<a href="https://www.cmpbook.com/products/detail?id=332785">publisher book page</a>, <a href="https://item.jd.com/10150741850508.html?spmTag=YTAyNDAuYjAwMjQ5My5jMDAwMDQwMjcuMiUyM3NrdV9jYXJk">JD online shop</a>).</p>
+        </li>
+        <li class="news-item">
+          <p>The first printing of the book (released in December 2024) has sold out. A second printing is now in production, and the updated book PDF is available on this page.</p>
+        </li>
+        <li class="news-item">
+          <p>The Artificial Intelligence Research Institute in Barcelona (IIIA-CSIC) hosted a <a href="https://iiia.csic.es/en-us/marl-course/">summer course</a> based on the book, given by Stefano V. Albrecht. The <a href="https://www.youtube.com/playlist?list=PLkoCa1tf0XjCU6GkAfRCkChOOSH6-JC_2">lecture recordings</a> and <a href="https://github.com/marl-book/marl-book-exercises">coding exercises</a> are now available.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ CODE & SLIDES ============ -->
+  <section class="section section-alt" id="resources">
+    <div class="wrap">
+      <h2 class="section-title">Code and slides</h2>
+      <div class="card-grid two">
+        <article class="card" id="code">
+          <h3>Codebase</h3>
+          <p>The book comes with a codebase written in Python, containing implementations of several MARL algorithms presented in the book. Its primary purpose is to provide algorithm code that is self-contained and easy to read.</p>
+          <p><a class="link-arrow" href="https://github.com/marl-book/codebase">Codebase on GitHub</a></p>
+          <p><a class="link-arrow" href="https://github.com/marl-book/marl-book-exercises">Exercises on GitHub</a></p>
+        </article>
+        <article class="card" id="slides">
+          <h3>Lecture slides</h3>
+          <p>Lecture slides for chapters 1 to 9 are available as PDF files and LaTeX sources, so that instructors can make changes as required.</p>
+          <p>If you use the book or slides in your class, please let us know and we will add your class and institution to a class list.</p>
+          <p><a class="link-arrow" href="https://github.com/marl-book/slides">Slides on GitHub</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRAISE ============ -->
+  <section class="section" id="praise">
+    <div class="wrap">
+      <h2 class="section-title">Endorsements</h2>
+      <p class="section-lede">Solicited by MIT Press</p>
+
+      <div class="quote-grid">
+        <figure class="quote">
+          <blockquote>The authors meticulously bring reinforcement learning together with game theory to provide a foundation for research and application of multi-agent reinforcement learning. This book is the perfect starting point for a grounding in the field.</blockquote>
+          <figcaption><span class="q-name">Andrew Barto</span><span class="q-aff">Professor Emeritus, University of Massachusetts Amherst; 2024 Turing Award recipient</span></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>Multi-agent reinforcement learning is well positioned to be the next white-hot area of artificial intelligence and this book provides the essential background, concepts, and insights for understanding this exciting and important area of research.</blockquote>
+          <figcaption><span class="q-name">Michael L. Littman</span><span class="q-aff">Professor of Computer Science, Brown University</span></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>This book is the first complete reference for the growing area of multi-agent reinforcement learning. It provides both an essential resource for newcomers to the field and a valuable perspective for established researchers.</blockquote>
+          <figcaption><span class="q-name">Peter Stone</span><span class="q-aff">Professor of Computer Science, The University of Texas at Austin</span></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>A landmark textbook to multiagent reinforcement learning, combining game-theoretic foundations with state-of-the-art deep learning. This essential textbook delivers fundamental insights for newcomers, experts and practitioners, featuring real-world applications and advanced algorithms.</blockquote>
+          <figcaption><span class="q-name">Karl Tuyls</span><span class="q-aff">Director of AI Research, Meta AI; Professor of Computer Science, University of Liverpool</span></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>This will become the standard text of the emerging field of multiagent reinforcement learning. It builds from foundational ideas, incorporating recent breakthroughs in deep learning. This book will help accelerate theoretical and practical progress.</blockquote>
+          <figcaption><span class="q-name">Mykel J. Kochenderfer</span><span class="q-aff">Professor of Aeronautics and Astronautics, Stanford University</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CITATION ============ -->
+  <section class="section section-alt" id="cite">
+    <div class="wrap">
+      <h2 class="section-title">Citation</h2>
+      <p class="citation-plain">Stefano V. Albrecht, Filippos Christianos, and Lukas Schäfer. <i>Multi-Agent Reinforcement Learning: Foundations and Modern Approaches.</i> MIT Press, 2024.</p>
+
+      <figure class="code-block">
+        <figcaption>
+          <span>BibTeX</span>
+          <button type="button" class="copy-btn" id="copyBibtex" data-target="bibtex">Copy</button>
+        </figcaption>
+        <pre id="bibtex"><code>@book{ marl-book,
+  author = {Stefano V. Albrecht and Filippos Christianos and Lukas Sch\"afer},
+  title = {Multi-Agent Reinforcement Learning: Foundations and Modern Approaches},
+  publisher = {MIT Press},
+  year = {2024},
+  url = {https://www.marl-book.com}
+}</code></pre>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING CTA ============ -->
+  <section class="closing">
+    <div class="wrap closing-inner">
+      <h2>Start reading today</h2>
+      <p>The complete book is available as a free PDF.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="download/">Download the PDF</a>
+        <a class="btn btn-ghost" href="https://mitpress.mit.edu/9780262049375/multi-agent-reinforcement-learning/">Order a print copy</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons CC-BY-NC-ND</a> &middot; &copy; MIT Press</p>
+    <p>Domain sponsored by <a href="https://www.net-lab.net">net-lab</a></p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

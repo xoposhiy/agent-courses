@@ -1,0 +1,337 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 5,
+    "text": "In the last video, you learned how to review your test results,\ngroup the mistakes you found,"
+  },
+  {
+    "startInSeconds": 5,
+    "endInSeconds": 8,
+    "text": "and decide which problems need attention first."
+  },
+  {
+    "startInSeconds": 8,
+    "endInSeconds": 14,
+    "text": "That review also helps you understand the application better, so you\nnow have more to go on than when you chose your first test cases."
+  },
+  {
+    "startInSeconds": 14,
+    "endInSeconds": 17,
+    "text": "That will help you make your test set more useful."
+  },
+  {
+    "startInSeconds": 17,
+    "endInSeconds": 23,
+    "text": "In this video, you'll look at how to use that understanding to expand\nyour test coverage by looking for important situations"
+  },
+  {
+    "startInSeconds": 23,
+    "endInSeconds": 26,
+    "text": "you haven't tested or haven't tested enough."
+  },
+  {
+    "startInSeconds": 26,
+    "endInSeconds": 31,
+    "text": "You'll look for real examples to add and use synthetic cases where you\nstill need more coverage."
+  },
+  {
+    "startInSeconds": 31,
+    "endInSeconds": 35,
+    "text": "And as you add cases, you'll decide which ones are worth keeping,"
+  },
+  {
+    "startInSeconds": 35,
+    "endInSeconds": 41,
+    "text": "so you have a set you can keep running to check the behaviors\nand failures you care about as you improve the application."
+  },
+  {
+    "startInSeconds": 41,
+    "endInSeconds": 46,
+    "text": "A good place to start is by looking through what you already have for\nclues about what else to test,"
+  },
+  {
+    "startInSeconds": 46,
+    "endInSeconds": 52,
+    "text": "such as the mistakes you found in the last video, your requirements,\nand real requests or bug reports."
+  },
+  {
+    "startInSeconds": 52,
+    "endInSeconds": 59,
+    "text": "For example, think back to the unsafe match in the shelter app,\nwhere a volunteer was matched with a dog they couldn't safely handle."
+  },
+  {
+    "startInSeconds": 59,
+    "endInSeconds": 62,
+    "text": "You can use that mistake to help you think of other cases to test."
+  },
+  {
+    "startInSeconds": 62,
+    "endInSeconds": 68,
+    "text": "Here, the agent approved a match it should have rejected,\nso you might think about other reasons a match should be rejected."
+  },
+  {
+    "startInSeconds": 68,
+    "endInSeconds": 76,
+    "text": "For example, the shelter also requires volunteers to be eligible for\noutings. What if the volunteer is experienced, but isn't eligible?"
+  },
+  {
+    "startInSeconds": 76,
+    "endInSeconds": 81,
+    "text": "If you haven't tested that situation yet, it could be worth checking\nwhether the agent follows the eligibility rule."
+  },
+  {
+    "startInSeconds": 81,
+    "endInSeconds": 84,
+    "text": "You can also go back to your requirements for inspiration."
+  },
+  {
+    "startInSeconds": 84,
+    "endInSeconds": 88,
+    "text": "You've already used them to come up with cases,\nbut now you've seen what actually happened,"
+  },
+  {
+    "startInSeconds": 88,
+    "endInSeconds": 91,
+    "text": "that list might help you think of situations you missed."
+  },
+  {
+    "startInSeconds": 91,
+    "endInSeconds": 96,
+    "text": "Also, don't skip a requirement just because all of\nyour test cases passed."
+  },
+  {
+    "startInSeconds": 96,
+    "endInSeconds": 100,
+    "text": "You could take one of those cases and change a detail that matters\nfor the requirement."
+  },
+  {
+    "startInSeconds": 100,
+    "endInSeconds": 105,
+    "text": "Think about what the agent should do with that change,\nand you have another situation to test."
+  },
+  {
+    "startInSeconds": 105,
+    "endInSeconds": 112,
+    "text": "Looking back, you might also realize you only tested straightforward\nsituations, and so you might think of something more difficult to try."
+  },
+  {
+    "startInSeconds": 112,
+    "endInSeconds": 117,
+    "text": "And finally, have another look at real requests, bug reports,\nand recorded runs too."
+  },
+  {
+    "startInSeconds": 117,
+    "endInSeconds": 123,
+    "text": "There may be some useful examples you didn't include in your first\ntest set or new ones that have come up since."
+  },
+  {
+    "startInSeconds": 123,
+    "endInSeconds": 129,
+    "text": "Once you've chosen some situations worth testing,\nlook for real requests and records you can use in those cases,"
+  },
+  {
+    "startInSeconds": 129,
+    "endInSeconds": 134,
+    "text": "because they help your test set reflect the situations your\napplication is actually encountering."
+  },
+  {
+    "startInSeconds": 134,
+    "endInSeconds": 140,
+    "text": "So you might look through cases from manual review, user requests,\nbug reports, support tickets, or recorded runs,"
+  },
+  {
+    "startInSeconds": 140,
+    "endInSeconds": 143,
+    "text": "starting with any examples you found while looking for gaps."
+  },
+  {
+    "startInSeconds": 143,
+    "endInSeconds": 150,
+    "text": "For example, you might find a support ticket for the shelter about an\nexperienced volunteer who wasn't eligible for outings."
+  },
+  {
+    "startInSeconds": 150,
+    "endInSeconds": 155,
+    "text": "The original request and volunteer record can give you the information\nto use in your test."
+  },
+  {
+    "startInSeconds": 155,
+    "endInSeconds": 162,
+    "text": "Alternatively, if you can't find a real example of the situation you\nwant to test, you can write the request and records yourself,"
+  },
+  {
+    "startInSeconds": 162,
+    "endInSeconds": 168,
+    "text": "or describe the situation you need to an LLM and ask it to fill in the\ndetails for the case you've already chosen."
+  },
+  {
+    "startInSeconds": 168,
+    "endInSeconds": 172,
+    "text": "This is all very similar to when you put together your original cases,"
+  },
+  {
+    "startInSeconds": 172,
+    "endInSeconds": 178,
+    "text": "so check that the requests and records describe the situation you\nmeant to test and that the details are realistic,"
+  },
+  {
+    "startInSeconds": 178,
+    "endInSeconds": 181,
+    "text": "and write down what the application should do under the requirement."
+  },
+  {
+    "startInSeconds": 181,
+    "endInSeconds": 187,
+    "text": "Keep a note of where the information came from,\nincluding anything you've created or changed."
+  },
+  {
+    "startInSeconds": 187,
+    "endInSeconds": 192,
+    "text": "Now, as you put these cases together, compare them with the\nones you already have."
+  },
+  {
+    "startInSeconds": 192,
+    "endInSeconds": 197,
+    "text": "Some may repeat a check you're already doing,\nwhile others test a difference worth keeping."
+  },
+  {
+    "startInSeconds": 197,
+    "endInSeconds": 202,
+    "text": "For example, suppose you already have a shelter case where the\nvolunteer's experience is missing."
+  },
+  {
+    "startInSeconds": 202,
+    "endInSeconds": 207,
+    "text": "If another case only changes the volunteer's name,\nyou probably don't need both."
+  },
+  {
+    "startInSeconds": 207,
+    "endInSeconds": 211,
+    "text": "But a case where the dog's handling notes are missing checks\nsomething different."
+  },
+  {
+    "startInSeconds": 211,
+    "endInSeconds": 218,
+    "text": "Handling missing volunteer information correctly doesn't tell you\nwhether the agent will also handle missing dog information correctly."
+  },
+  {
+    "startInSeconds": 218,
+    "endInSeconds": 224,
+    "text": "So both cases can be useful, even if they test the same requirement\nand have the same expected outcome."
+  },
+  {
+    "startInSeconds": 224,
+    "endInSeconds": 229,
+    "text": "As you tune your test sets, remember each case takes work to\nrun and review again."
+  },
+  {
+    "startInSeconds": 229,
+    "endInSeconds": 232,
+    "text": "So think about what you'd stop checking if you left it out."
+  },
+  {
+    "startInSeconds": 232,
+    "endInSeconds": 238,
+    "text": "A useful case should either cover a meaningful situation,\nprotect against an important regression,"
+  },
+  {
+    "startInSeconds": 238,
+    "endInSeconds": 240,
+    "text": "or clarify a boundary in the requirement."
+  },
+  {
+    "startInSeconds": 240,
+    "endInSeconds": 245,
+    "text": "You'll also want to review your existing cases to see\nwhich ones you no longer need."
+  },
+  {
+    "startInSeconds": 245,
+    "endInSeconds": 252,
+    "text": "But be careful about removing a case just because you fixed a mistake,\nbecause later changes could bring that mistake back."
+  },
+  {
+    "startInSeconds": 252,
+    "endInSeconds": 257,
+    "text": "There are good reasons to remove cases though,\nsuch as when the shelter drops a rule that a case was testing."
+  },
+  {
+    "startInSeconds": 257,
+    "endInSeconds": 263,
+    "text": "And if a rule changes, but the case is still useful,\nupdate what you expect the application to do."
+  },
+  {
+    "startInSeconds": 263,
+    "endInSeconds": 269,
+    "text": "And as you choose which cases to keep, make sure the important,\ndifficult situations get enough attention."
+  },
+  {
+    "startInSeconds": 269,
+    "endInSeconds": 276,
+    "text": "Because lots of straightforward cases can make the overall results\nlook good, even when the application struggles with difficult ones."
+  },
+  {
+    "startInSeconds": 276,
+    "endInSeconds": 282,
+    "text": "For example, suppose the agent passes 98 straightforward cases\nbut fails the only two difficult ones."
+  },
+  {
+    "startInSeconds": 282,
+    "endInSeconds": 287,
+    "text": "That's a 98% pass rate, even though it got both difficult cases wrong."
+  },
+  {
+    "startInSeconds": 287,
+    "endInSeconds": 289,
+    "text": "So look at the difficult cases separately,"
+  },
+  {
+    "startInSeconds": 289,
+    "endInSeconds": 294,
+    "text": "and keep enough useful examples to see whether changes to the\napplication help with those situations."
+  },
+  {
+    "startInSeconds": 294,
+    "endInSeconds": 299,
+    "text": "Keep ordinary cases, too, so you can check that those changes don't\nbreak something that already worked."
+  },
+  {
+    "startInSeconds": 299,
+    "endInSeconds": 305,
+    "text": "You can include more difficult cases than you'd normally see in\neveryday use, so you have enough examples to check them."
+  },
+  {
+    "startInSeconds": 305,
+    "endInSeconds": 309,
+    "text": "Just remember that the overall score describes performance on the\nbenchmark you built,"
+  },
+  {
+    "startInSeconds": 309,
+    "endInSeconds": 313,
+    "text": "not the true frequency of success or failure in production."
+  },
+  {
+    "startInSeconds": 313,
+    "endInSeconds": 318,
+    "text": "Together, those cases give you a benchmark that you can reuse\nas you improve your application."
+  },
+  {
+    "startInSeconds": 318,
+    "endInSeconds": 323,
+    "text": "When you compare versions, use the same cases\nand expected results for both,"
+  },
+  {
+    "startInSeconds": 323,
+    "endInSeconds": 327,
+    "text": "so a change in the tests doesn't make one version look\nbetter than the other."
+  },
+  {
+    "startInSeconds": 327,
+    "endInSeconds": 334,
+    "text": "In the next video, you'll apply the full benchmark workflow to\nNorthwind and see how the curated test set becomes the benchmark"
+  },
+  {
+    "startInSeconds": 334,
+    "endInSeconds": 335,
+    "text": "you'll use in Module 3."
+  }
+]

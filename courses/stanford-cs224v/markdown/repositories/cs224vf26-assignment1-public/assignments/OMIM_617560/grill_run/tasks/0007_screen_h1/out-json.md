@@ -1,0 +1,74 @@
+# Homework 1 public teaching repository: assignments/OMIM_617560/grill_run/tasks/0007_screen_h1/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_617560/grill_run/tasks/0007_screen_h1/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_617560/grill_run/tasks/0007_screen_h1/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature strongly supports that biallelic NKX6-2 variants cause spastic ataxia 8 with hypomyelinating leukodystrophy featuring spasticity, ataxia, nystagmus, and hypomyelination.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "Chelban et al. (2020) describe the NKX6-2-related disease spectrum, noting core presentation of very early onset nystagmus, cerebellar ataxia, hypotonia progressing to spasticity, and neuroimaging signs of hypomyelination.",
+      "stance": "supports",
+      "source": {
+        "title": "Genetic and phenotypic characterization of NKX6\u20102\u2010related spastic ataxia and hypomyelination",
+        "authors": [
+          "V Chelban",
+          "M Alsagob",
+          "K Kloth"
+        ],
+        "year": 2020,
+        "journal": null,
+        "doi": "10.1111/ene.14082",
+        "pmid": "31509304",
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/ene.14082",
+        "quote": "NKX6-2 mutations should be considered in patients with autosomal recessive, very early onset of nystagmus, cerebellar ataxia with hypotonia that rapidly progresses to spasticity, particularly when associated with neuroimaging signs of hypomyelination."
+      },
+      "numbers": [
+        {
+          "metric": "new cases identified",
+          "value": 11
+        },
+        {
+          "metric": "families",
+          "value": 8
+        }
+      ]
+    },
+    {
+      "text": "Chelban et al. (2017) originally established that biallelic loss-of-function or missense mutations in NKX6-2 cause early-onset progressive spastic ataxia associated with cerebellar atrophy and central hypomyelination.",
+      "stance": "supports",
+      "source": {
+        "title": "Mutations in NKX6-2 Cause Progressive Spastic Ataxia and Hypomyelination",
+        "authors": [
+          "V Chelban",
+          "N Patel",
+          "J Vandrovcova",
+          "MN Zanetti"
+        ],
+        "year": 2017,
+        "journal": null,
+        "doi": "10.1016/j.ajhg.2017.05.009",
+        "pmid": "28575651",
+        "pmc": null,
+        "url": "https://www.sciencedirect.com/science/article/pii/S0002929717301969",
+        "quote": "We report seven individuals with an early-onset spastic-ataxia phenotype. The individuals come from three families of different ethnic backgrounds."
+      },
+      "numbers": [
+        {
+          "metric": "affected individuals reported",
+          "value": 7
+        },
+        {
+          "metric": "families",
+          "value": 3
+        }
+      ]
+    }
+  ]
+}
+```

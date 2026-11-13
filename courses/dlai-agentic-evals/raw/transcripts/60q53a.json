@@ -1,0 +1,337 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 7,
+    "text": "In the last video, you saw why a final response isn't always enough to\ntell whether an agent completed a task correctly."
+  },
+  {
+    "startInSeconds": 7,
+    "endInSeconds": 12,
+    "text": "Sometimes, the failure happens earlier, in one of the actions the\nagent takes along the way."
+  },
+  {
+    "startInSeconds": 12,
+    "endInSeconds": 20,
+    "text": "So the next question is, when an agent takes an action,\nwhat exactly should you evaluate? Let's start with the dog shelter."
+  },
+  {
+    "startInSeconds": 20,
+    "endInSeconds": 25,
+    "text": "Suppose a volunteer says, \"I can't make Saturday anymore.\nPlease cancel my outing.\""
+  },
+  {
+    "startInSeconds": 25,
+    "endInSeconds": 31,
+    "text": "The agent looks up the booking, but instead of canceling it,\nit confirms the outing. The booking details might all be correct."
+  },
+  {
+    "startInSeconds": 31,
+    "endInSeconds": 38,
+    "text": "It may have found the right volunteer, the right dog, and the right\ndate. None of that matters if the agent chose the wrong action."
+  },
+  {
+    "startInSeconds": 38,
+    "endInSeconds": 42,
+    "text": "The volunteer asked to cancel, but the agent decided to confirm."
+  },
+  {
+    "startInSeconds": 42,
+    "endInSeconds": 50,
+    "text": "So one thing you need to evaluate is simply, did the agent choose the\nright action for the request? Now consider a different example."
+  },
+  {
+    "startInSeconds": 50,
+    "endInSeconds": 54,
+    "text": "A volunteer says, \"Can you book me with Pepper on Friday at 5:30?\""
+  },
+  {
+    "startInSeconds": 54,
+    "endInSeconds": 58,
+    "text": "The agent creates a booking, so this time it chose the\nright kind of action."
+  },
+  {
+    "startInSeconds": 58,
+    "endInSeconds": 63,
+    "text": "But when you inspect the booking, it scheduled Saturday at 5:30.\nThat's a different failure."
+  },
+  {
+    "startInSeconds": 63,
+    "endInSeconds": 69,
+    "text": "The agent knew it needed to create a booking,\nit just carried that action out with the wrong details."
+  },
+  {
+    "startInSeconds": 69,
+    "endInSeconds": 74,
+    "text": "So there are really two separate questions here:\nWhat action did the agent decide to take?"
+  },
+  {
+    "startInSeconds": 74,
+    "endInSeconds": 77,
+    "text": "And once it made that choice, did it execute the action correctly?"
+  },
+  {
+    "startInSeconds": 77,
+    "endInSeconds": 83,
+    "text": "Keeping those questions separate becomes especially useful\nwhen the action itself has several parameters,"
+  },
+  {
+    "startInSeconds": 83,
+    "endInSeconds": 88,
+    "text": "because an agent can make the right decision and still pass the wrong\ninformation into the action."
+  },
+  {
+    "startInSeconds": 88,
+    "endInSeconds": 94,
+    "text": "There are a couple of other cases that you need to watch for, too.\nSometimes the problem is that a required action never happens."
+  },
+  {
+    "startInSeconds": 94,
+    "endInSeconds": 99,
+    "text": "For example, the shelter requires an eligibility check before any\nouting can be booked."
+  },
+  {
+    "startInSeconds": 99,
+    "endInSeconds": 105,
+    "text": "If the agent goes straight from the volunteer's request to creating\nthe booking, action itself might be perfectly formed,"
+  },
+  {
+    "startInSeconds": 105,
+    "endInSeconds": 108,
+    "text": "but a required action is missing from the process."
+  },
+  {
+    "startInSeconds": 108,
+    "endInSeconds": 115,
+    "text": "And sometimes the agent takes an action that should not happen at all.\nSuppose a volunteer asks, \"Can I take Pepper home permanently?\""
+  },
+  {
+    "startInSeconds": 115,
+    "endInSeconds": 121,
+    "text": "The shelter agent is designed to schedule outings.\nIt doesn't have the authority to approve an adoption."
+  },
+  {
+    "startInSeconds": 121,
+    "endInSeconds": 125,
+    "text": "So if it creates some kind of permanent placement or treats the\nrequest like a normal booking,"
+  },
+  {
+    "startInSeconds": 125,
+    "endInSeconds": 131,
+    "text": "the failure is not that the action was executed badly;\nthe action should never have been taken in the first place."
+  },
+  {
+    "startInSeconds": 131,
+    "endInSeconds": 137,
+    "text": "When you evaluate actions, you need to check all of these situations.\nDid the agent choose the right action?"
+  },
+  {
+    "startInSeconds": 137,
+    "endInSeconds": 144,
+    "text": "Did it carry it out with the right details? Did it skip something\nrequired? Or did it do something it shouldn't have done?"
+  },
+  {
+    "startInSeconds": 144,
+    "endInSeconds": 153,
+    "text": "Now, let's translate that into Northwind. For the Northwind agent,\nactions are tool calls. If a customer asks, \"Where is order 4521?\""
+  },
+  {
+    "startInSeconds": 153,
+    "endInSeconds": 158,
+    "text": "the agent may need to call an order lookup tool.\nSo the first question is whether it chose the right tool."
+  },
+  {
+    "startInSeconds": 158,
+    "endInSeconds": 162,
+    "text": "If it calls a product search tool instead,\nthat's an action selection failure."
+  },
+  {
+    "startInSeconds": 162,
+    "endInSeconds": 167,
+    "text": "The tool may work perfectly, but it's the wrong operation for\nthe customer's request."
+  },
+  {
+    "startInSeconds": 167,
+    "endInSeconds": 173,
+    "text": "If it does choose the order lookup tool, there's still a second\nquestion: did it call the tool with the right arguments?"
+  },
+  {
+    "startInSeconds": 173,
+    "endInSeconds": 178,
+    "text": "Suppose the customer asked about order 4521,\nbut the agent calls order_lookup(order_id=\"4512\")."
+  },
+  {
+    "startInSeconds": 181,
+    "endInSeconds": 189,
+    "text": "That's a subtle failure because 4512 might also be a real order,\nThe tool can run successfully and return valid-looking information,"
+  },
+  {
+    "startInSeconds": 189,
+    "endInSeconds": 193,
+    "text": "and the agent may then give the customer a perfectly fluent answer\nabout the wrong order."
+  },
+  {
+    "startInSeconds": 193,
+    "endInSeconds": 196,
+    "text": "So checking whether the tool call succeeded is not enough."
+  },
+  {
+    "startInSeconds": 196,
+    "endInSeconds": 201,
+    "text": "You need to compare the arguments the agent used with the information\nit was supposed to act on."
+  },
+  {
+    "startInSeconds": 201,
+    "endInSeconds": 206,
+    "text": "You'll often see these two checks described as tool selection\nand tool invocation."
+  },
+  {
+    "startInSeconds": 206,
+    "endInSeconds": 210,
+    "text": "Tool selection asks whether the agent chose the correct tool."
+  },
+  {
+    "startInSeconds": 210,
+    "endInSeconds": 215,
+    "text": "invocation asks whether it called that tool correctly,\nincluding the arguments it passed."
+  },
+  {
+    "startInSeconds": 215,
+    "endInSeconds": 222,
+    "text": "And just like in the shelter example, you also need to consider cases\nwhere a tool should be required or prohibited."
+  },
+  {
+    "startInSeconds": 222,
+    "endInSeconds": 224,
+    "text": "Suppose a customer asks for the status of an order."
+  },
+  {
+    "startInSeconds": 224,
+    "endInSeconds": 231,
+    "text": "If the agent answers without ever calling order lookup, that may be a\nproblem if the status has to come from the current order system."
+  },
+  {
+    "startInSeconds": 231,
+    "endInSeconds": 236,
+    "text": "In that case, you can check that the required tool actually\nappeared in the trace."
+  },
+  {
+    "startInSeconds": 236,
+    "endInSeconds": 242,
+    "text": "Now imagine a customer asks for a refund,\nbut the order is outside Northwind's refund window."
+  },
+  {
+    "startInSeconds": 242,
+    "endInSeconds": 247,
+    "text": "If policy says the refund cannot be processed,\nthen process_refund should not appear at all."
+  },
+  {
+    "startInSeconds": 247,
+    "endInSeconds": 253,
+    "text": "So a useful evaluator sometimes checks for the presence of a tool call\nand sometimes checks for its absence."
+  },
+  {
+    "startInSeconds": 253,
+    "endInSeconds": 258,
+    "text": "There's another important case where the agent doesn't yet have\nenough information to act."
+  },
+  {
+    "startInSeconds": 258,
+    "endInSeconds": 265,
+    "text": "Suppose the customer says, \"Can you refund my purchase?\" but there's\nno order number and no other way to identify which purchase they mean."
+  },
+  {
+    "startInSeconds": 265,
+    "endInSeconds": 270,
+    "text": "Before you evaluate the agent, you need to define what the\ncorrect behavior should be."
+  },
+  {
+    "startInSeconds": 270,
+    "endInSeconds": 276,
+    "text": "Maybe Northwind's policy says the agent should ask which order the\ncustomer wants refunded before doing anything else."
+  },
+  {
+    "startInSeconds": 276,
+    "endInSeconds": 278,
+    "text": "Once that expectation is clear,"
+  },
+  {
+    "startInSeconds": 278,
+    "endInSeconds": 284,
+    "text": "you can check whether the agent asked for the missing information\nrather than guessing or calling the refund tool prematurely."
+  },
+  {
+    "startInSeconds": 284,
+    "endInSeconds": 290,
+    "text": "This is a small example of something you've been doing throughout the\ncourse, Before you can evaluate a behavior,"
+  },
+  {
+    "startInSeconds": 290,
+    "endInSeconds": 292,
+    "text": "you need to know what counts as correct."
+  },
+  {
+    "startInSeconds": 292,
+    "endInSeconds": 299,
+    "text": "Once that's defined, the trace gives you the evidence to check it.\nAnd tool calls have an advantage here."
+  },
+  {
+    "startInSeconds": 299,
+    "endInSeconds": 304,
+    "text": "A lot of that evidence is structured, You can inspect the tool name\nand the arguments directly."
+  },
+  {
+    "startInSeconds": 304,
+    "endInSeconds": 308,
+    "text": "You can check whether a required tool appeared,\nwhether a forbidden tool appeared,"
+  },
+  {
+    "startInSeconds": 308,
+    "endInSeconds": 313,
+    "text": "or whether the order_id passed into the call matches the order the\ncustomer actually asked about."
+  },
+  {
+    "startInSeconds": 313,
+    "endInSeconds": 320,
+    "text": "When the thing you care about is represented explicitly in the trace,\na simple deterministic check is often enough."
+  },
+  {
+    "startInSeconds": 320,
+    "endInSeconds": 326,
+    "text": "You don't need an LLM judge to tell you that 4521 and 4512 are\ndifferent order IDs."
+  },
+  {
+    "startInSeconds": 326,
+    "endInSeconds": 331,
+    "text": "But even if every individual tool call looks correct,\nthe run can still fail."
+  },
+  {
+    "startInSeconds": 331,
+    "endInSeconds": 337,
+    "text": "Suppose Northwind calls the right inventory tool with the right\nproduct ID, and the tool returns that the item is out of stock,"
+  },
+  {
+    "startInSeconds": 337,
+    "endInSeconds": 341,
+    "text": "then the agent tells the customer, \"Yes, it's available.\""
+  },
+  {
+    "startInSeconds": 341,
+    "endInSeconds": 345,
+    "text": "tool selection passed, tool invocation passed,\nbut the final result is still wrong."
+  },
+  {
+    "startInSeconds": 345,
+    "endInSeconds": 353,
+    "text": "Or imagine several individually valid tool calls happen in the wrong\norder. That gives you the next evaluation problem."
+  },
+  {
+    "startInSeconds": 353,
+    "endInSeconds": 358,
+    "text": "In the next video, you'll stop looking at actions one at a time\nand evaluate the trajectory,"
+  },
+  {
+    "startInSeconds": 358,
+    "endInSeconds": 363,
+    "text": "the sequence of steps the agent took through the task,\nwhat each step returned, and how those steps fit together."
+  }
+]

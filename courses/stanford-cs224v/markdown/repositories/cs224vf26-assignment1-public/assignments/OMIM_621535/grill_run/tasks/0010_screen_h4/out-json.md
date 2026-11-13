@@ -1,0 +1,47 @@
+# Homework 1 public teaching repository: assignments/OMIM_621535/grill_run/tasks/0010_screen_h4/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621535/grill_run/tasks/0010_screen_h4/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621535/grill_run/tasks/0010_screen_h4/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "OMIM entries confirm SCA52 is an autosomal dominant disorder caused by heterozygous missense mutations in RAB3A.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "In patients with spinocerebellar ataxia-52 (SCA52; 621535), Hengel et al. identified a heterozygous missense mutation in the RAB3A gene (I27T).",
+      "stance": "supports",
+      "source": {
+        "title": "Entry - *179490 - RAS-ASSOCIATED PROTEIN RAB3A",
+        "authors": [],
+        "year": null,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.omim.org/entry/179490?search=rab3a&highlight=rab3a",
+        "quote": "spinocerebellar ataxia-52 (SCA52; 621535), Hengel et al. (2025) identified a heterozygous missense mutation in the RAB3A gene (I27T; 179490.0002)."
+      },
+      "numbers": []
+    },
+    {
+      "text": "Spinocerebellar ataxia-52 is an autosomal dominant neurologic disorder characterized by gait and limb ataxia, nystagmus, and cerebellar atrophy.",
+      "stance": "supports",
+      "source": {
+        "title": "Entry - #621535 - SPINOCEREBELLAR ATAXIA 52; SCA52",
+        "authors": [],
+        "year": null,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://omim.org/entry/621535",
+        "quote": "Spinocerebellar ataxia-52 (SCA52) is an autosomal dominant neurologic disorder. Features include gait and limb ataxia, nystagmus, and cerebellar atrophy"
+      },
+      "numbers": []
+    }
+  ]
+}
+```

@@ -1,0 +1,442 @@
+[
+  {
+    "startInSeconds": 1,
+    "endInSeconds": 7,
+    "text": "In this course, you're learning how to use evals to find out whether\nthe applications you build are doing the job you want them to do."
+  },
+  {
+    "startInSeconds": 7,
+    "endInSeconds": 13,
+    "text": "And as you've seen, that can be challenging,\nbecause mistakes in AI applications can be subtle."
+  },
+  {
+    "startInSeconds": 13,
+    "endInSeconds": 19,
+    "text": "For example, the application might keep running without an error\nmessage or a failing test and still do something wrong."
+  },
+  {
+    "startInSeconds": 19,
+    "endInSeconds": 24,
+    "text": "So you need to look carefully at what your application actually does\nand compare that with what you expected."
+  },
+  {
+    "startInSeconds": 24,
+    "endInSeconds": 28,
+    "text": "If those don't match, you've found a problem to investigate and fix."
+  },
+  {
+    "startInSeconds": 28,
+    "endInSeconds": 32,
+    "text": "In module one, you focused on seeing what the\napplication actually did."
+  },
+  {
+    "startInSeconds": 32,
+    "endInSeconds": 37,
+    "text": "You learned to make requests, run the application,\nand use traces to follow the steps it took."
+  },
+  {
+    "startInSeconds": 37,
+    "endInSeconds": 41,
+    "text": "But seeing what the application did is only one\npart of the comparison."
+  },
+  {
+    "startInSeconds": 41,
+    "endInSeconds": 48,
+    "text": "So in this video, you'll learn how to find and develop requirements\nthat describe what your application must do and must not do."
+  },
+  {
+    "startInSeconds": 48,
+    "endInSeconds": 52,
+    "text": "Those requirements tell you what to test for and what\nwould count as a failure."
+  },
+  {
+    "startInSeconds": 52,
+    "endInSeconds": 59,
+    "text": "At the end of this module, those requirements will become part of a\nbenchmark, a reusable set of cases, expected outcomes,"
+  },
+  {
+    "startInSeconds": 59,
+    "endInSeconds": 62,
+    "text": "and labels you can run as the application changes."
+  },
+  {
+    "startInSeconds": 62,
+    "endInSeconds": 66,
+    "text": "You'll do this in three steps. First, you'll find requirements\nand write them down."
+  },
+  {
+    "startInSeconds": 66,
+    "endInSeconds": 72,
+    "text": "then you'll turn specific observations into requirements\nthat cover more than one case."
+  },
+  {
+    "startInSeconds": 72,
+    "endInSeconds": 77,
+    "text": "Finally, you'll review what you've written for unclear wording\nor situations you haven't covered."
+  },
+  {
+    "startInSeconds": 77,
+    "endInSeconds": 82,
+    "text": "So let's start by exploring some sources for requirements.\nThere are three useful places to look."
+  },
+  {
+    "startInSeconds": 82,
+    "endInSeconds": 88,
+    "text": "As you explore each one, ask yourself, \"What does this tell me the\napplication should do or should avoid doing?\""
+  },
+  {
+    "startInSeconds": 88,
+    "endInSeconds": 92,
+    "text": "Your goal is to write down that expectation as a requirement."
+  },
+  {
+    "startInSeconds": 92,
+    "endInSeconds": 93,
+    "text": "To see how this works,"
+  },
+  {
+    "startInSeconds": 93,
+    "endInSeconds": 99,
+    "text": "let's look at an application that helps an animal shelter arrange\noutings where volunteers take dogs out for the day."
+  },
+  {
+    "startInSeconds": 99,
+    "endInSeconds": 105,
+    "text": "It checks whether volunteers are eligible, matches them with suitable\ndogs, and helps schedule the outings."
+  },
+  {
+    "startInSeconds": 105,
+    "endInSeconds": 108,
+    "text": "Now, the first place to look is existing rules."
+  },
+  {
+    "startInSeconds": 108,
+    "endInSeconds": 115,
+    "text": "For example, an animal shelter may have a rule that volunteers with a\ndo-not-adopt flag cannot take dogs on outings."
+  },
+  {
+    "startInSeconds": 115,
+    "endInSeconds": 119,
+    "text": "Ask yourself, what does the application need to do\nto follow that rule?"
+  },
+  {
+    "startInSeconds": 119,
+    "endInSeconds": 125,
+    "text": "If it arranges these outings, it must not match a flagged volunteer\nwith any dog. That's a requirement."
+  },
+  {
+    "startInSeconds": 125,
+    "endInSeconds": 129,
+    "text": "Notice that you don't need to see the application make that mistake\nbefore adding this requirement."
+  },
+  {
+    "startInSeconds": 129,
+    "endInSeconds": 135,
+    "text": "The shelter's rule already tells you what should happen,\nbut not every expectation has been written down,"
+  },
+  {
+    "startInSeconds": 135,
+    "endInSeconds": 138,
+    "text": "so the second place to look is people who understand the work."
+  },
+  {
+    "startInSeconds": 138,
+    "endInSeconds": 143,
+    "text": "They may know what the application should do in situations the\nexisting rules don't address."
+  },
+  {
+    "startInSeconds": 143,
+    "endInSeconds": 148,
+    "text": "For the shelter application, you could talk to staff who regularly\nmatch volunteers with dogs."
+  },
+  {
+    "startInSeconds": 148,
+    "endInSeconds": 152,
+    "text": "Ask what they consider when making a match and what would\nmake them reject one."
+  },
+  {
+    "startInSeconds": 152,
+    "endInSeconds": 158,
+    "text": "As they explain, ask yourself, what should the application do to\nmake the same decision?"
+  },
+  {
+    "startInSeconds": 158,
+    "endInSeconds": 163,
+    "text": "Now, people close to the work may not think of every requirement\njust because you asked."
+  },
+  {
+    "startInSeconds": 163,
+    "endInSeconds": 168,
+    "text": "It can be easier to explain why they would accept or reject a\nparticular match than to list every rule they use."
+  },
+  {
+    "startInSeconds": 168,
+    "endInSeconds": 175,
+    "text": "So you can show them a set of volunteer descriptions and dog records,\nand ask which matches they would recommend and why."
+  },
+  {
+    "startInSeconds": 175,
+    "endInSeconds": 180,
+    "text": "Use their explanations to write down what the\napplication should do and when."
+  },
+  {
+    "startInSeconds": 180,
+    "endInSeconds": 185,
+    "text": "keep the reason with the requirement, so it's clear why the\napplication should behave that way."
+  },
+  {
+    "startInSeconds": 185,
+    "endInSeconds": 191,
+    "text": "Talking to others helps you understand what should happen, but it's\nhard to anticipate every requirement through discussion alone."
+  },
+  {
+    "startInSeconds": 191,
+    "endInSeconds": 194,
+    "text": "So the third place to look is the application's traces."
+  },
+  {
+    "startInSeconds": 194,
+    "endInSeconds": 200,
+    "text": "Looking directly at how the application handles requests can reveal\nsituations you hadn't considered."
+  },
+  {
+    "startInSeconds": 200,
+    "endInSeconds": 206,
+    "text": "One place to start is with traces you've already saved,\nwhether they came from real users or requests you tried yourself."
+  },
+  {
+    "startInSeconds": 206,
+    "endInSeconds": 213,
+    "text": "If you don't have traces yet, write a few realistic requests yourself\nor with an LLM and run them through the application."
+  },
+  {
+    "startInSeconds": 213,
+    "endInSeconds": 217,
+    "text": "This lets you start learning from behavior before you have real users."
+  },
+  {
+    "startInSeconds": 217,
+    "endInSeconds": 223,
+    "text": "Now, let's use the Northwind application from your labs to see how a\ntrace can help you write a requirement."
+  },
+  {
+    "startInSeconds": 223,
+    "endInSeconds": 227,
+    "text": "A customer asks, \"How should I care for my merino wool sweater?\""
+  },
+  {
+    "startInSeconds": 227,
+    "endInSeconds": 232,
+    "text": "The application answers, \"You can machine wash it on a wool cycle\nand then tumble dry.\""
+  },
+  {
+    "startInSeconds": 232,
+    "endInSeconds": 238,
+    "text": "To check that advice, you look at the product information the\napplication received, which is recorded in the trace."
+  },
+  {
+    "startInSeconds": 238,
+    "endInSeconds": 242,
+    "text": "It says machine washable on wool cycle. It says nothing about drying."
+  },
+  {
+    "startInSeconds": 242,
+    "endInSeconds": 249,
+    "text": "So the washing advice comes from the product information, but the\napplication added drying advice it didn't have the information for,"
+  },
+  {
+    "startInSeconds": 249,
+    "endInSeconds": 251,
+    "text": "and that could ruin the sweater."
+  },
+  {
+    "startInSeconds": 251,
+    "endInSeconds": 256,
+    "text": "You could record the mistake like this:\nthe application recommended tumble drying,"
+  },
+  {
+    "startInSeconds": 256,
+    "endInSeconds": 259,
+    "text": "even though it had no drying instructions for this sweater."
+  },
+  {
+    "startInSeconds": 259,
+    "endInSeconds": 266,
+    "text": "Keep that note with the trace and the product information, so you have\na record of what went wrong and why you judged it a mistake."
+  },
+  {
+    "startInSeconds": 266,
+    "endInSeconds": 272,
+    "text": "To turn that observation into a requirement, ask yourself,\nwhat should the application do to avoid this kind of mistake?"
+  },
+  {
+    "startInSeconds": 272,
+    "endInSeconds": 278,
+    "text": "You could tell it not to recommend tumble-drying this sweater,\nbut it could still invent other instructions for another product."
+  },
+  {
+    "startInSeconds": 278,
+    "endInSeconds": 282,
+    "text": "You need a requirement that covers those recommendations too."
+  },
+  {
+    "startInSeconds": 282,
+    "endInSeconds": 287,
+    "text": "So you could write, \"Only make claims about products that are\nsupported by Northwind data.\""
+  },
+  {
+    "startInSeconds": 287,
+    "endInSeconds": 289,
+    "text": "That requirement is broader than the sweater case."
+  },
+  {
+    "startInSeconds": 289,
+    "endInSeconds": 296,
+    "text": "It can also catch unsupported claims about sizing, color,\navailability, care instructions, or return policies."
+  },
+  {
+    "startInSeconds": 296,
+    "endInSeconds": 300,
+    "text": "Now, when you review what the application says about a\nproduct, you can ask,"
+  },
+  {
+    "startInSeconds": 300,
+    "endInSeconds": 304,
+    "text": "\"Does the Northwind data support what the\napplication told the customer?\""
+  },
+  {
+    "startInSeconds": 304,
+    "endInSeconds": 307,
+    "text": "That helps you catch invented details about other products too."
+  },
+  {
+    "startInSeconds": 307,
+    "endInSeconds": 312,
+    "text": "Keep any further examples with their traces and notes,\nso you can use them to test and refine the requirement."
+  },
+  {
+    "startInSeconds": 312,
+    "endInSeconds": 316,
+    "text": "So that was the first step where you find and\ndevelop your requirements."
+  },
+  {
+    "startInSeconds": 316,
+    "endInSeconds": 320,
+    "text": "The second step is to review and refine what you've written."
+  },
+  {
+    "startInSeconds": 320,
+    "endInSeconds": 322,
+    "text": "Look for unclear wording and situations you haven't covered,"
+  },
+  {
+    "startInSeconds": 322,
+    "endInSeconds": 326,
+    "text": "so you can improve the requirements and see what still\nneeds to be worked out."
+  },
+  {
+    "startInSeconds": 326,
+    "endInSeconds": 332,
+    "text": "There are two useful things to check.\nFirst, look for words in your requirements that need more explanation."
+  },
+  {
+    "startInSeconds": 332,
+    "endInSeconds": 337,
+    "text": "For example, \"Recommend a suitable dog\" depends on what\nyou mean by \"suitable\"."
+  },
+  {
+    "startInSeconds": 337,
+    "endInSeconds": 343,
+    "text": "If you leave that unexplained, whoever evaluates the recommendation\nhas to supply their own interpretation."
+  },
+  {
+    "startInSeconds": 343,
+    "endInSeconds": 351,
+    "text": "To make \"suitable\" more specific, you could start by asking what would\nmake a match unsuitable. The shelter's rules can help you answer that."
+  },
+  {
+    "startInSeconds": 351,
+    "endInSeconds": 357,
+    "text": "For example, a dog that requires an experienced handler should not be\nmatched with a volunteer who lacks that experience."
+  },
+  {
+    "startInSeconds": 357,
+    "endInSeconds": 363,
+    "text": "Write that restriction into the requirement. You're taking a rule\nthat was hidden inside the word \"suitable\" and making it explicit."
+  },
+  {
+    "startInSeconds": 363,
+    "endInSeconds": 370,
+    "text": "Now, a person or an LLM evaluating the recommendation can check\nthat rule instead of guessing what you meant."
+  },
+  {
+    "startInSeconds": 370,
+    "endInSeconds": 373,
+    "text": "Second, look for situations your requirements don't yet cover."
+  },
+  {
+    "startInSeconds": 373,
+    "endInSeconds": 378,
+    "text": "It's easy to describe what should happen when the application has\ncomplete information,"
+  },
+  {
+    "startInSeconds": 378,
+    "endInSeconds": 382,
+    "text": "but it's harder to spot what it should do when that information is\nmissing or conflicting."
+  },
+  {
+    "startInSeconds": 382,
+    "endInSeconds": 387,
+    "text": "For the shelter, also check what the application should do\nwhen none of the suitable dogs are available."
+  },
+  {
+    "startInSeconds": 387,
+    "endInSeconds": 394,
+    "text": "Check whether the shelter has a rule for that situation.\nIf it does, add what the application should do to your requirements."
+  },
+  {
+    "startInSeconds": 394,
+    "endInSeconds": 398,
+    "text": "If it doesn't, you need to decide what should happen when no\nsuitable dog is available."
+  },
+  {
+    "startInSeconds": 398,
+    "endInSeconds": 403,
+    "text": "Until that's settled, you won't know whether the application handled\nthe situation correctly."
+  },
+  {
+    "startInSeconds": 403,
+    "endInSeconds": 408,
+    "text": "You've learned how to find requirements and review them for unclear\nwording and situations you may have missed."
+  },
+  {
+    "startInSeconds": 408,
+    "endInSeconds": 411,
+    "text": "This helps you spell out what your application should do."
+  },
+  {
+    "startInSeconds": 411,
+    "endInSeconds": 417,
+    "text": "But to find out whether your application meets those requirements,\nyou need requests that put each one to the test."
+  },
+  {
+    "startInSeconds": 417,
+    "endInSeconds": 418,
+    "text": "So in the next video,"
+  },
+  {
+    "startInSeconds": 418,
+    "endInSeconds": 421,
+    "text": "you'll learn to build test sets that cover different situations\nfor your requirements"
+  },
+  {
+    "startInSeconds": 421,
+    "endInSeconds": 424,
+    "text": "and spell out what the application should do in each."
+  },
+  {
+    "startInSeconds": 424,
+    "endInSeconds": 425,
+    "text": "I'll see you there."
+  }
+]

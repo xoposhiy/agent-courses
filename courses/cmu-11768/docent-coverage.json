@@ -1,0 +1,92 @@
+{
+  "plans": [
+    {
+      "plan_id": "81230a32-88e0-42af-82c9-101660ab1d89",
+      "url": "https://docent.transluce.org/dashboard/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/analysis-plan/81230a32-88e0-42af-82c9-101660ab1d89",
+      "steps": 11,
+      "dql_outputs": [
+        {
+          "alias": "1",
+          "rows": 79,
+          "truncated": false,
+          "markdown_path": "markdown/optional-readings/docent-plan-81230a32-88e0-42af-82c9-101660ab1d89-dql-1.md"
+        },
+        {
+          "alias": "3",
+          "rows": 29,
+          "truncated": false,
+          "markdown_path": "markdown/optional-readings/docent-plan-81230a32-88e0-42af-82c9-101660ab1d89-dql-3.md"
+        },
+        {
+          "alias": "5",
+          "rows": 6,
+          "truncated": false,
+          "markdown_path": "markdown/optional-readings/docent-plan-81230a32-88e0-42af-82c9-101660ab1d89-dql-5.md"
+        },
+        {
+          "alias": "7",
+          "rows": 1,
+          "truncated": false,
+          "markdown_path": "markdown/optional-readings/docent-plan-81230a32-88e0-42af-82c9-101660ab1d89-dql-7.md"
+        }
+      ],
+      "reading_outputs": [
+        {
+          "alias": "2",
+          "reading_id": "d3e8d144-e03d-46a0-9f22-744dbf8476c8",
+          "expected_groups": 79,
+          "retrieved_groups": 79,
+          "pages": 4,
+          "markdown_path": "markdown/optional-readings/docent-plan-81230a32-88e0-42af-82c9-101660ab1d89-reading-2.md"
+        },
+        {
+          "alias": "4",
+          "reading_id": "8cc1ff68-1db3-4554-b253-152fa84d1188",
+          "expected_groups": 29,
+          "retrieved_groups": 29,
+          "pages": 2,
+          "markdown_path": "markdown/optional-readings/docent-plan-81230a32-88e0-42af-82c9-101660ab1d89-reading-4.md"
+        },
+        {
+          "alias": "6",
+          "reading_id": "2c74901e-2be7-49e6-9554-e6952ee329de",
+          "expected_groups": 6,
+          "retrieved_groups": 6,
+          "pages": 1,
+          "markdown_path": "markdown/optional-readings/docent-plan-81230a32-88e0-42af-82c9-101660ab1d89-reading-6.md"
+        },
+        {
+          "alias": "8",
+          "reading_id": "e0844e08-d73e-4925-b794-054d23be0f95",
+          "expected_groups": 1,
+          "retrieved_groups": 1,
+          "pages": 1,
+          "markdown_path": "markdown/optional-readings/docent-plan-81230a32-88e0-42af-82c9-101660ab1d89-reading-8.md"
+        }
+      ]
+    },
+    {
+      "plan_id": "772c0920-0b0f-4355-a009-825d1dd553b4",
+      "url": "https://docent.transluce.org/dashboard/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/analysis-plan/772c0920-0b0f-4355-a009-825d1dd553b4",
+      "steps": 3,
+      "dql_outputs": [
+        {
+          "alias": "1",
+          "rows": 28,
+          "truncated": false,
+          "markdown_path": "markdown/optional-readings/docent-plan-772c0920-0b0f-4355-a009-825d1dd553b4-dql-1.md"
+        },
+        {
+          "alias": "2",
+          "rows": 2,
+          "truncated": false,
+          "markdown_path": "markdown/optional-readings/docent-plan-772c0920-0b0f-4355-a009-825d1dd553b4-dql-2.md"
+        }
+      ],
+      "reading_outputs": []
+    }
+  ],
+  "expected_reading_groups": 115,
+  "retrieved_reading_groups": 115,
+  "scope": "Two course-linked public analysis plans and all saved outputs; no recursive collection of underlying agent-run transcripts."
+}

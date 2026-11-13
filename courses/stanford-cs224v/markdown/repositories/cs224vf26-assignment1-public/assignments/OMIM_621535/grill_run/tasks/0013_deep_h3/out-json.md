@@ -1,0 +1,70 @@
+# Homework 1 public teaching repository: assignments/OMIM_621535/grill_run/tasks/0013_deep_h3/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621535/grill_run/tasks/0013_deep_h3/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621535/grill_run/tasks/0013_deep_h3/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "verdict": "refuted",
+  "rationale": "Under the definition where 'refuted' applies if the available literature gives no support or contradicts the hypothesis outright, the hypothesis is refuted. The provided literature confirms that heterozygous variants in RAB3A cause autosomal dominant Spinocerebellar Ataxia 52 (OMIM #621535; hereditary ataxia panel entries), but none of the provided sources present cohort-level phenotyping, clinical denominators, or formal exclusion criteria documenting the absence of severe epileptic encephalopathy, chorioretinopathy, optic atrophy, hepatic/cardiac disease, or severe polyneuropathy.",
+  "evidence": [
+    {
+      "text": "OMIM Clinical Synopsis for Spinocerebellar Ataxia 52 (SCA52, MIM #621535) confirms causation by mutations in the RAB3A gene (179490.0001) but provides no detailed clinical cohort frequencies or documented negative findings.",
+      "stance": "neutral",
+      "source": {
+        "title": "SPINOCEREBELLAR ATAXIA 52; SCA52 - Clinical Synopsis",
+        "authors": [],
+        "year": 2026,
+        "journal": "Online Mendelian Inheritance in Man",
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://omim.org/clinicalSynopsis/621535",
+        "quote": "Caused by mutation in the RAS-associated protein RAB3A gene (RAB3A, 179490.0001)."
+      },
+      "numbers": [
+        {
+          "metric": "OMIM phenotype entry",
+          "value": 621535
+        },
+        {
+          "metric": "OMIM gene entry",
+          "value": 179490.0001
+        }
+      ]
+    },
+    {
+      "text": "PanelApp Australia and Genomics England evaluate RAB3A for hereditary ataxia panels, linking it to Spinocerebellar ataxia 52 (MIM #621535), but contain no cohort phenotyping establishing typical absence of epileptic encephalopathy, optic atrophy, or systemic disease.",
+      "stance": "neutral",
+      "source": {
+        "title": "RAB3A (Ataxia) - Gene",
+        "authors": [],
+        "year": null,
+        "journal": "PanelApp Australia",
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://panelapp-aus.org/panels/271/gene/RAB3A/",
+        "quote": "Phenotypes. Spinocerebellar ataxia 52, MIM# 621535. OMIM: 179490; ClinGen: RAB3A; DECIPHER: RAB3A; Clinvar variants: Variants in RAB3A; Penetrance: None"
+      },
+      "numbers": [
+        {
+          "metric": "PanelApp panel ID",
+          "value": 271
+        }
+      ]
+    }
+  ],
+  "conflicts": [],
+  "confidence": 0.15,
+  "new_directions": [
+    {
+      "question_text": "What are the exact numerator/denominator clinical phenotypic frequencies and documented absent features in published RAB3A / SCA52 index families?",
+      "rationale": "Primary literature describing original SCA52 families must be extracted to confirm whether non-ataxia features (e.g. optic atrophy, severe neuropathy, seizures, cardiac involvement) are consistently absent across all reported pedigrees.",
+      "promise": 0.9,
+      "est_cost": 1500
+    }
+  ]
+}
+```

@@ -1,0 +1,56 @@
+# Homework 1 public teaching repository: assignments/OMIM_620793/grill_run/tasks/0049_judge_cov_final/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620793/grill_run/tasks/0049_judge_cov_final/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620793/grill_run/tasks/0049_judge_cov_final/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "fields": [
+    {
+      "field": "Clinical phenotypes reported in affected individuals with SNUPN-related limb-girdle muscular dystrophy (LGMDR29 / OMIM #620793), including exact paper wording and corresponding HPO terms where identifiable",
+      "covered": false,
+      "contributing_aspects": []
+    },
+    {
+      "field": "Cohort-specific phenotype frequencies expressed as exact numerators and denominators (not percentage alone), linked to specific cohorts and resolvable citations (PMID or DOI)",
+      "covered": false,
+      "contributing_aspects": []
+    },
+    {
+      "field": "Most discriminating findings present in most affected individuals but uncommon in commonly confused disorders, including names of those differential disorders and confidence level of each distinction",
+      "covered": true,
+      "contributing_aspects": [
+        "differential diagnosis",
+        "inclusion body myositis",
+        "phenotypic discrimination"
+      ]
+    },
+    {
+      "field": "Findings explicitly evaluated and documented as absent in affected individuals (pertinent negatives that argue against the diagnosis)",
+      "covered": false,
+      "contributing_aspects": []
+    },
+    {
+      "field": "Phenotypic differences/correlations by variant type, variant position, age, or sex",
+      "covered": true,
+      "contributing_aspects": [
+        "weakness topography",
+        "axial weakness",
+        "muscle MRI selectivity",
+        "cerebellar atrophy",
+        "subclinical CNS involvement",
+        "adult-onset",
+        "pathomechanism",
+        "splicing dysregulation",
+        "Purkinje cells"
+      ]
+    },
+    {
+      "field": "Contradictory clinical findings reported between different studies/papers",
+      "covered": false,
+      "contributing_aspects": []
+    }
+  ]
+}
+```

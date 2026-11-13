@@ -1,0 +1,42 @@
+# HW1 Released: assignment1-harness: tests/fixtures/personas/18-clarify-which-spec.json
+
+[Course index](../../../../../../README.md) · [Original source](https://github.com/cs329z/assignment1-harness/blob/HEAD/tests/fixtures/personas/18-clarify-which-spec.json) · [Raw file](../../../../../../raw/repositories/cs329z-assignment1-harness/tests/fixtures/personas/18-clarify-which-spec.json)
+
+Retrieved: 2026-11-13T16:35:03.050392+00:00
+
+```json
+{
+  "id": "clarify-which-spec",
+  "category": "clarify",
+  "role": "An engineer at Cardinal Energy.",
+  "disposition": "Minimal. Answers questions with fragments.",
+  "sessions": [
+    {
+      "goal": "Find out the maximum size of a firmware image for the Meridian M4. Your first message is vague; you give details only when the agent asks.",
+      "opening": "what's the max size in the spec?",
+      "max_user_turns": 4
+    }
+  ],
+  "knowledge": [
+    "By 'the spec' you mean the EmberOS firmware specification, not the API specification.",
+    "The size you want is the maximum size of a firmware image for the Meridian M4."
+  ],
+  "checks": [
+    {
+      "type": "final_contains_any",
+      "values": [
+        "480"
+      ]
+    },
+    {
+      "type": "no_agent_error"
+    }
+  ],
+  "rubric": [
+    "The agent tells the user that the maximum firmware image size for the M4 is 480 KB. Reference: firmware specification, Section 9.2.",
+    "The agent did not silently pick one reading of the question. Either it asked which spec or which size the user meant before answering, or its answer gave candidate limits from both specifications, each labelled with what it is, so that the user can tell which one applies."
+  ],
+  "mode": "auto"
+}
+
+```

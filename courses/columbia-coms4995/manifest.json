@@ -1,0 +1,2333 @@
+{
+  "schema_version": "1.0",
+  "source_id": "columbia-coms4995",
+  "title": "Columbia COMS 4995-15: Designing LLM Agents",
+  "source_url": "https://designing-agents.github.io/",
+  "retrieved_at": "2026-11-13T16:40:47.378740+00:00",
+  "materials": [
+    {
+      "id": "pages/index",
+      "title": "Course schedule",
+      "url": "https://designing-agents.github.io/",
+      "category": "pages",
+      "retrieved_at": "2026-11-13T16:40:47.380249+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/pages/index.html",
+      "bytes": 16775,
+      "sha256": "2d1c402bfc210d152e9ed3ba2e48326fe50e12ee104d41b67d3b0ea9b2ea3933",
+      "download_status": "downloaded",
+      "assets": [
+        {
+          "url": "https://designing-agents.github.io/assets/images/shreya-havaldar.png",
+          "raw_path": "raw/assets/113a61a951297e2b.png",
+          "bytes": 1007811,
+          "sha256": "df139bcae3f1d8c4ad149146153f6fa56dda2a22fe002bf2e240322f45c29155"
+        },
+        {
+          "url": "https://designing-agents.github.io/assets/images/aaditya.jpg",
+          "raw_path": "raw/assets/81955a00750d4ee0.jpg",
+          "bytes": 304767,
+          "sha256": "fd803b52152e78d357c73b6a9784e4a7ba226290f42a4434818818b3a0a82215"
+        }
+      ],
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/pages/index.md",
+      "aliases": [
+        "https://designing-agents.github.io/index.html"
+      ]
+    },
+    {
+      "id": "pages/syllabus",
+      "title": "Syllabus",
+      "url": "https://designing-agents.github.io/syllabus.html",
+      "category": "pages",
+      "retrieved_at": "2026-11-13T16:40:49.436772+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/syllabus.html",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/pages/syllabus.html",
+      "bytes": 3815,
+      "sha256": "e5e92156fba1768c52586a5007d67cb90ff7f9cb0edb49e6cb3196a25d5e1c5a",
+      "download_status": "downloaded",
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/pages/syllabus.md"
+    },
+    {
+      "id": "assignments/hw1",
+      "title": "HW1",
+      "url": "https://designing-agents.github.io/HW1.html",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:40:49.716508+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/HW1.html",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/assignments/hw1.html",
+      "bytes": 11135,
+      "sha256": "c040ebd0c109ab9dd01fb35bd5a835ede67439f920e2b556ec072f9814d800f8",
+      "download_status": "downloaded",
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/assignments/hw1.md"
+    },
+    {
+      "id": "assignments/hw2",
+      "title": "HW2",
+      "url": "https://designing-agents.github.io/HW2.html",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:40:49.926222+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/HW2.html",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/assignments/hw2.html",
+      "bytes": 11692,
+      "sha256": "ad12271ba481233e0ac26cfdb362daf865e2d1ec1cc088b8738225e5a0d28a32",
+      "download_status": "downloaded",
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/assignments/hw2.md"
+    },
+    {
+      "id": "assignments/hw3",
+      "title": "HW3",
+      "url": "https://designing-agents.github.io/HW3.html",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:40:50.257580+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/HW3.html",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/assignments/hw3.html",
+      "bytes": 12119,
+      "sha256": "2ee3e9c377629d18a3bc74223fba4efacd8b185ff1691d5cdc577a30a1916c12",
+      "download_status": "downloaded",
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/assignments/hw3.md"
+    },
+    {
+      "id": "assignments/project",
+      "title": "Final project",
+      "url": "https://designing-agents.github.io/project.html",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:40:50.487488+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/project.html",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/assignments/project.html",
+      "bytes": 16605,
+      "sha256": "8584d481534f4cf38f28b92dc4507beb7621d6d21b11f0e1ee7dcc04fed9bee6",
+      "download_status": "downloaded",
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/assignments/project.md"
+    },
+    {
+      "id": "restricted/courseworks",
+      "title": "Courseworks",
+      "url": "https://courseworks2.columbia.edu/courses/258235",
+      "category": "restricted",
+      "retrieved_at": "2026-11-13T16:40:56.294119+00:00",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "notes": [
+        "Course platform or submission service; availability checked separately where a public notebook export is provided."
+      ]
+    },
+    {
+      "id": "slides/week1",
+      "title": "Lecture slides: week1",
+      "url": "https://designing-agents.github.io/assets/lecture_slides/week1.pdf",
+      "category": "slides",
+      "retrieved_at": "2026-11-13T16:40:56.295132+00:00",
+      "notes": [
+        "Reused the already downloaded original PDF from this course archive.",
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Pages with little or no extractable text: 39, 43, 48, 52"
+      ],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/assets/lecture_slides/week1.pdf",
+      "content_type": "application/pdf",
+      "raw_path": "raw/slides/week1.pdf",
+      "bytes": 3183994,
+      "sha256": "a9c86d416e806fc0b57f3bdd37cd71a71207f5b47ee45db125d4c449e6f62dfc",
+      "download_status": "downloaded",
+      "page_count": 60,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/slides/week1.md"
+    },
+    {
+      "id": "slides/week2",
+      "title": "Lecture slides: week2",
+      "url": "https://designing-agents.github.io/assets/lecture_slides/week2.pdf",
+      "category": "slides",
+      "retrieved_at": "2026-11-13T16:40:56.350142+00:00",
+      "notes": [
+        "Reused the already downloaded original PDF from this course archive.",
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Pages with little or no extractable text: 10, 19, 20, 34, 45, 61"
+      ],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/assets/lecture_slides/week2.pdf",
+      "content_type": "application/pdf",
+      "raw_path": "raw/slides/week2.pdf",
+      "bytes": 1862004,
+      "sha256": "5c8b5b9b134ad360953824d732e49a8be2788faa7304b5224990f54bc61c2d1c",
+      "download_status": "downloaded",
+      "page_count": 64,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/slides/week2.md"
+    },
+    {
+      "id": "activities/gradient-descent",
+      "title": "Course code: gradient_descent.py",
+      "url": "https://designing-agents.github.io/activities/gradient_descent.py",
+      "category": "activities",
+      "retrieved_at": "2026-11-13T16:40:56.399321+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/activities/gradient_descent.py",
+      "content_type": "application/octet-stream",
+      "raw_path": "raw/activities/gradient-descent.py",
+      "bytes": 8578,
+      "sha256": "ad1f45bfef7ab6aabd10979bf1fbe17cf14c322bc3fbb24efbf8dcbdb61c2ee1",
+      "download_status": "downloaded",
+      "conversion_method": "source-code-fence",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/activities/gradient-descent.md"
+    },
+    {
+      "id": "activities/gradient-descent-solutions",
+      "title": "Course code: gradient_descent_solutions.py",
+      "url": "https://designing-agents.github.io/activities/gradient_descent_solutions.py",
+      "category": "activities",
+      "retrieved_at": "2026-11-13T16:40:56.579354+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/activities/gradient_descent_solutions.py",
+      "content_type": "application/octet-stream",
+      "raw_path": "raw/activities/gradient-descent-solutions.py",
+      "bytes": 6527,
+      "sha256": "a914395bc56678ef15a0ff2e9fde1373f996af2d79bac439eab7260f1317363b",
+      "download_status": "downloaded",
+      "conversion_method": "source-code-fence",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/activities/gradient-descent-solutions.md"
+    },
+    {
+      "id": "slides/week3",
+      "title": "Lecture slides: week3",
+      "url": "https://designing-agents.github.io/assets/lecture_slides/week3.pdf",
+      "category": "slides",
+      "retrieved_at": "2026-11-13T16:40:56.845834+00:00",
+      "notes": [
+        "Reused the already downloaded original PDF from this course archive.",
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Pages with little or no extractable text: 45"
+      ],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/assets/lecture_slides/week3.pdf",
+      "content_type": "application/pdf",
+      "raw_path": "raw/slides/week3.pdf",
+      "bytes": 1026403,
+      "sha256": "b65df22d45aa1056d1295e77780a97c9dc2da48a63d43a18f1b3e8454f3a7509",
+      "download_status": "downloaded",
+      "page_count": 50,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/slides/week3.md"
+    },
+    {
+      "id": "activities/beam-search",
+      "title": "Course code: beam_search.py",
+      "url": "https://designing-agents.github.io/activities/beam_search.py",
+      "category": "activities",
+      "retrieved_at": "2026-11-13T16:40:56.876255+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/activities/beam_search.py",
+      "content_type": "application/octet-stream",
+      "raw_path": "raw/activities/beam-search.py",
+      "bytes": 6700,
+      "sha256": "c8ed9f8367059c6c4b2ccc32676f4ce92ca45e6eca408af099d5f295279e982f",
+      "download_status": "downloaded",
+      "conversion_method": "source-code-fence",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/activities/beam-search.md"
+    },
+    {
+      "id": "activities/beam-search-solutions",
+      "title": "Course code: beam_search_solutions.py",
+      "url": "https://designing-agents.github.io/activities/beam_search_solutions.py",
+      "category": "activities",
+      "retrieved_at": "2026-11-13T16:40:57.038614+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/activities/beam_search_solutions.py",
+      "content_type": "application/octet-stream",
+      "raw_path": "raw/activities/beam-search-solutions.py",
+      "bytes": 5416,
+      "sha256": "0b1a8673e975f90604c3ad92383bad4411f51de25301a3745a1ad2146cb1c6b1",
+      "download_status": "downloaded",
+      "conversion_method": "source-code-fence",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/activities/beam-search-solutions.md"
+    },
+    {
+      "id": "slides/week4",
+      "title": "Lecture slides: week4",
+      "url": "https://designing-agents.github.io/assets/lecture_slides/week4.pdf",
+      "category": "slides",
+      "retrieved_at": "2026-11-13T16:40:57.198773+00:00",
+      "notes": [
+        "Reused the already downloaded original PDF from this course archive.",
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Pages with little or no extractable text: 39, 47"
+      ],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/assets/lecture_slides/week4.pdf",
+      "content_type": "application/pdf",
+      "raw_path": "raw/slides/week4.pdf",
+      "bytes": 1262676,
+      "sha256": "109d8777d87a48f7ca3037c3b9370411982437a23e022fa1ac1d2f6da0e6593c",
+      "download_status": "downloaded",
+      "page_count": 56,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/slides/week4.md"
+    },
+    {
+      "id": "activities/autoprompting",
+      "title": "Course code: autoprompting.py",
+      "url": "https://designing-agents.github.io/activities/autoprompting.py",
+      "category": "activities",
+      "retrieved_at": "2026-11-13T16:40:57.231437+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/activities/autoprompting.py",
+      "content_type": "application/octet-stream",
+      "raw_path": "raw/activities/autoprompting.py",
+      "bytes": 5691,
+      "sha256": "61e11aa16dc070393932811ff8e7565d35c4bcabc351ee348e1895849309e340",
+      "download_status": "downloaded",
+      "conversion_method": "source-code-fence",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/activities/autoprompting.md"
+    },
+    {
+      "id": "activities/autoprompting-solutions",
+      "title": "Course code: autoprompting_solutions.py",
+      "url": "https://designing-agents.github.io/activities/autoprompting_solutions.py",
+      "category": "activities",
+      "retrieved_at": "2026-11-13T16:40:57.407737+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/activities/autoprompting_solutions.py",
+      "content_type": "application/octet-stream",
+      "raw_path": "raw/activities/autoprompting-solutions.py",
+      "bytes": 8163,
+      "sha256": "f180ffde9b53f931b8f5e662a1142b9285411a829c01142da41eded3f561d2db",
+      "download_status": "downloaded",
+      "conversion_method": "source-code-fence",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/activities/autoprompting-solutions.md"
+    },
+    {
+      "id": "activities/gemini",
+      "title": "Course code: gemini.py",
+      "url": "https://designing-agents.github.io/activities/gemini.py",
+      "category": "activities",
+      "retrieved_at": "2026-11-13T16:40:57.574551+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/activities/gemini.py",
+      "content_type": "application/octet-stream",
+      "raw_path": "raw/activities/gemini.py",
+      "bytes": 479,
+      "sha256": "2f64f738b0c1c104388661be043a89c622ca32ff5cfe544564037eeb1cdae82d",
+      "download_status": "downloaded",
+      "conversion_method": "source-code-fence",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/activities/gemini.md"
+    },
+    {
+      "id": "slides/week5",
+      "title": "Lecture slides: week5",
+      "url": "https://designing-agents.github.io/assets/lecture_slides/week5.pdf",
+      "category": "slides",
+      "retrieved_at": "2026-11-13T16:40:57.793028+00:00",
+      "notes": [
+        "Reused the already downloaded original PDF from this course archive.",
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Pages with little or no extractable text: 30, 49, 53"
+      ],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/assets/lecture_slides/week5.pdf",
+      "content_type": "application/pdf",
+      "raw_path": "raw/slides/week5.pdf",
+      "bytes": 1348258,
+      "sha256": "38183e3333fdf765a12b586233d6b7e064bdfb119e3b9d5a356f8ff1aa905fa9",
+      "download_status": "downloaded",
+      "page_count": 56,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/slides/week5.md"
+    },
+    {
+      "id": "activities/reward-model",
+      "title": "Course code: reward_model.py",
+      "url": "https://designing-agents.github.io/activities/reward_model.py",
+      "category": "activities",
+      "retrieved_at": "2026-11-13T16:40:57.828291+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/activities/reward_model.py",
+      "content_type": "application/octet-stream",
+      "raw_path": "raw/activities/reward-model.py",
+      "bytes": 10390,
+      "sha256": "afc7441b52c1377dfb29aed436968ff23f3b07511e73a8cb85502860492d8826",
+      "download_status": "downloaded",
+      "conversion_method": "source-code-fence",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/activities/reward-model.md"
+    },
+    {
+      "id": "activities/reward-model-solutions",
+      "title": "Course code: reward_model_solutions.py",
+      "url": "https://designing-agents.github.io/activities/reward_model_solutions.py",
+      "category": "activities",
+      "retrieved_at": "2026-11-13T16:40:58.055399+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/activities/reward_model_solutions.py",
+      "content_type": "application/octet-stream",
+      "raw_path": "raw/activities/reward-model-solutions.py",
+      "bytes": 8217,
+      "sha256": "37f85bdbd57b8cf43ba5b5c0c97c4dd79c06dd6a2d0b0a1ff5bdc7331a85cf2d",
+      "download_status": "downloaded",
+      "conversion_method": "source-code-fence",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/activities/reward-model-solutions.md"
+    },
+    {
+      "id": "slides/week6",
+      "title": "Lecture slides: week6",
+      "url": "https://designing-agents.github.io/assets/lecture_slides/week6.pdf",
+      "category": "slides",
+      "retrieved_at": "2026-11-13T16:40:58.222032+00:00",
+      "notes": [
+        "Reused the already downloaded original PDF from this course archive.",
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Pages with little or no extractable text: 12, 13, 17, 28"
+      ],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/assets/lecture_slides/week6.pdf",
+      "content_type": "application/pdf",
+      "raw_path": "raw/slides/week6.pdf",
+      "bytes": 1729246,
+      "sha256": "8b9983512b94cea6990e12446e4ae7fd05f2a45729ff9ac2dcf1e9e2cdd0f044",
+      "download_status": "downloaded",
+      "page_count": 65,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/slides/week6.md"
+    },
+    {
+      "id": "activities/planning",
+      "title": "Course code: planning.py",
+      "url": "https://designing-agents.github.io/activities/planning.py",
+      "category": "activities",
+      "retrieved_at": "2026-11-13T16:40:58.265384+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/activities/planning.py",
+      "content_type": "application/octet-stream",
+      "raw_path": "raw/activities/planning.py",
+      "bytes": 1809,
+      "sha256": "9ee0a32b29c737d08abccff44f6199e29453a4c1cf16680a92bd36d3ef1dc1b0",
+      "download_status": "downloaded",
+      "conversion_method": "source-code-fence",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/activities/planning.md"
+    },
+    {
+      "id": "activities/planning-answers",
+      "title": "Course code: planning_answers.py",
+      "url": "https://designing-agents.github.io/activities/planning_answers.py",
+      "category": "activities",
+      "retrieved_at": "2026-11-13T16:40:58.414952+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/activities/planning_answers.py",
+      "content_type": "application/octet-stream",
+      "raw_path": "raw/activities/planning-answers.py",
+      "bytes": 4547,
+      "sha256": "76a4ac2ebfe69448d0eb816b149dabe85d58daef94cf2ce97c87d39ec2180595",
+      "download_status": "downloaded",
+      "conversion_method": "source-code-fence",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/activities/planning-answers.md"
+    },
+    {
+      "id": "slides/week7",
+      "title": "Lecture slides: week7",
+      "url": "https://designing-agents.github.io/assets/lecture_slides/week7.pdf",
+      "category": "slides",
+      "retrieved_at": "2026-11-13T16:40:58.581139+00:00",
+      "notes": [
+        "Reused the already downloaded original PDF from this course archive.",
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Pages with little or no extractable text: 19, 44, 52"
+      ],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/assets/lecture_slides/week7.pdf",
+      "content_type": "application/pdf",
+      "raw_path": "raw/slides/week7.pdf",
+      "bytes": 932450,
+      "sha256": "ffb9f091ac5799f92e55b72ad7458339ec7ecb801376a90a86994703268e36bc",
+      "download_status": "downloaded",
+      "page_count": 52,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/slides/week7.md"
+    },
+    {
+      "id": "activities/web-search",
+      "title": "Course code: web_search.py",
+      "url": "https://designing-agents.github.io/activities/web_search.py",
+      "category": "activities",
+      "retrieved_at": "2026-11-13T16:40:58.613184+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/activities/web_search.py",
+      "content_type": "application/octet-stream",
+      "raw_path": "raw/activities/web-search.py",
+      "bytes": 5342,
+      "sha256": "36de7b15d71edce9a6201d97db789f947eb8cbdb82d49cc6d7e9df1bec56e5ea",
+      "download_status": "downloaded",
+      "conversion_method": "source-code-fence",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/activities/web-search.md"
+    },
+    {
+      "id": "activities/web-search-solutions",
+      "title": "Course code: web_search_solutions.py",
+      "url": "https://designing-agents.github.io/activities/web_search_solutions.py",
+      "category": "activities",
+      "retrieved_at": "2026-11-13T16:40:58.847647+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/activities/web_search_solutions.py",
+      "content_type": "application/octet-stream",
+      "raw_path": "raw/activities/web-search-solutions.py",
+      "bytes": 4007,
+      "sha256": "fde5cc9ffa6878fd6ab691f2ddeb4587b59920be63572399f80128702e7f3ce6",
+      "download_status": "downloaded",
+      "conversion_method": "source-code-fence",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/activities/web-search-solutions.md"
+    },
+    {
+      "id": "slides/week9",
+      "title": "Lecture slides: week9",
+      "url": "https://designing-agents.github.io/assets/lecture_slides/week9.pdf",
+      "category": "slides",
+      "retrieved_at": "2026-11-13T16:40:59.060350+00:00",
+      "notes": [
+        "Reused the already downloaded original PDF from this course archive.",
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Pages with little or no extractable text: 7, 19, 60, 71"
+      ],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/assets/lecture_slides/week9.pdf",
+      "content_type": "application/pdf",
+      "raw_path": "raw/slides/week9.pdf",
+      "bytes": 3455940,
+      "sha256": "cbd0cc36a7f0d4aa59f85f3f0f3a0df13e81bc98778e0c41e9cf599c1af5a80b",
+      "download_status": "downloaded",
+      "page_count": 95,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/slides/week9.md"
+    },
+    {
+      "id": "references/principles-of-academic-honesty",
+      "title": "Principles of Academic Honesty",
+      "url": "https://www.cs.columbia.edu/academic/academic-honesty/",
+      "category": "references",
+      "retrieved_at": "2026-11-13T16:40:59.601847+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://www.cs.columbia.edu/academic/academic-honesty/",
+      "content_type": "text/html; charset=UTF-8",
+      "raw_path": "raw/references/principles-of-academic-honesty.html",
+      "bytes": 77509,
+      "sha256": "7ae8fa3dfa23d15cc146c15c398155a7e2ababe13a9b84e297a12841028d98e5",
+      "download_status": "downloaded",
+      "assets": [
+        {
+          "url": "https://www.cs.columbia.edu/wp-content/uploads/2023/06/logo_square-blue-2-e1687888108637.png",
+          "raw_path": "raw/assets/17e76257aef97d96.png",
+          "bytes": 42162,
+          "sha256": "ea0831c335b0066c8bbbc9b6a523a9c7522e76b82bfd3b43654ecbbb2e768b75"
+        }
+      ],
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/references/principles-of-academic-honesty.md"
+    },
+    {
+      "id": "references/google-ai-studio",
+      "title": "Google AI Studio",
+      "url": "https://ai.google.dev/gemini-api/docs/api-key",
+      "category": "references",
+      "retrieved_at": "2026-11-13T16:41:02.137522+00:00",
+      "notes": [
+        "ValueError: HTML has too little content; possible app shell or access page",
+        "Full guide recovered from the server's public Markdown representation: markdown/references/google-ai-studio-api-key-markdown.md"
+      ],
+      "http_status": 200,
+      "final_url": "https://aistudio.google.com/docs/api-key",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/references/google-ai-studio.html",
+      "bytes": 52064,
+      "sha256": "ddf3aa44b750bde5b5586810647e090d200b06b9d96c00a43eede72df3a4caa1",
+      "download_status": "downloaded",
+      "conversion_status": "failed",
+      "recovered_by": "markdown/references/google-ai-studio-api-key-markdown.md"
+    },
+    {
+      "id": "references/react",
+      "title": "React",
+      "url": "https://react.dev",
+      "category": "references",
+      "retrieved_at": "2026-11-13T16:41:04.220359+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://react.dev/",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/references/react.html",
+      "bytes": 272437,
+      "sha256": "2f76fa681161ea065bb2656e7cc3dafaea7c0d2c76d8babef577f061cad770ce",
+      "download_status": "downloaded",
+      "assets": [
+        {
+          "url": "https://react.dev/_next/image?url=%2Fimages%2Fuwu.png&w=640&q=75",
+          "raw_path": "raw/assets/4fe25a63b6c1de37.png",
+          "bytes": 18586,
+          "sha256": "348256e5e720ccce00432e0a2452f98d71752b4d841dda82b147f5b4f1195b44"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/cover.svg",
+          "raw_path": "raw/assets/94f5280a630318a1.svg",
+          "bytes": 1300,
+          "sha256": "7e971110d972ce9f5597fc9c00c19b4362a65d3229525f71dd5929432fd03209"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/andrew.jpg",
+          "raw_path": "raw/assets/aa21d501d78c4ccd.jpg",
+          "bytes": 2030,
+          "sha256": "92445124ca122c6595f1bd5f3839dc5c8881824190cb533f5732ecd6c23dbed4"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/lauren.jpg",
+          "raw_path": "raw/assets/91a71ec803fecbdb.jpg",
+          "bytes": 5565,
+          "sha256": "f63ba889a0ee0bbdca6f87acaada4602d0423d7e41b3c39855e310e70c4a8c45"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/juan.jpg",
+          "raw_path": "raw/assets/32bb29c70830eb3f.jpg",
+          "bytes": 1018,
+          "sha256": "8a84b438b6769698179f3afcba41159190c69cba956ebf515e3e97f131d24ef7"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/rick.jpg",
+          "raw_path": "raw/assets/02f82fab20156328.jpg",
+          "bytes": 1249,
+          "sha256": "413c209ff2103eb90209e4e952a71121ad8f80d8762a500ab5935110f782e204"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/shruti.jpg",
+          "raw_path": "raw/assets/e4dd00d95db4613a.jpg",
+          "bytes": 1271,
+          "sha256": "0dda66d18b7ba421cf0bd486ee9bb8ac74cd9b9b6ca254dc2ec2c80e8e27f926"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/shaundai.jpg",
+          "raw_path": "raw/assets/464bdf16f8c5911a.jpg",
+          "bytes": 2252,
+          "sha256": "1c2de7497a540385a39fe559dc999839e25cf5daf823f37f567420c71dfba376"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/aakansha.jpg",
+          "raw_path": "raw/assets/14b4167fa3bac781.jpg",
+          "bytes": 1348,
+          "sha256": "b5912041ceae0f3a4fe854f61ffc00a4f9546ae12e5603b5fd23ba892b7ef6c7"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/brian.jpg",
+          "raw_path": "raw/assets/27818ced753ede46.jpg",
+          "bytes": 1388,
+          "sha256": "d01756570b4030d894ed59e2dad79d485cbf12ce5b0c56435ef8e23de9538fce"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/xuan.jpg",
+          "raw_path": "raw/assets/aff8f051216c3eda.jpg",
+          "bytes": 786,
+          "sha256": "11c5899484e18872fc4cf5de48dd6783b0b39ba92b3a2b5876acb2142fdaa47e"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/rachel.jpg",
+          "raw_path": "raw/assets/1db0d138f6b343bf.jpg",
+          "bytes": 2263,
+          "sha256": "9db480c7853e0e8f730161e5cd0df67fe3d6a7d640cbf12138777e1a59062426"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/debbie.jpg",
+          "raw_path": "raw/assets/30acb7dee21d2edc.jpg",
+          "bytes": 809,
+          "sha256": "6ed208f86c802907a5a8b82730f1aa29d8f4914cbb6c7e06cca55792d31ecb4c"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/sarah.jpg",
+          "raw_path": "raw/assets/5b377f474e70db38.jpg",
+          "bytes": 1271,
+          "sha256": "4a9ebfaebf6decd214eee1a2ef6daecd704f6315b3c71e9eccc312770355ac2e"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/linton.jpg",
+          "raw_path": "raw/assets/8c0cbba6690235f6.jpg",
+          "bytes": 1167,
+          "sha256": "a531fc46c53daf6ea5b73ee8833a942e072eb64cfc30cbda41bb9c51f204ef78"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/delba.jpg",
+          "raw_path": "raw/assets/4860dfe739701e62.jpg",
+          "bytes": 1206,
+          "sha256": "8564703d5959aede2974e66a9aaa06c26df2506338a878bd68c77b2efe999310"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/robert.jpg",
+          "raw_path": "raw/assets/a3d7a562de701d00.jpg",
+          "bytes": 1180,
+          "sha256": "c9524f142ed49ca73a20ac857d0b1c7f9d53835fd8b1898349fcf5525fcef519"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/eric.jpg",
+          "raw_path": "raw/assets/c7a51b5ea01dc248.jpg",
+          "bytes": 1291,
+          "sha256": "852079b2c463deb0fa255c6797addba09db7007edbc3420b7369e3947e4c5e7f"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/steven.jpg",
+          "raw_path": "raw/assets/8a919449b61846d7.jpg",
+          "bytes": 3871,
+          "sha256": "ea32b84782a7913f29bd4cd0c529899098031cc7d2f236f64b36d9dedcb6a4f5"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/roman.jpg",
+          "raw_path": "raw/assets/c4ffc5630fa69721.jpg",
+          "bytes": 981,
+          "sha256": "5a2c380a2449569fdef7b3da3bd5e15fc6b2ffee14fadf9fc0a580726cee3a2b"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/daishi.jpg",
+          "raw_path": "raw/assets/12417d41b531080a.jpg",
+          "bytes": 1144,
+          "sha256": "d3bd9750d41e038f062ab8cc5e3909f21ecf54627110346896572d2a8270e54a"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/diego.jpg",
+          "raw_path": "raw/assets/77aba254808b07d8.jpg",
+          "bytes": 1362,
+          "sha256": "f06bd42448762974aa7be328897aaa530ba87b27611a003a2fbe8a877eb8bcfa"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/tafu.jpg",
+          "raw_path": "raw/assets/ee4bf645b39b433e.jpg",
+          "bytes": 1239,
+          "sha256": "e6f82ecd603b0b7568dbbbf461ea2025d8f21aff2071082ab48077161f0b07de"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/lyle.jpg",
+          "raw_path": "raw/assets/899c28fc4bfc25fe.jpg",
+          "bytes": 1452,
+          "sha256": "6cad354c91a9e3541e3219475688c76ccae62d8c1ff076902d2573559074a5ee"
+        },
+        {
+          "url": "https://react.dev/images/home/conf2021/helen.jpg",
+          "raw_path": "raw/assets/eb612dda8bd498f9.jpg",
+          "bytes": 1139,
+          "sha256": "b1657a2ef2ececffc87127def2b3cbfe980d66a335012ed509c85b71a143b326"
+        },
+        {
+          "url": "https://react.dev/images/home/community/react_conf_fun.webp",
+          "raw_path": "raw/assets/decd9b33707931ab.webp",
+          "bytes": 55896,
+          "sha256": "c883ef4b73aa311702023742c4e1186e46621499d3795c2726ab39d1f1166d11"
+        },
+        {
+          "url": "https://react.dev/images/home/community/react_india_sunil.webp",
+          "raw_path": "raw/assets/f06ae9b130568c1c.webp",
+          "bytes": 18800,
+          "sha256": "29ccd707b216b797416536b10ae621f63487701343c1fc56f1a821be5e46c181"
+        },
+        {
+          "url": "https://react.dev/images/home/community/react_conf_hallway.webp",
+          "raw_path": "raw/assets/b89277c8193803ac.webp",
+          "bytes": 41758,
+          "sha256": "1abcdfa909cd9710b69eb01f69128ec5d8cfb776cf6402e4e2566f9cc987a852"
+        },
+        {
+          "url": "https://react.dev/images/home/community/react_india_hallway.webp",
+          "raw_path": "raw/assets/ba944c75eb86a7ed.webp",
+          "bytes": 21902,
+          "sha256": "599a5dfd687941a0a7a0fb67aa398be6c6682261693267f74b65698414d5da79"
+        },
+        {
+          "url": "https://react.dev/images/home/community/react_conf_elizabet.webp",
+          "raw_path": "raw/assets/061c8dc1c14521f5.webp",
+          "bytes": 20644,
+          "sha256": "dd346ff0ed74b7722d5ef226a6a90899132e8b8a370dab45816ef8397e56c53c"
+        },
+        {
+          "url": "https://react.dev/images/home/community/react_india_selfie.webp",
+          "raw_path": "raw/assets/10d404c885ca6c58.webp",
+          "bytes": 36910,
+          "sha256": "72170f6bc79eb000e3992413f99aac064ff6878334bad43fdecc1eeabff3a7bc"
+        },
+        {
+          "url": "https://react.dev/images/home/community/react_conf_nat.webp",
+          "raw_path": "raw/assets/49fb4f275d58d51f.webp",
+          "bytes": 26752,
+          "sha256": "619347db0637bb32ef5fd7a8131900994ca650bc84c3d7f065fc8259ea7c6c98"
+        },
+        {
+          "url": "https://react.dev/images/home/community/react_india_team.webp",
+          "raw_path": "raw/assets/aa13a655537cd2f9.webp",
+          "bytes": 25254,
+          "sha256": "865a8a47525ff67539c82ce47d0c54d7a2c3ece14a95ed156f0f180c39236e99"
+        },
+        {
+          "url": "https://react.dev/images/home/community/react_conf_fun.webp",
+          "raw_path": "raw/assets/decd9b33707931ab.webp",
+          "bytes": 55896,
+          "sha256": "c883ef4b73aa311702023742c4e1186e46621499d3795c2726ab39d1f1166d11"
+        },
+        {
+          "url": "https://react.dev/images/home/community/react_india_sunil.webp",
+          "raw_path": "raw/assets/f06ae9b130568c1c.webp",
+          "bytes": 18800,
+          "sha256": "29ccd707b216b797416536b10ae621f63487701343c1fc56f1a821be5e46c181"
+        },
+        {
+          "url": "https://react.dev/images/home/community/react_conf_hallway.webp",
+          "raw_path": "raw/assets/b89277c8193803ac.webp",
+          "bytes": 41758,
+          "sha256": "1abcdfa909cd9710b69eb01f69128ec5d8cfb776cf6402e4e2566f9cc987a852"
+        },
+        {
+          "url": "https://react.dev/images/home/community/react_india_hallway.webp",
+          "raw_path": "raw/assets/ba944c75eb86a7ed.webp",
+          "bytes": 21902,
+          "sha256": "599a5dfd687941a0a7a0fb67aa398be6c6682261693267f74b65698414d5da79"
+        },
+        {
+          "url": "https://react.dev/images/home/community/react_conf_elizabet.webp",
+          "raw_path": "raw/assets/061c8dc1c14521f5.webp",
+          "bytes": 20644,
+          "sha256": "dd346ff0ed74b7722d5ef226a6a90899132e8b8a370dab45816ef8397e56c53c"
+        },
+        {
+          "url": "https://react.dev/images/home/community/react_india_selfie.webp",
+          "raw_path": "raw/assets/10d404c885ca6c58.webp",
+          "bytes": 36910,
+          "sha256": "72170f6bc79eb000e3992413f99aac064ff6878334bad43fdecc1eeabff3a7bc"
+        },
+        {
+          "url": "https://react.dev/images/home/community/react_conf_nat.webp",
+          "raw_path": "raw/assets/49fb4f275d58d51f.webp",
+          "bytes": 26752,
+          "sha256": "619347db0637bb32ef5fd7a8131900994ca650bc84c3d7f065fc8259ea7c6c98"
+        },
+        {
+          "url": "https://react.dev/images/home/community/react_india_team.webp",
+          "raw_path": "raw/assets/aa13a655537cd2f9.webp",
+          "bytes": 25254,
+          "sha256": "865a8a47525ff67539c82ce47d0c54d7a2c3ece14a95ed156f0f180c39236e99"
+        },
+        {
+          "url": "https://react.dev/images/uwu.png",
+          "raw_path": "raw/assets/8ad68ef5a06ad15c.png",
+          "bytes": 55079,
+          "sha256": "dd8bc6dc97f5fc69010653808bbfe576652f36f6cc277663516727626f17cbd0"
+        }
+      ],
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/references/react.md"
+    },
+    {
+      "id": "references/vue",
+      "title": "Vue",
+      "url": "https://vuejs.org",
+      "category": "references",
+      "retrieved_at": "2026-11-13T16:41:08.924270+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://vuejs.org/",
+      "content_type": "text/html; charset=UTF-8",
+      "raw_path": "raw/references/vue.html",
+      "bytes": 83785,
+      "sha256": "770d19af5438cab2a87c31b4228830d10e78ead9a1c63adf63ccf2e20583224e",
+      "download_status": "downloaded",
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/references/vue.md"
+    },
+    {
+      "id": "references/svelte",
+      "title": "Svelte",
+      "url": "https://svelte.dev",
+      "category": "references",
+      "retrieved_at": "2026-11-13T16:41:09.586068+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://svelte.dev/",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/references/svelte.html",
+      "bytes": 90899,
+      "sha256": "d240f87b85ce3bf93f0e518838cf7a5cb92448f11f791a0c0f7e4e19b08daf78",
+      "download_status": "downloaded",
+      "assets": [
+        {
+          "url": "https://svelte.dev/_app/immutable/assets/svelte-machine-mobile.DtvNEgov.png",
+          "raw_path": "raw/assets/3ac8ef8f77875f24.png",
+          "bytes": 321151,
+          "sha256": "26f8a45ee16ab1460fb4490893753e6385cfc3c603c486837c366b63a42a907b"
+        },
+        {
+          "url": "https://svelte.dev/_app/immutable/assets/svelte-pronunciation.DFRMnECz.svg",
+          "raw_path": "raw/assets/0578cad650b51a3b.svg",
+          "bytes": 4507,
+          "sha256": "39950875b2b729a2b69da3aa1998984d3aee7b3413186ae91da25e986f5b5d3d"
+        },
+        {
+          "url": "https://svelte.dev/_app/immutable/assets/stack-overflow.D6fScimS.png",
+          "raw_path": "raw/assets/48489de838490eb5.png",
+          "bytes": 307659,
+          "sha256": "22e75f1a3ad839c334761680f1095480b5119e877a4e3c0534ed55df8432fb5b"
+        },
+        {
+          "url": "https://svelte.dev/_app/immutable/assets/state-of-js-chart.VWzbG9sl.png",
+          "raw_path": "raw/assets/d313d7ab1d83e3da.png",
+          "bytes": 178022,
+          "sha256": "c9d815fa0cfec1ca44cfac3fa192bfe405577de6f006bd647d184d5fff3c923d"
+        },
+        {
+          "url": "https://svelte.dev/_app/immutable/assets/mullvad.BoCDoRBI.svg",
+          "raw_path": "raw/assets/2beec214def375ce.svg",
+          "bytes": 5504,
+          "sha256": "0fa7a0bb2deda151ca103dc0839b07f680fd77221aa342361819b958fe90d3ad"
+        },
+        {
+          "url": "https://svelte.dev/_app/immutable/assets/yelp.BCIQykSN.svg",
+          "raw_path": "raw/assets/ce45ec8f1b9c6b44.svg",
+          "bytes": 7096,
+          "sha256": "4aa863c580caf5abe903ec18e7d53e8b145ed7781a42d7d414fad775ac29685d"
+        },
+        {
+          "url": "https://svelte.dev/_app/immutable/assets/nyt.WSBgWcyP.svg",
+          "raw_path": "raw/assets/073a68a547b0d028.svg",
+          "bytes": 7460,
+          "sha256": "1e15b5b3dd133484ca1f3a471f106f89194263adc3ea72bf3aa0920ea618410d"
+        },
+        {
+          "url": "https://svelte.dev/_app/immutable/assets/decathlon.CsAZfh9C.svg",
+          "raw_path": "raw/assets/7ba5ed7dc7c6d257.svg",
+          "bytes": 4393,
+          "sha256": "7eecb8ba03a0205012562b50f73385fd2917aacccf58715360060dae62c2d113"
+        },
+        {
+          "url": "https://svelte.dev/_app/immutable/assets/1password.EAEOcf-b.svg",
+          "raw_path": "raw/assets/38f6b90b70d7261a.svg",
+          "bytes": 4777,
+          "sha256": "20f1c9ca250bca63445dffa0da7bf28d5c4243372da609a9b3007e90eaeac960"
+        },
+        {
+          "url": "https://svelte.dev/_app/immutable/assets/summit.CCzKB27v.png",
+          "raw_path": "raw/assets/0063406fcd19dfb0.png",
+          "bytes": 12077826,
+          "sha256": "0118ac5dd3d9ffaede0631121d04405d90fa5eec8deec56bb7a0656d3bbd8bd4"
+        }
+      ],
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/references/svelte.md"
+    },
+    {
+      "id": "references/fastapi",
+      "title": "FastAPI",
+      "url": "https://fastapi.tiangolo.com",
+      "category": "references",
+      "retrieved_at": "2026-11-13T16:41:13.301249+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://fastapi.tiangolo.com/",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/references/fastapi.html",
+      "bytes": 155447,
+      "sha256": "15d2bb75d4e6454658662c9ba6accf202d979fe7af59a2e2c8c40bcc23bbff9e",
+      "download_status": "downloaded",
+      "assets": [
+        {
+          "url": "https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png",
+          "raw_path": "raw/assets/a4b3f3f16437a26f.png",
+          "bytes": 19843,
+          "sha256": "2b354050dac18de6eb4b3b0411390b4deaf7787f47800698619e61fafae18293"
+        },
+        {
+          "url": "https://github.com/fastapi/fastapi/actions/workflows/test.yml/badge.svg?event=push&branch=master",
+          "raw_path": "raw/assets/57c675532b1c2199.svg",
+          "bytes": 2270,
+          "sha256": "ce733292a922c08274cf5a2096f8fa4cf01023bfa51a36ef6beecaaef371a9d9"
+        },
+        {
+          "url": "https://coverage-badge.samuelcolvin.workers.dev/fastapi/fastapi.svg",
+          "raw_path": "raw/assets/899b4d5a356f2c3d.svg",
+          "bytes": 2038,
+          "sha256": "917f8a8c72a36a2c5494dcf5b94adc6154a4a0dc273e0abf1dbb9fb9fef8cb14"
+        },
+        {
+          "url": "https://img.shields.io/pypi/v/fastapi?color=%2334D058&label=pypi%20package",
+          "raw_path": "raw/assets/30ba564c563cda71.png",
+          "bytes": 1331,
+          "sha256": "4113c93f0fbc99d587db3d1697d58471070bdb1649f7db57fe0bc7dcaf384d9d"
+        },
+        {
+          "url": "https://img.shields.io/pypi/pyversions/fastapi.svg?color=%2334D058",
+          "raw_path": "raw/assets/edba15843e35fdcf.svg",
+          "bytes": 1460,
+          "sha256": "1b39228b983b3de3f4a7ced0af5f82db219f8db4bb0e3425dfd8bc8421b8bc73"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/sponsors/fastapicloud.png",
+          "raw_path": "raw/assets/090cab2101621910.png",
+          "bytes": 75933,
+          "sha256": "ff0e0b2d69402e8a605ef3b9783247da4ffdb0029195c17ca3375a6201cd009d"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/sponsors/blockbee.png",
+          "raw_path": "raw/assets/a9781e62727e55cb.png",
+          "bytes": 13006,
+          "sha256": "68a551cf3d0d3d1d5a621aa3a09c0f9783f8cc055386e6747953a167ad84b877"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/sponsors/propelauth.png",
+          "raw_path": "raw/assets/0f1d4849d089c1b7.png",
+          "bytes": 28140,
+          "sha256": "c53aa065e98df7bf27929f853da3232dbee752499f780dd511f139d413295db0"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/sponsors/coderabbit.png",
+          "raw_path": "raw/assets/a53dcf750ff92b09.png",
+          "bytes": 21167,
+          "sha256": "5fd0be2b503e749e1282229cfb3734cea56e0fb34e982bd05346cf363b9d2992"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/sponsors/subtotal.svg",
+          "raw_path": "raw/assets/d07e5b6a6b55205e.svg",
+          "bytes": 10276,
+          "sha256": "3ce9a9f8ecbe4c8d21a50bb21880da1886a5a19553689a33fdadd7b3e981afa3"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/sponsors/railway.png",
+          "raw_path": "raw/assets/7398270007dfa3b1.png",
+          "bytes": 26226,
+          "sha256": "c06c97dbc81bd37bbc1db85e3a611ffd766a871bbe0368a0718e99e0d764d862"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/sponsors/serpapi.png",
+          "raw_path": "raw/assets/d73b789b58687cf6.png",
+          "bytes": 10694,
+          "sha256": "ba7a6d67c52182ff57be3413b192988c351c36d7875322dab5d2641c7d196ca2"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/sponsors/greptile.png",
+          "raw_path": "raw/assets/cf6110aa41458512.png",
+          "bytes": 7381,
+          "sha256": "edb6f1ea051fde53f00000761ae27e33d6f22bd085fc387cbe98ec9e0294b772"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/sponsors/microauth.png",
+          "raw_path": "raw/assets/c7073d10072c058b.png",
+          "bytes": 9359,
+          "sha256": "e0859fc4282156ec480b524621366f86b1134ca00edf9566dffe31045a4e55dc"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/sponsors/databento.svg",
+          "raw_path": "raw/assets/e82316a631689575.svg",
+          "bytes": 122267,
+          "sha256": "a923bd4911fe5578c4645d6503713e140919cf28cee56c9c6719b49f8f07e668"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/sponsors/svix.svg",
+          "raw_path": "raw/assets/25b7aeedd7e2349c.svg",
+          "bytes": 22430,
+          "sha256": "a2e1d6eb051d13f671694f96c88753027edf7eda67d615f16850a0f522489f59"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/sponsors/dribia.png",
+          "raw_path": "raw/assets/bd93a420dbfeb063.png",
+          "bytes": 19211,
+          "sha256": "449fae5478cef14c1df11f2913a64e32dc0565b68d8411b398c8dae1df199539"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/sponsors/bairesdev.svg",
+          "raw_path": "raw/assets/acb3c3601ba2e024.svg",
+          "bytes": 3770,
+          "sha256": "09b9cf8c0f70a4689fb5d80501566edf0059a2e2a3941165e1ae4fa48611e83c"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/sponsors/tutorcruncher.png",
+          "raw_path": "raw/assets/3b11c2c1fa21b3c3.png",
+          "bytes": 8061,
+          "sha256": "67e1307ce72bcc209d1876d44c25f7952c3ab1ec90a6dc60a2c7df219f1d9694"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/sponsors/encore.png",
+          "raw_path": "raw/assets/a5eb7f2c8d8fb4e7.png",
+          "bytes": 6333,
+          "sha256": "fdeb654e010e41e2166349cc4e2cd87733198f82a15ccbe4c09eedb6ca828532"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/logos/microsoft.svg",
+          "raw_path": "raw/assets/0798d8b9e8dd8f77.svg",
+          "bytes": 3163,
+          "sha256": "34ec1619e4a62515d67c5240fe5762ef5a1838fe67d2fb1fb0b001099cebf1db"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/logos/uber.svg",
+          "raw_path": "raw/assets/378528263dc5996d.svg",
+          "bytes": 3582,
+          "sha256": "be2e4d01f03207b8da8ff584516e52c2c861e1070487caab185dabcf55d6b156"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/logos/netflix.svg",
+          "raw_path": "raw/assets/e5e9f6ac231881fa.svg",
+          "bytes": 1119,
+          "sha256": "89c2ef92331e775971be591cca2049bbfe7bcce9a7c0afec45e3e1eb1d6dbde6"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/logos/cisco.svg",
+          "raw_path": "raw/assets/d3f78e29a2b36b52.svg",
+          "bytes": 2396,
+          "sha256": "5b4035237c926ae0f67b70853f708edaa9616aabeb57610538986a9e351a2581"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/fastapi-documentary.jpg",
+          "raw_path": "raw/assets/58afff242bf6b515.jpg",
+          "bytes": 191709,
+          "sha256": "24765a4fa1f5593706ec71b6e57d12626fc53b3df47448c85e94921ee2f0e26c"
+        },
+        {
+          "url": "https://typer.tiangolo.com/img/logo-margin/logo-margin-vector.svg",
+          "raw_path": "raw/assets/d723b6b3366b698c.svg",
+          "bytes": 6185,
+          "sha256": "a1f81d1a64aef0401804eb9178c53732339a15e605e630c5e23516d917fa1294"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/index/index-01-swagger-ui-simple.png",
+          "raw_path": "raw/assets/340ef5a745626bb2.png",
+          "bytes": 74158,
+          "sha256": "a1cb761f3f2073ecbf50d9c627b8b7c6dc59e25b66bcfb29c14026635edce550"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/index/index-02-redoc-simple.png",
+          "raw_path": "raw/assets/fb9de86a37409174.png",
+          "bytes": 68468,
+          "sha256": "3c721c4c0f98034f8568cd7c0b4e92d4cd2fa30a021c88287a9de47642e0608e"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/index/index-03-swagger-02.png",
+          "raw_path": "raw/assets/2110c64b456da449.png",
+          "bytes": 75099,
+          "sha256": "0d5a1fe5fd64e54b741efaf3f030a75499af556569414b5b148ad539a21d1fdd"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/index/index-04-swagger-03.png",
+          "raw_path": "raw/assets/e0c1279a36f72348.png",
+          "bytes": 67572,
+          "sha256": "3a02a6e56c6f4ae41bdf8113f54f467c54caa155dc934a01d556499a1c6a1619"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/index/index-05-swagger-04.png",
+          "raw_path": "raw/assets/8ed53736415f397a.png",
+          "bytes": 71441,
+          "sha256": "8506a5f636726ca544a579b7aaa858af79226c8b6602e3a108a0a0fda4fd2275"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/index/index-06-redoc-02.png",
+          "raw_path": "raw/assets/c083ee3b35bb9b7c.png",
+          "bytes": 78842,
+          "sha256": "6b84abd88727302c42875f80458eab463d0e91821efa422175e6796dcf5cd44c"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/img/vscode-completion.png",
+          "raw_path": "raw/assets/fa3f5c594f9c7c57.png",
+          "bytes": 62417,
+          "sha256": "6b7ea1939367e094971bd5d2bd504754922d5668a2c9071bb88605ff45a52a0d"
+        }
+      ],
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/references/fastapi.md"
+    },
+    {
+      "id": "references/flask",
+      "title": "Flask",
+      "url": "https://flask.palletsprojects.com",
+      "category": "references",
+      "retrieved_at": "2026-11-13T16:41:19.411470+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://flask.palletsprojects.com/en/stable/",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/references/flask.html",
+      "bytes": 39704,
+      "sha256": "e76376f8b4b5a3bac1523fbc8da903b6d9be603595f5903c6d36d88f95961d03",
+      "download_status": "downloaded",
+      "assets": [
+        {
+          "url": "https://flask.palletsprojects.com/en/stable/_images/flask-name.svg",
+          "raw_path": "raw/assets/7a1cb054bff199d7.svg",
+          "bytes": 5311,
+          "sha256": "d04bb08aa90285c8702555a7b3c352bb59defb1f5e736598ea7ad9df4bc06024"
+        }
+      ],
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/references/flask.md"
+    },
+    {
+      "id": "references/openrouter",
+      "title": "OpenRouter",
+      "url": "https://openrouter.ai/",
+      "category": "references",
+      "retrieved_at": "2026-11-13T16:41:20.940114+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://openrouter.ai/",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/references/openrouter.html",
+      "bytes": 405809,
+      "sha256": "4b9566e1ea1636fa9d0d277bdd1a88483fb457adec70a626a344ee1b86383a0e",
+      "download_status": "downloaded",
+      "assets": [
+        {
+          "url": "https://openrouter.ai/images/home/customers/loveable-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/d7f5bf4fc6185680.svg",
+          "bytes": 8780,
+          "sha256": "baff9e769a7f6e47307aa5028ad399c91b285f251bfed943928f791703dc3cf8"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/replit-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/91385ae5db545884.svg",
+          "bytes": 3116,
+          "sha256": "96951c82efc2649b409cf4de682db7a59990a8533098aff2ce74b4535aafa6c3"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/amplitude-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/976d6790eebf8e1c.svg",
+          "bytes": 6579,
+          "sha256": "79859a7b47d2f5741ffc7b1d0e55f73038cea1036694f22b02db7cf869f1b7cb"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/nvidia-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/1c02006106ed7594.svg",
+          "bytes": 2419,
+          "sha256": "8e72a32d37df8d68aa47ac609ceac7c393a27f50ea40f1fa94e115e579993305"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/zoom-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/a0af26f2b2251a5e.svg",
+          "bytes": 1512,
+          "sha256": "539dea1afd3f457cb3f89a40bfcdf463597a68c57aa2c0bde72d774adddd8c40"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/wtw-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/df65cb4f08fd63cb.svg",
+          "bytes": 11078,
+          "sha256": "bd8020969040b49ee2850bbc7831889df8a8edb40d7cb9f3ada9a91154594f03"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/nist-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/7b0c30fa4e8bb04b.svg",
+          "bytes": 1315,
+          "sha256": "a0c3526cc0d75c06a620753ac05484a95161ac175277cdcc28746293ebb5cf50"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/amd-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/cc0740168b2a3406.svg",
+          "bytes": 840,
+          "sha256": "665416b973eeda7f75f4b3c2f4cbcd3f74b1f88b9a618321238466acff952cd0"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/loveable-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/d7f5bf4fc6185680.svg",
+          "bytes": 8780,
+          "sha256": "baff9e769a7f6e47307aa5028ad399c91b285f251bfed943928f791703dc3cf8"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/replit-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/91385ae5db545884.svg",
+          "bytes": 3116,
+          "sha256": "96951c82efc2649b409cf4de682db7a59990a8533098aff2ce74b4535aafa6c3"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/amplitude-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/976d6790eebf8e1c.svg",
+          "bytes": 6579,
+          "sha256": "79859a7b47d2f5741ffc7b1d0e55f73038cea1036694f22b02db7cf869f1b7cb"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/nvidia-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/1c02006106ed7594.svg",
+          "bytes": 2419,
+          "sha256": "8e72a32d37df8d68aa47ac609ceac7c393a27f50ea40f1fa94e115e579993305"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/zoom-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/a0af26f2b2251a5e.svg",
+          "bytes": 1512,
+          "sha256": "539dea1afd3f457cb3f89a40bfcdf463597a68c57aa2c0bde72d774adddd8c40"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/wtw-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/df65cb4f08fd63cb.svg",
+          "bytes": 11078,
+          "sha256": "bd8020969040b49ee2850bbc7831889df8a8edb40d7cb9f3ada9a91154594f03"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/nist-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/7b0c30fa4e8bb04b.svg",
+          "bytes": 1315,
+          "sha256": "a0c3526cc0d75c06a620753ac05484a95161ac175277cdcc28746293ebb5cf50"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/amd-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/cc0740168b2a3406.svg",
+          "bytes": 840,
+          "sha256": "665416b973eeda7f75f4b3c2f4cbcd3f74b1f88b9a618321238466acff952cd0"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/loveable-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/d7f5bf4fc6185680.svg",
+          "bytes": 8780,
+          "sha256": "baff9e769a7f6e47307aa5028ad399c91b285f251bfed943928f791703dc3cf8"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/loveable-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/d7f5bf4fc6185680.svg",
+          "bytes": 8780,
+          "sha256": "baff9e769a7f6e47307aa5028ad399c91b285f251bfed943928f791703dc3cf8"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/loveable-dark.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/1822942953687265.svg",
+          "bytes": 8768,
+          "sha256": "17409920ddd48f7585ce07bc496a79672442cd2d0c0f2fc8d8f5a73544ce02ae"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/replit-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/91385ae5db545884.svg",
+          "bytes": 3116,
+          "sha256": "96951c82efc2649b409cf4de682db7a59990a8533098aff2ce74b4535aafa6c3"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/replit-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/91385ae5db545884.svg",
+          "bytes": 3116,
+          "sha256": "96951c82efc2649b409cf4de682db7a59990a8533098aff2ce74b4535aafa6c3"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/replit-dark.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/3b8b3f28ce02b21f.svg",
+          "bytes": 3116,
+          "sha256": "4d87303a6101e37b07a446ecc6a866760e269616ec03637e7a7c50e386f125e4"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/amplitude-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/976d6790eebf8e1c.svg",
+          "bytes": 6579,
+          "sha256": "79859a7b47d2f5741ffc7b1d0e55f73038cea1036694f22b02db7cf869f1b7cb"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/amplitude-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/976d6790eebf8e1c.svg",
+          "bytes": 6579,
+          "sha256": "79859a7b47d2f5741ffc7b1d0e55f73038cea1036694f22b02db7cf869f1b7cb"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/amplitude-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/976d6790eebf8e1c.svg",
+          "bytes": 6579,
+          "sha256": "79859a7b47d2f5741ffc7b1d0e55f73038cea1036694f22b02db7cf869f1b7cb"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/nvidia-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/1c02006106ed7594.svg",
+          "bytes": 2419,
+          "sha256": "8e72a32d37df8d68aa47ac609ceac7c393a27f50ea40f1fa94e115e579993305"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/nvidia-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/1c02006106ed7594.svg",
+          "bytes": 2419,
+          "sha256": "8e72a32d37df8d68aa47ac609ceac7c393a27f50ea40f1fa94e115e579993305"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/nvidia-dark.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/65b35bb369b8a639.svg",
+          "bytes": 2464,
+          "sha256": "276c7ad780255714f0f16305f48cc29123e2bdb93476c7ee6a23ea0bf35a698d"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/zoom-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/a0af26f2b2251a5e.svg",
+          "bytes": 1512,
+          "sha256": "539dea1afd3f457cb3f89a40bfcdf463597a68c57aa2c0bde72d774adddd8c40"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/zoom-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/a0af26f2b2251a5e.svg",
+          "bytes": 1512,
+          "sha256": "539dea1afd3f457cb3f89a40bfcdf463597a68c57aa2c0bde72d774adddd8c40"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/zoom-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/a0af26f2b2251a5e.svg",
+          "bytes": 1512,
+          "sha256": "539dea1afd3f457cb3f89a40bfcdf463597a68c57aa2c0bde72d774adddd8c40"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/wtw-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/df65cb4f08fd63cb.svg",
+          "bytes": 11078,
+          "sha256": "bd8020969040b49ee2850bbc7831889df8a8edb40d7cb9f3ada9a91154594f03"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/wtw-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/df65cb4f08fd63cb.svg",
+          "bytes": 11078,
+          "sha256": "bd8020969040b49ee2850bbc7831889df8a8edb40d7cb9f3ada9a91154594f03"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/wtw-dark.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/7d3e82eac3536c81.svg",
+          "bytes": 11076,
+          "sha256": "e9a1b475bf12f97f25d19cd6f010d0164d4fbfdfeab3524acc985c7655d9afcb"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/nist-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/7b0c30fa4e8bb04b.svg",
+          "bytes": 1315,
+          "sha256": "a0c3526cc0d75c06a620753ac05484a95161ac175277cdcc28746293ebb5cf50"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/nist-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/7b0c30fa4e8bb04b.svg",
+          "bytes": 1315,
+          "sha256": "a0c3526cc0d75c06a620753ac05484a95161ac175277cdcc28746293ebb5cf50"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/nist-dark.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/76977254d87d4239.svg",
+          "bytes": 1275,
+          "sha256": "ac9673895514a543a7924201e1c414ac603ea9e467d632d9d8f546a9d0d8d388"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/amd-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/cc0740168b2a3406.svg",
+          "bytes": 840,
+          "sha256": "665416b973eeda7f75f4b3c2f4cbcd3f74b1f88b9a618321238466acff952cd0"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/amd-light.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/cc0740168b2a3406.svg",
+          "bytes": 840,
+          "sha256": "665416b973eeda7f75f4b3c2f4cbcd3f74b1f88b9a618321238466acff952cd0"
+        },
+        {
+          "url": "https://openrouter.ai/images/home/customers/amd-dark.svg?dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/1979b9cc3163e23d.svg",
+          "bytes": 957,
+          "sha256": "caa8f821ad535afac26f48a37c35d0ee56e807d0b55d74f6893ae96508980707"
+        },
+        {
+          "url": "https://openrouter.ai/images/icons/DeepSeek.png",
+          "raw_path": "raw/assets/bf4ed54b9beac123.png",
+          "bytes": 25338,
+          "sha256": "296580afd69e60c73a234ed4ff5aa8ef37173ba7bbfa47ddf52d978d0ba69dfe"
+        },
+        {
+          "url": "https://openrouter.ai/images/icons/Tencent.png",
+          "raw_path": "raw/assets/b69bc64fb0eaf387.png",
+          "bytes": 62176,
+          "sha256": "8aeaff50aaf7491e73c951b81d35c586274b6b6a7e99b73d56ffee2f9f56b367"
+        },
+        {
+          "url": "https://openrouter.ai/images/icons/DeepSeek.png",
+          "raw_path": "raw/assets/bf4ed54b9beac123.png",
+          "bytes": 25338,
+          "sha256": "296580afd69e60c73a234ed4ff5aa8ef37173ba7bbfa47ddf52d978d0ba69dfe"
+        },
+        {
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://z.ai/&size=256",
+          "raw_path": "raw/assets/4bd702eccae34c2e.png",
+          "bytes": 2351,
+          "sha256": "2be82769b76c8cc2c89e9a470353a9ecdcaddf789e82bc75c7ec8d96f099d137"
+        },
+        {
+          "url": "https://openrouter.ai/images/icons/OpenAI.svg",
+          "raw_path": "raw/assets/b15e3ab1ed85883a.svg",
+          "bytes": 1709,
+          "sha256": "6ab2f60b45feb247fda6313f4ec79761f0946188eca7de91030d59bade95b290"
+        },
+        {
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://platform.stepfun.ai/&size=256",
+          "raw_path": "raw/assets/ed6dad4ba934705b.png",
+          "bytes": 1272,
+          "sha256": "365251d54ca380f69ac2317c3c0bb3f5898b6afb4eaff2d09d263f64de2b7261"
+        },
+        {
+          "url": "https://openrouter.ai/images/icons/Anthropic.svg",
+          "raw_path": "raw/assets/3be6dfc276674288.svg",
+          "bytes": 584,
+          "sha256": "a7dc6e7705f702a1c8b813e227153e341c5be2990333fa9df1bf77a00a9e0429"
+        },
+        {
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://x.ai/&size=256",
+          "raw_path": "raw/assets/7c50600233369810.png",
+          "bytes": 1885,
+          "sha256": "b81cce06509844d6013c8c7d784f50f904b64448bda5155eb31025a618388871"
+        },
+        {
+          "url": "https://openrouter.ai/images/icons/GoogleGemini.svg",
+          "raw_path": "raw/assets/2e9326fe7ebd9bdf.svg",
+          "bytes": 623,
+          "sha256": "968da8483e45257bdfd5218e7faa6c5b75ec1153bc202a45e45ccf6c7b9846c9"
+        },
+        {
+          "url": "https://openrouter.ai/images/icons/DeepSeek.png",
+          "raw_path": "raw/assets/bf4ed54b9beac123.png",
+          "bytes": 25338,
+          "sha256": "296580afd69e60c73a234ed4ff5aa8ef37173ba7bbfa47ddf52d978d0ba69dfe"
+        },
+        {
+          "url": "https://openrouter.ai/images/icons/Anthropic.svg",
+          "raw_path": "raw/assets/3be6dfc276674288.svg",
+          "bytes": 584,
+          "sha256": "a7dc6e7705f702a1c8b813e227153e341c5be2990333fa9df1bf77a00a9e0429"
+        },
+        {
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://nova.amazon.com/&size=256",
+          "raw_path": "raw/assets/01a2cd7c76133801.png",
+          "bytes": 16130,
+          "sha256": "5b2f7f9c8ed4931ca8f138cbecc44fceb470d1d9a5b6ccdadb88bf288b888d7d"
+        },
+        {
+          "url": "https://openrouter.ai/images/icons/GoogleGemini.svg",
+          "raw_path": "raw/assets/2e9326fe7ebd9bdf.svg",
+          "bytes": 623,
+          "sha256": "968da8483e45257bdfd5218e7faa6c5b75ec1153bc202a45e45ccf6c7b9846c9"
+        },
+        {
+          "url": "https://openrouter.ai/images/icons/Anthropic.svg",
+          "raw_path": "raw/assets/3be6dfc276674288.svg",
+          "bytes": 584,
+          "sha256": "a7dc6e7705f702a1c8b813e227153e341c5be2990333fa9df1bf77a00a9e0429"
+        },
+        {
+          "url": "https://openrouter.ai/images/icons/OpenAI.svg",
+          "raw_path": "raw/assets/b15e3ab1ed85883a.svg",
+          "bytes": 1709,
+          "sha256": "6ab2f60b45feb247fda6313f4ec79761f0946188eca7de91030d59bade95b290"
+        },
+        {
+          "url": "https://openrouter.ai/images/icons/GoogleVertex.svg",
+          "raw_path": "raw/assets/ec147cdc76460e85.svg",
+          "bytes": 1989,
+          "sha256": "d6a643fad5de9e513bba05af22b685572e5e06b92c3e5495b7ecf56666ff79c0"
+        },
+        {
+          "url": "https://openrouter.ai/images/icons/Bedrock.svg",
+          "raw_path": "raw/assets/682566ba66dfec0d.svg",
+          "bytes": 1133,
+          "sha256": "06eedc9924b9d5442a697e304a8b61069a095a15f58926d49119ae5a3b5c6bdd"
+        },
+        {
+          "url": "https://openrouter.ai/images/icons/Azure.svg",
+          "raw_path": "raw/assets/822354aa4e1ed861.svg",
+          "bytes": 1682,
+          "sha256": "942a851dff182edca939226bbac4d2de98c36806db466ef008699cfce22478c1"
+        },
+        {
+          "url": "https://openrouter.ai/images/icons/Mistral.png",
+          "raw_path": "raw/assets/f5df01d227f119db.png",
+          "bytes": 869,
+          "sha256": "d2fbfb8cf98f2a205161561827154bff0207fea6bf66cb08755dcd0cee6f6e69"
+        },
+        {
+          "url": "https://openrouter.ai/images/icons/DeepSeek.png",
+          "raw_path": "raw/assets/bf4ed54b9beac123.png",
+          "bytes": 25338,
+          "sha256": "296580afd69e60c73a234ed4ff5aa8ef37173ba7bbfa47ddf52d978d0ba69dfe"
+        },
+        {
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://groq.com/&size=256",
+          "raw_path": "raw/assets/5a420dbbbf65ba26.png",
+          "bytes": 5833,
+          "sha256": "64bf4546c6ed7bbcfea03a0abf9cc94d8d34df851eeb6bd3e160ba1d5639759f"
+        },
+        {
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.together.ai/&size=256",
+          "raw_path": "raw/assets/4eab2c2b9f4b02e7.png",
+          "bytes": 1920,
+          "sha256": "58a449328b22bcf2b61493d999172a096b0e66707a2e0711e13decc6f8042657"
+        },
+        {
+          "url": "https://openrouter.ai/images/icons/Fireworks.png",
+          "raw_path": "raw/assets/91e21338a14bba32.png",
+          "bytes": 6809,
+          "sha256": "881b82430158cc7ce6fa8fd2a9d46d579268eff5c16a59b0e547f8b63824cfd6"
+        },
+        {
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.cerebras.ai/&size=256",
+          "raw_path": "raw/assets/83462870609c2a3f.png",
+          "bytes": 5743,
+          "sha256": "f7dbf027551f63bd42ad9d3e3b7e85197974d8e09271481ef0aa98aa887e2944"
+        },
+        {
+          "url": "https://openrouter.ai/images/icons/cloudflare.png",
+          "raw_path": "raw/assets/cde11e0f3ceb5df7.png",
+          "bytes": 4971,
+          "sha256": "90831addc202817942f80408855c028d89df77bd2699fa163fcc4bb61d490eb3"
+        },
+        {
+          "url": "https://openrouter.ai/images/icons/DeepInfra.webp",
+          "raw_path": "raw/assets/f67f7d9db23a6bc2.webp",
+          "bytes": 21322,
+          "sha256": "81dbf9061f3d2565f10e9900953ae4ff309bfaa271ad112101663cfd2b14a205"
+        },
+        {
+          "url": "https://openrouter.ai/_next/image?url=%2Fimages%2Fcards%2Ffeatured-apps%2Freplit-logo.png&w=3840&q=75&dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/92b07352d91b78f0.png",
+          "bytes": 7061,
+          "sha256": "ade1a9878d31c0ca31467d5c6390b79360d9b6d197ef78d38d4c7bc879218b62"
+        },
+        {
+          "url": "https://openrouter.ai/_next/image?url=%2Fimages%2Fhome%2Fproviders%2Freplit.png&w=96&q=75&dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/77687e2ce0364263.png",
+          "bytes": 338,
+          "sha256": "f0574232935d2a3d541c5fafec5b1bbb268143cea2fd7321991f9a4c3a5f1d59"
+        },
+        {
+          "url": "https://openrouter.ai/_next/image?url=%2Fimages%2Fcards%2Ffeatured-apps%2Fhermes.png&w=3840&q=75&dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/f54b9e059692903b.png",
+          "bytes": 11383,
+          "sha256": "a4899b789da26ab9f7fb7e9e97500bc4834bc68698a28c991863c5d1cbad7699"
+        },
+        {
+          "url": "https://openrouter.ai/_next/image?url=%2Fimages%2Fhome%2Fproviders%2Fhermes.png&w=96&q=75&dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/86876ffdece9ccca.png",
+          "bytes": 2935,
+          "sha256": "0b3c3253a6fc5ff4760be844ea40f11588386411d2ff340354bd7859fea28f76"
+        },
+        {
+          "url": "https://openrouter.ai/_next/image?url=%2Fimages%2Fcards%2Ffeatured-apps%2Fcline.png&w=3840&q=75&dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/c15f84fd74c6f8b1.png",
+          "bytes": 14001,
+          "sha256": "0cea4193f1e2c379a057d735e32f565c46f6ad78b24a51d4f8426547e59235b0"
+        },
+        {
+          "url": "https://openrouter.ai/_next/image?url=%2Fimages%2Fhome%2Fproviders%2Fcline.png&w=96&q=75&dpl=dpl_4a9Vcd3aAaBraMcBvgUoMFsXa8Lj",
+          "raw_path": "raw/assets/eff6280a87a34616.png",
+          "bytes": 591,
+          "sha256": "dca1e816fe321d2820fbedb549f37cebf588bab1b32c32923c170e33cbac2800"
+        }
+      ],
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/references/openrouter.md"
+    },
+    {
+      "id": "activities/openrouter-example",
+      "title": "Course code: openrouter_example.py",
+      "url": "https://designing-agents.github.io/assets/openrouter_example.py",
+      "category": "activities",
+      "retrieved_at": "2026-11-13T16:41:25.375302+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/assets/openrouter_example.py",
+      "content_type": "application/octet-stream",
+      "raw_path": "raw/activities/openrouter-example.py",
+      "bytes": 1603,
+      "sha256": "63a6ef1c49b04f2596e7e4df643ddb55a2f6e7843e95cdcc8036656900612109",
+      "download_status": "downloaded",
+      "conversion_method": "source-code-fence",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/activities/openrouter-example.md"
+    },
+    {
+      "id": "assignments/hw1/HW1/part2_tokenizing-py",
+      "title": "hw1: HW1/part2_tokenizing.py",
+      "url": "https://designing-agents.github.io/assets/HW1.zip#archive-member=HW1/part2_tokenizing.py",
+      "container_url": "https://designing-agents.github.io/assets/HW1.zip",
+      "archive_member": "HW1/part2_tokenizing.py",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:01.381844+00:00",
+      "raw_path": "raw/assignments/hw1/HW1/part2_tokenizing.py",
+      "sha256": "acaf0020c0c62e7a957c53681dd833bcda05ef94a4bcd141f0c3f8a6762e97b2",
+      "bytes": 9227,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/hw1/HW1/part2_tokenizing-py.md"
+    },
+    {
+      "id": "assignments/hw1/HW1/short_answer_Qs-md",
+      "title": "hw1: HW1/short_answer_Qs.md",
+      "url": "https://designing-agents.github.io/assets/HW1.zip#archive-member=HW1/short_answer_Qs.md",
+      "container_url": "https://designing-agents.github.io/assets/HW1.zip",
+      "archive_member": "HW1/short_answer_Qs.md",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:01.381844+00:00",
+      "raw_path": "raw/assignments/hw1/HW1/short_answer_Qs.md",
+      "sha256": "dab6d789b3021d9c6bf97f9939ad1b4d67b22e9707f460b1cbf79ea765117668",
+      "bytes": 1217,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-markdown",
+      "markdown_path": "markdown/assignments/hw1/HW1/short_answer_Qs-md.md"
+    },
+    {
+      "id": "assignments/hw1/HW1/part3_classifier-ipynb",
+      "title": "hw1: HW1/part3_classifier.ipynb",
+      "url": "https://designing-agents.github.io/assets/HW1.zip#archive-member=HW1/part3_classifier.ipynb",
+      "container_url": "https://designing-agents.github.io/assets/HW1.zip",
+      "archive_member": "HW1/part3_classifier.ipynb",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:01.381844+00:00",
+      "raw_path": "raw/assignments/hw1/HW1/part3_classifier.ipynb",
+      "sha256": "930453eda3657394c86586ad9f41f9ec8afefb019faf35aac7018d1619f585b7",
+      "bytes": 9433,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "notebook-cells-and-text-outputs",
+      "markdown_path": "markdown/assignments/hw1/HW1/part3_classifier-ipynb.md"
+    },
+    {
+      "id": "assignments/hw1/HW1/part1_data_processing-py",
+      "title": "hw1: HW1/part1_data_processing.py",
+      "url": "https://designing-agents.github.io/assets/HW1.zip#archive-member=HW1/part1_data_processing.py",
+      "container_url": "https://designing-agents.github.io/assets/HW1.zip",
+      "archive_member": "HW1/part1_data_processing.py",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:01.381844+00:00",
+      "raw_path": "raw/assignments/hw1/HW1/part1_data_processing.py",
+      "sha256": "b988b5a84154c863aa30c915c478c3a37e78d578c05ffa0f1c2a30aed99b6023",
+      "bytes": 7846,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/hw1/HW1/part1_data_processing-py.md"
+    },
+    {
+      "id": "assignments/hw1/HW1/data/test_cases-json",
+      "title": "hw1: HW1/data/test_cases.json",
+      "url": "https://designing-agents.github.io/assets/HW1.zip#archive-member=HW1/data/test_cases.json",
+      "container_url": "https://designing-agents.github.io/assets/HW1.zip",
+      "archive_member": "HW1/data/test_cases.json",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:01.381844+00:00",
+      "raw_path": "raw/assignments/hw1/HW1/data/test_cases.json",
+      "sha256": "ca781088a6b772e9d79148d8869d0a93b52b84e70905dff6e81db9cc29eb52e3",
+      "bytes": 15503,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/hw1/HW1/data/test_cases-json.md"
+    },
+    {
+      "id": "assignments/hw1/HW1/data/unprocessed_data-jsonl",
+      "title": "hw1: HW1/data/unprocessed_data.jsonl",
+      "url": "https://designing-agents.github.io/assets/HW1.zip#archive-member=HW1/data/unprocessed_data.jsonl",
+      "container_url": "https://designing-agents.github.io/assets/HW1.zip",
+      "archive_member": "HW1/data/unprocessed_data.jsonl",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:01.381844+00:00",
+      "raw_path": "raw/assignments/hw1/HW1/data/unprocessed_data.jsonl",
+      "sha256": "a7db73fcb137e608fcead0f6806e7ac7c94ab9f562c9a748f1549f53e183af09",
+      "bytes": 308651,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/hw1/HW1/data/unprocessed_data-jsonl.md"
+    },
+    {
+      "id": "assignments/archive-hw1",
+      "title": "Course code: HW1.zip",
+      "url": "https://designing-agents.github.io/assets/HW1.zip",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:01.381844+00:00",
+      "notes": [
+        "Full archive preserved. macOS resource forks and .DS_Store metadata remain only in the original ZIP."
+      ],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/assets/HW1.zip",
+      "content_type": "application/x-zip-compressed",
+      "raw_path": "raw/activities/hw1.zip",
+      "bytes": 106987,
+      "sha256": "4bc5b5b374fb2b339439fe3085211c2f80f260890aabb39beb4188c5f3e5d0ec",
+      "download_status": "downloaded",
+      "conversion_method": "course-archive-with-text-files",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/assignments/archive-hw1.md",
+      "file_count": 6,
+      "skipped_archive_metadata": [
+        "__MACOSX/._HW1",
+        "__MACOSX/HW1/._part2_tokenizing.py",
+        "HW1/.DS_Store",
+        "__MACOSX/HW1/._.DS_Store",
+        "__MACOSX/HW1/._short_answer_Qs.md",
+        "__MACOSX/HW1/._part3_classifier.ipynb",
+        "__MACOSX/HW1/._data",
+        "__MACOSX/HW1/._part1_data_processing.py",
+        "__MACOSX/HW1/data/._test_cases.json",
+        "__MACOSX/HW1/data/._unprocessed_data.jsonl"
+      ]
+    },
+    {
+      "id": "assignments/hw2/HW2/part1_decoding-py",
+      "title": "hw2: HW2/part1_decoding.py",
+      "url": "https://designing-agents.github.io/assets/HW2.zip#archive-member=HW2/part1_decoding.py",
+      "container_url": "https://designing-agents.github.io/assets/HW2.zip",
+      "archive_member": "HW2/part1_decoding.py",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:01.807113+00:00",
+      "raw_path": "raw/assignments/hw2/HW2/part1_decoding.py",
+      "sha256": "98cd39d5cc3328d8a4e719022e64108cc326d8fa441290af4e2fec2177ca8560",
+      "bytes": 6977,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/hw2/HW2/part1_decoding-py.md"
+    },
+    {
+      "id": "assignments/hw2/HW2/part2_prompting-py",
+      "title": "hw2: HW2/part2_prompting.py",
+      "url": "https://designing-agents.github.io/assets/HW2.zip#archive-member=HW2/part2_prompting.py",
+      "container_url": "https://designing-agents.github.io/assets/HW2.zip",
+      "archive_member": "HW2/part2_prompting.py",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:01.807113+00:00",
+      "raw_path": "raw/assignments/hw2/HW2/part2_prompting.py",
+      "sha256": "88c3287a334dee7509729f4fd4c8cc9cc399d56b45d1481ba9bc013487e64b34",
+      "bytes": 9248,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/hw2/HW2/part2_prompting-py.md"
+    },
+    {
+      "id": "assignments/hw2/HW2/short_answer_Qs-md",
+      "title": "hw2: HW2/short_answer_Qs.md",
+      "url": "https://designing-agents.github.io/assets/HW2.zip#archive-member=HW2/short_answer_Qs.md",
+      "container_url": "https://designing-agents.github.io/assets/HW2.zip",
+      "archive_member": "HW2/short_answer_Qs.md",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:01.807113+00:00",
+      "raw_path": "raw/assignments/hw2/HW2/short_answer_Qs.md",
+      "sha256": "ab2a1ee3c65a67681bbf8e2fc3f58cecffdf78e54bdc01bb4fb2c04a0d9a0558",
+      "bytes": 1490,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-markdown",
+      "markdown_path": "markdown/assignments/hw2/HW2/short_answer_Qs-md.md"
+    },
+    {
+      "id": "assignments/hw2/HW2/part3_retrieval-py",
+      "title": "hw2: HW2/part3_retrieval.py",
+      "url": "https://designing-agents.github.io/assets/HW2.zip#archive-member=HW2/part3_retrieval.py",
+      "container_url": "https://designing-agents.github.io/assets/HW2.zip",
+      "archive_member": "HW2/part3_retrieval.py",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:01.807113+00:00",
+      "raw_path": "raw/assignments/hw2/HW2/part3_retrieval.py",
+      "sha256": "c2e320f2a914ec911c95d843967d7dace263b3a472991826c5ec578fb40dd808",
+      "bytes": 8498,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/hw2/HW2/part3_retrieval-py.md"
+    },
+    {
+      "id": "assignments/hw2/HW2/part4_memory-py",
+      "title": "hw2: HW2/part4_memory.py",
+      "url": "https://designing-agents.github.io/assets/HW2.zip#archive-member=HW2/part4_memory.py",
+      "container_url": "https://designing-agents.github.io/assets/HW2.zip",
+      "archive_member": "HW2/part4_memory.py",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:01.807113+00:00",
+      "raw_path": "raw/assignments/hw2/HW2/part4_memory.py",
+      "sha256": "547695330624927e927f6e3da7d1905a7d2f9e92157e69e6d0e8d42b6c07217b",
+      "bytes": 7423,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/hw2/HW2/part4_memory-py.md"
+    },
+    {
+      "id": "assignments/hw2/HW2/data/tickets_labeled-jsonl",
+      "title": "hw2: HW2/data/tickets_labeled.jsonl",
+      "url": "https://designing-agents.github.io/assets/HW2.zip#archive-member=HW2/data/tickets_labeled.jsonl",
+      "container_url": "https://designing-agents.github.io/assets/HW2.zip",
+      "archive_member": "HW2/data/tickets_labeled.jsonl",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:01.807113+00:00",
+      "raw_path": "raw/assignments/hw2/HW2/data/tickets_labeled.jsonl",
+      "sha256": "9c4f4c8a705e0d871c478341f7b8e3178c9707ab5ef592d58023d840dbe80e7a",
+      "bytes": 12993,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/hw2/HW2/data/tickets_labeled-jsonl.md"
+    },
+    {
+      "id": "assignments/hw2/HW2/data/conversation-json",
+      "title": "hw2: HW2/data/conversation.json",
+      "url": "https://designing-agents.github.io/assets/HW2.zip#archive-member=HW2/data/conversation.json",
+      "container_url": "https://designing-agents.github.io/assets/HW2.zip",
+      "archive_member": "HW2/data/conversation.json",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:01.807113+00:00",
+      "raw_path": "raw/assignments/hw2/HW2/data/conversation.json",
+      "sha256": "6dd8d42c49d8b1bfac7807bef49026ac5823f4764e18e55d7fecdff7b4d204f6",
+      "bytes": 2979,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/hw2/HW2/data/conversation-json.md"
+    },
+    {
+      "id": "assignments/hw2/HW2/data/help_articles-jsonl",
+      "title": "hw2: HW2/data/help_articles.jsonl",
+      "url": "https://designing-agents.github.io/assets/HW2.zip#archive-member=HW2/data/help_articles.jsonl",
+      "container_url": "https://designing-agents.github.io/assets/HW2.zip",
+      "archive_member": "HW2/data/help_articles.jsonl",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:01.807113+00:00",
+      "raw_path": "raw/assignments/hw2/HW2/data/help_articles.jsonl",
+      "sha256": "922aa3560024b91b5ded12bc8446470777b67e27077ec33a30c4901dffa464e0",
+      "bytes": 22166,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/hw2/HW2/data/help_articles-jsonl.md"
+    },
+    {
+      "id": "assignments/hw2/HW2/data/retrieval_queries-jsonl",
+      "title": "hw2: HW2/data/retrieval_queries.jsonl",
+      "url": "https://designing-agents.github.io/assets/HW2.zip#archive-member=HW2/data/retrieval_queries.jsonl",
+      "container_url": "https://designing-agents.github.io/assets/HW2.zip",
+      "archive_member": "HW2/data/retrieval_queries.jsonl",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:01.807113+00:00",
+      "raw_path": "raw/assignments/hw2/HW2/data/retrieval_queries.jsonl",
+      "sha256": "4efc7382bfc4710befc241a5fc99864088a7b4dd472119f0be56cf1a6ecf3b81",
+      "bytes": 3544,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/hw2/HW2/data/retrieval_queries-jsonl.md"
+    },
+    {
+      "id": "assignments/archive-hw2",
+      "title": "Course code: HW2.zip",
+      "url": "https://designing-agents.github.io/assets/HW2.zip",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:01.807113+00:00",
+      "notes": [
+        "Full archive preserved. macOS resource forks and .DS_Store metadata remain only in the original ZIP."
+      ],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/assets/HW2.zip",
+      "content_type": "application/x-zip-compressed",
+      "raw_path": "raw/activities/hw2.zip",
+      "bytes": 32974,
+      "sha256": "cc8cfcb1759d0b1eac88ce60631a0295b91f04657da3f0eb322a6721f7250e4b",
+      "download_status": "downloaded",
+      "conversion_method": "course-archive-with-text-files",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/assignments/archive-hw2.md",
+      "file_count": 9,
+      "skipped_archive_metadata": [
+        "__MACOSX/._HW2",
+        "HW2/.DS_Store",
+        "__MACOSX/HW2/._.DS_Store",
+        "__MACOSX/HW2/._part1_decoding.py",
+        "__MACOSX/HW2/._part2_prompting.py",
+        "__MACOSX/HW2/._short_answer_Qs.md",
+        "__MACOSX/HW2/._part3_retrieval.py",
+        "__MACOSX/HW2/._part4_memory.py",
+        "__MACOSX/HW2/._data",
+        "__MACOSX/HW2/data/._tickets_labeled.jsonl",
+        "__MACOSX/HW2/data/._conversation.json",
+        "__MACOSX/HW2/data/._help_articles.jsonl",
+        "__MACOSX/HW2/data/._retrieval_queries.jsonl"
+      ]
+    },
+    {
+      "id": "assignments/celebrity-agent/celebrity_agent/requirements-txt",
+      "title": "celebrity-agent: celebrity_agent/requirements.txt",
+      "url": "https://designing-agents.github.io/assets/celebrity_agent.zip#archive-member=celebrity_agent/requirements.txt",
+      "container_url": "https://designing-agents.github.io/assets/celebrity_agent.zip",
+      "archive_member": "celebrity_agent/requirements.txt",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:03.995785+00:00",
+      "raw_path": "raw/assignments/celebrity-agent/celebrity_agent/requirements.txt",
+      "sha256": "a9378644f7697014a9714c81a53a9de047319a543e43eb22e418c6ba196f68ae",
+      "bytes": 54,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/celebrity-agent/celebrity_agent/requirements-txt.md"
+    },
+    {
+      "id": "assignments/celebrity-agent/celebrity_agent/README-md",
+      "title": "celebrity-agent: celebrity_agent/README.md",
+      "url": "https://designing-agents.github.io/assets/celebrity_agent.zip#archive-member=celebrity_agent/README.md",
+      "container_url": "https://designing-agents.github.io/assets/celebrity_agent.zip",
+      "archive_member": "celebrity_agent/README.md",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:03.995785+00:00",
+      "raw_path": "raw/assignments/celebrity-agent/celebrity_agent/README.md",
+      "sha256": "243eb51b1c5f396ef9fdcbcff5031cd58ca8d394347063e2097cded220463b74",
+      "bytes": 1540,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-markdown",
+      "markdown_path": "markdown/assignments/celebrity-agent/celebrity_agent/README-md.md"
+    },
+    {
+      "id": "assignments/celebrity-agent/celebrity_agent/data/sample_index-json",
+      "title": "celebrity-agent: celebrity_agent/data/sample_index.json",
+      "url": "https://designing-agents.github.io/assets/celebrity_agent.zip#archive-member=celebrity_agent/data/sample_index.json",
+      "container_url": "https://designing-agents.github.io/assets/celebrity_agent.zip",
+      "archive_member": "celebrity_agent/data/sample_index.json",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:03.995785+00:00",
+      "raw_path": "raw/assignments/celebrity-agent/celebrity_agent/data/sample_index.json",
+      "sha256": "cd5246866e45a0b6896f66deae4f33b364b674438c8552b3e9ca1168ce352012",
+      "bytes": 912,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/celebrity-agent/celebrity_agent/data/sample_index-json.md"
+    },
+    {
+      "id": "assignments/celebrity-agent/celebrity_agent/data/sample_sources-json",
+      "title": "celebrity-agent: celebrity_agent/data/sample_sources.json",
+      "url": "https://designing-agents.github.io/assets/celebrity_agent.zip#archive-member=celebrity_agent/data/sample_sources.json",
+      "container_url": "https://designing-agents.github.io/assets/celebrity_agent.zip",
+      "archive_member": "celebrity_agent/data/sample_sources.json",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:03.995785+00:00",
+      "raw_path": "raw/assignments/celebrity-agent/celebrity_agent/data/sample_sources.json",
+      "sha256": "1889a5308c048f92fd12d3348e34109de396530eeb37b6f8cbe8af0221cc50e5",
+      "bytes": 662,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/celebrity-agent/celebrity_agent/data/sample_sources-json.md"
+    },
+    {
+      "id": "assignments/celebrity-agent/celebrity_agent/src/memory_store-py",
+      "title": "celebrity-agent: celebrity_agent/src/memory_store.py",
+      "url": "https://designing-agents.github.io/assets/celebrity_agent.zip#archive-member=celebrity_agent/src/memory_store.py",
+      "container_url": "https://designing-agents.github.io/assets/celebrity_agent.zip",
+      "archive_member": "celebrity_agent/src/memory_store.py",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:03.995785+00:00",
+      "raw_path": "raw/assignments/celebrity-agent/celebrity_agent/src/memory_store.py",
+      "sha256": "966a7f9ee216fa7b80295b52610cb97f6b6f7438e222447f4d3bd3bfc8f93754",
+      "bytes": 1195,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/celebrity-agent/celebrity_agent/src/memory_store-py.md"
+    },
+    {
+      "id": "assignments/celebrity-agent/celebrity_agent/src/llm-py",
+      "title": "celebrity-agent: celebrity_agent/src/llm.py",
+      "url": "https://designing-agents.github.io/assets/celebrity_agent.zip#archive-member=celebrity_agent/src/llm.py",
+      "container_url": "https://designing-agents.github.io/assets/celebrity_agent.zip",
+      "archive_member": "celebrity_agent/src/llm.py",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:03.995785+00:00",
+      "raw_path": "raw/assignments/celebrity-agent/celebrity_agent/src/llm.py",
+      "sha256": "c1201c303339f509df4803ea30ba36b4950eeb33f9974ad1bcdf66395f99b643",
+      "bytes": 487,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/celebrity-agent/celebrity_agent/src/llm-py.md"
+    },
+    {
+      "id": "assignments/celebrity-agent/celebrity_agent/src/style_module-py",
+      "title": "celebrity-agent: celebrity_agent/src/style_module.py",
+      "url": "https://designing-agents.github.io/assets/celebrity_agent.zip#archive-member=celebrity_agent/src/style_module.py",
+      "container_url": "https://designing-agents.github.io/assets/celebrity_agent.zip",
+      "archive_member": "celebrity_agent/src/style_module.py",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:03.995785+00:00",
+      "raw_path": "raw/assignments/celebrity-agent/celebrity_agent/src/style_module.py",
+      "sha256": "c3f224e0777b56f2aca2ca6aa409fe9c963ef975ae5e9c6b884b01c7dfc26eca",
+      "bytes": 391,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/celebrity-agent/celebrity_agent/src/style_module-py.md"
+    },
+    {
+      "id": "assignments/celebrity-agent/celebrity_agent/src/guardrails-py",
+      "title": "celebrity-agent: celebrity_agent/src/guardrails.py",
+      "url": "https://designing-agents.github.io/assets/celebrity_agent.zip#archive-member=celebrity_agent/src/guardrails.py",
+      "container_url": "https://designing-agents.github.io/assets/celebrity_agent.zip",
+      "archive_member": "celebrity_agent/src/guardrails.py",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:03.995785+00:00",
+      "raw_path": "raw/assignments/celebrity-agent/celebrity_agent/src/guardrails.py",
+      "sha256": "7d03dcbb8a466349d17307113cc91c5a4f277a27f5d8daefd7f3988ee65c9aa4",
+      "bytes": 437,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/celebrity-agent/celebrity_agent/src/guardrails-py.md"
+    },
+    {
+      "id": "assignments/celebrity-agent/celebrity_agent/src/agent-py",
+      "title": "celebrity-agent: celebrity_agent/src/agent.py",
+      "url": "https://designing-agents.github.io/assets/celebrity_agent.zip#archive-member=celebrity_agent/src/agent.py",
+      "container_url": "https://designing-agents.github.io/assets/celebrity_agent.zip",
+      "archive_member": "celebrity_agent/src/agent.py",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:03.995785+00:00",
+      "raw_path": "raw/assignments/celebrity-agent/celebrity_agent/src/agent.py",
+      "sha256": "d0611764e0569eb5da6803cbdb4e7c3473b49918a49c3529e7e5def29c05555a",
+      "bytes": 764,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/celebrity-agent/celebrity_agent/src/agent-py.md"
+    },
+    {
+      "id": "assignments/celebrity-agent/celebrity_agent/src/content_module-py",
+      "title": "celebrity-agent: celebrity_agent/src/content_module.py",
+      "url": "https://designing-agents.github.io/assets/celebrity_agent.zip#archive-member=celebrity_agent/src/content_module.py",
+      "container_url": "https://designing-agents.github.io/assets/celebrity_agent.zip",
+      "archive_member": "celebrity_agent/src/content_module.py",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:03.995785+00:00",
+      "raw_path": "raw/assignments/celebrity-agent/celebrity_agent/src/content_module.py",
+      "sha256": "1d4635a72b5c7fd16da1a120909d3dfae342ef7abca5d8c7d4d8469f2d1d1908",
+      "bytes": 1041,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/celebrity-agent/celebrity_agent/src/content_module-py.md"
+    },
+    {
+      "id": "assignments/celebrity-agent/celebrity_agent/src/conversations-py",
+      "title": "celebrity-agent: celebrity_agent/src/conversations.py",
+      "url": "https://designing-agents.github.io/assets/celebrity_agent.zip#archive-member=celebrity_agent/src/conversations.py",
+      "container_url": "https://designing-agents.github.io/assets/celebrity_agent.zip",
+      "archive_member": "celebrity_agent/src/conversations.py",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:03.995785+00:00",
+      "raw_path": "raw/assignments/celebrity-agent/celebrity_agent/src/conversations.py",
+      "sha256": "946daa23c65cfcca81b507a0b06c3f56f9c34f2a28296b16ffe9d1894797f989",
+      "bytes": 969,
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "notes": [
+        "Extracted from the linked course archive; no code was executed."
+      ],
+      "conversion_method": "source-code-fence",
+      "markdown_path": "markdown/assignments/celebrity-agent/celebrity_agent/src/conversations-py.md"
+    },
+    {
+      "id": "assignments/archive-celebrity-agent",
+      "title": "Course code: celebrity_agent.zip",
+      "url": "https://designing-agents.github.io/assets/celebrity_agent.zip",
+      "category": "assignments",
+      "retrieved_at": "2026-11-13T16:41:03.995785+00:00",
+      "notes": [
+        "Full archive preserved. macOS resource forks and .DS_Store metadata remain only in the original ZIP."
+      ],
+      "http_status": 200,
+      "final_url": "https://designing-agents.github.io/assets/celebrity_agent.zip",
+      "content_type": "application/x-zip-compressed",
+      "raw_path": "raw/activities/celebrity-agent.zip",
+      "bytes": 12974,
+      "sha256": "bf45116d1814a5eed85912ca96ca6e17bdb7e14bed8f50243187d598f0c51303",
+      "download_status": "downloaded",
+      "conversion_method": "course-archive-with-text-files",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/assignments/archive-celebrity-agent.md",
+      "file_count": 11,
+      "skipped_archive_metadata": [
+        "__MACOSX/._celebrity_agent",
+        "celebrity_agent/.DS_Store",
+        "__MACOSX/celebrity_agent/._.DS_Store",
+        "__MACOSX/celebrity_agent/._requirements.txt",
+        "__MACOSX/celebrity_agent/._README.md",
+        "__MACOSX/celebrity_agent/._data",
+        "__MACOSX/celebrity_agent/._src",
+        "__MACOSX/celebrity_agent/data/._sample_index.json",
+        "__MACOSX/celebrity_agent/data/._sample_sources.json",
+        "__MACOSX/celebrity_agent/src/._memory_store.py",
+        "__MACOSX/celebrity_agent/src/._llm.py",
+        "__MACOSX/celebrity_agent/src/._style_module.py",
+        "__MACOSX/celebrity_agent/src/._guardrails.py",
+        "__MACOSX/celebrity_agent/src/._agent.py",
+        "__MACOSX/celebrity_agent/src/._content_module.py",
+        "__MACOSX/celebrity_agent/src/._conversations.py"
+      ]
+    },
+    {
+      "id": "references/google-ai-studio-api-key-markdown",
+      "title": "Google AI Studio: Using Gemini API keys",
+      "url": "https://aistudio.google.com/docs/api-key",
+      "aliases": [
+        "https://ai.google.dev/gemini-api/docs/api-key"
+      ],
+      "category": "references",
+      "retrieved_at": "2026-11-13T16:46:06.434664+00:00",
+      "http_status": 200,
+      "final_url": "https://aistudio.google.com/docs/api-key",
+      "content_type": "text/markdown; charset=utf-8",
+      "raw_path": "raw/references/google-ai-studio-api-key.md",
+      "bytes": 16868,
+      "sha256": "329b68bb3f1c198336a1cb56444a16225492efec833f13098dfac0a730c345e1",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "source-markdown",
+      "notes": [
+        "The server provides a public Markdown representation when Accept: text/markdown is requested. The default HTML response is an app shell."
+      ],
+      "request_headers": {
+        "Accept": "text/markdown"
+      },
+      "markdown_path": "markdown/references/google-ai-studio-api-key-markdown.md"
+    }
+  ],
+  "notes": [
+    "The Fall 2026 course was collected while in progress. The schedule publishes eight lecture slide PDFs (weeks 1-7 and week 9), thirteen Python exercise/support/solution files, three homework pages, and final-project instructions.",
+    "The schedule has no public recording links or transcripts. Later lecture entries and project presentations have no published material links at retrieval.",
+    "External links from assignment and syllabus pages are included one level; websites and paper bibliographies are not recursively mirrored. Courseworks remains an enrolled-student service."
+  ],
+  "counts": {
+    "materials": 67,
+    "downloaded": 66,
+    "markdown_files": 65,
+    "gaps": 2
+  }
+}

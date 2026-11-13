@@ -1,0 +1,355 @@
+# Official course repository: Python, TypeScript, lesson sources, and agent UI: thinkific/src/m4/m4.1-delegation.md
+
+[Course index](../../../../../../README.md) · [Original source](https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m4/m4.1-delegation.md) · [Raw file](../../../../../../raw/repositories/lca-deepagents/thinkific/src/m4/m4.1-delegation.md)
+
+Retrieved: 2026-11-13T16:50:31.645872+00:00
+
+[For translation, open lesson in new tab and use Chrome translate](../../../../../lessons/m4.1-delegation.md)
+
+Python TypeScript
+
+<a id="delegation"></a>
+
+
+# Delegation
+
+```text
+<button class="lt-tab active" data-p="del" role="tab" aria-selected="true">Delegation</button>
+```
+
+```text
+<button class="lt-tab" data-p="quiz" role="tab" aria-selected="false">Quiz</button>
+```
+
+<a id="p-del"></a>
+
+
+Lesson Video Walkthrough
+
+[Public video walkthrough](../../../../../videos/alTbbn0YUNR.md)
+
+Lesson Video Walkthrough (Python)
+
+[Public video walkthrough](../../../../../videos/alTbbn0YUNR.md)
+
+Long-running agents need coordination. A big task can span many steps, tool calls, files, and intermediate results. Without an explicit way to track the plan and isolate specialized work, the main agent can drift or overload its context.
+
+Deep Agents gives the main agent two coordination tools:
+
+![A two-panel drawing. Left: a to-do list with checkboxes (two checked, one in progress, one pending) labeled Planning, opt-in via TodoListMiddleware. Right: a small robot supervisor connected to three robot subagents, labeled Subagents.](../../../../../../raw/repositories/lca-deepagents/thinkific/src/m4/images/m4.1-two-capabilities.svg)
+
+- **Planning**: `write_todos` keeps a visible task list so the main agent can track what is pending, in progress, and complete. It’s opt-in, enabled by adding `TodoListMiddleware` when you build the agent.
+- **Delegation**: subagents let the main agent hand focused work to another agent with its own instructions, tools, and context.
+
+Planning and delegation solve different problems. Planning keeps the main agent organized. Delegation moves specialized or context-heavy work out of the main agent’s context.
+
+---
+
+<a id="planning-the-to-do-list"></a>
+
+
+## Planning: the to-do list
+
+A capable model can draft a solid plan for a multi-step job. The hard part is follow-through. As the conversation grows and the agent juggles tool calls and intermediate results, it tends to drift, losing track of what’s already done and what’s still left.
+
+Deep Agents addresses this with an opt-in **`write_todos`** tool: add `TodoListMiddleware` to the agent’s `middleware` list and the model gets a tool for writing its plan out as a structured to-do list and updating each item’s status as it works:
+
+```python {1,6} from langchain.agents.middleware import TodoListMiddleware from deepagents import create\_deep\_agent
+
+agent = create\_deep\_agent( tools=[…], middleware=[TodoListMiddleware()], )
+
+````text
+
+- **`pending`**: not started yet
+- **`in_progress`**: being worked on now
+- **`completed`**: done
+
+The list is saved in the agent's state. Across turns, it persists when you use the same thread with a checkpointer, following the thread pattern introduced earlier in the course. On a long task the agent always has an explicit, up-to-date plan to check against instead of trying to hold the whole thing in its head. Think of it as writing the steps on a whiteboard and ticking them off as it goes.
+
+Planning is not delegation. It is the supervisor's task list: a way for the main agent to keep itself organized before, during, and after tool calls.
+
+---
+
+## Delegation: how teams tackle a big project
+
+When a project is too big for one person, we bring in a team.
+
+<div style="text-align: center;">
+<svg viewBox="0 0 740 394" width="720" role="img" aria-label="A supervisor figure at the top connected by lines to four worker figures below, each labeled with a different skill: Research, Writing, Data, Design. Hover a figure to see its role." xmlns="http://www.w3.org/2000/svg" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <rect width="740" height="394" fill="#030710" rx="8"/>
+  <text x="370" y="34" text-anchor="middle" font-size="15" font-weight="300" fill="#F2FAFF">How people tackle a big project</text>
+  <text x="370" y="53" text-anchor="middle" font-size="11" fill="#99D3FF" font-family="'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">A supervisor splits the work; specialists run in parallel</text>
+  <line x1="370" y1="170" x2="120" y2="246" stroke="#40668D" stroke-width="1.5"/>
+  <line x1="370" y1="170" x2="287" y2="246" stroke="#40668D" stroke-width="1.5"/>
+  <line x1="370" y1="170" x2="453" y2="246" stroke="#40668D" stroke-width="1.5"/>
+  <line x1="370" y1="170" x2="620" y2="246" stroke="#40668D" stroke-width="1.5"/>
+  <g style="cursor:pointer">
+    <title>Splits the project into tasks and combines the results</title>
+    <circle cx="370" cy="98" r="24" fill="#7FC8FF"/>
+    <path d="M 332,170 C 332,134 348,126 370,126 C 392,126 408,134 408,170 Z" fill="#7FC8FF"/>
+    <text x="370" y="192" text-anchor="middle" font-size="11" fill="#CCE9FF" font-family="'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">Supervisor</text>
+  </g>
+  <g style="cursor:pointer">
+    <title>Finds the sources, facts, and background</title>
+    <circle cx="120" cy="268" r="20" fill="#40668D"/>
+    <path d="M 88,332 C 88,300 102,293 120,293 C 138,293 152,300 152,332 Z" fill="#40668D"/>
+    <text x="120" y="356" text-anchor="middle" font-size="10" fill="#B2DEFF" font-family="'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">Research</text>
+  </g>
+  <g style="cursor:pointer">
+    <title>Drafts and edits the copy</title>
+    <circle cx="287" cy="268" r="20" fill="#40668D"/>
+    <path d="M 255,332 C 255,300 269,293 287,293 C 305,293 319,300 319,332 Z" fill="#40668D"/>
+    <text x="287" y="356" text-anchor="middle" font-size="10" fill="#B2DEFF" font-family="'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">Writing</text>
+  </g>
+  <g style="cursor:pointer">
+    <title>Pulls the numbers and runs the analysis</title>
+    <circle cx="453" cy="268" r="20" fill="#40668D"/>
+    <path d="M 421,332 C 421,300 435,293 453,293 C 471,293 485,300 485,332 Z" fill="#40668D"/>
+    <text x="453" y="356" text-anchor="middle" font-size="10" fill="#B2DEFF" font-family="'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">Data</text>
+  </g>
+  <g style="cursor:pointer">
+    <title>Handles the layout and visuals</title>
+    <circle cx="620" cy="268" r="20" fill="#40668D"/>
+    <path d="M 588,332 C 588,300 602,293 620,293 C 638,293 652,300 652,332 Z" fill="#40668D"/>
+    <text x="620" y="356" text-anchor="middle" font-size="10" fill="#B2DEFF" font-family="'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">Design</text>
+  </g>
+  <text x="370" y="380" text-anchor="middle" font-size="9" fill="#5BADDF" font-family="'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">Hover over a teammate to see their role</text>
+</svg>
+</div>
+
+A few things make this work:
+
+- **A supervisor splits the work and pulls it back together.** They break the project into subtasks, hand each one out, and combine what comes back.
+- **Each person brings their own expertise.** A researcher, a writer, and a designer each see the problem differently and carry their own tools.
+- **People work in parallel.** Three people working at once finish in roughly a third of the time.
+- **Each person focuses on their piece, not the whole project.** The writer doesn't need to hold the entire plan in their head, just their assignment.
+
+---
+
+## What a subagent is
+
+A **subagent** is a full agent the main agent can call to do a focused task and report back. It can have its own instructions, tools, skills, model, and isolated context. The team pattern carries straight over.
+
+<p align="center">
+  <img src="images/m4.1-agents-fanout.svg" alt="A main agent robot at the top connected to four subagent robots below, each labeled with its own prompt, tools, model, and context." width="720">
+</p>
+
+- **The main agent splits work and aggregates results.** Say the job is *"write a newsletter summarizing this week's news on a topic."* The main agent can hand each sub-topic to a different subagent. Each one searches, summarizes what it finds, and passes back only the summary, which the main agent stitches into the final newsletter.
+- **Each subagent is a full agent in its own right.** It can have its own system prompt, its own skills, its own tools, and it can even run on a different model than the main agent.
+- **Subagents run in parallel.** In Deep Agents, a subagent is invoked like a tool, so the main agent can fire off as many as it needs at the same time.
+- **Each subagent focuses on its own task and its own context.** This is what makes subagents a context-engineering tool.
+
+> **Subagent-as-tool.** Deep Agents exposes subagents through a built-in `task` tool. To the main agent, delegating looks just like calling any other tool. The main agent calls `task` with an assignment and gets a result back, picking which subagent to use from each one's description, the same way it decides to call any other tool.
+
+---
+
+## Context isolation
+
+<div data-lang="python" markdown="1">
+
+<details style="border:2.5px solid #000;border-radius:6px;background:#fff;margin:1rem 0;"><summary style="padding:10px 16px;cursor:pointer;font-weight:500;font-family:'IBM Plex Mono',monospace;font-size:14px;">Lesson Video Walkthrough</summary><div style="padding:12px 16px 16px;"><div class="video-container" style="max-width:750px;"><div class="video-wrapper"><iframe src="https://share.descript.com/embed/enqK0nl3XXy" frameborder="0" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen></iframe></div></div></div></details>
+
+</div>
+
+<div data-lang="typescript" markdown="1">
+
+<details style="border:2.5px solid #000;border-radius:6px;background:#fff;margin:1rem 0;"><summary style="padding:10px 16px;cursor:pointer;font-weight:500;font-family:'IBM Plex Mono',monospace;font-size:14px;">Lesson Video Walkthrough (Python)</summary><div style="padding:12px 16px 16px;"><div class="video-container" style="max-width:750px;"><div class="video-wrapper"><iframe src="https://share.descript.com/embed/enqK0nl3XXy" frameborder="0" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen></iframe></div></div></div></details>
+
+</div>
+
+<p align="center">
+  <img src="images/m4.1-context-isolation.svg" alt="On the left, a main agent with a long message history; one task message flows out to a subagent on the right, which has its own small fresh context and its own tools, and one result message flows back." width="700">
+</p>
+
+This is what makes subagents a context-engineering tool. A subagent does its work without cluttering the main agent's context:
+
+- A subagent receives **one message** from the main agent describing its task. It does **not** inherit the main agent's message history.
+- It runs autonomously until the task is done, then returns **one message** back: its final result. Each `task` call is a fresh run with no memory of earlier calls, and the subagent can't carry on a back-and-forth with the main agent (shared state such as the agent filesystem can still pass between them).
+- A subagent defines **its own tool set**. Consider a database expert with dozens of specialized tools. Putting those behind a subagent keeps every one of those tool descriptions *out* of the main agent's context. All the main agent has to know is that this needs database expertise. It hands off the task and gets back an answer.
+
+The payoff: a large, messy subtask gets compressed into a single clean result, as long as the subagent is told to return a concise summary. The main agent's context stays focused on coordination, even as the work piles up behind the scenes.
+
+<details markdown="1" style="border:2.5px solid #000;border-radius:6px;background:#fff;margin:1rem 0;"><summary style="padding:10px 16px;cursor:pointer;font-weight:500;font-family:'IBM Plex Mono',monospace;font-size:14px;">The Devil Wears Prada Analogy</summary><div style="padding:12px 16px 16px;" markdown="1">
+
+<p align="center">
+  <img src="images/m4.1-devil-wears-prada-analogy.png" alt="A still from The Devil Wears Prada showing Miranda Priestly and Andy Sachs sitting in the back of a car, labeled 'Model' over Miranda and 'Subagent' over Andy." width="700">
+</p>
+
+If you've seen *The Devil Wears Prada*, this is basically it: Miranda Priestly doesn't want to hear how Andy got something done, just the result. Subagent = Andy Sachs; the subagent does the messy work and hands the main agent only what it needs to know, not tool call noise or irrelevant details.
+
+Miranda also doesn't wait on one assistant at a time: she sends several off at once, each on their own errand. A main agent can do the same, running multiple subagents in parallel, each in its own separate context.
+
+<p align="center">
+  <img src="images/m4.1-devil-wears-prada-parallel.png" alt="Miranda Priestly, labeled 'Model', with arrows fanning out to three assistants labeled 'Subagents': Emily on the phone, Andy carrying a tray of coffees, and Nigel reviewing a layout, each handling a separate task at the same time." width="700">
+</p>
+
+</div></details>
+
+<div data-lang="python" markdown="1">
+
+<div style="border:2px solid #B45309;border-radius:6px;background:#FFF8E5;padding:12px 16px;margin:1rem 0;" markdown="1">
+
+**New update: fork mode (experimental).** By default, a subagent only sees the task description it's given. Set `"mode": "fork"` to see the parent's conversation so far and use the parent's system prompt instead.
+
+```python
+reviewer = {
+    "name": "reviewer",
+    "description": "Review the plan we just discussed.",
+    "mode": "fork",
+}
+````
+
+Use it when the subagent needs context from the conversation that would be hard to write into a task description. The cost is a larger context for the subagent. A forked subagent can’t set its own `skills` (it uses the parent’s).
+
+Added in deepagents 0.7.12. The labs don’t use it.
+
+**New update: fork mode (experimental).** By default, a subagent only sees the task description it’s given. Set `mode: "fork"` to see the parent’s conversation so far and use the parent’s system prompt instead.
+
+```text
+const reviewer: SubAgent = {
+  name: "reviewer",
+  description: "Review the plan we just discussed.",
+  mode: "fork",
+};
+```
+
+Use it when the subagent needs context from the conversation that would be hard to write into a task description. The cost is a larger context for the subagent. A forked subagent can’t set its own `skills` (it uses the parent’s).
+
+The labs don’t use it.
+
+---
+
+<a id="synchronous-vs.-asynchronous"></a>
+
+
+## Synchronous vs. asynchronous
+
+Subagents can run in two modes. The choice comes down to one question: **does the main agent need the result before it can keep going?**
+
+![Side-by-side timelines. Left, synchronous: the main agent is blocked and waiting while three subagents run, resuming only when the slowest finishes. Right, asynchronous: the main agent launches a background job, stays responsive, checks status, and collects the result later.](../../../../../../raw/repositories/lca-deepagents/thinkific/src/m4/images/m4.1-sync-async.svg)
+
+- **Synchronous** subagents complete their task within the step. The main agent blocks until the longest-running subagent returns. It’s the simplest model, but the conversation pauses while the work happens.
+- **Asynchronous** subagents run in the background. The main agent launches the job, stays responsive, and checks on it later, collecting the result once it’s ready. It’s more responsive but has more moving parts.
+
+This course uses synchronous subagents in the hands-on lab. Async subagents are useful for production/background workflows where the main agent should stay responsive while longer work continues elsewhere.
+
+---
+
+<a id="optional-live-demo"></a>
+
+
+## Optional: Live Demo
+
+Try it yourself: ask it to compare options or brief multiple topics, then watch the subagents run in parallel.
+
+[Subagent delegation demo: parallel specialists reporting back to a supervisor](https://ui-patterns.langchain.com/react/?source=lca-deepagents&lesson=m4.1#/deep-agent-subagent-cards)
+
+*\* This demo runs a `create_deep_agent` orchestrator with three subagents (`researcher`, `analyzer`, `writer`) invoked in parallel through `task()`, the same subagent-as-tool model described above.*
+
+For example, try: “Compare React, Vue, and Svelte for building a new team dashboard.”
+
+Watch:
+
+- The main agent spawns 2-3 subagents in a single turn, each with one narrow assignment.
+- Each subagent’s card updates live as it completes.
+- The main agent waits for all of them (synchronous), then synthesizes one final answer.
+
+---
+
+<a id="when-to-reach-for-a-subagent"></a>
+
+
+## When to reach for a subagent
+
+**Use a subagent when:**
+
+- A multi-step task would otherwise clutter the main agent’s context
+- The work needs a specialized domain: custom instructions or its own tools
+- A subtask is better served by a different model
+- You want the main agent to stay focused on high-level coordination
+
+**Skip the subagent when:**
+
+- The task is simple and single-step, so the overhead isn’t worth it
+- You need to keep the intermediate context, not just the final result
+
+
+---
+
+<a id="recap"></a>
+
+
+## Recap
+
+In this lesson you learned how planning and delegation support long-running agents:
+
+- **Planning** keeps the main agent organized with a visible `write_todos` task list, opt-in via `TodoListMiddleware`.
+- **Delegation** lets the main agent split a big job into pieces, run them in parallel, and stay focused on coordination.
+- A subagent is **a full agent in its own right**, with its own prompt and isolated context, and optionally its own tools, skills, and model, invoked through the built-in **`task`** tool.
+- Subagents are a **context-engineering** tool. At the hand-off boundary, a subagent gets **one task in** and returns **one final result back** (internally it may take many steps), keeping its work and its tool descriptions out of the main agent’s context.
+- Synchronous subagents block until they return; async subagents are for background workflows where the main agent should stay responsive.
+
+---
+
+<a id="next"></a>
+
+
+## Next
+
+Complete the **Quiz** above, then continue to the next lesson where you’ll build a subagent team: a main agent that fans out parallel searches to subagents and synthesizes their results into a weekly newsletter.
+
+---
+
+<a id="references"></a>
+
+
+## References
+
+**Documentation:**
+
+- [Delegation (Deep Agents)](../../../../../readings/docs-langchain-com-oss-python-deepagents-subagents-528266b9.md)
+- [Subagents (Deep Agents)](../../../../../readings/docs-langchain-com-oss-python-deepagents-subagents-528266b9.md)
+- [Async subagents (Deep Agents)](../../../../../readings/docs-langchain-com-oss-python-deepagents-async-subagents-6674cbf2.md)
+- [Context engineering (Deep Agents)](../../../../../readings/docs-langchain-com-oss-python-deepagents-context-engineering-e0a127e9.md)
+
+**Blog:**
+
+- [Running subagents in the background](../../../../../readings/www-langchain-com-blog-running-subagents-in-the-background-76f7f127.md)
+
+**Go deeper: read the source** *(optional)*
+
+*The lesson shows how to use this. To see how it’s implemented, start with these files:*
+
+- [`middleware/subagents.py`](../../../../../readings/github-eb4497f658fd.md): the `task` tool and how subagents are built and run
+
+**Go deeper: read the source** *(optional)*
+
+*The lesson shows how to use this. To see how it’s implemented, start with these files:*
+
+- [`middleware/subagents.ts`](../../../../../readings/github-cdd99e43ff67.md): the `task` tool and how subagents are built and run
+
+<a id="p-quiz"></a>
+
+
+## Check your understanding
+
+```javascript
+
+(function () {
+  var tabs = document.querySelectorAll('.lt-tab');
+  function show(p) {
+    tabs.forEach(function (t) {
+      var on = t.getAttribute('data-p') === p;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    document.querySelectorAll('.lt-panel').forEach(function (panel) {
+      panel.classList.toggle('active', panel.id === 'p-' + p);
+    });
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () { show(t.getAttribute('data-p')); });
+  });
+})();
+
+```

@@ -1,0 +1,16 @@
+# Homework 2 bundle: precomputed/sliders/sliders-OMIM_620793/phenotypic_matching_rules.csv
+
+[Course index](../../../../../../README.md) · [Original source](https://drive.google.com/file/d/1VPlTDJULw4qIkQuVcHxxPh4Q50Nvmi-z/view#archive-member=precomputed/sliders/sliders-OMIM_620793/phenotypic_matching_rules.csv) · [Raw file](../../../../../../raw/assignments/assignment2-course-bundle/precomputed/sliders/sliders-OMIM_620793/phenotypic_matching_rules.csv)
+
+Retrieved: 2026-11-13T17:00:50.402745+00:00
+
+```csv
+row_id,disease_name,rule_or_step_title,phenotype_name,rule_category,phenotype_status_required,matching_criterion_description,cohort_frequency
+a8a309e30aff214a:0:phenotypic_matching_rules:0,Limb-Girdle Muscular Dystrophy Type 29,Cohort Phenotype Frequency Table,Proximal muscle weakness,inclusion_criterion,must_be_present,Childhood-onset LGMD presenting with proximal muscle weakness.,5/5
+a8a309e30aff214a:0:phenotypic_matching_rules:1,Limb-Girdle Muscular Dystrophy Type 29,Cohort Phenotype Frequency Table,Muscular dystrophy with neurological defects,inclusion_criterion,must_be_present,Muscular dystrophy combined with neurodevelopmental defects.,18/18
+a8a309e30aff214a:0:phenotypic_matching_rules:2,Limb-Girdle Muscular Dystrophy Type 29,Cohort Phenotype Frequency Table,Sartorius and gracilis muscle degeneration on MRI,discriminating_feature,must_be_present,"Consistent, early, and selective sartorius and gracilis degeneration on muscle MRI.",5/5
+a8a309e30aff214a:0:phenotypic_matching_rules:3,Limb-Girdle Muscular Dystrophy Type 29,Rule Out Pertinent Negatives,Deep finger flexor weakness,exclusion_criterion,must_be_absent,Preservation of deep finger flexor strength (absence of deep finger flexor weakness).,2/2
+a8a309e30aff214a:0:phenotypic_matching_rules:4,Limb-Girdle Muscular Dystrophy Type 29,Cohort Phenotype Frequency Table,Axial (paravertebral) muscle fatty infiltration/weakness,discriminating_feature,must_be_present,Axial/paravertebral muscle weakness and fatty infiltration.,"5/5, 2/2"
+a8a309e30aff214a:0:phenotypic_matching_rules:5,Limb-Girdle Muscular Dystrophy Type 29,Cohort Phenotype Frequency Table,Cerebellar atrophy on neuroimaging,discriminating_feature,supportive_if_present,"Cerebellar atrophy detected on neuroimaging, even if subclinical.","3/3, 1/2"
+
+```

@@ -1,0 +1,427 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 4,
+    "text": "In the last video, you planned an improvement test for Northwind."
+  },
+  {
+    "startInSeconds": 4,
+    "endInSeconds": 12,
+    "text": "The agent was adding product advice that the catalog didn't support,\nso you changed one thing: adding a grounding rule that says,"
+  },
+  {
+    "startInSeconds": 12,
+    "endInSeconds": 16,
+    "text": "\"Never state a product detail unless a tool result supports it.\""
+  },
+  {
+    "startInSeconds": 16,
+    "endInSeconds": 24,
+    "text": "And you decided to test that change on two kinds of cases, where the\nagent was already failing, and cases it was already handling well."
+  },
+  {
+    "startInSeconds": 24,
+    "endInSeconds": 28,
+    "text": "Like we said, those are capability evals and\nregression evals respectively."
+  },
+  {
+    "startInSeconds": 28,
+    "endInSeconds": 35,
+    "text": "Now you're going to run that comparison and see what actually happens.\nStart by saving the cases you want to reuse."
+  },
+  {
+    "startInSeconds": 35,
+    "endInSeconds": 40,
+    "text": "First, take the traces where the faithfulness evaluator found\nunsupported product details."
+  },
+  {
+    "startInSeconds": 40,
+    "endInSeconds": 43,
+    "text": "The question about the merino wool sweater belongs here,"
+  },
+  {
+    "startInSeconds": 43,
+    "endInSeconds": 47,
+    "text": "along with other cases where the agent added information\nthat didn't come from the product tool."
+  },
+  {
+    "startInSeconds": 47,
+    "endInSeconds": 53,
+    "text": "Save those as a data set. For this experiment,\nwe'll call it Northwind faithfulness failures."
+  },
+  {
+    "startInSeconds": 53,
+    "endInSeconds": 58,
+    "text": "Then save a second set with cases the original agent\nalready handled correctly."
+  },
+  {
+    "startInSeconds": 58,
+    "endInSeconds": 66,
+    "text": "For example, some basic sizing questions and straightforward product\ninformation requests. Those are your known-good cases."
+  },
+  {
+    "startInSeconds": 66,
+    "endInSeconds": 70,
+    "text": "With that, you have one set that can show whether the problem you care\nabout gets better and another"
+  },
+  {
+    "startInSeconds": 70,
+    "endInSeconds": 74,
+    "text": "that can show whether you broke behavior that was already working."
+  },
+  {
+    "startInSeconds": 74,
+    "endInSeconds": 80,
+    "text": "Next, you need the two versions of the agent you want to compare.\nKeep the original version as your baseline."
+  },
+  {
+    "startInSeconds": 80,
+    "endInSeconds": 84,
+    "text": "Then, create a second version with the new\ngrounding rule in the prompt."
+  },
+  {
+    "startInSeconds": 84,
+    "endInSeconds": 89,
+    "text": "Everything else stays the same: model,\nsame instructions, same evaluators."
+  },
+  {
+    "startInSeconds": 89,
+    "endInSeconds": 96,
+    "text": "The thing you're testing here is that additional grounding rule.\nNow you need a way to run each dataset through the agent."
+  },
+  {
+    "startInSeconds": 96,
+    "endInSeconds": 101,
+    "text": "In Phoenix, you do that with a task, which is just a function\nthat handles one example."
+  },
+  {
+    "startInSeconds": 101,
+    "endInSeconds": 108,
+    "text": "For the wool care case, the task receives the customer's question,\nruns the Northwind agent, and returns the response."
+  },
+  {
+    "startInSeconds": 108,
+    "endInSeconds": 112,
+    "text": "Phoenix can then apply that same function to every\nexample in the dataset."
+  },
+  {
+    "startInSeconds": 112,
+    "endInSeconds": 117,
+    "text": "You write the logic for one example, and Phoenix takes care of\nrepeating it across the rest."
+  },
+  {
+    "startInSeconds": 117,
+    "endInSeconds": 121,
+    "text": "Once you have that task, you can run an experiment."
+  },
+  {
+    "startInSeconds": 121,
+    "endInSeconds": 126,
+    "text": "You give Phoenix the dataset, the task that runs the agent,\nand the evaluators you want to apply."
+  },
+  {
+    "startInSeconds": 126,
+    "endInSeconds": 131,
+    "text": "Phoenix runs the examples, scores the results,\nand keeps the traces with them."
+  },
+  {
+    "startInSeconds": 131,
+    "endInSeconds": 137,
+    "text": "That last part is useful because when a score changes,\nyou can go back and see what the agent actually did."
+  },
+  {
+    "startInSeconds": 137,
+    "endInSeconds": 144,
+    "text": "Run the baseline and the updated agent on the same cases with the same\nevaluators. That gives you something you can compare directly."
+  },
+  {
+    "startInSeconds": 144,
+    "endInSeconds": 149,
+    "text": "Let's start with the cases you wanted to improve.\nHere's the wool care example again."
+  },
+  {
+    "startInSeconds": 149,
+    "endInSeconds": 154,
+    "text": "Before the change, the product tool returned one instruction:\n\"Machine washable on wool cycle\"."
+  },
+  {
+    "startInSeconds": 154,
+    "endInSeconds": 161,
+    "text": "but the agent added several more recommendations.\nAfter you add the grounding rule, the response is much shorter."
+  },
+  {
+    "startInSeconds": 161,
+    "endInSeconds": 165,
+    "text": "It says that the sweater can be machine washed on the wool\ncycle, and it stops there."
+  },
+  {
+    "startInSeconds": 165,
+    "endInSeconds": 171,
+    "text": "So in this case, you got the behavior you were aiming for.\nThe unsupported recommendations are gone."
+  },
+  {
+    "startInSeconds": 171,
+    "endInSeconds": 178,
+    "text": "That's encouraging, but this is why you also saved the known-good\ncases. Go look at those next."
+  },
+  {
+    "startInSeconds": 178,
+    "endInSeconds": 186,
+    "text": "Most of them still behave as expected, but a few sizing questions have\nchanged. The final answer is still correct, which at first looks fine."
+  },
+  {
+    "startInSeconds": 186,
+    "endInSeconds": 190,
+    "text": "Then you open the trace. Take a merino sweater sizing question."
+  },
+  {
+    "startInSeconds": 190,
+    "endInSeconds": 198,
+    "text": "In both versions, the customer asks the same thing, and in both\nversions, the agent already has the sizing information it needs."
+  },
+  {
+    "startInSeconds": 198,
+    "endInSeconds": 205,
+    "text": "In the baseline, it uses that information and answers directly.\nIn the updated version, something different happens."
+  },
+  {
+    "startInSeconds": 205,
+    "endInSeconds": 210,
+    "text": "The agent calls the product tool again.\nThe lookup doesn't give it any new sizing information."
+  },
+  {
+    "startInSeconds": 210,
+    "endInSeconds": 213,
+    "text": "Then the agent gives essentially the same final answer as before."
+  },
+  {
+    "startInSeconds": 213,
+    "endInSeconds": 219,
+    "text": "So from the customer's point of view, the answer may look just\nas good, but the trajectory has changed."
+  },
+  {
+    "startInSeconds": 219,
+    "endInSeconds": 222,
+    "text": "The new version did an extra lookup that didn't help."
+  },
+  {
+    "startInSeconds": 222,
+    "endInSeconds": 227,
+    "text": "If you only checked whether the final answer was correct,\nyou'd probably miss that."
+  },
+  {
+    "startInSeconds": 227,
+    "endInSeconds": 230,
+    "text": "Now you have something more specific to investigate,"
+  },
+  {
+    "startInSeconds": 230,
+    "endInSeconds": 235,
+    "text": "The grounding rule may be making the agent think it needs fresh tool\nevidence before it can make a product claim,"
+  },
+  {
+    "startInSeconds": 235,
+    "endInSeconds": 238,
+    "text": "even when the supporting information is already available."
+  },
+  {
+    "startInSeconds": 238,
+    "endInSeconds": 245,
+    "text": "That doesn't prove exactly why the model made the extra call,\nbut it gives you a useful hypothesis for the next iteration."
+  },
+  {
+    "startInSeconds": 245,
+    "endInSeconds": 252,
+    "text": "This kind of trade-off can show up in other ways, too.\nSuppose you make the shelter agent stricter about eligibility."
+  },
+  {
+    "startInSeconds": 252,
+    "endInSeconds": 260,
+    "text": "After the change, unsafe matches go down. Great. But then you notice\nthat some volunteers who should qualify are now being rejected."
+  },
+  {
+    "startInSeconds": 260,
+    "endInSeconds": 265,
+    "text": "If you only looked at one overall score, those two movements could\npartially cancel each other out."
+  },
+  {
+    "startInSeconds": 265,
+    "endInSeconds": 272,
+    "text": "So when you compare versions, look at the failure categories\nseparately. What got better? What got worse?"
+  },
+  {
+    "startInSeconds": 272,
+    "endInSeconds": 278,
+    "text": "And which specific cases changed? Now, come back to Northwind.\nYou have a real decision to make."
+  },
+  {
+    "startInSeconds": 278,
+    "endInSeconds": 281,
+    "text": "A grounding rule improves the behavior you were targeting."
+  },
+  {
+    "startInSeconds": 281,
+    "endInSeconds": 289,
+    "text": "The care answer is now supported by the catalog, but the same rule is\nalso causing extra tool calls in some cases that were already working."
+  },
+  {
+    "startInSeconds": 289,
+    "endInSeconds": 294,
+    "text": "Is that a worthwhile tradeoff? There isn't one answer\nthat applies to every product."
+  },
+  {
+    "startInSeconds": 294,
+    "endInSeconds": 297,
+    "text": "If unsupported product claims could seriously mislead a customer,"
+  },
+  {
+    "startInSeconds": 297,
+    "endInSeconds": 301,
+    "text": "you may decide that stronger grounding is worth an\noccasional extra lookup."
+  },
+  {
+    "startInSeconds": 301,
+    "endInSeconds": 308,
+    "text": "If the tool calls are expensive or latency matters a lot for your\napplication, then you may want to make the rule more precise."
+  },
+  {
+    "startInSeconds": 308,
+    "endInSeconds": 312,
+    "text": "Maybe the next version should make it clear that the agent can use\nsupporting information it already"
+  },
+  {
+    "startInSeconds": 312,
+    "endInSeconds": 316,
+    "text": "has and only needs another look up when that information is missing."
+  },
+  {
+    "startInSeconds": 316,
+    "endInSeconds": 320,
+    "text": "That would be another candidate change.\nYou would test it the same way."
+  },
+  {
+    "startInSeconds": 320,
+    "endInSeconds": 324,
+    "text": "Keep the cases and evaluators fixed, run the new version,"
+  },
+  {
+    "startInSeconds": 324,
+    "endInSeconds": 329,
+    "text": "and see whether the care behavior stays improved while the\nunnecessary lookups go away."
+  },
+  {
+    "startInSeconds": 329,
+    "endInSeconds": 334,
+    "text": "And again, don't assume the new wording will work just because the\nexplanation sounds plausible."
+  },
+  {
+    "startInSeconds": 334,
+    "endInSeconds": 341,
+    "text": "Run the comparison, and let the results tell you. There's also a\nbigger question here: How long should you keep iterating?"
+  },
+  {
+    "startInSeconds": 341,
+    "endInSeconds": 347,
+    "text": "You can almost always find one more thing to improve,\nbut each additional change takes engineering time,"
+  },
+  {
+    "startInSeconds": 347,
+    "endInSeconds": 350,
+    "text": "and that time has to be worth what you expect to gain from it."
+  },
+  {
+    "startInSeconds": 350,
+    "endInSeconds": 356,
+    "text": "Maybe the first iteration removes a large cluster of failures,\nthen the next one fixes a smaller group."
+  },
+  {
+    "startInSeconds": 356,
+    "endInSeconds": 362,
+    "text": "Eventually, what remains may be a handful of rare cases\nthat each require a lot of specialized work."
+  },
+  {
+    "startInSeconds": 362,
+    "endInSeconds": 368,
+    "text": "That doesn't mean those cases never matter. A rare safety failure can\nbe much more important than a common cosmetic one."
+  },
+  {
+    "startInSeconds": 368,
+    "endInSeconds": 375,
+    "text": "So look at the value of the improvement, the severity of the remaining\nfailures, and the effort required for the next change,"
+  },
+  {
+    "startInSeconds": 375,
+    "endInSeconds": 378,
+    "text": "and go back to the bar you set before you started."
+  },
+  {
+    "startInSeconds": 378,
+    "endInSeconds": 385,
+    "text": "Did the new version reach the level of performance you said you\nneeded? Are the remaining regressions acceptable for this application?"
+  },
+  {
+    "startInSeconds": 385,
+    "endInSeconds": 389,
+    "text": "If so, you may decide that this version is good enough for now,"
+  },
+  {
+    "startInSeconds": 389,
+    "endInSeconds": 394,
+    "text": "or you may decide that the extra lookup is important enough to\njustify another round."
+  },
+  {
+    "startInSeconds": 394,
+    "endInSeconds": 396,
+    "text": "Those are two different decisions."
+  },
+  {
+    "startInSeconds": 396,
+    "endInSeconds": 400,
+    "text": "You can keep the improvement you already made and still decide\nto keep working on it,"
+  },
+  {
+    "startInSeconds": 400,
+    "endInSeconds": 403,
+    "text": "or you can keep the change and move on to something more valuable."
+  },
+  {
+    "startInSeconds": 403,
+    "endInSeconds": 407,
+    "text": "The important thing is that the decision comes from\nthe comparison you ran."
+  },
+  {
+    "startInSeconds": 407,
+    "endInSeconds": 412,
+    "text": "You can see which cases improve, what changes elsewhere,\nand when you need more detail,"
+  },
+  {
+    "startInSeconds": 412,
+    "endInSeconds": 416,
+    "text": "you can open the traces and see where the behavior started to diverge."
+  },
+  {
+    "startInSeconds": 416,
+    "endInSeconds": 419,
+    "text": "That gives you the evidence for what to try next."
+  },
+  {
+    "startInSeconds": 419,
+    "endInSeconds": 425,
+    "text": "So far, the change we tested was in the prompt,\nbut a prompt isn't always the right place to intervene."
+  },
+  {
+    "startInSeconds": 425,
+    "endInSeconds": 429,
+    "text": "Sometimes the agent is missing information,\nor maybe the tool behavior is the problem."
+  },
+  {
+    "startInSeconds": 429,
+    "endInSeconds": 436,
+    "text": "Other times, the workflow itself needs to change, and sometimes,\nyou may actually need a different model altogether."
+  },
+  {
+    "startInSeconds": 436,
+    "endInSeconds": 442,
+    "text": "In the next video, you'll look at different places you can intervene\nand how the failure you found helps you decide where to start."
+  }
+]

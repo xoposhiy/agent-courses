@@ -1,0 +1,67 @@
+# Homework 1 public teaching repository: assignments/OMIM_617988/grill_run/tasks/0021_screen_h7/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_617988/grill_run/tasks/0021_screen_h7/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_617988/grill_run/tasks/0021_screen_h7/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature confirms brain iron accumulation in GTPBP2 deficiency is an age-dependent, later-onset finding seen in only a small subset of older individuals.",
+  "confidence": 0.95,
+  "evidence": [
+    {
+      "text": "A literature review noted that out of 28 individuals with Jaberi-Elahi syndrome, all four patients with brain iron accumulation were older individuals aged between 19 and 30 years.",
+      "stance": "supports",
+      "source": {
+        "title": "Jaberi-Elahi syndrome: Exploring a novel GTPBP2 mutation and a literature review",
+        "authors": [
+          "J Manoochehri",
+          "A Shiri",
+          "S Khoddam"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.sciencedirect.com/science/article/pii/S1769721224000454",
+        "quote": "Interestingly, all four Patients with brain iron accumulation aged between nineteen and thirty"
+      },
+      "numbers": [
+        {
+          "metric": "patients with brain iron accumulation",
+          "value": 4
+        },
+        {
+          "metric": "minimum age of patients with brain iron accumulation (years)",
+          "value": 19
+        },
+        {
+          "metric": "maximum age of patients with brain iron accumulation (years)",
+          "value": 30
+        }
+      ]
+    },
+    {
+      "text": "Clinical delineation of GTPBP2 deficiency indicates that phenotypic manifestations are age-related, and brain iron accumulation may appear only after childhood.",
+      "stance": "supports",
+      "source": {
+        "title": "Clinical delineation of GTPBP2\u2010associated neuro\u2010ectodermal syndrome: Report of two new families and review of the literature",
+        "authors": [
+          "MT Carter",
+          "S Venkateswaran"
+        ],
+        "year": 2019,
+        "journal": null,
+        "doi": "10.1111/cge.13523",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/cge.13523",
+        "quote": "Our findings suggest that some aspects of the clinical presentation appear to be age-related; brain iron accumulation may appear only after childhood"
+      },
+      "numbers": []
+    }
+  ]
+}
+```

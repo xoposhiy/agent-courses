@@ -1,0 +1,73 @@
+# Homework 1 public teaching repository: assignments/OMIM_621295/grill_run/tasks/0018_screen_h5/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621295/grill_run/tasks/0018_screen_h5/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621295/grill_run/tasks/0018_screen_h5/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature systematically demonstrates a clear divergence between biallelic loss-of-function variants causing early childhood neurodevelopmental arteriopathy and biallelic cysteine-involving missense variants manifesting as adult-onset CADASIL phenocopy.",
+  "confidence": 0.95,
+  "evidence": [
+    {
+      "text": "A systematic cohort analysis verified distinct genotype-phenotype correlations: biallelic loss-of-function variants lead to a neurodevelopmental disorder marked by spasticity and childhood-onset stroke, whereas biallelic cysteine-involving missense variants present with early adulthood onset stroke, dementia, and typical CADASIL spectrum phenotype.",
+      "stance": "supports",
+      "source": {
+        "title": "Clinical and neuroradiological spectrum of biallelic variants in NOTCH3",
+        "authors": [
+          "P Iruzubieta",
+          "CAPF Alves",
+          "AM Al Shamsi"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.thelancet.com/journals/ebiom/article/PIIS2352-3964(24)00333-5/fulltext?uuid=uuid%3A96be62e9-7005-4bb8-a3db-0ba3a222ee3a",
+        "quote": "Biallelic loss-of-function variants (26 patients) lead to a neurodevelopmental disorder characterised by spasticity, childhood-onset stroke, and periatrial white matter volume loss resembling periventricular leukomalacia. Conversely, patients with biallelic cysteine-involving missense variants (24 patients) fall within CADASIL spectrum phenotype with early adulthood onset stroke, dementia, and deep white matter lesions without significant volume loss."
+      },
+      "numbers": [
+        {
+          "metric": "patients with biallelic loss-of-function variants",
+          "value": 26
+        },
+        {
+          "metric": "patients with biallelic cysteine-involving missense variants",
+          "value": 24
+        }
+      ]
+    },
+    {
+      "text": "Patients with biallelic cysteine-sparing/loss-of-function NOTCH3 variants presented in early infancy (9 to 14 months) with developmental delay, seizures, and a vascular leukoencephalopathy distinct from classic CADASIL.",
+      "stance": "supports",
+      "source": {
+        "title": "Early-onset vascular leukoencephalopathy caused by bi-allelic NOTCH3 variants",
+        "authors": [
+          "MD Stellingwerff",
+          "C Nulton",
+          "G Helman"
+        ],
+        "year": 2022,
+        "journal": null,
+        "doi": "10.1055/a-1739-2722",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.thieme-connect.com/products/ejournals/html/10.1055/a-1739-2722",
+        "quote": "The patients presented at 9 to 14 months of age with developmental delay, seizures, or both. The disease course was characterized by cognitive impairment and variably recurrent strokes, migraine attacks, and seizures... Bi-allelic cysteine-sparing NOTCH3 variants in exons 1, 32, and 33 were found."
+      },
+      "numbers": [
+        {
+          "metric": "patients described",
+          "value": 3
+        },
+        {
+          "metric": "presentation age range in months",
+          "value": "9 to 14"
+        }
+      ]
+    }
+  ]
+}
+```

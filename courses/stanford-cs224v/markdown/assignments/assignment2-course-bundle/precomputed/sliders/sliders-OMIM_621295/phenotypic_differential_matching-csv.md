@@ -1,0 +1,14 @@
+# Homework 2 bundle: precomputed/sliders/sliders-OMIM_621295/phenotypic_differential_matching.csv
+
+[Course index](../../../../../../README.md) · [Original source](https://drive.google.com/file/d/1VPlTDJULw4qIkQuVcHxxPh4Q50Nvmi-z/view#archive-member=precomputed/sliders/sliders-OMIM_621295/phenotypic_differential_matching.csv) · [Raw file](../../../../../../raw/assignments/assignment2-course-bundle/precomputed/sliders/sliders-OMIM_621295/phenotypic_differential_matching.csv)
+
+Retrieved: 2026-11-13T17:00:50.402745+00:00
+
+```csv
+row_id,target_disease,mimic_disease,overlapping_phenotypes,discriminating_phenotype,discriminating_logic,diagnostic_confidence
+3fbbfa7106be927d:0:phenotypic_differential_matching:0,"Cerebral Arteriopathy, Autosomal Recessive, with Subcortical Infarcts and Leukoencephalopathy 1",Autosomal Dominant CADASIL,"Lacunar infarcts, microbleeds, leukoencephalopathy, cognitive decline",Infantile onset with periatrial white matter volume loss and preserved temporal poles,"Dominant CADASIL presents at ages 30–50 with >88% temporal pole WMH, whereas biallelic LoF presents in early childhood (9–14 months) with periatrial white matter loss and preserved temporal poles.",high
+3fbbfa7106be927d:0:phenotypic_differential_matching:1,"Cerebral Arteriopathy, Autosomal Recessive, with Subcortical Infarcts and Leukoencephalopathy 1",Autosomal Recessive CARASIL,"Recessive leukoencephalopathy, young-adult/childhood strokes, dementia, spasticity",Absence of premature alopecia and spondylosis deformans/lumbago,"HTRA1-CARASIL causes alopecia in ~90% and spondylosis, whereas NOTCH3 pathology is restricted to brain and vascular mural cells without extraneurological signs.",high
+3fbbfa7106be927d:0:phenotypic_differential_matching:2,"Cerebral Arteriopathy, Autosomal Recessive, with Subcortical Infarcts and Leukoencephalopathy 1",Periventricular Leukomalacia,"Periatrial white matter volume loss, spastic diplegia/tetraparesis, motor delay","Deep microcalcifications, progressive childhood strokes, and absence of perinatal asphyxia","Biallelic LoF phenocopies PVL spatially, but exhibits progressive neurovascular regression and intracranial microcalcifications rather than static perinatal ischemic injury.",high
+3fbbfa7106be927d:0:phenotypic_differential_matching:3,"Cerebral Arteriopathy, Autosomal Recessive, with Subcortical Infarcts and Leukoencephalopathy 1",Adult Biallelic Cysteine-Altering CADASIL,"Recessive inheritance, subcortical lacunar infarctions, cognitive decline",Infantile/childhood onset with developmental arrest and periatrial volume loss,"Pediatric LoF presents in early childhood (9–14 months) with developmental arrest and periatrial volume loss, whereas adult cysteine-altering biallelic cases present in 3rd–5th decades with CADASIL-like temporal pole changes.",high
+
+```

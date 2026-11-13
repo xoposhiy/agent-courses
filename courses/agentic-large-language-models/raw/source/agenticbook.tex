@@ -1,0 +1,180 @@
+\documentclass{book}
+
+\usepackage{natbib}
+\usepackage[sectionbib]{chapterbib} % bibliography per chapter
+
+
+\usepackage{graphicx} % Required for inserting images
+\usepackage{url}
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{newtxmath}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[frozencache,cachedir=.]{minted}
+\usepackage{mdframed}
+\usepackage[pagebackref]{hyperref}
+\hypersetup{colorlinks=true, linkcolor=gray, citecolor=gray, linktocpage=true}
+\usepackage{forest}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{tabularx}
+\usepackage{subcaption}
+
+\usetikzlibrary{positioning}% To get more advances positioning options
+\usetikzlibrary{arrows}% To get more arrow heads
+\usetikzlibrary{chains}
+\usetikzlibrary{arrows.meta}
+\usepackage{adjustbox}
+% Add these to your preamble:
+\usepackage[most]{tcolorbox} % for fancy colored boxes
+\usepackage{fontawesome5}           % for emoji support
+%\usepackage{hyperref}        % for clickable links
+\usepackage{todonotes}
+\usepackage{standalone}
+\usepackage{booktabs}
+\usepackage[inline]{enumitem}
+\usepackage{algorithm}
+%\usepackage{algorithmic}
+\usepackage{algpseudocode}
+%\algloopdefx{NFor}[1]{\textbf{for all} #1 \textbf{do}}
+\usepackage{listings}
+%\usepackage{emoji}
+\counterwithin{listing}{chapter}
+
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newcommand{\Tau}{\mathcal{T}}
+\newcommand{\cpol}[0]{\pmb{\mu}}
+
+\newcommand\given[1][]{\:#1\vert\:}
+
+% Define the example environment
+\theoremstyle{definition}
+\newtheorem{example}{Example}
+% 2. Apply the outline and margins to the environment
+\surroundwithmdframed[
+    linewidth=0.8pt,        % Thickness of the outline
+    innerleftmargin=12pt,   % Internal padding on the left
+    innerrightmargin=12pt,  % Internal padding on the right
+    innertopmargin=12pt,    % Internal padding at the top
+    innerbottommargin=12pt, % Internal padding at the bottom
+    skipabove=15pt,         % Extra external margin above the box
+    skipbelow=15pt,         % Extra external margin below the box
+    roundcorner=3pt         % Optional: slightly rounded corners for a modern look
+]{example}
+
+
+\newtcolorbox{learningbox}{
+    colback=green!8!white,
+    colframe=green!50!black,
+    title={\faGraduationCap\quad What You Will Learn},
+    fonttitle=\bfseries,
+    coltitle=white,
+    boxrule=1pt,
+    arc=4pt,
+    left=5pt,
+    right=5pt,
+    top=5pt,
+    bottom=5pt,
+    enhanced
+}
+
+
+\title{{\bf Agentic Large Language Models}
+%\\ for Peace and prosperity\\
+%Reasoning, Assistants, Cooperation\\ Superassistants \& Supercooperation\\ Super Peace
+}
+\author{Max van Duijn\\ Michiel van der Meer\\ Aske Plaat\\ Niki van Stein}
+%\date{10 March 2025\\ \ \\
+\date{%Incomplete Draft Version of 22 August 2026\\ \ \\ For internal use for education at Leiden University only\\ Not to be distributed\\ \ \\
+%\includegraphics[width=6cm]{figures/agent}\\
+\includegraphics[width=6cm]{figures/virtuouscover2}\\
+\vspace{2cm}
+\includegraphics[width=2cm]{figures/leiden}\\
+}
+
+
+
+\begin{document}
+
+
+\maketitle
+
+\setcounter{tocdepth}{1}
+%\tableofcontents
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+
+
+\include{chapters/01_intro}
+
+
+\part{Language Modeling}
+\include{part1/pt_lang}
+\include{part1/02_lang}
+\include{part1/03_pipeline}
+\include{part1/04_scaling}
+\include{part1/05_case1_scratch}
+
+
+%\part{Reasoning and Learning to Act}
+\part{Reasoning}
+\include{part2/pt_reas}
+\include{part2/06_reasoning} % in context 
+\include{part2/07_robot}     % pretraining 
+\include{part2/08_meta}    % Agentic LLM that learn
+
+
+\part{Agents}
+\include{part3/pt_agent}
+\include{part3/09_agents}    % Agentic LLM that learn
+\include{part3/10_case2_reflection}
+
+
+
+%\part{Tools \& Assistants}
+%\part{Tools for Agentic Systems and their Applications}
+\part{Tools and Assistants}
+\include{part4/pt_tools}
+\include{part4/11_tools_niki}
+\include{part4/12_retrieval_niki}
+\include{part4/13_assist}
+\include{part4/14_case3_assist}
+
+
+\part{Behavior and Cognition}
+\include{part5/pt_beh}
+\include{part5/15_behavior}
+\include{part5/16_role-based}
+\include{part5/17_emergent}
+\include{part5/18_case4_societysim}
+
+
+\part{Advanced Topics}
+\include{part6/pt_adv}
+\include{part6/19_synthetic}
+\include{part6/20_advanced_arch}
+\include{part6/21_mechanistic}
+\include{part6/22_cognition}
+
+
+\part{Conclusion}
+\include{chapters/pt_concl}
+\include{chapters/23_concl}
+
+
+
+
+
+% not used here anymore because bibunits per chapter
+%\bibliographystyle{plainnat}
+% to count the number of references...
+%\bibliographystyle{plain}
+%\bibliography{agenticbook, part1/refs, part1/case, part6/synthetic}
+
+\end{document}

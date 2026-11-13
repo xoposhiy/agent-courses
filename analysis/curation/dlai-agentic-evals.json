@@ -1,0 +1,287 @@
+{
+  "source_id": "dlai-agentic-evals",
+  "summary": "A focused evaluation course with a complete cycle from requirements and trace inspection to test sets, evaluators, action and outcome checks, controlled changes, and production regression tests.",
+  "limitations": [
+    "Five slide decks and 28 lesson transcripts are available.",
+    "Restricted labs and quizzes are not reconstructed or counted as available teaching content.",
+    "Improvement-test planning is evaluation work; it is not counted as agent task planning. A lesson about a judge is evaluation, while a persona exercise in another course is not automatically LLM-as-judge training."
+  ],
+  "new_concepts": [
+    {
+      "id": "requirements",
+      "label": "Requirements and expected behavior",
+      "kind": "method",
+      "definition": "Define observable agent behavior and expected outcomes before evaluating a system.",
+      "aliases": [
+        "application requirements",
+        "behavior requirements"
+      ],
+      "parent_id": "benchmark-design"
+    },
+    {
+      "id": "error-analysis",
+      "label": "Error analysis and failure taxonomy",
+      "kind": "method",
+      "definition": "Inspect failed cases, label failure types, and prioritize fixes by frequency and impact.",
+      "aliases": [
+        "failure analysis",
+        "failure categories"
+      ],
+      "parent_id": "evaluation"
+    },
+    {
+      "id": "session-eval",
+      "label": "Multi-turn and session evaluation",
+      "kind": "topic",
+      "definition": "Evaluate behavior across conversation turns and preserve relevant earlier constraints.",
+      "aliases": [
+        "session evaluation",
+        "multi-turn evaluation"
+      ],
+      "parent_id": "evaluation"
+    },
+    {
+      "id": "outcome-eval",
+      "label": "Task outcome and state-change verification",
+      "kind": "topic",
+      "definition": "Check the actual system state and side effects after an agent acts.",
+      "aliases": [
+        "outcome verification",
+        "end-state verification"
+      ],
+      "parent_id": "evaluation"
+    },
+    {
+      "id": "controlled-eval",
+      "label": "Controlled improvement experiments",
+      "kind": "method",
+      "definition": "Change a defined part of an agent and compare versions under the same test conditions.",
+      "aliases": [
+        "improvement tests",
+        "controlled version comparison"
+      ],
+      "parent_id": "evaluation"
+    },
+    {
+      "id": "production-eval",
+      "label": "Production monitoring and evaluation feedback",
+      "kind": "pattern",
+      "definition": "Inspect real runs and feedback and turn production failures into test cases.",
+      "aliases": [
+        "production evals",
+        "data flywheel"
+      ],
+      "parent_id": "evaluation"
+    },
+    {
+      "id": "evaluator-metrics",
+      "label": "Evaluator precision, recall, and agreement",
+      "kind": "method",
+      "definition": "Measure evaluator errors and agreement against trusted labels.",
+      "aliases": [
+        "Cohen kappa",
+        "judge precision and recall"
+      ],
+      "parent_id": "judge-validation"
+    },
+    {
+      "id": "cost-quality",
+      "label": "Cost, latency, and quality tradeoffs",
+      "kind": "topic",
+      "definition": "Compare performance gains with runtime cost, time, and failure consequences.",
+      "aliases": [
+        "cost-quality tradeoffs",
+        "latency tradeoffs"
+      ],
+      "parent_id": null
+    }
+  ],
+  "coverage": [
+    {
+      "concept_id": "evaluation",
+      "source": "markdown/slides/module-1.md",
+      "needle": "Evaluate systematically",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "agent-architecture",
+      "source": "markdown/slides/module-1.md",
+      "needle": "An agent works toward a goal",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "observability",
+      "source": "markdown/slides/module-1.md",
+      "needle": "Each step in a trace is recorded as a span",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reliability",
+      "source": "markdown/slides/module-1.md",
+      "needle": "Measure across cases and repeated runs",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "human-eval",
+      "source": "markdown/slides/module-1.md",
+      "needle": "Check the evaluator against people",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "requirements",
+      "source": "markdown/slides/module-2.md",
+      "needle": "Make vague words explicit",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "benchmark-design",
+      "source": "markdown/slides/module-2.md",
+      "needle": "What a complete benchmark case looks like",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "error-analysis",
+      "source": "markdown/slides/module-2.md",
+      "needle": "Use categories to label recurring failure patterns",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "synthetic-data",
+      "source": "markdown/slides/module-2.md",
+      "needle": "Use synthetic data for gaps",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "code-grader",
+      "source": "markdown/slides/module-3.md",
+      "needle": "Use code when a rule decides the answer",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "llm-judge",
+      "source": "markdown/slides/module-3.md",
+      "needle": "A judge needs a model, a rubric and data",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "rubrics",
+      "source": "markdown/slides/module-3.md",
+      "needle": "A custom rubric has five parts",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "judge-validation",
+      "source": "markdown/slides/module-3.md",
+      "needle": "Test on cases you didn’t use to build the rubric",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "evaluator-metrics",
+      "source": "markdown/slides/module-3.md",
+      "needle": "Precision and recall",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "structured-output",
+      "source": "markdown/slides/module-3.md",
+      "needle": "Constrain the output",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "tool-use",
+      "source": "markdown/slides/module-4.md",
+      "needle": "Check the tool and its arguments",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "tool-eval",
+      "source": "markdown/slides/module-4.md",
+      "needle": "Check selection, invocation, presence, and absence",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "trajectory-eval",
+      "source": "markdown/slides/module-4.md",
+      "needle": "Evaluate how actions fit together",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "session-eval",
+      "source": "markdown/slides/module-4.md",
+      "needle": "Evaluate across the session",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "outcome-eval",
+      "source": "markdown/slides/module-4.md",
+      "needle": "Verify the system outcome",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "user-simulation",
+      "source": "markdown/slides/module-4.md",
+      "needle": "Let a simulated user respond to the agent",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "hitl",
+      "source": "markdown/slides/module-4.md",
+      "needle": "Wait for the customer to confirm the amount",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "safety",
+      "source": "markdown/slides/module-4.md",
+      "needle": "Some actions must not happen",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "abstention",
+      "source": "markdown/slides/module-4.md",
+      "needle": "Define what to do when information is missing",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "controlled-eval",
+      "source": "markdown/slides/module-5.md",
+      "needle": "Change one thing, keep the comparison stable",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "regression-eval",
+      "source": "markdown/slides/module-5.md",
+      "needle": "Compare three versions on the same benchmark",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "production-eval",
+      "source": "markdown/slides/module-5.md",
+      "needle": "Feed production evidence back into offline evals",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "cost-quality",
+      "source": "markdown/slides/module-5.md",
+      "needle": "Every added step has a cost",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "grounding",
+      "source": "markdown/slides/module-5.md",
+      "needle": "Test a grounding hypothesis",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "prompting",
+      "source": "markdown/slides/module-5.md",
+      "needle": "Clarify the requirement in the prompt",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "decoding",
+      "source": "markdown/slides/module-5.md",
+      "needle": "Tune sampling when variability is the problem",
+      "coverage": "taught"
+    }
+  ]
+}

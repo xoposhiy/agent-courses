@@ -1,0 +1,131 @@
+{
+  "scope": "Links in published source files whose targets are absent from the downloaded complete archives.",
+  "omissions": [
+    {
+      "material_id": "assignments/assignment2-course-bundle/vendor/aos/README-md",
+      "markdown_path": "markdown/assignments/assignment2-course-bundle/vendor/aos/README-md.md",
+      "raw_path": "raw/assignments/assignment2-course-bundle/vendor/aos/README.md",
+      "missing_target": "PLAN.md"
+    },
+    {
+      "material_id": "assignments/assignment2-course-bundle/vendor/aos/README-md",
+      "markdown_path": "markdown/assignments/assignment2-course-bundle/vendor/aos/README-md.md",
+      "raw_path": "raw/assignments/assignment2-course-bundle/vendor/aos/README.md",
+      "missing_target": "examples/fabry/README.md"
+    },
+    {
+      "material_id": "assignments/assignment2-course-bundle/vendor/aos/docs/ARCHITECTURE-md",
+      "markdown_path": "markdown/assignments/assignment2-course-bundle/vendor/aos/docs/ARCHITECTURE-md.md",
+      "raw_path": "raw/assignments/assignment2-course-bundle/vendor/aos/docs/ARCHITECTURE.md",
+      "missing_target": "../PLAN.md"
+    },
+    {
+      "material_id": "assignments/assignment2-course-bundle/vendor/aos/docs/CUSTOM_WORKERS-md",
+      "markdown_path": "markdown/assignments/assignment2-course-bundle/vendor/aos/docs/CUSTOM_WORKERS-md.md",
+      "raw_path": "raw/assignments/assignment2-course-bundle/vendor/aos/docs/CUSTOM_WORKERS.md",
+      "missing_target": "../examples/workers/glossary.py"
+    },
+    {
+      "material_id": "assignments/assignment2-course-bundle/vendor/aos/docs/CUSTOM_WORKERS-md",
+      "markdown_path": "markdown/assignments/assignment2-course-bundle/vendor/aos/docs/CUSTOM_WORKERS-md.md",
+      "raw_path": "raw/assignments/assignment2-course-bundle/vendor/aos/docs/CUSTOM_WORKERS.md",
+      "missing_target": "../scripts/setup_external.sh"
+    },
+    {
+      "material_id": "assignments/assignment2-course-bundle/vendor/aos/docs/DEVELOPMENT-md",
+      "markdown_path": "markdown/assignments/assignment2-course-bundle/vendor/aos/docs/DEVELOPMENT-md.md",
+      "raw_path": "raw/assignments/assignment2-course-bundle/vendor/aos/docs/DEVELOPMENT.md",
+      "missing_target": "../tests/conftest.py"
+    },
+    {
+      "material_id": "assignments/assignment2-course-bundle/vendor/aos/docs/DEVELOPMENT-md",
+      "markdown_path": "markdown/assignments/assignment2-course-bundle/vendor/aos/docs/DEVELOPMENT-md.md",
+      "raw_path": "raw/assignments/assignment2-course-bundle/vendor/aos/docs/DEVELOPMENT.md",
+      "missing_target": "../examples/workers/glossary.py"
+    },
+    {
+      "material_id": "assignments/assignment2-course-bundle/vendor/aos/docs/DEVELOPMENT-md",
+      "markdown_path": "markdown/assignments/assignment2-course-bundle/vendor/aos/docs/DEVELOPMENT-md.md",
+      "raw_path": "raw/assignments/assignment2-course-bundle/vendor/aos/docs/DEVELOPMENT.md",
+      "missing_target": "../PLAN.md"
+    },
+    {
+      "material_id": "assignments/assignment2-course-bundle/vendor/aos/docs/TUTORIAL-md",
+      "markdown_path": "markdown/assignments/assignment2-course-bundle/vendor/aos/docs/TUTORIAL-md.md",
+      "raw_path": "raw/assignments/assignment2-course-bundle/vendor/aos/docs/TUTORIAL.md",
+      "missing_target": "../examples/fabry/README.md"
+    },
+    {
+      "material_id": "assignments/assignment2-course-bundle/vendor/aos/docs/WORKERS-md",
+      "markdown_path": "markdown/assignments/assignment2-course-bundle/vendor/aos/docs/WORKERS-md.md",
+      "raw_path": "raw/assignments/assignment2-course-bundle/vendor/aos/docs/WORKERS.md",
+      "missing_target": "../scripts/setup_external.sh"
+    },
+    {
+      "material_id": "repositories/cs224vf26-assignment1-public/vendor/grill/README-md",
+      "markdown_path": "markdown/repositories/cs224vf26-assignment1-public/vendor/grill/README-md.md",
+      "raw_path": "raw/repositories/cs224vf26-assignment1-public/vendor/grill/README.md",
+      "missing_target": "METHODOLOGY_v2.md"
+    },
+    {
+      "material_id": "repositories/cs224vf26-assignment1-public/vendor/grill/README-md",
+      "markdown_path": "markdown/repositories/cs224vf26-assignment1-public/vendor/grill/README-md.md",
+      "raw_path": "raw/repositories/cs224vf26-assignment1-public/vendor/grill/README.md",
+      "missing_target": "METHODOLOGY_v2.md"
+    },
+    {
+      "material_id": "repositories/cs224vf26-assignment1-public/vendor/grill/src/DESIGN_interactive-md",
+      "markdown_path": "markdown/repositories/cs224vf26-assignment1-public/vendor/grill/src/DESIGN_interactive-md.md",
+      "raw_path": "raw/repositories/cs224vf26-assignment1-public/vendor/grill/src/DESIGN_interactive.md",
+      "missing_target": "../FIX_PLAN_post_review.md"
+    },
+    {
+      "material_id": "repositories/cs224vf26-assignment1-public/vendor/grill/src/README-md",
+      "markdown_path": "markdown/repositories/cs224vf26-assignment1-public/vendor/grill/src/README-md.md",
+      "raw_path": "raw/repositories/cs224vf26-assignment1-public/vendor/grill/src/README.md",
+      "missing_target": "../METHODOLOGY_v2.md"
+    },
+    {
+      "material_id": "repositories/stanford-oval-genie-worksheets/docs/examples-md",
+      "markdown_path": "markdown/repositories/stanford-oval-genie-worksheets/docs/examples-md.md",
+      "raw_path": "raw/repositories/stanford-oval-genie-worksheets/docs/examples.md",
+      "missing_target": "restaurant_reservation.md"
+    },
+    {
+      "material_id": "repositories/stanford-oval-genie-worksheets/docs/examples-md",
+      "markdown_path": "markdown/repositories/stanford-oval-genie-worksheets/docs/examples-md.md",
+      "raw_path": "raw/repositories/stanford-oval-genie-worksheets/docs/examples.md",
+      "missing_target": "ticket_submission.md"
+    },
+    {
+      "material_id": "repositories/stanford-oval-genie-worksheets/docs/index-md",
+      "markdown_path": "markdown/repositories/stanford-oval-genie-worksheets/docs/index-md.md",
+      "raw_path": "raw/repositories/stanford-oval-genie-worksheets/docs/index.md",
+      "missing_target": "assets/banner.jpg"
+    },
+    {
+      "material_id": "repositories/stanford-oval-genie-worksheets/docs/installation-md",
+      "markdown_path": "markdown/repositories/stanford-oval-genie-worksheets/docs/installation-md.md",
+      "raw_path": "raw/repositories/stanford-oval-genie-worksheets/docs/installation.md",
+      "missing_target": "troubleshooting.md"
+    },
+    {
+      "material_id": "repositories/stanford-oval-genie-worksheets/web/docs/examples/index-html",
+      "markdown_path": "markdown/repositories/stanford-oval-genie-worksheets/web/docs/examples/index-html.md",
+      "raw_path": "raw/repositories/stanford-oval-genie-worksheets/web/docs/examples/index.html",
+      "missing_target": "restaurant_reservation.md"
+    },
+    {
+      "material_id": "repositories/stanford-oval-genie-worksheets/web/docs/examples/index-html",
+      "markdown_path": "markdown/repositories/stanford-oval-genie-worksheets/web/docs/examples/index-html.md",
+      "raw_path": "raw/repositories/stanford-oval-genie-worksheets/web/docs/examples/index.html",
+      "missing_target": "ticket_submission.md"
+    },
+    {
+      "material_id": "repositories/stanford-oval-genie-worksheets/web/docs/installation/index-html",
+      "markdown_path": "markdown/repositories/stanford-oval-genie-worksheets/web/docs/installation/index-html.md",
+      "raw_path": "raw/repositories/stanford-oval-genie-worksheets/web/docs/installation/index.html",
+      "missing_target": "troubleshooting.md"
+    }
+  ]
+}

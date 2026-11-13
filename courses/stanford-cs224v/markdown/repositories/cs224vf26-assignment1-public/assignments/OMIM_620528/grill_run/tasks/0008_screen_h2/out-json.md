@@ -1,0 +1,66 @@
+# Homework 1 public teaching repository: assignments/OMIM_620528/grill_run/tasks/0008_screen_h2/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620528/grill_run/tasks/0008_screen_h2/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620528/grill_run/tasks/0008_screen_h2/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "dHMN is classically differentiated from axonal CMT2 by the preservation of sensory nerve action potentials alongside motor axonal loss, which is corroborated in SPTAN1-related motor neuropathy reports.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "Distal hereditary motor neuropathies caused by SPTAN1 variants are characterized by length-dependent lower motor neuron axonal degeneration with reduced compound muscle action potentials without significant sensory involvement.",
+      "stance": "supports",
+      "source": {
+        "title": "Nonsense mutations in alpha-II spectrin in three families with juvenile onset hereditary motor neuropathy",
+        "authors": [
+          "D Beijer",
+          "T Deconinck",
+          "JL De Bleecker",
+          "MT Dotti"
+        ],
+        "year": 2019,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://academic.oup.com/brain/article-abstract/142/9/2605/5536902",
+        "quote": "Distal hereditary motor neuropathies are a rare subgroup of inherited peripheral neuropathies hallmarked by a length-dependent axonal degeneration of lower motor neurons without significant involvement of sensory neurons."
+      },
+      "numbers": [
+        {
+          "metric": "dHMN families identified",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "text": "Electrophysiological assessment in a Chinese family with an SPTAN1 nonsense variant demonstrated normal sensory nerve conduction velocities and normal sensory nerve action potentials across all tested nerves, confirming motor axonal neuropathy.",
+      "stance": "supports",
+      "source": {
+        "title": "A novel de novo SPTAN1 nonsense variant causes hereditary motor neuropathy in a Chinese family",
+        "authors": [
+          "HL Dong",
+          "L Chen",
+          "ZY Wu"
+        ],
+        "year": 2021,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://academic.oup.com/brain/article-abstract/144/1/e11/6015895",
+        "quote": "sensory nerve conduction velocities and sensory nerve action potentials in all tested nerves ... These results supported motor axonal neuropathy, which was concordant with the clinical"
+      },
+      "numbers": [
+        {
+          "metric": "families",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}
+```

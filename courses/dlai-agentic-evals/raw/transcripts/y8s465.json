@@ -1,0 +1,472 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 6,
+    "text": "In this module, you've explored how to build evaluators\nand test whether you can trust their judgments."
+  },
+  {
+    "startInSeconds": 6,
+    "endInSeconds": 10,
+    "text": "You started with code evaluators for requirements that can\nbe checked directly."
+  },
+  {
+    "startInSeconds": 10,
+    "endInSeconds": 14,
+    "text": "Then you looked at LLM judges for requirements that\nneed interpretation."
+  },
+  {
+    "startInSeconds": 14,
+    "endInSeconds": 18,
+    "text": "You also wrote a rubric for an application-specific requirement,"
+  },
+  {
+    "startInSeconds": 18,
+    "endInSeconds": 22,
+    "text": "and you measured whether the judge's labels agreed with reviewed\nlabels before relying on them."
+  },
+  {
+    "startInSeconds": 22,
+    "endInSeconds": 29,
+    "text": "Now, let's bring those ideas together with the Northwind agent.\nIn this module's lab, you'll use three evaluators."
+  },
+  {
+    "startInSeconds": 29,
+    "endInSeconds": 33,
+    "text": "One checks whether the products mentioned in a\nresponse actually exist."
+  },
+  {
+    "startInSeconds": 33,
+    "endInSeconds": 37,
+    "text": "The second one checks whether the response correctly answers the\ncustomer's question,"
+  },
+  {
+    "startInSeconds": 37,
+    "endInSeconds": 41,
+    "text": "and the third one checks whether the response stays within\nNorthwind's capabilities."
+  },
+  {
+    "startInSeconds": 41,
+    "endInSeconds": 46,
+    "text": "Each evaluator answers a different question,\nso you'll keep their results separate."
+  },
+  {
+    "startInSeconds": 46,
+    "endInSeconds": 50,
+    "text": "That way, when a response fails, you can see which\nrequirement it failed."
+  },
+  {
+    "startInSeconds": 50,
+    "endInSeconds": 54,
+    "text": "Take a look at the reviewed cases from the Northwind benchmark."
+  },
+  {
+    "startInSeconds": 54,
+    "endInSeconds": 60,
+    "text": "Each case keeps together the customer's question, the agent's\nresponse, and the label a reviewer assigned to that response."
+  },
+  {
+    "startInSeconds": 60,
+    "endInSeconds": 65,
+    "text": "That label matters because it applies to the specific\nresponse that was reviewed."
+  },
+  {
+    "startInSeconds": 65,
+    "endInSeconds": 71,
+    "text": "Before you build the evaluators, set aside some of those reviewed\ncases as a held-out validation set."
+  },
+  {
+    "startInSeconds": 71,
+    "endInSeconds": 75,
+    "text": "Use the remaining development cases to build\nand refine the evaluators."
+  },
+  {
+    "startInSeconds": 75,
+    "endInSeconds": 83,
+    "text": "Save the held-out set for later, when you want to test whether the\nevaluators work on examples that did not shape how they were built."
+  },
+  {
+    "startInSeconds": 83,
+    "endInSeconds": 87,
+    "text": "When you choose the held-out validation cases, think about coverage."
+  },
+  {
+    "startInSeconds": 87,
+    "endInSeconds": 91,
+    "text": "Suppose responses that go beyond Northwind's capabilities are\nrare in the benchmark."
+  },
+  {
+    "startInSeconds": 91,
+    "endInSeconds": 97,
+    "text": "If you split the data randomly, your validation set may contain only\none or two of those cases."
+  },
+  {
+    "startInSeconds": 97,
+    "endInSeconds": 100,
+    "text": "Then missing one policy violation would change recall a lot,"
+  },
+  {
+    "startInSeconds": 100,
+    "endInSeconds": 105,
+    "text": "and you still would not have much evidence about whether the judge\ncatches that failure reliably."
+  },
+  {
+    "startInSeconds": 105,
+    "endInSeconds": 109,
+    "text": "So include enough reviewed examples of the important failure\ntypes you want to test."
+  },
+  {
+    "startInSeconds": 109,
+    "endInSeconds": 112,
+    "text": "That doesn't mean those failures are equally common in production."
+  },
+  {
+    "startInSeconds": 112,
+    "endInSeconds": 117,
+    "text": "It means your validation set is designed to test whether the\nevaluator can catch them."
+  },
+  {
+    "startInSeconds": 117,
+    "endInSeconds": 121,
+    "text": "Now, choose evaluators for the three Northwind requirements."
+  },
+  {
+    "startInSeconds": 121,
+    "endInSeconds": 130,
+    "text": "First, every product mentioned in an agent response should exist in\nthe catalog. is your source of truth, so this is a code evaluator."
+  },
+  {
+    "startInSeconds": 130,
+    "endInSeconds": 136,
+    "text": "If the customer asks for a jacket and the agent recommends a product\nthat is not in the catalog, the answer may sound reasonable,"
+  },
+  {
+    "startInSeconds": 136,
+    "endInSeconds": 137,
+    "text": "but the product does not exist."
+  },
+  {
+    "startInSeconds": 137,
+    "endInSeconds": 145,
+    "text": "The evaluator can compare the product names or IDs in the response\nwith the catalog. The check passes if every mentioned product exists."
+  },
+  {
+    "startInSeconds": 145,
+    "endInSeconds": 151,
+    "text": "If the response mentions a product that is not in the catalog,\nit fails. You don't need an LLM to decide that."
+  },
+  {
+    "startInSeconds": 151,
+    "endInSeconds": 155,
+    "text": "The catalog comparison determines the result."
+  },
+  {
+    "startInSeconds": 155,
+    "endInSeconds": 160,
+    "text": "But a response can mention only real products and still fail to answer\nthe customer's question."
+  },
+  {
+    "startInSeconds": 160,
+    "endInSeconds": 163,
+    "text": "For example, the customer might ask which shoes are\nbest for rainy weather,"
+  },
+  {
+    "startInSeconds": 163,
+    "endInSeconds": 169,
+    "text": "and the agent might list real products without explaining\nwhich ones are waterproof or appropriate for rain."
+  },
+  {
+    "startInSeconds": 169,
+    "endInSeconds": 173,
+    "text": "The products exist, but the response may not answer\nthe actual question."
+  },
+  {
+    "startInSeconds": 173,
+    "endInSeconds": 179,
+    "text": "To evaluate that, you need to interpret the customer's question\nand the agent's response together."
+  },
+  {
+    "startInSeconds": 179,
+    "endInSeconds": 182,
+    "text": "This is a good place to use a built-in correctness evaluator."
+  },
+  {
+    "startInSeconds": 182,
+    "endInSeconds": 190,
+    "text": "Phoenix provides a CorrectnessEvaluator for common response quality\njudgments like accuracy, completeness, and logical consistency."
+  },
+  {
+    "startInSeconds": 190,
+    "endInSeconds": 197,
+    "text": "You provide the customer question and the agent response, and the\njudge decides whether the response correctly answers the question."
+  },
+  {
+    "startInSeconds": 197,
+    "endInSeconds": 202,
+    "text": "So now you have two checks: one code evaluator that asks,\n\"Are the products real?\""
+  },
+  {
+    "startInSeconds": 202,
+    "endInSeconds": 207,
+    "text": "and one correctness judge that asks, \"Did the response answer the\ncustomer's question?\""
+  },
+  {
+    "startInSeconds": 207,
+    "endInSeconds": 213,
+    "text": "But the Northwind agent has another requirement that general\ncorrectness does not fully capture, which has to do with scope."
+  },
+  {
+    "startInSeconds": 213,
+    "endInSeconds": 221,
+    "text": "It can answer product and catalog questions, but it should not look up\norders, process returns, issue refunds, check shipping status,"
+  },
+  {
+    "startInSeconds": 221,
+    "endInSeconds": 223,
+    "text": "or access other support systems."
+  },
+  {
+    "startInSeconds": 223,
+    "endInSeconds": 231,
+    "text": "If a customer asks, \"Can I return this after 60 days?\" the agent\nshould not invent a return window or ask for an order number."
+  },
+  {
+    "startInSeconds": 231,
+    "endInSeconds": 237,
+    "text": "It should simply explain that it cannot help with returns.\nA general correctness evaluator may not know that boundary."
+  },
+  {
+    "startInSeconds": 237,
+    "endInSeconds": 242,
+    "text": "It might see a fluent, helpful-sounding return answer\nand treat it as acceptable."
+  },
+  {
+    "startInSeconds": 242,
+    "endInSeconds": 249,
+    "text": "But for Northwind, that response is outside the agent's capabilities.\nThat means this requirement needs a custom LLM judge."
+  },
+  {
+    "startInSeconds": 249,
+    "endInSeconds": 253,
+    "text": "You'll build that judge using the rubric structure from\nearlier in the module."
+  },
+  {
+    "startInSeconds": 253,
+    "endInSeconds": 261,
+    "text": "Start with the role: the judge is evaluating whether a Northwind\ncustomer-support response stays within the agent's capabilities."
+  },
+  {
+    "startInSeconds": 261,
+    "endInSeconds": 266,
+    "text": "Then, define the criteria: a compliant response stays within product\nand catalog support."
+  },
+  {
+    "startInSeconds": 266,
+    "endInSeconds": 273,
+    "text": "If the customer asks for something outside those capabilities, a\ncompliant response says that Northwind cannot help with that request."
+  },
+  {
+    "startInSeconds": 273,
+    "endInSeconds": 279,
+    "text": "A non-compliant response invents a process or capability\nthat the agent was never given."
+  },
+  {
+    "startInSeconds": 279,
+    "endInSeconds": 287,
+    "text": "That could be a return policy, a refund process, a shipping lookup,\nor a support channel that does not exist in the provided information."
+  },
+  {
+    "startInSeconds": 287,
+    "endInSeconds": 293,
+    "text": "Next, provide the inputs. For this evaluator,\nthe judge needs the customer's question and the agent's response."
+  },
+  {
+    "startInSeconds": 293,
+    "endInSeconds": 301,
+    "text": "Put them in a clearly labeled data block so the judge knows exactly\nwhat it is evaluating. Then add reviewed development examples."
+  },
+  {
+    "startInSeconds": 301,
+    "endInSeconds": 306,
+    "text": "Choose examples that clarify the boundary between compliant\nand non-compliant responses."
+  },
+  {
+    "startInSeconds": 306,
+    "endInSeconds": 313,
+    "text": "For example, one compliant response might say, \"I can help with\nproduct and catalog questions, but I can't process returns.\""
+  },
+  {
+    "startInSeconds": 313,
+    "endInSeconds": 321,
+    "text": "A non-compliant response might say, \"You have 90 days to return the\nitem,\" even though Northwind never provided that policy."
+  },
+  {
+    "startInSeconds": 321,
+    "endInSeconds": 326,
+    "text": "Finally, constrain the output. Ask for one label:\nCOMPLIANT or NON_COMPLIANT."
+  },
+  {
+    "startInSeconds": 326,
+    "endInSeconds": 332,
+    "text": "Fixed labels make the results easier to compare with reviewed labels,\nand easier to filter in Phoenix."
+  },
+  {
+    "startInSeconds": 332,
+    "endInSeconds": 338,
+    "text": "Once you have the three evaluators, run them on the development cases\nand save each result as a separate annotation."
+  },
+  {
+    "startInSeconds": 338,
+    "endInSeconds": 345,
+    "text": "That part is important because a response can pass one requirement\nand fail another. Suppose a customer asks about returning an item."
+  },
+  {
+    "startInSeconds": 345,
+    "endInSeconds": 351,
+    "text": "The agent mentions only real Northwind products,\nIt gives a response that sounds complete and helpful,"
+  },
+  {
+    "startInSeconds": 351,
+    "endInSeconds": 354,
+    "text": "but it also invents a return process that Northwind does not support."
+  },
+  {
+    "startInSeconds": 354,
+    "endInSeconds": 361,
+    "text": "The product_exists evaluator may pass, as well as the correctness\nevaluator, but the policy_compliance judge should fail."
+  },
+  {
+    "startInSeconds": 361,
+    "endInSeconds": 366,
+    "text": "If you collapse those results into one overall score,\nthat policy failure can disappear."
+  },
+  {
+    "startInSeconds": 366,
+    "endInSeconds": 372,
+    "text": "Separate annotations let you see which requirement failed and\nwhich responses need inspection."
+  },
+  {
+    "startInSeconds": 372,
+    "endInSeconds": 377,
+    "text": "Before relying on the policy compliance labels,\nvalidate the custom judge."
+  },
+  {
+    "startInSeconds": 377,
+    "endInSeconds": 378,
+    "text": "Run it on the held-out set,"
+  },
+  {
+    "startInSeconds": 378,
+    "endInSeconds": 384,
+    "text": "and compare its COMPLIANT and NON_COMPLIANT predictions with the\nreviewed labels for those same responses."
+  },
+  {
+    "startInSeconds": 384,
+    "endInSeconds": 388,
+    "text": "Use recall to see how many actual policy violations the judge caught."
+  },
+  {
+    "startInSeconds": 388,
+    "endInSeconds": 392,
+    "text": "Check precision to measure how often its policy\nviolation flags were correct,"
+  },
+  {
+    "startInSeconds": 392,
+    "endInSeconds": 399,
+    "text": "and use Cohen's kappa to check how much the judge agrees with the\nreviewed labels beyond what you would expect by chance."
+  },
+  {
+    "startInSeconds": 399,
+    "endInSeconds": 405,
+    "text": "But don't stop at the metrics. When the judge and reviewer disagree,\nopen the case and inspect it."
+  },
+  {
+    "startInSeconds": 405,
+    "endInSeconds": 412,
+    "text": "Read the customer question, the agent response,\nand the judge's explanation. Then apply the rubric yourself."
+  },
+  {
+    "startInSeconds": 412,
+    "endInSeconds": 417,
+    "text": "What if the judge missed that the response invented a refund process,\nor the reviewed label was wrong,"
+  },
+  {
+    "startInSeconds": 417,
+    "endInSeconds": 421,
+    "text": "or maybe the rubric did not make the capability boundary clear enough?"
+  },
+  {
+    "startInSeconds": 421,
+    "endInSeconds": 426,
+    "text": "A disagreement does not automatically tell you which side is right,\nit tells you where to look."
+  },
+  {
+    "startInSeconds": 426,
+    "endInSeconds": 431,
+    "text": "If you revise the rubric based on those disagreements,\nchange one thing at a time,"
+  },
+  {
+    "startInSeconds": 431,
+    "endInSeconds": 435,
+    "text": "then test the revised version on fresh reviewed cases when you can."
+  },
+  {
+    "startInSeconds": 435,
+    "endInSeconds": 441,
+    "text": "Once a case has influenced the rubric, it is no longer a clean\nvalidation case for that revised evaluator."
+  },
+  {
+    "startInSeconds": 441,
+    "endInSeconds": 444,
+    "text": "Keep the same discipline you used earlier in the module."
+  },
+  {
+    "startInSeconds": 444,
+    "endInSeconds": 451,
+    "text": "Build on development cases, validate on held-out cases,\ninspect disagreements, revise carefully, then test again."
+  },
+  {
+    "startInSeconds": 451,
+    "endInSeconds": 455,
+    "text": "That is the process you'll use in the upcoming lab."
+  },
+  {
+    "startInSeconds": 455,
+    "endInSeconds": 463,
+    "text": "Define the requirement, identify the evidence that can answer it,\nchoose the simplest evaluator that can apply the requirement reliably."
+  },
+  {
+    "startInSeconds": 463,
+    "endInSeconds": 469,
+    "text": "Use code when the answer can be checked directly. Use a built-in LLM\njudge when the requirement is interpretive, but general."
+  },
+  {
+    "startInSeconds": 469,
+    "endInSeconds": 474,
+    "text": "Use a custom rubric when the requirement depends on\napplication-specific rules."
+  },
+  {
+    "startInSeconds": 474,
+    "endInSeconds": 480,
+    "text": "And with that, you're nearing the end of Module 3,\nwhere you've focused mostly on evaluating individual responses."
+  },
+  {
+    "startInSeconds": 480,
+    "endInSeconds": 483,
+    "text": "In the next module, you'll widen the view."
+  },
+  {
+    "startInSeconds": 483,
+    "endInSeconds": 490,
+    "text": "You'll evaluate what happens along the way, the actions an agent\nchooses, the tools it calls, the sequence it follows,"
+  },
+  {
+    "startInSeconds": 490,
+    "endInSeconds": 493,
+    "text": "and the state it changes outside the conversation."
+  },
+  {
+    "startInSeconds": 493,
+    "endInSeconds": 495,
+    "text": "Good luck with the lab, and see you in Module 4."
+  }
+]

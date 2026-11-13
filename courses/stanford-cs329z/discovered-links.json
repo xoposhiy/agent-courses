@@ -1,0 +1,338 @@
+[
+  [
+    "https://web.stanford.edu/class/cs329z/slides/lecture01.pdf",
+    "lecture01: 1 Wed Sep 23 Foundations & Landscape Introduction \u2014 What Are Agentic Systems? Course logistics, a brief history of agents, and the anatomy of an agent: LLM core, reasoning, memory, tools, and environment. Compound AI systems and workflows "
+  ],
+  [
+    "https://youtu.be/DGI4vucR71w",
+    "Video"
+  ],
+  [
+    "https://bair.berkeley.edu/blog/2024/02/18/compound-ai-systems/",
+    "Zaharia et al. \"The Shift from Models to Compound AI Systems.\" BAIR Blog (2024)."
+  ],
+  [
+    "https://lilianweng.github.io/posts/2023-06-23-agent/",
+    "Weng. \"LLM Powered Autonomous Agents.\" Lil'Log (2023)."
+  ],
+  [
+    "https://arxiv.org/abs/2407.01502",
+    "Kapoor et al. \"AI Agents That Matter.\" TMLR (2025)."
+  ],
+  [
+    "https://web.stanford.edu/class/cs329z/slides/lecture02.pdf",
+    "lecture02: 2 Mon Sep 28 LLMs for Builders Language model internals for agent builders: decoding strategies, transformer attention (including linear and hybrid) and context length, the pretraining-to-post-training pipeline, inference and test-time sca"
+  ],
+  [
+    "https://youtu.be/Vr1NzH8bT44",
+    "Video"
+  ],
+  [
+    "https://arxiv.org/abs/1706.03762",
+    "Vaswani et al. \"Attention Is All You Need.\" NeurIPS (2017)."
+  ],
+  [
+    "https://arxiv.org/abs/2006.16236",
+    "Katharopoulos et al. \"Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention.\" ICML (2020)."
+  ],
+  [
+    "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+    "Rajasekaran et al. \"Effective Context Engineering for AI Agents.\" Anthropic (2025)."
+  ],
+  [
+    "https://web.stanford.edu/class/cs329z/slides/lecture03.pdf",
+    "lecture03: 2 Wed Sep 30 Building Blocks Retrieval-Augmented Generation (RAG) Why retrieval helps, then the RAG pipeline end to end: indexing (chunking, contextual retrieval, RAPTOR, HNSW), retrievers from BM25 and DPR to hybrid search, reranking, and"
+  ],
+  [
+    "https://youtu.be/psLc-46GqY0",
+    "Video"
+  ],
+  [
+    "https://arxiv.org/abs/2005.11401",
+    "Lewis et al. \"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.\" NeurIPS (2020)."
+  ],
+  [
+    "https://arxiv.org/abs/2004.04906",
+    "Karpukhin et al. \"Dense Passage Retrieval for Open-Domain Question Answering.\" EMNLP (2020)."
+  ],
+  [
+    "https://arxiv.org/abs/2004.12832",
+    "Khattab & Zaharia. \"ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT.\" SIGIR (2020)."
+  ],
+  [
+    "https://web.stanford.edu/class/cs329z/slides/lecture04.pdf",
+    "lecture04: 3 Mon Oct 5 Tool Use & Function Calling Why LLMs need tools and how they learn to use them: Toolformer, scaling to thousands of APIs with Gorilla and ToolLLM, standard interfaces from REST to function calling to MCP, evaluating tool use wi"
+  ],
+  [
+    "https://youtu.be/s0S38lz6O7M",
+    "Video"
+  ],
+  [
+    "https://arxiv.org/abs/2302.04761",
+    "Schick et al. \"Toolformer: Language Models Can Teach Themselves to Use Tools.\" NeurIPS (2023)."
+  ],
+  [
+    "https://arxiv.org/abs/2305.15334",
+    "Patil et al. \"Gorilla: Large Language Model Connected with Massive APIs.\" NeurIPS (2024)."
+  ],
+  [
+    "https://modelcontextprotocol.io/specification/2025-06-18",
+    "Model Context Protocol Specification, revision 2025-06-18. modelcontextprotocol.io (2025)."
+  ],
+  [
+    "https://web.stanford.edu/class/cs329z/slides/lecture05.pdf",
+    "lecture05: 3 Wed Oct 7 Frameworks & Agent Design Frameworks & Orchestration The data, system, and evals pillars of agent engineering, with live demos of DSPy (signatures, modules, optimizers) and LangGraph (state, nodes, edges). A tour of open-source"
+  ],
+  [
+    "https://github.com/cs329z/lecture5-frameworks",
+    "Code"
+  ],
+  [
+    "https://arxiv.org/abs/2310.03714",
+    "Khattab et al. \"DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines.\" ICLR (2024)."
+  ],
+  [
+    "https://docs.langchain.com/oss/python/langgraph/overview",
+    "LangChain. \"LangGraph Overview.\" LangChain Docs."
+  ],
+  [
+    "https://arena.ai/blog/coding-agents-harness-tax",
+    "Arena.ai. \"HarnessTax: How Much Does the Harness Matter for Coding Agents?\" Arena Blog (2026)."
+  ],
+  [
+    "https://web.stanford.edu/class/cs329z/slides/lecture06.pdf",
+    "lecture06: 4 Mon Oct 12 Agent Design Patterns & Scaffolds Workflows vs. agents and the design patterns for each: five composable workflow patterns, reasoning and acting patterns (ReAct, Reflexion, CodeAct, ReWOO), and context-management patterns (eve"
+  ],
+  [
+    "https://arxiv.org/abs/2210.03629",
+    "Yao et al. \"ReAct: Synergizing Reasoning and Acting in Language Models.\" ICLR (2023)."
+  ],
+  [
+    "https://www.anthropic.com/engineering/building-effective-agents",
+    "Schluntz & Zhang. \"Building Effective AI Agents.\" Anthropic (2024)."
+  ],
+  [
+    "https://www.langchain.com/blog/context-engineering-for-agents",
+    "LangChain. \"Context Engineering.\" LangChain Blog (2025)."
+  ],
+  [
+    "https://arxiv.org/abs/2303.11366",
+    "Shinn et al. \"Reflexion: Language Agents with Verbal Reinforcement Learning.\" NeurIPS (2023)."
+  ],
+  [
+    "https://arxiv.org/abs/2402.01030",
+    "Wang et al. \"Executable Code Actions Elicit Better LLM Agents.\" ICML (2024)."
+  ],
+  [
+    "https://web.stanford.edu/class/cs329z/slides/lecture07.pdf",
+    "lecture07: 4 Wed Oct 14 Memory & Multi-Agent Systems Agent Memory Architectures Why agents need memory and the four types (working, episodic, semantic, procedural). Four architecture patterns: skill libraries, tiered hierarchies like MemGPT, reflecti"
+  ],
+  [
+    "https://arxiv.org/abs/2309.02427",
+    "Sumers et al. \"Cognitive Architectures for Language Agents.\" TMLR (2024)."
+  ],
+  [
+    "https://arxiv.org/abs/2310.08560",
+    "Packer et al. \"MemGPT: Towards LLMs as Operating Systems.\" arXiv (2023)."
+  ],
+  [
+    "https://arxiv.org/abs/2304.03442",
+    "Park et al. \"Generative Agents: Interactive Simulacra of Human Behavior.\" UIST (2023)."
+  ],
+  [
+    "https://web.stanford.edu/class/cs329z/slides/lecture08.pdf",
+    "lecture08: 5 Mon Oct 19 Multi-Agent Systems When to use single vs. multi-agent systems and how to build them: orchestration patterns (orchestrator, swarm, hybrid), communication through handoffs, message boards, and the A2A protocol, and coordination"
+  ],
+  [
+    "https://arxiv.org/abs/2308.08155",
+    "Wu et al. \"AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation.\" COLM (2024)."
+  ],
+  [
+    "https://arxiv.org/abs/2503.13657",
+    "Cemri et al. \"Why Do Multi-Agent LLM Systems Fail?\" NeurIPS Datasets & Benchmarks (2025)."
+  ],
+  [
+    "https://arxiv.org/abs/2512.08296",
+    "Kim et al. \"Towards a Science of Scaling Agent Systems.\" arXiv (2025)."
+  ],
+  [
+    "https://web.stanford.edu/class/cs329z/slides/lecture09.pdf",
+    "lecture09: 5 Wed Oct 21 Optimization Optimization When optimization pays off and how to do it: context optimization (bootstrapped few-shot, MIPROv2, OPRO, TextGrad, GEPA), weight optimization (SFT on agent rollouts, RL with PPO and GRPO, on-policy di"
+  ],
+  [
+    "https://arxiv.org/abs/2507.19457",
+    "Agrawal et al. \"GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning.\" ICLR (2026)."
+  ],
+  [
+    "https://arxiv.org/abs/2406.11695",
+    "Opsahl-Ong et al. \"Optimizing Instructions and Demonstrations for Multi-Stage Language Model Programs.\" EMNLP (2024)."
+  ],
+  [
+    "https://arxiv.org/abs/2402.03300",
+    "Shao et al. \"DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models.\" arXiv (2024)."
+  ],
+  [
+    "https://ryanmarten.com",
+    "Ryan Marten"
+  ],
+  [
+    "https://www.alexgshaw.com",
+    "Alex Shaw"
+  ],
+  [
+    "https://web.stanford.edu/class/cs329z/slides/lecture10.pdf",
+    "lecture10: 6 Mon Oct 26 \ud83d\udcfa Guest Lecture: Terminal-Bench Ryan Marten , Alex Shaw Ryan Marten and Alex Shaw (Laude Institute), co-creators of Terminal-Bench, on benchmarking how well AI agents accomplish real-world tasks in a terminal environment. Slid"
+  ],
+  [
+    "https://www.tbench.ai/",
+    "Terminal-Bench project site (leaderboard, tasks, and harness)."
+  ],
+  [
+    "https://arxiv.org/abs/2601.11868",
+    "Merrill et al. \"Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces.\" ICLR (2026)."
+  ],
+  [
+    "https://web.stanford.edu/class/cs329z/slides/lecture11.pdf",
+    "lecture11: 6 Wed Oct 28 Data for Agentic Systems What Data Do Agents Need? Traces, demonstrations, and feedback, data for optimization vs. evaluation, data flywheels, synthetic data generation, and collecting data from human-agent interaction. Slides"
+  ],
+  [
+    "https://www.sh-reya.com/blog/ai-engineering-flywheel/",
+    "Shankar. \"Data Flywheels for LLM Applications.\" (2024)."
+  ],
+  [
+    "https://aclanthology.org/2024.emnlp-main.54/",
+    "Tan et al. \"Large Language Models for Data Annotation and Synthesis: A Survey.\" EMNLP (2024)."
+  ],
+  [
+    "https://web.stanford.edu/class/cs329z/slides/lecture12.pdf",
+    "lecture12: 7 Mon Nov 2 Data Selection & Quality Finding maximally informative data, filtering and selection strategies, tiny-but-targeted benchmarks, annotation practices, quality assessment, and building datasets from agent traces. Slides Readings :"
+  ],
+  [
+    "https://arxiv.org/abs/2504.21798",
+    "Yang et al. \"SWE-smith: Scaling Data for Software Engineering Agents.\" NeurIPS D&B (2025)."
+  ],
+  [
+    "https://arxiv.org/abs/2404.12272",
+    "Shankar et al. \"Who Validates the Validators? Aligning LLM-Assisted Evaluation with Human Preferences.\" UIST (2024)."
+  ],
+  [
+    "https://arxiv.org/abs/2305.11206",
+    "Zhou et al. \"LIMA: Less Is More for Alignment.\" NeurIPS (2023)."
+  ],
+  [
+    "https://web.stanford.edu/class/cs329z/slides/lecture13.pdf",
+    "lecture13: 7 Wed Nov 4 Evaluation for Agentic Systems Evaluation Fundamentals & Benchmark Design Why evals are hard, the 4-tuple framework (request, environment, stopping criteria, scorer), designing each component, properties of good benchmarks, rea"
+  ],
+  [
+    "https://arxiv.org/abs/2507.02825",
+    "Zhu et al. \"Establishing Best Practices for Building Rigorous Agentic Benchmarks.\" (2025)."
+  ],
+  [
+    "https://ofir.io/How-to-Build-Good-Language-Modeling-Benchmarks/",
+    "Press. \"How to Build Good Language Modeling Benchmarks.\" (2024)."
+  ],
+  [
+    "https://arxiv.org/abs/2402.14992",
+    "Polo et al. \"tinyBenchmarks: Evaluating LLMs with Fewer Examples.\" ICML (2024)."
+  ],
+  [
+    "https://www.andrewng.org",
+    "Andrew Ng"
+  ],
+  [
+    "https://web.stanford.edu/class/cs329z/slides/lecture15.pdf",
+    "lecture15: 8 Wed Nov 11 LLM-as-Judge & Evaluation Infrastructure The three grader types, designing judge prompts, known biases, pairwise vs. pointwise evaluation, non-determinism metrics (pass@k vs. pass^k), harness design, and Anthropic's 8-step roa"
+  ],
+  [
+    "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+    "Grace et al. \"Demystifying Evals for AI Agents.\" Anthropic (2026)."
+  ],
+  [
+    "https://arxiv.org/abs/2306.05685",
+    "Zheng et al. \"Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena.\" NeurIPS (2023)."
+  ],
+  [
+    "https://arxiv.org/abs/2512.17267",
+    "Ryan et al. \"AutoMetrics: Approximate Human Judgements with Automatically Generated Evaluators.\" ICLR (2026)."
+  ],
+  [
+    "https://openreview.net/forum?id=4BjGVZ7Bxn",
+    "Zhu et al. \"AutoLibra: Agent Metric Induction from Open-Ended Human Feedback.\" ICLR (2026)."
+  ],
+  [
+    "https://www.carlosejimenez.com",
+    "Carlos Jimenez"
+  ],
+  [
+    "https://codecreator.github.io",
+    "Alexander Wettig"
+  ],
+  [
+    "https://arxiv.org/abs/2310.06770",
+    "Jimenez et al. \"SWE-bench: Can Language Models Resolve Real-World GitHub Issues?\" ICLR (2024)."
+  ],
+  [
+    "https://arxiv.org/abs/2409.00138",
+    "Shao et al. \"PrivacyLens: Evaluating Privacy Norm Awareness of LMs in Action.\" NeurIPS D&B (2024)."
+  ],
+  [
+    "https://arxiv.org/abs/2508.10880",
+    "Zhang & Yang. \"Searching for Privacy Risks in LLM Agents via Simulation.\" arXiv (2025)."
+  ],
+  [
+    "https://arxiv.org/abs/2601.05918",
+    "Li. \"Agentic LLMs as Powerful Deanonymizers.\" arXiv (2026)."
+  ],
+  [
+    "https://arxiv.org/abs/2603.02983",
+    "Wen et al. \"Contextualized Privacy Defense for LLM Agents.\" arXiv (2026)."
+  ],
+  [
+    "https://openai.com/index/prompt-injections/",
+    "OpenAI. \"Understanding Prompt Injections: A Frontier Security Challenge.\" (2025)."
+  ],
+  [
+    "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
+    "Anthropic. \"Anthropic's Responsible Scaling Policy.\" (2023)."
+  ],
+  [
+    "https://arxiv.org/abs/2405.15793",
+    "Yang et al. \"SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering.\" NeurIPS (2024)."
+  ],
+  [
+    "https://arxiv.org/abs/2407.16741",
+    "Wang et al. \"OpenHands: An Open Platform for AI Software Developers.\" ICLR (2025)."
+  ],
+  [
+    "https://www.anthropic.com/engineering/claude-code-best-practices",
+    "Anthropic. \"Claude Code: Best Practices for Agentic Coding.\" (2025)."
+  ],
+  [
+    "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
+    "Young. \"Effective Harnesses for Long-Running Agents.\" Anthropic (2025)."
+  ],
+  [
+    "https://arxiv.org/abs/2505.10831",
+    "Shaikh et al. \"Creating General User Models from Computer Use.\" UIST (2025)."
+  ],
+  [
+    "https://arxiv.org/abs/2603.05923",
+    "Shaikh et al. \"Learning Next Action Predictors from Human-Computer Interaction.\" arXiv (2026)."
+  ],
+  [
+    "https://github.com/openclaw/openclaw",
+    "Steinberger. \"OpenClaw: Open-source proactive AI agent.\" (2025)."
+  ],
+  [
+    "https://github.com/cs329z/assignment1-harness",
+    "HW1 Released"
+  ],
+  [
+    "https://github.com/cs329z/assignment2-harness",
+    "HW2 Released"
+  ],
+  [
+    "https://web.stanford.edu/class/cs329z/assignments/paper_video.pdf",
+    "Paper Video Due (10\u201315 min)"
+  ]
+]

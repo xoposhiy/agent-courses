@@ -1,0 +1,69 @@
+# Homework 1 public teaching repository: assignments/OMIM_620938/grill_run/tasks/0036_screen_h16/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620938/grill_run/tasks/0036_screen_h16/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620938/grill_run/tasks/0036_screen_h16/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Kaiyrzhanov et al. (2022) describe an NFU1 phenotype spectrum ranging from early-onset pure to complex HSP, with progressive or relapsing neurological decompensation.",
+  "confidence": 0.75,
+  "evidence": [
+    {
+      "text": "Kaiyrzhanov et al. (2022) reported 19 individuals with bi-allelic NFU1 missense variants exhibiting a spectrum from early-onset pure to complex hereditary spastic paraplegia, often accompanied by episodic neurological decompensation.",
+      "stance": "supports",
+      "source": {
+        "title": "Phenotypic continuum of NFU1-related disorders",
+        "authors": [
+          "R Kaiyrzhanov",
+          "MS Zaki",
+          "T Lau",
+          "S Sen"
+        ],
+        "year": 2022,
+        "journal": "Annals of Clinical and Translational Neurology",
+        "doi": "10.1002/acn3.51679",
+        "pmid": "36256512",
+        "pmc": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36256512/",
+        "quote": "We report 19 affected individuals from 10 independent families with ultra-rare bi-allelic NFU1 missense variants associated with a spectrum of early-onset pure to complex hereditary spastic paraplegia (HSP) phenotype with a longer survival (16/19) on one end and neurodevelopmental delay with severe hypotonia (3/19) on the other."
+      },
+      "numbers": [
+        {
+          "metric": "affected individuals reported",
+          "value": 19
+        },
+        {
+          "metric": "independent families",
+          "value": 10
+        },
+        {
+          "metric": "patients presenting on HSP spectrum with longer survival",
+          "value": "16/19"
+        }
+      ]
+    },
+    {
+      "text": "Mahmoud et al. (2025) note that NFU1 variants encompass a clinical spectrum starting initially as milder pure HSP before progressing.",
+      "stance": "supports",
+      "source": {
+        "title": "A complicated intrathecal baclofen pump implantation in a child with spastic Diplegia: Should a genetic mimic of cerebral palsy be Considered?",
+        "authors": [
+          "MA Mahmoud",
+          "PE Khalil",
+          "OF ElRashidi"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.sciencedirect.com/science/article/pii/S2214751925001252",
+        "quote": "NFU1 mutations enclose a spectrum of diseases ranging from milder pure Hereditary Spastic Paraplegia (... In agreement with Kaiyrzhanov R et al, our patient started initially on the milder"
+      },
+      "numbers": []
+    }
+  ]
+}
+```

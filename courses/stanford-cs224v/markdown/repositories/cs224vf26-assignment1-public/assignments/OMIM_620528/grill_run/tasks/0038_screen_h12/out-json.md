@@ -1,0 +1,69 @@
+# Homework 1 public teaching repository: assignments/OMIM_620528/grill_run/tasks/0038_screen_h12/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620528/grill_run/tasks/0038_screen_h12/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620528/grill_run/tasks/0038_screen_h12/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Pes cavus and related foot deformities are consistently documented across patients with SPTAN1 loss-of-function variants presenting with distal hereditary motor neuropathy or distal weakness.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "A Chinese proband with a de novo heterozygous SPTAN1 nonsense variant presenting with distal hereditary motor neuropathy exhibited pes cavus on neurological examination at age 21.",
+      "stance": "supports",
+      "source": {
+        "title": "A novel de novo SPTAN1 nonsense variant causes hereditary motor neuropathy in a Chinese family",
+        "authors": [
+          "HL Dong",
+          "L Chen",
+          "ZY Wu"
+        ],
+        "year": 2021,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://academic.oup.com/brain/article-abstract/144/1/e11/6015895",
+        "quote": "Neurological examinations at the age of 21 showed pes cavus,"
+      },
+      "numbers": [
+        {
+          "metric": "affected individuals with pes cavus",
+          "value": "1/1"
+        }
+      ]
+    },
+    {
+      "text": "Among participants harboring heterozygous SPTAN1 loss-of-function variants, foot abnormalities occurred in 10 individuals, specifically presenting as pes cavus in 5 of 20.",
+      "stance": "supports",
+      "source": {
+        "title": "Heterozygous loss-of-function variants in SPTAN1 cause an early childhood onset distal myopathy",
+        "authors": [
+          "J De Winter",
+          "L Van de Vondel",
+          "B Ermanoska"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.sciencedirect.com/science/article/pii/S1098360025000462",
+        "quote": "Foot abnormalities were present in 10 participants and ranged from pes cavus (5/20) or pes planovalgus (1/20) to distal arthrogryposis (4/20)."
+      },
+      "numbers": [
+        {
+          "metric": "participants with pes cavus",
+          "value": "5/20"
+        },
+        {
+          "metric": "participants with foot abnormalities",
+          "value": "10/20"
+        }
+      ]
+    }
+  ]
+}
+```

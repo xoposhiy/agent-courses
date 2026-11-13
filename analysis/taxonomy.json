@@ -1,0 +1,1582 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Group the shared course concepts into separate frequency dictionaries.",
+  "assignment_rule": "Each canonical concept has exactly one primary category. Related categories are references and do not add counts.",
+  "category_axis": "Role in agent development, with technique groups split by the operation they change.",
+  "categories": [
+    {
+      "id": "foundations",
+      "title": "Foundations and design concepts",
+      "scope": "Core concepts that explain models, agent components, and system design.",
+      "boundary": "General concepts and input representations belong here; concrete component arrangements belong under architecture.",
+      "subgroups": [
+        {
+          "id": "agent-design",
+          "title": "Agent design"
+        },
+        {
+          "id": "model-fundamentals",
+          "title": "Model fundamentals"
+        }
+      ]
+    },
+    {
+      "id": "architecture",
+      "title": "Architectural patterns",
+      "scope": "Reusable ways to arrange components, assign control, coordinate agents, and compose execution stages.",
+      "boundary": "System structure and control flow belong here. Local prompting, context operations, and runtime recovery mechanisms have separate categories.",
+      "subgroups": [
+        {
+          "id": "control-flow",
+          "title": "Control flow and composition"
+        },
+        {
+          "id": "coordination",
+          "title": "Delegation and coordination"
+        },
+        {
+          "id": "human-control",
+          "title": "Human control"
+        }
+      ]
+    },
+    {
+      "id": "reasoning-techniques",
+      "title": "Prompting, reasoning, and planning techniques",
+      "scope": "Ways to guide a model, generate candidates, search reasoning paths, check answers, or improve instructions.",
+      "boundary": "Local reasoning operations belong here. A planner-executor split belongs under architecture; factual grounding policy belongs under safety and trust.",
+      "subgroups": [
+        {
+          "id": "prompting",
+          "title": "Prompting and output control"
+        },
+        {
+          "id": "reasoning",
+          "title": "Reasoning and verification"
+        },
+        {
+          "id": "search",
+          "title": "Planning and candidate search"
+        }
+      ]
+    },
+    {
+      "id": "context-memory",
+      "title": "Context and memory techniques",
+      "scope": "Ways to select active context, store experience, maintain memory, and reuse skills.",
+      "boundary": "Context isolation and tiered memory are information-management patterns. They stay here rather than under system topology. Memory evaluation belongs under evaluation.",
+      "subgroups": [
+        {
+          "id": "context",
+          "title": "Context management"
+        },
+        {
+          "id": "memory",
+          "title": "Memory representations and maintenance"
+        },
+        {
+          "id": "dialogue",
+          "title": "Dialogue context"
+        }
+      ]
+    },
+    {
+      "id": "retrieval-knowledge",
+      "title": "Retrieval, data, and knowledge techniques",
+      "scope": "Ways to retrieve evidence, query data, extract structured knowledge, and reconcile information.",
+      "boundary": "Preparation of data for weight updates belongs under training. Retrieval metrics belong under evaluation. Research applications remain separate from their methods.",
+      "subgroups": [
+        {
+          "id": "retrieval",
+          "title": "Retrieval and indexing"
+        },
+        {
+          "id": "knowledge",
+          "title": "Knowledge processing"
+        },
+        {
+          "id": "research",
+          "title": "Research information management"
+        }
+      ]
+    },
+    {
+      "id": "tool-techniques",
+      "title": "Tool-use and action techniques",
+      "scope": "Ways to define, discover, compose, and execute tools or map observations to actions.",
+      "boundary": "Generic tool-use capabilities and methods belong here. MCP and named frameworks belong under tools and protocols. CodeAct as an agent-loop design belongs under architecture.",
+      "subgroups": [
+        {
+          "id": "interfaces",
+          "title": "Tool interfaces and selection"
+        },
+        {
+          "id": "execution",
+          "title": "Programmatic execution"
+        }
+      ]
+    },
+    {
+      "id": "training",
+      "title": "Model training and adaptation",
+      "scope": "Methods, data, learning signals, and systems used to change weights or learn across tasks.",
+      "boundary": "Prompt search without weight updates belongs under reasoning techniques. Serving optimizations belong under runtime. RL systems stay here because their purpose is training.",
+      "subgroups": [
+        {
+          "id": "adaptation",
+          "title": "Training and adaptation"
+        },
+        {
+          "id": "rl-methods",
+          "title": "RL learning signals and systems"
+        },
+        {
+          "id": "training-data",
+          "title": "Training data and risks"
+        }
+      ]
+    },
+    {
+      "id": "evaluation",
+      "title": "Evaluation, research, and improvement",
+      "scope": "Ways to define expected behavior, measure agents, validate judges, analyze failures, and test improvements.",
+      "boundary": "A composed evaluator-optimizer loop belongs under architecture. Graders, experiments, and failure analyses belong here. Runtime tracing has a cross-reference from runtime.",
+      "subgroups": [
+        {
+          "id": "measurement",
+          "title": "Requirements and measurement"
+        },
+        {
+          "id": "graders",
+          "title": "Graders and judge validation"
+        },
+        {
+          "id": "improvement",
+          "title": "Analysis and improvement"
+        },
+        {
+          "id": "research-methods",
+          "title": "Research methods"
+        }
+      ]
+    },
+    {
+      "id": "safety-trust",
+      "title": "Safety, security, and trust",
+      "scope": "Risks, protections, evidence requirements, and uncertainty policies that limit harmful or unsupported behavior.",
+      "boundary": "Approval gates belong under architecture because they change control flow. Memory namespaces remain under memory. Direct security and trust requirements belong here.",
+      "subgroups": [
+        {
+          "id": "security",
+          "title": "Threats and protections"
+        },
+        {
+          "id": "trust",
+          "title": "Evidence and uncertainty"
+        }
+      ]
+    },
+    {
+      "id": "runtime",
+      "title": "Runtime, deployment, and performance",
+      "scope": "Execution infrastructure, persistence, recovery, service operation, and inference cost or speed.",
+      "boundary": "These mechanisms support execution rather than define agent-team topology. Named products and protocols are separate. Training infrastructure stays under training.",
+      "subgroups": [
+        {
+          "id": "execution",
+          "title": "Execution infrastructure"
+        },
+        {
+          "id": "persistence",
+          "title": "Persistence and recovery"
+        },
+        {
+          "id": "performance",
+          "title": "Serving and performance"
+        }
+      ]
+    },
+    {
+      "id": "tools-protocols",
+      "title": "Named tools, frameworks, and protocols",
+      "scope": "Named implementation technologies and interoperability standards.",
+      "boundary": "Products and standards belong here. Generic framework design, tool-use concepts, and implementation methods remain separate.",
+      "subgroups": [
+        {
+          "id": "frameworks",
+          "title": "Frameworks and hosting"
+        },
+        {
+          "id": "protocols",
+          "title": "Protocols"
+        }
+      ]
+    },
+    {
+      "id": "applications",
+      "title": "Application areas",
+      "scope": "Types of tasks and domains where an agent is applied.",
+      "boundary": "An application describes the work an agent does. Its reasoning, architecture, or evaluation is classified separately. Persona and style control is a prompting technique.",
+      "subgroups": [
+        {
+          "id": "software",
+          "title": "Software and interface work"
+        },
+        {
+          "id": "research-data",
+          "title": "Research and data work"
+        },
+        {
+          "id": "domains",
+          "title": "Domain assistants and simulations"
+        }
+      ]
+    },
+    {
+      "id": "behavior",
+      "title": "Agent behavior, human interaction, and interpretability",
+      "scope": "Human-agent interaction, social behavior, cognitive questions, and methods for inspecting internal model behavior.",
+      "boundary": "Approval gates belong under architecture. Task success tests belong under evaluation. This category concerns interaction and the behavior or internal mechanisms being studied.",
+      "subgroups": [
+        {
+          "id": "human-interaction",
+          "title": "Human-agent interaction"
+        },
+        {
+          "id": "social-behavior",
+          "title": "Social behavior"
+        },
+        {
+          "id": "cognition",
+          "title": "Cognitive questions"
+        },
+        {
+          "id": "interpretability",
+          "title": "Mechanistic interpretation"
+        }
+      ]
+    }
+  ],
+  "assignments": [
+    {
+      "concept_id": "agent-architecture",
+      "category_id": "foundations",
+      "subgroup_id": "agent-design",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "workflow-agent",
+      "category_id": "foundations",
+      "subgroup_id": "agent-design",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "harness",
+      "category_id": "foundations",
+      "subgroup_id": "agent-design",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "frameworks",
+      "category_id": "foundations",
+      "subgroup_id": "agent-design",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "multi-agent",
+      "category_id": "foundations",
+      "subgroup_id": "agent-design",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "state",
+      "category_id": "foundations",
+      "subgroup_id": "agent-design",
+      "related_category_ids": [
+        "context-memory",
+        "runtime"
+      ]
+    },
+    {
+      "concept_id": "long-horizon",
+      "category_id": "foundations",
+      "subgroup_id": "agent-design",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "bdi",
+      "category_id": "foundations",
+      "subgroup_id": "agent-design",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "llm-foundations",
+      "category_id": "foundations",
+      "subgroup_id": "model-fundamentals",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "transformer",
+      "category_id": "foundations",
+      "subgroup_id": "model-fundamentals",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "tokenization",
+      "category_id": "foundations",
+      "subgroup_id": "model-fundamentals",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "long-context",
+      "category_id": "foundations",
+      "subgroup_id": "model-fundamentals",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "vlm",
+      "category_id": "foundations",
+      "subgroup_id": "model-fundamentals",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "vla",
+      "category_id": "foundations",
+      "subgroup_id": "model-fundamentals",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "world-models",
+      "category_id": "foundations",
+      "subgroup_id": "model-fundamentals",
+      "related_category_ids": [
+        "reasoning-techniques",
+        "training"
+      ]
+    },
+    {
+      "concept_id": "scaling-laws",
+      "category_id": "foundations",
+      "subgroup_id": "model-fundamentals",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "react",
+      "category_id": "architecture",
+      "subgroup_id": "control-flow",
+      "related_category_ids": [
+        "reasoning-techniques",
+        "tool-techniques"
+      ]
+    },
+    {
+      "concept_id": "codeact",
+      "category_id": "architecture",
+      "subgroup_id": "control-flow",
+      "related_category_ids": [
+        "tool-techniques"
+      ]
+    },
+    {
+      "concept_id": "plan-execute",
+      "category_id": "architecture",
+      "subgroup_id": "control-flow",
+      "related_category_ids": [
+        "reasoning-techniques"
+      ]
+    },
+    {
+      "concept_id": "prompt-chain",
+      "category_id": "architecture",
+      "subgroup_id": "control-flow",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "routing",
+      "category_id": "architecture",
+      "subgroup_id": "control-flow",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "parallelization",
+      "category_id": "architecture",
+      "subgroup_id": "control-flow",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "critic-loop",
+      "category_id": "architecture",
+      "subgroup_id": "control-flow",
+      "related_category_ids": [
+        "evaluation",
+        "reasoning-techniques"
+      ]
+    },
+    {
+      "concept_id": "declarative-agents",
+      "category_id": "architecture",
+      "subgroup_id": "control-flow",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "recursive-agents",
+      "category_id": "architecture",
+      "subgroup_id": "control-flow",
+      "related_category_ids": [
+        "reasoning-techniques"
+      ]
+    },
+    {
+      "concept_id": "orchestrator-workers",
+      "category_id": "architecture",
+      "subgroup_id": "coordination",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "agent-handoff",
+      "category_id": "architecture",
+      "subgroup_id": "coordination",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "agent-as-tool",
+      "category_id": "architecture",
+      "subgroup_id": "coordination",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "shared-memory",
+      "category_id": "architecture",
+      "subgroup_id": "coordination",
+      "related_category_ids": [
+        "context-memory"
+      ]
+    },
+    {
+      "concept_id": "worktree-isolation",
+      "category_id": "architecture",
+      "subgroup_id": "coordination",
+      "related_category_ids": [
+        "runtime"
+      ]
+    },
+    {
+      "concept_id": "async-agents",
+      "category_id": "architecture",
+      "subgroup_id": "coordination",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "dynamic-delegation",
+      "category_id": "architecture",
+      "subgroup_id": "coordination",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "multi-agent-debate",
+      "category_id": "architecture",
+      "subgroup_id": "coordination",
+      "related_category_ids": [
+        "reasoning-techniques",
+        "behavior"
+      ]
+    },
+    {
+      "concept_id": "hitl",
+      "category_id": "architecture",
+      "subgroup_id": "human-control",
+      "related_category_ids": [
+        "safety-trust",
+        "behavior"
+      ]
+    },
+    {
+      "concept_id": "prompting",
+      "category_id": "reasoning-techniques",
+      "subgroup_id": "prompting",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "few-shot",
+      "category_id": "reasoning-techniques",
+      "subgroup_id": "prompting",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "soft-prompts",
+      "category_id": "reasoning-techniques",
+      "subgroup_id": "prompting",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "structured-output",
+      "category_id": "reasoning-techniques",
+      "subgroup_id": "prompting",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "persona",
+      "category_id": "reasoning-techniques",
+      "subgroup_id": "prompting",
+      "related_category_ids": [
+        "applications",
+        "behavior"
+      ]
+    },
+    {
+      "concept_id": "prompt-optimization",
+      "category_id": "reasoning-techniques",
+      "subgroup_id": "prompting",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "reasoning",
+      "category_id": "reasoning-techniques",
+      "subgroup_id": "reasoning",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "cot",
+      "category_id": "reasoning-techniques",
+      "subgroup_id": "reasoning",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "self-consistency",
+      "category_id": "reasoning-techniques",
+      "subgroup_id": "reasoning",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "reflection",
+      "category_id": "reasoning-techniques",
+      "subgroup_id": "reasoning",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "reflexion",
+      "category_id": "reasoning-techniques",
+      "subgroup_id": "reasoning",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "tree-thoughts",
+      "category_id": "reasoning-techniques",
+      "subgroup_id": "reasoning",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "verification",
+      "category_id": "reasoning-techniques",
+      "subgroup_id": "reasoning",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "smt",
+      "category_id": "reasoning-techniques",
+      "subgroup_id": "reasoning",
+      "related_category_ids": [
+        "retrieval-knowledge"
+      ]
+    },
+    {
+      "concept_id": "planning",
+      "category_id": "reasoning-techniques",
+      "subgroup_id": "search",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "decoding",
+      "category_id": "reasoning-techniques",
+      "subgroup_id": "search",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "beam-search",
+      "category_id": "reasoning-techniques",
+      "subgroup_id": "search",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "inference-scaling",
+      "category_id": "reasoning-techniques",
+      "subgroup_id": "search",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "best-of-n",
+      "category_id": "reasoning-techniques",
+      "subgroup_id": "search",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "context-engineering",
+      "category_id": "context-memory",
+      "subgroup_id": "context",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "compaction",
+      "category_id": "context-memory",
+      "subgroup_id": "context",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "context-offload",
+      "category_id": "context-memory",
+      "subgroup_id": "context",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "observation-masking",
+      "category_id": "context-memory",
+      "subgroup_id": "context",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "context-isolation",
+      "category_id": "context-memory",
+      "subgroup_id": "context",
+      "related_category_ids": [
+        "architecture"
+      ]
+    },
+    {
+      "concept_id": "progressive-disclosure",
+      "category_id": "context-memory",
+      "subgroup_id": "context",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "sliding-memory",
+      "category_id": "context-memory",
+      "subgroup_id": "context",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "memory",
+      "category_id": "context-memory",
+      "subgroup_id": "memory",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "working-memory",
+      "category_id": "context-memory",
+      "subgroup_id": "memory",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "episodic-memory",
+      "category_id": "context-memory",
+      "subgroup_id": "memory",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "semantic-memory",
+      "category_id": "context-memory",
+      "subgroup_id": "memory",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "procedural-memory",
+      "category_id": "context-memory",
+      "subgroup_id": "memory",
+      "related_category_ids": [
+        "runtime"
+      ]
+    },
+    {
+      "concept_id": "tiered-memory",
+      "category_id": "context-memory",
+      "subgroup_id": "memory",
+      "related_category_ids": [
+        "architecture"
+      ]
+    },
+    {
+      "concept_id": "memory-maintenance",
+      "category_id": "context-memory",
+      "subgroup_id": "memory",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "memory-scoping",
+      "category_id": "context-memory",
+      "subgroup_id": "memory",
+      "related_category_ids": [
+        "safety-trust"
+      ]
+    },
+    {
+      "concept_id": "skill-induction",
+      "category_id": "context-memory",
+      "subgroup_id": "memory",
+      "related_category_ids": [
+        "training"
+      ]
+    },
+    {
+      "concept_id": "dialogue-state",
+      "category_id": "context-memory",
+      "subgroup_id": "dialogue",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "rag",
+      "category_id": "retrieval-knowledge",
+      "subgroup_id": "retrieval",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "chunking",
+      "category_id": "retrieval-knowledge",
+      "subgroup_id": "retrieval",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "embeddings",
+      "category_id": "retrieval-knowledge",
+      "subgroup_id": "retrieval",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "sparse-retrieval",
+      "category_id": "retrieval-knowledge",
+      "subgroup_id": "retrieval",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "hybrid-search",
+      "category_id": "retrieval-knowledge",
+      "subgroup_id": "retrieval",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "reranking",
+      "category_id": "retrieval-knowledge",
+      "subgroup_id": "retrieval",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "graph-rag",
+      "category_id": "retrieval-knowledge",
+      "subgroup_id": "retrieval",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "agentic-rag",
+      "category_id": "retrieval-knowledge",
+      "subgroup_id": "retrieval",
+      "related_category_ids": [
+        "architecture"
+      ]
+    },
+    {
+      "concept_id": "query-rewriting",
+      "category_id": "retrieval-knowledge",
+      "subgroup_id": "retrieval",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "constraint-retrieval",
+      "category_id": "retrieval-knowledge",
+      "subgroup_id": "retrieval",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "knowledge-curation",
+      "category_id": "retrieval-knowledge",
+      "subgroup_id": "knowledge",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "semantic-parsing",
+      "category_id": "retrieval-knowledge",
+      "subgroup_id": "knowledge",
+      "related_category_ids": [
+        "reasoning-techniques"
+      ]
+    },
+    {
+      "concept_id": "canonicalization",
+      "category_id": "retrieval-knowledge",
+      "subgroup_id": "knowledge",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "imputation",
+      "category_id": "retrieval-knowledge",
+      "subgroup_id": "knowledge",
+      "related_category_ids": [
+        "safety-trust"
+      ]
+    },
+    {
+      "concept_id": "hybrid-data",
+      "category_id": "retrieval-knowledge",
+      "subgroup_id": "knowledge",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "schema-induction",
+      "category_id": "retrieval-knowledge",
+      "subgroup_id": "knowledge",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "data-reconciliation",
+      "category_id": "retrieval-knowledge",
+      "subgroup_id": "knowledge",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "perspective-search",
+      "category_id": "retrieval-knowledge",
+      "subgroup_id": "research",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "hypothesis-ledger",
+      "category_id": "retrieval-knowledge",
+      "subgroup_id": "research",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "tool-use",
+      "category_id": "tool-techniques",
+      "subgroup_id": "interfaces",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "tool-discovery",
+      "category_id": "tool-techniques",
+      "subgroup_id": "interfaces",
+      "related_category_ids": [
+        "retrieval-knowledge"
+      ]
+    },
+    {
+      "concept_id": "visual-grounding",
+      "category_id": "tool-techniques",
+      "subgroup_id": "interfaces",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "code-interpreter",
+      "category_id": "tool-techniques",
+      "subgroup_id": "execution",
+      "related_category_ids": [
+        "runtime"
+      ]
+    },
+    {
+      "concept_id": "programmatic-tools",
+      "category_id": "tool-techniques",
+      "subgroup_id": "execution",
+      "related_category_ids": [
+        "architecture",
+        "runtime"
+      ]
+    },
+    {
+      "concept_id": "model-training",
+      "category_id": "training",
+      "subgroup_id": "adaptation",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "sft",
+      "category_id": "training",
+      "subgroup_id": "adaptation",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "rl",
+      "category_id": "training",
+      "subgroup_id": "adaptation",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "rlhf",
+      "category_id": "training",
+      "subgroup_id": "adaptation",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "dpo",
+      "category_id": "training",
+      "subgroup_id": "adaptation",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "ppo",
+      "category_id": "training",
+      "subgroup_id": "adaptation",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "grpo",
+      "category_id": "training",
+      "subgroup_id": "adaptation",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "lora",
+      "category_id": "training",
+      "subgroup_id": "adaptation",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "distillation",
+      "category_id": "training",
+      "subgroup_id": "adaptation",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "gradient-training",
+      "category_id": "training",
+      "subgroup_id": "adaptation",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "meta-learning",
+      "category_id": "training",
+      "subgroup_id": "adaptation",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "reward-model",
+      "category_id": "training",
+      "subgroup_id": "rl-methods",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "rl-credit",
+      "category_id": "training",
+      "subgroup_id": "rl-methods",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "rl-policy-gradient",
+      "category_id": "training",
+      "subgroup_id": "rl-methods",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "rl-exploration",
+      "category_id": "training",
+      "subgroup_id": "rl-methods",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "rl-systems",
+      "category_id": "training",
+      "subgroup_id": "rl-methods",
+      "related_category_ids": [
+        "runtime"
+      ]
+    },
+    {
+      "concept_id": "self-play",
+      "category_id": "training",
+      "subgroup_id": "rl-methods",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "model-based-rl",
+      "category_id": "training",
+      "subgroup_id": "rl-methods",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "data-curation",
+      "category_id": "training",
+      "subgroup_id": "training-data",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "synthetic-data",
+      "category_id": "training",
+      "subgroup_id": "training-data",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "human-demos",
+      "category_id": "training",
+      "subgroup_id": "training-data",
+      "related_category_ids": [
+        "behavior"
+      ]
+    },
+    {
+      "concept_id": "model-collapse",
+      "category_id": "training",
+      "subgroup_id": "training-data",
+      "related_category_ids": [
+        "safety-trust"
+      ]
+    },
+    {
+      "concept_id": "evaluation",
+      "category_id": "evaluation",
+      "subgroup_id": "measurement",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "benchmark-design",
+      "category_id": "evaluation",
+      "subgroup_id": "measurement",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "requirements",
+      "category_id": "evaluation",
+      "subgroup_id": "measurement",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "reliability",
+      "category_id": "evaluation",
+      "subgroup_id": "measurement",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "retrieval-eval",
+      "category_id": "evaluation",
+      "subgroup_id": "measurement",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "tool-eval",
+      "category_id": "evaluation",
+      "subgroup_id": "measurement",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "memory-eval",
+      "category_id": "evaluation",
+      "subgroup_id": "measurement",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "citation-eval",
+      "category_id": "evaluation",
+      "subgroup_id": "measurement",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "trajectory-eval",
+      "category_id": "evaluation",
+      "subgroup_id": "measurement",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "session-eval",
+      "category_id": "evaluation",
+      "subgroup_id": "measurement",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "outcome-eval",
+      "category_id": "evaluation",
+      "subgroup_id": "measurement",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "code-grader",
+      "category_id": "evaluation",
+      "subgroup_id": "graders",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "human-eval",
+      "category_id": "evaluation",
+      "subgroup_id": "graders",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "llm-judge",
+      "category_id": "evaluation",
+      "subgroup_id": "graders",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "rubrics",
+      "category_id": "evaluation",
+      "subgroup_id": "graders",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "judge-validation",
+      "category_id": "evaluation",
+      "subgroup_id": "graders",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "evaluator-metrics",
+      "category_id": "evaluation",
+      "subgroup_id": "graders",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "error-analysis",
+      "category_id": "evaluation",
+      "subgroup_id": "improvement",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "regression-eval",
+      "category_id": "evaluation",
+      "subgroup_id": "improvement",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "controlled-eval",
+      "category_id": "evaluation",
+      "subgroup_id": "improvement",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "production-eval",
+      "category_id": "evaluation",
+      "subgroup_id": "improvement",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "user-simulation",
+      "category_id": "evaluation",
+      "subgroup_id": "improvement",
+      "related_category_ids": [
+        "behavior",
+        "training"
+      ]
+    },
+    {
+      "concept_id": "reward-hacking",
+      "category_id": "evaluation",
+      "subgroup_id": "improvement",
+      "related_category_ids": [
+        "safety-trust",
+        "training"
+      ]
+    },
+    {
+      "concept_id": "harness-optimization",
+      "category_id": "evaluation",
+      "subgroup_id": "improvement",
+      "related_category_ids": [
+        "architecture"
+      ]
+    },
+    {
+      "concept_id": "multi-agent-failures",
+      "category_id": "evaluation",
+      "subgroup_id": "improvement",
+      "related_category_ids": [
+        "architecture",
+        "behavior"
+      ]
+    },
+    {
+      "concept_id": "research-methods",
+      "category_id": "evaluation",
+      "subgroup_id": "research-methods",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "research-reproduction",
+      "category_id": "evaluation",
+      "subgroup_id": "research-methods",
+      "related_category_ids": [
+        "applications"
+      ]
+    },
+    {
+      "concept_id": "behavioral-experiments",
+      "category_id": "evaluation",
+      "subgroup_id": "research-methods",
+      "related_category_ids": [
+        "behavior"
+      ]
+    },
+    {
+      "concept_id": "safety",
+      "category_id": "safety-trust",
+      "subgroup_id": "security",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "prompt-injection",
+      "category_id": "safety-trust",
+      "subgroup_id": "security",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "privacy",
+      "category_id": "safety-trust",
+      "subgroup_id": "security",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "sandboxing",
+      "category_id": "safety-trust",
+      "subgroup_id": "security",
+      "related_category_ids": [
+        "runtime"
+      ]
+    },
+    {
+      "concept_id": "threat-modeling",
+      "category_id": "safety-trust",
+      "subgroup_id": "security",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "red-teaming",
+      "category_id": "safety-trust",
+      "subgroup_id": "security",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "memory-poisoning",
+      "category_id": "safety-trust",
+      "subgroup_id": "security",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "auth",
+      "category_id": "safety-trust",
+      "subgroup_id": "security",
+      "related_category_ids": [
+        "runtime",
+        "tools-protocols"
+      ]
+    },
+    {
+      "concept_id": "grounding",
+      "category_id": "safety-trust",
+      "subgroup_id": "trust",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "provenance",
+      "category_id": "safety-trust",
+      "subgroup_id": "trust",
+      "related_category_ids": [
+        "retrieval-knowledge"
+      ]
+    },
+    {
+      "concept_id": "abstention",
+      "category_id": "safety-trust",
+      "subgroup_id": "trust",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "filesystem",
+      "category_id": "runtime",
+      "subgroup_id": "execution",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "middleware",
+      "category_id": "runtime",
+      "subgroup_id": "execution",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "model-selection",
+      "category_id": "runtime",
+      "subgroup_id": "execution",
+      "related_category_ids": [
+        "foundations"
+      ]
+    },
+    {
+      "concept_id": "deployment",
+      "category_id": "runtime",
+      "subgroup_id": "execution",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "durable-execution",
+      "category_id": "runtime",
+      "subgroup_id": "persistence",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "checkpointing",
+      "category_id": "runtime",
+      "subgroup_id": "persistence",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "state-replay",
+      "category_id": "runtime",
+      "subgroup_id": "persistence",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "error-recovery",
+      "category_id": "runtime",
+      "subgroup_id": "persistence",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "observability",
+      "category_id": "runtime",
+      "subgroup_id": "performance",
+      "related_category_ids": [
+        "evaluation"
+      ]
+    },
+    {
+      "concept_id": "caching",
+      "category_id": "runtime",
+      "subgroup_id": "performance",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "kv-cache",
+      "category_id": "runtime",
+      "subgroup_id": "performance",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "serving",
+      "category_id": "runtime",
+      "subgroup_id": "performance",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "compression",
+      "category_id": "runtime",
+      "subgroup_id": "performance",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "speculative-decoding",
+      "category_id": "runtime",
+      "subgroup_id": "performance",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "cost-quality",
+      "category_id": "runtime",
+      "subgroup_id": "performance",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "dspy",
+      "category_id": "tools-protocols",
+      "subgroup_id": "frameworks",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "langgraph",
+      "category_id": "tools-protocols",
+      "subgroup_id": "frameworks",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "managed-agents",
+      "category_id": "tools-protocols",
+      "subgroup_id": "frameworks",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "mcp",
+      "category_id": "tools-protocols",
+      "subgroup_id": "protocols",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "a2a",
+      "category_id": "tools-protocols",
+      "subgroup_id": "protocols",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "coding-agents",
+      "category_id": "applications",
+      "subgroup_id": "software",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "refactoring",
+      "category_id": "applications",
+      "subgroup_id": "software",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "computer-use",
+      "category_id": "applications",
+      "subgroup_id": "software",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "deep-research",
+      "category_id": "applications",
+      "subgroup_id": "research-data",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "structured-research",
+      "category_id": "applications",
+      "subgroup_id": "research-data",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "scientific-workflows",
+      "category_id": "applications",
+      "subgroup_id": "research-data",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "db-query",
+      "category_id": "applications",
+      "subgroup_id": "research-data",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "document-transcription",
+      "category_id": "applications",
+      "subgroup_id": "research-data",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "clinical-agents",
+      "category_id": "applications",
+      "subgroup_id": "domains",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "sales-agents",
+      "category_id": "applications",
+      "subgroup_id": "domains",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "game-agents",
+      "category_id": "applications",
+      "subgroup_id": "domains",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "travel-agents",
+      "category_id": "applications",
+      "subgroup_id": "domains",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "trading-agents",
+      "category_id": "applications",
+      "subgroup_id": "domains",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "social-simulation",
+      "category_id": "applications",
+      "subgroup_id": "domains",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "human-collaboration",
+      "category_id": "behavior",
+      "subgroup_id": "human-interaction",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "personalization",
+      "category_id": "behavior",
+      "subgroup_id": "human-interaction",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "proactive",
+      "category_id": "behavior",
+      "subgroup_id": "human-interaction",
+      "related_category_ids": [
+        "architecture"
+      ]
+    },
+    {
+      "concept_id": "work-impact",
+      "category_id": "behavior",
+      "subgroup_id": "human-interaction",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "developer-alignment",
+      "category_id": "behavior",
+      "subgroup_id": "human-interaction",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "social-behavior",
+      "category_id": "behavior",
+      "subgroup_id": "social-behavior",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "theory-of-mind",
+      "category_id": "behavior",
+      "subgroup_id": "social-behavior",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "moral-behavior",
+      "category_id": "behavior",
+      "subgroup_id": "social-behavior",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "emergent-norms",
+      "category_id": "behavior",
+      "subgroup_id": "social-behavior",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "metacognition",
+      "category_id": "behavior",
+      "subgroup_id": "cognition",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "cognitive-perspectives",
+      "category_id": "behavior",
+      "subgroup_id": "cognition",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "consciousness",
+      "category_id": "behavior",
+      "subgroup_id": "cognition",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "interpretability",
+      "category_id": "behavior",
+      "subgroup_id": "interpretability",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "activation-patching",
+      "category_id": "behavior",
+      "subgroup_id": "interpretability",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "sparse-autoencoders",
+      "category_id": "behavior",
+      "subgroup_id": "interpretability",
+      "related_category_ids": []
+    },
+    {
+      "concept_id": "circuits",
+      "category_id": "behavior",
+      "subgroup_id": "interpretability",
+      "related_category_ids": []
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+# Homework 2 bundle: precomputed/sliders/sliders-OMIM_621570/phenotypic_differential_matching.csv
+
+[Course index](../../../../../../README.md) · [Original source](https://drive.google.com/file/d/1VPlTDJULw4qIkQuVcHxxPh4Q50Nvmi-z/view#archive-member=precomputed/sliders/sliders-OMIM_621570/phenotypic_differential_matching.csv) · [Raw file](../../../../../../raw/assignments/assignment2-course-bundle/precomputed/sliders/sliders-OMIM_621570/phenotypic_differential_matching.csv)
+
+Retrieved: 2026-11-13T17:00:50.402745+00:00
+
+```csv
+row_id,target_disease,mimic_disease,overlapping_phenotypes,discriminating_phenotype,discriminating_logic,diagnostic_confidence
+88e807fe94f78acc:0:phenotypic_differential_matching:0,Cornelia de Lange Syndrome 7,Classical CdLS1,"craniofacial dysmorphisms, neurodevelopmental delay, growth retardation",Severe structural limb reduction anomalies,"CdLS1 frequently manifests with severe structural limb reduction anomalies (up to 25%), whereas MAU2 probands have a true prevalence of severe limb reductions under 5% (0/18 documented) and exhibit a milder overall cognitive and growth phenotype.",high
+88e807fe94f78acc:0:phenotypic_differential_matching:1,Cornelia de Lange Syndrome 7,CdLS5,"craniofacial dysmorphisms, growth delay, cohesinopathy features",Congenital heart defects,"Congenital heart defects affect ~60% of HDAC8 (CdLS5) patients, compared to fewer than 25% (<5/18) of MAU2 (CdLS7) patients.",moderate
+
+```

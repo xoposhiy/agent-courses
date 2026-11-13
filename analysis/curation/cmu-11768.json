@@ -1,0 +1,820 @@
+{
+  "source_id": "cmu-11768",
+  "summary": "A broad technical course covering agent capabilities, coding and computer use, deep research, supervised training, reinforcement learning, runtime systems, safety, and multi-agent coordination.",
+  "limitations": [
+    "Eighteen lecture decks are available, including guest lectures; some scheduled sessions have no archived slides.",
+    "Hundreds of optional references and repository files are not treated as hundreds of teaching units.",
+    "Claims use teaching slides. Supporting papers are used only when a source is explicitly marked assigned."
+  ],
+  "new_concepts": [
+    {
+      "id": "computer-use",
+      "label": "Computer-use and web agents",
+      "kind": "application",
+      "definition": "Observe and operate browser or desktop interfaces to complete tasks.",
+      "aliases": [
+        "GUI agents",
+        "computer use agents",
+        "browser agents"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "visual-grounding",
+      "label": "Visual interface grounding",
+      "kind": "method",
+      "definition": "Map a visual instruction or screen element to an actionable UI target.",
+      "aliases": [
+        "UI grounding",
+        "screen grounding"
+      ],
+      "parent_id": "computer-use"
+    },
+    {
+      "id": "deep-research",
+      "label": "Deep research agents",
+      "kind": "application",
+      "definition": "Run repeated searches, inspect evidence, and synthesize a research answer.",
+      "aliases": [
+        "deep research",
+        "research agents"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "citation-eval",
+      "label": "Citation and evidence evaluation",
+      "kind": "topic",
+      "definition": "Check that references exist, support claims, and cover the answer.",
+      "aliases": [
+        "citation accuracy",
+        "citation support"
+      ],
+      "parent_id": "evaluation"
+    },
+    {
+      "id": "kv-cache",
+      "label": "Prompt prefix and KV caching",
+      "kind": "method",
+      "definition": "Reuse attention keys and values or shared prompt prefixes to reduce inference work.",
+      "aliases": [
+        "KV caching",
+        "prefix caching"
+      ],
+      "parent_id": "llm-foundations"
+    },
+    {
+      "id": "long-context",
+      "label": "Long-context modeling",
+      "kind": "topic",
+      "definition": "Extend or manage model behavior on long input sequences.",
+      "aliases": [
+        "long context",
+        "context length extension"
+      ],
+      "parent_id": "llm-foundations"
+    },
+    {
+      "id": "serving",
+      "label": "Inference serving and performance",
+      "kind": "topic",
+      "definition": "Manage inference engines, batching, latency, throughput, and memory use.",
+      "aliases": [
+        "model serving",
+        "inference optimization"
+      ],
+      "parent_id": "llm-foundations"
+    },
+    {
+      "id": "rl-credit",
+      "label": "Credit assignment and advantage estimation",
+      "kind": "method",
+      "definition": "Estimate which actions contribute to reward and use baselines or value estimates.",
+      "aliases": [
+        "GAE",
+        "advantage estimation"
+      ],
+      "parent_id": "rl"
+    },
+    {
+      "id": "rl-policy-gradient",
+      "label": "Policy gradient methods",
+      "kind": "method",
+      "definition": "Update a policy using gradients of expected reward.",
+      "aliases": [
+        "REINFORCE",
+        "policy gradients"
+      ],
+      "parent_id": "rl"
+    },
+    {
+      "id": "rl-exploration",
+      "label": "Exploration and curriculum design",
+      "kind": "topic",
+      "definition": "Maintain useful policy exploration and select training tasks by difficulty.",
+      "aliases": [
+        "exploration collapse",
+        "curricula"
+      ],
+      "parent_id": "rl"
+    },
+    {
+      "id": "rl-systems",
+      "label": "Distributed and asynchronous RL systems",
+      "kind": "topic",
+      "definition": "Coordinate rollout generation, training engines, and policy synchronization.",
+      "aliases": [
+        "async RL",
+        "agentic RL systems"
+      ],
+      "parent_id": "rl"
+    },
+    {
+      "id": "skill-induction",
+      "label": "Skill induction from experience",
+      "kind": "method",
+      "definition": "Extract reusable procedures or code from prior task trajectories.",
+      "aliases": [
+        "skill learning",
+        "skill induction"
+      ],
+      "parent_id": "procedural-memory"
+    },
+    {
+      "id": "checkpointing",
+      "label": "Checkpointing and resuming",
+      "kind": "pattern",
+      "definition": "Save agent state so a thread or task can resume after interruption.",
+      "aliases": [
+        "checkpointers",
+        "execution checkpoints"
+      ],
+      "parent_id": "durable-execution"
+    },
+    {
+      "id": "trajectory-eval",
+      "label": "Trajectory and process evaluation",
+      "kind": "topic",
+      "definition": "Evaluate the sequence of agent decisions and actions rather than only the final output.",
+      "aliases": [
+        "process evaluation",
+        "trajectory evaluation"
+      ],
+      "parent_id": "evaluation"
+    },
+    {
+      "id": "regression-eval",
+      "label": "Regression and version comparison",
+      "kind": "method",
+      "definition": "Compare agent versions on shared cases and detect behavior that became worse.",
+      "aliases": [
+        "regression testing",
+        "version comparison"
+      ],
+      "parent_id": "evaluation"
+    },
+    {
+      "id": "best-of-n",
+      "label": "Best-of-N selection",
+      "kind": "pattern",
+      "definition": "Generate several candidates and select one with a verifier or reward score.",
+      "aliases": [
+        "best of n",
+        "candidate selection"
+      ],
+      "parent_id": "inference-scaling"
+    },
+    {
+      "id": "multi-agent-debate",
+      "label": "Multi-agent debate",
+      "kind": "pattern",
+      "definition": "Let several agents exchange arguments or critique candidate answers.",
+      "aliases": [
+        "agent debate"
+      ],
+      "parent_id": "multi-agent"
+    },
+    {
+      "id": "async-agents",
+      "label": "Asynchronous agent coordination",
+      "kind": "pattern",
+      "definition": "Run agents concurrently and coordinate completion, progress, and results.",
+      "aliases": [
+        "async subagents",
+        "asynchronous subagents"
+      ],
+      "parent_id": "multi-agent"
+    },
+    {
+      "id": "user-simulation",
+      "label": "User and environment simulation",
+      "kind": "method",
+      "definition": "Simulate interaction partners or environments for training and testing.",
+      "aliases": [
+        "user simulators",
+        "simulated users"
+      ],
+      "parent_id": "evaluation"
+    },
+    {
+      "id": "human-collaboration",
+      "label": "Human-agent collaboration",
+      "kind": "topic",
+      "definition": "Design how people and agents share tasks, control, and interaction.",
+      "aliases": [
+        "human agent interaction",
+        "human-agent interaction"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "work-impact",
+      "label": "Work automation and social impact",
+      "kind": "topic",
+      "definition": "Analyze how agent automation affects tasks, workers, and the design of work.",
+      "aliases": [
+        "future of work",
+        "labor impact"
+      ],
+      "parent_id": "human-collaboration"
+    }
+  ],
+  "coverage": [
+    {
+      "concept_id": "agent-architecture",
+      "source": "markdown/slides/lecture-01-agents.md",
+      "needle": "What Are Agents?",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "react",
+      "source": "markdown/slides/lecture-01-agents.md",
+      "needle": "A minimal ReAct loop",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "tool-use",
+      "source": "markdown/slides/lecture-02-tool-use.md",
+      "needle": "Tool definition",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "codeact",
+      "source": "markdown/slides/lecture-02-tool-use.md",
+      "needle": "CodeAct results",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "structured-output",
+      "source": "markdown/slides/lecture-02-tool-use.md",
+      "needle": "Constrained decoding",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "mcp",
+      "source": "markdown/slides/lecture-02-tool-use.md",
+      "needle": "MCP connects a host",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "parallelization",
+      "source": "markdown/slides/lecture-02-tool-use.md",
+      "needle": "Parallelize only without dependencies",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "tool-eval",
+      "source": "markdown/slides/lecture-02-tool-use.md",
+      "needle": "Evaluate the whole stack",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "error-recovery",
+      "source": "markdown/slides/lecture-02-tool-use.md",
+      "needle": "Operational tool failures",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "context-engineering",
+      "source": "markdown/slides/lecture-03-long-context.md",
+      "needle": "Agent prompt composition",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "transformer",
+      "source": "markdown/slides/lecture-03-long-context.md",
+      "needle": "Refresher: attention",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "long-context",
+      "source": "markdown/slides/lecture-03-long-context.md",
+      "needle": "Advertised vs. effective context",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "kv-cache",
+      "source": "markdown/slides/lecture-03-long-context.md",
+      "needle": "Prompt and KV caching",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "serving",
+      "source": "markdown/slides/lecture-03-long-context.md",
+      "needle": "Serving metrics",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "compaction",
+      "source": "markdown/slides/lecture-03-long-context.md",
+      "needle": "What survives compaction",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "memory",
+      "source": "markdown/slides/lecture-04-memory-and-skills.md",
+      "needle": "Managing an external memory",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "procedural-memory",
+      "source": "markdown/slides/lecture-04-memory-and-skills.md",
+      "needle": "What is a skill?",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "progressive-disclosure",
+      "source": "markdown/slides/lecture-04-memory-and-skills.md",
+      "needle": "Progressive Disclosure: loading",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "skill-induction",
+      "source": "markdown/slides/lecture-04-memory-and-skills.md",
+      "needle": "Inducing skills",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "memory-maintenance",
+      "source": "markdown/slides/lecture-04-memory-and-skills.md",
+      "needle": "Memory consolidation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reflection",
+      "source": "markdown/slides/lecture-04-memory-and-skills.md",
+      "needle": "Learning from failures",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "planning",
+      "source": "markdown/slides/lecture-05-planning.md",
+      "needle": "What is a plan",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "cot",
+      "source": "markdown/slides/lecture-05-planning.md",
+      "needle": "Chain-of-thought is a plan",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reasoning",
+      "source": "markdown/slides/lecture-05-planning.md",
+      "needle": "Thinking vs acting",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "plan-execute",
+      "source": "markdown/slides/lecture-05-planning.md",
+      "needle": "Separating planner from executor",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "long-horizon",
+      "source": "markdown/slides/lecture-05-planning.md",
+      "needle": "Long-horizon failures",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "hitl",
+      "source": "markdown/slides/lecture-05-planning.md",
+      "needle": "Control: human editing and approval",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "coding-agents",
+      "source": "markdown/slides/lecture-06-coding-agents.md",
+      "needle": "localize–edit–verify",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "tokenization",
+      "source": "markdown/slides/lecture-06-coding-agents.md",
+      "needle": "splitting code into tokens",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "code-grader",
+      "source": "markdown/slides/lecture-06-coding-agents.md",
+      "needle": "Checking behavior by running code",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reliability",
+      "source": "markdown/slides/lecture-06-coding-agents.md",
+      "needle": "Success across multiple attempts",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "synthetic-data",
+      "source": "markdown/slides/lecture-06-coding-agents.md",
+      "needle": "Creating repair tasks by injecting bugs",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "computer-use",
+      "source": "markdown/slides/lecture-07-computer-use-agents.md",
+      "needle": "Computer Use Agents (CUAs)",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "visual-grounding",
+      "source": "markdown/slides/lecture-07-computer-use-agents.md",
+      "needle": "Grounding in professional UIs",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "human-demos",
+      "source": "markdown/slides/lecture-07-computer-use-agents.md",
+      "needle": "Demonstration data:",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "sft",
+      "source": "markdown/slides/lecture-08-sft.md",
+      "needle": "Which tokens carry the loss",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "model-training",
+      "source": "markdown/slides/lecture-08-sft.md",
+      "needle": "The full training pipeline",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "distillation",
+      "source": "markdown/slides/lecture-08-sft.md",
+      "needle": "Distillation from a stronger model",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "data-curation",
+      "source": "markdown/slides/lecture-08-sft.md",
+      "needle": "Choosing the trajectories",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "rl",
+      "source": "markdown/slides/lecture-09-rl-basics.md",
+      "needle": "Reinforcement learning",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "rl-policy-gradient",
+      "source": "markdown/slides/lecture-09-rl-basics.md",
+      "needle": "Computing the policy gradient",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "rl-credit",
+      "source": "markdown/slides/lecture-09-rl-basics.md",
+      "needle": "Advantages",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "grpo",
+      "source": "markdown/slides/lecture-09-rl-basics.md",
+      "needle": "The GRPO update",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "ppo",
+      "source": "markdown/slides/lecture-09-rl-basics.md",
+      "needle": "GRPO vs PPO",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "deep-research",
+      "source": "markdown/slides/lecture-10-deep-research-agents.md",
+      "needle": "Complex research needs many searches",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "rag",
+      "source": "markdown/slides/lecture-10-deep-research-agents.md",
+      "needle": "specialized retrieval-augmented LM",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "agentic-rag",
+      "source": "markdown/slides/lecture-10-deep-research-agents.md",
+      "needle": "The search tool runs the generated query",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "grounding",
+      "source": "markdown/slides/lecture-10-deep-research-agents.md",
+      "needle": "citation-backed responses",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "citation-eval",
+      "source": "markdown/slides/lecture-10-deep-research-agents.md",
+      "needle": "Citation accuracy:",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "rubrics",
+      "source": "markdown/slides/lecture-10-deep-research-agents.md",
+      "needle": "How the rubrics evolve",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "embeddings",
+      "source": "markdown/slides/lecture-10-deep-research-agents.md",
+      "needle": "Embedding retrieval finds nearby documents",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "sparse-retrieval",
+      "source": "markdown/slides/lecture-10-deep-research-agents.md",
+      "needle": "Lexical retriever",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "llm-judge",
+      "source": "markdown/slides/lecture-10-deep-research-agents.md",
+      "needle": "Judge against the rubrics",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reward-model",
+      "source": "markdown/slides/lecture-11-rl-advanced.md",
+      "needle": "Learning the value function",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "rl-exploration",
+      "source": "markdown/slides/lecture-11-rl-advanced.md",
+      "needle": "Exploration collapse",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reward-hacking",
+      "source": "markdown/slides/lecture-11-rl-advanced.md",
+      "needle": "False positives and reward hacking",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "rl-systems",
+      "source": "markdown/slides/lecture-12-rl-systems.md",
+      "needle": "Async RL",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "safety",
+      "source": "markdown/slides/lecture-13-agent-safety.md",
+      "needle": "Safety outcomes",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "prompt-injection",
+      "source": "markdown/slides/lecture-13-agent-safety.md",
+      "needle": "Prompt injection",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "privacy",
+      "source": "markdown/slides/lecture-13-agent-safety.md",
+      "needle": "Data exfiltration",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "sandboxing",
+      "source": "markdown/slides/lecture-13-agent-safety.md",
+      "needle": "Isolation boundaries",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "threat-modeling",
+      "source": "markdown/slides/lecture-13-agent-safety.md",
+      "needle": "Threat models",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "red-teaming",
+      "source": "markdown/slides/lecture-13-agent-safety.md",
+      "needle": "Human red teaming",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "harness",
+      "source": "markdown/slides/lecture-14-openhands.md",
+      "needle": "Model and tools",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "state",
+      "source": "markdown/slides/lecture-14-openhands.md",
+      "needle": "Conversation persistence",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "context-offload",
+      "source": "markdown/slides/lecture-14-openhands.md",
+      "needle": "Context management",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "frameworks",
+      "source": "markdown/slides/lecture-14-openhands.md",
+      "needle": "OpenHands",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "workflow-agent",
+      "source": "markdown/slides/lecture-15-orchestration-and-monitoring.md",
+      "needle": "Single agents vs. workflows",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "routing",
+      "source": "markdown/slides/lecture-15-orchestration-and-monitoring.md",
+      "needle": "Conditional routing",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "shared-memory",
+      "source": "markdown/slides/lecture-15-orchestration-and-monitoring.md",
+      "needle": "Shared state",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "durable-execution",
+      "source": "markdown/slides/lecture-15-orchestration-and-monitoring.md",
+      "needle": "Recoverable progress",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "checkpointing",
+      "source": "markdown/slides/lecture-15-orchestration-and-monitoring.md",
+      "needle": "Checkpointing and resuming",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "observability",
+      "source": "markdown/slides/lecture-15-orchestration-and-monitoring.md",
+      "needle": "Monitoring with execution traces",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "regression-eval",
+      "source": "markdown/slides/lecture-15-orchestration-and-monitoring.md",
+      "needle": "Workflow and regression tests",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "trajectory-eval",
+      "source": "markdown/slides/lecture-15-orchestration-and-monitoring.md",
+      "needle": "Paired trajectories in Docent",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "multi-agent",
+      "source": "markdown/slides/lecture-18-multi-agent-systems.md",
+      "needle": "What are multi-agent systems?",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "orchestrator-workers",
+      "source": "markdown/slides/lecture-18-multi-agent-systems.md",
+      "needle": "Role-based decomposition",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "multi-agent-debate",
+      "source": "markdown/slides/lecture-18-multi-agent-systems.md",
+      "needle": "Multi-agent debate",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "async-agents",
+      "source": "markdown/slides/lecture-18-multi-agent-systems.md",
+      "needle": "Coordinating asynchronous agents",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "agent-as-tool",
+      "source": "markdown/slides/lecture-18-multi-agent-systems.md",
+      "needle": "Managed delegation to subagents",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "context-isolation",
+      "source": "markdown/slides/lecture-18-multi-agent-systems.md",
+      "needle": "Delegating to subagents uses context effectively",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "user-simulation",
+      "source": "markdown/slides/lecture-18-multi-agent-systems.md",
+      "needle": "User simulators",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "multi-agent-failures",
+      "source": "markdown/slides/lecture-18-multi-agent-systems.md",
+      "needle": "Overfitting and simulator collapse",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "abstention",
+      "source": "markdown/slides/lecture-18-multi-agent-systems.md",
+      "needle": "Expressing uncertainty in responses",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "inference-scaling",
+      "source": "markdown/slides/lecture-20-search-basics.md",
+      "needle": "Search over Trajectories",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "best-of-n",
+      "source": "markdown/slides/lecture-20-search-basics.md",
+      "needle": "Best-of-N",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "self-consistency",
+      "source": "markdown/slides/lecture-20-search-basics.md",
+      "needle": "Self-consistency",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "verification",
+      "source": "markdown/slides/lecture-20-search-basics.md",
+      "needle": "Verification signals",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "prompt-optimization",
+      "source": "markdown/slides/lecture-20-search-basics.md",
+      "needle": "Harness optimization",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "evaluation",
+      "source": "markdown/slides/2026-10-27-zora-wang.md",
+      "needle": "Main Components: Environment, Task, Evaluation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "benchmark-design",
+      "source": "markdown/slides/2026-10-27-zora-wang.md",
+      "needle": "Many Benchmarks Lack Construct Validity",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "human-eval",
+      "source": "markdown/slides/2026-10-27-zora-wang.md",
+      "needle": "Human-expert annotated rubrics",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "judge-validation",
+      "source": "markdown/slides/2026-10-27-zora-wang.md",
+      "needle": "LLM-as-a-Judge Scales but is Biased",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "human-collaboration",
+      "source": "markdown/slides/2026-10-27-zora-wang.md",
+      "needle": "Collaboration & Interaction with Humans",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "personalization",
+      "source": "markdown/slides/2026-10-27-zora-wang.md",
+      "needle": "Adapt to User Interaction Mode",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "work-impact",
+      "source": "markdown/slides/2026-10-27-zora-wang.md",
+      "needle": "Future of Work with AI Agents",
+      "coverage": "taught"
+    }
+  ]
+}

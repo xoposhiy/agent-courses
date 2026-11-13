@@ -1,0 +1,62 @@
+# Homework 1 public teaching repository: assignments/OMIM_620511/grill_run/tasks/0039_screen_h16/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620511/grill_run/tasks/0039_screen_h16/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620511/grill_run/tasks/0039_screen_h16/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Expanded cohort studies of Fliedner-Zweier syndrome corroborate that the syndrome exhibits a broad phenotypic spectrum marked by mild developmental delay with speech impairment, seizures, and skeletal abnormalities (e.g., clubfoot, scoliosis, hip dysplasia) rather than a rigid classic triad.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "In a cohort of 50 novel individuals with SCAF4 variants, frequent clinical findings were mild developmental delay with speech impairment, seizures, and skeletal abnormalities such as clubfoot, scoliosis, or hip dysplasia, with cognitive abilities spanning from normal IQ to severe intellectual disability.",
+      "stance": "supports",
+      "source": {
+        "title": "Further delineation of the SCAF4-associated neurodevelopmental disorder",
+        "authors": [
+          "CM Schmid",
+          "A Gregor",
+          "A Ruiz"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.nature.com/articles/s41431-024-01760-2",
+        "quote": "Frequent clinical findings were mild developmental delay with speech impairment, seizures, and skeletal abnormalities such as clubfoot, scoliosis or hip dysplasia. Cognitive abilities ranged from normal IQ to severe intellectual disability (ID), with borderline to mild ID in the majority of individuals."
+      },
+      "numbers": [
+        {
+          "metric": "novel individuals evaluated",
+          "value": 50
+        }
+      ]
+    },
+    {
+      "text": "SCAF4 variants associated with Fliedner-Zweier syndrome are reported to present with diverse symptoms, including mild intellectual disability, seizures, behavioral abnormalities, and skeletal and structural anomalies.",
+      "stance": "supports",
+      "source": {
+        "title": "A novel nonsense mutation in SCAF4 associated with fliedner-zweier syndrome: a case report and review of the literature",
+        "authors": [
+          "Z Chen",
+          "J Zhao",
+          "X Fan",
+          "X Xuan",
+          "X Zhao"
+        ],
+        "year": 2025,
+        "journal": "Frontiers in Genetics",
+        "doi": "10.3389/fgene.2025.1487352/full",
+        "pmid": null,
+        "pmc": "PMC12021868",
+        "url": "https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2025.1487352/full",
+        "quote": "Variants in the SR-related C-terminal domain-Associated factor 4 (SCAF4) gene are linked to Fliedner-Zweier syndrome (FZS), which presents with diverse symptoms, including mild intellectual disability, seizures, behavioral abnormalities, and various skeletal and structural anomalies."
+      },
+      "numbers": []
+    }
+  ]
+}
+```

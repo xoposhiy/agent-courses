@@ -1,0 +1,50 @@
+# Homework 1 public teaching repository: assignments/OMIM_621415/grill_run/tasks/0036_screen_h13/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621415/grill_run/tasks/0036_screen_h13/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621415/grill_run/tasks/0036_screen_h13/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Willim et al. (2024) describe 33 individuals with LRRC7-related disorder where hyperphagia-associated obesity is present in a subset of cases rather than universally.",
+  "confidence": 0.8,
+  "evidence": [
+    {
+      "text": "In a primary cohort of 33 individuals with dominant LRRC7 variants, hyperphagia-associated obesity was reported in several cases rather than across the entire cohort, including 4 of 14 cases with truncating variants.",
+      "stance": "supports",
+      "source": {
+        "title": "Variants in LRRC7 lead to intellectual disability, autism, aggression and abnormal eating behaviors",
+        "authors": [
+          "J Willim",
+          "D Woike",
+          "D Greene",
+          "S Das",
+          "K Pfeifer"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": null,
+        "pmid": "39256359",
+        "pmc": null,
+        "url": "https://www.nature.com/articles/s41467-024-52095-x",
+        "quote": "We identify here 33 individuals (one of them previously described) with a dominant neurodevelopmental disorder due to heterozygous missense or loss-of-function variants in LRRC7. The clinical spectrum involves intellectual disability, autism, ADHD, aggression and, in several cases, hyperphagia-associated obesity."
+      },
+      "numbers": [
+        {
+          "metric": "total cohort size",
+          "value": 33
+        },
+        {
+          "metric": "truncating variant cases evaluated for hyperphagia",
+          "value": 14
+        },
+        {
+          "metric": "hyperphagia cases among truncating variants",
+          "value": 4
+        }
+      ]
+    }
+  ]
+}
+```

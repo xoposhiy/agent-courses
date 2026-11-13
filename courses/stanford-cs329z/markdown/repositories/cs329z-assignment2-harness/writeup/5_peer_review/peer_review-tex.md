@@ -1,0 +1,117 @@
+# HW2 Released: assignment2-harness: writeup/5_peer_review/peer_review.tex
+
+[Course index](../../../../../README.md) · [Original source](https://github.com/cs329z/assignment2-harness/blob/HEAD/writeup/5_peer_review/peer_review.tex) · [Raw file](../../../../../raw/repositories/cs329z-assignment2-harness/writeup/5_peer_review/peer_review.tex)
+
+Retrieved: 2026-11-13T16:35:14.032514+00:00
+
+```tex
+\documentclass[11pt]{article}
+
+\usepackage{cs329z}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+% Replace each gray prompt with your own writing.
+\newcommand{\prompt}[1]{\textcolor{gray}{\textit{#1}}}
+
+\begin{document}
+
+%% ---------------------------------------------------------------- Review 1
+\section*{Review 1: \code{<task-id>}}
+
+\paragraph{Summary}
+\prompt{In one or two sentences, what capability does this task measure?}
+
+\paragraph{Ratings}
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{>{\bfseries\raggedright\arraybackslash}p{0.27\linewidth}cX}
+  \toprule
+  Criterion & Rating (1--5) & Justification \\
+  \midrule
+  Reproducibility & \prompt{--} & \prompt{One sentence.} \\
+  Capability & \prompt{--} & \prompt{One sentence.} \\
+  Task--verifier fidelity & \prompt{--} & \prompt{One sentence.} \\
+  Difficulty & \prompt{--} & \prompt{One sentence.} \\
+  Report & \prompt{--} & \prompt{One sentence.} \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+\paragraph{Evidence}
+\prompt{Support your ratings by citing at least one specific task file, verifier check, or trajectory event.}
+
+\paragraph{Strongest aspect}
+\prompt{One or two sentences.}
+
+\paragraph{Suggested improvement}
+\prompt{One concrete, actionable change, in one or two sentences.}
+
+\newpage
+%% ---------------------------------------------------------------- Review 2
+\section*{Review 2: \code{<task-id>}}
+
+\paragraph{Summary}
+\prompt{In one or two sentences, what capability does this task measure?}
+
+\paragraph{Ratings}
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{>{\bfseries\raggedright\arraybackslash}p{0.27\linewidth}cX}
+  \toprule
+  Criterion & Rating (1--5) & Justification \\
+  \midrule
+  Reproducibility & \prompt{--} & \prompt{One sentence.} \\
+  Capability & \prompt{--} & \prompt{One sentence.} \\
+  Task--verifier fidelity & \prompt{--} & \prompt{One sentence.} \\
+  Difficulty & \prompt{--} & \prompt{One sentence.} \\
+  Report & \prompt{--} & \prompt{One sentence.} \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+\paragraph{Evidence}
+\prompt{Support your ratings by citing at least one specific task file, verifier check, or trajectory event.}
+
+\paragraph{Strongest aspect}
+\prompt{One or two sentences.}
+
+\paragraph{Suggested improvement}
+\prompt{One concrete, actionable change, in one or two sentences.}
+
+\newpage
+%% ---------------------------------------------------------------- Review 3
+\section*{Review 3: \code{<task-id>}}
+
+\paragraph{Summary}
+\prompt{In one or two sentences, what capability does this task measure?}
+
+\paragraph{Ratings}
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{>{\bfseries\raggedright\arraybackslash}p{0.27\linewidth}cX}
+  \toprule
+  Criterion & Rating (1--5) & Justification \\
+  \midrule
+  Reproducibility & \prompt{--} & \prompt{One sentence.} \\
+  Capability & \prompt{--} & \prompt{One sentence.} \\
+  Task--verifier fidelity & \prompt{--} & \prompt{One sentence.} \\
+  Difficulty & \prompt{--} & \prompt{One sentence.} \\
+  Report & \prompt{--} & \prompt{One sentence.} \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+\paragraph{Evidence}
+\prompt{Support your ratings by citing at least one specific task file, verifier check, or trajectory event.}
+
+\paragraph{Strongest aspect}
+\prompt{One or two sentences.}
+
+\paragraph{Suggested improvement}
+\prompt{One concrete, actionable change, in one or two sentences.}
+
+\end{document}
+
+```

@@ -1,0 +1,23 @@
+# Project code: stanford-oval/genie-worksheets: experiments/domain_agents/course_enroll/frontend/data/user_conversation/2b012425-9541-49d0-bda5-8c9382cdd2b6/intermediate_conversation.json
+
+[Course index](../../../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/genie-worksheets/blob/HEAD/experiments/domain_agents/course_enroll/frontend/data/user_conversation/2b012425-9541-49d0-bda5-8c9382cdd2b6/intermediate_conversation.json) · [Raw file](../../../../../../../../../../raw/repositories/stanford-oval-genie-worksheets/experiments/domain_agents/course_enroll/frontend/data/user_conversation/2b012425-9541-49d0-bda5-8c9382cdd2b6/intermediate_conversation.json)
+
+Retrieved: 2026-11-13T17:06:24.900930+00:00
+
+```json
+[
+    {
+        "user": "find me programming courses in AI track",
+        "bot": "I searched for programming courses available in the AI track, and here are some of the courses I found:\n1. **Computer Graphics in the Era of AI** - Course Code: CS 348I\n2. **AI for Social Good** - Course Code: CS 21SI\n3. **Research in AI Alignment** - Course Code: CS 362\n\nCould you please provide me with the details of the courses you want to take?",
+        "turn_context": "answer = answer('What programming courses are available in the AI track?')\nanswer.result = [{'course_id': 222464, 'course_codes': ['CS 348I'], 'title': 'Computer Graphics in the Era of AI'}, {'course_id': 220178, 'course_codes': ['CS 21SI'], 'title': 'AI for Social Good'}, {'course_id': 225027, 'course_codes': ['CS 362'], 'title': 'Research in AI Alignment'}]\nmain = Main()\n",
+        "global_context": "answer = answer('What programming courses are available in the AI track?')\nanswer.result = [{'course_id': 222464, 'course_codes': ['CS 348I'], 'title': 'Computer Graphics in the Era of AI'}, {'course_id': 220178, 'course_codes': ['CS 21SI'], 'title': 'AI for Social Good'}, {'course_id': 225027, 'course_codes': ['CS 362'], 'title': 'Research in AI Alignment'}]\nmain = Main()\n",
+        "system_action": [
+            "Report(answer, answer.result)",
+            "AskField(main, courses_to_take, The courses that the student wants to take)"
+        ],
+        "user_target_sp": "Answer(\"SELECT course_id, course_codes, title FROM courses WHERE title LIKE '%AI%' AND (title LIKE '%Programming%' OR description LIKE '%programming%') LIMIT 5;\", {}, ['courses'], 'What programming courses are available in the AI track?')",
+        "user_target": "answer = Answer(\"SELECT course_id, course_codes, title FROM courses WHERE title LIKE '%AI%' AND (title LIKE '%Programming%' OR description LIKE '%programming%') LIMIT 5;\", {}, ['courses'], 'What programming courses are available in the AI track?')",
+        "user_target_suql": "SELECT course_id, course_codes, title FROM courses WHERE title LIKE '%AI%' AND (title LIKE '%Programming%' OR description LIKE '%programming%') LIMIT 5;"
+    }
+]
+```

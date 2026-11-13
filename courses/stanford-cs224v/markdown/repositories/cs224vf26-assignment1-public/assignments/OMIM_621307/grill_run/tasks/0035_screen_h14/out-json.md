@@ -1,0 +1,53 @@
+# Homework 1 public teaching repository: assignments/OMIM_621307/grill_run/tasks/0035_screen_h14/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621307/grill_run/tasks/0035_screen_h14/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621307/grill_run/tasks/0035_screen_h14/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "TBC1D32 mutations are established causes of both anterior pituitary hypoplasia and pituitary aplasia, making a genotype-phenotype correlation based on variant severity biologically plausible.",
+  "confidence": 0.65,
+  "evidence": [
+    {
+      "text": "Mutations in TBC1D32, which functions in ciliary function and SHH signaling, have been reported to cause either a hypoplastic or completely absent pituitary gland.",
+      "stance": "neutral",
+      "source": {
+        "title": "The Fuzzy planar cell polarity protein (FUZ), necessary for primary cilium formation, is essential for pituitary development",
+        "authors": [
+          "EJ Lodge",
+          "WB Barrell",
+          "KJ Liu"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": "10.1111/joa.13961",
+        "pmid": "37794731",
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/joa.13961",
+        "quote": "TBC1D32, encoding a protein implicated in SHH signalling and ciliary function, have been reported to result in hypoplastic or absent pituitary"
+      },
+      "numbers": []
+    },
+    {
+      "text": "Biallelic loss-of-function variants in TBC1D32 are linked to septo-optic dysplasia spectrum phenotypes with pituitary abnormalities.",
+      "stance": "neutral",
+      "source": {
+        "title": "Understanding septo-optic dysplasia: Endocrine ...",
+        "authors": [
+          "N Malhotra"
+        ],
+        "year": 2026,
+        "journal": null,
+        "doi": "10.1016/j.beem.2026.102151",
+        "pmid": "42697756",
+        "pmc": null,
+        "url": "https://www.sciencedirect.com/science/article/pii/S1521690X26000734",
+        "quote": "TBC1D32 is a gene involved in ciliary function and SHH signaling. Biallelic loss-of-function variants inTBC1D32 were reported in two Finnish"
+      },
+      "numbers": []
+    }
+  ]
+}
+```

@@ -1,0 +1,53 @@
+# Homework 1 public teaching repository: assignments/OMIM_620528/grill_run/tasks/0007_screen_h3/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620528/grill_run/tasks/0007_screen_h3/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620528/grill_run/tasks/0007_screen_h3/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Heterozygous SPTAN1 mutations cause pure motor neuropathy (dHMN11), whereas epilepsy and severe neurodevelopmental delay are hallmarks of DEE5 and complex SPTAN1 encephalopathy syndromes.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "Heterozygous nonsense mutations in SPTAN1 were identified in hereditary motor neuropathy (HMN) kindreds, contrasting with the gene's prior description in epileptic syndromes.",
+      "stance": "supports",
+      "source": {
+        "title": "Hereditary motor neuropathies",
+        "authors": [
+          "MF Dohrn",
+          "M Saporta"
+        ],
+        "year": 2020,
+        "journal": null,
+        "doi": "10.1111/ene.70456",
+        "pmid": "41503725",
+        "pmc": null,
+        "url": "https://journals.lww.com/co-neurology/fulltext/2020/10000/Hereditary_motor_neuropathies.6.aspx?context=LatestArticles",
+        "quote": "HMN phenotype of variable severity, Beijer et al. [18\u25aa] identified heterozygous nonsense mutations in SPTAN1, a gene previously described in the context of epilepsy syndromes."
+      },
+      "numbers": []
+    },
+    {
+      "text": "SPTAN1 spectrum encompasses distal hereditary motor neuronopathy as well as cohorts exhibiting developmental delay with or without seizures.",
+      "stance": "supports",
+      "source": {
+        "title": "Neurogenetic disorders with hearing loss: Mechanisms, classifications, and emerging insights",
+        "authors": [
+          "D Owrang",
+          "B Vona"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": "10.1007/s11910-025-01466-y",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://link.springer.com/article/10.1007/s11910-025-01466-y",
+        "quote": "spastic paraplegia or distal hereditary motor neuronopathy. \u2026 constructed a large cohort of SPTAN1 patients wherein three \u2026 phenotypes of developmental delay with or without seizures"
+      },
+      "numbers": []
+    }
+  ]
+}
+```

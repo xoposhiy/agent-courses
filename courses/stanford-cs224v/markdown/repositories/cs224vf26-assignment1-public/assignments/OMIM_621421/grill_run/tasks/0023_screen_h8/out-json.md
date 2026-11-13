@@ -1,0 +1,54 @@
+# Homework 1 public teaching repository: assignments/OMIM_621421/grill_run/tasks/0023_screen_h8/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621421/grill_run/tasks/0023_screen_h8/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621421/grill_run/tasks/0023_screen_h8/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature establishes that TRA2B-associated Ramond-Elliott syndrome frequently features microcephaly alongside short stature and feeding difficulties.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "In a study of 12 individuals with TRA2B variants, neurodevelopmental delay was frequently accompanied by microcephaly, brain anomalies, feeding difficulties, and short stature.",
+      "stance": "supports",
+      "source": {
+        "title": "Clustered variants in the 5\u2032 coding region of TRA2B ...",
+        "authors": [
+          "F Ramond"
+        ],
+        "year": 2023,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.sciencedirect.com/science/article/pii/S109836002201070X",
+        "quote": "All affected individuals presented intellectual disability and/or developmental delay, frequently associated with infantile spasms, microcephaly, brain anomalies, autism spectrum disorder, feeding difficulties, and short stature."
+      },
+      "numbers": [
+        {
+          "metric": "cohort size",
+          "value": 12
+        }
+      ]
+    },
+    {
+      "text": "OMIM entry 621421 notes that affected individuals exhibit mildly impaired growth, small head circumference, and feeding difficulties.",
+      "stance": "supports",
+      "source": {
+        "title": "621421 - RAMOND-ELLIOTT NEURODEVELOPMENTAL ...",
+        "authors": [],
+        "year": null,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://omim.org/entry/621421",
+        "quote": "Some had mildly impaired growth, small head circumference, feeding difficulties, or constipation."
+      },
+      "numbers": []
+    }
+  ]
+}
+```

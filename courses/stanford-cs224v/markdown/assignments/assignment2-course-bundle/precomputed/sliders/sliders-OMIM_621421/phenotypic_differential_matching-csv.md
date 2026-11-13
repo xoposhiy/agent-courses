@@ -1,0 +1,13 @@
+# Homework 2 bundle: precomputed/sliders/sliders-OMIM_621421/phenotypic_differential_matching.csv
+
+[Course index](../../../../../../README.md) · [Original source](https://drive.google.com/file/d/1VPlTDJULw4qIkQuVcHxxPh4Q50Nvmi-z/view#archive-member=precomputed/sliders/sliders-OMIM_621421/phenotypic_differential_matching.csv) · [Raw file](../../../../../../raw/assignments/assignment2-course-bundle/precomputed/sliders/sliders-OMIM_621421/phenotypic_differential_matching.csv)
+
+Retrieved: 2026-11-13T17:00:50.402745+00:00
+
+```csv
+row_id,target_disease,mimic_disease,overlapping_phenotypes,discriminating_phenotype,discriminating_logic,diagnostic_confidence
+e0e487ada687411b:0:phenotypic_differential_matching:0,Ramond-Elliott neurodevelopmental syndrome,Isolated Primary Microcephaly,"microcephaly, global developmental delay",infantile spasms,"Development of infantile spasms and early-onset feeding difficulties strongly separates RAMELN from non-syndromic primary microcephalies, which do not typically exhibit epileptic encephalopathy or infantile spasms.",high
+e0e487ada687411b:0:phenotypic_differential_matching:1,Ramond-Elliott neurodevelopmental syndrome,ADARB1 Deficiency,"severe microcephaly, profound intellectual disability, early-onset seizures, severe feeding difficulties",None (phenotypically indistinguishable),There are no reliable positive clinical discriminators at the bedside; pure phenotypic separation is impossible and requires molecular genetic testing (WES/WGS).,low
+e0e487ada687411b:0:phenotypic_differential_matching:2,Ramond-Elliott neurodevelopmental syndrome,CHARGE Syndrome,"developmental delay, microcephaly, multisystem involvement",coloboma,"Absence of ocular coloboma, microphthalmia, and major conotruncal heart defects in RAMELN rules out CHARGE syndrome.",high
+
+```

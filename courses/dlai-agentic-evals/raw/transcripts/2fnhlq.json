@@ -1,0 +1,457 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 4,
+    "text": "In the last video, you tested a prompt change on the Northwind agent."
+  },
+  {
+    "startInSeconds": 4,
+    "endInSeconds": 7,
+    "text": "The new grounding rule helped with the problem you\nwere trying to solve."
+  },
+  {
+    "startInSeconds": 7,
+    "endInSeconds": 14,
+    "text": "The agent stopped adding unsupported care advice,\nBut the comparison has also uncovered something new."
+  },
+  {
+    "startInSeconds": 14,
+    "endInSeconds": 20,
+    "text": "On some sizing questions, the agent started making an extra product\nlookup, even though it already had the information it needed."
+  },
+  {
+    "startInSeconds": 20,
+    "endInSeconds": 26,
+    "text": "So now you have another failure to work on. The question is,\nwhat should change this time?"
+  },
+  {
+    "startInSeconds": 26,
+    "endInSeconds": 32,
+    "text": "You could edit the prompt again, change the data the agent receives,\nhow a tool works, or how the workflow is organized."
+  },
+  {
+    "startInSeconds": 32,
+    "endInSeconds": 39,
+    "text": "You could even try a different model. All of those are possible\ninterventions, but they solve different kinds of problems."
+  },
+  {
+    "startInSeconds": 39,
+    "endInSeconds": 45,
+    "text": "So before choosing one, look at the evidence you have,\nand ask where the failure is actually showing up."
+  },
+  {
+    "startInSeconds": 45,
+    "endInSeconds": 50,
+    "text": "A useful way to do that is to work through an intervention hierarchy,\nsuch as this one by Hamel Husain."
+  },
+  {
+    "startInSeconds": 50,
+    "endInSeconds": 57,
+    "text": "You start with the data, then look at the prompt, then the tools\nand workflow. If those all look sound, consider the model."
+  },
+  {
+    "startInSeconds": 57,
+    "endInSeconds": 62,
+    "text": "And finally, there are settings like temperature and other\nsampling parameters."
+  },
+  {
+    "startInSeconds": 62,
+    "endInSeconds": 65,
+    "text": "You don't have to treat this as a rigid recipe,"
+  },
+  {
+    "startInSeconds": 65,
+    "endInSeconds": 72,
+    "text": "The idea is to start with the simplest layer that could reasonably\nexplain the failure and move up when the evidence tells you to."
+  },
+  {
+    "startInSeconds": 72,
+    "endInSeconds": 78,
+    "text": "Let's go through those layers with the shelter agent in mind.\nThe first step is, start with the data."
+  },
+  {
+    "startInSeconds": 78,
+    "endInSeconds": 84,
+    "text": "Suppose one dog record says that Atlas pulls hard on walks,\nso the information is there,"
+  },
+  {
+    "startInSeconds": 84,
+    "endInSeconds": 91,
+    "text": "but there's also a structured field that tells the agent whether the\ndog requires an experienced handler, and that field is blank."
+  },
+  {
+    "startInSeconds": 91,
+    "endInSeconds": 97,
+    "text": "Now imagine the agent matches Atlas with a first-time volunteer.\nYou could respond by changing the prompt."
+  },
+  {
+    "startInSeconds": 97,
+    "endInSeconds": 104,
+    "text": "Maybe you tell the agent, \"Make sure you read the behavior notes\nbefore deciding.\" That might help, but look at the underlying problem."
+  },
+  {
+    "startInSeconds": 104,
+    "endInSeconds": 111,
+    "text": "The record already has a place to represent whether this dog needs an\nexperienced handler, and that field was never populated."
+  },
+  {
+    "startInSeconds": 111,
+    "endInSeconds": 115,
+    "text": "If this happens repeatedly, you probably have a data problem."
+  },
+  {
+    "startInSeconds": 115,
+    "endInSeconds": 121,
+    "text": "A better fix may be to change the data-entry or processing rule so\nthat when notes indicate strong pulling,"
+  },
+  {
+    "startInSeconds": 121,
+    "endInSeconds": 124,
+    "text": "the experienced handler requirement gets set correctly."
+  },
+  {
+    "startInSeconds": 124,
+    "endInSeconds": 127,
+    "text": "Then run the same eval again."
+  },
+  {
+    "startInSeconds": 127,
+    "endInSeconds": 128,
+    "text": "If the failure disappears,"
+  },
+  {
+    "startInSeconds": 128,
+    "endInSeconds": 135,
+    "text": "you've improved the information the agent is working from rather than\nasking the model to compensate for an inconsistent record."
+  },
+  {
+    "startInSeconds": 135,
+    "endInSeconds": 139,
+    "text": "Now suppose the record is complete and the agent has all the\ninformation it needs,"
+  },
+  {
+    "startInSeconds": 139,
+    "endInSeconds": 143,
+    "text": "but it still schedules an outing without checking whether the\nvolunteer is eligible."
+  },
+  {
+    "startInSeconds": 143,
+    "endInSeconds": 147,
+    "text": "Now the data looks fine, so move on to the instructions."
+  },
+  {
+    "startInSeconds": 147,
+    "endInSeconds": 155,
+    "text": "Does the prompt actually tell the agent that eligibility has to be\nchecked before scheduling? If it doesn't, start there."
+  },
+  {
+    "startInSeconds": 155,
+    "endInSeconds": 161,
+    "text": "You might add a clear requirement: \"Always check eligibility\nbefore scheduling an outing.\" Then test it."
+  },
+  {
+    "startInSeconds": 161,
+    "endInSeconds": 167,
+    "text": "If the behavior is still inconsistent, examples can help show the\nagent what the rule looks like in practice."
+  },
+  {
+    "startInSeconds": 167,
+    "endInSeconds": 171,
+    "text": "You could include one example where the volunteer is eligible\nand the outing proceeds,"
+  },
+  {
+    "startInSeconds": 171,
+    "endInSeconds": 175,
+    "text": "and another where the volunteer is not eligible\nand the scheduling stops."
+  },
+  {
+    "startInSeconds": 175,
+    "endInSeconds": 179,
+    "text": "But be a little careful with examples because they might\nopen the door for bias."
+  },
+  {
+    "startInSeconds": 179,
+    "endInSeconds": 183,
+    "text": "Suppose every example you give the agent involves a large dog."
+  },
+  {
+    "startInSeconds": 183,
+    "endInSeconds": 187,
+    "text": "The agent may start associating the eligibility check with large dogs,"
+  },
+  {
+    "startInSeconds": 187,
+    "endInSeconds": 190,
+    "text": "instead of learning that eligibility should be\nchecked for every outing."
+  },
+  {
+    "startInSeconds": 190,
+    "endInSeconds": 195,
+    "text": "So test the revised prompt on cases that look different from the\nexamples you gave it."
+  },
+  {
+    "startInSeconds": 195,
+    "endInSeconds": 200,
+    "text": "Try a small dog or a dog with a medical restriction.\nPhrase your example requests in different ways."
+  },
+  {
+    "startInSeconds": 200,
+    "endInSeconds": 204,
+    "text": "If the behavior only works on cases that closely\nresemble the examples,"
+  },
+  {
+    "startInSeconds": 204,
+    "endInSeconds": 208,
+    "text": "your prompt may be teaching a narrower pattern than you intended."
+  },
+  {
+    "startInSeconds": 208,
+    "endInSeconds": 212,
+    "text": "Sometimes a clearer instruction is more useful than adding\nmore and more examples."
+  },
+  {
+    "startInSeconds": 212,
+    "endInSeconds": 217,
+    "text": "Now suppose the prompt already says to check eligibility\nand the agent is trying to do that."
+  },
+  {
+    "startInSeconds": 217,
+    "endInSeconds": 222,
+    "text": "The next question is whether the tools and workflow make the\ncorrect behavior easy."
+  },
+  {
+    "startInSeconds": 222,
+    "endInSeconds": 228,
+    "text": "Suppose the agent calls an eligibility lookup and the tool returns \"no\nmatch\". What should the agent do?"
+  },
+  {
+    "startInSeconds": 228,
+    "endInSeconds": 233,
+    "text": "Should it ask for more information, should it stop,\nor should it send the case to a staff member?"
+  },
+  {
+    "startInSeconds": 233,
+    "endInSeconds": 240,
+    "text": "If the tool description doesn't say, the model has to decide for\nitself. So give the tool a clear contract."
+  },
+  {
+    "startInSeconds": 240,
+    "endInSeconds": 246,
+    "text": "Tell the agent when the tool should be used, explain the possible\nresults, and say what should happen after each one."
+  },
+  {
+    "startInSeconds": 246,
+    "endInSeconds": 251,
+    "text": "For example, if the result is eligible, continue.\nIf it's not eligible, stop."
+  },
+  {
+    "startInSeconds": 251,
+    "endInSeconds": 259,
+    "text": "If it's no match, ask for information needed to identify the\nvolunteer. That removes a lot of ambiguity from the decision."
+  },
+  {
+    "startInSeconds": 259,
+    "endInSeconds": 262,
+    "text": "And sometimes the instructions still aren't enough."
+  },
+  {
+    "startInSeconds": 262,
+    "endInSeconds": 269,
+    "text": "Suppose checking eligibility is required for every outing,\nand even with a clear prompt, the agent occasionally skips it."
+  },
+  {
+    "startInSeconds": 269,
+    "endInSeconds": 273,
+    "text": "At that point, you can make the step part of the workflow itself."
+  },
+  {
+    "startInSeconds": 273,
+    "endInSeconds": 280,
+    "text": "Instead of letting the model decide whether to check eligibility,\nput the lookup as a necessary step directly before scheduling."
+  },
+  {
+    "startInSeconds": 280,
+    "endInSeconds": 286,
+    "text": "Now the flow is: receive the request, check eligibility,\nand only then continue to scheduling."
+  },
+  {
+    "startInSeconds": 286,
+    "endInSeconds": 292,
+    "text": "That can make an important requirement much more reliable.\nBut remember what you saw in the Northwind experiment."
+  },
+  {
+    "startInSeconds": 292,
+    "endInSeconds": 294,
+    "text": "Every extra step has a cost."
+  },
+  {
+    "startInSeconds": 294,
+    "endInSeconds": 301,
+    "text": "A new tool call can add latency, it can add API cost,\nand it creates another place where something can go wrong."
+  },
+  {
+    "startInSeconds": 301,
+    "endInSeconds": 309,
+    "text": "If you're dealing with a safety-related eligibility check, that may be\nan easy trade-off to accept. For an optional step, maybe not."
+  },
+  {
+    "startInSeconds": 309,
+    "endInSeconds": 316,
+    "text": "You can test that, too. Remove the step, run the same evals,\nand see whether anything meaningful gets worse."
+  },
+  {
+    "startInSeconds": 316,
+    "endInSeconds": 320,
+    "text": "So far, the interventions we've looked at are fairly local."
+  },
+  {
+    "startInSeconds": 320,
+    "endInSeconds": 325,
+    "text": "fix a field, clarify an instruction, improve a tool contract,\nchange the workflow."
+  },
+  {
+    "startInSeconds": 325,
+    "endInSeconds": 329,
+    "text": "But sometimes you work through those layers and the\nagent still struggles."
+  },
+  {
+    "startInSeconds": 329,
+    "endInSeconds": 335,
+    "text": "The data is good, the instructions are clear, the tools behave\ncorrectly, the workflow gives the agent what it needs,"
+  },
+  {
+    "startInSeconds": 335,
+    "endInSeconds": 339,
+    "text": "and the task is still beyond what the model handles reliably."
+  },
+  {
+    "startInSeconds": 339,
+    "endInSeconds": 342,
+    "text": "Now it makes sense to consider the model itself."
+  },
+  {
+    "startInSeconds": 342,
+    "endInSeconds": 347,
+    "text": "Maybe another model is better at the kind of reasoning your agent\nneeds, but you need to tread carefully."
+  },
+  {
+    "startInSeconds": 347,
+    "endInSeconds": 354,
+    "text": "A model change is a much broader intervention than editing one rule in\na prompt. It can affect behavior across many different requests."
+  },
+  {
+    "startInSeconds": 354,
+    "endInSeconds": 357,
+    "text": "It can even change latency and cost."
+  },
+  {
+    "startInSeconds": 357,
+    "endInSeconds": 362,
+    "text": "So treat a model swap like any other candidate change:\nrun the same evaluation suite,"
+  },
+  {
+    "startInSeconds": 362,
+    "endInSeconds": 369,
+    "text": "look at the failures you wanted to improve and the cases\nthat were already working, and compare the costs as well."
+  },
+  {
+    "startInSeconds": 369,
+    "endInSeconds": 374,
+    "text": "At the top of the hierarchy are settings like temperature\nand other sampling parameters."
+  },
+  {
+    "startInSeconds": 374,
+    "endInSeconds": 378,
+    "text": "Modern models sometimes omit the ability to change\nthese parameters at all."
+  },
+  {
+    "startInSeconds": 378,
+    "endInSeconds": 381,
+    "text": "If present, they can affect how variable the model's outputs are,"
+  },
+  {
+    "startInSeconds": 381,
+    "endInSeconds": 388,
+    "text": "but they're usually a poor place to start if your actual problem is\nthat the agent is missing required information, ignoring a rule,"
+  },
+  {
+    "startInSeconds": 388,
+    "endInSeconds": 390,
+    "text": "or calling the wrong tool."
+  },
+  {
+    "startInSeconds": 390,
+    "endInSeconds": 396,
+    "text": "Changing temperature doesn't give the agent a field that isn't there,\nit doesn't define what no match means,"
+  },
+  {
+    "startInSeconds": 396,
+    "endInSeconds": 399,
+    "text": "and it doesn't add a missing eligibility requirement to the prompt."
+  },
+  {
+    "startInSeconds": 399,
+    "endInSeconds": 404,
+    "text": "Those settings are more useful when the variability itself is part of\nwhat you're trying to improve."
+  },
+  {
+    "startInSeconds": 404,
+    "endInSeconds": 412,
+    "text": "So when you find a failure, try to match the change to the evidence.\nIf the information is missing or inconsistent, look at the data."
+  },
+  {
+    "startInSeconds": 412,
+    "endInSeconds": 416,
+    "text": "If the agent has information, but the requirement is\nunclear, look at the prompt."
+  },
+  {
+    "startInSeconds": 416,
+    "endInSeconds": 422,
+    "text": "If the agent knows what to do, but struggles to carry it out reliably,\ncheck the tools and workflow."
+  },
+  {
+    "startInSeconds": 422,
+    "endInSeconds": 426,
+    "text": "If those layers are working and the task is still too hard,\nthen consider the model."
+  },
+  {
+    "startInSeconds": 426,
+    "endInSeconds": 432,
+    "text": "And if you find that the problem really is about sampling behavior,\nthen look at your agent's parameters."
+  },
+  {
+    "startInSeconds": 432,
+    "endInSeconds": 437,
+    "text": "The point is to avoid making a broad change when a smaller one may\naddress the problem directly."
+  },
+  {
+    "startInSeconds": 437,
+    "endInSeconds": 442,
+    "text": "And whatever layer you change, the same discipline from the last two\nvideos still applies."
+  },
+  {
+    "startInSeconds": 442,
+    "endInSeconds": 448,
+    "text": "Change something you have a reason to believe could help, run the same\nevaluation again, check the behavior you wanted to improve,"
+  },
+  {
+    "startInSeconds": 448,
+    "endInSeconds": 450,
+    "text": "and check what else moved."
+  },
+  {
+    "startInSeconds": 450,
+    "endInSeconds": 455,
+    "text": "In the next video, you'll use this hierarchy on the Northwind\nregression you found earlier."
+  },
+  {
+    "startInSeconds": 455,
+    "endInSeconds": 458,
+    "text": "You already know where the two versions start to behave differently."
+  },
+  {
+    "startInSeconds": 458,
+    "endInSeconds": 462,
+    "text": "You'll use that evidence to decide what to change and make the next\niteration more precise."
+  }
+]

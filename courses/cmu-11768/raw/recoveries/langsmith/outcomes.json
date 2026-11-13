@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://smith.langchain.com/public/5e17b93a-17af-4386-ada0-9bd033f98a74/r",
+    "text": "Input\nOutput\nInput\n\nNo inputs\n\nOutput\n\nNo outputs",
+    "query_url": "https://api.smith.langchain.com/v2/public/5e17b93a-17af-4386-ada0-9bd033f98a74/runs/query",
+    "http_status": 200,
+    "query_body": "{\"selects\":[\"ID\",\"TRACE_ID\",\"PROJECT_ID\",\"NAME\",\"RUN_TYPE\",\"STATUS\",\"START_TIME\",\"END_TIME\",\"LATENCY_SECONDS\",\"FIRST_TOKEN_TIME\",\"ERROR\",\"ERROR_PREVIEW\",\"METADATA\",\"INPUTS_PREVIEW\",\"OUTPUTS_PREVIEW\",\"PARENT_RUN_ID\",\"PARENT_RUN_IDS\",\"THREAD_ID\",\"DOTTED_ORDER\",\"IS_ROOT\",\"REFERENCE_DATASET_ID\",\"TOTAL_TOKENS\",\"PROMPT_TOKENS\",\"COMPLETION_TOKENS\",\"TOTAL_COST\",\"PROMPT_COST\",\"COMPLETION_COST\",\"PROMPT_TOKEN_DETAILS\",\"COMPLETION_TOKEN_DETAILS\",\"PROMPT_COST_DETAILS\",\"COMPLETION_COST_DETAILS\",\"PRICE_MODEL_ID\",\"TAGS\",\"THREAD_EVALUATION_TIME\",\"FEEDBACK_STATS\"]}",
+    "response_body": "event: data\ndata: [{\"op\":\"add\",\"path\":\"\",\"value\":{\"items\":[]}}]\n\nevent: end\ndata: \n\n"
+  },
+  {
+    "url": "https://smith.langchain.com/public/aeddf201-687b-4389-acdb-137dd9683000/r",
+    "text": "Input\nOutput\nInput\n\nNo inputs\n\nOutput\n\nNo outputs",
+    "query_url": "https://api.smith.langchain.com/v2/public/aeddf201-687b-4389-acdb-137dd9683000/runs/query",
+    "http_status": 200,
+    "query_body": "{\"selects\":[\"ID\",\"TRACE_ID\",\"PROJECT_ID\",\"NAME\",\"RUN_TYPE\",\"STATUS\",\"START_TIME\",\"END_TIME\",\"LATENCY_SECONDS\",\"FIRST_TOKEN_TIME\",\"ERROR\",\"ERROR_PREVIEW\",\"METADATA\",\"INPUTS_PREVIEW\",\"OUTPUTS_PREVIEW\",\"PARENT_RUN_ID\",\"PARENT_RUN_IDS\",\"THREAD_ID\",\"DOTTED_ORDER\",\"IS_ROOT\",\"REFERENCE_DATASET_ID\",\"TOTAL_TOKENS\",\"PROMPT_TOKENS\",\"COMPLETION_TOKENS\",\"TOTAL_COST\",\"PROMPT_COST\",\"COMPLETION_COST\",\"PROMPT_TOKEN_DETAILS\",\"COMPLETION_TOKEN_DETAILS\",\"PROMPT_COST_DETAILS\",\"COMPLETION_COST_DETAILS\",\"PRICE_MODEL_ID\",\"TAGS\",\"THREAD_EVALUATION_TIME\",\"FEEDBACK_STATS\"]}",
+    "response_body": "event: data\ndata: [{\"op\":\"add\",\"path\":\"\",\"value\":{\"items\":[]}}]\n\nevent: end\ndata: \n\n"
+  },
+  {
+    "url": "https://smith.langchain.com/public/416d3c74-4b43-4883-b189-92a57431a819/r",
+    "text": "Input\nOutput\nInput\n\nNo inputs\n\nOutput\n\nNo outputs",
+    "query_url": "https://api.smith.langchain.com/v2/public/416d3c74-4b43-4883-b189-92a57431a819/runs/query",
+    "http_status": 200,
+    "query_body": "{\"selects\":[\"ID\",\"TRACE_ID\",\"PROJECT_ID\",\"NAME\",\"RUN_TYPE\",\"STATUS\",\"START_TIME\",\"END_TIME\",\"LATENCY_SECONDS\",\"FIRST_TOKEN_TIME\",\"ERROR\",\"ERROR_PREVIEW\",\"METADATA\",\"INPUTS_PREVIEW\",\"OUTPUTS_PREVIEW\",\"PARENT_RUN_ID\",\"PARENT_RUN_IDS\",\"THREAD_ID\",\"DOTTED_ORDER\",\"IS_ROOT\",\"REFERENCE_DATASET_ID\",\"TOTAL_TOKENS\",\"PROMPT_TOKENS\",\"COMPLETION_TOKENS\",\"TOTAL_COST\",\"PROMPT_COST\",\"COMPLETION_COST\",\"PROMPT_TOKEN_DETAILS\",\"COMPLETION_TOKEN_DETAILS\",\"PROMPT_COST_DETAILS\",\"COMPLETION_COST_DETAILS\",\"PRICE_MODEL_ID\",\"TAGS\",\"THREAD_EVALUATION_TIME\",\"FEEDBACK_STATS\"]}",
+    "response_body": "event: data\ndata: [{\"op\":\"add\",\"path\":\"\",\"value\":{\"items\":[]}}]\n\nevent: end\ndata: \n\n"
+  }
+]

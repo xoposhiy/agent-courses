@@ -1,0 +1,210 @@
+[
+  {
+    "category_id": "foundations",
+    "concept_count": 16,
+    "confirmed_course_concepts": 13,
+    "book_only_concepts": 3,
+    "covered_course_count": 7,
+    "course_concept_counts": {
+      "stanford-cs329z": 8,
+      "columbia-coms4995": 10,
+      "cmu-11768": 12,
+      "langchain-deep-agents": 7,
+      "stanford-cs224v": 8,
+      "dlai-agentic-evals": 1,
+      "colorado-csci7000": 6
+    }
+  },
+  {
+    "category_id": "architecture",
+    "concept_count": 18,
+    "confirmed_course_concepts": 18,
+    "book_only_concepts": 0,
+    "covered_course_count": 7,
+    "course_concept_counts": {
+      "stanford-cs329z": 14,
+      "columbia-coms4995": 6,
+      "cmu-11768": 11,
+      "langchain-deep-agents": 9,
+      "stanford-cs224v": 7,
+      "dlai-agentic-evals": 2,
+      "colorado-csci7000": 6
+    }
+  },
+  {
+    "category_id": "reasoning-techniques",
+    "concept_count": 19,
+    "confirmed_course_concepts": 19,
+    "book_only_concepts": 0,
+    "covered_course_count": 7,
+    "course_concept_counts": {
+      "stanford-cs329z": 13,
+      "columbia-coms4995": 15,
+      "cmu-11768": 12,
+      "langchain-deep-agents": 4,
+      "stanford-cs224v": 6,
+      "dlai-agentic-evals": 3,
+      "colorado-csci7000": 8
+    }
+  },
+  {
+    "category_id": "context-memory",
+    "concept_count": 17,
+    "confirmed_course_concepts": 17,
+    "book_only_concepts": 0,
+    "covered_course_count": 6,
+    "course_concept_counts": {
+      "stanford-cs329z": 13,
+      "columbia-coms4995": 6,
+      "cmu-11768": 9,
+      "langchain-deep-agents": 10,
+      "stanford-cs224v": 6,
+      "dlai-agentic-evals": 0,
+      "colorado-csci7000": 3
+    }
+  },
+  {
+    "category_id": "retrieval-knowledge",
+    "concept_count": 19,
+    "confirmed_course_concepts": 18,
+    "book_only_concepts": 1,
+    "covered_course_count": 5,
+    "course_concept_counts": {
+      "stanford-cs329z": 8,
+      "columbia-coms4995": 5,
+      "cmu-11768": 5,
+      "langchain-deep-agents": 0,
+      "stanford-cs224v": 15,
+      "dlai-agentic-evals": 0,
+      "colorado-csci7000": 3
+    }
+  },
+  {
+    "category_id": "tool-techniques",
+    "concept_count": 5,
+    "confirmed_course_concepts": 5,
+    "book_only_concepts": 0,
+    "covered_course_count": 7,
+    "course_concept_counts": {
+      "stanford-cs329z": 2,
+      "columbia-coms4995": 1,
+      "cmu-11768": 3,
+      "langchain-deep-agents": 3,
+      "stanford-cs224v": 1,
+      "dlai-agentic-evals": 1,
+      "colorado-csci7000": 2
+    }
+  },
+  {
+    "category_id": "training",
+    "concept_count": 22,
+    "confirmed_course_concepts": 19,
+    "book_only_concepts": 3,
+    "covered_course_count": 6,
+    "course_concept_counts": {
+      "stanford-cs329z": 11,
+      "columbia-coms4995": 10,
+      "cmu-11768": 14,
+      "langchain-deep-agents": 0,
+      "stanford-cs224v": 1,
+      "dlai-agentic-evals": 1,
+      "colorado-csci7000": 4
+    }
+  },
+  {
+    "category_id": "evaluation",
+    "concept_count": 28,
+    "confirmed_course_concepts": 27,
+    "book_only_concepts": 1,
+    "covered_course_count": 7,
+    "course_concept_counts": {
+      "stanford-cs329z": 15,
+      "columbia-coms4995": 8,
+      "cmu-11768": 18,
+      "langchain-deep-agents": 1,
+      "stanford-cs224v": 13,
+      "dlai-agentic-evals": 19,
+      "colorado-csci7000": 8
+    }
+  },
+  {
+    "category_id": "safety-trust",
+    "concept_count": 11,
+    "confirmed_course_concepts": 11,
+    "book_only_concepts": 0,
+    "covered_course_count": 6,
+    "course_concept_counts": {
+      "stanford-cs329z": 0,
+      "columbia-coms4995": 9,
+      "cmu-11768": 9,
+      "langchain-deep-agents": 6,
+      "stanford-cs224v": 2,
+      "dlai-agentic-evals": 3,
+      "colorado-csci7000": 3
+    }
+  },
+  {
+    "category_id": "runtime",
+    "concept_count": 15,
+    "confirmed_course_concepts": 15,
+    "book_only_concepts": 0,
+    "covered_course_count": 7,
+    "course_concept_counts": {
+      "stanford-cs329z": 6,
+      "columbia-coms4995": 5,
+      "cmu-11768": 9,
+      "langchain-deep-agents": 9,
+      "stanford-cs224v": 2,
+      "dlai-agentic-evals": 2,
+      "colorado-csci7000": 1
+    }
+  },
+  {
+    "category_id": "tools-protocols",
+    "concept_count": 5,
+    "confirmed_course_concepts": 5,
+    "book_only_concepts": 0,
+    "covered_course_count": 4,
+    "course_concept_counts": {
+      "stanford-cs329z": 4,
+      "columbia-coms4995": 1,
+      "cmu-11768": 2,
+      "langchain-deep-agents": 3,
+      "stanford-cs224v": 0,
+      "dlai-agentic-evals": 0,
+      "colorado-csci7000": 0
+    }
+  },
+  {
+    "category_id": "applications",
+    "concept_count": 14,
+    "confirmed_course_concepts": 11,
+    "book_only_concepts": 3,
+    "covered_course_count": 5,
+    "course_concept_counts": {
+      "stanford-cs329z": 1,
+      "columbia-coms4995": 0,
+      "cmu-11768": 5,
+      "langchain-deep-agents": 4,
+      "stanford-cs224v": 6,
+      "dlai-agentic-evals": 0,
+      "colorado-csci7000": 3
+    }
+  },
+  {
+    "category_id": "behavior",
+    "concept_count": 16,
+    "confirmed_course_concepts": 7,
+    "book_only_concepts": 9,
+    "covered_course_count": 5,
+    "course_concept_counts": {
+      "stanford-cs329z": 1,
+      "columbia-coms4995": 0,
+      "cmu-11768": 5,
+      "langchain-deep-agents": 2,
+      "stanford-cs224v": 4,
+      "dlai-agentic-evals": 0,
+      "colorado-csci7000": 2
+    }
+  }
+]

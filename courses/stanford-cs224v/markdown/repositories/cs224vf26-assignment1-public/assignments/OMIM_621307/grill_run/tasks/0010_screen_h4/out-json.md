@@ -1,0 +1,42 @@
+# Homework 1 public teaching repository: assignments/OMIM_621307/grill_run/tasks/0010_screen_h4/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621307/grill_run/tasks/0010_screen_h4/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621307/grill_run/tasks/0010_screen_h4/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "TBC1D32 underlies a spectrum from severe prenatal ciliopathies with midline/pituitary defects to milder ciliopathies like retinitis pigmentosa, making a null vs hypomorphic genotype-phenotype correlation plausible.",
+  "confidence": 0.8,
+  "evidence": [
+    {
+      "text": "TBC1D32 is expressed in the developing hypothalamus and pituitary gland, and pathogenic variants show phenotypic expansion from life-limiting severe prenatal congenital malformations to broader ciliopathy presentations.",
+      "stance": "supports",
+      "source": {
+        "title": "Diagnosis of TBC1D32-associated conditions - PMC - NIH",
+        "authors": [
+          "SC Harris"
+        ],
+        "year": 2023,
+        "journal": null,
+        "doi": "10.1002/ajmg.a.63150",
+        "pmid": "36826837",
+        "pmc": "PMC10204718",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10204718/",
+        "quote": "TBC1D32 is involved in the development and function of cilia and is expressed in the developing hypothalamus and pituitary gland. We provide additional data to expand the phenotype correlated with TBC1D32 variants, including a severe prenatal phenotype associated with life-limiting congenital anomalies."
+      },
+      "numbers": [
+        {
+          "metric": "unpublished probands described",
+          "value": 7
+        },
+        {
+          "metric": "fetal probands with severe prenatal phenotypes",
+          "value": 4
+        }
+      ]
+    }
+  ]
+}
+```

@@ -1,0 +1,314 @@
+# Homework 2 bundle: precomputed/sliders/sliders-OMIM_620938/evidence.csv
+
+[Course index](../../../../../../README.md) · [Original source](https://drive.google.com/file/d/1VPlTDJULw4qIkQuVcHxxPh4Q50Nvmi-z/view#archive-member=precomputed/sliders/sliders-OMIM_620938/evidence.csv) · [Raw file](../../../../../../raw/assignments/assignment2-course-bundle/precomputed/sliders/sliders-OMIM_620938/evidence.csv)
+
+Retrieved: 2026-11-13T17:00:50.402745+00:00
+
+```csv
+table,row_id,field,value,quote,document,start_line,end_line,quote_verified
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:0,disease_name,Spastic paraplegia 93,"# Clinical Phenotypic Identification and Differential Diagnosis of Spastic Paraplegia 93 (NFU1 Deficiency, OMIM #620938)
+
+## Executive Summary & Clinical Phenotypic Profile
+
+Spastic paraplegia 93, autosomal recessive (SPG93, OMIM #620938), represents the milder, chronically survivable end of the disease spectrum caused by biallelic mutations in *NFU1* on chromosome 2p13 (F2). While severe biallelic loss of function in *NFU1* typically produces Multiple Mitochondrial Dysfunctions Syndrome 1 (MMDS1, OMIM #608100)—a lethal infantile encephalopathy characterized by fatal pulmonary hypertension and metabolic lactic acidosis—SPG93 manifests as a progressive spastic paraplegia phenotype surviving past infancy and into adulthood (F2; F3). Clinicians identifying patients based on phenotypic evaluation alone must distinguish early-stage presentations (which frequently mimic spastic cerebral palsy or pure hereditary spastic paraplegia) from mature presentations, which evolve into a complex neurodegenerative syndrome featuring spastic paraparesis, cerebellar ataxia, dysarthria, and axonal/sensorimotor polyneuropathy (F4; F5; F6).",report.md,1,5,True
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:0,rule_or_step_title,Hereditary spastic paraplegia spectrum presentation,"| Hereditary spastic paraplegia spectrum presentation | Spastic paraplegia (HP:0001258) | 16/19 | 84.2% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F2) |",report.md,15,15,True
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:0,phenotype_name,Spastic paraplegia,"| Hereditary spastic paraplegia spectrum presentation | Spastic paraplegia (HP:0001258) | 16/19 | 84.2% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F2) |",report.md,15,15,True
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:0,rule_category,inclusion_criterion,"| Hereditary spastic paraplegia spectrum presentation | Spastic paraplegia (HP:0001258) | 16/19 | 84.2% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F2) |",report.md,15,15,False
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:0,phenotype_status_required,must_be_present,"| Hereditary spastic paraplegia spectrum presentation | Spastic paraplegia (HP:0001258) | 16/19 | 84.2% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F2) |",report.md,15,15,False
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:0,matching_criterion_description,Hereditary spastic paraplegia spectrum presentation observed in SPG93 cohort.,"| Hereditary spastic paraplegia spectrum presentation | Spastic paraplegia (HP:0001258) | 16/19 | 84.2% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F2) |",report.md,15,15,False
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:0,cohort_frequency,16/19,"| Hereditary spastic paraplegia spectrum presentation | Spastic paraplegia (HP:0001258) | 16/19 | 84.2% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F2) |",report.md,15,15,True
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:1,disease_name,Spastic paraplegia 93,"# Clinical Phenotypic Identification and Differential Diagnosis of Spastic Paraplegia 93 (NFU1 Deficiency, OMIM #620938)
+
+## Executive Summary & Clinical Phenotypic Profile
+
+Spastic paraplegia 93, autosomal recessive (SPG93, OMIM #620938), represents the milder, chronically survivable end of the disease spectrum caused by biallelic mutations in *NFU1* on chromosome 2p13 (F2). While severe biallelic loss of function in *NFU1* typically produces Multiple Mitochondrial Dysfunctions Syndrome 1 (MMDS1, OMIM #608100)—a lethal infantile encephalopathy characterized by fatal pulmonary hypertension and metabolic lactic acidosis—SPG93 manifests as a progressive spastic paraplegia phenotype surviving past infancy and into adulthood (F2; F3). Clinicians identifying patients based on phenotypic evaluation alone must distinguish early-stage presentations (which frequently mimic spastic cerebral palsy or pure hereditary spastic paraplegia) from mature presentations, which evolve into a complex neurodegenerative syndrome featuring spastic paraparesis, cerebellar ataxia, dysarthria, and axonal/sensorimotor polyneuropathy (F4; F5; F6).",report.md,1,5,True
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:1,rule_or_step_title,White matter neuroimaging abnormalities,"| White matter neuroimaging abnormalities | Abnormal cerebral white matter morphology (HP:0002500) | 16/16 | 100.0% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F5) |",report.md,17,17,True
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:1,phenotype_name,Abnormal cerebral white matter morphology,"| White matter neuroimaging abnormalities | Abnormal cerebral white matter morphology (HP:0002500) | 16/16 | 100.0% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F5) |",report.md,17,17,True
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:1,rule_category,discriminating_feature,"| White matter neuroimaging abnormalities | Abnormal cerebral white matter morphology (HP:0002500) | 16/16 | 100.0% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F5) |",report.md,17,17,False
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:1,phenotype_status_required,must_be_present,"| White matter neuroimaging abnormalities | Abnormal cerebral white matter morphology (HP:0002500) | 16/16 | 100.0% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F5) |
+| Spastic paraparesis with elevated body fluid glycine | Spastic paraparesis (HP:0002313) / Hyperglycinemia (HP:0002154) | 4/4 | 100.0% | F. Tort et al. (2016), DOI: 10.1007/s10545-016-9975-4; P.R. Baker et al. (2014), DOI: 10.1093/brain/awt328 (F1) |
+| Mixed sensory-motor axonal neuropathy in the 3rd decade | Sensorimotor neuropathy (HP:0007140) / Axonal neuropathy (HP:0003477) | 1/1 | 100.0% | D. Tonduti et al. (2015), DOI: 10.1186/s13023-015-0237-6 (F6) |
+| Cavitating leukodystrophy in early-onset spastic presentation | Leukoencephalopathy (HP:0002352) / Brain parenchymal cavitation | 1/1 | 100.0% | T.A. Uzunhan et al. (2020), DOI: 10.1016/j.braindev.2020.06.012 (F4) |
+| Mild leukoencephalopathy without cavitation | Periventricular leukomalacia (HP:0006970) | 1/1 | 100.0% | D. Tonduti et al. (2015), DOI: 10.1186/s13023-015-0237-6 (F4) |
+| Early-onset spastic diplegia mimicking static encephalopathy | Spastic diplegia (HP:0001264) | 1/1 | 100.0% | M.A. Mahmoud et al. (2025), DOI: 10.1016/j.radcr.2025.01.037 (F4) |
+
+In addition to these core frequencies, cerebellar ataxia (HP:0001251) and dysarthria (HP:0001260) have been repeatedly documented as prominent components of the emerging complex spastic paraplegia phenotype in long-surviving patients (F6).
+
+---
+
+## Differential Diagnosis and Discriminating Clinical Biomarkers
+
+When a clinician assesses a patient presenting with spasticity or spastic paraparesis, SPG93 must be differentiated across multiple clinical categories:
+
+### 1. Canonical MMDS1 (NFU1 Deficiency)
+- **Discriminating Findings**: Early-onset fatal course (<15 months), refractory lactic acidosis, and pulmonary arterial hypertension are hallmarks of MMDS1 (F3). Patients with SPG93 survive into later childhood, adolescence, or adulthood (reaching up to the third decade) and lack severe pulmonary vasculopathy (F2; F3; F6).
+- **Confidence of Distinction**: **High**. The absence of acute lethal cardio-pulmonary failure provides a definitive clinical boundary separating SPG93 from classical MMDS1 (F3).
+
+### 2. Common Classical Hereditary Spastic Paraplegias (e.g., SPG4, SPG7, SPG11)
+- **Discriminating Findings**: While early-stage SPG93 can mimic pure HSP, 100% (16/16) of SPG93 patients exhibit cerebral white matter neuroimaging abnormalities on brain MRI from early stages (F5). Classical pure HSPs (such as *SPAST*-related SPG4) typically display normal brain parenchyma or isolated thin corpus callosum without widespread leukoencephalopathy (F5).
+- **Biochemical Biomarkers**: SPG93 is an inborn error of Fe-S cluster biogenesis affecting lipoate synthase (*LIAS*) and the glycine cleavage system (GCS), frequently causing body-fluid glycine elevations (hyperglycinemia) and mild lactic acidosis (F1; F7). These biochemical features are absent in pure classical spastic paraplegias.
+- **Confidence of Distinction**: **Moderate to High** when brain MRI and plasma amino acid profiles are evaluated simultaneously.
+
+### 3. Variant Nonketotic Hyperglycinemia (NKH) and Other Fe-S/Lipoic Acid Defects (*GLRX5*, *BOLA3*, *LIAS*)
+- **Discriminating Findings**: Defects in *GLRX5*, *BOLA3*, *LIAS*, and *NFU1* cause overlapping clinical phenotypes involving spastic paraparesis, cavitating leukoencephalopathy, and elevated CSF/plasma glycine (F1). Biochemical screening and neuroimaging alone **cannot** reliably separate SPG93 from *GLRX5* or *BOLA3* deficiencies (F1).
+- **Confidence of Distinction**: **Low based on phenotype alone**. Direct molecular genomic sequencing is strictly required for intra-pathway differentiation (F1).
+
+### 4. Spastic Cerebral Palsy
+- **Discriminating Findings**: Children with early-onset SPG93 presenting in toddlerhood (4.5 to 27 months) with spastic diplegia and motor delays are frequently misdiagnosed as having static perinatal cerebral palsy (F4; F11; F12). Normal perinatal history, progressive deterioration rather than a static course, presence of cerebral white matter lesions (F5), and emergence of cerebellar ataxia or neuropathy in later childhood distinguish SPG93 from static cerebral palsy (F4; F6).
+- **Confidence of Distinction**: **Moderate**, requiring longitudinal follow-up and neuroimaging (F4; F5).
+
+---
+
+## Obligate Exclusionary Findings: Features Arguing Against SPG93
+
+Certain clinical signs have been systematically evaluated and documented as absent in individuals with SPG93. Their presence strongly argues against a diagnosis of SPG93, indicating alternative diagnoses (such as MMDS1 or unrelated complex HSP variants):
+
+1. **Severe Infantile Pulmonary Arterial Hypertension (HP:0002092)**: Systemic pulmonary vascular remodeling leading to early right ventricular failure is the clinical hallmark of classical infantile MMDS1, resulting in death before 15 to 16 months (F3). It has been looked for and confirmed absent in chronic SPG93 patients surviving past early childhood (F3).
+2. **Intractable Severe Metabolic Lactic Acidosis (HP:0003128)**: Catastrophic systemic lactic acidosis requiring acute intensive care resuscitation is characteristic of infantile MMDS1 but is consistently absent in the milder SPG93 spastic paraparesis presentation (F3).
+3. **Normal Brain Neuroimaging**: In the defined SPG93 cohort, 100% of affected patients (16/16) demonstrated abnormal white matter morphology on MRI (F5). A completely normal brain MRI in a patient with chronic spastic paraplegia strongly argues against SPG93 and favors pure classical HSPs such as SPG4 (F5).",report.md,17,57,False
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:1,matching_criterion_description,100% (16/16) of SPG93 patients exhibit cerebral white matter neuroimaging abnormalities on brain MRI.,"| White matter neuroimaging abnormalities | Abnormal cerebral white matter morphology (HP:0002500) | 16/16 | 100.0% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F5) |
+| Spastic paraparesis with elevated body fluid glycine | Spastic paraparesis (HP:0002313) / Hyperglycinemia (HP:0002154) | 4/4 | 100.0% | F. Tort et al. (2016), DOI: 10.1007/s10545-016-9975-4; P.R. Baker et al. (2014), DOI: 10.1093/brain/awt328 (F1) |
+| Mixed sensory-motor axonal neuropathy in the 3rd decade | Sensorimotor neuropathy (HP:0007140) / Axonal neuropathy (HP:0003477) | 1/1 | 100.0% | D. Tonduti et al. (2015), DOI: 10.1186/s13023-015-0237-6 (F6) |
+| Cavitating leukodystrophy in early-onset spastic presentation | Leukoencephalopathy (HP:0002352) / Brain parenchymal cavitation | 1/1 | 100.0% | T.A. Uzunhan et al. (2020), DOI: 10.1016/j.braindev.2020.06.012 (F4) |
+| Mild leukoencephalopathy without cavitation | Periventricular leukomalacia (HP:0006970) | 1/1 | 100.0% | D. Tonduti et al. (2015), DOI: 10.1186/s13023-015-0237-6 (F4) |
+| Early-onset spastic diplegia mimicking static encephalopathy | Spastic diplegia (HP:0001264) | 1/1 | 100.0% | M.A. Mahmoud et al. (2025), DOI: 10.1016/j.radcr.2025.01.037 (F4) |
+
+In addition to these core frequencies, cerebellar ataxia (HP:0001251) and dysarthria (HP:0001260) have been repeatedly documented as prominent components of the emerging complex spastic paraplegia phenotype in long-surviving patients (F6).
+
+---
+
+## Differential Diagnosis and Discriminating Clinical Biomarkers
+
+When a clinician assesses a patient presenting with spasticity or spastic paraparesis, SPG93 must be differentiated across multiple clinical categories:
+
+### 1. Canonical MMDS1 (NFU1 Deficiency)
+- **Discriminating Findings**: Early-onset fatal course (<15 months), refractory lactic acidosis, and pulmonary arterial hypertension are hallmarks of MMDS1 (F3). Patients with SPG93 survive into later childhood, adolescence, or adulthood (reaching up to the third decade) and lack severe pulmonary vasculopathy (F2; F3; F6).
+- **Confidence of Distinction**: **High**. The absence of acute lethal cardio-pulmonary failure provides a definitive clinical boundary separating SPG93 from classical MMDS1 (F3).
+
+### 2. Common Classical Hereditary Spastic Paraplegias (e.g., SPG4, SPG7, SPG11)
+- **Discriminating Findings**: While early-stage SPG93 can mimic pure HSP, 100% (16/16) of SPG93 patients exhibit cerebral white matter neuroimaging abnormalities on brain MRI from early stages (F5). Classical pure HSPs (such as *SPAST*-related SPG4) typically display normal brain parenchyma or isolated thin corpus callosum without widespread leukoencephalopathy (F5).",report.md,17,37,False
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:1,cohort_frequency,16/16,"| White matter neuroimaging abnormalities | Abnormal cerebral white matter morphology (HP:0002500) | 16/16 | 100.0% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F5) |",report.md,17,17,True
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:2,disease_name,Spastic paraplegia 93,"# Clinical Phenotypic Identification and Differential Diagnosis of Spastic Paraplegia 93 (NFU1 Deficiency, OMIM #620938)
+
+## Executive Summary & Clinical Phenotypic Profile
+
+Spastic paraplegia 93, autosomal recessive (SPG93, OMIM #620938), represents the milder, chronically survivable end of the disease spectrum caused by biallelic mutations in *NFU1* on chromosome 2p13 (F2). While severe biallelic loss of function in *NFU1* typically produces Multiple Mitochondrial Dysfunctions Syndrome 1 (MMDS1, OMIM #608100)—a lethal infantile encephalopathy characterized by fatal pulmonary hypertension and metabolic lactic acidosis—SPG93 manifests as a progressive spastic paraplegia phenotype surviving past infancy and into adulthood (F2; F3). Clinicians identifying patients based on phenotypic evaluation alone must distinguish early-stage presentations (which frequently mimic spastic cerebral palsy or pure hereditary spastic paraplegia) from mature presentations, which evolve into a complex neurodegenerative syndrome featuring spastic paraparesis, cerebellar ataxia, dysarthria, and axonal/sensorimotor polyneuropathy (F4; F5; F6).",report.md,1,5,True
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:2,rule_or_step_title,Obligate Exclusionary Findings,"## Obligate Exclusionary Findings: Features Arguing Against SPG93
+
+Certain clinical signs have been systematically evaluated and documented as absent in individuals with SPG93. Their presence strongly argues against a diagnosis of SPG93, indicating alternative diagnoses (such as MMDS1 or unrelated complex HSP variants):
+
+1. **Severe Infantile Pulmonary Arterial Hypertension (HP:0002092)**: Systemic pulmonary vascular remodeling leading to early right ventricular failure is the clinical hallmark of classical infantile MMDS1, resulting in death before 15 to 16 months (F3). It has been looked for and confirmed absent in chronic SPG93 patients surviving past early childhood (F3).",report.md,51,55,True
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:2,phenotype_name,Severe Infantile Pulmonary Arterial Hypertension,"1. **Severe Infantile Pulmonary Arterial Hypertension (HP:0002092)**: Systemic pulmonary vascular remodeling leading to early right ventricular failure is the clinical hallmark of classical infantile MMDS1, resulting in death before 15 to 16 months (F3). It has been looked for and confirmed absent in chronic SPG93 patients surviving past early childhood (F3).",report.md,55,55,True
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:2,rule_category,exclusion_criterion,"## Obligate Exclusionary Findings: Features Arguing Against SPG93
+
+Certain clinical signs have been systematically evaluated and documented as absent in individuals with SPG93. Their presence strongly argues against a diagnosis of SPG93, indicating alternative diagnoses (such as MMDS1 or unrelated complex HSP variants):
+
+1. **Severe Infantile Pulmonary Arterial Hypertension (HP:0002092)**: Systemic pulmonary vascular remodeling leading to early right ventricular failure is the clinical hallmark of classical infantile MMDS1, resulting in death before 15 to 16 months (F3). It has been looked for and confirmed absent in chronic SPG93 patients surviving past early childhood (F3).",report.md,51,55,False
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:2,phenotype_status_required,must_be_absent,"Certain clinical signs have been systematically evaluated and documented as absent in individuals with SPG93. Their presence strongly argues against a diagnosis of SPG93, indicating alternative diagnoses (such as MMDS1 or unrelated complex HSP variants):
+
+1. **Severe Infantile Pulmonary Arterial Hypertension (HP:0002092)**: Systemic pulmonary vascular remodeling leading to early right ventricular failure is the clinical hallmark of classical infantile MMDS1, resulting in death before 15 to 16 months (F3). It has been looked for and confirmed absent in chronic SPG93 patients surviving past early childhood (F3).",report.md,53,55,False
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:2,matching_criterion_description,Presence of severe infantile pulmonary arterial hypertension rules out chronic SPG93 and points to MMDS1.,"1. **Severe Infantile Pulmonary Arterial Hypertension (HP:0002092)**: Systemic pulmonary vascular remodeling leading to early right ventricular failure is the clinical hallmark of classical infantile MMDS1, resulting in death before 15 to 16 months (F3). It has been looked for and confirmed absent in chronic SPG93 patients surviving past early childhood (F3).",report.md,55,55,False
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:3,disease_name,Spastic paraplegia 93,"# Clinical Phenotypic Identification and Differential Diagnosis of Spastic Paraplegia 93 (NFU1 Deficiency, OMIM #620938)
+
+## Executive Summary & Clinical Phenotypic Profile
+
+Spastic paraplegia 93, autosomal recessive (SPG93, OMIM #620938), represents the milder, chronically survivable end of the disease spectrum caused by biallelic mutations in *NFU1* on chromosome 2p13 (F2). While severe biallelic loss of function in *NFU1* typically produces Multiple Mitochondrial Dysfunctions Syndrome 1 (MMDS1, OMIM #608100)—a lethal infantile encephalopathy characterized by fatal pulmonary hypertension and metabolic lactic acidosis—SPG93 manifests as a progressive spastic paraplegia phenotype surviving past infancy and into adulthood (F2; F3). Clinicians identifying patients based on phenotypic evaluation alone must distinguish early-stage presentations (which frequently mimic spastic cerebral palsy or pure hereditary spastic paraplegia) from mature presentations, which evolve into a complex neurodegenerative syndrome featuring spastic paraparesis, cerebellar ataxia, dysarthria, and axonal/sensorimotor polyneuropathy (F4; F5; F6).",report.md,1,5,True
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:3,rule_or_step_title,Obligate Exclusionary Findings,"## Obligate Exclusionary Findings: Features Arguing Against SPG93
+
+Certain clinical signs have been systematically evaluated and documented as absent in individuals with SPG93. Their presence strongly argues against a diagnosis of SPG93, indicating alternative diagnoses (such as MMDS1 or unrelated complex HSP variants):
+
+1. **Severe Infantile Pulmonary Arterial Hypertension (HP:0002092)**: Systemic pulmonary vascular remodeling leading to early right ventricular failure is the clinical hallmark of classical infantile MMDS1, resulting in death before 15 to 16 months (F3). It has been looked for and confirmed absent in chronic SPG93 patients surviving past early childhood (F3).
+2. **Intractable Severe Metabolic Lactic Acidosis (HP:0003128)**: Catastrophic systemic lactic acidosis requiring acute intensive care resuscitation is characteristic of infantile MMDS1 but is consistently absent in the milder SPG93 spastic paraparesis presentation (F3).",report.md,51,56,True
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:3,phenotype_name,Intractable Severe Metabolic Lactic Acidosis,2. **Intractable Severe Metabolic Lactic Acidosis (HP:0003128)**: Catastrophic systemic lactic acidosis requiring acute intensive care resuscitation is characteristic of infantile MMDS1 but is consistently absent in the milder SPG93 spastic paraparesis presentation (F3).,report.md,56,56,True
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:3,rule_category,exclusion_criterion,"## Obligate Exclusionary Findings: Features Arguing Against SPG93
+
+Certain clinical signs have been systematically evaluated and documented as absent in individuals with SPG93. Their presence strongly argues against a diagnosis of SPG93, indicating alternative diagnoses (such as MMDS1 or unrelated complex HSP variants):
+
+1. **Severe Infantile Pulmonary Arterial Hypertension (HP:0002092)**: Systemic pulmonary vascular remodeling leading to early right ventricular failure is the clinical hallmark of classical infantile MMDS1, resulting in death before 15 to 16 months (F3). It has been looked for and confirmed absent in chronic SPG93 patients surviving past early childhood (F3).
+2. **Intractable Severe Metabolic Lactic Acidosis (HP:0003128)**: Catastrophic systemic lactic acidosis requiring acute intensive care resuscitation is characteristic of infantile MMDS1 but is consistently absent in the milder SPG93 spastic paraparesis presentation (F3).",report.md,51,56,False
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:3,phenotype_status_required,must_be_absent,"Certain clinical signs have been systematically evaluated and documented as absent in individuals with SPG93. Their presence strongly argues against a diagnosis of SPG93, indicating alternative diagnoses (such as MMDS1 or unrelated complex HSP variants):
+
+1. **Severe Infantile Pulmonary Arterial Hypertension (HP:0002092)**: Systemic pulmonary vascular remodeling leading to early right ventricular failure is the clinical hallmark of classical infantile MMDS1, resulting in death before 15 to 16 months (F3). It has been looked for and confirmed absent in chronic SPG93 patients surviving past early childhood (F3).
+2. **Intractable Severe Metabolic Lactic Acidosis (HP:0003128)**: Catastrophic systemic lactic acidosis requiring acute intensive care resuscitation is characteristic of infantile MMDS1 but is consistently absent in the milder SPG93 spastic paraparesis presentation (F3).",report.md,53,56,False
+phenotypic_matching_rules,e08ee08ebf969d55:0:phenotypic_matching_rules:3,matching_criterion_description,Presence of catastrophic systemic lactic acidosis argues against SPG93.,2. **Intractable Severe Metabolic Lactic Acidosis (HP:0003128)**: Catastrophic systemic lactic acidosis requiring acute intensive care resuscitation is characteristic of infantile MMDS1 but is consistently absent in the milder SPG93 spastic paraparesis presentation (F3).,report.md,56,56,False
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:0,target_disease,Spastic paraplegia 93,"# Clinical Phenotypic Identification and Differential Diagnosis of Spastic Paraplegia 93 (NFU1 Deficiency, OMIM #620938)
+
+## Executive Summary & Clinical Phenotypic Profile
+
+Spastic paraplegia 93, autosomal recessive (SPG93, OMIM #620938), represents the milder, chronically survivable end of the disease spectrum caused by biallelic mutations in *NFU1* on chromosome 2p13 (F2). While severe biallelic loss of function in *NFU1* typically produces Multiple Mitochondrial Dysfunctions Syndrome 1 (MMDS1, OMIM #608100)—a lethal infantile encephalopathy characterized by fatal pulmonary hypertension and metabolic lactic acidosis—SPG93 manifests as a progressive spastic paraplegia phenotype surviving past infancy and into adulthood (F2; F3). Clinicians identifying patients based on phenotypic evaluation alone must distinguish early-stage presentations (which frequently mimic spastic cerebral palsy or pure hereditary spastic paraplegia) from mature presentations, which evolve into a complex neurodegenerative syndrome featuring spastic paraparesis, cerebellar ataxia, dysarthria, and axonal/sensorimotor polyneuropathy (F4; F5; F6).
+
+---
+
+## Grounded Phenotypic Spectrum and Exact Cohort Frequencies
+
+Across published cohorts, clinical findings range from lower-extremity pyramidal tract signs to progressive multisystem neurodegeneration. Below is a structured inventory of reported phenotypes, their verbatim literature descriptors, standardized Human Phenotype Ontology (HPO) terms, and verified cohort frequencies.
+
+| Phenotypic Finding (Original Paper Wording) | Standard HPO Term | Cohort Frequency (n/N) | Percentage (%) | Source Reference |
+| :--- | :--- | :--- | :--- | :--- |
+| Hereditary spastic paraplegia spectrum presentation | Spastic paraplegia (HP:0001258) | 16/19 | 84.2% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F2) |
+| Severe infantile hypotonia and neurodevelopmental delay | Muscular hypotonia (HP:0001252) / Global developmental delay (HP:0001263) | 3/19 | 15.8% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F2) |
+| White matter neuroimaging abnormalities | Abnormal cerebral white matter morphology (HP:0002500) | 16/16 | 100.0% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F5) |
+| Spastic paraparesis with elevated body fluid glycine | Spastic paraparesis (HP:0002313) / Hyperglycinemia (HP:0002154) | 4/4 | 100.0% | F. Tort et al. (2016), DOI: 10.1007/s10545-016-9975-4; P.R. Baker et al. (2014), DOI: 10.1093/brain/awt328 (F1) |
+| Mixed sensory-motor axonal neuropathy in the 3rd decade | Sensorimotor neuropathy (HP:0007140) / Axonal neuropathy (HP:0003477) | 1/1 | 100.0% | D. Tonduti et al. (2015), DOI: 10.1186/s13023-015-0237-6 (F6) |
+| Cavitating leukodystrophy in early-onset spastic presentation | Leukoencephalopathy (HP:0002352) / Brain parenchymal cavitation | 1/1 | 100.0% | T.A. Uzunhan et al. (2020), DOI: 10.1016/j.braindev.2020.06.012 (F4) |
+| Mild leukoencephalopathy without cavitation | Periventricular leukomalacia (HP:0006970) | 1/1 | 100.0% | D. Tonduti et al. (2015), DOI: 10.1186/s13023-015-0237-6 (F4) |
+| Early-onset spastic diplegia mimicking static encephalopathy | Spastic diplegia (HP:0001264) | 1/1 | 100.0% | M.A. Mahmoud et al. (2025), DOI: 10.1016/j.radcr.2025.01.037 (F4) |
+
+In addition to these core frequencies, cerebellar ataxia (HP:0001251) and dysarthria (HP:0001260) have been repeatedly documented as prominent components of the emerging complex spastic paraplegia phenotype in long-surviving patients (F6).
+
+---
+
+## Differential Diagnosis and Discriminating Clinical Biomarkers
+
+When a clinician assesses a patient presenting with spasticity or spastic paraparesis, SPG93 must be differentiated across multiple clinical categories:",report.md,1,30,True
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:0,mimic_disease,Canonical MMDS1,### 1. Canonical MMDS1 (NFU1 Deficiency),report.md,32,32,True
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:0,overlapping_phenotypes,biallelic NFU1 loss of function / mitochondrial dysfunction,"Spastic paraplegia 93, autosomal recessive (SPG93, OMIM #620938), represents the milder, chronically survivable end of the disease spectrum caused by biallelic mutations in *NFU1* on chromosome 2p13 (F2). While severe biallelic loss of function in *NFU1* typically produces Multiple Mitochondrial Dysfunctions Syndrome 1 (MMDS1, OMIM #608100)—a lethal infantile encephalopathy characterized by fatal pulmonary hypertension and metabolic lactic acidosis—SPG93 manifests as a progressive spastic paraplegia phenotype surviving past infancy and into adulthood (F2; F3). Clinicians identifying patients based on phenotypic evaluation alone must distinguish early-stage presentations (which frequently mimic spastic cerebral palsy or pure hereditary spastic paraplegia) from mature presentations, which evolve into a complex neurodegenerative syndrome featuring spastic paraparesis, cerebellar ataxia, dysarthria, and axonal/sensorimotor polyneuropathy (F4; F5; F6).
+
+---
+
+## Grounded Phenotypic Spectrum and Exact Cohort Frequencies
+
+Across published cohorts, clinical findings range from lower-extremity pyramidal tract signs to progressive multisystem neurodegeneration. Below is a structured inventory of reported phenotypes, their verbatim literature descriptors, standardized Human Phenotype Ontology (HPO) terms, and verified cohort frequencies.
+
+| Phenotypic Finding (Original Paper Wording) | Standard HPO Term | Cohort Frequency (n/N) | Percentage (%) | Source Reference |
+| :--- | :--- | :--- | :--- | :--- |
+| Hereditary spastic paraplegia spectrum presentation | Spastic paraplegia (HP:0001258) | 16/19 | 84.2% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F2) |
+| Severe infantile hypotonia and neurodevelopmental delay | Muscular hypotonia (HP:0001252) / Global developmental delay (HP:0001263) | 3/19 | 15.8% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F2) |
+| White matter neuroimaging abnormalities | Abnormal cerebral white matter morphology (HP:0002500) | 16/16 | 100.0% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F5) |
+| Spastic paraparesis with elevated body fluid glycine | Spastic paraparesis (HP:0002313) / Hyperglycinemia (HP:0002154) | 4/4 | 100.0% | F. Tort et al. (2016), DOI: 10.1007/s10545-016-9975-4; P.R. Baker et al. (2014), DOI: 10.1093/brain/awt328 (F1) |
+| Mixed sensory-motor axonal neuropathy in the 3rd decade | Sensorimotor neuropathy (HP:0007140) / Axonal neuropathy (HP:0003477) | 1/1 | 100.0% | D. Tonduti et al. (2015), DOI: 10.1186/s13023-015-0237-6 (F6) |
+| Cavitating leukodystrophy in early-onset spastic presentation | Leukoencephalopathy (HP:0002352) / Brain parenchymal cavitation | 1/1 | 100.0% | T.A. Uzunhan et al. (2020), DOI: 10.1016/j.braindev.2020.06.012 (F4) |
+| Mild leukoencephalopathy without cavitation | Periventricular leukomalacia (HP:0006970) | 1/1 | 100.0% | D. Tonduti et al. (2015), DOI: 10.1186/s13023-015-0237-6 (F4) |
+| Early-onset spastic diplegia mimicking static encephalopathy | Spastic diplegia (HP:0001264) | 1/1 | 100.0% | M.A. Mahmoud et al. (2025), DOI: 10.1016/j.radcr.2025.01.037 (F4) |
+
+In addition to these core frequencies, cerebellar ataxia (HP:0001251) and dysarthria (HP:0001260) have been repeatedly documented as prominent components of the emerging complex spastic paraplegia phenotype in long-surviving patients (F6).
+
+---
+
+## Differential Diagnosis and Discriminating Clinical Biomarkers
+
+When a clinician assesses a patient presenting with spasticity or spastic paraparesis, SPG93 must be differentiated across multiple clinical categories:
+
+### 1. Canonical MMDS1 (NFU1 Deficiency)",report.md,5,32,False
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:0,discriminating_phenotype,"Early-onset fatal course (<15 months), refractory lactic acidosis, and pulmonary arterial hypertension","- **Discriminating Findings**: Early-onset fatal course (<15 months), refractory lactic acidosis, and pulmonary arterial hypertension are hallmarks of MMDS1 (F3). Patients with SPG93 survive into later childhood, adolescence, or adulthood (reaching up to the third decade) and lack severe pulmonary vasculopathy (F2; F3; F6).",report.md,33,33,True
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:0,discriminating_logic,"MMDS1 presents with early-onset fatal course (<15 months), refractory lactic acidosis, and pulmonary arterial hypertension. SPG93 patients survive past infancy into later childhood/adulthood and lack severe pulmonary vasculopathy.","- **Discriminating Findings**: Early-onset fatal course (<15 months), refractory lactic acidosis, and pulmonary arterial hypertension are hallmarks of MMDS1 (F3). Patients with SPG93 survive into later childhood, adolescence, or adulthood (reaching up to the third decade) and lack severe pulmonary vasculopathy (F2; F3; F6).
+- **Confidence of Distinction**: **High**. The absence of acute lethal cardio-pulmonary failure provides a definitive clinical boundary separating SPG93 from classical MMDS1 (F3).",report.md,33,34,False
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:0,diagnostic_confidence,high,- **Confidence of Distinction**: **High**. The absence of acute lethal cardio-pulmonary failure provides a definitive clinical boundary separating SPG93 from classical MMDS1 (F3).,report.md,34,34,True
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:1,target_disease,Spastic paraplegia 93,"# Clinical Phenotypic Identification and Differential Diagnosis of Spastic Paraplegia 93 (NFU1 Deficiency, OMIM #620938)
+
+## Executive Summary & Clinical Phenotypic Profile
+
+Spastic paraplegia 93, autosomal recessive (SPG93, OMIM #620938), represents the milder, chronically survivable end of the disease spectrum caused by biallelic mutations in *NFU1* on chromosome 2p13 (F2). While severe biallelic loss of function in *NFU1* typically produces Multiple Mitochondrial Dysfunctions Syndrome 1 (MMDS1, OMIM #608100)—a lethal infantile encephalopathy characterized by fatal pulmonary hypertension and metabolic lactic acidosis—SPG93 manifests as a progressive spastic paraplegia phenotype surviving past infancy and into adulthood (F2; F3). Clinicians identifying patients based on phenotypic evaluation alone must distinguish early-stage presentations (which frequently mimic spastic cerebral palsy or pure hereditary spastic paraplegia) from mature presentations, which evolve into a complex neurodegenerative syndrome featuring spastic paraparesis, cerebellar ataxia, dysarthria, and axonal/sensorimotor polyneuropathy (F4; F5; F6).
+
+---
+
+## Grounded Phenotypic Spectrum and Exact Cohort Frequencies
+
+Across published cohorts, clinical findings range from lower-extremity pyramidal tract signs to progressive multisystem neurodegeneration. Below is a structured inventory of reported phenotypes, their verbatim literature descriptors, standardized Human Phenotype Ontology (HPO) terms, and verified cohort frequencies.
+
+| Phenotypic Finding (Original Paper Wording) | Standard HPO Term | Cohort Frequency (n/N) | Percentage (%) | Source Reference |
+| :--- | :--- | :--- | :--- | :--- |
+| Hereditary spastic paraplegia spectrum presentation | Spastic paraplegia (HP:0001258) | 16/19 | 84.2% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F2) |
+| Severe infantile hypotonia and neurodevelopmental delay | Muscular hypotonia (HP:0001252) / Global developmental delay (HP:0001263) | 3/19 | 15.8% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F2) |
+| White matter neuroimaging abnormalities | Abnormal cerebral white matter morphology (HP:0002500) | 16/16 | 100.0% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F5) |
+| Spastic paraparesis with elevated body fluid glycine | Spastic paraparesis (HP:0002313) / Hyperglycinemia (HP:0002154) | 4/4 | 100.0% | F. Tort et al. (2016), DOI: 10.1007/s10545-016-9975-4; P.R. Baker et al. (2014), DOI: 10.1093/brain/awt328 (F1) |
+| Mixed sensory-motor axonal neuropathy in the 3rd decade | Sensorimotor neuropathy (HP:0007140) / Axonal neuropathy (HP:0003477) | 1/1 | 100.0% | D. Tonduti et al. (2015), DOI: 10.1186/s13023-015-0237-6 (F6) |
+| Cavitating leukodystrophy in early-onset spastic presentation | Leukoencephalopathy (HP:0002352) / Brain parenchymal cavitation | 1/1 | 100.0% | T.A. Uzunhan et al. (2020), DOI: 10.1016/j.braindev.2020.06.012 (F4) |
+| Mild leukoencephalopathy without cavitation | Periventricular leukomalacia (HP:0006970) | 1/1 | 100.0% | D. Tonduti et al. (2015), DOI: 10.1186/s13023-015-0237-6 (F4) |
+| Early-onset spastic diplegia mimicking static encephalopathy | Spastic diplegia (HP:0001264) | 1/1 | 100.0% | M.A. Mahmoud et al. (2025), DOI: 10.1016/j.radcr.2025.01.037 (F4) |
+
+In addition to these core frequencies, cerebellar ataxia (HP:0001251) and dysarthria (HP:0001260) have been repeatedly documented as prominent components of the emerging complex spastic paraplegia phenotype in long-surviving patients (F6).
+
+---
+
+## Differential Diagnosis and Discriminating Clinical Biomarkers
+
+When a clinician assesses a patient presenting with spasticity or spastic paraparesis, SPG93 must be differentiated across multiple clinical categories:",report.md,1,30,True
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:1,mimic_disease,Common Classical Hereditary Spastic Paraplegias,"### 2. Common Classical Hereditary Spastic Paraplegias (e.g., SPG4, SPG7, SPG11)",report.md,36,36,True
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:1,overlapping_phenotypes,"spasticity, spastic paraparesis, pure HSP phenotype","When a clinician assesses a patient presenting with spasticity or spastic paraparesis, SPG93 must be differentiated across multiple clinical categories:
+
+### 1. Canonical MMDS1 (NFU1 Deficiency)
+- **Discriminating Findings**: Early-onset fatal course (<15 months), refractory lactic acidosis, and pulmonary arterial hypertension are hallmarks of MMDS1 (F3). Patients with SPG93 survive into later childhood, adolescence, or adulthood (reaching up to the third decade) and lack severe pulmonary vasculopathy (F2; F3; F6).
+- **Confidence of Distinction**: **High**. The absence of acute lethal cardio-pulmonary failure provides a definitive clinical boundary separating SPG93 from classical MMDS1 (F3).
+
+### 2. Common Classical Hereditary Spastic Paraplegias (e.g., SPG4, SPG7, SPG11)
+- **Discriminating Findings**: While early-stage SPG93 can mimic pure HSP, 100% (16/16) of SPG93 patients exhibit cerebral white matter neuroimaging abnormalities on brain MRI from early stages (F5). Classical pure HSPs (such as *SPAST*-related SPG4) typically display normal brain parenchyma or isolated thin corpus callosum without widespread leukoencephalopathy (F5).",report.md,30,37,False
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:1,discriminating_phenotype,Cerebral white matter neuroimaging abnormalities and body-fluid glycine elevations / mild lactic acidosis,"- **Discriminating Findings**: While early-stage SPG93 can mimic pure HSP, 100% (16/16) of SPG93 patients exhibit cerebral white matter neuroimaging abnormalities on brain MRI from early stages (F5). Classical pure HSPs (such as *SPAST*-related SPG4) typically display normal brain parenchyma or isolated thin corpus callosum without widespread leukoencephalopathy (F5).
+- **Biochemical Biomarkers**: SPG93 is an inborn error of Fe-S cluster biogenesis affecting lipoate synthase (*LIAS*) and the glycine cleavage system (GCS), frequently causing body-fluid glycine elevations (hyperglycinemia) and mild lactic acidosis (F1; F7). These biochemical features are absent in pure classical spastic paraplegias.",report.md,37,38,False
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:1,discriminating_logic,"100% of SPG93 patients show cerebral white matter neuroimaging abnormalities on brain MRI from early stages and frequent body-fluid glycine/lactate elevations, whereas classical pure HSPs typically show normal brain parenchyma/isolated thin corpus callosum and lack these biochemical features.","- **Discriminating Findings**: While early-stage SPG93 can mimic pure HSP, 100% (16/16) of SPG93 patients exhibit cerebral white matter neuroimaging abnormalities on brain MRI from early stages (F5). Classical pure HSPs (such as *SPAST*-related SPG4) typically display normal brain parenchyma or isolated thin corpus callosum without widespread leukoencephalopathy (F5).
+- **Biochemical Biomarkers**: SPG93 is an inborn error of Fe-S cluster biogenesis affecting lipoate synthase (*LIAS*) and the glycine cleavage system (GCS), frequently causing body-fluid glycine elevations (hyperglycinemia) and mild lactic acidosis (F1; F7). These biochemical features are absent in pure classical spastic paraplegias.",report.md,37,38,False
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:1,diagnostic_confidence,high,- **Confidence of Distinction**: **Moderate to High** when brain MRI and plasma amino acid profiles are evaluated simultaneously.,report.md,39,39,True
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:2,target_disease,Spastic paraplegia 93,"# Clinical Phenotypic Identification and Differential Diagnosis of Spastic Paraplegia 93 (NFU1 Deficiency, OMIM #620938)
+
+## Executive Summary & Clinical Phenotypic Profile
+
+Spastic paraplegia 93, autosomal recessive (SPG93, OMIM #620938), represents the milder, chronically survivable end of the disease spectrum caused by biallelic mutations in *NFU1* on chromosome 2p13 (F2). While severe biallelic loss of function in *NFU1* typically produces Multiple Mitochondrial Dysfunctions Syndrome 1 (MMDS1, OMIM #608100)—a lethal infantile encephalopathy characterized by fatal pulmonary hypertension and metabolic lactic acidosis—SPG93 manifests as a progressive spastic paraplegia phenotype surviving past infancy and into adulthood (F2; F3). Clinicians identifying patients based on phenotypic evaluation alone must distinguish early-stage presentations (which frequently mimic spastic cerebral palsy or pure hereditary spastic paraplegia) from mature presentations, which evolve into a complex neurodegenerative syndrome featuring spastic paraparesis, cerebellar ataxia, dysarthria, and axonal/sensorimotor polyneuropathy (F4; F5; F6).
+
+---
+
+## Grounded Phenotypic Spectrum and Exact Cohort Frequencies
+
+Across published cohorts, clinical findings range from lower-extremity pyramidal tract signs to progressive multisystem neurodegeneration. Below is a structured inventory of reported phenotypes, their verbatim literature descriptors, standardized Human Phenotype Ontology (HPO) terms, and verified cohort frequencies.
+
+| Phenotypic Finding (Original Paper Wording) | Standard HPO Term | Cohort Frequency (n/N) | Percentage (%) | Source Reference |
+| :--- | :--- | :--- | :--- | :--- |
+| Hereditary spastic paraplegia spectrum presentation | Spastic paraplegia (HP:0001258) | 16/19 | 84.2% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F2) |
+| Severe infantile hypotonia and neurodevelopmental delay | Muscular hypotonia (HP:0001252) / Global developmental delay (HP:0001263) | 3/19 | 15.8% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F2) |
+| White matter neuroimaging abnormalities | Abnormal cerebral white matter morphology (HP:0002500) | 16/16 | 100.0% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F5) |
+| Spastic paraparesis with elevated body fluid glycine | Spastic paraparesis (HP:0002313) / Hyperglycinemia (HP:0002154) | 4/4 | 100.0% | F. Tort et al. (2016), DOI: 10.1007/s10545-016-9975-4; P.R. Baker et al. (2014), DOI: 10.1093/brain/awt328 (F1) |
+| Mixed sensory-motor axonal neuropathy in the 3rd decade | Sensorimotor neuropathy (HP:0007140) / Axonal neuropathy (HP:0003477) | 1/1 | 100.0% | D. Tonduti et al. (2015), DOI: 10.1186/s13023-015-0237-6 (F6) |
+| Cavitating leukodystrophy in early-onset spastic presentation | Leukoencephalopathy (HP:0002352) / Brain parenchymal cavitation | 1/1 | 100.0% | T.A. Uzunhan et al. (2020), DOI: 10.1016/j.braindev.2020.06.012 (F4) |
+| Mild leukoencephalopathy without cavitation | Periventricular leukomalacia (HP:0006970) | 1/1 | 100.0% | D. Tonduti et al. (2015), DOI: 10.1186/s13023-015-0237-6 (F4) |
+| Early-onset spastic diplegia mimicking static encephalopathy | Spastic diplegia (HP:0001264) | 1/1 | 100.0% | M.A. Mahmoud et al. (2025), DOI: 10.1016/j.radcr.2025.01.037 (F4) |
+
+In addition to these core frequencies, cerebellar ataxia (HP:0001251) and dysarthria (HP:0001260) have been repeatedly documented as prominent components of the emerging complex spastic paraplegia phenotype in long-surviving patients (F6).
+
+---
+
+## Differential Diagnosis and Discriminating Clinical Biomarkers
+
+When a clinician assesses a patient presenting with spasticity or spastic paraparesis, SPG93 must be differentiated across multiple clinical categories:",report.md,1,30,True
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:2,mimic_disease,Variant Nonketotic Hyperglycinemia,"### 3. Variant Nonketotic Hyperglycinemia (NKH) and Other Fe-S/Lipoic Acid Defects (*GLRX5*, *BOLA3*, *LIAS*)",report.md,41,41,True
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:2,overlapping_phenotypes,"spastic paraparesis, cavitating leukoencephalopathy, and elevated CSF/plasma glycine","- **Discriminating Findings**: Defects in *GLRX5*, *BOLA3*, *LIAS*, and *NFU1* cause overlapping clinical phenotypes involving spastic paraparesis, cavitating leukoencephalopathy, and elevated CSF/plasma glycine (F1). Biochemical screening and neuroimaging alone **cannot** reliably separate SPG93 from *GLRX5* or *BOLA3* deficiencies (F1).",report.md,42,42,True
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:2,discriminating_phenotype,Direct molecular genomic sequencing,"- **Discriminating Findings**: Defects in *GLRX5*, *BOLA3*, *LIAS*, and *NFU1* cause overlapping clinical phenotypes involving spastic paraparesis, cavitating leukoencephalopathy, and elevated CSF/plasma glycine (F1). Biochemical screening and neuroimaging alone **cannot** reliably separate SPG93 from *GLRX5* or *BOLA3* deficiencies (F1).
+- **Confidence of Distinction**: **Low based on phenotype alone**. Direct molecular genomic sequencing is strictly required for intra-pathway differentiation (F1).",report.md,42,43,True
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:2,discriminating_logic,Biochemical screening and neuroimaging alone cannot reliably separate SPG93 from GLRX5 or BOLA3 deficiencies; direct molecular genomic sequencing is strictly required.,"- **Discriminating Findings**: Defects in *GLRX5*, *BOLA3*, *LIAS*, and *NFU1* cause overlapping clinical phenotypes involving spastic paraparesis, cavitating leukoencephalopathy, and elevated CSF/plasma glycine (F1). Biochemical screening and neuroimaging alone **cannot** reliably separate SPG93 from *GLRX5* or *BOLA3* deficiencies (F1).
+- **Confidence of Distinction**: **Low based on phenotype alone**. Direct molecular genomic sequencing is strictly required for intra-pathway differentiation (F1).",report.md,42,43,False
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:2,diagnostic_confidence,low,- **Confidence of Distinction**: **Low based on phenotype alone**. Direct molecular genomic sequencing is strictly required for intra-pathway differentiation (F1).,report.md,43,43,True
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:3,target_disease,Spastic paraplegia 93,"# Clinical Phenotypic Identification and Differential Diagnosis of Spastic Paraplegia 93 (NFU1 Deficiency, OMIM #620938)
+
+## Executive Summary & Clinical Phenotypic Profile
+
+Spastic paraplegia 93, autosomal recessive (SPG93, OMIM #620938), represents the milder, chronically survivable end of the disease spectrum caused by biallelic mutations in *NFU1* on chromosome 2p13 (F2). While severe biallelic loss of function in *NFU1* typically produces Multiple Mitochondrial Dysfunctions Syndrome 1 (MMDS1, OMIM #608100)—a lethal infantile encephalopathy characterized by fatal pulmonary hypertension and metabolic lactic acidosis—SPG93 manifests as a progressive spastic paraplegia phenotype surviving past infancy and into adulthood (F2; F3). Clinicians identifying patients based on phenotypic evaluation alone must distinguish early-stage presentations (which frequently mimic spastic cerebral palsy or pure hereditary spastic paraplegia) from mature presentations, which evolve into a complex neurodegenerative syndrome featuring spastic paraparesis, cerebellar ataxia, dysarthria, and axonal/sensorimotor polyneuropathy (F4; F5; F6).
+
+---
+
+## Grounded Phenotypic Spectrum and Exact Cohort Frequencies
+
+Across published cohorts, clinical findings range from lower-extremity pyramidal tract signs to progressive multisystem neurodegeneration. Below is a structured inventory of reported phenotypes, their verbatim literature descriptors, standardized Human Phenotype Ontology (HPO) terms, and verified cohort frequencies.
+
+| Phenotypic Finding (Original Paper Wording) | Standard HPO Term | Cohort Frequency (n/N) | Percentage (%) | Source Reference |
+| :--- | :--- | :--- | :--- | :--- |
+| Hereditary spastic paraplegia spectrum presentation | Spastic paraplegia (HP:0001258) | 16/19 | 84.2% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F2) |
+| Severe infantile hypotonia and neurodevelopmental delay | Muscular hypotonia (HP:0001252) / Global developmental delay (HP:0001263) | 3/19 | 15.8% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F2) |
+| White matter neuroimaging abnormalities | Abnormal cerebral white matter morphology (HP:0002500) | 16/16 | 100.0% | R. Kaiyrzhanov et al. (2022), DOI: 10.1002/acn3.51679 (F5) |
+| Spastic paraparesis with elevated body fluid glycine | Spastic paraparesis (HP:0002313) / Hyperglycinemia (HP:0002154) | 4/4 | 100.0% | F. Tort et al. (2016), DOI: 10.1007/s10545-016-9975-4; P.R. Baker et al. (2014), DOI: 10.1093/brain/awt328 (F1) |
+| Mixed sensory-motor axonal neuropathy in the 3rd decade | Sensorimotor neuropathy (HP:0007140) / Axonal neuropathy (HP:0003477) | 1/1 | 100.0% | D. Tonduti et al. (2015), DOI: 10.1186/s13023-015-0237-6 (F6) |
+| Cavitating leukodystrophy in early-onset spastic presentation | Leukoencephalopathy (HP:0002352) / Brain parenchymal cavitation | 1/1 | 100.0% | T.A. Uzunhan et al. (2020), DOI: 10.1016/j.braindev.2020.06.012 (F4) |
+| Mild leukoencephalopathy without cavitation | Periventricular leukomalacia (HP:0006970) | 1/1 | 100.0% | D. Tonduti et al. (2015), DOI: 10.1186/s13023-015-0237-6 (F4) |
+| Early-onset spastic diplegia mimicking static encephalopathy | Spastic diplegia (HP:0001264) | 1/1 | 100.0% | M.A. Mahmoud et al. (2025), DOI: 10.1016/j.radcr.2025.01.037 (F4) |
+
+In addition to these core frequencies, cerebellar ataxia (HP:0001251) and dysarthria (HP:0001260) have been repeatedly documented as prominent components of the emerging complex spastic paraplegia phenotype in long-surviving patients (F6).
+
+---
+
+## Differential Diagnosis and Discriminating Clinical Biomarkers
+
+When a clinician assesses a patient presenting with spasticity or spastic paraparesis, SPG93 must be differentiated across multiple clinical categories:",report.md,1,30,True
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:3,mimic_disease,Spastic Cerebral Palsy,### 4. Spastic Cerebral Palsy,report.md,45,45,True
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:3,overlapping_phenotypes,spastic diplegia and motor delays in toddlerhood,"- **Discriminating Findings**: Children with early-onset SPG93 presenting in toddlerhood (4.5 to 27 months) with spastic diplegia and motor delays are frequently misdiagnosed as having static perinatal cerebral palsy (F4; F11; F12). Normal perinatal history, progressive deterioration rather than a static course, presence of cerebral white matter lesions (F5), and emergence of cerebellar ataxia or neuropathy in later childhood distinguish SPG93 from static cerebral palsy (F4; F6).",report.md,46,46,False
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:3,discriminating_phenotype,"Progressive deterioration, cerebral white matter lesions, and emergence of cerebellar ataxia or neuropathy","- **Discriminating Findings**: Children with early-onset SPG93 presenting in toddlerhood (4.5 to 27 months) with spastic diplegia and motor delays are frequently misdiagnosed as having static perinatal cerebral palsy (F4; F11; F12). Normal perinatal history, progressive deterioration rather than a static course, presence of cerebral white matter lesions (F5), and emergence of cerebellar ataxia or neuropathy in later childhood distinguish SPG93 from static cerebral palsy (F4; F6).",report.md,46,46,False
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:3,discriminating_logic,"Normal perinatal history, progressive deterioration rather than a static course, presence of cerebral white matter lesions on MRI, and subsequent emergence of cerebellar ataxia or neuropathy distinguish SPG93 from static cerebral palsy.","- **Discriminating Findings**: Children with early-onset SPG93 presenting in toddlerhood (4.5 to 27 months) with spastic diplegia and motor delays are frequently misdiagnosed as having static perinatal cerebral palsy (F4; F11; F12). Normal perinatal history, progressive deterioration rather than a static course, presence of cerebral white matter lesions (F5), and emergence of cerebellar ataxia or neuropathy in later childhood distinguish SPG93 from static cerebral palsy (F4; F6).",report.md,46,46,False
+phenotypic_differential_matching,e08ee08ebf969d55:0:phenotypic_differential_matching:3,diagnostic_confidence,moderate,"- **Confidence of Distinction**: **Moderate**, requiring longitudinal follow-up and neuroimaging (F4; F5).",report.md,47,47,True
+
+```

@@ -1,0 +1,977 @@
+{
+  "source_id": "agentic-large-language-models",
+  "summary": "A broad book that connects language-model foundations and training to reasoning, tool use, retrieval, applications, multi-agent behavior, and cognitive and mechanistic analysis. It is reported separately from the seven courses.",
+  "limitations": [
+    "All 23 archived chapter conversions were screened by their section structure.",
+    "The book is one source, not 23 courses. Full HTML and PDF copies are not counted as separate sources.",
+    "Book-only topics have zero course frequency until supported by a course. An asterisk on an advanced chapter is not treated as missing content; those chapters contain full text.",
+    "Named applications and methods are grouped at a stated scope. The bibliography does not create topic coverage by itself."
+  ],
+  "new_concepts": [
+    {
+      "id": "scaling-laws",
+      "label": "Language model scaling laws",
+      "kind": "concept",
+      "definition": "Relate model performance to data size, parameter count, and compute budget.",
+      "aliases": [
+        "compute-optimal scaling",
+        "Chinchilla scaling"
+      ],
+      "parent_id": "llm-foundations"
+    },
+    {
+      "id": "speculative-decoding",
+      "label": "Speculative decoding",
+      "kind": "method",
+      "definition": "Use a draft model and verification to generate tokens with less inference time.",
+      "aliases": [],
+      "parent_id": "serving"
+    },
+    {
+      "id": "vla",
+      "label": "Vision-language-action models",
+      "kind": "topic",
+      "definition": "Map visual and language inputs to actions, often for embodied tasks.",
+      "aliases": [
+        "VLA models",
+        "vision language action models"
+      ],
+      "parent_id": "vlm"
+    },
+    {
+      "id": "world-models",
+      "label": "World models",
+      "kind": "concept",
+      "definition": "Predict environment states or outcomes to support reasoning and action.",
+      "aliases": [
+        "agentic world models"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "model-based-rl",
+      "label": "Model-based reinforcement learning",
+      "kind": "method",
+      "definition": "Use a learned or given environment model to plan or improve a policy.",
+      "aliases": [
+        "model based RL"
+      ],
+      "parent_id": "rl"
+    },
+    {
+      "id": "meta-learning",
+      "label": "Meta-learning",
+      "kind": "topic",
+      "definition": "Learn how to adapt to new tasks through shared learning structure.",
+      "aliases": [
+        "metalearning",
+        "learning to learn"
+      ],
+      "parent_id": "model-training"
+    },
+    {
+      "id": "bdi",
+      "label": "Belief-desire-intention agents",
+      "kind": "concept",
+      "definition": "Represent agent behavior through beliefs, goals, and intentions.",
+      "aliases": [
+        "BDI agents"
+      ],
+      "parent_id": "agent-architecture"
+    },
+    {
+      "id": "game-agents",
+      "label": "Agents for games and puzzles",
+      "kind": "application",
+      "definition": "Use agents to act in game environments or solve interactive puzzles.",
+      "aliases": [
+        "BALROG",
+        "game-playing agents"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "query-rewriting",
+      "label": "Query rewriting and expansion",
+      "kind": "method",
+      "definition": "Change or extend a search query to retrieve more useful evidence.",
+      "aliases": [
+        "query expansion",
+        "search query reformulation"
+      ],
+      "parent_id": "rag"
+    },
+    {
+      "id": "travel-agents",
+      "label": "Travel and flight assistants",
+      "kind": "application",
+      "definition": "Use agents to plan trips, book travel, or support flight operations.",
+      "aliases": [
+        "travel planning agents"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "trading-agents",
+      "label": "Trading and financial assistants",
+      "kind": "application",
+      "definition": "Use agents to analyze financial information or support trading decisions.",
+      "aliases": [
+        "financial agents"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "social-behavior",
+      "label": "Strategic and social agent behavior",
+      "kind": "topic",
+      "definition": "Study cooperation, coordination, persuasion, and social interaction among agents.",
+      "aliases": [
+        "social dilemmas",
+        "strategic interaction"
+      ],
+      "parent_id": "multi-agent"
+    },
+    {
+      "id": "theory-of-mind",
+      "label": "Theory of mind",
+      "kind": "concept",
+      "definition": "Represent or infer another actor's beliefs, goals, or knowledge.",
+      "aliases": [
+        "ToM",
+        "social cognition"
+      ],
+      "parent_id": "social-behavior"
+    },
+    {
+      "id": "moral-behavior",
+      "label": "Moral judgment and ethical behavior",
+      "kind": "topic",
+      "definition": "Study moral choices, value alignment, and differences between stated judgments and actions.",
+      "aliases": [
+        "moral judgment",
+        "ethical behavior"
+      ],
+      "parent_id": "social-behavior"
+    },
+    {
+      "id": "behavioral-experiments",
+      "label": "Behavioral experiments on agents",
+      "kind": "method",
+      "definition": "Use controlled tasks to measure observable agent behavior.",
+      "aliases": [
+        "experimental agent behavior analysis"
+      ],
+      "parent_id": "evaluation"
+    },
+    {
+      "id": "social-simulation",
+      "label": "Social simulation with agents",
+      "kind": "application",
+      "definition": "Use interacting agents to model communities, groups, or societies.",
+      "aliases": [
+        "generative agent societies",
+        "agent-based social simulation"
+      ],
+      "parent_id": "multi-agent"
+    },
+    {
+      "id": "emergent-norms",
+      "label": "Emergent communication and social norms",
+      "kind": "concept",
+      "definition": "Study conventions and norms that arise from repeated agent interaction.",
+      "aliases": [
+        "emergent conventions",
+        "emergent communication"
+      ],
+      "parent_id": "social-behavior"
+    },
+    {
+      "id": "model-collapse",
+      "label": "Model collapse and synthetic-data risks",
+      "kind": "concept",
+      "definition": "Study how repeated training on generated data can reduce quality or diversity.",
+      "aliases": [
+        "synthetic data collapse"
+      ],
+      "parent_id": "synthetic-data"
+    },
+    {
+      "id": "recursive-agents",
+      "label": "Recursive and self-modifying agents",
+      "kind": "pattern",
+      "definition": "Use recursive agent calls or agent-directed changes to system behavior.",
+      "aliases": [
+        "hyperagents",
+        "recursive agents"
+      ],
+      "parent_id": "agent-architecture"
+    },
+    {
+      "id": "interpretability",
+      "label": "Mechanistic interpretability",
+      "kind": "topic",
+      "definition": "Study internal model features and computations that cause behavior.",
+      "aliases": [
+        "mechanistic analysis"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "activation-patching",
+      "label": "Activation patching and causal intervention",
+      "kind": "method",
+      "definition": "Change internal activations to test their causal effect on model output.",
+      "aliases": [
+        "activation patching",
+        "causal tracing"
+      ],
+      "parent_id": "interpretability"
+    },
+    {
+      "id": "sparse-autoencoders",
+      "label": "Sparse autoencoders for feature discovery",
+      "kind": "method",
+      "definition": "Learn sparse features from model activations to inspect internal representations.",
+      "aliases": [
+        "SAEs",
+        "sparse autoencoders"
+      ],
+      "parent_id": "interpretability"
+    },
+    {
+      "id": "circuits",
+      "label": "Model circuit analysis",
+      "kind": "method",
+      "definition": "Identify groups of model components that implement specific computations.",
+      "aliases": [
+        "induction heads",
+        "circuit discovery"
+      ],
+      "parent_id": "interpretability"
+    },
+    {
+      "id": "metacognition",
+      "label": "Metacognition and self-knowledge",
+      "kind": "topic",
+      "definition": "Study how agents estimate, monitor, or describe their own knowledge and limits.",
+      "aliases": [
+        "introspection",
+        "self-knowledge"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "cognitive-perspectives",
+      "label": "Cognitive analysis of agents",
+      "kind": "topic",
+      "definition": "Compare behavioral, representational, and mechanistic evidence about agent capabilities.",
+      "aliases": [
+        "cognitive perspectives"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "consciousness",
+      "label": "Consciousness and agency theories",
+      "kind": "topic",
+      "definition": "Discuss theories and evidence about consciousness in model-based agents.",
+      "aliases": [
+        "machine consciousness"
+      ],
+      "parent_id": "cognitive-perspectives"
+    }
+  ],
+  "coverage": [
+    {
+      "concept_id": "agent-architecture",
+      "source": "markdown/chapters/chapter-01-introduction.md",
+      "needle": "Concepts and Definitions",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "harness",
+      "source": "markdown/chapters/chapter-01-introduction.md",
+      "needle": "Agentic Harness",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "llm-foundations",
+      "source": "markdown/chapters/chapter-02-foundations-of-language-modeling-with-llms.md",
+      "needle": "Modeling Language",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "tokenization",
+      "source": "markdown/chapters/chapter-02-foundations-of-language-modeling-with-llms.md",
+      "needle": "Tokenization",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "transformer",
+      "source": "markdown/chapters/chapter-02-foundations-of-language-modeling-with-llms.md",
+      "needle": "Transformers",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "gradient-training",
+      "source": "markdown/chapters/chapter-02-foundations-of-language-modeling-with-llms.md",
+      "needle": "gradient",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "model-training",
+      "source": "markdown/chapters/chapter-03-the-large-language-model-training-pipeline.md",
+      "needle": "Training Pipeline",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "sft",
+      "source": "markdown/chapters/chapter-03-the-large-language-model-training-pipeline.md",
+      "needle": "Supervised Finetuning",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "rlhf",
+      "source": "markdown/chapters/chapter-03-the-large-language-model-training-pipeline.md",
+      "needle": "RLHF",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "dpo",
+      "source": "markdown/chapters/chapter-03-the-large-language-model-training-pipeline.md",
+      "needle": "DPO",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "data-curation",
+      "source": "markdown/chapters/chapter-03-the-large-language-model-training-pipeline.md",
+      "needle": "Acquire Data",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "benchmark-design",
+      "source": "markdown/chapters/chapter-03-the-large-language-model-training-pipeline.md",
+      "needle": "Data Contamination",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "scaling-laws",
+      "source": "markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+      "needle": "Scaling Laws: Compute",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "lora",
+      "source": "markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+      "needle": "Parameter-Efficient Fine-Tuning",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "distillation",
+      "source": "markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+      "needle": "Knowledge Distillation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "kv-cache",
+      "source": "markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+      "needle": "Caching",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "compression",
+      "source": "markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+      "needle": "Quantization",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "speculative-decoding",
+      "source": "markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+      "needle": "Speculative Decoding",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "serving",
+      "source": "markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+      "needle": "Reducing Inference Cost",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "synthetic-data",
+      "source": "markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+      "needle": "Synthetic Data Gathering",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "inference-scaling",
+      "source": "markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+      "needle": "Inference-Time Compute",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "cost-quality",
+      "source": "markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+      "needle": "Reducing Inference Cost",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "deployment",
+      "source": "markdown/chapters/chapter-05-case-study-1-building-llms-from-scratch.md",
+      "needle": "Inference and Deployment",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "observability",
+      "source": "markdown/chapters/chapter-05-case-study-1-building-llms-from-scratch.md",
+      "needle": "Logging",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reasoning",
+      "source": "markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+      "needle": "In-Context Reasoning",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "prompting",
+      "source": "markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+      "needle": "Prompt Engineering",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "few-shot",
+      "source": "markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+      "needle": "Few-shot Learning",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "cot",
+      "source": "markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+      "needle": "Chain of Thought Prompting",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "self-consistency",
+      "source": "markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+      "needle": "Self-Consistency",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reflection",
+      "source": "markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+      "needle": "Self-Reflection and State",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reflexion",
+      "source": "markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+      "needle": "Reflexion",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "react",
+      "source": "markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+      "needle": "ReAct",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "verification",
+      "source": "markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+      "needle": "Code Generation for Validation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "prompt-optimization",
+      "source": "markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+      "needle": "Search-based Prompt Optimization",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "state",
+      "source": "markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+      "needle": "Stateful Problems",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "context-engineering",
+      "source": "markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+      "needle": "Context Window",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "long-context",
+      "source": "markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+      "needle": "Long Context Windows",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "grounding",
+      "source": "markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+      "needle": "grounded generation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "vlm",
+      "source": "markdown/chapters/chapter-07-vision-action-and-world-models.md",
+      "needle": "Multi-modal Vision Language Models",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "vla",
+      "source": "markdown/chapters/chapter-07-vision-action-and-world-models.md",
+      "needle": "Vision Language Action Models",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "world-models",
+      "source": "markdown/chapters/chapter-07-vision-action-and-world-models.md",
+      "needle": "World Models, Physics, and Planning",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "planning",
+      "source": "markdown/chapters/chapter-07-vision-action-and-world-models.md",
+      "needle": "World Models, Physics, and Planning",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "model-based-rl",
+      "source": "markdown/chapters/chapter-07-vision-action-and-world-models.md",
+      "needle": "Model-based Reinforcement Learning",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "rl",
+      "source": "markdown/chapters/chapter-07-vision-action-and-world-models.md",
+      "needle": "Model-free Reinforcement Learning",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "meta-learning",
+      "source": "markdown/chapters/chapter-08-metalearning.md",
+      "needle": "Inner/Outer Loop",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "memory",
+      "source": "markdown/chapters/chapter-09-interaction-styles-for-agentic-llms.md",
+      "needle": "Memory Architectures",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "working-memory",
+      "source": "markdown/chapters/chapter-09-interaction-styles-for-agentic-llms.md",
+      "needle": "Long Context Windows and Compression",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "compaction",
+      "source": "markdown/chapters/chapter-09-interaction-styles-for-agentic-llms.md",
+      "needle": "Long Context Windows and Compression",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "memory-maintenance",
+      "source": "markdown/chapters/chapter-09-interaction-styles-for-agentic-llms.md",
+      "needle": "Explicit Memory Management",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "bdi",
+      "source": "markdown/chapters/chapter-09-interaction-styles-for-agentic-llms.md",
+      "needle": "Beliefs, Desires, and Intentions",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "personalization",
+      "source": "markdown/chapters/chapter-09-interaction-styles-for-agentic-llms.md",
+      "needle": "Adaptation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "game-agents",
+      "source": "markdown/chapters/chapter-10-case-study-2-balrog-for-llm-reasoning-and-reflection.md",
+      "needle": "Puzzles and Games",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "evaluation",
+      "source": "markdown/chapters/chapter-10-case-study-2-balrog-for-llm-reasoning-and-reflection.md",
+      "needle": "Evaluation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "model-selection",
+      "source": "markdown/chapters/chapter-10-case-study-2-balrog-for-llm-reasoning-and-reflection.md",
+      "needle": "Different LLMs",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "research-reproduction",
+      "source": "markdown/chapters/chapter-10-case-study-2-balrog-for-llm-reasoning-and-reflection.md",
+      "needle": "Reproduce Paper",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "tool-use",
+      "source": "markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md",
+      "needle": "Tool Use Architectures",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "plan-execute",
+      "source": "markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md",
+      "needle": "Planner\u2013Caller\u2013Summarizer",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "frameworks",
+      "source": "markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md",
+      "needle": "LangChain Example",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "computer-use",
+      "source": "markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md",
+      "needle": "Computer and Browser Tools",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "mcp",
+      "source": "markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md",
+      "needle": "Model Context Protocol",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "error-recovery",
+      "source": "markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md",
+      "needle": "Robustness, Error Handling, and Recovery",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "hitl",
+      "source": "markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md",
+      "needle": "Human-in-the-Loop Integration",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "safety",
+      "source": "markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md",
+      "needle": "Safety and Security",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "auth",
+      "source": "markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md",
+      "needle": "transport layer",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "rag",
+      "source": "markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+      "needle": "Retrieval-Augmented Generation Pipeline",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "sparse-retrieval",
+      "source": "markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+      "needle": "Bag of Words",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "embeddings",
+      "source": "markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+      "needle": "Dense Retrieval Example",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "chunking",
+      "source": "markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+      "needle": "chunking",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "hybrid-search",
+      "source": "markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+      "needle": "hybrid",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reranking",
+      "source": "markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+      "needle": "Re-ranking:",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "query-rewriting",
+      "source": "markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+      "needle": "Query Rewriting and Expansion",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "graph-rag",
+      "source": "markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+      "needle": "Graph\u2011RAG",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "agentic-rag",
+      "source": "markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+      "needle": "Agentic RAG: Beyond Simple Retrieval",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "retrieval-eval",
+      "source": "markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+      "needle": "Retrieval metrics",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "citation-eval",
+      "source": "markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+      "needle": "Attribution and freshness",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "db-query",
+      "source": "markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+      "needle": "Tabular",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "sales-agents",
+      "source": "markdown/chapters/chapter-13-from-tools-to-assistants-real-world-applications.md",
+      "needle": "Shopping Assistant",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "clinical-agents",
+      "source": "markdown/chapters/chapter-13-from-tools-to-assistants-real-world-applications.md",
+      "needle": "Medical Assistant",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "scientific-workflows",
+      "source": "markdown/chapters/chapter-13-from-tools-to-assistants-real-world-applications.md",
+      "needle": "Automated Scientific Discovery",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "coding-agents",
+      "source": "markdown/chapters/chapter-13-from-tools-to-assistants-real-world-applications.md",
+      "needle": "Coding Assistants",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "human-collaboration",
+      "source": "markdown/chapters/chapter-13-from-tools-to-assistants-real-world-applications.md",
+      "needle": "Conversational Assistants",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "travel-agents",
+      "source": "markdown/chapters/chapter-13-from-tools-to-assistants-real-world-applications.md",
+      "needle": "Flight Operations Assistant",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "trading-agents",
+      "source": "markdown/chapters/chapter-13-from-tools-to-assistants-real-world-applications.md",
+      "needle": "Trading Assistant",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "privacy",
+      "source": "markdown/chapters/chapter-13-from-tools-to-assistants-real-world-applications.md",
+      "needle": "privacy",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "abstention",
+      "source": "markdown/chapters/chapter-13-from-tools-to-assistants-real-world-applications.md",
+      "needle": "uncertainty",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "orchestrator-workers",
+      "source": "markdown/chapters/chapter-14-case-study-3-building-a-multi-agent-diagnosis-framework.md",
+      "needle": "Replacing the Rule-Based Planners",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "outcome-eval",
+      "source": "markdown/chapters/chapter-14-case-study-3-building-a-multi-agent-diagnosis-framework.md",
+      "needle": "Evaluation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "social-behavior",
+      "source": "markdown/chapters/chapter-15-studying-behavior-of-agentic-llms.md",
+      "needle": "Strategic Behavior",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "theory-of-mind",
+      "source": "markdown/chapters/chapter-15-studying-behavior-of-agentic-llms.md",
+      "needle": "Theory of Mind",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "moral-behavior",
+      "source": "markdown/chapters/chapter-15-studying-behavior-of-agentic-llms.md",
+      "needle": "Moral Judgment and Behavior",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "behavioral-experiments",
+      "source": "markdown/chapters/chapter-15-studying-behavior-of-agentic-llms.md",
+      "needle": "Probing LLM Behavior Experimentally",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "multi-agent",
+      "source": "markdown/chapters/chapter-16-role-based-interaction-in-multi-llm-systems.md",
+      "needle": "From Single-agent to Multi-agent",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "multi-agent-debate",
+      "source": "markdown/chapters/chapter-16-role-based-interaction-in-multi-llm-systems.md",
+      "needle": "Debate and Discussion",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "critic-loop",
+      "source": "markdown/chapters/chapter-16-role-based-interaction-in-multi-llm-systems.md",
+      "needle": "Complementary Pairs",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "persona",
+      "source": "markdown/chapters/chapter-16-role-based-interaction-in-multi-llm-systems.md",
+      "needle": "Social Role-Play",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "shared-memory",
+      "source": "markdown/chapters/chapter-14-case-study-3-building-a-multi-agent-diagnosis-framework.md",
+      "needle": "shared-state coordination pattern",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "social-simulation",
+      "source": "markdown/chapters/chapter-17-emergent-behavior-in-multi-llm-systems.md",
+      "needle": "Generative Agent Societies",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "emergent-norms",
+      "source": "markdown/chapters/chapter-17-emergent-behavior-in-multi-llm-systems.md",
+      "needle": "Emergent Conventions and Norms",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "multi-agent-failures",
+      "source": "markdown/chapters/chapter-17-emergent-behavior-in-multi-llm-systems.md",
+      "needle": "Risks of Emergent Behavior",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "user-simulation",
+      "source": "markdown/chapters/chapter-17-emergent-behavior-in-multi-llm-systems.md",
+      "needle": "Simulation as a Scientific Instrument",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "human-demos",
+      "source": "markdown/chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms.md",
+      "needle": "Human-in-the-loop approaches",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "red-teaming",
+      "source": "markdown/chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms.md",
+      "needle": "Automated red teaming",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "model-collapse",
+      "source": "markdown/chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms.md",
+      "needle": "Model Collapse",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "llm-judge",
+      "source": "markdown/chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms.md",
+      "needle": "LLM-as-a-judge",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "judge-validation",
+      "source": "markdown/chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms.md",
+      "needle": "bias",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "self-play",
+      "source": "markdown/chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms.md",
+      "needle": "self-play",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "harness-optimization",
+      "source": "markdown/chapters/chapter-20-advanced-transformer-and-agentic-architectures.md",
+      "needle": "Self-Modifying Hyperagents",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "recursive-agents",
+      "source": "markdown/chapters/chapter-20-advanced-transformer-and-agentic-architectures.md",
+      "needle": "Recursive Multi-Agent Systems",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "interpretability",
+      "source": "markdown/chapters/chapter-21-mechanistic-interpretability-for-llm-agents.md",
+      "needle": "Mechanistic Interpretability",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "activation-patching",
+      "source": "markdown/chapters/chapter-21-mechanistic-interpretability-for-llm-agents.md",
+      "needle": "Activation Patching and Causal Interventions",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "sparse-autoencoders",
+      "source": "markdown/chapters/chapter-21-mechanistic-interpretability-for-llm-agents.md",
+      "needle": "Sparse Autoencoders",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "circuits",
+      "source": "markdown/chapters/chapter-21-mechanistic-interpretability-for-llm-agents.md",
+      "needle": "Circuit Analysis",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "metacognition",
+      "source": "markdown/chapters/chapter-22-cognitive-perspectives-on-agentic-llms.md",
+      "needle": "Metacognition, Introspection, and Self-Knowledge",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "cognitive-perspectives",
+      "source": "markdown/chapters/chapter-22-cognitive-perspectives-on-agentic-llms.md",
+      "needle": "Three Levels of Evidence",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "consciousness",
+      "source": "markdown/chapters/chapter-22-cognitive-perspectives-on-agentic-llms.md",
+      "needle": "Consciousness",
+      "coverage": "taught"
+    }
+  ]
+}

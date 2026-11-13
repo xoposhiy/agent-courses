@@ -1,0 +1,74 @@
+# Homework 1 public teaching repository: assignments/OMIM_618089/grill_run/tasks/0022_screen_h12/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_618089/grill_run/tasks/0022_screen_h12/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_618089/grill_run/tasks/0022_screen_h12/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Hypotonia and behavioral disturbances consistently co-occur at high frequencies in FBXO11 cohorts, distinguishing it from isolated neurobehavioral phenotypes.",
+  "confidence": 0.8,
+  "evidence": [
+    {
+      "text": "In a cohort of 21 individuals with FBXO11 variants, hypotonia and behavioural dysregulation were among the most prevalent findings, each occurring in 62% of patients.",
+      "stance": "supports",
+      "source": {
+        "title": "Defining FBXO11-Related Neurodevelopmental Disorder: Clinical, Molecular and Facial Assessment of 21 Patients",
+        "authors": [
+          "H Goel",
+          "G Garg",
+          "TS Barakat",
+          "G Barcia",
+          "A Bourgois"
+        ],
+        "year": 2026,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.researchsquare.com/article/rs-10148333/latest",
+        "quote": "Mild intellectual disability (86%), facial dysmorphism (67%), hypotonia (62%), and behavioural dysregulation (62%) were the most prevalent features."
+      },
+      "numbers": [
+        {
+          "metric": "hypotonia frequency",
+          "value": "62%"
+        },
+        {
+          "metric": "behavioural dysregulation frequency",
+          "value": "62%"
+        }
+      ]
+    },
+    {
+      "text": "In a Chinese cohort of 12 individuals with FBXO11 variants, hypotonia was observed in only 1 patient, indicating variability across distinct populations or variant types.",
+      "stance": "neutral",
+      "source": {
+        "title": "FBXO11 variants are associated with intellectual disability and variable clinical manifestation in Chinese affected individuals",
+        "authors": [
+          "X Pan",
+          "L Liu",
+          "X Zhang",
+          "X Tang",
+          "G Qian",
+          "H Qiu"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.nature.com/articles/s10038-024-01255-4",
+        "quote": "hypotonia (1/12), and auditory hallucinations and hallucinations (1/12)."
+      },
+      "numbers": [
+        {
+          "metric": "hypotonia frequency",
+          "value": "1/12"
+        }
+      ]
+    }
+  ]
+}
+```

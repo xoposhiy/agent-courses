@@ -1,0 +1,6707 @@
+[
+  {
+    "text": "Welcome, everyone.",
+    "start": 5.52,
+    "duration": 1.32
+  },
+  {
+    "text": "This is CS329Z--",
+    "start": 6.84,
+    "duration": 2.96
+  },
+  {
+    "text": "Engineering AI Agents.",
+    "start": 9.8,
+    "duration": 2.16
+  },
+  {
+    "text": "And today is the introduction\nto agentic systems.",
+    "start": 11.96,
+    "duration": 3.16
+  },
+  {
+    "text": "I'm Diyi Yang, an assistant\nprofessor in computer science",
+    "start": 15.12,
+    "duration": 2.48
+  },
+  {
+    "text": "here, and I'm\nco-teaching this course",
+    "start": 17.6,
+    "duration": 2.52
+  },
+  {
+    "text": "with Michael Ryan and John Yang.",
+    "start": 20.12,
+    "duration": 3.24
+  },
+  {
+    "text": "Today, we will cover\nlogistics and also",
+    "start": 23.36,
+    "duration": 2.92
+  },
+  {
+    "text": "give you a short history of\nagents, what agent is made of",
+    "start": 26.28,
+    "duration": 4.28
+  },
+  {
+    "text": "and also the open problems\nwe will work on this quarter.",
+    "start": 30.56,
+    "duration": 3.8
+  },
+  {
+    "text": "I'll first let Michael and\nJohn introduce themselves.",
+    "start": 34.36,
+    "duration": 3.96
+  },
+  {
+    "text": "Hi, everyone.",
+    "start": 38.32,
+    "duration": 0.9
+  },
+  {
+    "text": "I'm Michael.",
+    "start": 39.22,
+    "duration": 0.76
+  },
+  {
+    "text": "I'm a second year PhD\nstudent here at Stanford,",
+    "start": 39.98,
+    "duration": 2.94
+  },
+  {
+    "text": "and I'm advised\nby Diyi and Percy.",
+    "start": 42.92,
+    "duration": 3.04
+  },
+  {
+    "text": "So my research is on\nopen-source human-centered AI.",
+    "start": 45.96,
+    "duration": 3.64
+  },
+  {
+    "text": "And in the past\nagent-related work,",
+    "start": 49.6,
+    "duration": 2.18
+  },
+  {
+    "text": "I've worked on the DSPy\nframework for programming,",
+    "start": 51.78,
+    "duration": 4.64
+  },
+  {
+    "text": "not prompting language models.",
+    "start": 56.42,
+    "duration": 1.56
+  },
+  {
+    "text": "So that's my little\nclaim to agents.",
+    "start": 57.98,
+    "duration": 3.76
+  },
+  {
+    "text": "Hi, my name is John.",
+    "start": 61.74,
+    "duration": 1.14
+  },
+  {
+    "text": "I'm a third year\nPhD at Stanford.",
+    "start": 62.88,
+    "duration": 1.88
+  },
+  {
+    "text": "I'm advised by Diyi.",
+    "start": 64.76,
+    "duration": 0.9
+  },
+  {
+    "text": "And in the past I've worked\non coding agents and coding",
+    "start": 65.66,
+    "duration": 3.96
+  },
+  {
+    "text": "evaluations.",
+    "start": 69.62,
+    "duration": 1.06
+  },
+  {
+    "text": "So I created a SWE-bench\nSWE-agent, program",
+    "start": 70.68,
+    "duration": 3.76
+  },
+  {
+    "text": "bench SWE-smith if you've\nheard of those works.",
+    "start": 74.44,
+    "duration": 2.7
+  },
+  {
+    "text": "Yeah.",
+    "start": 77.14,
+    "duration": 1.24
+  },
+  {
+    "text": "Great.",
+    "start": 78.38,
+    "duration": 0.92
+  },
+  {
+    "text": "OK, so with the\ninstructor team, I",
+    "start": 79.3,
+    "duration": 4.32
+  },
+  {
+    "text": "want to formally welcome\nyou to this course.",
+    "start": 83.62,
+    "duration": 2.88
+  },
+  {
+    "text": "The primary contact to reach out\nto us is to use Ed Discussion.",
+    "start": 86.5,
+    "duration": 4.1
+  },
+  {
+    "text": "If you want to be added to\nit, just send us an email.",
+    "start": 90.6,
+    "duration": 3.3
+  },
+  {
+    "text": "We prefer you send\neverything to this email list",
+    "start": 93.9,
+    "duration": 4.12
+  },
+  {
+    "text": "so that we can take care of\nyour requests very quickly.",
+    "start": 98.02,
+    "duration": 3.4
+  },
+  {
+    "text": "The website will maintain\nall the lectures,",
+    "start": 101.42,
+    "duration": 2.34
+  },
+  {
+    "text": "slides, and homeworks.",
+    "start": 103.76,
+    "duration": 1.68
+  },
+  {
+    "text": "So that's your primary\nwebsite to check out.",
+    "start": 105.44,
+    "duration": 3.82
+  },
+  {
+    "text": "If you haven't enrolled\nin Ed Discussion,",
+    "start": 109.26,
+    "duration": 2.3
+  },
+  {
+    "text": "please do since we post a lot\nof announcements there as well.",
+    "start": 111.56,
+    "duration": 4.34
+  },
+  {
+    "text": "So in today's\nlecture, in addition",
+    "start": 115.9,
+    "duration": 2.66
+  },
+  {
+    "text": "to the logistics I'll\nmention in a few seconds,",
+    "start": 118.56,
+    "duration": 2.88
+  },
+  {
+    "text": "we are going to provide\na history of agents.",
+    "start": 121.44,
+    "duration": 3.56
+  },
+  {
+    "text": "There is actually a really\nlong history behind agents.",
+    "start": 125.0,
+    "duration": 4.039
+  },
+  {
+    "text": "We will talk about\nagent architecture.",
+    "start": 129.039,
+    "duration": 1.981
+  },
+  {
+    "text": "This is the core content today.",
+    "start": 131.02,
+    "duration": 1.86
+  },
+  {
+    "text": "And then compound\nthe AI systems--",
+    "start": 132.88,
+    "duration": 1.96
+  },
+  {
+    "text": "RAG, tool use, and MCP.",
+    "start": 134.84,
+    "duration": 2.48
+  },
+  {
+    "text": "We will end with a brief\nhighlight of key challenges,",
+    "start": 137.32,
+    "duration": 3.5
+  },
+  {
+    "text": "including the recent\nmulti-agent risk and collusion",
+    "start": 140.82,
+    "duration": 3.74
+  },
+  {
+    "text": "we have been seeing.",
+    "start": 144.56,
+    "duration": 2.28
+  },
+  {
+    "text": "So let's get started.",
+    "start": 146.84,
+    "duration": 2.2
+  },
+  {
+    "text": "Why we create CS329Z?",
+    "start": 149.04,
+    "duration": 3.24
+  },
+  {
+    "text": "So when we think about large\nlanguage models, agents",
+    "start": 152.28,
+    "duration": 3.72
+  },
+  {
+    "text": "these days, there seems to be\nvery different perspectives",
+    "start": 156.0,
+    "duration": 3.0
+  },
+  {
+    "text": "involved.",
+    "start": 159.0,
+    "duration": 0.94
+  },
+  {
+    "text": "You can take a\nmodeling perspective.",
+    "start": 159.94,
+    "duration": 2.12
+  },
+  {
+    "text": "You can also take a\nsystem perspective.",
+    "start": 162.06,
+    "duration": 2.3
+  },
+  {
+    "text": "A lot of what we do is\nactually around engineering.",
+    "start": 164.36,
+    "duration": 3.72
+  },
+  {
+    "text": "And if you think\nabout that, LLM people",
+    "start": 168.08,
+    "duration": 3.12
+  },
+  {
+    "text": "I think they know how models\nare trained, pretraining,",
+    "start": 171.2,
+    "duration": 3.58
+  },
+  {
+    "text": "post-training, prompting,\nalignment, and evaluation.",
+    "start": 174.78,
+    "duration": 3.96
+  },
+  {
+    "text": "On the other side,\nsystem people know",
+    "start": 178.74,
+    "duration": 2.4
+  },
+  {
+    "text": "how to build a\nreliable tools systems.",
+    "start": 181.14,
+    "duration": 3.6
+  },
+  {
+    "text": "More related to agents, we\nhave tools, APIs, environment,",
+    "start": 184.74,
+    "duration": 3.8
+  },
+  {
+    "text": "and infrastructure.",
+    "start": 188.54,
+    "duration": 1.92
+  },
+  {
+    "text": "So the expectation\nfor this course",
+    "start": 190.46,
+    "duration": 1.96
+  },
+  {
+    "text": "is that we are going to cover\na lot of the foundations.",
+    "start": 192.42,
+    "duration": 4.12
+  },
+  {
+    "text": "But more importantly, we want\nit to be more hands-on building",
+    "start": 196.54,
+    "duration": 3.48
+  },
+  {
+    "text": "plus evaluation of agents.",
+    "start": 200.02,
+    "duration": 3.76
+  },
+  {
+    "text": "A quick glance of the content.",
+    "start": 203.78,
+    "duration": 1.98
+  },
+  {
+    "text": "So week 1 to week 5, we will\ntalk about large language models",
+    "start": 205.76,
+    "duration": 4.42
+  },
+  {
+    "text": "for builders with a highlight of\nretrieval augmented generation",
+    "start": 210.18,
+    "duration": 5.04
+  },
+  {
+    "text": "and its variants in many, many\nfollow-up agent architectures.",
+    "start": 215.22,
+    "duration": 4.36
+  },
+  {
+    "text": "Tool use and function call\nwill be another highlight here.",
+    "start": 219.58,
+    "duration": 4.2
+  },
+  {
+    "text": "We will slowly move to\nagent design, training,",
+    "start": 223.78,
+    "duration": 2.68
+  },
+  {
+    "text": "and scaffolding, and also\nthe design of agent memory",
+    "start": 226.46,
+    "duration": 4.32
+  },
+  {
+    "text": "as well as orchestration\nand multi-agent systems.",
+    "start": 230.78,
+    "duration": 4.96
+  },
+  {
+    "text": "The second half\nof this course, we",
+    "start": 235.74,
+    "duration": 1.71
+  },
+  {
+    "text": "are going to have\noptimization, harness, and data",
+    "start": 237.45,
+    "duration": 4.24
+  },
+  {
+    "text": "for agentic systems, data\nquality, data selection, et",
+    "start": 241.69,
+    "duration": 3.36
+  },
+  {
+    "text": "cetera.",
+    "start": 245.05,
+    "duration": 0.88
+  },
+  {
+    "text": "The evaluation, the\nbenchmark design",
+    "start": 245.93,
+    "duration": 2.24
+  },
+  {
+    "text": "will also be highlighted\nin different ways.",
+    "start": 248.17,
+    "duration": 3.0
+  },
+  {
+    "text": "Agent safety and\nguardrail will also",
+    "start": 251.17,
+    "duration": 2.96
+  },
+  {
+    "text": "have two special\nhighlights of coding agent",
+    "start": 254.13,
+    "duration": 3.56
+  },
+  {
+    "text": "and also a more emerging topic\ncalled the proactive agents.",
+    "start": 257.69,
+    "duration": 7.2
+  },
+  {
+    "text": "We have actually\ntwo special teams",
+    "start": 264.89,
+    "duration": 3.2
+  },
+  {
+    "text": "who are going to show up\nin our class this quarter.",
+    "start": 268.09,
+    "duration": 3.72
+  },
+  {
+    "text": "First, we will welcome\nthe terminal bench team",
+    "start": 271.81,
+    "duration": 3.24
+  },
+  {
+    "text": "to talk about how they\ndesign Terminal-Bench",
+    "start": 275.05,
+    "duration": 3.0
+  },
+  {
+    "text": "and a lot of questions\nyou can share with them.",
+    "start": 278.05,
+    "duration": 3.44
+  },
+  {
+    "text": "We will also welcome\nthe SWE-bench team",
+    "start": 281.49,
+    "duration": 2.36
+  },
+  {
+    "text": "to come to chat with us.",
+    "start": 283.85,
+    "duration": 1.84
+  },
+  {
+    "text": "So for both lectures, it will\nbe a team reunion from those two",
+    "start": 285.69,
+    "duration": 5.48
+  },
+  {
+    "text": "teams that created a very\nfundamental evaluations",
+    "start": 291.17,
+    "duration": 2.96
+  },
+  {
+    "text": "in our field.",
+    "start": 294.13,
+    "duration": 2.06
+  },
+  {
+    "text": "Course policy.",
+    "start": 296.19,
+    "duration": 1.36
+  },
+  {
+    "text": "First, I think the biggest\nmessage that I want to highlight",
+    "start": 297.55,
+    "duration": 3.88
+  },
+  {
+    "text": "is that you should\nuse AI to learn.",
+    "start": 301.43,
+    "duration": 5.16
+  },
+  {
+    "text": "You may want to get yourself\nfamiliar with the Stanford honor",
+    "start": 306.59,
+    "duration": 3.08
+  },
+  {
+    "text": "code.",
+    "start": 309.67,
+    "duration": 0.72
+  },
+  {
+    "text": "And laptop use is only allowed\nfor taking notes, et cetera,",
+    "start": 310.39,
+    "duration": 4.5
+  },
+  {
+    "text": "and we strongly discourage\nthe use during the lecture",
+    "start": 314.89,
+    "duration": 4.3
+  },
+  {
+    "text": "so that you can be more focused.",
+    "start": 319.19,
+    "duration": 2.88
+  },
+  {
+    "text": "Prerequisite and compute.",
+    "start": 322.07,
+    "duration": 2.2
+  },
+  {
+    "text": "So first, we strongly\nrecommend that you",
+    "start": 324.27,
+    "duration": 2.88
+  },
+  {
+    "text": "have taken any NLP or large\nlanguage model-related training.",
+    "start": 327.15,
+    "duration": 5.52
+  },
+  {
+    "text": "You are expected to know\nbasic LLMs since we are not",
+    "start": 332.67,
+    "duration": 2.56
+  },
+  {
+    "text": "going to cover\nfine-tuning or pretraining",
+    "start": 335.23,
+    "duration": 2.84
+  },
+  {
+    "text": "or alignment, et cetera.",
+    "start": 338.07,
+    "duration": 2.44
+  },
+  {
+    "text": "In terms of compute, we are very\ngrateful that Laude Institute",
+    "start": 340.51,
+    "duration": 4.64
+  },
+  {
+    "text": "gives each student $200\nin terms of credits.",
+    "start": 345.15,
+    "duration": 3.4
+  },
+  {
+    "text": "And the Thinking\nMachine will provide",
+    "start": 348.55,
+    "duration": 1.64
+  },
+  {
+    "text": "a $250 for Tinker credits.",
+    "start": 350.19,
+    "duration": 4.9
+  },
+  {
+    "text": "I want to switch a little bit to\nconclude the logistics section",
+    "start": 355.09,
+    "duration": 4.4
+  },
+  {
+    "text": "by showing you a figure.",
+    "start": 359.49,
+    "duration": 2.36
+  },
+  {
+    "text": "This is just a specific instance\nof what's happening today.",
+    "start": 361.85,
+    "duration": 6.2
+  },
+  {
+    "text": "With a lot of data, if\nyou show on the top,",
+    "start": 368.05,
+    "duration": 2.8
+  },
+  {
+    "text": "this is actually homework score\nfrom two populations, people",
+    "start": 370.85,
+    "duration": 4.56
+  },
+  {
+    "text": "who use AI and the\npeople who do not use AI.",
+    "start": 375.41,
+    "duration": 4.32
+  },
+  {
+    "text": "Very interestingly,\nI think with AI,",
+    "start": 379.73,
+    "duration": 2.72
+  },
+  {
+    "text": "everyone's homework\nscore are just so great.",
+    "start": 382.45,
+    "duration": 3.08
+  },
+  {
+    "text": "But then if you\nlook at the bottom,",
+    "start": 385.53,
+    "duration": 1.7
+  },
+  {
+    "text": "this is actually the exam\nscore for the same population.",
+    "start": 387.23,
+    "duration": 3.58
+  },
+  {
+    "text": "Before using AI,\nthis is definitely",
+    "start": 390.81,
+    "duration": 2.68
+  },
+  {
+    "text": "more shifted towards 100 here.",
+    "start": 393.49,
+    "duration": 3.16
+  },
+  {
+    "text": "With AI, we have way more\npeople did worse in their exams.",
+    "start": 396.65,
+    "duration": 4.72
+  },
+  {
+    "text": "And I think we see this kind\nof pattern very frequent",
+    "start": 401.37,
+    "duration": 3.36
+  },
+  {
+    "text": "these days.",
+    "start": 404.73,
+    "duration": 2.0
+  },
+  {
+    "text": "The second example that\nI want to share with you",
+    "start": 406.73,
+    "duration": 2.2
+  },
+  {
+    "text": "is actually from Anthropic.",
+    "start": 408.93,
+    "duration": 2.36
+  },
+  {
+    "text": "They did a study with\ntheir own engineers",
+    "start": 411.29,
+    "duration": 3.06
+  },
+  {
+    "text": "to figure out how the\nuse of coding agents",
+    "start": 414.35,
+    "duration": 3.2
+  },
+  {
+    "text": "actually impact coding.",
+    "start": 417.55,
+    "duration": 2.48
+  },
+  {
+    "text": "As you can see from the\nleft side, if you use AI,",
+    "start": 420.03,
+    "duration": 3.4
+  },
+  {
+    "text": "the task completion\ntime actually decreased.",
+    "start": 423.43,
+    "duration": 3.12
+  },
+  {
+    "text": "But then on the right, the quiz\nscore in terms of your mastery",
+    "start": 426.55,
+    "duration": 4.36
+  },
+  {
+    "text": "actually significantly\ndecreased.",
+    "start": 430.91,
+    "duration": 2.4
+  },
+  {
+    "text": "That is, despite the coding\nagent that can give us 1,000",
+    "start": 433.31,
+    "duration": 3.28
+  },
+  {
+    "text": "lines of code, it's a little\nbit unclear whether we fully",
+    "start": 436.59,
+    "duration": 3.16
+  },
+  {
+    "text": "understand such AI output.",
+    "start": 439.75,
+    "duration": 3.2
+  },
+  {
+    "text": "So with that, I want to\nconclude the logistics",
+    "start": 442.95,
+    "duration": 3.0
+  },
+  {
+    "text": "by saying that we\nreally hope that you can",
+    "start": 445.95,
+    "duration": 2.24
+  },
+  {
+    "text": "use AI to learn how to learn.",
+    "start": 448.19,
+    "duration": 2.2
+  },
+  {
+    "text": "And this is really just\nabout you and your CS329Z.",
+    "start": 450.39,
+    "duration": 4.96
+  },
+  {
+    "text": "With that, any quick\nquestions for logistics?",
+    "start": 455.35,
+    "duration": 2.66
+  },
+  {
+    "text": "OK.",
+    "start": 460.77,
+    "duration": 0.5
+  },
+  {
+    "text": "If there is no question,\nwe will continue",
+    "start": 461.27,
+    "duration": 2.76
+  },
+  {
+    "text": "to the history of agents.",
+    "start": 464.03,
+    "duration": 2.68
+  },
+  {
+    "text": "One thing that I\ndo want to mention",
+    "start": 466.71,
+    "duration": 1.56
+  },
+  {
+    "text": "is that the learning\nobjective today",
+    "start": 468.27,
+    "duration": 3.34
+  },
+  {
+    "text": "is for you all to get\nfamiliar with agent loop",
+    "start": 471.61,
+    "duration": 3.0
+  },
+  {
+    "text": "on top of large language\nmodels and the different key",
+    "start": 474.61,
+    "duration": 2.84
+  },
+  {
+    "text": "components.",
+    "start": 477.45,
+    "duration": 1.96
+  },
+  {
+    "text": "So let's get started.",
+    "start": 479.41,
+    "duration": 2.48
+  },
+  {
+    "text": "This is a word that's probably\nvery, very popular today.",
+    "start": 481.89,
+    "duration": 3.64
+  },
+  {
+    "text": "And what I'm going to\ndo next is to trace",
+    "start": 485.53,
+    "duration": 2.88
+  },
+  {
+    "text": "where this idea\nactually came from,",
+    "start": 488.41,
+    "duration": 2.6
+  },
+  {
+    "text": "how it developed\nover the decades,",
+    "start": 491.01,
+    "duration": 1.98
+  },
+  {
+    "text": "and why it suddenly took off\nwith large language models.",
+    "start": 492.99,
+    "duration": 6.18
+  },
+  {
+    "text": "If you look at the more\nlinguistic side of agents,",
+    "start": 499.17,
+    "duration": 4.4
+  },
+  {
+    "text": "the word agent actually\ncomes from Latin,",
+    "start": 503.57,
+    "duration": 2.88
+  },
+  {
+    "text": "meaning that one who acts.",
+    "start": 506.45,
+    "duration": 2.5
+  },
+  {
+    "text": "And this term also entered\nEnglish in the late 14th",
+    "start": 508.95,
+    "duration": 5.74
+  },
+  {
+    "text": "century.",
+    "start": 514.69,
+    "duration": 0.88
+  },
+  {
+    "text": "So in AI, the first\nindex use of it",
+    "start": 515.57,
+    "duration": 3.4
+  },
+  {
+    "text": "is in this specific\nadjective paper from 1973,",
+    "start": 518.97,
+    "duration": 4.839
+  },
+  {
+    "text": "where Hewitt and\nBishop and Steiger talk",
+    "start": 523.809,
+    "duration": 3.041
+  },
+  {
+    "text": "about this architecture called\nthe ACTOR algorithm, where",
+    "start": 526.85,
+    "duration": 3.86
+  },
+  {
+    "text": "each actor is an active\nagent that wait for a message",
+    "start": 530.71,
+    "duration": 4.2
+  },
+  {
+    "text": "and then does what the\nmessage tells them to do.",
+    "start": 534.91,
+    "duration": 2.72
+  },
+  {
+    "text": "So the idea of software\nentities that act on their own",
+    "start": 537.63,
+    "duration": 4.4
+  },
+  {
+    "text": "is older than most\npeople can think about.",
+    "start": 542.03,
+    "duration": 4.44
+  },
+  {
+    "text": "And then I think a\nfew years after that,",
+    "start": 546.47,
+    "duration": 3.76
+  },
+  {
+    "text": "the contract net\nprotocol actually",
+    "start": 550.23,
+    "duration": 2.32
+  },
+  {
+    "text": "talks about how agents\ndividing tasks with each other",
+    "start": 552.55,
+    "duration": 4.04
+  },
+  {
+    "text": "and then negotiating tasks.",
+    "start": 556.59,
+    "duration": 2.6
+  },
+  {
+    "text": "This trend actually continues.",
+    "start": 559.19,
+    "duration": 2.16
+  },
+  {
+    "text": "In Marvin Minsky's\nSociety of Mind,",
+    "start": 561.35,
+    "duration": 3.02
+  },
+  {
+    "text": "it actually talks about\nhow a group of subagents",
+    "start": 564.37,
+    "duration": 3.06
+  },
+  {
+    "text": "actually work together\nto get something done.",
+    "start": 567.43,
+    "duration": 2.64
+  },
+  {
+    "text": "And if you reflect on this, this\nis actually the earlier idea",
+    "start": 570.07,
+    "duration": 4.4
+  },
+  {
+    "text": "of multi-agent orchestration.",
+    "start": 574.47,
+    "duration": 3.88
+  },
+  {
+    "text": "I think the history\nactually continues.",
+    "start": 578.35,
+    "duration": 2.2
+  },
+  {
+    "text": "Around the 1990s, we actually\nsee more and more emergence",
+    "start": 580.55,
+    "duration": 4.48
+  },
+  {
+    "text": "of software systems\nthat serve as agents,",
+    "start": 585.03,
+    "duration": 4.74
+  },
+  {
+    "text": "from parties designing\nautonomous agents to later",
+    "start": 589.77,
+    "duration": 4.64
+  },
+  {
+    "text": "people talk about agentized\nautonomy, social ability,",
+    "start": 594.41,
+    "duration": 4.74
+  },
+  {
+    "text": "reactivity, proactivity, trying\nto define agents in different",
+    "start": 599.15,
+    "duration": 3.42
+  },
+  {
+    "text": "ways.",
+    "start": 602.57,
+    "duration": 1.16
+  },
+  {
+    "text": "The most familiar\ndefinition to many of us",
+    "start": 603.73,
+    "duration": 3.96
+  },
+  {
+    "text": "is actually from Russell and\nNorvig, which defines agents",
+    "start": 607.69,
+    "duration": 4.24
+  },
+  {
+    "text": "as anything that perceive\nthrough sensors and acts",
+    "start": 611.93,
+    "duration": 4.24
+  },
+  {
+    "text": "through actuators here.",
+    "start": 616.17,
+    "duration": 4.32
+  },
+  {
+    "text": "We now enter a different stage,\nwhich we call reinforcement",
+    "start": 620.49,
+    "duration": 4.2
+  },
+  {
+    "text": "learning era here.",
+    "start": 624.69,
+    "duration": 1.96
+  },
+  {
+    "text": "This is a classic agent\nenvironment loop that many of us",
+    "start": 626.65,
+    "duration": 4.4
+  },
+  {
+    "text": "get familiar during RL courses.",
+    "start": 631.05,
+    "duration": 2.84
+  },
+  {
+    "text": "So what happened\nhere is that agents",
+    "start": 633.89,
+    "duration": 2.44
+  },
+  {
+    "text": "take action in the\nenvironment, and such action",
+    "start": 636.33,
+    "duration": 3.24
+  },
+  {
+    "text": "will receive a reward.",
+    "start": 639.57,
+    "duration": 2.24
+  },
+  {
+    "text": "And then they do the action\nbased on specific state",
+    "start": 641.81,
+    "duration": 2.8
+  },
+  {
+    "text": "and the current reward.",
+    "start": 644.61,
+    "duration": 1.64
+  },
+  {
+    "text": "So this is a very classic agent\nenvironment loop from Sutton",
+    "start": 646.25,
+    "duration": 3.51
+  },
+  {
+    "text": "here.",
+    "start": 649.76,
+    "duration": 1.16
+  },
+  {
+    "text": "And then I think we see more\nand more promising from--",
+    "start": 650.92,
+    "duration": 4.24
+  },
+  {
+    "text": "promises from this\nkind of setup.",
+    "start": 655.16,
+    "duration": 3.08
+  },
+  {
+    "text": "DQN refers to Deep Q-Network.",
+    "start": 658.24,
+    "duration": 3.96
+  },
+  {
+    "text": "This is actually from\nDeepMind earlier days,",
+    "start": 662.2,
+    "duration": 3.16
+  },
+  {
+    "text": "where they build AI systems to\nactually solve specific games.",
+    "start": 665.36,
+    "duration": 6.72
+  },
+  {
+    "text": "And I think later, you also see\nthat AlphaGo and OpenAI Five",
+    "start": 672.08,
+    "duration": 6.52
+  },
+  {
+    "text": "are showing that\nthis kind of approach",
+    "start": 678.6,
+    "duration": 1.92
+  },
+  {
+    "text": "actually can reach\nsuperhuman performance in go.",
+    "start": 680.52,
+    "duration": 3.94
+  },
+  {
+    "text": "And I think this is DOTA 2.",
+    "start": 684.46,
+    "duration": 2.42
+  },
+  {
+    "text": "So those were agents,\nbut each of them",
+    "start": 686.88,
+    "duration": 2.84
+  },
+  {
+    "text": "are actually trained\nfor a specific task.",
+    "start": 689.72,
+    "duration": 5.0
+  },
+  {
+    "text": "So what actually changed\nis the introduction",
+    "start": 694.72,
+    "duration": 2.44
+  },
+  {
+    "text": "of large language models.",
+    "start": 697.16,
+    "duration": 1.64
+  },
+  {
+    "text": "I think the first impressive\ncapability of LLMs",
+    "start": 698.8,
+    "duration": 4.32
+  },
+  {
+    "text": "is actually in-context learning.",
+    "start": 703.12,
+    "duration": 2.8
+  },
+  {
+    "text": "Build upon this kind of\ntransformer-based architectures.",
+    "start": 705.92,
+    "duration": 3.86
+  },
+  {
+    "text": "GPT-3 actually showed that\nyou can just talk about a task",
+    "start": 709.78,
+    "duration": 3.92
+  },
+  {
+    "text": "and give you a few\ndemonstrations.",
+    "start": 713.7,
+    "duration": 2.44
+  },
+  {
+    "text": "Like in this particular\nexample of few-shot,",
+    "start": 716.14,
+    "duration": 3.0
+  },
+  {
+    "text": "in order to do translation,\nyou can offer certain examples.",
+    "start": 719.14,
+    "duration": 4.3
+  },
+  {
+    "text": "And then the model can\nactually follow such examples",
+    "start": 723.44,
+    "duration": 3.26
+  },
+  {
+    "text": "and then do the task.",
+    "start": 726.7,
+    "duration": 2.0
+  },
+  {
+    "text": "This entire process, unlike\nprevious systems I showed you,",
+    "start": 728.7,
+    "duration": 3.7
+  },
+  {
+    "text": "there is no gradient\nupdate happening here.",
+    "start": 732.4,
+    "duration": 2.72
+  },
+  {
+    "text": "I think not only in\nterms of prompting",
+    "start": 738.18,
+    "duration": 2.88
+  },
+  {
+    "text": "or in context\nlearning, prompting",
+    "start": 741.06,
+    "duration": 2.92
+  },
+  {
+    "text": "could do more than teach\na model on a new task.",
+    "start": 743.98,
+    "duration": 4.24
+  },
+  {
+    "text": "It turned out that\nmodels themselves,",
+    "start": 748.22,
+    "duration": 2.18
+  },
+  {
+    "text": "they can also\nreason step by step,",
+    "start": 750.4,
+    "duration": 2.54
+  },
+  {
+    "text": "and then use tools for the\nthings that they cannot do",
+    "start": 752.94,
+    "duration": 3.28
+  },
+  {
+    "text": "alone.",
+    "start": 756.22,
+    "duration": 1.04
+  },
+  {
+    "text": "So this particular\nexample is called",
+    "start": 757.26,
+    "duration": 1.88
+  },
+  {
+    "text": "the Chain-of-Thought prompting.",
+    "start": 759.14,
+    "duration": 1.88
+  },
+  {
+    "text": "You can see that\nasking the model",
+    "start": 761.02,
+    "duration": 2.4
+  },
+  {
+    "text": "to actually work through\na problem step by step",
+    "start": 763.42,
+    "duration": 3.26
+  },
+  {
+    "text": "actually give more accurate\nanswers in general.",
+    "start": 766.68,
+    "duration": 4.28
+  },
+  {
+    "text": "When GPT was proposed\nby OpenAI, this",
+    "start": 770.96,
+    "duration": 3.84
+  },
+  {
+    "text": "actually enables language\nmodel in earlier days",
+    "start": 774.8,
+    "duration": 4.08
+  },
+  {
+    "text": "to use a web browser so that\nit can actually look up things",
+    "start": 778.88,
+    "duration": 3.56
+  },
+  {
+    "text": "online instead of only rely\non memory or parameters.",
+    "start": 782.44,
+    "duration": 4.68
+  },
+  {
+    "text": "This actually leads to\na lot of follow-up work",
+    "start": 787.12,
+    "duration": 3.48
+  },
+  {
+    "text": "in terms of web browser agent.",
+    "start": 790.6,
+    "duration": 4.6
+  },
+  {
+    "text": "One of the very\ninteresting architecture",
+    "start": 795.2,
+    "duration": 1.92
+  },
+  {
+    "text": "is actually called\nthe modular reasoning",
+    "start": 797.12,
+    "duration": 2.16
+  },
+  {
+    "text": "knowledge and language.",
+    "start": 799.28,
+    "duration": 2.0
+  },
+  {
+    "text": "I would view it as one of\nthe first earlier systems",
+    "start": 801.28,
+    "duration": 3.24
+  },
+  {
+    "text": "to think about to use.",
+    "start": 804.52,
+    "duration": 3.0
+  },
+  {
+    "text": "So basically this\narchitecture actually",
+    "start": 807.52,
+    "duration": 2.44
+  },
+  {
+    "text": "decides which outside\nexpert to send a request to.",
+    "start": 809.96,
+    "duration": 4.4
+  },
+  {
+    "text": "Is this going to be\na weather request?",
+    "start": 814.36,
+    "duration": 2.34
+  },
+  {
+    "text": "So then I should\nuse a weather API.",
+    "start": 816.7,
+    "duration": 2.7
+  },
+  {
+    "text": "If this is a coding\ntask, maybe I",
+    "start": 819.4,
+    "duration": 2.44
+  },
+  {
+    "text": "should send it to a Python\nprogramming tool, et cetera.",
+    "start": 821.84,
+    "duration": 4.22
+  },
+  {
+    "text": "So now the model\nactually can think,",
+    "start": 826.06,
+    "duration": 2.84
+  },
+  {
+    "text": "and it can take\nactions through tools.",
+    "start": 828.9,
+    "duration": 4.52
+  },
+  {
+    "text": "So I think we now have\nboth important pieces here.",
+    "start": 833.42,
+    "duration": 3.34
+  },
+  {
+    "text": "That is, models can reason\nstep by step and models that",
+    "start": 836.76,
+    "duration": 3.78
+  },
+  {
+    "text": "can use tools.",
+    "start": 840.54,
+    "duration": 1.36
+  },
+  {
+    "text": "Those are two very, very\nimportant prerequisites",
+    "start": 841.9,
+    "duration": 2.88
+  },
+  {
+    "text": "for the emergence of agents.",
+    "start": 844.78,
+    "duration": 2.64
+  },
+  {
+    "text": "I'm going to show you a\nvery short timeline in what",
+    "start": 847.42,
+    "duration": 3.04
+  },
+  {
+    "text": "happened in history,\nthat is, two years ago.",
+    "start": 850.46,
+    "duration": 2.92
+  },
+  {
+    "text": "So 2022, ReAct was proposed.",
+    "start": 853.38,
+    "duration": 6.12
+  },
+  {
+    "text": "So the name actually\nmeans Reason plus Act.",
+    "start": 859.5,
+    "duration": 4.72
+  },
+  {
+    "text": "So instead of thinking\nonce and then answering",
+    "start": 864.22,
+    "duration": 2.6
+  },
+  {
+    "text": "the question, what the model\ndoes here is actually a loop.",
+    "start": 866.82,
+    "duration": 3.72
+  },
+  {
+    "text": "It thinks about what to do\nnext, take action, and then look",
+    "start": 870.54,
+    "duration": 4.64
+  },
+  {
+    "text": "at what happen, and then\nuse that to think again.",
+    "start": 875.18,
+    "duration": 3.5
+  },
+  {
+    "text": "So it's actually a\nloop happening here.",
+    "start": 878.68,
+    "duration": 3.58
+  },
+  {
+    "text": "After that, I think we see\nthat more and more models get",
+    "start": 882.26,
+    "duration": 4.7
+  },
+  {
+    "text": "released.",
+    "start": 886.96,
+    "duration": 0.74
+  },
+  {
+    "text": "So ChatGPT get\nlaunched, and suddenly I",
+    "start": 887.7,
+    "duration": 3.22
+  },
+  {
+    "text": "think millions of people start\nto talk to LLMs every day.",
+    "start": 890.92,
+    "duration": 5.24
+  },
+  {
+    "text": "And then GPT-4 was released.",
+    "start": 896.16,
+    "duration": 2.02
+  },
+  {
+    "text": "And the reason why I\nwant to mention this",
+    "start": 898.18,
+    "duration": 2.06
+  },
+  {
+    "text": "is that if you\nthink about agents,",
+    "start": 900.24,
+    "duration": 2.18
+  },
+  {
+    "text": "they really rely on the base\nmodel, the strong capability",
+    "start": 902.42,
+    "duration": 3.1
+  },
+  {
+    "text": "from those base models.",
+    "start": 905.52,
+    "duration": 1.64
+  },
+  {
+    "text": "So when GPT-4 came out, we\nhave a much stronger model",
+    "start": 907.16,
+    "duration": 3.8
+  },
+  {
+    "text": "that could follow\nlong instructions",
+    "start": 910.96,
+    "duration": 3.04
+  },
+  {
+    "text": "and plan more reliably.",
+    "start": 914.0,
+    "duration": 4.0
+  },
+  {
+    "text": "Within two weeks,\nthere were actually",
+    "start": 918.0,
+    "duration": 1.76
+  },
+  {
+    "text": "two open source\nprojects came out",
+    "start": 919.76,
+    "duration": 2.36
+  },
+  {
+    "text": "that really shape what\nwe think around agents.",
+    "start": 922.12,
+    "duration": 3.88
+  },
+  {
+    "text": "The first one is\ncalled the BabyAGI.",
+    "start": 926.0,
+    "duration": 3.32
+  },
+  {
+    "text": "It basically gives\nthe model a goal",
+    "start": 929.32,
+    "duration": 2.28
+  },
+  {
+    "text": "and let it write its own task\nlist, walk through the task",
+    "start": 931.6,
+    "duration": 4.88
+  },
+  {
+    "text": "and add new ones as it goes.",
+    "start": 936.48,
+    "duration": 4.32
+  },
+  {
+    "text": "AutoGPT was released I think in\nthe same month, two days later.",
+    "start": 940.8,
+    "duration": 6.78
+  },
+  {
+    "text": "Basically try to connect GPT-4\nto tools such as web search,",
+    "start": 947.58,
+    "duration": 4.42
+  },
+  {
+    "text": "file systems, et cetera.",
+    "start": 952.0,
+    "duration": 1.5
+  },
+  {
+    "text": "And then likely to\nkeep going on its own",
+    "start": 953.5,
+    "duration": 2.88
+  },
+  {
+    "text": "without a person really typing\nthe next prompt each time.",
+    "start": 956.38,
+    "duration": 5.16
+  },
+  {
+    "text": "I think, now if you look\nback, it was definitely",
+    "start": 961.54,
+    "duration": 2.72
+  },
+  {
+    "text": "very ahead-of-time ideas.",
+    "start": 964.26,
+    "duration": 2.6
+  },
+  {
+    "text": "The reality is that none\nof them actually really",
+    "start": 966.86,
+    "duration": 2.96
+  },
+  {
+    "text": "worked very well.",
+    "start": 969.82,
+    "duration": 2.32
+  },
+  {
+    "text": "But they got people's\nattention and really",
+    "start": 972.14,
+    "duration": 2.6
+  },
+  {
+    "text": "opened our imagination\nabout what's possible.",
+    "start": 974.74,
+    "duration": 3.6
+  },
+  {
+    "text": "And I think that that's also\nprobably the time when the word",
+    "start": 978.34,
+    "duration": 3.2
+  },
+  {
+    "text": "\"agent\" really\nenters everyday use.",
+    "start": 981.54,
+    "duration": 3.76
+  },
+  {
+    "text": "So I want to go a\nlittle bit deeper here",
+    "start": 985.3,
+    "duration": 3.84
+  },
+  {
+    "text": "to share with you the underlying\nmodel and also agents,",
+    "start": 989.14,
+    "duration": 4.16
+  },
+  {
+    "text": "how they have\nimproved since 2023.",
+    "start": 993.3,
+    "duration": 4.6
+  },
+  {
+    "text": "So this page, if\nyou look at that,",
+    "start": 997.9,
+    "duration": 2.16
+  },
+  {
+    "text": "I only show the GPT-3,\nGPT-4, and GPT-5.",
+    "start": 1000.06,
+    "duration": 4.42
+  },
+  {
+    "text": "The underneath model actually\nis getting better and better.",
+    "start": 1004.48,
+    "duration": 4.56
+  },
+  {
+    "text": "If you just contrast\nGPT-3 versus GPT-4,",
+    "start": 1009.04,
+    "duration": 3.2
+  },
+  {
+    "text": "we see that on MMLU,\nthere is a 43% increase.",
+    "start": 1012.24,
+    "duration": 4.64
+  },
+  {
+    "text": "This is actually true for all\nthe data sets that we have.",
+    "start": 1016.88,
+    "duration": 4.2
+  },
+  {
+    "text": "From GPT-4 to GPT-5, some\nof those data sets actually",
+    "start": 1021.08,
+    "duration": 3.32
+  },
+  {
+    "text": "didn't show up here\nbecause they got solved,",
+    "start": 1024.4,
+    "duration": 3.06
+  },
+  {
+    "text": "or they saturated so that they\ncannot be used as very reliable",
+    "start": 1027.46,
+    "duration": 3.74
+  },
+  {
+    "text": "signals.",
+    "start": 1031.2,
+    "duration": 1.32
+  },
+  {
+    "text": "Instead, we actually\nintroduced more evaluations",
+    "start": 1032.52,
+    "duration": 3.4
+  },
+  {
+    "text": "such as GPQA which is a very\nchallenging QA setting and also",
+    "start": 1035.92,
+    "duration": 6.08
+  },
+  {
+    "text": "harder and harder\nmath problems here.",
+    "start": 1042.0,
+    "duration": 3.52
+  },
+  {
+    "text": "So the key message here is that\neach generation of base model",
+    "start": 1045.52,
+    "duration": 4.4
+  },
+  {
+    "text": "actually made a really big jump\nin terms of their performance.",
+    "start": 1049.92,
+    "duration": 4.2
+  },
+  {
+    "text": "And a stronger model\nmeans that the agent now",
+    "start": 1054.12,
+    "duration": 2.84
+  },
+  {
+    "text": "can actually reason better.",
+    "start": 1056.96,
+    "duration": 2.11
+  },
+  {
+    "text": "They can make fewer\nmistakes, hallucinate less,",
+    "start": 1059.07,
+    "duration": 4.24
+  },
+  {
+    "text": "and along the way, they can\nhandle longer and longer tasks.",
+    "start": 1063.31,
+    "duration": 4.08
+  },
+  {
+    "text": "And then let's look\nat the agent side.",
+    "start": 1067.39,
+    "duration": 3.36
+  },
+  {
+    "text": "So the agent side is also\nimproving as well, not only just",
+    "start": 1070.75,
+    "duration": 4.96
+  },
+  {
+    "text": "like the raw model capability.",
+    "start": 1075.71,
+    "duration": 2.4
+  },
+  {
+    "text": "So this page is actually\naround like SWE-bench verified.",
+    "start": 1078.11,
+    "duration": 4.56
+  },
+  {
+    "text": "As you can see in\nJanuary 2025, I",
+    "start": 1082.67,
+    "duration": 3.36
+  },
+  {
+    "text": "think the performance\nis only around 30%.",
+    "start": 1086.03,
+    "duration": 3.68
+  },
+  {
+    "text": "But then over the last\none year and a half,",
+    "start": 1089.71,
+    "duration": 4.6
+  },
+  {
+    "text": "now, all the\nnumbers are actually",
+    "start": 1094.31,
+    "duration": 2.2
+  },
+  {
+    "text": "reached a very high stage here.",
+    "start": 1096.51,
+    "duration": 3.6
+  },
+  {
+    "text": "And then right side, this\nis from actual release.",
+    "start": 1100.11,
+    "duration": 2.74
+  },
+  {
+    "text": "So you can see that\nour OS world, which",
+    "start": 1102.85,
+    "duration": 2.1
+  },
+  {
+    "text": "is a computer used for\nevaluation, and also",
+    "start": 1104.95,
+    "duration": 3.16
+  },
+  {
+    "text": "on Terminal-Bench, which is a\ncommand line task, the accuracy",
+    "start": 1108.11,
+    "duration": 5.2
+  },
+  {
+    "text": "are just impressive.",
+    "start": 1113.31,
+    "duration": 1.72
+  },
+  {
+    "text": "There is also a\ntrend that people",
+    "start": 1115.03,
+    "duration": 1.76
+  },
+  {
+    "text": "start to pay attention to the\nefficiency of the process.",
+    "start": 1116.79,
+    "duration": 3.5
+  },
+  {
+    "text": "This is why you are seeing\nthat most of those curves",
+    "start": 1120.29,
+    "duration": 2.8
+  },
+  {
+    "text": "these days actually have\nboth price and accuracy",
+    "start": 1123.09,
+    "duration": 3.52
+  },
+  {
+    "text": "there together.",
+    "start": 1126.61,
+    "duration": 1.52
+  },
+  {
+    "text": "So this is how we get here.",
+    "start": 1128.13,
+    "duration": 2.52
+  },
+  {
+    "text": "It's a long history\nin the last 60 years.",
+    "start": 1130.65,
+    "duration": 3.6
+  },
+  {
+    "text": "So what I'm going to do next\nis to really open one up",
+    "start": 1134.25,
+    "duration": 3.88
+  },
+  {
+    "text": "and see what an agent\nis actually made of.",
+    "start": 1138.13,
+    "duration": 5.0
+  },
+  {
+    "text": "Any quick questions here?",
+    "start": 1143.13,
+    "duration": 1.58
+  },
+  {
+    "text": "OK.",
+    "start": 1147.97,
+    "duration": 1.28
+  },
+  {
+    "text": "Yes?",
+    "start": 1149.25,
+    "duration": 1.32
+  },
+  {
+    "text": "Do you think models'\ncapacity or ability",
+    "start": 1150.57,
+    "duration": 3.16
+  },
+  {
+    "text": "is going to saturate\nin a few years,",
+    "start": 1153.73,
+    "duration": 3.12
+  },
+  {
+    "text": "or is it going to still develop\nfor like 10 years or so?",
+    "start": 1156.85,
+    "duration": 4.02
+  },
+  {
+    "text": "First, just to\nrepeat the question,",
+    "start": 1163.85,
+    "duration": 1.5
+  },
+  {
+    "text": "the question is, will model\ncapabilities saturate,",
+    "start": 1165.35,
+    "duration": 2.86
+  },
+  {
+    "text": "or will it keep improving?",
+    "start": 1168.21,
+    "duration": 2.36
+  },
+  {
+    "text": "I think in terms of\ntimeline, it's really hard",
+    "start": 1170.57,
+    "duration": 2.12
+  },
+  {
+    "text": "to make estimation into the\nfuture because a lot of things",
+    "start": 1172.69,
+    "duration": 3.44
+  },
+  {
+    "text": "can actually happen in two\nto three months these days.",
+    "start": 1176.13,
+    "duration": 3.34
+  },
+  {
+    "text": "There has been a very\ninteresting topic on RSI,",
+    "start": 1179.47,
+    "duration": 4.08
+  },
+  {
+    "text": "Recursive Self-Improvement.",
+    "start": 1183.55,
+    "duration": 1.92
+  },
+  {
+    "text": "And it has showed very\ninteresting patterns",
+    "start": 1185.47,
+    "duration": 3.32
+  },
+  {
+    "text": "on solving OpenMath problems\nand many other tasks.",
+    "start": 1188.79,
+    "duration": 3.14
+  },
+  {
+    "text": "I think with RSI, this pattern\nwill get accelerated a lot.",
+    "start": 1191.93,
+    "duration": 4.96
+  },
+  {
+    "text": "So let's see.",
+    "start": 1196.89,
+    "duration": 3.66
+  },
+  {
+    "text": "Yes?",
+    "start": 1200.55,
+    "duration": 2.2
+  },
+  {
+    "text": "Can you go back\nto the last slide.",
+    "start": 1202.75,
+    "duration": 2.26
+  },
+  {
+    "text": "Yeah.",
+    "start": 1205.01,
+    "duration": 1.02
+  },
+  {
+    "text": "So when you see the improvements\non the Terminal-Bench window,",
+    "start": 1206.03,
+    "duration": 4.12
+  },
+  {
+    "text": "we can see that GPT-5.6 is\ndoing really bad over the period",
+    "start": 1210.15,
+    "duration": 7.84
+  },
+  {
+    "text": "of API calls.",
+    "start": 1217.99,
+    "duration": 1.24
+  },
+  {
+    "text": "As the API cost increase,\nthe accuracy increase.",
+    "start": 1219.23,
+    "duration": 3.12
+  },
+  {
+    "text": "What are the reasons\nfor doing better",
+    "start": 1226.07,
+    "duration": 4.72
+  },
+  {
+    "text": "than the API cost increase?",
+    "start": 1230.79,
+    "duration": 1.38
+  },
+  {
+    "text": "Also, what are the reasons for\nGPT-6 extra doing much better?",
+    "start": 1232.17,
+    "duration": 5.3
+  },
+  {
+    "text": "Is it algorithmic development?",
+    "start": 1237.47,
+    "duration": 1.4
+  },
+  {
+    "text": "Is it bigger model?",
+    "start": 1238.87,
+    "duration": 2.7
+  },
+  {
+    "text": "Yeah, great question.",
+    "start": 1241.57,
+    "duration": 0.9
+  },
+  {
+    "text": "The question is that why\nwhen the models get better",
+    "start": 1242.47,
+    "duration": 3.5
+  },
+  {
+    "text": "is much more expensive?",
+    "start": 1245.97,
+    "duration": 2.06
+  },
+  {
+    "text": "And also why is extra better\nthan their earlier models?",
+    "start": 1248.03,
+    "duration": 3.14
+  },
+  {
+    "text": "So in terms of the price\nand better performance,",
+    "start": 1251.17,
+    "duration": 3.88
+  },
+  {
+    "text": "the API cost here is\nstrongly associated",
+    "start": 1255.05,
+    "duration": 2.96
+  },
+  {
+    "text": "with the number of tokens\ndigested in the process.",
+    "start": 1258.01,
+    "duration": 4.0
+  },
+  {
+    "text": "So if you think longer,\nthe general pattern",
+    "start": 1262.01,
+    "duration": 3.04
+  },
+  {
+    "text": "is that thinking\nlonger, thinking longer",
+    "start": 1265.05,
+    "duration": 3.28
+  },
+  {
+    "text": "is actually going to lead\nto improved the performance.",
+    "start": 1268.33,
+    "duration": 2.66
+  },
+  {
+    "text": "So this is just a general trend.",
+    "start": 1270.99,
+    "duration": 1.9
+  },
+  {
+    "text": "And then in terms of why\nmodels are getting better",
+    "start": 1272.89,
+    "duration": 3.36
+  },
+  {
+    "text": "than their previous model, I\nthink there are many reasons.",
+    "start": 1276.25,
+    "duration": 3.96
+  },
+  {
+    "text": "This is also a\ntopic we are going",
+    "start": 1280.21,
+    "duration": 1.48
+  },
+  {
+    "text": "to go deep later in terms\nof open weights models",
+    "start": 1281.69,
+    "duration": 3.56
+  },
+  {
+    "text": "and the openness\nof large language",
+    "start": 1285.25,
+    "duration": 1.64
+  },
+  {
+    "text": "models and the\nproprietary model aspects.",
+    "start": 1286.89,
+    "duration": 3.76
+  },
+  {
+    "text": "The reality is that we do\nnot know a lot about how",
+    "start": 1290.65,
+    "duration": 3.74
+  },
+  {
+    "text": "those models are trained.",
+    "start": 1294.39,
+    "duration": 1.72
+  },
+  {
+    "text": "Is it about better data, better\ndistillation, or other aspects?",
+    "start": 1296.11,
+    "duration": 6.68
+  },
+  {
+    "text": "OK.",
+    "start": 1302.79,
+    "duration": 1.4
+  },
+  {
+    "text": "Let's now move to the\nagent architecture.",
+    "start": 1304.19,
+    "duration": 4.16
+  },
+  {
+    "text": "So I think if you\nthink about agents,",
+    "start": 1308.35,
+    "duration": 4.58
+  },
+  {
+    "text": "it has a really long history.",
+    "start": 1312.93,
+    "duration": 2.04
+  },
+  {
+    "text": "It got really accelerated\nwith large language models.",
+    "start": 1314.97,
+    "duration": 3.72
+  },
+  {
+    "text": "And this is going to\nbe the agent that we",
+    "start": 1318.69,
+    "duration": 1.82
+  },
+  {
+    "text": "are going to talk about.",
+    "start": 1320.51,
+    "duration": 1.64
+  },
+  {
+    "text": "And I want to go back to\nthis example from ReAct",
+    "start": 1322.15,
+    "duration": 3.24
+  },
+  {
+    "text": "that I showed you.",
+    "start": 1325.39,
+    "duration": 1.76
+  },
+  {
+    "text": "So in this particular\nexample, the agent",
+    "start": 1327.15,
+    "duration": 3.2
+  },
+  {
+    "text": "needs to think about what\nthey are going to do.",
+    "start": 1330.35,
+    "duration": 4.28
+  },
+  {
+    "text": "So this particular task is to\nput a pepper shaker in a jar.",
+    "start": 1334.63,
+    "duration": 5.0
+  },
+  {
+    "text": "And then if you read\nthe right side top",
+    "start": 1339.63,
+    "duration": 2.84
+  },
+  {
+    "text": "to the bottom, the model\nitself is actually a LLM core.",
+    "start": 1342.47,
+    "duration": 5.1
+  },
+  {
+    "text": "This is the foundation\nmodel underneath.",
+    "start": 1347.57,
+    "duration": 3.62
+  },
+  {
+    "text": "And then the thinking\nstep here, basically, it",
+    "start": 1351.19,
+    "duration": 3.58
+  },
+  {
+    "text": "says things like, I\nneed to find a pepper",
+    "start": 1354.77,
+    "duration": 2.16
+  },
+  {
+    "text": "shaker more likely in cabinets.",
+    "start": 1356.93,
+    "duration": 2.56
+  },
+  {
+    "text": "Those are what we call\nplanning and reasoning.",
+    "start": 1359.49,
+    "duration": 3.32
+  },
+  {
+    "text": "And then the traces\nso far, everything",
+    "start": 1362.81,
+    "duration": 3.84
+  },
+  {
+    "text": "above the current step\nis what we call memory.",
+    "start": 1366.65,
+    "duration": 3.96
+  },
+  {
+    "text": "And then the agent actually take\nactions such as go to cabinet 1",
+    "start": 1370.61,
+    "duration": 4.08
+  },
+  {
+    "text": "or take a pepper shaker.",
+    "start": 1374.69,
+    "duration": 1.74
+  },
+  {
+    "text": "Those are what we\ncall tool calls.",
+    "start": 1376.43,
+    "duration": 3.18
+  },
+  {
+    "text": "And then those\nobservations, those",
+    "start": 1379.61,
+    "duration": 2.84
+  },
+  {
+    "text": "are literally just\nlike after each action",
+    "start": 1382.45,
+    "duration": 3.04
+  },
+  {
+    "text": "what the agent sees\nfrom the environment.",
+    "start": 1385.49,
+    "duration": 3.04
+  },
+  {
+    "text": "You can see that at least there\nare five components if we just",
+    "start": 1388.53,
+    "duration": 3.36
+  },
+  {
+    "text": "look at this very simple\nexample from ReAct.",
+    "start": 1391.89,
+    "duration": 4.32
+  },
+  {
+    "text": "So we will now walk\nthrough each of them.",
+    "start": 1396.21,
+    "duration": 4.16
+  },
+  {
+    "text": "So this is meant to be\na conceptual framework",
+    "start": 1400.37,
+    "duration": 5.48
+  },
+  {
+    "text": "just to highlight the\ndifferent components.",
+    "start": 1405.85,
+    "duration": 2.3
+  },
+  {
+    "text": "And then if you see\ndifferent directions,",
+    "start": 1408.15,
+    "duration": 1.78
+  },
+  {
+    "text": "it actually didn't\ncarry a lot of weights.",
+    "start": 1409.93,
+    "duration": 3.06
+  },
+  {
+    "text": "When we talk about agents,\nI want to just show you",
+    "start": 1412.99,
+    "duration": 2.88
+  },
+  {
+    "text": "some core components here.",
+    "start": 1415.87,
+    "duration": 2.84
+  },
+  {
+    "text": "First, agents is built on\ntop of large language models.",
+    "start": 1418.71,
+    "duration": 3.7
+  },
+  {
+    "text": "So stronger models in\ngeneral means better agents.",
+    "start": 1422.41,
+    "duration": 3.62
+  },
+  {
+    "text": "This is why we also have\na debate in terms of",
+    "start": 1426.03,
+    "duration": 2.64
+  },
+  {
+    "text": "should I think about\ntraining for agents,",
+    "start": 1428.67,
+    "duration": 2.06
+  },
+  {
+    "text": "or should I just\ncare about better",
+    "start": 1430.73,
+    "duration": 1.9
+  },
+  {
+    "text": "harness or other improvement?",
+    "start": 1432.63,
+    "duration": 5.2
+  },
+  {
+    "text": "On top of LLM core, there is a\nvery important component called",
+    "start": 1437.83,
+    "duration": 3.44
+  },
+  {
+    "text": "the planning and reasoning.",
+    "start": 1441.27,
+    "duration": 2.02
+  },
+  {
+    "text": "So if you think about asking\nagents to do a very big task,",
+    "start": 1443.29,
+    "duration": 3.64
+  },
+  {
+    "text": "they actually need to decompose\nthem into smaller pieces",
+    "start": 1446.93,
+    "duration": 3.02
+  },
+  {
+    "text": "and then maybe have sub agent\nto deal with each of them.",
+    "start": 1449.95,
+    "duration": 3.48
+  },
+  {
+    "text": "We may also want to add some\nexplicit aspects to improve",
+    "start": 1453.43,
+    "duration": 3.68
+  },
+  {
+    "text": "the reasoning here.",
+    "start": 1457.11,
+    "duration": 2.08
+  },
+  {
+    "text": "And then as you see from\nthe earlier example,",
+    "start": 1459.19,
+    "duration": 2.22
+  },
+  {
+    "text": "we need to introduce\na memory to make sure",
+    "start": 1461.41,
+    "duration": 2.02
+  },
+  {
+    "text": "that as agents work on the\ntask for more than two hours,",
+    "start": 1463.43,
+    "duration": 3.9
+  },
+  {
+    "text": "they actually know what\nhas happened so far",
+    "start": 1467.33,
+    "duration": 1.98
+  },
+  {
+    "text": "and then can use that as\ncontext to do the reasoning.",
+    "start": 1469.31,
+    "duration": 4.91
+  },
+  {
+    "text": "Even in earlier days when\nmodel can solve very hard math",
+    "start": 1474.22,
+    "duration": 4.04
+  },
+  {
+    "text": "problems if you ask\nthem where is CS329Z",
+    "start": 1478.26,
+    "duration": 4.92
+  },
+  {
+    "text": "happening today on campus?",
+    "start": 1483.18,
+    "duration": 2.3
+  },
+  {
+    "text": "Probably models\ncannot answer that.",
+    "start": 1485.48,
+    "duration": 2.78
+  },
+  {
+    "text": "Yes, our systems also\ncannot answer that.",
+    "start": 1488.26,
+    "duration": 2.54
+  },
+  {
+    "text": "So in order to really\nenable LLMs to do stuff,",
+    "start": 1493.62,
+    "duration": 4.78
+  },
+  {
+    "text": "we actually could\ngive them tools here.",
+    "start": 1498.4,
+    "duration": 2.54
+  },
+  {
+    "text": "This could be\ninformation retrieval.",
+    "start": 1500.94,
+    "duration": 1.9
+  },
+  {
+    "text": "If they do not know what's\nthe classroom location,",
+    "start": 1502.84,
+    "duration": 3.76
+  },
+  {
+    "text": "they can actually go to Stanford\nwebsite and search for it.",
+    "start": 1506.6,
+    "duration": 3.3
+  },
+  {
+    "text": "If they do not know the\nweather today at Stanford,",
+    "start": 1509.9,
+    "duration": 2.7
+  },
+  {
+    "text": "they can actually search for\nweather from official database.",
+    "start": 1512.6,
+    "duration": 4.14
+  },
+  {
+    "text": "Similarly, I will show more\nexamples in a few weeks.",
+    "start": 1516.74,
+    "duration": 5.88
+  },
+  {
+    "text": "There has been a time period in\nhistory where despite the GPT-4",
+    "start": 1522.62,
+    "duration": 4.92
+  },
+  {
+    "text": "was amazing, it actually cannot\nsolve 3 digits times 3 digits,",
+    "start": 1527.54,
+    "duration": 5.2
+  },
+  {
+    "text": "just like a simple\nmultiplication problem.",
+    "start": 1532.74,
+    "duration": 3.06
+  },
+  {
+    "text": "So there are a lot\nof those scenarios.",
+    "start": 1535.8,
+    "duration": 1.86
+  },
+  {
+    "text": "So tool use really enable\nagents to take factual",
+    "start": 1537.66,
+    "duration": 4.74
+  },
+  {
+    "text": "and more consistent actions.",
+    "start": 1542.4,
+    "duration": 3.96
+  },
+  {
+    "text": "And all of those actions\nlead to different terms",
+    "start": 1546.36,
+    "duration": 2.96
+  },
+  {
+    "text": "that you may have heard of\nsuch as tool call, interaction,",
+    "start": 1549.32,
+    "duration": 4.22
+  },
+  {
+    "text": "response to users.",
+    "start": 1553.54,
+    "duration": 1.12
+  },
+  {
+    "text": "This is what we\ncall agent actions.",
+    "start": 1554.66,
+    "duration": 3.58
+  },
+  {
+    "text": "And I think more importantly,\nthere is this environment part",
+    "start": 1558.24,
+    "duration": 3.6
+  },
+  {
+    "text": "that we haven't talked about.",
+    "start": 1561.84,
+    "duration": 1.74
+  },
+  {
+    "text": "So agent observe what's\nhappening in the environment",
+    "start": 1563.58,
+    "duration": 2.66
+  },
+  {
+    "text": "and then take actions.",
+    "start": 1566.24,
+    "duration": 1.96
+  },
+  {
+    "text": "So what do you see on\nthe screen right now,",
+    "start": 1568.2,
+    "duration": 2.4
+  },
+  {
+    "text": "this is actually a\nskeleton of an agent.",
+    "start": 1570.6,
+    "duration": 3.24
+  },
+  {
+    "text": "Of course, this is only\none way to draw it.",
+    "start": 1573.84,
+    "duration": 2.3
+  },
+  {
+    "text": "And please do not\ntake too much weights",
+    "start": 1576.14,
+    "duration": 3.5
+  },
+  {
+    "text": "with these kind of directions.",
+    "start": 1579.64,
+    "duration": 1.34
+  },
+  {
+    "text": "This is really meant to\nillustrate the process here.",
+    "start": 1580.98,
+    "duration": 4.42
+  },
+  {
+    "text": "And then on top of\nthis single agent,",
+    "start": 1585.4,
+    "duration": 2.08
+  },
+  {
+    "text": "you can imagine that you\ncan have different agents.",
+    "start": 1587.48,
+    "duration": 2.66
+  },
+  {
+    "text": "Even within the same\nagent, maybe you",
+    "start": 1590.14,
+    "duration": 2.12
+  },
+  {
+    "text": "can do different configuration\noptimization for each box",
+    "start": 1592.26,
+    "duration": 3.68
+  },
+  {
+    "text": "that I listed here.",
+    "start": 1595.94,
+    "duration": 1.3
+  },
+  {
+    "text": "This is why later\nharness and optimization",
+    "start": 1597.24,
+    "duration": 3.18
+  },
+  {
+    "text": "become very important\nbecause everyone",
+    "start": 1600.42,
+    "duration": 3.0
+  },
+  {
+    "text": "wants to find the most optimal\nconfiguration for this agent.",
+    "start": 1603.42,
+    "duration": 6.36
+  },
+  {
+    "text": "As I said that this is not the\nonly way to talk about agents,",
+    "start": 1609.78,
+    "duration": 4.42
+  },
+  {
+    "text": "and our breakdown is not\nunique, different researchers",
+    "start": 1614.2,
+    "duration": 3.38
+  },
+  {
+    "text": "actually use different labels.",
+    "start": 1617.58,
+    "duration": 2.56
+  },
+  {
+    "text": "For a long time, I think there\nwas a lot of debate around what",
+    "start": 1620.14,
+    "duration": 3.64
+  },
+  {
+    "text": "is an agent?",
+    "start": 1623.78,
+    "duration": 0.82
+  },
+  {
+    "text": "What is not an agent?",
+    "start": 1624.6,
+    "duration": 1.16
+  },
+  {
+    "text": "What is agentic systems?",
+    "start": 1625.76,
+    "duration": 1.32
+  },
+  {
+    "text": "What is not agentic systems?",
+    "start": 1627.08,
+    "duration": 1.74
+  },
+  {
+    "text": "We are now going to do\nany debate in this class,",
+    "start": 1628.82,
+    "duration": 3.42
+  },
+  {
+    "text": "but I think you can see the\ncommon components showing up",
+    "start": 1632.24,
+    "duration": 2.62
+  },
+  {
+    "text": "here.",
+    "start": 1634.86,
+    "duration": 1.24
+  },
+  {
+    "text": "The left side is from an\nOpenAI researcher back in 2023.",
+    "start": 1636.1,
+    "duration": 4.76
+  },
+  {
+    "text": "They talk about that OK,\nif you think about agents,",
+    "start": 1640.86,
+    "duration": 2.9
+  },
+  {
+    "text": "they use tools.",
+    "start": 1643.76,
+    "duration": 1.2
+  },
+  {
+    "text": "They have memory,\nplanning, action.",
+    "start": 1644.96,
+    "duration": 3.32
+  },
+  {
+    "text": "And then on the right side, this\nis around the cognitive language",
+    "start": 1648.28,
+    "duration": 3.52
+  },
+  {
+    "text": "agents.",
+    "start": 1651.8,
+    "duration": 1.4
+  },
+  {
+    "text": "You can see that they have\nsimilar pieces such as memory",
+    "start": 1653.2,
+    "duration": 3.04
+  },
+  {
+    "text": "with retrieval to read from\nit and also learning to write",
+    "start": 1656.24,
+    "duration": 3.8
+  },
+  {
+    "text": "to it, reasoning, et cetera.",
+    "start": 1660.04,
+    "duration": 2.64
+  },
+  {
+    "text": "Despite those are\ndifferent vocabularies,",
+    "start": 1662.68,
+    "duration": 2.78
+  },
+  {
+    "text": "I think it really point to\nthe same architecture here.",
+    "start": 1665.46,
+    "duration": 3.84
+  },
+  {
+    "text": "That is, an LLM reason,\nremember, and use tools and acts",
+    "start": 1669.3,
+    "duration": 5.54
+  },
+  {
+    "text": "in a loop within\nits environment.",
+    "start": 1674.84,
+    "duration": 3.36
+  },
+  {
+    "text": "So now I'm going to\ngo back to the diagram",
+    "start": 1678.2,
+    "duration": 3.24
+  },
+  {
+    "text": "of those different\ncomponents and start",
+    "start": 1681.44,
+    "duration": 2.24
+  },
+  {
+    "text": "to share with you different\nmodules we have here.",
+    "start": 1683.68,
+    "duration": 3.72
+  },
+  {
+    "text": "So if you look at this, I\nthink the first thing that",
+    "start": 1687.4,
+    "duration": 2.64
+  },
+  {
+    "text": "comes to mind is actually\nthis planning and reasoning",
+    "start": 1690.04,
+    "duration": 3.36
+  },
+  {
+    "text": "from this particular figure.",
+    "start": 1693.4,
+    "duration": 3.32
+  },
+  {
+    "text": "So then the question\nis, what does that",
+    "start": 1696.72,
+    "duration": 2.64
+  },
+  {
+    "text": "mean for LLMs to reason?",
+    "start": 1699.36,
+    "duration": 1.72
+  },
+  {
+    "text": "And why does it help an agent?",
+    "start": 1701.08,
+    "duration": 4.28
+  },
+  {
+    "text": "I want to draw some kind of\nmetaphor to human reasoning",
+    "start": 1705.36,
+    "duration": 5.18
+  },
+  {
+    "text": "here.",
+    "start": 1710.54,
+    "duration": 0.96
+  },
+  {
+    "text": "This action is probably a\nlittle bit controversial,",
+    "start": 1711.5,
+    "duration": 2.3
+  },
+  {
+    "text": "if you think about that.",
+    "start": 1713.8,
+    "duration": 1.24
+  },
+  {
+    "text": "There has been a\nlot of debate to see",
+    "start": 1715.04,
+    "duration": 2.3
+  },
+  {
+    "text": "whether the reasoning of AI\nis similar to human reasoning.",
+    "start": 1717.34,
+    "duration": 4.0
+  },
+  {
+    "text": "Again, no debate in this course.",
+    "start": 1721.34,
+    "duration": 3.2
+  },
+  {
+    "text": "But if you look\nat this process, I",
+    "start": 1724.54,
+    "duration": 1.56
+  },
+  {
+    "text": "think for humans, what\ndoes reasoning mean?",
+    "start": 1726.1,
+    "duration": 2.78
+  },
+  {
+    "text": "It means that some mental\nprocess, such as deduction,",
+    "start": 1728.88,
+    "duration": 4.5
+  },
+  {
+    "text": "analogy, and planning that we\nall do for different tasks.",
+    "start": 1733.38,
+    "duration": 5.32
+  },
+  {
+    "text": "For LLMs, I think you can think\nabout them as Chain-of-Thought.",
+    "start": 1738.7,
+    "duration": 4.28
+  },
+  {
+    "text": "So in this particular example\nhere, most of the time",
+    "start": 1742.98,
+    "duration": 3.16
+  },
+  {
+    "text": "we would call this\nChain-of-Thought",
+    "start": 1746.14,
+    "duration": 2.08
+  },
+  {
+    "text": "as a reasoning process.",
+    "start": 1748.22,
+    "duration": 2.44
+  },
+  {
+    "text": "Although one message I\nwant to share with you",
+    "start": 1750.66,
+    "duration": 2.76
+  },
+  {
+    "text": "all is that this\nChain-of-Thought may not",
+    "start": 1753.42,
+    "duration": 3.12
+  },
+  {
+    "text": "be fearful of what actually\nhappened within LLMs.",
+    "start": 1756.54,
+    "duration": 6.48
+  },
+  {
+    "text": "For agents, by reasoning, we\nmean the internal actions that",
+    "start": 1763.02,
+    "duration": 3.86
+  },
+  {
+    "text": "update the agent's own state.",
+    "start": 1766.88,
+    "duration": 2.12
+  },
+  {
+    "text": "So those are just\na different terms",
+    "start": 1769.0,
+    "duration": 2.04
+  },
+  {
+    "text": "to understand the\nreasoning and the planning.",
+    "start": 1771.04,
+    "duration": 2.92
+  },
+  {
+    "text": "So now let's look at\na concrete example.",
+    "start": 1773.96,
+    "duration": 3.04
+  },
+  {
+    "text": "So why is reasoning\nhelpful for agents?",
+    "start": 1777.0,
+    "duration": 3.44
+  },
+  {
+    "text": "So imagine we have an agent\nthat's doing actions right now.",
+    "start": 1780.44,
+    "duration": 3.82
+  },
+  {
+    "text": "And at the t step it observes\nthat you are cooking a dish",
+    "start": 1784.26,
+    "duration": 4.82
+  },
+  {
+    "text": "and seeing salt is out.",
+    "start": 1789.08,
+    "duration": 2.48
+  },
+  {
+    "text": "And then the next step if you\nsee an action of turn right,",
+    "start": 1791.56,
+    "duration": 4.68
+  },
+  {
+    "text": "if you just look at those\ntwo, I at least get confused.",
+    "start": 1796.24,
+    "duration": 3.74
+  },
+  {
+    "text": "OK, why is the agent actually\nturning right here, et cetera?",
+    "start": 1799.98,
+    "duration": 4.38
+  },
+  {
+    "text": "So the observation to action\nmapping is actually huge.",
+    "start": 1804.36,
+    "duration": 4.32
+  },
+  {
+    "text": "And then this can be\nvery hard for audits",
+    "start": 1808.68,
+    "duration": 3.24
+  },
+  {
+    "text": "or just like for\nmaking agents better.",
+    "start": 1811.92,
+    "duration": 2.72
+  },
+  {
+    "text": "So if we could actually\nintroduce a reasoning model here",
+    "start": 1814.64,
+    "duration": 3.16
+  },
+  {
+    "text": "to let agents to\nexplicit reason,",
+    "start": 1817.8,
+    "duration": 2.68
+  },
+  {
+    "text": "then this actually help a lot.",
+    "start": 1820.48,
+    "duration": 2.56
+  },
+  {
+    "text": "If you read the reasoning\nin the green box,",
+    "start": 1823.04,
+    "duration": 2.52
+  },
+  {
+    "text": "it says that the dish should be\nsavory, and since salt is out,",
+    "start": 1825.56,
+    "duration": 4.36
+  },
+  {
+    "text": "I should find\nsomething equivalent.",
+    "start": 1829.92,
+    "duration": 2.14
+  },
+  {
+    "text": "It is in the\ncabinet to my right.",
+    "start": 1832.06,
+    "duration": 2.32
+  },
+  {
+    "text": "And then when it\nturns right, we know",
+    "start": 1834.38,
+    "duration": 2.16
+  },
+  {
+    "text": "why the agent is doing\nthis particular action.",
+    "start": 1836.54,
+    "duration": 4.16
+  },
+  {
+    "text": "I think the reasoning\nhelps in two ways.",
+    "start": 1840.7,
+    "duration": 2.14
+  },
+  {
+    "text": "First is from a\ngeneralization perspective,",
+    "start": 1842.84,
+    "duration": 2.52
+  },
+  {
+    "text": "because the same reasoning\ncould actually work",
+    "start": 1845.36,
+    "duration": 2.42
+  },
+  {
+    "text": "in new, similar situations.",
+    "start": 1847.78,
+    "duration": 2.8
+  },
+  {
+    "text": "It also helps with alignment\nbecause you can see",
+    "start": 1850.58,
+    "duration": 2.84
+  },
+  {
+    "text": "why the agent did what it did.",
+    "start": 1853.42,
+    "duration": 2.72
+  },
+  {
+    "text": "So this is why\nreasoning was actually",
+    "start": 1856.14,
+    "duration": 2.44
+  },
+  {
+    "text": "a first important component\nwe are emphasizing.",
+    "start": 1858.58,
+    "duration": 5.44
+  },
+  {
+    "text": "So now just to understand\nwhy systems like ReAct",
+    "start": 1864.02,
+    "duration": 3.6
+  },
+  {
+    "text": "beats existing\nprompting methods,",
+    "start": 1867.62,
+    "duration": 3.16
+  },
+  {
+    "text": "I'm going to give you\nanother example here.",
+    "start": 1870.78,
+    "duration": 2.6
+  },
+  {
+    "text": "This is an example\nfrom HotpotQA.",
+    "start": 1873.38,
+    "duration": 4.0
+  },
+  {
+    "text": "So it's asking\ncertain questions.",
+    "start": 1877.38,
+    "duration": 3.12
+  },
+  {
+    "text": "And then standard\nprompting fail.",
+    "start": 1880.5,
+    "duration": 2.31
+  },
+  {
+    "text": "And if you just\nhave a model that",
+    "start": 1882.81,
+    "duration": 1.8
+  },
+  {
+    "text": "can reason like\nChain-of-Thought,",
+    "start": 1884.61,
+    "duration": 1.98
+  },
+  {
+    "text": "it also fail here.",
+    "start": 1886.59,
+    "duration": 2.0
+  },
+  {
+    "text": "Basically we have wrong answer.",
+    "start": 1888.59,
+    "duration": 3.02
+  },
+  {
+    "text": "This is actually more dangerous\nbecause you have a very",
+    "start": 1891.61,
+    "duration": 2.64
+  },
+  {
+    "text": "convincing reasoning trace.",
+    "start": 1894.25,
+    "duration": 2.32
+  },
+  {
+    "text": "That's wrong.",
+    "start": 1896.57,
+    "duration": 1.84
+  },
+  {
+    "text": "So now let's look at if\nyou have this kind of loop",
+    "start": 1898.41,
+    "duration": 2.88
+  },
+  {
+    "text": "think taking action,\nthink observation.",
+    "start": 1901.29,
+    "duration": 5.32
+  },
+  {
+    "text": "So in this particular\nexample, the model",
+    "start": 1906.61,
+    "duration": 2.68
+  },
+  {
+    "text": "thinks that it needs to search\nApple remote, since this",
+    "start": 1909.29,
+    "duration": 3.04
+  },
+  {
+    "text": "is in the query, to find out\nwhat it was originally designed",
+    "start": 1912.33,
+    "duration": 3.2
+  },
+  {
+    "text": "to interact with Apple remote.",
+    "start": 1915.53,
+    "duration": 2.84
+  },
+  {
+    "text": "Such a thought actually\ninduced search actions",
+    "start": 1918.37,
+    "duration": 3.2
+  },
+  {
+    "text": "and gets a long description of\nApple remote from Wikipedia.",
+    "start": 1921.57,
+    "duration": 4.64
+  },
+  {
+    "text": "In the second step,\nthe model actually",
+    "start": 1926.21,
+    "duration": 1.88
+  },
+  {
+    "text": "uses reasoning to extract\nthe key information",
+    "start": 1928.09,
+    "duration": 2.4
+  },
+  {
+    "text": "from that specific page.",
+    "start": 1930.49,
+    "duration": 2.0
+  },
+  {
+    "text": "And they found that\nApple remote was actually",
+    "start": 1932.49,
+    "duration": 2.76
+  },
+  {
+    "text": "designed to interact\nwith front row here.",
+    "start": 1935.25,
+    "duration": 3.258
+  },
+  {
+    "text": "Then the model thinks\nthat maybe they",
+    "start": 1938.508,
+    "duration": 1.542
+  },
+  {
+    "text": "should search front row to\nfind out what controls it.",
+    "start": 1940.05,
+    "duration": 4.58
+  },
+  {
+    "text": "But may be the\nspecific Wikipedia page",
+    "start": 1944.63,
+    "duration": 3.56
+  },
+  {
+    "text": "does not have such information,\nbut some other articles have.",
+    "start": 1948.19,
+    "duration": 4.12
+  },
+  {
+    "text": "So this process\nactually continues.",
+    "start": 1952.31,
+    "duration": 2.44
+  },
+  {
+    "text": "In the third step,\nthe model actually",
+    "start": 1954.75,
+    "duration": 2.52
+  },
+  {
+    "text": "uses reasoning to\nrecover from extraction",
+    "start": 1957.27,
+    "duration": 2.8
+  },
+  {
+    "text": "and then search\nfront row instead.",
+    "start": 1960.07,
+    "duration": 3.08
+  },
+  {
+    "text": "So when the model thinks that\nthey have the correct answer,",
+    "start": 1963.15,
+    "duration": 3.3
+  },
+  {
+    "text": "they actually finish\nthe task and return it.",
+    "start": 1966.45,
+    "duration": 2.66
+  },
+  {
+    "text": "So you can see that here the\nreasoning traces actually",
+    "start": 1969.11,
+    "duration": 3.24
+  },
+  {
+    "text": "induce and adjust\nagent actions, which",
+    "start": 1972.35,
+    "duration": 4.08
+  },
+  {
+    "text": "help agents obtain new knowledge\nto support their own reasoning",
+    "start": 1976.43,
+    "duration": 4.04
+  },
+  {
+    "text": "process.",
+    "start": 1980.47,
+    "duration": 1.452
+  },
+  {
+    "text": "And then one thing\nthat I want to mention",
+    "start": 1981.922,
+    "duration": 1.708
+  },
+  {
+    "text": "is that if you look at this,\na lot of the trajectory",
+    "start": 1983.63,
+    "duration": 3.64
+  },
+  {
+    "text": "here is very intuitive,\ninterpretable,",
+    "start": 1987.27,
+    "duration": 3.12
+  },
+  {
+    "text": "and somewhat factual.",
+    "start": 1990.39,
+    "duration": 3.64
+  },
+  {
+    "text": "To show you how\nthis actually works,",
+    "start": 1994.03,
+    "duration": 2.2
+  },
+  {
+    "text": "Chain-of-Thought is a\nvery straightforward",
+    "start": 1996.23,
+    "duration": 2.2
+  },
+  {
+    "text": "prompting baseline.",
+    "start": 1998.43,
+    "duration": 1.74
+  },
+  {
+    "text": "And then you can see that\ncompared to just doing",
+    "start": 2000.17,
+    "duration": 4.12
+  },
+  {
+    "text": "actions which is act here, ReAct\nactually perform act constantly.",
+    "start": 2004.29,
+    "duration": 6.08
+  },
+  {
+    "text": "One thing is that if you\nlook at the failure case",
+    "start": 2010.37,
+    "duration": 3.0
+  },
+  {
+    "text": "from different\nreasoning paradigms,",
+    "start": 2013.37,
+    "duration": 3.44
+  },
+  {
+    "text": "let's do a very\ndetailed breakdown.",
+    "start": 2016.81,
+    "duration": 1.94
+  },
+  {
+    "text": "If you compare\nChain-of-Thought and ReAct",
+    "start": 2018.75,
+    "duration": 3.38
+  },
+  {
+    "text": "in terms of failures\nlike reasoning error,",
+    "start": 2022.13,
+    "duration": 3.1
+  },
+  {
+    "text": "actually ReAct is very high.",
+    "start": 2025.23,
+    "duration": 2.3
+  },
+  {
+    "text": "Search result error,\nReAct is also very high",
+    "start": 2027.53,
+    "duration": 2.8
+  },
+  {
+    "text": "because CoT does not\nhave search functions.",
+    "start": 2030.33,
+    "duration": 3.16
+  },
+  {
+    "text": "Hallucination.",
+    "start": 2033.49,
+    "duration": 1.56
+  },
+  {
+    "text": "Hallucinating the reasoning\ntraces or effects, ReAct is 0.",
+    "start": 2035.05,
+    "duration": 4.32
+  },
+  {
+    "text": "And then Chain-of-Thought\nis actually 56 here.",
+    "start": 2039.37,
+    "duration": 3.4
+  },
+  {
+    "text": "So in general, hallucination\nis a very serious problem",
+    "start": 2042.77,
+    "duration": 3.64
+  },
+  {
+    "text": "for Chain-of-Thought and many\nof those prompting techniques.",
+    "start": 2046.41,
+    "duration": 2.999
+  },
+  {
+    "text": "And then ReAct with this\nkind of reasoning module,",
+    "start": 2049.409,
+    "duration": 2.52
+  },
+  {
+    "text": "taking actions actually\nmitigate it a lot.",
+    "start": 2051.929,
+    "duration": 4.841
+  },
+  {
+    "text": "So you probably\nnoticed that there",
+    "start": 2056.77,
+    "duration": 1.82
+  },
+  {
+    "text": "is a term here called SC here.",
+    "start": 2058.59,
+    "duration": 3.359
+  },
+  {
+    "text": "SC refers to self-consistency.",
+    "start": 2061.949,
+    "duration": 3.121
+  },
+  {
+    "text": "This is related to\nChain-of-Thought",
+    "start": 2065.07,
+    "duration": 1.96
+  },
+  {
+    "text": "as a prompting technique, and\nit's a very intuitive trick",
+    "start": 2067.03,
+    "duration": 3.6
+  },
+  {
+    "text": "you can use.",
+    "start": 2070.63,
+    "duration": 1.48
+  },
+  {
+    "text": "So apparently you can prompt\nthe large language model",
+    "start": 2072.11,
+    "duration": 3.12
+  },
+  {
+    "text": "using Chain-of-Thought.",
+    "start": 2075.23,
+    "duration": 1.259
+  },
+  {
+    "text": "And instead of just\ngetting one of them,",
+    "start": 2076.489,
+    "duration": 2.161
+  },
+  {
+    "text": "you can actually get a diverse\nset of reasoning choices.",
+    "start": 2078.65,
+    "duration": 3.38
+  },
+  {
+    "text": "You can aggregate by choosing\nthe most consistent answer",
+    "start": 2082.03,
+    "duration": 3.76
+  },
+  {
+    "text": "in the final answer set.",
+    "start": 2085.79,
+    "duration": 2.0
+  },
+  {
+    "text": "So this is a majority\nvoting to some extent,",
+    "start": 2087.79,
+    "duration": 3.099
+  },
+  {
+    "text": "but from a consistency\nperspective.",
+    "start": 2090.889,
+    "duration": 3.781
+  },
+  {
+    "text": "So after self-consistency,\nthe process",
+    "start": 2094.67,
+    "duration": 4.52
+  },
+  {
+    "text": "of actually making agent\nbetter at reasoning",
+    "start": 2099.19,
+    "duration": 3.84
+  },
+  {
+    "text": "happens very, very frequently.",
+    "start": 2103.03,
+    "duration": 2.76
+  },
+  {
+    "text": "One of the very notable\nexamples is called reflection.",
+    "start": 2105.79,
+    "duration": 4.92
+  },
+  {
+    "text": "Basically, the agents\nare going to reflect",
+    "start": 2110.71,
+    "duration": 2.36
+  },
+  {
+    "text": "through natural\nlanguage feedback.",
+    "start": 2113.07,
+    "duration": 2.72
+  },
+  {
+    "text": "If you look at the left\nfigure here, so let's see.",
+    "start": 2115.79,
+    "duration": 3.28
+  },
+  {
+    "text": "We have a current\ntrajectory generated here.",
+    "start": 2119.07,
+    "duration": 2.32
+  },
+  {
+    "text": "This is the short-term\nmemory here.",
+    "start": 2121.39,
+    "duration": 2.34
+  },
+  {
+    "text": "And then you can give\nthat to an evaluator.",
+    "start": 2123.73,
+    "duration": 2.6
+  },
+  {
+    "text": "The evaluator is going to judge.",
+    "start": 2126.33,
+    "duration": 1.82
+  },
+  {
+    "text": "Is this going to be\ncorrect or incorrect?",
+    "start": 2128.15,
+    "duration": 3.3
+  },
+  {
+    "text": "And then with those\nfeedback, the agent",
+    "start": 2131.45,
+    "duration": 2.2
+  },
+  {
+    "text": "is going to do a\nself-reflection.",
+    "start": 2133.65,
+    "duration": 2.44
+  },
+  {
+    "text": "And then with those\nself-reflected content",
+    "start": 2136.09,
+    "duration": 3.28
+  },
+  {
+    "text": "together with the\nexperience, they",
+    "start": 2139.37,
+    "duration": 1.56
+  },
+  {
+    "text": "can actually change what\nthe actor is going to do",
+    "start": 2140.93,
+    "duration": 3.48
+  },
+  {
+    "text": "or going to see.",
+    "start": 2144.41,
+    "duration": 1.32
+  },
+  {
+    "text": "So this is a very\nearlier idea of lighting",
+    "start": 2145.73,
+    "duration": 3.4
+  },
+  {
+    "text": "models do self-reflect.",
+    "start": 2149.13,
+    "duration": 3.72
+  },
+  {
+    "text": "Just to show you that if\nyou look at all the steps",
+    "start": 2152.85,
+    "duration": 2.88
+  },
+  {
+    "text": "after the evaluation,\nthe reasoning, sorry,",
+    "start": 2155.73,
+    "duration": 2.98
+  },
+  {
+    "text": "the reflection is actually\nquite interesting in terms",
+    "start": 2158.71,
+    "duration": 3.06
+  },
+  {
+    "text": "of why the model\nthinks such error",
+    "start": 2161.77,
+    "duration": 3.08
+  },
+  {
+    "text": "occurred or they received this\nparticular evaluation outcome.",
+    "start": 2164.85,
+    "duration": 5.84
+  },
+  {
+    "text": "So a reflection actually\nworks pretty well.",
+    "start": 2170.69,
+    "duration": 2.92
+  },
+  {
+    "text": "I think if you reflect\non the process,",
+    "start": 2173.61,
+    "duration": 2.08
+  },
+  {
+    "text": "it actually reduce\nerrors by using",
+    "start": 2175.69,
+    "duration": 2.62
+  },
+  {
+    "text": "self-reflection to really\ndistill long field trajectories",
+    "start": 2178.31,
+    "duration": 4.4
+  },
+  {
+    "text": "into relevant\nexperience or rubrics",
+    "start": 2182.71,
+    "duration": 3.08
+  },
+  {
+    "text": "or reward signals\nthat can be used",
+    "start": 2185.79,
+    "duration": 2.84
+  },
+  {
+    "text": "as self-hints in the future.",
+    "start": 2188.63,
+    "duration": 2.6
+  },
+  {
+    "text": "So from the figure, you\ncan see that compared",
+    "start": 2191.23,
+    "duration": 3.32
+  },
+  {
+    "text": "to ReAct only with reflection,\nit's definitely doing way better",
+    "start": 2194.55,
+    "duration": 4.52
+  },
+  {
+    "text": "than the ReAct system.",
+    "start": 2199.07,
+    "duration": 2.0
+  },
+  {
+    "text": "And similarly, in terms of the--",
+    "start": 2201.07,
+    "duration": 2.68
+  },
+  {
+    "text": "I think this is the\nhallucination-- you can also",
+    "start": 2203.75,
+    "duration": 3.12
+  },
+  {
+    "text": "see that it reduced\nhallucination",
+    "start": 2206.87,
+    "duration": 1.96
+  },
+  {
+    "text": "a lot with this kind of\nself-reflection technique.",
+    "start": 2208.83,
+    "duration": 5.6
+  },
+  {
+    "text": "How is this behavior\nintroduced to the model?",
+    "start": 2214.43,
+    "duration": 2.88
+  },
+  {
+    "text": "Is it included as a\npart of the problem,",
+    "start": 2217.31,
+    "duration": 3.5
+  },
+  {
+    "text": "or there's some fine-tuning\nor training steps",
+    "start": 2220.81,
+    "duration": 2.94
+  },
+  {
+    "text": "to bring them into the weights?",
+    "start": 2223.75,
+    "duration": 1.34
+  },
+  {
+    "text": "Yes.",
+    "start": 2225.09,
+    "duration": 0.5
+  },
+  {
+    "text": "Great question.",
+    "start": 2225.59,
+    "duration": 1.62
+  },
+  {
+    "text": "So reflection and many other\nsimilar self-reflection",
+    "start": 2227.21,
+    "duration": 3.42
+  },
+  {
+    "text": "techniques does not involve\nfine-tuning or any kind",
+    "start": 2230.63,
+    "duration": 3.04
+  },
+  {
+    "text": "of gradient updates.",
+    "start": 2233.67,
+    "duration": 1.8
+  },
+  {
+    "text": "Most of them are actually\nimplemented using a prompt.",
+    "start": 2235.47,
+    "duration": 5.42
+  },
+  {
+    "text": "One minor thing I\nwant to point out",
+    "start": 2240.89,
+    "duration": 1.68
+  },
+  {
+    "text": "is that if you read\nthe reflection paper,",
+    "start": 2242.57,
+    "duration": 2.58
+  },
+  {
+    "text": "it actually keep you in\nthis word called reinforce.",
+    "start": 2245.15,
+    "duration": 2.94
+  },
+  {
+    "text": "But reinforce is\nactually not achieved",
+    "start": 2248.09,
+    "duration": 2.08
+  },
+  {
+    "text": "from a reinforcement\nlearning perspective.",
+    "start": 2250.17,
+    "duration": 1.9
+  },
+  {
+    "text": "It's only from a\nself-reflection prompt aspect.",
+    "start": 2252.07,
+    "duration": 5.34
+  },
+  {
+    "text": "In this slide that you showed\nwhere you compared ReAct",
+    "start": 2257.41,
+    "duration": 2.64
+  },
+  {
+    "text": "with Chain-of-Thought, the\nresults, hallucination was 0.",
+    "start": 2260.05,
+    "duration": 4.22
+  },
+  {
+    "text": "How is that different\nfrom reasoning?",
+    "start": 2264.27,
+    "duration": 1.96
+  },
+  {
+    "text": "If there's a reasoning error\nand which is considerably high,",
+    "start": 2266.23,
+    "duration": 3.58
+  },
+  {
+    "text": "how is hallucination 0?",
+    "start": 2269.81,
+    "duration": 1.88
+  },
+  {
+    "text": "Yeah, so there could\nbe multiple failures.",
+    "start": 2271.69,
+    "duration": 3.7
+  },
+  {
+    "text": "Sometimes you fail not\nbecause of hallucination",
+    "start": 2275.39,
+    "duration": 2.56
+  },
+  {
+    "text": "but because such label\nmay have ambiguity",
+    "start": 2277.95,
+    "duration": 3.58
+  },
+  {
+    "text": "or because you\nneed to make sense",
+    "start": 2281.53,
+    "duration": 5.84
+  },
+  {
+    "text": "from the current\ncontext, which is not",
+    "start": 2287.37,
+    "duration": 2.76
+  },
+  {
+    "text": "about getting the right tool or\ninformation or things like that,",
+    "start": 2290.13,
+    "duration": 5.8
+  },
+  {
+    "text": "but more about interpreting\nwhat has happened so far.",
+    "start": 2295.93,
+    "duration": 3.08
+  },
+  {
+    "text": "So they are slightly\ndifferent in this process.",
+    "start": 2299.01,
+    "duration": 2.9
+  },
+  {
+    "text": "So the one that you're saying\nwould be reasoning error.",
+    "start": 2301.91,
+    "duration": 2.44
+  },
+  {
+    "text": "Yes, so that would\nbe reasoning error.",
+    "start": 2304.35,
+    "duration": 1.7
+  },
+  {
+    "text": "Yeah.",
+    "start": 2306.05,
+    "duration": 0.5
+  },
+  {
+    "text": "So the main difference between\nChain-of-Thought and ReAct",
+    "start": 2309.55,
+    "duration": 3.44
+  },
+  {
+    "text": "is the fact that ReAct\nyou can act and observe",
+    "start": 2312.99,
+    "duration": 3.36
+  },
+  {
+    "text": "but is generally the\nsame reasoning strategy.",
+    "start": 2316.35,
+    "duration": 2.7
+  },
+  {
+    "text": "It's just Chain-of-Thought\nis just like prompting",
+    "start": 2319.05,
+    "duration": 2.76
+  },
+  {
+    "text": "and there's not much--",
+    "start": 2321.81,
+    "duration": 1.18
+  },
+  {
+    "text": "they can't really\n[INAUDIBLE] its work?",
+    "start": 2322.99,
+    "duration": 2.42
+  },
+  {
+    "text": "Yeah.",
+    "start": 2325.41,
+    "duration": 0.5
+  },
+  {
+    "text": "So in Chain-of-Thought,\nif you-- we",
+    "start": 2325.91,
+    "duration": 3.12
+  },
+  {
+    "text": "will do a more deep dive\ninto the reasoning modules",
+    "start": 2329.03,
+    "duration": 3.84
+  },
+  {
+    "text": "in two weeks.",
+    "start": 2332.87,
+    "duration": 1.28
+  },
+  {
+    "text": "So in Chain-of-Thought, it's\nliterally just like one prompt,",
+    "start": 2334.15,
+    "duration": 2.78
+  },
+  {
+    "text": "one pass.",
+    "start": 2336.93,
+    "duration": 1.1
+  },
+  {
+    "text": "In ReAct, you can think\nabout it as a loop.",
+    "start": 2338.03,
+    "duration": 3.4
+  },
+  {
+    "text": "So the model think,\nlook at the observation,",
+    "start": 2341.43,
+    "duration": 3.14
+  },
+  {
+    "text": "think, take action, and then\nthink, look at that observation,",
+    "start": 2344.57,
+    "duration": 4.04
+  },
+  {
+    "text": "take action.",
+    "start": 2348.61,
+    "duration": 0.6
+  },
+  {
+    "text": "So it's like a multiple step.",
+    "start": 2349.21,
+    "duration": 2.12
+  },
+  {
+    "text": "It's a loop.",
+    "start": 2351.33,
+    "duration": 0.64
+  },
+  {
+    "text": "So in this way,\nthe model actually",
+    "start": 2351.97,
+    "duration": 1.73
+  },
+  {
+    "text": "can revise its own errors\nor getting new information",
+    "start": 2353.7,
+    "duration": 4.28
+  },
+  {
+    "text": "to update themselves.",
+    "start": 2357.98,
+    "duration": 0.98
+  },
+  {
+    "text": "So this kind of\nrichness is something",
+    "start": 2358.96,
+    "duration": 1.608
+  },
+  {
+    "text": "Chain-of-Thought does not have.",
+    "start": 2360.568,
+    "duration": 1.292
+  },
+  {
+    "text": "[INAUDIBLE] that\nloop, it can decide",
+    "start": 2361.86,
+    "duration": 4.76
+  },
+  {
+    "text": "whether to think out of it?",
+    "start": 2366.62,
+    "duration": 1.52
+  },
+  {
+    "text": "Yeah.",
+    "start": 2368.14,
+    "duration": 1.92
+  },
+  {
+    "text": "OK.",
+    "start": 2370.06,
+    "duration": 0.5
+  },
+  {
+    "text": "Maybe last question.",
+    "start": 2370.56,
+    "duration": 1.08
+  },
+  {
+    "text": "Yeah?",
+    "start": 2371.64,
+    "duration": 1.62
+  },
+  {
+    "text": "Do you think the reflection\nprocess is the distillation",
+    "start": 2373.26,
+    "duration": 4.88
+  },
+  {
+    "text": "of the model itself?",
+    "start": 2378.14,
+    "duration": 2.56
+  },
+  {
+    "text": "If so, is the distillation\ngoing to cost--",
+    "start": 2380.7,
+    "duration": 3.24
+  },
+  {
+    "text": "is this a reflection of the cost\nof overfitting to its action?",
+    "start": 2383.94,
+    "duration": 6.64
+  },
+  {
+    "text": "Yeah, so one thing I want to\nclarify is that I do use the--",
+    "start": 2390.58,
+    "duration": 4.84
+  },
+  {
+    "text": "sorry, not this page.",
+    "start": 2395.42,
+    "duration": 1.22
+  },
+  {
+    "text": "I do use the word\nlike distill here,",
+    "start": 2396.64,
+    "duration": 2.16
+  },
+  {
+    "text": "but this is actually not a\nvery classic distillation",
+    "start": 2398.8,
+    "duration": 2.58
+  },
+  {
+    "text": "we are talking about.",
+    "start": 2401.38,
+    "duration": 1.24
+  },
+  {
+    "text": "Here, it's really about you\nhave a lot of trajectories",
+    "start": 2402.62,
+    "duration": 3.36
+  },
+  {
+    "text": "of what happened so far.",
+    "start": 2405.98,
+    "duration": 1.26
+  },
+  {
+    "text": "And then in general, you\nmay just rely on models",
+    "start": 2407.24,
+    "duration": 3.5
+  },
+  {
+    "text": "to interpret what\nhas happened so far",
+    "start": 2410.74,
+    "duration": 1.78
+  },
+  {
+    "text": "and then do actions\nbased on that.",
+    "start": 2412.52,
+    "duration": 2.86
+  },
+  {
+    "text": "With self-reflection, the\nmodel actually think about that",
+    "start": 2415.38,
+    "duration": 3.3
+  },
+  {
+    "text": "and then try to compress that\ninto something that's shorter.",
+    "start": 2418.68,
+    "duration": 4.06
+  },
+  {
+    "text": "So in this process, one\nword to use is distill.",
+    "start": 2422.74,
+    "duration": 4.28
+  },
+  {
+    "text": "You can also use it as\nabstract or synthesize.",
+    "start": 2427.02,
+    "duration": 3.96
+  },
+  {
+    "text": "So this is very different\nthan the classic distillation",
+    "start": 2430.98,
+    "duration": 2.94
+  },
+  {
+    "text": "technique which is more about\ngetting output from other models",
+    "start": 2433.92,
+    "duration": 4.12
+  },
+  {
+    "text": "and then do training\non top of them.",
+    "start": 2438.04,
+    "duration": 3.74
+  },
+  {
+    "text": "OK.",
+    "start": 2441.78,
+    "duration": 0.5
+  },
+  {
+    "text": "Let's continue.",
+    "start": 2442.28,
+    "duration": 1.32
+  },
+  {
+    "text": "So in addition to this kind of\nreflection, self-consistency,",
+    "start": 2443.6,
+    "duration": 4.44
+  },
+  {
+    "text": "another trend that's\nvery interesting",
+    "start": 2448.04,
+    "duration": 1.72
+  },
+  {
+    "text": "is actually around\nmulti-agent debate.",
+    "start": 2449.76,
+    "duration": 3.4
+  },
+  {
+    "text": "So earlier days,\npeople, researchers",
+    "start": 2453.16,
+    "duration": 2.68
+  },
+  {
+    "text": "used multi-agent debate to\nimprove reasoning performance.",
+    "start": 2455.84,
+    "duration": 4.28
+  },
+  {
+    "text": "And this literally\nmeans that you",
+    "start": 2460.12,
+    "duration": 2.28
+  },
+  {
+    "text": "are going to have\nmultiple agents doing",
+    "start": 2462.4,
+    "duration": 1.84
+  },
+  {
+    "text": "the same task solving.",
+    "start": 2464.24,
+    "duration": 1.84
+  },
+  {
+    "text": "And then after\neach round, you let",
+    "start": 2466.08,
+    "duration": 2.88
+  },
+  {
+    "text": "them read each other's reasoning\nand let them debate just",
+    "start": 2468.96,
+    "duration": 3.7
+  },
+  {
+    "text": "like how you talk about some\ndecisions with your teammates.",
+    "start": 2472.66,
+    "duration": 4.24
+  },
+  {
+    "text": "And then agents can\nactually really leverage",
+    "start": 2476.9,
+    "duration": 2.96
+  },
+  {
+    "text": "those diverse\nperspectives and maybe",
+    "start": 2479.86,
+    "duration": 2.44
+  },
+  {
+    "text": "make some final decision here.",
+    "start": 2482.3,
+    "duration": 3.2
+  },
+  {
+    "text": "I think this multi-agent\ntechnique in earlier days",
+    "start": 2485.5,
+    "duration": 4.32
+  },
+  {
+    "text": "is a very useful\nprompting method.",
+    "start": 2489.82,
+    "duration": 4.52
+  },
+  {
+    "text": "The assumption at that time\nis that each individual model",
+    "start": 2494.34,
+    "duration": 3.0
+  },
+  {
+    "text": "is not strong enough.",
+    "start": 2497.34,
+    "duration": 2.06
+  },
+  {
+    "text": "So we actually use this\nkind of multi-agent setup",
+    "start": 2499.4,
+    "duration": 3.66
+  },
+  {
+    "text": "as a way to prompt the model.",
+    "start": 2503.06,
+    "duration": 2.0
+  },
+  {
+    "text": "When models get\nvery powerful today,",
+    "start": 2505.06,
+    "duration": 2.6
+  },
+  {
+    "text": "if your only goal is to\nget a performance boost,",
+    "start": 2507.66,
+    "duration": 3.04
+  },
+  {
+    "text": "I think a multi-agent\nis not going",
+    "start": 2510.7,
+    "duration": 1.68
+  },
+  {
+    "text": "to help you a lot in terms\nof performance boost.",
+    "start": 2512.38,
+    "duration": 2.66
+  },
+  {
+    "text": "But maybe there are other design\nchoices or design considerations",
+    "start": 2515.04,
+    "duration": 4.26
+  },
+  {
+    "text": "that we can benefit from\nmulti-agent, such as efficiency,",
+    "start": 2519.3,
+    "duration": 4.64
+  },
+  {
+    "text": "such as data access control.",
+    "start": 2523.94,
+    "duration": 1.74
+  },
+  {
+    "text": "Maybe this agent is\nparticularly designed",
+    "start": 2525.68,
+    "duration": 2.42
+  },
+  {
+    "text": "to take care of health\ncare, and that agent",
+    "start": 2528.1,
+    "duration": 2.5
+  },
+  {
+    "text": "is designed to help you\nwith sensitive information,",
+    "start": 2530.6,
+    "duration": 3.1
+  },
+  {
+    "text": "et cetera.",
+    "start": 2533.7,
+    "duration": 2.66
+  },
+  {
+    "text": "So after multi-agent,\nanother way",
+    "start": 2536.36,
+    "duration": 2.16
+  },
+  {
+    "text": "to really improve\nthis kind of reasoning",
+    "start": 2538.52,
+    "duration": 4.28
+  },
+  {
+    "text": "is actually to\nset up many agents",
+    "start": 2542.8,
+    "duration": 2.56
+  },
+  {
+    "text": "and then use an orchestrator to\norchestrate the different agents",
+    "start": 2545.36,
+    "duration": 3.64
+  },
+  {
+    "text": "to work towards the same task.",
+    "start": 2549.0,
+    "duration": 2.68
+  },
+  {
+    "text": "So this is a very earlier\nsystem from Microsoft",
+    "start": 2551.68,
+    "duration": 2.84
+  },
+  {
+    "text": "called Magentic here.",
+    "start": 2554.52,
+    "duration": 3.52
+  },
+  {
+    "text": "Basically, if you\nhave a bigger task,",
+    "start": 2558.04,
+    "duration": 2.02
+  },
+  {
+    "text": "the orchestrator is\ngoing to break them down",
+    "start": 2560.06,
+    "duration": 1.98
+  },
+  {
+    "text": "into different components.",
+    "start": 2562.04,
+    "duration": 1.64
+  },
+  {
+    "text": "And you can see that the\nfirst part gets assigned",
+    "start": 2563.68,
+    "duration": 3.04
+  },
+  {
+    "text": "to a file server\nand then to a coder,",
+    "start": 2566.72,
+    "duration": 2.98
+  },
+  {
+    "text": "and then to a computer\nterminal, et cetera.",
+    "start": 2569.7,
+    "duration": 2.7
+  },
+  {
+    "text": "And each agent basically takes\ncare of each specific task.",
+    "start": 2572.4,
+    "duration": 3.58
+  },
+  {
+    "text": "And then in the end, you can\nactually combine all of them",
+    "start": 2575.98,
+    "duration": 3.06
+  },
+  {
+    "text": "and then provide a\nfinal answer to users.",
+    "start": 2579.04,
+    "duration": 4.4
+  },
+  {
+    "text": "So this is about planning\nand reasoning module.",
+    "start": 2583.44,
+    "duration": 3.26
+  },
+  {
+    "text": "We will go deep into this\nprocess in week 2 and 3.",
+    "start": 2586.7,
+    "duration": 4.36
+  },
+  {
+    "text": "The next component that\nI want to quickly mention",
+    "start": 2591.06,
+    "duration": 2.52
+  },
+  {
+    "text": "is around the memory here.",
+    "start": 2593.58,
+    "duration": 2.72
+  },
+  {
+    "text": "You can actually do a lot\nof very creative design",
+    "start": 2596.3,
+    "duration": 2.88
+  },
+  {
+    "text": "in terms of how we want\nto make memory work.",
+    "start": 2599.18,
+    "duration": 4.12
+  },
+  {
+    "text": "Just to briefly share\nwhy we need a memory.",
+    "start": 2603.3,
+    "duration": 5.0
+  },
+  {
+    "text": "Two reasons.",
+    "start": 2608.3,
+    "duration": 0.78
+  },
+  {
+    "text": "First is [INAUDIBLE] our context\nwindow for large language models",
+    "start": 2609.08,
+    "duration": 4.22
+  },
+  {
+    "text": "are getting bigger and bigger,\nstill context window cannot hold",
+    "start": 2613.3,
+    "duration": 4.92
+  },
+  {
+    "text": "all the event stream\nhappen so far.",
+    "start": 2618.22,
+    "duration": 3.2
+  },
+  {
+    "text": "So if you think about\nlong horizon task",
+    "start": 2621.42,
+    "duration": 2.193
+  },
+  {
+    "text": "we are talking about today\nwhere agents can actually",
+    "start": 2623.613,
+    "duration": 2.167
+  },
+  {
+    "text": "work on your project for\nmore than three hours, that's",
+    "start": 2625.78,
+    "duration": 3.92
+  },
+  {
+    "text": "actually a lot of data.",
+    "start": 2629.7,
+    "duration": 2.1
+  },
+  {
+    "text": "And it's really hard to feed\nthat into context window.",
+    "start": 2631.8,
+    "duration": 3.58
+  },
+  {
+    "text": "The second is that even\nif that's possible,",
+    "start": 2635.38,
+    "duration": 4.12
+  },
+  {
+    "text": "it may be really\nhard for the agent",
+    "start": 2639.5,
+    "duration": 2.36
+  },
+  {
+    "text": "to figure out what is a relevant\npiece of information I should",
+    "start": 2641.86,
+    "duration": 3.12
+  },
+  {
+    "text": "use.",
+    "start": 2644.98,
+    "duration": 0.72
+  },
+  {
+    "text": "Think about that if you\nhave 1,000 documents there,",
+    "start": 2645.7,
+    "duration": 2.8
+  },
+  {
+    "text": "you store them in your context.",
+    "start": 2648.5,
+    "duration": 2.42
+  },
+  {
+    "text": "And then basically\neach time, if you",
+    "start": 2650.92,
+    "duration": 2.12
+  },
+  {
+    "text": "need to find the\nright document, this",
+    "start": 2653.04,
+    "duration": 3.48
+  },
+  {
+    "text": "is actually very time-consuming\nsince you have such a big search",
+    "start": 2656.52,
+    "duration": 3.8
+  },
+  {
+    "text": "space.",
+    "start": 2660.32,
+    "duration": 1.88
+  },
+  {
+    "text": "So the bottom is actually\na very interesting design",
+    "start": 2662.2,
+    "duration": 3.2
+  },
+  {
+    "text": "from the generative agents,\nthe Smallville project,",
+    "start": 2665.4,
+    "duration": 3.72
+  },
+  {
+    "text": "where they were trying to\nbuild agents that can simulate",
+    "start": 2669.12,
+    "duration": 3.08
+  },
+  {
+    "text": "people living in a small town.",
+    "start": 2672.2,
+    "duration": 2.32
+  },
+  {
+    "text": "And then in their\ndesign, they actually",
+    "start": 2674.52,
+    "duration": 2.16
+  },
+  {
+    "text": "need to use the memory\nstream to make sure",
+    "start": 2676.68,
+    "duration": 2.28
+  },
+  {
+    "text": "that we can keep track of what\nhappened to each individual",
+    "start": 2678.96,
+    "duration": 4.36
+  },
+  {
+    "text": "so that the story can continue.",
+    "start": 2683.32,
+    "duration": 3.4
+  },
+  {
+    "text": "There are different types\nof memories you can design.",
+    "start": 2686.72,
+    "duration": 3.92
+  },
+  {
+    "text": "If you think about what\nkind of things to store,",
+    "start": 2690.64,
+    "duration": 4.08
+  },
+  {
+    "text": "episodic memory here literally\nrefers to restore everything,",
+    "start": 2694.72,
+    "duration": 4.0
+  },
+  {
+    "text": "like, raw logs, every\nsentence the agent",
+    "start": 2698.72,
+    "duration": 3.08
+  },
+  {
+    "text": "has shared with\nusers, every sentence",
+    "start": 2701.8,
+    "duration": 2.72
+  },
+  {
+    "text": "that the users have\nprovided to agents.",
+    "start": 2704.52,
+    "duration": 3.5
+  },
+  {
+    "text": "Semantic memory\nmeans that instead",
+    "start": 2708.02,
+    "duration": 2.0
+  },
+  {
+    "text": "of thinking about\nthis kind of raw logs,",
+    "start": 2710.02,
+    "duration": 3.28
+  },
+  {
+    "text": "we may want to remember\nsemantic events,",
+    "start": 2713.3,
+    "duration": 4.24
+  },
+  {
+    "text": "since those may be more useful.",
+    "start": 2717.54,
+    "duration": 2.96
+  },
+  {
+    "text": "Procedural memory,\nyou store scales.",
+    "start": 2720.5,
+    "duration": 2.84
+  },
+  {
+    "text": "Instead of all the specificity,\nyou remember, what is the scale?",
+    "start": 2723.34,
+    "duration": 5.06
+  },
+  {
+    "text": "What is the procedure of how\nwe do certain type of things?",
+    "start": 2728.4,
+    "duration": 4.02
+  },
+  {
+    "text": "So if you go deep\ninto this process,",
+    "start": 2732.42,
+    "duration": 2.76
+  },
+  {
+    "text": "this is actually an\nexample of episodic memory.",
+    "start": 2735.18,
+    "duration": 2.84
+  },
+  {
+    "text": "You can see that literally we\nare storing every single time",
+    "start": 2738.02,
+    "duration": 3.92
+  },
+  {
+    "text": "step and then what\nhappened at that time step.",
+    "start": 2741.94,
+    "duration": 4.24
+  },
+  {
+    "text": "With semantic\nmemory, we actually",
+    "start": 2746.18,
+    "duration": 2.16
+  },
+  {
+    "text": "can do some synthesis of\nwhat happened over the agent",
+    "start": 2748.34,
+    "duration": 4.12
+  },
+  {
+    "text": "trajectories.",
+    "start": 2752.46,
+    "duration": 1.14
+  },
+  {
+    "text": "And then literally you have this\na small summary box as a way",
+    "start": 2753.6,
+    "duration": 4.7
+  },
+  {
+    "text": "to remember what has happened\nin the last several minutes.",
+    "start": 2758.3,
+    "duration": 4.24
+  },
+  {
+    "text": "So this is what we mean\nby semantic memory.",
+    "start": 2762.54,
+    "duration": 4.03
+  },
+  {
+    "text": "Procedural memory, you can\nactually check out this Voyager",
+    "start": 2766.57,
+    "duration": 2.84
+  },
+  {
+    "text": "paper from NVIDIA\nwhere they were",
+    "start": 2769.41,
+    "duration": 2.52
+  },
+  {
+    "text": "trying to teach agents to play,\nI think this Minecraft here,",
+    "start": 2771.93,
+    "duration": 5.16
+  },
+  {
+    "text": "where if the agent\nfigure out how",
+    "start": 2777.09,
+    "duration": 2.16
+  },
+  {
+    "text": "to use a new skill or\nnew tool, you actually",
+    "start": 2779.25,
+    "duration": 4.32
+  },
+  {
+    "text": "want to abstract\nthat into a skill",
+    "start": 2783.57,
+    "duration": 2.04
+  },
+  {
+    "text": "and store it in\nyour skill library.",
+    "start": 2785.61,
+    "duration": 2.22
+  },
+  {
+    "text": "And then whenever you have\na new task, you want to see,",
+    "start": 2787.83,
+    "duration": 2.78
+  },
+  {
+    "text": "do I have a skill that I can\nuse from a skill library?",
+    "start": 2790.61,
+    "duration": 2.98
+  },
+  {
+    "text": "If so, then I'm going to\nretrieve it and use it.",
+    "start": 2793.59,
+    "duration": 2.96
+  },
+  {
+    "text": "So this is more from a\nprocedural perspective rather",
+    "start": 2796.55,
+    "duration": 2.46
+  },
+  {
+    "text": "than all the logs that\nhave happened so far.",
+    "start": 2799.01,
+    "duration": 5.24
+  },
+  {
+    "text": "So this is about a memory.",
+    "start": 2804.25,
+    "duration": 1.54
+  },
+  {
+    "text": "And then another very important\nthing is about the tool use",
+    "start": 2805.79,
+    "duration": 3.06
+  },
+  {
+    "text": "here.",
+    "start": 2808.85,
+    "duration": 1.72
+  },
+  {
+    "text": "So tool use, I will talk\nabout this next Wednesday.",
+    "start": 2810.57,
+    "duration": 4.32
+  },
+  {
+    "text": "But just to give you a quick\nhighlight of what this means,",
+    "start": 2814.89,
+    "duration": 4.2
+  },
+  {
+    "text": "we all know that right\nnow you can actually",
+    "start": 2819.09,
+    "duration": 2.4
+  },
+  {
+    "text": "enable agents to use different\ntypes of tools such as search,",
+    "start": 2821.49,
+    "duration": 4.72
+  },
+  {
+    "text": "such as coding agent, et cetera.",
+    "start": 2826.21,
+    "duration": 3.18
+  },
+  {
+    "text": "So in earlier days, the\ntool use is actually",
+    "start": 2829.39,
+    "duration": 3.8
+  },
+  {
+    "text": "triggered in the actual\ndecoding process.",
+    "start": 2833.19,
+    "duration": 3.4
+  },
+  {
+    "text": "So if you read the right\npart, the sentence--",
+    "start": 2836.59,
+    "duration": 4.2
+  },
+  {
+    "text": "or maybe let's just\nread the first one.",
+    "start": 2840.79,
+    "duration": 2.32
+  },
+  {
+    "text": "\"The New England Journal\nof Medicine is a registered",
+    "start": 2843.11,
+    "duration": 3.4
+  },
+  {
+    "text": "trademark of--\" So if you need\nto do some kind of information",
+    "start": 2846.51,
+    "duration": 5.0
+  },
+  {
+    "text": "generation, at this point, we\nmay want to trigger a special",
+    "start": 2851.51,
+    "duration": 5.76
+  },
+  {
+    "text": "token called a QA.",
+    "start": 2857.27,
+    "duration": 1.8
+  },
+  {
+    "text": "And then the QA literally\nis, who is the publisher",
+    "start": 2859.07,
+    "duration": 3.44
+  },
+  {
+    "text": "of this journal of medicine?",
+    "start": 2862.51,
+    "duration": 1.94
+  },
+  {
+    "text": "And then you got\nthe specific answer.",
+    "start": 2864.45,
+    "duration": 2.04
+  },
+  {
+    "text": "And then you use that answer\nin the process of generation.",
+    "start": 2866.49,
+    "duration": 4.02
+  },
+  {
+    "text": "So in other words,\nearlier when we",
+    "start": 2870.51,
+    "duration": 3.08
+  },
+  {
+    "text": "want to teach model\nhow to use tools,",
+    "start": 2873.59,
+    "duration": 2.6
+  },
+  {
+    "text": "we are actually\nlearning where to call",
+    "start": 2876.19,
+    "duration": 4.2
+  },
+  {
+    "text": "an API, when to call it,\nwhich API to call, et cetera.",
+    "start": 2880.39,
+    "duration": 5.42
+  },
+  {
+    "text": "So Toolformer was actually\nthe first ish work",
+    "start": 2885.81,
+    "duration": 3.72
+  },
+  {
+    "text": "that does this kind of\nteaching LLMs to use tools.",
+    "start": 2889.53,
+    "duration": 4.52
+  },
+  {
+    "text": "You probably can enumerate\nhow many tools they can use.",
+    "start": 2894.05,
+    "duration": 4.84
+  },
+  {
+    "text": "At that time, I think\nthere are only five tools",
+    "start": 2898.89,
+    "duration": 2.44
+  },
+  {
+    "text": "that we teach to agents.",
+    "start": 2901.33,
+    "duration": 1.68
+  },
+  {
+    "text": "Agents can use a\ncalculator here.",
+    "start": 2903.01,
+    "duration": 2.4
+  },
+  {
+    "text": "They can use a question\nanswering system.",
+    "start": 2905.41,
+    "duration": 2.3
+  },
+  {
+    "text": "They can use search engine.",
+    "start": 2907.71,
+    "duration": 1.16
+  },
+  {
+    "text": "They can use a\ntranslation system.",
+    "start": 2908.87,
+    "duration": 1.76
+  },
+  {
+    "text": "They can use calendar.",
+    "start": 2910.63,
+    "duration": 1.8
+  },
+  {
+    "text": "So that's a very\nlimited set of tools.",
+    "start": 2912.43,
+    "duration": 3.34
+  },
+  {
+    "text": "Today, I think our\nagents can actually",
+    "start": 2915.77,
+    "duration": 2.64
+  },
+  {
+    "text": "use a wide range of\ntools, but they actually",
+    "start": 2918.41,
+    "duration": 2.76
+  },
+  {
+    "text": "all get inspired on top\nof setups like this.",
+    "start": 2921.17,
+    "duration": 5.44
+  },
+  {
+    "text": "More recently,\nGORILLA from Berkeley",
+    "start": 2926.61,
+    "duration": 3.52
+  },
+  {
+    "text": "actually tried to teach LLMs\nto use solvents of APIs.",
+    "start": 2930.13,
+    "duration": 5.64
+  },
+  {
+    "text": "So what they did is that they\nactually look at Hugging Face,",
+    "start": 2935.77,
+    "duration": 4.66
+  },
+  {
+    "text": "Torch Hub, and also\nTensorFlow Hub,",
+    "start": 2940.43,
+    "duration": 2.6
+  },
+  {
+    "text": "where there are over 1,600 APIs.",
+    "start": 2943.03,
+    "duration": 3.8
+  },
+  {
+    "text": "And then they basically generate\nthe synthetic data from that",
+    "start": 2946.83,
+    "duration": 3.2
+  },
+  {
+    "text": "and then trained a 7 billion\nparameter model on top of that.",
+    "start": 2950.03,
+    "duration": 5.0
+  },
+  {
+    "text": "At the inference time, if\nwe look at this example,",
+    "start": 2955.03,
+    "duration": 2.9
+  },
+  {
+    "text": "if the user says that\nI want to see some cats",
+    "start": 2957.93,
+    "duration": 3.46
+  },
+  {
+    "text": "dancing in celebration,\nthen you are",
+    "start": 2961.39,
+    "duration": 3.4
+  },
+  {
+    "text": "going to do a retrieval here.",
+    "start": 2964.79,
+    "duration": 1.66
+  },
+  {
+    "text": "Probably you are going to\nuse a Stable Diffusion.",
+    "start": 2966.45,
+    "duration": 2.48
+  },
+  {
+    "text": "And then you get\nthis image out here.",
+    "start": 2968.93,
+    "duration": 3.3
+  },
+  {
+    "text": "Otherwise, if you\nthink about this,",
+    "start": 2972.23,
+    "duration": 2.8
+  },
+  {
+    "text": "the base model needs\nto have the capability",
+    "start": 2975.03,
+    "duration": 2.36
+  },
+  {
+    "text": "to understand this and then\ngive this kind of output",
+    "start": 2977.39,
+    "duration": 3.08
+  },
+  {
+    "text": "of the image.",
+    "start": 2980.47,
+    "duration": 1.02
+  },
+  {
+    "text": "But now we can\nactually delegate that",
+    "start": 2981.49,
+    "duration": 1.98
+  },
+  {
+    "text": "to an external tool such\nas Stable Diffusion.",
+    "start": 2983.47,
+    "duration": 3.38
+  },
+  {
+    "text": "Then we can get the task\ndone without requiring",
+    "start": 2986.85,
+    "duration": 2.94
+  },
+  {
+    "text": "the underneath model to even do\nthis kind of image generation.",
+    "start": 2989.79,
+    "duration": 6.4
+  },
+  {
+    "text": "With GORILLA, I think the\nresults are quite impressive.",
+    "start": 2996.19,
+    "duration": 3.32
+  },
+  {
+    "text": "So if you look at the\nreduction to hallucination,",
+    "start": 2999.51,
+    "duration": 3.3
+  },
+  {
+    "text": "it's actually pretty good,\nvery few hallucinations",
+    "start": 3002.81,
+    "duration": 3.96
+  },
+  {
+    "text": "and pretty high accuracy.",
+    "start": 3006.77,
+    "duration": 2.56
+  },
+  {
+    "text": "I think this\nactually makes sense",
+    "start": 3009.33,
+    "duration": 1.68
+  },
+  {
+    "text": "because without so many\ntools use or understanding,",
+    "start": 3011.01,
+    "duration": 4.14
+  },
+  {
+    "text": "you actually have to rely\non the model themselves",
+    "start": 3015.15,
+    "duration": 3.5
+  },
+  {
+    "text": "to do this task.",
+    "start": 3018.65,
+    "duration": 1.18
+  },
+  {
+    "text": "But now you can actually do\nmore factual and reasonable",
+    "start": 3019.83,
+    "duration": 4.14
+  },
+  {
+    "text": "generation.",
+    "start": 3023.97,
+    "duration": 2.0
+  },
+  {
+    "text": "So this is around the tool use.",
+    "start": 3025.97,
+    "duration": 1.7
+  },
+  {
+    "text": "I will go deep into\nthat next Wednesday.",
+    "start": 3027.67,
+    "duration": 3.46
+  },
+  {
+    "text": "So if you put\neverything together,",
+    "start": 3031.13,
+    "duration": 2.16
+  },
+  {
+    "text": "this is actually the skeleton\nof an agent, LLM Core",
+    "start": 3033.29,
+    "duration": 3.76
+  },
+  {
+    "text": "that a reason and a plan.",
+    "start": 3037.05,
+    "duration": 1.88
+  },
+  {
+    "text": "The memory actually\ncarries states",
+    "start": 3038.93,
+    "duration": 2.64
+  },
+  {
+    "text": "across steps and different task.",
+    "start": 3041.57,
+    "duration": 2.88
+  },
+  {
+    "text": "Tools to reach out to diverse\nAPIs, available tools we have,",
+    "start": 3044.45,
+    "duration": 5.58
+  },
+  {
+    "text": "and also an environment that\nagents can actually take actions",
+    "start": 3050.03,
+    "duration": 3.46
+  },
+  {
+    "text": "and observe states from.",
+    "start": 3053.49,
+    "duration": 3.08
+  },
+  {
+    "text": "So every agent you\nare going to build,",
+    "start": 3056.57,
+    "duration": 2.78
+  },
+  {
+    "text": "whether it's going to write\ncode or browse the web",
+    "start": 3059.35,
+    "duration": 2.76
+  },
+  {
+    "text": "or run the terminal, it's some\nkind of version of this diagram.",
+    "start": 3062.11,
+    "duration": 4.44
+  },
+  {
+    "text": "And what differs is actually\nhow each box is implemented",
+    "start": 3066.55,
+    "duration": 4.44
+  },
+  {
+    "text": "and how well the\npieces fit together.",
+    "start": 3070.99,
+    "duration": 2.78
+  },
+  {
+    "text": "So that's going to be a\nlot of the key aspects we",
+    "start": 3073.77,
+    "duration": 3.18
+  },
+  {
+    "text": "are going to cover later.",
+    "start": 3076.95,
+    "duration": 3.64
+  },
+  {
+    "text": "Any quick questions\nuntil this point?",
+    "start": 3080.59,
+    "duration": 4.56
+  },
+  {
+    "text": "How does anyone\nknow what memory is?",
+    "start": 3085.15,
+    "duration": 3.44
+  },
+  {
+    "text": "So this is actually related\nto the memory design.",
+    "start": 3088.59,
+    "duration": 4.8
+  },
+  {
+    "text": "If you just think about how\nto design memory systems,",
+    "start": 3093.39,
+    "duration": 4.08
+  },
+  {
+    "text": "instead of letting them to\ndecide what to memorize,",
+    "start": 3097.47,
+    "duration": 4.5
+  },
+  {
+    "text": "the episodic memory\nliterally just",
+    "start": 3101.97,
+    "duration": 1.58
+  },
+  {
+    "text": "tells them to\nremember everything.",
+    "start": 3103.55,
+    "duration": 2.36
+  },
+  {
+    "text": "So everything happened so far.",
+    "start": 3105.91,
+    "duration": 1.74
+  },
+  {
+    "text": "So this is more from a\nheuristic perspective.",
+    "start": 3107.65,
+    "duration": 2.34
+  },
+  {
+    "text": "And semantic\nmemory, you may need",
+    "start": 3109.99,
+    "duration": 1.84
+  },
+  {
+    "text": "to have some separate module\nto teach them that instead",
+    "start": 3111.83,
+    "duration": 5.86
+  },
+  {
+    "text": "of remember everything,\nyou may want",
+    "start": 3117.69,
+    "duration": 1.96
+  },
+  {
+    "text": "to remember important\ninformation.",
+    "start": 3119.65,
+    "duration": 2.278
+  },
+  {
+    "text": "Then you can actually give\ndemonstrations of what",
+    "start": 3121.928,
+    "duration": 2.042
+  },
+  {
+    "text": "is important information.",
+    "start": 3123.97,
+    "duration": 2.02
+  },
+  {
+    "text": "What is the format you want?",
+    "start": 3125.99,
+    "duration": 1.24
+  },
+  {
+    "text": "What is the format you want\nto even store in your memory?",
+    "start": 3127.23,
+    "duration": 4.24
+  },
+  {
+    "text": "So those are the\ndesign choices we are",
+    "start": 3131.47,
+    "duration": 1.78
+  },
+  {
+    "text": "going to bring to the process.",
+    "start": 3133.25,
+    "duration": 2.76
+  },
+  {
+    "text": "This is also a\nplace where things",
+    "start": 3136.01,
+    "duration": 1.96
+  },
+  {
+    "text": "can get a little bit tricky.",
+    "start": 3137.97,
+    "duration": 2.52
+  },
+  {
+    "text": "There was this example I\nthink-- do I have it today?",
+    "start": 3140.49,
+    "duration": 4.08
+  },
+  {
+    "text": "I don't have it on\nmy slides today,",
+    "start": 3144.57,
+    "duration": 1.78
+  },
+  {
+    "text": "but earlier this\nyear, some people",
+    "start": 3146.35,
+    "duration": 2.94
+  },
+  {
+    "text": "are using OpenCloud\nto manage their email.",
+    "start": 3149.29,
+    "duration": 3.52
+  },
+  {
+    "text": "And then all of a sudden,\nOpenCloud actually started",
+    "start": 3152.81,
+    "duration": 2.64
+  },
+  {
+    "text": "to delete this user's email.",
+    "start": 3155.45,
+    "duration": 2.4
+  },
+  {
+    "text": "Despite the user says\nplease stop, please",
+    "start": 3157.85,
+    "duration": 2.4
+  },
+  {
+    "text": "do not delete my email,\nit is still continuous.",
+    "start": 3160.25,
+    "duration": 4.2
+  },
+  {
+    "text": "The user actually specified\nin the very beginning",
+    "start": 3164.45,
+    "duration": 2.48
+  },
+  {
+    "text": "that whenever you do such\nactions, please confirm with me.",
+    "start": 3166.93,
+    "duration": 3.9
+  },
+  {
+    "text": "But then it's just\nlike so interesting,",
+    "start": 3170.83,
+    "duration": 1.8
+  },
+  {
+    "text": "like OK, why it happens and when\nthe model actually is not even",
+    "start": 3172.63,
+    "duration": 3.85
+  },
+  {
+    "text": "listening to instructions.",
+    "start": 3176.48,
+    "duration": 1.64
+  },
+  {
+    "text": "It turns out that\nthis is actually",
+    "start": 3178.12,
+    "duration": 1.76
+  },
+  {
+    "text": "a failure in the context\nmemory compression stage,",
+    "start": 3179.88,
+    "duration": 3.48
+  },
+  {
+    "text": "because you want to\nmake sure the memory is",
+    "start": 3183.36,
+    "duration": 2.2
+  },
+  {
+    "text": "stored in a very efficient way.",
+    "start": 3185.56,
+    "duration": 1.66
+  },
+  {
+    "text": "So you let the model decided\nto just keep track of all",
+    "start": 3187.22,
+    "duration": 3.3
+  },
+  {
+    "text": "the important information.",
+    "start": 3190.52,
+    "duration": 2.28
+  },
+  {
+    "text": "Confirm before you do action\nis not perceived as important",
+    "start": 3192.8,
+    "duration": 4.44
+  },
+  {
+    "text": "from the agent perspective.",
+    "start": 3197.24,
+    "duration": 1.68
+  },
+  {
+    "text": "So this actually leads to a\nlot of the email deletion.",
+    "start": 3198.92,
+    "duration": 2.86
+  },
+  {
+    "text": "So I think this is a\nvery good question.",
+    "start": 3201.78,
+    "duration": 2.64
+  },
+  {
+    "text": "It's going to be a very\ncritical design of how",
+    "start": 3204.42,
+    "duration": 2.1
+  },
+  {
+    "text": "we make sure the\nmemory is faithful",
+    "start": 3206.52,
+    "duration": 2.64
+  },
+  {
+    "text": "and also can enable very\nreasonable inductions.",
+    "start": 3209.16,
+    "duration": 5.68
+  },
+  {
+    "text": "OK.",
+    "start": 3214.84,
+    "duration": 2.655
+  },
+  {
+    "text": "If there is no more\nquestion, we will continue.",
+    "start": 3217.495,
+    "duration": 4.265
+  },
+  {
+    "text": "So next, I want to talk\nabout compound AI systems.",
+    "start": 3221.76,
+    "duration": 4.4
+  },
+  {
+    "text": "We just put together\ndifferent pieces.",
+    "start": 3226.16,
+    "duration": 2.68
+  },
+  {
+    "text": "But now if you think about\nthis, how real products actually",
+    "start": 3228.84,
+    "duration": 5.66
+  },
+  {
+    "text": "combine with other\ncomponents, this",
+    "start": 3234.5,
+    "duration": 3.92
+  },
+  {
+    "text": "is what we call\ncomponent AI systems.",
+    "start": 3238.42,
+    "duration": 1.78
+  },
+  {
+    "text": "I'm going to briefly talk\nabout different modules here,",
+    "start": 3240.2,
+    "duration": 3.04
+  },
+  {
+    "text": "but we have specific\nlectures to go deep there.",
+    "start": 3243.24,
+    "duration": 4.22
+  },
+  {
+    "text": "I think one thing\npeople often get",
+    "start": 3247.46,
+    "duration": 3.76
+  },
+  {
+    "text": "overwhelmed is that when\nwe think about agents,",
+    "start": 3251.22,
+    "duration": 2.62
+  },
+  {
+    "text": "there seems to be a lot\nof components happening.",
+    "start": 3253.84,
+    "duration": 2.64
+  },
+  {
+    "text": "There are LLM core.",
+    "start": 3256.48,
+    "duration": 1.42
+  },
+  {
+    "text": "There are plenty memory to\nuse, environment, et cetera.",
+    "start": 3257.9,
+    "duration": 3.76
+  },
+  {
+    "text": "And to keep all of\nthose manageable,",
+    "start": 3261.66,
+    "duration": 3.72
+  },
+  {
+    "text": "it helps to think\nabout engineering",
+    "start": 3265.38,
+    "duration": 2.88
+  },
+  {
+    "text": "as some more principled\nways of understanding.",
+    "start": 3268.26,
+    "duration": 3.92
+  },
+  {
+    "text": "So we are going to divide\nthis into three layers.",
+    "start": 3272.18,
+    "duration": 3.02
+  },
+  {
+    "text": "And our course is also\nset up in similar order.",
+    "start": 3275.2,
+    "duration": 4.3
+  },
+  {
+    "text": "First, I think this\nis the system layer.",
+    "start": 3279.5,
+    "duration": 2.22
+  },
+  {
+    "text": "This is the architecture\nwhich components agent has",
+    "start": 3281.72,
+    "duration": 3.3
+  },
+  {
+    "text": "and how they connect.",
+    "start": 3285.02,
+    "duration": 2.0
+  },
+  {
+    "text": "This is just everything\nthat I have covered so far.",
+    "start": 3287.02,
+    "duration": 2.88
+  },
+  {
+    "text": "The second layer is the data.",
+    "start": 3289.9,
+    "duration": 2.44
+  },
+  {
+    "text": "That's how the agent actually\nlearns from or is prompt with.",
+    "start": 3292.34,
+    "duration": 4.46
+  },
+  {
+    "text": "Here you will have training\nexamples to train agent,",
+    "start": 3296.8,
+    "duration": 3.34
+  },
+  {
+    "text": "such as what we will cover\nin Swiss miss, demonstration",
+    "start": 3300.14,
+    "duration": 4.18
+  },
+  {
+    "text": "of the task, or maybe just\nthe context we give to agents.",
+    "start": 3304.32,
+    "duration": 4.8
+  },
+  {
+    "text": "The third layer here\nis the evaluation.",
+    "start": 3309.12,
+    "duration": 2.42
+  },
+  {
+    "text": "That's how we actually evaluate\nwhether the agent actually",
+    "start": 3311.54,
+    "duration": 3.46
+  },
+  {
+    "text": "works and also includes\nthe metric itself.",
+    "start": 3315.0,
+    "duration": 4.28
+  },
+  {
+    "text": "Choosing the wrong metric can\nmake a weak agent look nice.",
+    "start": 3319.28,
+    "duration": 5.2
+  },
+  {
+    "text": "So the metric actually\ndeserves a lot of care",
+    "start": 3324.48,
+    "duration": 2.94
+  },
+  {
+    "text": "when we think about this.",
+    "start": 3327.42,
+    "duration": 1.82
+  },
+  {
+    "text": "So most of what we are going\nto cover in this course",
+    "start": 3329.24,
+    "duration": 2.56
+  },
+  {
+    "text": "will be mapped into\nthose three layers.",
+    "start": 3331.8,
+    "duration": 2.48
+  },
+  {
+    "text": "And when an agent\nis not doing well",
+    "start": 3334.28,
+    "duration": 3.64
+  },
+  {
+    "text": "or your agent is not\nworking as expected,",
+    "start": 3337.92,
+    "duration": 2.98
+  },
+  {
+    "text": "I think a good first question to\nask is which layer the problem",
+    "start": 3340.9,
+    "duration": 4.38
+  },
+  {
+    "text": "may occur.",
+    "start": 3345.28,
+    "duration": 0.96
+  },
+  {
+    "text": "Is it in the system?",
+    "start": 3346.24,
+    "duration": 1.22
+  },
+  {
+    "text": "Is it in the data, or\nis it in the evaluation?",
+    "start": 3347.46,
+    "duration": 2.4
+  },
+  {
+    "text": "This is also a guiding\nprinciple for us",
+    "start": 3349.86,
+    "duration": 2.08
+  },
+  {
+    "text": "to debug how to make\nthe agents better.",
+    "start": 3351.94,
+    "duration": 3.36
+  },
+  {
+    "text": "So let's just quickly go\nthrough the system layer here.",
+    "start": 3355.3,
+    "duration": 5.0
+  },
+  {
+    "text": "A key design choice\nat the system layer",
+    "start": 3360.3,
+    "duration": 2.6
+  },
+  {
+    "text": "is who decides the steps.",
+    "start": 3362.9,
+    "duration": 2.8
+  },
+  {
+    "text": "Who decides like memories,\nthings like that.",
+    "start": 3365.7,
+    "duration": 2.62
+  },
+  {
+    "text": "Is that going to be\nthe agents, or is it",
+    "start": 3368.32,
+    "duration": 3.9
+  },
+  {
+    "text": "going to be something else?",
+    "start": 3372.22,
+    "duration": 1.88
+  },
+  {
+    "text": "And I want to make this\ndifferentiation here of workflow",
+    "start": 3374.1,
+    "duration": 3.72
+  },
+  {
+    "text": "versus agents.",
+    "start": 3377.82,
+    "duration": 1.84
+  },
+  {
+    "text": "Both are what people refer\nto as compound AI systems.",
+    "start": 3379.66,
+    "duration": 4.66
+  },
+  {
+    "text": "That is a large model\nplus other components.",
+    "start": 3384.32,
+    "duration": 3.38
+  },
+  {
+    "text": "You may encounter those two\nterms in different contexts.",
+    "start": 3387.7,
+    "duration": 3.24
+  },
+  {
+    "text": "So here, a workflow is going\nto be maybe like it's just",
+    "start": 3390.94,
+    "duration": 5.56
+  },
+  {
+    "text": "going to fix certain steps.",
+    "start": 3396.5,
+    "duration": 2.64
+  },
+  {
+    "text": "Examples such as\nagent lists which",
+    "start": 3399.14,
+    "duration": 2.56
+  },
+  {
+    "text": "fix a GitHub issue in a\nvery fixed set of stage,",
+    "start": 3401.7,
+    "duration": 4.26
+  },
+  {
+    "text": "like finding the file,\nwriting patch and doing",
+    "start": 3405.96,
+    "duration": 4.28
+  },
+  {
+    "text": "tests, et cetera.",
+    "start": 3410.24,
+    "duration": 1.44
+  },
+  {
+    "text": "So the large language model\nworks inside each stage,",
+    "start": 3411.68,
+    "duration": 2.9
+  },
+  {
+    "text": "but they never\npick the next one.",
+    "start": 3414.58,
+    "duration": 2.12
+  },
+  {
+    "text": "So it's actually a script.",
+    "start": 3416.7,
+    "duration": 1.96
+  },
+  {
+    "text": "It's like a fixed order\nof how they do stuff.",
+    "start": 3418.66,
+    "duration": 3.22
+  },
+  {
+    "text": "In the agent side\nteam, the larger model",
+    "start": 3421.88,
+    "duration": 2.44
+  },
+  {
+    "text": "they set for itself.",
+    "start": 3424.32,
+    "duration": 2.08
+  },
+  {
+    "text": "For example, in three\nagent, it actually",
+    "start": 3426.4,
+    "duration": 2.32
+  },
+  {
+    "text": "choose which files to open,\nwhat to run, and when it's done.",
+    "start": 3428.72,
+    "duration": 4.88
+  },
+  {
+    "text": "So you can see that it's\nactually more flexible.",
+    "start": 3433.6,
+    "duration": 2.44
+  },
+  {
+    "text": "It also gives more\nresponsibility",
+    "start": 3436.04,
+    "duration": 2.64
+  },
+  {
+    "text": "to the model underneath it.",
+    "start": 3438.68,
+    "duration": 3.6
+  },
+  {
+    "text": "So workflow-- now if I just\nstop here, you probably",
+    "start": 3442.28,
+    "duration": 3.76
+  },
+  {
+    "text": "think about, OK, then why do\nwe even need a workflow here?",
+    "start": 3446.04,
+    "duration": 4.6
+  },
+  {
+    "text": "So I want to just\nshare one example here",
+    "start": 3450.64,
+    "duration": 2.54
+  },
+  {
+    "text": "that is workflow agents,\nsorry workflow system",
+    "start": 3453.18,
+    "duration": 3.9
+  },
+  {
+    "text": "can actually be\nvery, very strong.",
+    "start": 3457.08,
+    "duration": 2.16
+  },
+  {
+    "text": "So on my screen, this\nis actually AlphaCode2.",
+    "start": 3459.24,
+    "duration": 3.6
+  },
+  {
+    "text": "It actually generates up to\nmillions of candidate programs",
+    "start": 3462.84,
+    "duration": 3.96
+  },
+  {
+    "text": "and then test and rank them.",
+    "start": 3466.8,
+    "duration": 1.88
+  },
+  {
+    "text": "And then it reached almost\nlike 87% of human competitors.",
+    "start": 3468.68,
+    "duration": 7.22
+  },
+  {
+    "text": "And this is a huge\njump from AlphaCode1.",
+    "start": 3475.9,
+    "duration": 4.64
+  },
+  {
+    "text": "The next common\nworkflow pattern I think",
+    "start": 3480.54,
+    "duration": 3.48
+  },
+  {
+    "text": "has been widely used\nin industry in the past",
+    "start": 3484.02,
+    "duration": 3.02
+  },
+  {
+    "text": "is called the Retrieval\nAugmented Generation, RAG.",
+    "start": 3487.04,
+    "duration": 3.86
+  },
+  {
+    "text": "This has a lot of things to do\nwith open question answering.",
+    "start": 3490.9,
+    "duration": 5.4
+  },
+  {
+    "text": "Basically, RAG\nconnects large models",
+    "start": 3496.3,
+    "duration": 2.36
+  },
+  {
+    "text": "to external knowledge\nstores in real time.",
+    "start": 3498.66,
+    "duration": 2.84
+  },
+  {
+    "text": "So if you have a specific query\nthat may rely on the weather API",
+    "start": 3501.5,
+    "duration": 5.0
+  },
+  {
+    "text": "or weather website,\nthen you go there,",
+    "start": 3506.5,
+    "duration": 2.84
+  },
+  {
+    "text": "read the related\ncontent, use that",
+    "start": 3509.34,
+    "duration": 2.64
+  },
+  {
+    "text": "to augment your current\nquery as context.",
+    "start": 3511.98,
+    "duration": 4.0
+  },
+  {
+    "text": "And then on top of\nthat, do generation",
+    "start": 3515.98,
+    "duration": 2.44
+  },
+  {
+    "text": "to give users more factual\nand consistent answers.",
+    "start": 3518.42,
+    "duration": 6.56
+  },
+  {
+    "text": "What actually happens\nin a single tool call?",
+    "start": 3524.98,
+    "duration": 3.16
+  },
+  {
+    "text": "I mean, previously I mentioned\nabout the algorithms.",
+    "start": 3528.14,
+    "duration": 4.34
+  },
+  {
+    "text": "If you think about\nwhat actually happens",
+    "start": 3532.48,
+    "duration": 2.0
+  },
+  {
+    "text": "from a system perspective, there\nare actually multiple stages.",
+    "start": 3534.48,
+    "duration": 4.2
+  },
+  {
+    "text": "First, the model\nneeds to select a tool",
+    "start": 3538.68,
+    "duration": 2.28
+  },
+  {
+    "text": "from the schemas it has from\nthe context and then arguments.",
+    "start": 3540.96,
+    "duration": 4.86
+  },
+  {
+    "text": "It needs to fill in all the\ntext fields from the task.",
+    "start": 3545.82,
+    "duration": 4.86
+  },
+  {
+    "text": "Validator means\nthat those arguments",
+    "start": 3550.68,
+    "duration": 2.08
+  },
+  {
+    "text": "need to be checked\nagainst the schema.",
+    "start": 3552.76,
+    "duration": 2.52
+  },
+  {
+    "text": "Sometimes there may be\nenforcement with constraint",
+    "start": 3555.28,
+    "duration": 2.8
+  },
+  {
+    "text": "decoding so that the model\nactually cannot produce",
+    "start": 3558.08,
+    "duration": 3.24
+  },
+  {
+    "text": "an ill-formed call here.",
+    "start": 3561.32,
+    "duration": 2.52
+  },
+  {
+    "text": "Final step is execution\nto gather round and then",
+    "start": 3563.84,
+    "duration": 4.2
+  },
+  {
+    "text": "usually in a sandbox.",
+    "start": 3568.04,
+    "duration": 1.76
+  },
+  {
+    "text": "We'll go to the sandbox\nin a few minutes.",
+    "start": 3569.8,
+    "duration": 2.58
+  },
+  {
+    "text": "And then the results\ngo back to the context.",
+    "start": 3572.38,
+    "duration": 2.62
+  },
+  {
+    "text": "And then the example\nin the bottom",
+    "start": 3575.0,
+    "duration": 2.24
+  },
+  {
+    "text": "actually shows you a\nspecific tool call.",
+    "start": 3577.24,
+    "duration": 2.54
+  },
+  {
+    "text": "So if the user question is,\nwhat does test.py contain?",
+    "start": 3579.78,
+    "duration": 4.66
+  },
+  {
+    "text": "And you can see that the model\nactually read file, and then",
+    "start": 3584.44,
+    "duration": 3.99
+  },
+  {
+    "text": "fill in the path information,\nand then the path",
+    "start": 3588.43,
+    "duration": 3.08
+  },
+  {
+    "text": "is checked as a string.",
+    "start": 3591.51,
+    "duration": 1.88
+  },
+  {
+    "text": "And then the file contents\nactually come back",
+    "start": 3593.39,
+    "duration": 2.32
+  },
+  {
+    "text": "from the model\nfor users to read.",
+    "start": 3595.71,
+    "duration": 2.3
+  },
+  {
+    "text": "So this is actually what's\nhappening from an execution",
+    "start": 3598.01,
+    "duration": 2.9
+  },
+  {
+    "text": "perspective.",
+    "start": 3600.91,
+    "duration": 2.68
+  },
+  {
+    "text": "I think the reality is that\nif every AI application had",
+    "start": 3603.59,
+    "duration": 4.28
+  },
+  {
+    "text": "to write a very custom\nintegrations for every tool,",
+    "start": 3607.87,
+    "duration": 3.4
+  },
+  {
+    "text": "then nothing will\nreally scale up.",
+    "start": 3611.27,
+    "duration": 3.16
+  },
+  {
+    "text": "The Model Context Protocol, MCP,\nis actually a standard protocol",
+    "start": 3614.43,
+    "duration": 4.56
+  },
+  {
+    "text": "to make sure such\nconnection can happen.",
+    "start": 3618.99,
+    "duration": 3.56
+  },
+  {
+    "text": "So on the left side, you can\nsee that we have different AI",
+    "start": 3622.55,
+    "duration": 2.84
+  },
+  {
+    "text": "applications such as Claude\nDesktop, IDE, and code",
+    "start": 3625.39,
+    "duration": 5.6
+  },
+  {
+    "text": "editor such as Claude Code.",
+    "start": 3630.99,
+    "duration": 2.56
+  },
+  {
+    "text": "On the right, those are\ndifferent data sources",
+    "start": 3633.55,
+    "duration": 2.64
+  },
+  {
+    "text": "and tools, database such as SQL,\nGoogle Drive; deployment tools,",
+    "start": 3636.19,
+    "duration": 6.38
+  },
+  {
+    "text": "or even like productivity tools\nsuch as Slack, Google Maps, et",
+    "start": 3642.57,
+    "duration": 3.28
+  },
+  {
+    "text": "cetera.",
+    "start": 3645.85,
+    "duration": 0.8
+  },
+  {
+    "text": "So MCP sits in the middle\nas a standard protocol",
+    "start": 3646.65,
+    "duration": 4.28
+  },
+  {
+    "text": "with data flowing\nin both directions.",
+    "start": 3650.93,
+    "duration": 3.68
+  },
+  {
+    "text": "You can then think\nabout how to build",
+    "start": 3654.61,
+    "duration": 1.88
+  },
+  {
+    "text": "a tool once MCP server and\nany MCP client can be set up",
+    "start": 3656.49,
+    "duration": 6.24
+  },
+  {
+    "text": "and use it.",
+    "start": 3662.73,
+    "duration": 1.32
+  },
+  {
+    "text": "We will go back to\nthis next class.",
+    "start": 3664.05,
+    "duration": 4.12
+  },
+  {
+    "text": "So in the next five\nminutes, I'm going",
+    "start": 3668.17,
+    "duration": 2.4
+  },
+  {
+    "text": "to quickly mention\nabout the key challenges",
+    "start": 3670.57,
+    "duration": 2.16
+  },
+  {
+    "text": "here, just to share with you\nthat despite the agent being",
+    "start": 3672.73,
+    "duration": 4.12
+  },
+  {
+    "text": "very impressive,\nI think they also",
+    "start": 3676.85,
+    "duration": 2.52
+  },
+  {
+    "text": "create a lot of\nemerging challenges",
+    "start": 3679.37,
+    "duration": 3.4
+  },
+  {
+    "text": "for us to be aware of.",
+    "start": 3682.77,
+    "duration": 2.88
+  },
+  {
+    "text": "So to give you a\nvery quick overview",
+    "start": 3685.65,
+    "duration": 2.24
+  },
+  {
+    "text": "of what we are going\nto cover, reliability.",
+    "start": 3687.89,
+    "duration": 3.4
+  },
+  {
+    "text": "If you build agents,\nyou know that there",
+    "start": 3691.29,
+    "duration": 3.2
+  },
+  {
+    "text": "is going to be a lot of\nerror compound cascade.",
+    "start": 3694.49,
+    "duration": 4.52
+  },
+  {
+    "text": "To train agents,\nthe reward signal",
+    "start": 3699.01,
+    "duration": 2.4
+  },
+  {
+    "text": "sometimes can be very sparse.",
+    "start": 3701.41,
+    "duration": 2.04
+  },
+  {
+    "text": "It's usually like a\nlong horizon task.",
+    "start": 3703.45,
+    "duration": 2.38
+  },
+  {
+    "text": "Very, very expensive\nto do rollout.",
+    "start": 3705.83,
+    "duration": 3.08
+  },
+  {
+    "text": "The long-horizon\nalso gave us a lot",
+    "start": 3708.91,
+    "duration": 2.04
+  },
+  {
+    "text": "of challenge in terms\nof context increase.",
+    "start": 3710.95,
+    "duration": 3.92
+  },
+  {
+    "text": "Safety is a big topic.",
+    "start": 3714.87,
+    "duration": 1.7
+  },
+  {
+    "text": "Also, evaluation\nis very, very hard.",
+    "start": 3716.57,
+    "duration": 2.12
+  },
+  {
+    "text": "It's probably like I think it's\none of the undervalued aspect",
+    "start": 3718.69,
+    "duration": 3.54
+  },
+  {
+    "text": "when we think about agents.",
+    "start": 3722.23,
+    "duration": 2.4
+  },
+  {
+    "text": "I want to give you a\nfew quick examples.",
+    "start": 3724.63,
+    "duration": 2.24
+  },
+  {
+    "text": "So reliability\nversus evaluation.",
+    "start": 3726.87,
+    "duration": 3.16
+  },
+  {
+    "text": "This is actually an\neffort from Princeton.",
+    "start": 3730.03,
+    "duration": 2.88
+  },
+  {
+    "text": "They were really\ntrying to understand",
+    "start": 3732.91,
+    "duration": 2.04
+  },
+  {
+    "text": "that is the accuracy in the\nperformance we are seeing,",
+    "start": 3734.95,
+    "duration": 4.08
+  },
+  {
+    "text": "a truthful reflection\nof what's happening.",
+    "start": 3739.03,
+    "duration": 2.72
+  },
+  {
+    "text": "And they find the three\ndimensions such as consistency.",
+    "start": 3741.75,
+    "duration": 3.12
+  },
+  {
+    "text": "If you let the agent\nrun multiple times,",
+    "start": 3744.87,
+    "duration": 3.14
+  },
+  {
+    "text": "do they give you\nthe same outcome?",
+    "start": 3748.01,
+    "duration": 2.3
+  },
+  {
+    "text": "Robustness.",
+    "start": 3750.31,
+    "duration": 1.0
+  },
+  {
+    "text": "What if we add a little\nbit of perturbation?",
+    "start": 3751.31,
+    "duration": 2.26
+  },
+  {
+    "text": "How do agents actually respond\nto those small, realistic",
+    "start": 3753.57,
+    "duration": 3.82
+  },
+  {
+    "text": "and even irrelevant information?",
+    "start": 3757.39,
+    "duration": 2.8
+  },
+  {
+    "text": "Predictable.",
+    "start": 3760.19,
+    "duration": 1.2
+  },
+  {
+    "text": "When agents fail\nto do something,",
+    "start": 3761.39,
+    "duration": 2.16
+  },
+  {
+    "text": "do they feel because some\nunpredictable reasons?",
+    "start": 3763.55,
+    "duration": 4.32
+  },
+  {
+    "text": "Or can we actually\nunderstand it,",
+    "start": 3767.87,
+    "duration": 2.98
+  },
+  {
+    "text": "like, legible and recoverable?",
+    "start": 3770.85,
+    "duration": 3.24
+  },
+  {
+    "text": "Just to show you some\nof those numbers,",
+    "start": 3774.09,
+    "duration": 1.78
+  },
+  {
+    "text": "if you look at\nthe accuracy, this",
+    "start": 3775.87,
+    "duration": 1.98
+  },
+  {
+    "text": "is actually ranked\nin terms of models.",
+    "start": 3777.85,
+    "duration": 2.56
+  },
+  {
+    "text": "But if you look at\nthe reliability,",
+    "start": 3780.41,
+    "duration": 2.84
+  },
+  {
+    "text": "those scores do\nnot have a trend,",
+    "start": 3783.25,
+    "duration": 3.68
+  },
+  {
+    "text": "which means that there is\na gap between capability",
+    "start": 3786.93,
+    "duration": 3.44
+  },
+  {
+    "text": "and reliability.",
+    "start": 3790.37,
+    "duration": 1.68
+  },
+  {
+    "text": "The most powerful agent may\nnot be the most reliable agent.",
+    "start": 3792.05,
+    "duration": 4.277
+  },
+  {
+    "text": "And this is something we\nneed to keep in mind when",
+    "start": 3796.327,
+    "duration": 2.083
+  },
+  {
+    "text": "we are doing evaluations.",
+    "start": 3798.41,
+    "duration": 1.7
+  },
+  {
+    "text": "So it's not only just about\nthe model performance,",
+    "start": 3800.11,
+    "duration": 2.52
+  },
+  {
+    "text": "reliability, efficiency.",
+    "start": 3802.63,
+    "duration": 2.9
+  },
+  {
+    "text": "Similar argument\nto hold that when",
+    "start": 3805.53,
+    "duration": 1.56
+  },
+  {
+    "text": "you think about harness audit.",
+    "start": 3807.09,
+    "duration": 2.76
+  },
+  {
+    "text": "Recent work showed that\nif you audit those agents,",
+    "start": 3809.85,
+    "duration": 4.44
+  },
+  {
+    "text": "the green bar here refers\nto the task completion,",
+    "start": 3814.29,
+    "duration": 3.6
+  },
+  {
+    "text": "and then the colored bar\nrefers to the harness safety.",
+    "start": 3817.89,
+    "duration": 3.72
+  },
+  {
+    "text": "And you can see that the safety\ndimension is just way lower",
+    "start": 3821.61,
+    "duration": 3.26
+  },
+  {
+    "text": "compared to the task completion.",
+    "start": 3824.87,
+    "duration": 4.08
+  },
+  {
+    "text": "There is a very\ninteresting example",
+    "start": 3828.95,
+    "duration": 2.0
+  },
+  {
+    "text": "that I also want\nto share with you.",
+    "start": 3830.95,
+    "duration": 1.58
+  },
+  {
+    "text": "So we talk about the agents.",
+    "start": 3832.53,
+    "duration": 2.22
+  },
+  {
+    "text": "They do stuff, but they\nmay also have issues.",
+    "start": 3834.75,
+    "duration": 4.6
+  },
+  {
+    "text": "This is an example\nfrom Operator,",
+    "start": 3839.35,
+    "duration": 2.22
+  },
+  {
+    "text": "which is a computer used agent\nintroduced by OpenAI in January",
+    "start": 3841.57,
+    "duration": 4.1
+  },
+  {
+    "text": "of 2025.",
+    "start": 3845.67,
+    "duration": 1.72
+  },
+  {
+    "text": "The user said that my most\nfrustrating experience",
+    "start": 3847.39,
+    "duration": 2.8
+  },
+  {
+    "text": "with Operator was my first\none-- trying to order groceries.",
+    "start": 3850.19,
+    "duration": 3.88
+  },
+  {
+    "text": "The user said, help me buy\ngroceries on Instacart,",
+    "start": 3854.07,
+    "duration": 2.84
+  },
+  {
+    "text": "expecting it to ask\nsome basic questions,",
+    "start": 3856.91,
+    "duration": 2.34
+  },
+  {
+    "text": "such as where do I leave?",
+    "start": 3859.25,
+    "duration": 1.54
+  },
+  {
+    "text": "What store do I usually\nbuy groceries from?",
+    "start": 3860.79,
+    "duration": 2.1
+  },
+  {
+    "text": "What kind of things do I want?",
+    "start": 3862.89,
+    "duration": 1.62
+  },
+  {
+    "text": "It didn't ask me any of that.",
+    "start": 3864.51,
+    "duration": 1.98
+  },
+  {
+    "text": "Instead, Operator opened\nthe Instacart in the browser",
+    "start": 3866.49,
+    "duration": 2.74
+  },
+  {
+    "text": "and begin searching for milk in\ngrocery stores located in Iowa.",
+    "start": 3869.23,
+    "duration": 4.24
+  },
+  {
+    "text": "So think about this.",
+    "start": 3873.47,
+    "duration": 2.36
+  },
+  {
+    "text": "The agents can actually\nnavigate the web.",
+    "start": 3875.83,
+    "duration": 3.0
+  },
+  {
+    "text": "They can use your credit\ncard to make purchases,",
+    "start": 3878.83,
+    "duration": 3.5
+  },
+  {
+    "text": "but in this process, they are\nmaking a lot of assumptions,",
+    "start": 3882.33,
+    "duration": 3.9
+  },
+  {
+    "text": "and they didn't really\nhave this kind of awareness",
+    "start": 3886.23,
+    "duration": 2.3
+  },
+  {
+    "text": "to collaborate with people.",
+    "start": 3888.53,
+    "duration": 1.88
+  },
+  {
+    "text": "So this is actually a failure\nfrom the interaction side.",
+    "start": 3890.41,
+    "duration": 5.265
+  },
+  {
+    "text": "The next thing I\nwant to show you",
+    "start": 3895.675,
+    "duration": 1.375
+  },
+  {
+    "text": "is that the robustness\nof agents is actually",
+    "start": 3897.05,
+    "duration": 3.28
+  },
+  {
+    "text": "going to face a lot of challenge\nwhen they enter our real world,",
+    "start": 3900.33,
+    "duration": 3.86
+  },
+  {
+    "text": "because we just have\nso many dark patterns.",
+    "start": 3904.19,
+    "duration": 3.22
+  },
+  {
+    "text": "In this particular example,\nresearchers actually",
+    "start": 3907.41,
+    "duration": 3.48
+  },
+  {
+    "text": "just pop up this--",
+    "start": 3910.89,
+    "duration": 1.8
+  },
+  {
+    "text": "I mean, we have a lot of\npop-ups on different websites.",
+    "start": 3912.69,
+    "duration": 2.56
+  },
+  {
+    "text": "So we pop up this\nkind of blank box.",
+    "start": 3915.25,
+    "duration": 4.36
+  },
+  {
+    "text": "Nothing adversary or\nmalicious is there.",
+    "start": 3919.61,
+    "duration": 2.92
+  },
+  {
+    "text": "But then because of\nthis distraction, agents",
+    "start": 3922.53,
+    "duration": 2.32
+  },
+  {
+    "text": "actually fail to complete\ntheir task 87% of the time.",
+    "start": 3924.85,
+    "duration": 5.28
+  },
+  {
+    "text": "This is what we call\nadversary attack.",
+    "start": 3930.13,
+    "duration": 2.4
+  },
+  {
+    "text": "And this is really interesting.",
+    "start": 3932.53,
+    "duration": 2.24
+  },
+  {
+    "text": "If your agent goes to do\nshopping for you and then",
+    "start": 3934.77,
+    "duration": 2.88
+  },
+  {
+    "text": "a pop-up from the website\nactually could get your agents",
+    "start": 3937.65,
+    "duration": 2.74
+  },
+  {
+    "text": "distracted, and they cannot\nfinish the original task.",
+    "start": 3940.39,
+    "duration": 5.012
+  },
+  {
+    "text": "The other example that\nI want to show you",
+    "start": 3945.402,
+    "duration": 1.708
+  },
+  {
+    "text": "here is actually from a privacy\nand security perspective.",
+    "start": 3947.11,
+    "duration": 3.76
+  },
+  {
+    "text": "So this is an agent\nthat's supposed to write",
+    "start": 3950.87,
+    "duration": 2.84
+  },
+  {
+    "text": "a weekly report for workers.",
+    "start": 3953.71,
+    "duration": 2.56
+  },
+  {
+    "text": "It actually did a great job\nof how many lines of code",
+    "start": 3956.27,
+    "duration": 2.88
+  },
+  {
+    "text": "you wrote, how many\nfeatures you launched.",
+    "start": 3959.15,
+    "duration": 2.24
+  },
+  {
+    "text": "It also mentioned that you\nhad lunch with a recruiter",
+    "start": 3961.39,
+    "duration": 3.04
+  },
+  {
+    "text": "from a different company.",
+    "start": 3964.43,
+    "duration": 2.56
+  },
+  {
+    "text": "So this actually highlighted\nsomething that's very critical,",
+    "start": 3966.99,
+    "duration": 3.66
+  },
+  {
+    "text": "that is privacy today.",
+    "start": 3970.65,
+    "duration": 2.46
+  },
+  {
+    "text": "We give information, all\nour information to agents,",
+    "start": 3973.11,
+    "duration": 3.18
+  },
+  {
+    "text": "to AI systems.",
+    "start": 3976.29,
+    "duration": 1.16
+  },
+  {
+    "text": "They know everything about us.",
+    "start": 3977.45,
+    "duration": 1.78
+  },
+  {
+    "text": "They probably know that\nPII information are not",
+    "start": 3979.23,
+    "duration": 2.36
+  },
+  {
+    "text": "something they\nshould use, but a lot",
+    "start": 3981.59,
+    "duration": 1.76
+  },
+  {
+    "text": "of the sensitive\npersonal information",
+    "start": 3983.35,
+    "duration": 2.32
+  },
+  {
+    "text": "can really be consequential.",
+    "start": 3985.67,
+    "duration": 1.98
+  },
+  {
+    "text": "And there's no way\nto teach agents",
+    "start": 3987.65,
+    "duration": 2.14
+  },
+  {
+    "text": "about how to handle\ndifferent access control.",
+    "start": 3989.79,
+    "duration": 4.92
+  },
+  {
+    "text": "This is another important\ntopic we will go deep later.",
+    "start": 3994.71,
+    "duration": 4.71
+  },
+  {
+    "text": "Misalignment and synchronous.",
+    "start": 3999.42,
+    "duration": 2.44
+  },
+  {
+    "text": "If you look at the\nleft side, this",
+    "start": 4001.86,
+    "duration": 1.68
+  },
+  {
+    "text": "is actually called an\ninsincere [INAUDIBLE].",
+    "start": 4003.54,
+    "duration": 4.36
+  },
+  {
+    "text": "So basically the agent think\nyour writing is terrible,",
+    "start": 4007.9,
+    "duration": 4.72
+  },
+  {
+    "text": "but they do not want\nto hurt your feelings.",
+    "start": 4012.62,
+    "duration": 2.417
+  },
+  {
+    "text": "Instead, the agent\njust says that they",
+    "start": 4015.037,
+    "duration": 1.583
+  },
+  {
+    "text": "will give it a 5 out of 5.",
+    "start": 4016.62,
+    "duration": 1.96
+  },
+  {
+    "text": "So this is also a reminder that\nyou should not only just give",
+    "start": 4018.58,
+    "duration": 2.578
+  },
+  {
+    "text": "your homework to\nagents, because they",
+    "start": 4021.158,
+    "duration": 1.542
+  },
+  {
+    "text": "will see great things about\nit without really giving you",
+    "start": 4022.7,
+    "duration": 2.76
+  },
+  {
+    "text": "feedback.",
+    "start": 4025.46,
+    "duration": 1.76
+  },
+  {
+    "text": "The second part is actually\nabout the model hacks",
+    "start": 4027.22,
+    "duration": 2.64
+  },
+  {
+    "text": "its own code.",
+    "start": 4029.86,
+    "duration": 1.2
+  },
+  {
+    "text": "So the model is supposed to\nhelp the user check, reinforce",
+    "start": 4031.06,
+    "duration": 4.92
+  },
+  {
+    "text": "the learning.",
+    "start": 4035.98,
+    "duration": 0.9
+  },
+  {
+    "text": "And then the agent\ninternal thinking",
+    "start": 4036.88,
+    "duration": 2.38
+  },
+  {
+    "text": "is that oh, I saw there\nis this unit test which",
+    "start": 4039.26,
+    "duration": 3.6
+  },
+  {
+    "text": "can check the reward function.",
+    "start": 4042.86,
+    "duration": 1.94
+  },
+  {
+    "text": "And I cannot modify that, but\nI could change the unit test",
+    "start": 4044.8,
+    "duration": 3.22
+  },
+  {
+    "text": "first.",
+    "start": 4048.02,
+    "duration": 0.74
+  },
+  {
+    "text": "So they change everything\nhere so that everything",
+    "start": 4048.76,
+    "duration": 2.7
+  },
+  {
+    "text": "looks good on the surface.",
+    "start": 4051.46,
+    "duration": 3.8
+  },
+  {
+    "text": "I think probably the most\nsurprising thing, very close",
+    "start": 4055.26,
+    "duration": 3.62
+  },
+  {
+    "text": "to us is what happened in July\naround this OpenAI hacking",
+    "start": 4058.88,
+    "duration": 5.2
+  },
+  {
+    "text": "incident.",
+    "start": 4064.08,
+    "duration": 1.8
+  },
+  {
+    "text": "And this is actually a very\ninteresting demonstration",
+    "start": 4065.88,
+    "duration": 3.04
+  },
+  {
+    "text": "of how we think about agent\nsafety moving forward.",
+    "start": 4068.92,
+    "duration": 3.92
+  },
+  {
+    "text": "So what happens is that\nOpenAI has this sandbox agent,",
+    "start": 4072.84,
+    "duration": 4.7
+  },
+  {
+    "text": "and they are asked to\ndo an impossible task.",
+    "start": 4077.54,
+    "duration": 4.58
+  },
+  {
+    "text": "They get stuck.",
+    "start": 4082.12,
+    "duration": 1.12
+  },
+  {
+    "text": "And then agents start to\nexplore its environment",
+    "start": 4083.24,
+    "duration": 2.76
+  },
+  {
+    "text": "and looking for other ways\nto maybe get a higher reward",
+    "start": 4086.0,
+    "duration": 3.56
+  },
+  {
+    "text": "or cheat on the task.",
+    "start": 4089.56,
+    "duration": 1.96
+  },
+  {
+    "text": "They find out that there is\nactually a message board where",
+    "start": 4091.52,
+    "duration": 3.28
+  },
+  {
+    "text": "over 1,000 agents collaborate\nto cheat on their task.",
+    "start": 4094.8,
+    "duration": 4.08
+  },
+  {
+    "text": "And then they just\njoin with each other.",
+    "start": 4098.88,
+    "duration": 2.68
+  },
+  {
+    "text": "And then basically a lot\nof things have happened.",
+    "start": 4101.56,
+    "duration": 4.44
+  },
+  {
+    "text": "Just to show you what happened,\nI think within a few days,",
+    "start": 4106.0,
+    "duration": 4.72
+  },
+  {
+    "text": "it actually sent over 17,000\nattacks to Hugging Face",
+    "start": 4110.72,
+    "duration": 4.0
+  },
+  {
+    "text": "infrastructure.",
+    "start": 4114.72,
+    "duration": 1.3
+  },
+  {
+    "text": "Here if you show, the blue color\nrefers to intended solution.",
+    "start": 4116.02,
+    "duration": 6.56
+  },
+  {
+    "text": "And then you can see the\nreleased target which",
+    "start": 4122.58,
+    "duration": 2.12
+  },
+  {
+    "text": "is more about\nmanipulation, understand",
+    "start": 4124.7,
+    "duration": 2.36
+  },
+  {
+    "text": "the manipulate\nerror, sorry, logs,",
+    "start": 4127.06,
+    "duration": 2.879
+  },
+  {
+    "text": "and then attack Hugging Face.",
+    "start": 4129.939,
+    "duration": 1.741
+  },
+  {
+    "text": "You can see the volume of\nwhat happened in the process.",
+    "start": 4131.68,
+    "duration": 3.7
+  },
+  {
+    "text": "So I think this is indeed a\nvery concerning topic for us",
+    "start": 4135.38,
+    "duration": 3.96
+  },
+  {
+    "text": "to reflect, especially\ngiven that agents can now",
+    "start": 4139.34,
+    "duration": 3.76
+  },
+  {
+    "text": "function for so many hours\nand maybe even longer.",
+    "start": 4143.1,
+    "duration": 5.16
+  },
+  {
+    "text": "So with that, this is a brief\noverview of the introduction",
+    "start": 4148.26,
+    "duration": 4.8
+  },
+  {
+    "text": "to agentic AI.",
+    "start": 4153.06,
+    "duration": 2.28
+  },
+  {
+    "text": "I think we did a\nhistory of agents",
+    "start": 4155.34,
+    "duration": 3.2
+  },
+  {
+    "text": "and then different components\nof agent architectures.",
+    "start": 4158.54,
+    "duration": 3.399
+  },
+  {
+    "text": "We talk about the\ncompound AI systems",
+    "start": 4161.939,
+    "duration": 2.401
+  },
+  {
+    "text": "and a lot of key challenge\nwe are going to go through.",
+    "start": 4164.34,
+    "duration": 3.12
+  },
+  {
+    "text": "With that, thank you all,\nand see you next class.",
+    "start": 4167.46,
+    "duration": 3.63
+  }
+]

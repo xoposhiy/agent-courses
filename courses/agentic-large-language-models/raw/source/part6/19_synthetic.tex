@@ -1,0 +1,304 @@
+
+
+% - What distillation is, and the four axes that organize it: signal, data source, timing, and teacher identity
+% - White-box vs black-box: distilling from open weights vs strings
+% - Off-policy distillation: generate from the teacher, then SFT on the outputs
+% - On-policy distillation: sample from the student, score with the teacher in the loop
+% - Distillation as reinforcement learning: the KD distance as a dense, token-level reward
+% - Self-distillation: the model as its own teacher, and when that beats a stronger one
+% https://github.com/burtenshaw/training-agents
+
+\chapter[*Synthetic Data Generation]{*Synthetic Data Generation for Training Agentic LLMs}\label{chap:synthetic-data}
+
+%\chapter{*Synthetic Data Generation for Training Agentic LLMs}\label{chap:synthetic-data}
+
+\begin{learningbox}
+In this chapter you will learn the role that synthetic data can play in the development of agentic large language models.
+Specifically, you will be able to:
+\begin{itemize}[leftmargin=*, nosep]
+    \item Characterize the importance of {\em data} in the LLM training pipeline.
+    \item Explain the general loop of {\em distilling knowledge} from stronger models for weaker students.
+    \item Describe the {\em pipeline components} for which synthetic data is being used as an alternative to human-generated content.
+    \item Outline the various strategies for {\em curating and evaluating} synthetic data.
+    \item Contrast the advantages and disadvantages of using synthetic data by describing the {\em risks} of using artificially generated data.
+\end{itemize}
+\end{learningbox}
+
+\section{The Importance of Data}
+The rapid scaling of LLMs has led to a significant demand for training and evaluation data. Some have coined training  data the {\em digital oil}, reflecting the importance as  primary ingredient for AI development. Furthermore, data is increasingly becoming a differentiating factor since other components of the pipeline, such as model architectures, are homogenizing \citep{11072851}. As models continue to scale, they require trillions of words of human-generated text scraped from the internet; however, there is only a limited amount of human-generated data available, which raises the question of whether training data could become the main bottleneck to scaling, see Figure~\ref{fig:data-stock} \citep{villalobos2024position}. Moreover, as data requirements grow in scale, the acquisition of data becomes increasingly prohibitive in terms of cost and time, since most of the straightforward sources are becoming exhausted. Furthermore, issues with privacy, copyright, and bias cause the field to be looking beyond the curation of web-based human-generated data, and instead turn towards synthetic data generation \citep{liang2022advances}.
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.7\linewidth]{part6/visuals/data_stock.png}
+    \caption{Projections of the  available human-generated public text and dataset sizes  to train  LLMs \citep{villalobos2024position}. The intersection of the stock and dataset size projection lines indicates the median year (2028) in which the stock is expected to be fully utilized.}
+    \label{fig:data-stock}
+\end{figure}
+
+LLMs increasingly generate the data that trains the next generation of LLMs themselves: models are prompted to produce instructions, dialogues, reasoning traces, and even entire training corpora that are then used to finetune, distill and evaluate other models \citep{long-etal-2024-llms}. This self-reinforcing loop  lowers the cost and effort of data collection compared to sourcing and annotating human-generated text, while also offering fine-grained control over style, difficulty, and coverage of the resulting datasets. By now, this approach has drawn significant industrial \citep{10.1145/3715275.3732005} and academic interest \citep{viswanathan-etal-2025-synthetic, alismail2025survey}, spanning applications from general-purpose instruction tuning to the more specialized data needed to train agentic behaviors such as tool use, planning, and multi-step reasoning (illustrated in Figure~\ref{fig:virtuous} on page \pageref{fig:virtuous}).
+
+The growing reliance on model-generated data has also introduced a new term in the scaling laws (Chapter~\ref{chap:scaling}), one that accounts for the proportion of synthetic data present in a pre-training corpus. Recent work such as SYNTHLLM \citep{qin2025scaling} illustrates why this matters: by automatically extracting high-level concepts from source documents and recombining them through a graph-based algorithm, it generates synthetic corpora diverse enough to follow a predictable, rectified scaling law across model sizes. In this version of the scaling laws, the gains taper off earlier (before other token budgets typically used in pretraining), and larger models reach their optimal performance on comparatively fewer tokens than smaller ones. This suggests that synthetic data can be tuned not just for volume, but also for the shape of the scaling curve it produces.
+
+Beyond scaling behavior, generating data for agentic capabilities---tool use, planning, and multi-step reasoning---increasingly depends on coordinated multi-agent workflows rather than on a single generator model. Specialized agents can take on distinct roles (e.g., proposing tasks, executing them, critiquing the results), which tends to produce data that is of higher quality, more diverse, and structurally closer to what agentic training actually requires. Matrix \citep{wang2025matrixpeertopeermultiagentsynthetic} is one example of this direction: a decentralized framework in which control and data flow are both represented as messages passed between agents through distributed queues, allowing the pipeline to scale horizontally without a central coordinator. Let us have a closer loop on the synthetic training pipeline.
+
+
+\section{Distillation Loop}
+\label{sec:distillation}
+Using synthetic data in the agentic LLM training pipeline follows the overall distillation loop, as shown in Figure~\ref{fig:synth-pipeline}. A generator (a strong model, or an orchestration of several agents) uses a small amount of seed or real data to generate a large pool of raw synthetic data. That pool is then \emph{curated} (Section~\ref{sec:data-cur}) before being used to train or \emph{distill} a model. Crucially, the resulting model can itself become the generator for the next iteration. This closing of the self-reinforcing loop brings considerable risk to training stability and downstream performance (see also the discussion of stability in metalearning, Chapter~\ref{chap:meta}).
+
+\begin{figure}[tb]
+    \centering
+    \resizebox{\linewidth}{!}{%
+    \begin{tikzpicture}[
+        node distance=7mm,
+        box/.style={draw, rounded corners=2pt, align=center, minimum height=13mm, minimum width=23mm, font=\small, thick},
+        data/.style={box, fill=blue!8},
+        proc/.style={box, fill=orange!12},
+        model/.style={box, fill=yellow!14},
+        arr/.style={-{Stealth[length=2.5mm]}, thick},
+    ]
+        \node[data] (seed) {Seed /\\ real data};
+        \node[proc, right=of seed] (gen) {Generator\\[-1pt]{\scriptsize teacher / multi-agent}};
+        \node[data, right=of gen] (raw) {Raw synthetic\\ data};
+        \node[proc, below=9mm of raw] (inst-eval) {(Intrinsic)\\ evaluation};
+        \node[proc, right=of raw] (cur) {Curation\\[-1pt]{\scriptsize filter, score, dedup}};
+        \node[proc, right=of cur] (train) {Train /\\ distill};
+        \node[model, right=of train] (model) {Model\\ (student)};
+        \node[proc, below=9mm of model] (eval) {(Extrinsic)\\ evaluation};
+        \foreach \a/\b in {seed/gen, gen/raw, raw/cur, cur/train, train/model}
+            \draw[arr] (\a) -- (\b);
+        \draw[arr] (model) -- (eval);
+        \draw[arr] (raw) -- (inst-eval);
+        \draw[arr, dashed] (model.north) -- ++(0,6mm) -| (gen.north)
+            node[pos=0.25, above, font=\scriptsize] {improved model becomes next-generation teacher};
+    \end{tikzpicture}%
+    }
+    \caption{The synthetic-data loop that organizes this chapter. A generator produces raw synthetic data from a small seed set, followed by curation filtering and scoring. The data trains or distills a model, which is then evaluated and can  be used as the generator of the next iteration (dashed).}
+    \label{fig:synth-pipeline}
+\end{figure}
+
+Distillation is the special case of synthetic-data generation in which the generator is a \emph{stronger model whose capability we are trying to transfer}. In knowledge distillation, a compact \emph{student} model learns to copy a more capable \emph{teacher} \citep{hinton2015distilling, hu2022teacherstudentarchitectureknowledgelearning}. It can do so by directly optimizing against the teacher's output predictions, or it can do so by simply training on synthetic data emitted by a teacher. The goal of distillation is to get a more efficient version of the teacher, both at inference time and in terms of data cost, without sacrificing too much task performance. Distillation has been applied widely, including in agentic settings \citep[e.g.,][]{li2025chainofagentsendtoendagentfoundation, du-etal-2025-agentic}. Distillation can also be used to derive preference data for instruction tuning. Zephyr \citep{tunstall2024zephyr}, for example, was trained with AI feedback, where outputs are generated and ranked by strong teacher models, aligning a small model with user intent at minimal data and training cost.
+
+\paragraph{Four axes of distillation}
+Concrete distillation methods can be organized along four axes.
+%\begin{enumerate*}[label=(\number*)]
+%\item 
+(1) The \emph{signal}: whether the student imitates teacher logits, full output sequences, or a scalar reward derived from the teacher.
+%\item 
+(2) The \emph{data source}: whether the sequences being scored are generated by the teacher or sampled from the student.
+%\item 
+(3) The \emph{timing}: whether that data is produced once up front (off-policy) or continuously as the student changes (on-policy).
+%\item 
+(4) The \emph{teacher identity}: whether the teacher is a stronger separate model or the student itself.
+%\end{enumerate*}
+
+We will now discuss these four  axes of distillation.
+%already covered the first axis, the signal, in the discussion of soft targets, sequences, and rewards above; the following subsections outline the remaining three.
+
+\subsection{Signal: The Distillation Objective}
+When we have \emph{white-box} access to the teacher's ($q$) probabilities, the student $p_\theta$ is trained to make the student's next-token distribution match the teacher's. In distillation, we often soften the distributions with a shared temperature $\tau$ (so $q^{\tau}(\cdot) \propto \exp(z/\tau)$ for logits $z$). A generic distillation loss over a corpus of sequences is
+
+% This is forward KL
+\begin{equation}
+    \mathcal{L}(\theta) = \mathrm{E}_{x}\left[ \sum_{t} D\big( q^{\tau}(\cdot \mid x_{<t}) \,\|\, p^{\tau}_\theta(\cdot \mid x_{<t}) \big) \right],
+    \label{eq:kd}
+\end{equation}
+where the sum runs over token positions $t$, $D$ is a divergence (most commonly the KL divergence), and the temperature $\tau > 1$ flattens both distributions so that the student also learns from the teacher's \emph{relative} confidence. When only the teacher's \emph{text} is available (\emph{black-box} distillation, the usual case when distilling from a proprietary API), we no longer observe $q$ but only some tokens that we sample from it. The soft target $q^{\tau}(\cdot \mid x_{<t})$ then collapses to a one-hot vector on the sampled token, the divergence $D$ becomes the token-level cross-entropy, and Equation~\ref{eq:kd} reduces to ordinary supervised fine-tuning on the teacher's generations. In Section~\ref{sec:sim-hum} we discuss the Self-Instruct technique \citep{wang-etal-2023-self-instruct}. This methods perform distillation from the data side, and is therefore a black-box approach.
+
+
+\subsection{Data Source: Teacher-Student Paradigm}
+In distillation, the intuitive assumption is that a bigger, stronger teacher is always better. However, there are exceptions \citep{xu-etal-2025-stronger, li-etal-2025-small-models}. A capable teacher may produce traces that are too long, too complex, or stylistically mismatched for a small student to absorb. This phenomenon is known as the \emph{small model learnability gap}.  Figure~\ref{fig:small-model-learnability} illustrates a situation where small students  learn more from the shorter reasoning of a weaker teacher than from the elaborate chains of thought of a frontier model. The practical implication is that the teacher should be chosen relative to the current capabilities of the student rather than maximized in isolation \citep{zhang-etal-2026-find}.
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.8\linewidth]{part6/visuals/student_learner.png}
+    \caption{Visualization of the Small Model Learnability Gap, where small student models do not consistently benefit from long CoT reasoning and instead perform better when fine-tuned on shorter CoT reasoning from smaller teachers \citep{li-etal-2025-small-models}}
+    \label{fig:small-model-learnability}
+\end{figure}
+
+\subsection{Timing: Off-policy versus On-policy Distillation}
+The third axis concerns timing. The most common recipe in distillation is \emph{off-policy} distillation. Here we sample a fixed dataset of completions from the teacher and then fine-tune the student on them (as in the black-box case above). This is a simple and parallelizable approach, but it suffers from a train/inference mismatch. The student is only once shown teacher-generated token sequences at training time, yet at deployment time it must continue its \emph{own}, possibly flawed, sequences, which may be different than the ones it has been trained on. This  {\em exposure bias}  compounds over long agentic trajectories.
+
+\emph{On-policy} distillation addresses this by sampling sequences from the student itself and having the teacher score them, all within the loop. Generalized Knowledge Distillation (GKD) trains the student on its self-generated output sequences using teacher feedback on those sequences \citep{agarwal2024policy}. The student is corrected exactly on the distribution of the states that it actually visits. 
+
+This on-policy view makes the connection to reinforcement learning through imitation learning explicit. The per-token teacher divergence in Equation~\ref{eq:kd} acts as a \emph{dense, token-level reward}. 
+Distillation is turned into a form of reinforcement learning where the teacher, rather than a sparse outcome checker, supplies the reward signal \citep{lu2025onpolicydistillation}. Hybrid schemes push this idea further by selectively imitating the teacher only where it helps during a reinforcement learning phase \citep{zhang2026reinforcementaware}.
+
+\subsection{Teacher Identity: Self-Distillation and Self-Improvement}
+The teacher and student model do not have to be different. When the teacher and student model are the same, distillation becomes self-improvement: the model generates candidate solutions, keeps the ones that pass a check, and trains on them. STaR \citep{zelikman2022star} bootstraps reasoning in this way, iteratively generating rationales, retaining those that reach the correct answer, and finetuning on them. 
+
+Another approach is Self-Play Finetuning (SPIN) \citep{chen2024self}. In this method  the model distinguishes its own generations from reference data across iterations, improving alignment without any external teacher. Perhaps surprisingly, even \emph{repeated} self-distillation, with no new data source, can yield measurable gains, up to a point \citep{pareek2024understandinggainsrepeatedselfdistillation}.
+
+Self-improvement is most powerful when candidate outputs can be \emph{verified} cheaply. In such cases, an external signal can still be incorporated effectively. This is the case for problems defined in code and math, as solutions are easy to execute and check. CURE, for example, is a reinforcement learning framework whose reward co-evolves a model's coding and unit-test-generation abilities from their interaction outcomes. There is no ground-truth code as supervision. Since code is easy to execute and check, the coder and the test-writer act as mutually adapting agents, enabling long-horizon optimization on hard problems. The same principle underlies self-challenging and self-evolving agents, which propose their own increasingly difficult tasks and update their generation policy over time \citep{NEURIPS2025_a5a305fa, huang2025r, NEURIPS2025_d38653cd}.
+
+
+
+
+\section{Simulating Human-generated Content}
+\label{sec:sim-hum}
+The  move away from naturally occurring human-generated text, either directly obtained or scraped from the web, is perhaps best seen in the evolution from curated human-generated instruction data towards datasets where synthetic generation plays a more central role. We will now discuss these methods, where datasets are, in their core, still based on human-generated data.
+
+As an example of a resource where humans still underpin most of the data, Natural Instructions \citep{mishra-etal-2022-cross}, contains 61 distinct tasks, their human-authored instructions, and 193k task instances (input-output pairs). The instructions were gathered from instruction documents for existing NLP datasets, all mapped to a unified schema. Experiments with LLMs indicate that models benefit from observing the instructions alongside examples, although these models have remained far behind an estimated performance upper bound.
+
+Subsequent work focuses on increasing the number of unique tasks and task types  \citep{wang-etal-2022-super}, varying the length of the instructions \citep{bach-etal-2022-promptsource}, or including particularly difficult tasks \citep{srivastava2023beyond}. Importantly, all these meta-datasets (datasets of datasets) are still ultimately built from human benchmarks: every sample they contain is authored by a person. Therefore, there is a practical limit to how much of this data can be freely found online.
+
+Because these approaches rely on large amounts of human supervision in the form of crowd-sourced datasets, recent work focuses on generating synthetic data that fills the same role. Here, we see the creation of datasets such as Unnatural Instructions \citep{honovich-etal-2023-unnatural}, which contain creative and diverse instructions collected with little human labor, instead relying on prompting various LLMs. Experiments indicate that training models on the somewhat noisy Unnatural Instructions dataset yields results comparable to those trained on high-quality, human-curated data, as shown in Figure~\ref{fig:unnatural}. This result suggests that machine-generated data offers a cost-efficient alternative to human labor for expanding and diversifying training datasets.
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.8\linewidth]{part6/visuals/unnatural.png}
+    \caption{Scaling experiments comparing Unnatural Instructions with Super-Natural Instructions  \citep{honovich-etal-2023-unnatural}, with model performance  controlling for dataset size, tested on two benchmarks: Super-Natural Instructions (left) and LMentry (right).}
+    \label{fig:unnatural}
+\end{figure}
+
+The simulation of human-like text, code, and reasoning by generative models has unlocked new methodologies for both training and evaluating machine learning systems. By prompting strong models, researchers can generate highly diverse and complex datasets that mimic human content generation. For example, PersonaHub \citep{ge2025scalingsyntheticdatacreation} steers a generation process with a large-scale collection of personas, using them to prompt LLMs towards a far greater diversity of synthetic data than unconditioned generation would produce.
+
+Similar to self-improvement, training on synthetic data has shown much promise in domains where model outputs are relatively easy to verify, such as mathematics \citep{NEURIPS2023_44414694, liu2023tinygsmachieving80gsm8k}, programming \citep{haluptzok2023language}, and games \citep{wang2023voyager}.
+
+
+\subsection{Generating Training Data}
+We will now focus on generating training data. The use of synthetic data for training has transitioned from a niche data augmentation technique to a core component of modern model alignment and reasoning pipelines. Techniques such as Self-Instruct \citep{wang-etal-2023-self-instruct} have demonstrated that smaller, open-weight models can be instruction-tuned using data generated entirely by a stronger, proprietary model. The process, as shown in Figure~\ref{fig:self-instruct}, involves seeding an LLM with a small set of human-written instructions and prompting it to iteratively generate novel task descriptions, inputs, and outputs. The simulated human content allows models to acquire complex zero-shot capabilities without the need for large groups of human annotators.
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=\linewidth]{part6/visuals/self-instruct.png}
+    \caption{Self-Instruct pipeline \citep{wang-etal-2023-self-instruct}.}
+    \label{fig:self-instruct}
+\end{figure}
+
+\paragraph{Leveraging existing data}
+Other approaches combine curated human data with synthetic data, instead of replacing one with the other. \citet{gunasekar2023textbooksneed} show that training on a mixture of human-written textbooks and synthetically generated text yields highly capable language models, suggesting that curated human data and machine-generated data are complements rather than substitutes. One challenge is that synthetically generated data tends to lack diversity and inherits errors and hallucinations, even when it is seeded with human-generated data. Subsequent improvements use a generation process that is based on ground truth documents \citep{lupidi2025sourcesynth, NEURIPS2024_a4ca07aa}.
+%, remedy these problems to a degree.
+
+
+A complementary way to amplify a limited seed set is \emph{backtranslation}. This approach was originally introduced in machine translation to synthesize parallel data by translating sentences from a source language to a target language, and then back into a source language \citep{edunov-etal-2018-understanding}. The same principle can be repurposed for reasoning tasks: instead of only generating specific solutions for a single problem, we generate new problems that are consistent with an existing solution. MathGenie \citep{lu-etal-2024-mathgenie} applies this idea to mathematical reasoning by taking a seed set of question--solution pairs. It augments the solutions, and then back-translates them into new questions. Because each newly generated question is grounded in a verified solution, this approach expands both the size and the diversity of the training data while reducing errors and hallucinations.
+
+\paragraph{Human-in-the-loop approaches}
+Fully automatic generation pipelines are not always sufficient. Models can struggle to generate specific scenarios or domain-relevant cases. The reason for these failures is usually that the generating LLM has specific blind spots, which can also make it difficult to generate genuinely informative data \citep{lippmann2024illuminatingblindspotslanguage}.
+
+Such problems motivate human-in-the-loop approaches, in which people steer, filter, or revise machine-generated content rather than authoring it from scratch. 
+
+WANLI \citep{liu-etal-2022-wanli} pairs a language model that proposes challenging natural language inference examples with human annotators who filter and relabel them, combining the scalability of automatic generation with human quality control.
+
+EvalAssist \citep{santillan-cooper-etal-2025-synthetic} applies a similar principle to evaluation tooling, using synthetic data to support and accelerate human judgment. A related strategy is to prompt the language model to produce an initial seed text, which human raters then edit before the result is used to bootstrap a larger fully-synthetic dataset. In this way, the human effort is spent on correcting the model rather than on authoring every example.
+
+
+
+\subsection{Generating Evaluation Data}
+Beyond training, synthetic generation plays a critical role in evaluation. Traditional static benchmarks suffer from rapid data contamination, where test sets inadvertently leak into the  pretraining corpora of modern LLMs. To mitigate this, dynamic evaluation frameworks \citep{kiela-etal-2021-dynabench} increasingly rely on synthetic data generation to create bespoke, single-use test cases. 
+
+Furthermore, the {\em LLM-as-a-judge} paradigm \citep{zheng2024judging} simulates human evaluation by prompting a strong model to grade the outputs of other models, highly correlating the models with human preference and significantly reducing the latency of evaluation cycles.
+
+Further creation of dedicated hard benchmarks for LLMs can once again be done with human-in-the-loop approaches, such as the MATH$^2$ benchmark. For this benchmark, multiple LLMs are used to iteratively generate and adjust mathematical questions and solutions through multi-turn prompting. Human annotators then further expand on the questions and check the answers, again aided by LLMs in the process \citep{shah2024ai}. Other approaches to efficient generation of synthetic evaluation data shift the task for annotators from coming up with new samples, to editing samples to be harder for the LLM \citep{yuan2021synthbio}.
+
+\paragraph{Automated red teaming}
+One specific use case for machine-generated evaluation is through the safety-oriented evaluation by means of  \emph{automated red teaming}. In this approach, one LLM generates adversarial prompts to probe a target model for vulnerabilities before deployment \citep{ganguli2022redteaminglanguagemodels}. By synthesizing many potentially malicious prompts, researchers can stress-test and harden models against toxic outputs, jailbreaks, and misalignments at a scale that human red teams cannot match \citep{perez-etal-2022-red}. Because the same generated prompts can subsequently be used to finetune the target model against those failures, red teaming sits at the boundary between synthetic evaluation and synthetic training data.
+
+
+\subsection{Generating Agentic Data}
+In agentic settings, data must be synthesized for an entire trajectory (and not just in single instruction-response pairs). As the agent is interacting with its environment, a full sequence of tool calls, observations, and decisions is produced \citep{kang2025distilling}. This goes beyond data that trains or evaluates a regular LLM operating on a single input-output pair. Generating agentic data is a more complex problem than generating data to instruct the underlying LLM itself, even though the same generative models are typically used to produce it. Let us look at an example.
+
+
+\begin{example}
+Consider synthesizing a single training trajectory for a tool-using agent, roughly following the two-phase recipe of APIGen-MT \citep{NEURIPS2025_5e3661f7}. 
+
+First a \emph{task proposer} invents a plausible user goal and a set of available tools, together with a ground-truth answer:
+
+\emph{User:} ``What will the weather be in Leiden this weekend, and should I bring an umbrella?'' \quad \emph{Tools:} \texttt{get\_forecast(city, days)}.
+
+An \emph{actor} model then rolls out the interaction, emitting the intermediate tool call and consuming its (simulated) observation before answering:
+
+\begin{center}\small
+\texttt{get\_forecast("Leiden", 2)} $\rightarrow$ \texttt{\{sat: rain, sun: clear\}} $\rightarrow$ \emph{``Rain on Saturday, clear on Sunday---bring an umbrella for Saturday.''}
+\end{center}
+
+Finally a \emph{verifier} checks that the emitted call is well-formed, that its arguments match the request, and that the final answer is consistent with the observation. Only trajectories that pass verification are kept. 
+
+Note what had to be synthesized: not just a single input--output pair, but the goal, the tool schema, the call, the observation, and a checker that verifies the whole trace.
+\end{example}
+
+Methods for agentic generation  usually involve entire orchestrations of agents for multi-turn conversations including human inputs and tool use \citep{wu2024autogen}. APIGen-MT \citep{NEURIPS2025_5e3661f7} exemplifies this shift with a two-phase framework that generates verifiable and diverse multi-turn agent data. TOUCAN \citep{xu2025toucansynthesizing15mtoolagentic} pursues a similar goal at a larger scale, simulating realistic tool calls to construct a large tool-agentic dataset. Beyond generating trajectories for a fixed skill, some work synthesizes data explicitly to transfer a new skill or behavior from a strong model to a weaker one, a process referred to as Generative Teaching \citep{crispino2023agent}. Furthermore, agentic synthetic data is  not limited to text, analogous generation pipelines extend to images, tabular data, and other forms of interaction or behavioral data.
+
+For the generation of agentic synthetic data, controlling the task complexity is a recurring challenge. Deep-research agents, for example, aim to solve complex question-answering tasks through long-horizon interactions with online tools, but the data typically used to train them lacks fine-grained control over difficulty and quality, yielding synthetic data that falls short of capturing sufficient complexity. \citet{pandit2025synthesizingagenticdataweb} address this issue with a pipeline that synthesizes question-answer pairs that progressively increase task complexity until a frontier baseline web agent fails. This curriculum learning approach  calibrates task-difficulty directly against agent capability rather than a fixed heuristic. 
+
+AReaL-SEA \citep{gao2026selfevolvingsyntheticdataverifiablereward} addresses reliability from a complementary angle. Here, a multi-agent engine synthesizes tool-grounded dialogues in combination with executable per-instance checkers. Next, a closed-loop self-evolving process updates the prompts over time to improve reliability.
+
+
+
+\section{Data Curation}
+\label{sec:data-cur}
+
+Once synthetic data has been generated, we need to check it for quality and curate it. Usually, this means filtering, scoring, and selecting samples so that only the examples that are useful are retained. Evaluating synthetic data usefulness can be approached in two complementary ways: \emph{extrinsically}, by measuring its effect on a downstream task, or \emph{intrinsically}, by examining properties of the generated data (or the generative process) directly.
+
+In practice, curation is implemented as a multi-stage filtering pipeline in which  criteria that we will discuss below are turned into concrete operators. Typical stages include \emph{semantic deduplication} (removing near-duplicate examples via embedding similarity to preserve diversity), \emph{perplexity filtering} (discarding incoherent or off-distribution text using a reference model), rule-based or format checks, and \emph{reward-model or judge scoring} to retain only high-fidelity samples. The seminal {\em Textbooks Are All You Need} paper \citep{gunasekar2023textbooksneed} is a reminder that this curation step often matters as much as the volume of data: aggressive filtering for quality can outweigh sheer quantity. Without it, models readily learn the generative artifacts and statistical anomalies of their teachers.
+
+\subsection{Extrinsic evaluation}
+Extrinsic evaluation answers a simple question: does the synthetic data actually help on a downstream task? This topic is also referred to as \emph{utility}. In practice, utility is measured by training or finetuning a model on the synthetic data (alone or mixed with real data) and evaluating it on a held-out, real-world test set. Extrinsic evaluation is the most direct measure of whether synthetic data is useful. For example, if the performance (e.g., in terms of perplexity) of a pretrained model increases when synthetic data is included, we can conclude that the data is useful. However, it is also the most expensive: it requires a full training run before any signal is available. If we make changes to the generation process or select a different set, we need to retrain and evaluate our model. This makes the extrinsic evaluation a poor fit for filtering or selecting individual examples during generation.
+
+
+\subsection{Intrinsic evaluation}
+Intrinsic evaluation instead looks at characteristics of the generations themselves, without the cost of a downstream training run. A number of quality aspects have been proposed for evaluating synthetic text \citep{ramesh-etal-2025-synthtexteval}. Rather than evaluating at the output level, it is also possible to benchmark the language models of the generative process directly \citep{kim-etal-2025-evaluating}. This can give an earlier and cheaper signal than inspecting the generated data.
+
+
+\paragraph{Data correctness}
+A generated example is only useful if its content is factually and logically sound. Since synthetic data  often comes from other LLMs, it inherits the generating model's failure modes. This includes hallucinated facts, inconsistent reasoning, or labels that do not match the content. These errors can subsequently propagate into  models that are trained on them. Correctness is typically checked  by comparing generations against human-generated labels \citep{long-etal-2024-llms, chim-etal-2025-evaluating}, performing verification (e.g., a rule-based checker or a separate judge model) \citep{chen-etal-2025-mastering, yang-etal-2025-longfaith, NEURIPS2024_4b77d5b8}, or through consistency checks across multiple generations for the same input \citep{NEURIPS2022_639a9a17, seegmiller-etal-2025-flames}.
+
+
+\paragraph{Data diversity}
+A key problem in creating synthetic data is maintaining diversity. Logit suppression and temperature sampling can improve data diversity but come at a cost of data correctness \citep{chung-etal-2023-increasing}. Diversity is also difficult to measure: lexical heuristics (e.g., ROUGE) or neural heuristics (embedding-based similarity) are commonly used as proxies, but each captures only a fraction of the possible variation in the data. 
+
+MetaSynth addresses this problem by generating synthetic data that enhances diversity through meta-prompting, where a language model orchestrates multiple expert LLM agents to collaboratively generate data \citep{riaz-etal-2025-metasynth}.
+
+
+\paragraph{Data contamination}
+A serious risk for synthetic data is contamination \citep{deng-etal-2024-unveiling, balloccu-etal-2024-leak}. The generating LLM is  pretrained on large, imperfectly filtered web datasets, and can memorize benchmarks and reproduce or closely paraphrase them when prompted to generate new training examples.
+%This means, much like the case of downward spirals of decreasing data diversity, that 
+After many steps, synthetically generated data converges to that of existing benchmarks. This  inflates evaluation scores artificially, for example in the case of code generation benchmarks \citep{matton-etal-2024-leakage}. Solutions for this type of leakage should  go beyond simple exact-match filters, and  requires n-gram overlap search against known benchmarks, membership-inference-style probing \citep{puerto-etal-2025-scaling, huang-etal-2026-robust}, or dynamic dataset construction pipelines \citep{chen-etal-2025-benchmarking-large}.
+
+\paragraph{Fairness and biases}
+LLMs inherit and amplify social biases from their own training data. If we, in turn, use the LLMs to generate synthetic corpora, we risk further perpetuating stereotypical associations, skewed demographic representation, or unequal generation quality across social groups \citep{gallegos2024bias}. This is of particular concern for synthetic data because it is produced at scale and often consumed directly as training material for new LLMs.
+
+Finally, intrinsic metrics are only proxies for usefulness. A dataset can score well on diversity or pass correctness checks while failing to improve, or even harm, extrinsic evaluation. Lexical and neural diversity heuristics measure surface-level variation and can fail to spot redundancy in  ways that matter (e.g., repeated reasoning patterns) or overestimate diversity. % which is not useful for downstream tasks. 
+Correctness checks further depend on the availability of a trusted reference, rule-based verifier, or judge model, which for open-ended or subjective generations may not exist, or may be unreliable. For these reasons, intrinsic evaluation is best treated as an additional check  rather than a true replacement for extrinsic evaluation.
+
+
+
+
+\section{Risks}
+\label{sec:risks}
+
+As should be clear by now, using synthetic data for training agentic LLMs is a solution that is not without problems. We will discuss  several more risks associated with synthetic data, including model collapse, bias amplification, security and privacy vulnerabilities, and legal and ethical concerns.
+
+\subsection{Model Collapse}
+The defining risk of the loop in Figure~\ref{fig:synth-pipeline} is that it feeds on its own output. \emph{Model collapse} is the well-documented phenomenon where training successive model generations on recursively generated AI data causes the diversity of the original distribution to disappear \citep{shumailov2024curserecursiontraininggenerated}. Rare events and low-probability linguistic nuance are sampled less often, so each generation forgets a little more of the distribution's long-tailed behavior until the model converges to a repetitive, high-probability model. Some experiments show that repeated training on purely synthetic data yields diminishing and eventually negative returns \citep{singh2024beyond}, and concentrating a corpus on a few synthetic sources, rather than many, increases the fragility of the resulting model \citep{schaffelder2025syntheticeggsbasketsimpact}. Similarly, small students distilled from a teacher are prone to hallucination and often fail on long-tailed knowledge \citep{pmlr-v202-kandpal23a}. More subtly, imitating a teacher can produce a student that matches the teacher's \emph{style} while lagging on \emph{factuality}, a gap which is usually only revealed by targeted capability benchmarks \citep{gudibande2023falsepromiseimitatingproprietary}. The standard mitigation is to keep anchoring the corpus with real human data rather than training on synthetic data alone.
+
+\subsection{Bias Amplification}
+Because generative models over-represent the majority modes of their training distribution, synthesizing data tends to cut off  the diverse, long-tail perspectives found in natural human discourse \citep{van-der-meer-etal-2024-empirical}. A student trained on such data can therefore exhibit an amplified, caricatured version of the teacher's social biases. The student model  reproduces stereotypical associations, skewed demographic representation, or unequal generation quality across groups \citep{gallegos2024bias}. This concern is larger for synthetic data than for original model outputs because the data is produced at scale and consumed directly as training material, and each round of the loop  compounds the previous round.
+
+\subsection{Security Risks}
+There are also security risks associated with synthetic training data. Relying on generated data introduces new attack vectors for maliciously polluting training data. If the teacher model or any stage of the generation pipeline is compromised, an adversary can mount a data-poisoning attack. Because synthetic corpora are typically too large to audit exhaustively, subtle back doors or malicious instruction--response pairs can be inserted, which  remain dormant until triggered in the deployed student. Poisoning even a tiny fraction of a web-scale corpus has been shown to be practical and cheap \citep{carlini2024poisoning}, and the risk is heightened when the ``teacher'' is an uncontrolled third-party model whose training data and alignment are opaque.
+
+\subsection{Privacy Preservation}
+Synthetic generation is frequently mentioned as a solution for data privacy. The idea is that synthetic data does not contain  personally identifiable information (PII) \citep{dwork2014algorithmic}, yet is able to reflect the statistical properties of  private data (such as medical records). 
+
+However, in this type of data there is a substantial risk of memorization. Without strict privacy guarantees during the generation phase, generative models can unintentionally reconstruct and therefore leak exact snippets of the sensitive human data on which they  were originally trained \citep{274574}.
+Privacy evaluations show that off-the-shelf privacy-preserving methods can fail \citep{ramesh-etal-2024-evaluating}. 
+
+Common privacy  approaches rely on differential privacy \citep{dwork2006calibrating}, a guarantee on the generative process that bounds how much the output distribution can change when a single individual's record is added to or removed from the dataset. This bound is controlled by a privacy budget, where smaller values enforce stronger protection at the cost of greater utility loss \citep{yue-etal-2023-synthetic}.
+
+
+\subsection{Copyright and Terms of Use}
+Part of the appeal of synthetic data is that it sidesteps the unclear legal status of scraping internet-scale human text, which has already produced copyright litigation. %with unresolved international boundaries. 
+The 2025 \emph{Bartz v.\ Anthropic} settlement in the US is illustrative. A district court found LLM training itself {\em exceedingly} transformative and thus a candidate for fair use, however, liability still arose from how the underlying corpus was \emph{obtained}, namely the ingestion of hundreds of thousands of pirated books, and Anthropic settled at roughly \$3{,}000 per work (about \$1.5 billion in total), with parallels in other legal cases such as \emph{Kadrey v.\ Meta}. This shows that to an increasing degree the data underlying training is scrutinized for copyright and terms of use.
+
+Synthetic data does not fully escape this issue. Distilling from a proprietary model raises a distinct issue: the terms of service of most commercial LLM APIs explicitly forbid using their outputs to train competing models. Data generated by a black-box teacher may therefore be legally problematic regardless of copyright. Such a tension  surfaced publicly in 2025 amid accusations that competing systems had been trained on the outputs of frontier APIs. For practitioners, this means that the licence of the \emph{generator} is as important to check as the licence of any human data it replaces.
+
+
+\section{Concluding Remarks}
+Synthetic data has moved from a niche augmentation method to a central ingredient of the LLM pipeline (Chapter~\ref{chap:pipeline}), driven by the prospect that human text becomes a scaling bottleneck (Chapter~\ref{chap:scaling}). Strong models and multi-agent orchestrations can simulate instruction data, evaluation benchmarks, and, more recently, whole agentic \emph{trajectories} of tool calls and decisions (Chapters~\ref{chap:agents} and~\ref{chap:tools}). 
+
+Because raw generations are noisy, curation, extrinsic utility together with intrinsic checks on correctness, diversity, and contamination, are as important as generation itself. The various setups can be considered forms of knowledge distillation organized along the axes of signal, data source, timing (off- vs.\ on-policy), and teacher identity. 
+
+Reusing synthetic data from the same model for self-improvement has promises for enabling verifiable reasoning (Chapter~\ref{chap:reasoning}). However, in all these pipelines we need to be careful about what data these models are consuming: without real-data anchoring and careful auditing, model collapse, bias amplification, security, privacy, and licensing risks all compound with every iteration.
+
+\bibliographystyle{plainnat}
+\bibliography{agenticbook,refs,case,synthetic}

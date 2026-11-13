@@ -1,0 +1,907 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 3,
+    "text": "Welcome to Evaluating and Improving Agentic Applications,"
+  },
+  {
+    "startInSeconds": 3,
+    "endInSeconds": 7,
+    "text": "built in partnership with Arize AI and taught by Laurie Voss,"
+  },
+  {
+    "startInSeconds": 7,
+    "endInSeconds": 10,
+    "text": "who is their Head of Developer Relations."
+  },
+  {
+    "startInSeconds": 10,
+    "endInSeconds": 13,
+    "text": "As AI capabilities continue to advance, there are"
+  },
+  {
+    "startInSeconds": 13,
+    "endInSeconds": 16,
+    "text": "a lot of wonderful applications that we can all build."
+  },
+  {
+    "startInSeconds": 16,
+    "endInSeconds": 19,
+    "text": "But I've seen among a lot of teams"
+  },
+  {
+    "startInSeconds": 19,
+    "endInSeconds": 22,
+    "text": "that when you start out building a new application,"
+  },
+  {
+    "startInSeconds": 22,
+    "endInSeconds": 24,
+    "text": "often by using quick, iterative tactics,"
+  },
+  {
+    "startInSeconds": 24,
+    "endInSeconds": 28,
+    "text": "you can get it to some okay level of performance."
+  },
+  {
+    "startInSeconds": 28,
+    "endInSeconds": 31,
+    "text": "But then to break through to a higher level of performance,"
+  },
+  {
+    "startInSeconds": 31,
+    "endInSeconds": 33,
+    "text": "to make something production ready,"
+  },
+  {
+    "startInSeconds": 33,
+    "endInSeconds": 36,
+    "text": "requires a disciplined, evals-driven"
+  },
+  {
+    "startInSeconds": 36,
+    "endInSeconds": 38,
+    "text": "method of development."
+  },
+  {
+    "startInSeconds": 38,
+    "endInSeconds": 42,
+    "text": "And so, knowing how to build evals and when to put them into place"
+  },
+  {
+    "startInSeconds": 42,
+    "endInSeconds": 45,
+    "text": "is a key skill for not just building prototypes,"
+  },
+  {
+    "startInSeconds": 45,
+    "endInSeconds": 49,
+    "text": "but going beyond that to building high-performing AI systems"
+  },
+  {
+    "startInSeconds": 49,
+    "endInSeconds": 52,
+    "text": "and building high-performing AI agents."
+  },
+  {
+    "startInSeconds": 52,
+    "endInSeconds": 55,
+    "text": "And Arize AI has been one of the leading teams"
+  },
+  {
+    "startInSeconds": 55,
+    "endInSeconds": 57,
+    "text": "on how to do that well."
+  },
+  {
+    "startInSeconds": 57,
+    "endInSeconds": 59,
+    "text": "Thanks for inviting me to the course."
+  },
+  {
+    "startInSeconds": 59,
+    "endInSeconds": 63,
+    "text": "Now, despite the importance of evals,"
+  },
+  {
+    "startInSeconds": 63,
+    "endInSeconds": 66,
+    "text": "one thing I often see is many teams will hold off building evals"
+  },
+  {
+    "startInSeconds": 66,
+    "endInSeconds": 69,
+    "text": "longer than I think would be ideal for that."
+  },
+  {
+    "startInSeconds": 69,
+    "endInSeconds": 72,
+    "text": "So Laurie, why do you think that's the case?"
+  },
+  {
+    "startInSeconds": 72,
+    "endInSeconds": 75,
+    "text": "Well, as you can imagine, we've done some user research on"
+  },
+  {
+    "startInSeconds": 75,
+    "endInSeconds": 79,
+    "text": "people building evals and what holds them back, and"
+  },
+  {
+    "startInSeconds": 79,
+    "endInSeconds": 82,
+    "text": "the primary thing holding people back is just knowing where to get started."
+  },
+  {
+    "startInSeconds": 82,
+    "endInSeconds": 86,
+    "text": "Anybody who knows what an eval is knows that they're valuable,"
+  },
+  {
+    "startInSeconds": 86,
+    "endInSeconds": 89,
+    "text": "They're basically tests,"
+  },
+  {
+    "startInSeconds": 89,
+    "endInSeconds": 92,
+    "text": "and the argument for robust testing test suites in software"
+  },
+  {
+    "startInSeconds": 92,
+    "endInSeconds": 95,
+    "text": "has been a very long one and very thoroughly made."
+  },
+  {
+    "startInSeconds": 95,
+    "endInSeconds": 98,
+    "text": "Nobody's arguing that you don't need tests."
+  },
+  {
+    "startInSeconds": 98,
+    "endInSeconds": 100,
+    "text": "The challenge is how to do them at all"
+  },
+  {
+    "startInSeconds": 100,
+    "endInSeconds": 102,
+    "text": "and then how to do them well."
+  },
+  {
+    "startInSeconds": 102,
+    "endInSeconds": 104,
+    "text": "They're quite different from deterministic tests that people are used to."
+  },
+  {
+    "startInSeconds": 104,
+    "endInSeconds": 107,
+    "text": "They also come with a lot of baggage from the traditional ML world"
+  },
+  {
+    "startInSeconds": 107,
+    "endInSeconds": 109,
+    "text": "in terms of terminology that can make them"
+  },
+  {
+    "startInSeconds": 109,
+    "endInSeconds": 111,
+    "text": "quite intimidating to get started with."
+  },
+  {
+    "startInSeconds": 111,
+    "endInSeconds": 113,
+    "text": "So one of my hopes for this course"
+  },
+  {
+    "startInSeconds": 113,
+    "endInSeconds": 115,
+    "text": "is that we'll be able to blow through"
+  },
+  {
+    "startInSeconds": 115,
+    "endInSeconds": 117,
+    "text": "the language barrier and get people into the mindset"
+  },
+  {
+    "startInSeconds": 117,
+    "endInSeconds": 121,
+    "text": "that these are just a new kind of logging, a new kind of testing,"
+  },
+  {
+    "startInSeconds": 121,
+    "endInSeconds": 124,
+    "text": "and that getting them right takes some new skills, but fundamentally"
+  },
+  {
+    "startInSeconds": 124,
+    "endInSeconds": 127,
+    "text": "isn't rocket science. Just like testing, getting your evals right"
+  },
+  {
+    "startInSeconds": 127,
+    "endInSeconds": 130,
+    "text": "can be fun, and then watching your application hill climb"
+  },
+  {
+    "startInSeconds": 130,
+    "endInSeconds": 134,
+    "text": "as you put a good definition of good in place"
+  },
+  {
+    "startInSeconds": 134,
+    "endInSeconds": 139,
+    "text": "is really a fun thing to watch."
+  },
+  {
+    "startInSeconds": 139,
+    "endInSeconds": 141,
+    "text": "Yeah. I found that one of the"
+  },
+  {
+    "startInSeconds": 141,
+    "endInSeconds": 144,
+    "text": "most challenging things about working on evals"
+  },
+  {
+    "startInSeconds": 144,
+    "endInSeconds": 146,
+    "text": "is, um, it's very stage-dependent."
+  },
+  {
+    "startInSeconds": 146,
+    "endInSeconds": 148,
+    "text": "So, I've definitely heard some people talk"
+  },
+  {
+    "startInSeconds": 148,
+    "endInSeconds": 151,
+    "text": "about, \"Build rigorous evals with very large datasets,"
+  },
+  {
+    "startInSeconds": 151,
+    "endInSeconds": 153,
+    "text": "very large golden datasets, um..."
+  },
+  {
+    "startInSeconds": 153,
+    "endInSeconds": 155,
+    "text": "And there are also fast moving teams"
+  },
+  {
+    "startInSeconds": 155,
+    "endInSeconds": 158,
+    "text": "that go, \"You know what? With Generative AI,"
+  },
+  {
+    "startInSeconds": 158,
+    "endInSeconds": 160,
+    "text": "you can just change a prompt, add a RAG module,"
+  },
+  {
+    "startInSeconds": 160,
+    "endInSeconds": 163,
+    "text": "change the context, and very iteratively"
+  },
+  {
+    "startInSeconds": 163,
+    "endInSeconds": 165,
+    "text": "make quick changes to your system.\""
+  },
+  {
+    "startInSeconds": 165,
+    "endInSeconds": 168,
+    "text": "And I find that when building applications,"
+  },
+  {
+    "startInSeconds": 168,
+    "endInSeconds": 170,
+    "text": "the most experienced teams will often use"
+  },
+  {
+    "startInSeconds": 170,
+    "endInSeconds": 173,
+    "text": "the fast iterative methods with very casual evals"
+  },
+  {
+    "startInSeconds": 173,
+    "endInSeconds": 176,
+    "text": "where you just kind of look at it, see if it works."
+  },
+  {
+    "startInSeconds": 176,
+    "endInSeconds": 178,
+    "text": "and that inspires what to change next."
+  },
+  {
+    "startInSeconds": 178,
+    "endInSeconds": 181,
+    "text": "But that works best only for the early stages of a project,"
+  },
+  {
+    "startInSeconds": 181,
+    "endInSeconds": 183,
+    "text": "and then as a project matures you start to"
+  },
+  {
+    "startInSeconds": 183,
+    "endInSeconds": 186,
+    "text": "get a more systematic understanding of what are the things that"
+  },
+  {
+    "startInSeconds": 186,
+    "endInSeconds": 188,
+    "text": "are really hard to solve. Like,"
+  },
+  {
+    "startInSeconds": 188,
+    "endInSeconds": 190,
+    "text": "is your customer service chatbot"
+  },
+  {
+    "startInSeconds": 190,
+    "endInSeconds": 193,
+    "text": "sometimes pulling up the wrong numbers, so let's evaluate that."
+  },
+  {
+    "startInSeconds": 193,
+    "endInSeconds": 197,
+    "text": "Or is the portion for deciding when to offer a return"
+  },
+  {
+    "startInSeconds": 197,
+    "endInSeconds": 199,
+    "text": "having bad judgments on when to say yes"
+  },
+  {
+    "startInSeconds": 199,
+    "endInSeconds": 201,
+    "text": "or when to say no. If so, then"
+  },
+  {
+    "startInSeconds": 201,
+    "endInSeconds": 203,
+    "text": "maybe we need a more rigorous evals for that."
+  },
+  {
+    "startInSeconds": 203,
+    "endInSeconds": 206,
+    "text": "There's this gradual process of going from"
+  },
+  {
+    "startInSeconds": 206,
+    "endInSeconds": 209,
+    "text": "casual look at it to see if it works type of evals"
+  },
+  {
+    "startInSeconds": 209,
+    "endInSeconds": 212,
+    "text": "to gradually, incrementally more rigorous evals"
+  },
+  {
+    "startInSeconds": 212,
+    "endInSeconds": 214,
+    "text": "using a range of tactics and measuring performance"
+  },
+  {
+    "startInSeconds": 214,
+    "endInSeconds": 217,
+    "text": "on a range of different dimensions. And so"
+  },
+  {
+    "startInSeconds": 217,
+    "endInSeconds": 220,
+    "text": "getting that feel right of when to go"
+  },
+  {
+    "startInSeconds": 220,
+    "endInSeconds": 222,
+    "text": "really fast and casual"
+  },
+  {
+    "startInSeconds": 222,
+    "endInSeconds": 225,
+    "text": "to gradually evolve to something really rigorous,"
+  },
+  {
+    "startInSeconds": 225,
+    "endInSeconds": 229,
+    "text": "is difficult unless you know how to do things at both ends of the spectrum"
+  },
+  {
+    "startInSeconds": 229,
+    "endInSeconds": 232,
+    "text": "and when to move along that spectrum."
+  },
+  {
+    "startInSeconds": 232,
+    "endInSeconds": 236,
+    "text": "Absolutely. One of the things that we're going to be covering in this course"
+  },
+  {
+    "startInSeconds": 236,
+    "endInSeconds": 239,
+    "text": "is the evolution from the"
+  },
+  {
+    "startInSeconds": 239,
+    "endInSeconds": 242,
+    "text": "basic stages of observability, where"
+  },
+  {
+    "startInSeconds": 242,
+    "endInSeconds": 246,
+    "text": "you're just reading traces one by one and applying your human judgment"
+  },
+  {
+    "startInSeconds": 246,
+    "endInSeconds": 249,
+    "text": "to what went wrong specifically and building your first evals,"
+  },
+  {
+    "startInSeconds": 249,
+    "endInSeconds": 253,
+    "text": "to being much more systematic about it, doing it at much greater scale,"
+  },
+  {
+    "startInSeconds": 253,
+    "endInSeconds": 258,
+    "text": "and, as you say, uh, turning it into a machine that does evals"
+  },
+  {
+    "startInSeconds": 258,
+    "endInSeconds": 262,
+    "text": "rather than a human process that does them one by one."
+  },
+  {
+    "startInSeconds": 262,
+    "endInSeconds": 265,
+    "text": "Yeah, I think it's a good insight. I think, um,"
+  },
+  {
+    "startInSeconds": 265,
+    "endInSeconds": 268,
+    "text": "evals are a reflection of what the developer"
+  },
+  {
+    "startInSeconds": 268,
+    "endInSeconds": 272,
+    "text": "or human preferences are for what is good versus bad,"
+  },
+  {
+    "startInSeconds": 272,
+    "endInSeconds": 276,
+    "text": "and is often itself an iterative process"
+  },
+  {
+    "startInSeconds": 276,
+    "endInSeconds": 279,
+    "text": "to get the evals to be that accurate reflection."
+  },
+  {
+    "startInSeconds": 279,
+    "endInSeconds": 283,
+    "text": "So often I think about how to evaluate the evals, or eval the evals,"
+  },
+  {
+    "startInSeconds": 283,
+    "endInSeconds": 286,
+    "text": "um, to figure out when to tune them or when to..."
+  },
+  {
+    "startInSeconds": 286,
+    "endInSeconds": 288,
+    "text": "improve them in some dimension."
+  },
+  {
+    "startInSeconds": 288,
+    "endInSeconds": 291,
+    "text": "Absolutely. And so, one of the things that you'll learn in this course is"
+  },
+  {
+    "startInSeconds": 291,
+    "endInSeconds": 295,
+    "text": "to test whether an agent does what you need it to do,"
+  },
+  {
+    "startInSeconds": 295,
+    "endInSeconds": 299,
+    "text": "identify where the changes are needed, and check whether those changes improve its performance,"
+  },
+  {
+    "startInSeconds": 299,
+    "endInSeconds": 303,
+    "text": "and you're going to put that into practice in hands-on labs."
+  },
+  {
+    "startInSeconds": 303,
+    "endInSeconds": 305,
+    "text": "So, what we're going to do is we're going to"
+  },
+  {
+    "startInSeconds": 305,
+    "endInSeconds": 306,
+    "text": "start by looking at what the agent actually did,"
+  },
+  {
+    "startInSeconds": 306,
+    "endInSeconds": 310,
+    "text": "using records of its activity, those"
+  },
+  {
+    "startInSeconds": 310,
+    "endInSeconds": 313,
+    "text": "Traces let you see how it handled the task,"
+  },
+  {
+    "startInSeconds": 313,
+    "endInSeconds": 316,
+    "text": "including which tools it called and what happened at each step."
+  },
+  {
+    "startInSeconds": 316,
+    "endInSeconds": 321,
+    "text": "From there, we'll be able to work out what good performance means for your application"
+  },
+  {
+    "startInSeconds": 321,
+    "endInSeconds": 323,
+    "text": "and build cases that test it."
+  },
+  {
+    "startInSeconds": 323,
+    "endInSeconds": 326,
+    "text": "As you review the results, you'll look for recurring failures"
+  },
+  {
+    "startInSeconds": 326,
+    "endInSeconds": 329,
+    "text": "and identify situations your tests don't yet cover."
+  },
+  {
+    "startInSeconds": 329,
+    "endInSeconds": 333,
+    "text": "Then, you'll learn how to automate those evaluations using code"
+  },
+  {
+    "startInSeconds": 333,
+    "endInSeconds": 335,
+    "text": "or an LLM-as-a-judge"
+  },
+  {
+    "startInSeconds": 335,
+    "endInSeconds": 338,
+    "text": "and check how reliably those evaluators work."
+  },
+  {
+    "startInSeconds": 338,
+    "endInSeconds": 341,
+    "text": "That gives you a way to test changes and see whether they actually help."
+  },
+  {
+    "startInSeconds": 341,
+    "endInSeconds": 344,
+    "text": "And you'll keep that process going after deployment,"
+  },
+  {
+    "startInSeconds": 344,
+    "endInSeconds": 346,
+    "text": "using what you learn from real users"
+  },
+  {
+    "startInSeconds": 346,
+    "endInSeconds": 349,
+    "text": "to improve both your agent and your evaluations."
+  },
+  {
+    "startInSeconds": 349,
+    "endInSeconds": 353,
+    "text": "And I think it's been interesting watching how the practice of evals has"
+  },
+  {
+    "startInSeconds": 353,
+    "endInSeconds": 355,
+    "text": "evolved even in the last"
+  },
+  {
+    "startInSeconds": 355,
+    "endInSeconds": 357,
+    "text": "half year or year."
+  },
+  {
+    "startInSeconds": 357,
+    "endInSeconds": 362,
+    "text": "One thing I know that both you and Arize AI co-founder"
+  },
+  {
+    "startInSeconds": 362,
+    "endInSeconds": 365,
+    "text": "Aparna Dhinakaran have been excited about"
+  },
+  {
+    "startInSeconds": 365,
+    "endInSeconds": 368,
+    "text": "is having AI agents help with part of this work."
+  },
+  {
+    "startInSeconds": 368,
+    "endInSeconds": 370,
+    "text": "I feel like a few years ago we built evals,"
+  },
+  {
+    "startInSeconds": 370,
+    "endInSeconds": 373,
+    "text": "and then the human engineer would keep on coming up with ways"
+  },
+  {
+    "startInSeconds": 373,
+    "endInSeconds": 375,
+    "text": "to hill climb on that evals."
+  },
+  {
+    "startInSeconds": 375,
+    "endInSeconds": 378,
+    "text": "And now we can, a little bit, have AI agents come up with ways"
+  },
+  {
+    "startInSeconds": 378,
+    "endInSeconds": 381,
+    "text": "to hill climb on that evals, and that's been exciting."
+  },
+  {
+    "startInSeconds": 381,
+    "endInSeconds": 383,
+    "text": "And then the other trend that feels early"
+  },
+  {
+    "startInSeconds": 383,
+    "endInSeconds": 385,
+    "text": "and flaky and unreliable and needs lots of steering,"
+  },
+  {
+    "startInSeconds": 385,
+    "endInSeconds": 389,
+    "text": "is to then have AI agents also try to figure out what"
+  },
+  {
+    "startInSeconds": 389,
+    "endInSeconds": 393,
+    "text": "goes wrong, to fit that into the evals."
+  },
+  {
+    "startInSeconds": 393,
+    "endInSeconds": 397,
+    "text": "And times I've tried to do this, you know, results were unreliable,"
+  },
+  {
+    "startInSeconds": 397,
+    "endInSeconds": 400,
+    "text": "and it'd need a lot of human steering to still insert that"
+  },
+  {
+    "startInSeconds": 400,
+    "endInSeconds": 403,
+    "text": "human context, that understanding of the hypotheses anyone comes up with,"
+  },
+  {
+    "startInSeconds": 403,
+    "endInSeconds": 408,
+    "text": "reading the agentic traces, what might be good and what might be bad."
+  },
+  {
+    "startInSeconds": 408,
+    "endInSeconds": 412,
+    "text": "But I feel like this disciplined, evals-driven development loop"
+  },
+  {
+    "startInSeconds": 412,
+    "endInSeconds": 416,
+    "text": "still feels like the core of how to build reliable applications,"
+  },
+  {
+    "startInSeconds": 416,
+    "endInSeconds": 418,
+    "text": "but gradually, maybe you and I can get"
+  },
+  {
+    "startInSeconds": 418,
+    "endInSeconds": 420,
+    "text": "agents to help us execute parts of this loop."
+  },
+  {
+    "startInSeconds": 420,
+    "endInSeconds": 422,
+    "text": "And I think that's very exciting."
+  },
+  {
+    "startInSeconds": 422,
+    "endInSeconds": 424,
+    "text": "Absolutely. I think, as you said, the difference"
+  },
+  {
+    "startInSeconds": 424,
+    "endInSeconds": 427,
+    "text": "between a year ago or even six months ago"
+  },
+  {
+    "startInSeconds": 427,
+    "endInSeconds": 430,
+    "text": "is really stark in how effective the agents"
+  },
+  {
+    "startInSeconds": 430,
+    "endInSeconds": 433,
+    "text": "can be at doing this kind of"
+  },
+  {
+    "startInSeconds": 433,
+    "endInSeconds": 436,
+    "text": "closed-loop, automatic improvement of software."
+  },
+  {
+    "startInSeconds": 436,
+    "endInSeconds": 440,
+    "text": "Every week, a new model comes out, and every time we try them,"
+  },
+  {
+    "startInSeconds": 440,
+    "endInSeconds": 442,
+    "text": "they are getting better and better at this process."
+  },
+  {
+    "startInSeconds": 442,
+    "endInSeconds": 446,
+    "text": "So it's a really exciting time to be working in evals."
+  },
+  {
+    "startInSeconds": 446,
+    "endInSeconds": 449,
+    "text": "Yeah, and having said that, I'm confident that evals is still"
+  },
+  {
+    "startInSeconds": 449,
+    "endInSeconds": 453,
+    "text": "an important human skill to learn, as opposed to an agent skill for..."
+  },
+  {
+    "startInSeconds": 453,
+    "endInSeconds": 455,
+    "text": "agent execute."
+  },
+  {
+    "startInSeconds": 455,
+    "endInSeconds": 458,
+    "text": "Because the process of evals is fundamentally aligning"
+  },
+  {
+    "startInSeconds": 458,
+    "endInSeconds": 462,
+    "text": "the criteria of optimizing with the human preferences."
+  },
+  {
+    "startInSeconds": 462,
+    "endInSeconds": 467,
+    "text": "And usually, the coding agent has no idea what the human prefers."
+  },
+  {
+    "startInSeconds": 467,
+    "endInSeconds": 471,
+    "text": "And so that human, the developer, you, have a context advantage"
+  },
+  {
+    "startInSeconds": 471,
+    "endInSeconds": 473,
+    "text": "over the agents, and"
+  },
+  {
+    "startInSeconds": 473,
+    "endInSeconds": 477,
+    "text": "until and unless you find a way to give that context to the agent,"
+  },
+  {
+    "startInSeconds": 477,
+    "endInSeconds": 481,
+    "text": "which we now do by helping shape the evals,"
+  },
+  {
+    "startInSeconds": 481,
+    "endInSeconds": 483,
+    "text": "it's not possible to take the human out of the loop,"
+  },
+  {
+    "startInSeconds": 483,
+    "endInSeconds": 486,
+    "text": "which is why this is a human skill, not just"
+  },
+  {
+    "startInSeconds": 486,
+    "endInSeconds": 488,
+    "text": "an agent skill, to know how to do evals."
+  },
+  {
+    "startInSeconds": 488,
+    "endInSeconds": 490,
+    "text": "Absolutely. The way I always put it"
+  },
+  {
+    "startInSeconds": 490,
+    "endInSeconds": 492,
+    "text": "is that you have the definition of"
+  },
+  {
+    "startInSeconds": 492,
+    "endInSeconds": 494,
+    "text": "good in your head, and"
+  },
+  {
+    "startInSeconds": 494,
+    "endInSeconds": 496,
+    "text": "unless you get it out of your head,"
+  },
+  {
+    "startInSeconds": 496,
+    "endInSeconds": 498,
+    "text": "the agent is never going to know what it is."
+  },
+  {
+    "startInSeconds": 498,
+    "endInSeconds": 501,
+    "text": "So, putting that definition of good,"
+  },
+  {
+    "startInSeconds": 501,
+    "endInSeconds": 503,
+    "text": "making it as expansive as possible, making it as detailed as possible,"
+  },
+  {
+    "startInSeconds": 503,
+    "endInSeconds": 506,
+    "text": "making it as precise as possible,"
+  },
+  {
+    "startInSeconds": 506,
+    "endInSeconds": 508,
+    "text": "is really where"
+  },
+  {
+    "startInSeconds": 508,
+    "endInSeconds": 511,
+    "text": "the human value comes into evals."
+  },
+  {
+    "startInSeconds": 511,
+    "endInSeconds": 513,
+    "text": "That's just a great way for me to end."
+  },
+  {
+    "startInSeconds": 513,
+    "endInSeconds": 517,
+    "text": "So, knowing how to build and use evals"
+  },
+  {
+    "startInSeconds": 517,
+    "endInSeconds": 520,
+    "text": "is a key skill of AI engineering."
+  },
+  {
+    "startInSeconds": 520,
+    "endInSeconds": 522,
+    "text": "I hope you enjoy the course"
+  },
+  {
+    "startInSeconds": 522,
+    "endInSeconds": 526,
+    "text": "and that you use these skills to build many exciting AI applications."
+  },
+  {
+    "startInSeconds": 526,
+    "endInSeconds": 528,
+    "text": "Let's go on to the next video"
+  },
+  {
+    "startInSeconds": 528,
+    "endInSeconds": 530,
+    "text": "and put your agents to the test."
+  }
+]

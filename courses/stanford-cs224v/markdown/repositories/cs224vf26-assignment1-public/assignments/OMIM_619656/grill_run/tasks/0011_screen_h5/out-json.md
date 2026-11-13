@@ -1,0 +1,50 @@
+# Homework 1 public teaching repository: assignments/OMIM_619656/grill_run/tasks/0011_screen_h5/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_619656/grill_run/tasks/0011_screen_h5/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_619656/grill_run/tasks/0011_screen_h5/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature notes that developmental delay/intellectual disability differentiates Shprintzen-Goldberg syndrome from related LDS presentations, though SMAD2-related LDS clinical descriptions include varying reports of craniofacial and neurocognitive features.",
+  "confidence": 0.7,
+  "evidence": [
+    {
+      "text": "Developmental delay and intellectual disability serve as differentiating features of Shprintzen-Goldberg syndrome relative to LDS subtypes including SMAD2/3-related conditions.",
+      "stance": "supports",
+      "source": {
+        "title": "Loeys-Dietz Syndrome",
+        "authors": [],
+        "year": null,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://appliedradiology.com/articles/loeys-dietz-syndrome",
+        "quote": "The differentiating features of SGS are developmental delay and intellectual disability ... SMAD2/3. Hum Mutat. 2018; 39 ( 5 ): 621 - 634."
+      },
+      "numbers": []
+    },
+    {
+      "text": "The phenotypic spectrum of SMAD2-related Loeys-Dietz syndrome has been discussed in relation to features including intellectual disability/learning difficulties and craniosynostosis.",
+      "stance": "neutral",
+      "source": {
+        "title": "Loeys\u2013dietz syndrome",
+        "authors": [
+          "A Verstraeten",
+          "HC Dietz"
+        ],
+        "year": 2021,
+        "journal": null,
+        "doi": "10.1002/9781119432692.ch36",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119432692.ch36",
+        "quote": "\u2026 of the phenotypic spectrum SMAD2related LDS should \u2026 intellectual disability (learning diffi\u2011 culties), brain anomalies (hydrocephalus, dilatation of the lateral ventricles), craniosynostosis (\u2026"
+      },
+      "numbers": []
+    }
+  ]
+}
+```

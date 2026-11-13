@@ -1,0 +1,119 @@
+# Project code: stanford-oval/Churro: tests/test_install.py
+
+[Course index](../../../../README.md) · [Original source](https://github.com/stanford-oval/Churro/blob/HEAD/tests/test_install.py) · [Raw file](../../../../raw/repositories/stanford-oval-churro/tests/test_install.py)
+
+Retrieved: 2026-11-13T17:04:51.902331+00:00
+
+```python
+from __future__ import annotations
+
+import sys
+from types import SimpleNamespace
+
+import pytest
+
+import churro_ocr._internal.install as install_module
+from churro_ocr.errors import ConfigurationError
+
+
+class _FakeDistribution:
+    def __init__(self, *, requires: list[str] | None) -> None:
+        self.requires = requires
+
+
+def test_install_runtime_dependencies_installs_hf_and_torch_with_uv(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    commands: list[list[str]] = []
+
+    def _run(command: list[str], *, check: bool = True) -> SimpleNamespace:
+        _ = check
+        commands.append(list(command))
+        return SimpleNamespace(returncode=0)
+
+    monkeypatch.setattr(
+        install_module.metadata,
+        "distribution",
+        lambda _: _FakeDistribution(
+            requires=[
+                'qwen-vl-utils; extra == "hf"',
+                'transformers>=5,<6; extra == "hf"',
+            ]
+        ),
+    )
+    monkeypatch.setattr(install_module.shutil, "which", lambda name: "/usr/bin/uv" if name == "uv" else None)
+    monkeypatch.setattr(install_module.subprocess, "run", _run)
+
+    result = install_module.install_runtime_dependencies(
+        target="hf",
+        torch_backend="cu126",
+    )
+
+    assert result.target == "hf"
+    assert commands == [
+        [
+            "/usr/bin/uv",
+            "pip",
+            "install",
+            "--python",
+            sys.executable,
+            "--upgrade",
+            "qwen-vl-utils",
+            "transformers>=5,<6",
+        ],
+        [
+            "/usr/bin/uv",
+            "pip",
+            "install",
+            "--python",
+            sys.executable,
+            "--upgrade",
+            "--torch-backend=cu126",
+            "torch",
+            "torchvision",
+        ],
+    ]
+
+
+def test_install_runtime_dependencies_installs_local_client_with_uv(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    commands: list[list[str]] = []
+
+    def _run(command: list[str], *, check: bool = True) -> SimpleNamespace:
+        _ = check
+        commands.append(list(command))
+        return SimpleNamespace(returncode=0)
+
+    monkeypatch.setattr(
+        install_module.metadata,
+        "distribution",
+        lambda _: _FakeDistribution(requires=['litellm[caching]==1.82.3; extra == "local"']),
+    )
+    monkeypatch.setattr(install_module.shutil, "which", lambda name: "/usr/bin/uv" if name == "uv" else None)
+    monkeypatch.setattr(install_module.subprocess, "run", _run)
+
+    result = install_module.install_runtime_dependencies(target="local")
+
+    assert result.target == "local"
+    assert commands == [
+        [
+            "/usr/bin/uv",
+            "pip",
+            "install",
+            "--python",
+            sys.executable,
+            "--upgrade",
+            "litellm[caching]==1.82.3",
+        ]
+    ]
+    assert result.notes == ()
+
+
+def test_install_runtime_dependencies_requires_uv(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setattr(install_module.shutil, "which", lambda _: None)
+
+    with pytest.raises(ConfigurationError, match="requires `uv` on PATH"):
+        install_module.install_runtime_dependencies(target="hf")
+
+```

@@ -1,0 +1,953 @@
+{
+  "source_id": "langchain-deep-agents",
+  "summary": "A hands-on course on configuring and deploying Deep Agents. It covers models, prompts, tools, MCP, thread state, approval, filesystems, sandboxes, interpreters, context, skills, memory, and subagents through a sales-assistant project.",
+  "limitations": [
+    "The analysis uses 29 public lesson documents from the archived course repository.",
+    "Python and TypeScript versions, repeated diagrams, quizzes, and matching code files count once per course.",
+    "Optional advanced sandbox and asynchronous-agent lessons are available and included. Product-specific instructions describe the archived version."
+  ],
+  "new_concept_ids": [
+    "model-selection",
+    "filesystem",
+    "code-interpreter",
+    "programmatic-tools",
+    "middleware",
+    "auth",
+    "deployment",
+    "managed-agents",
+    "dynamic-delegation",
+    "memory-scoping",
+    "state-replay",
+    "sales-agents"
+  ],
+  "concepts": [
+    {
+      "concept_id": "agent-architecture",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m1.1-overview.md",
+          "line": 34,
+          "page": null,
+          "excerpt": "An agent wraps the LLM in a tool-calling loop. Now the model can call tools, read what comes back, and keep looping until the task is done.",
+          "material_id": "lessons/m1.1-overview",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m1/m1.1-overview.md",
+          "sha256": "248def43c30ec37eb311488c648dbca970e9b3196f08765c9db3768ef1c5a5db"
+        }
+      ]
+    },
+    {
+      "concept_id": "harness",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m1.1-overview.md",
+          "line": 18,
+          "page": null,
+          "excerpt": "A **deep agent** is an AI agent that comes ready for real work. Like any agent, it runs an LLM in a loop so the model can call tools and keep going until a task is done; what makes it *deep* is the capabilities the harness gives it (a system prompt, a filesystem, subagents, and opt-in planning), which is why it holds up on long-horizon, multi-step jobs like research. Lesson 1 covers what a deep agent is and when to reach for one in depth; the slideshow below is a 30-second recap.",
+          "material_id": "lessons/m1.1-overview",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m1/m1.1-overview.md",
+          "sha256": "248def43c30ec37eb311488c648dbca970e9b3196f08765c9db3768ef1c5a5db"
+        }
+      ]
+    },
+    {
+      "concept_id": "long-horizon",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m1.1-overview.md",
+          "line": 18,
+          "page": null,
+          "excerpt": "A **deep agent** is an AI agent that comes ready for real work. Like any agent, it runs an LLM in a loop so the model can call tools and keep going until a task is done; what makes it *deep* is the capabilities the harness gives it (a system prompt, a filesystem, subagents, and opt-in planning), which is why it holds up on long-horizon, multi-step jobs like research. Lesson 1 covers what a deep agent is and when to reach for one in depth; the slideshow below is a 30-second recap.",
+          "material_id": "lessons/m1.1-overview",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m1/m1.1-overview.md",
+          "sha256": "248def43c30ec37eb311488c648dbca970e9b3196f08765c9db3768ef1c5a5db"
+        }
+      ]
+    },
+    {
+      "concept_id": "frameworks",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m1.2-running-a-deep-agent.md",
+          "line": 25,
+          "page": null,
+          "excerpt": "Deep Agents is a harness for developers who want to build their own agent. It comes with built-in pieces like a filesystem, subagents, skills, and memory, and each one is yours to configure. You choose the model, the tools, what the agent can read or write, which actions need human approval, and where it runs. This course walks through each of those choices, so you can shape an agent around your own product.",
+          "material_id": "lessons/m1.2-running-a-deep-agent",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m1/m1.2-running-a-deep-agent.md",
+          "sha256": "eca6cd557100a64c642dbac7f2c892c15c99bac85c53f9ea4ef28ba328a3b36a"
+        }
+      ]
+    },
+    {
+      "concept_id": "model-selection",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m1.3-models.md",
+          "line": 44,
+          "page": null,
+          "excerpt": "`langchain`’s model-agnostic design means you can swap in whatever fits your needs:",
+          "material_id": "lessons/m1.3-models",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m1/m1.3-models.md",
+          "sha256": "827597f0df67a284d4b55c45e4b1fe6f5e19e2f1bca371378d79cec4dd5ad08c"
+        }
+      ]
+    },
+    {
+      "concept_id": "prompting",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m1.4-system-prompt.md",
+          "line": 48,
+          "page": null,
+          "excerpt": "- The system prompt **guides the model and is part of every model call**.",
+          "material_id": "lessons/m1.4-system-prompt",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m1/m1.4-system-prompt.md",
+          "sha256": "74205271ccc2ccfabf1ba59a31d85410f7e102bed8196d4a62ce343f584a67f7"
+        }
+      ]
+    },
+    {
+      "concept_id": "persona",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m1.4-system-prompt.md",
+          "line": 55,
+          "page": null,
+          "excerpt": "You’ll try this yourself in Lab 1: swap in a pirate, cowboy, or Shakespeare persona and watch the system message change to match in LangSmith.",
+          "material_id": "lessons/m1.4-system-prompt",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m1/m1.4-system-prompt.md",
+          "sha256": "74205271ccc2ccfabf1ba59a31d85410f7e102bed8196d4a62ce343f584a67f7"
+        }
+      ]
+    },
+    {
+      "concept_id": "kv-cache",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m1.4-system-prompt.md",
+          "line": 74,
+          "page": null,
+          "excerpt": "## Prompt Caching (Optional)",
+          "material_id": "lessons/m1.4-system-prompt",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m1/m1.4-system-prompt.md",
+          "sha256": "74205271ccc2ccfabf1ba59a31d85410f7e102bed8196d4a62ce343f584a67f7"
+        }
+      ]
+    },
+    {
+      "concept_id": "safety",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m1.4-system-prompt.md",
+          "line": 57,
+          "page": null,
+          "excerpt": "In the homework, you’ll write a constraint that scopes the agent to a single topic domain of your choosing and instructs it to refuse or redirect anything outside that domain.",
+          "material_id": "lessons/m1.4-system-prompt",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m1/m1.4-system-prompt.md",
+          "sha256": "74205271ccc2ccfabf1ba59a31d85410f7e102bed8196d4a62ce343f584a67f7"
+        }
+      ]
+    },
+    {
+      "concept_id": "tool-use",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m1.5-tools.md",
+          "line": 44,
+          "page": null,
+          "excerpt": "Tools are functions you give an agent so it can act: look things up, run queries, call APIs, write files. You define what they do; the agent decides when to call them and what arguments to pass.",
+          "material_id": "lessons/m1.5-tools",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m1/m1.5-tools.md",
+          "sha256": "0c455e6e4448dd639024ceb636211a58f3db2cfb2653463b66f05a65502d8121"
+        }
+      ]
+    },
+    {
+      "concept_id": "structured-output",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m1.5-tools.md",
+          "line": 86,
+          "page": null,
+          "excerpt": "tag: 'Step 1 of 7 · SDK provides tool schemas',",
+          "material_id": "lessons/m1.5-tools",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m1/m1.5-tools.md",
+          "sha256": "0c455e6e4448dd639024ceb636211a58f3db2cfb2653463b66f05a65502d8121"
+        }
+      ]
+    },
+    {
+      "concept_id": "middleware",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m1.5-tools.md",
+          "line": 61,
+          "page": null,
+          "excerpt": "These are always present. The `tools` parameter on `create_deep_agent` is **additive**: whatever you pass is merged with the built-in suite, not substituted for it. A `write_todos` tool for managing a running to-do list is also available, but it’s opt-in: add `TodoListMiddleware` to `middleware` to turn it on. You’ll see it in Module 4.",
+          "material_id": "lessons/m1.5-tools",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m1/m1.5-tools.md",
+          "sha256": "0c455e6e4448dd639024ceb636211a58f3db2cfb2653463b66f05a65502d8121"
+        }
+      ]
+    },
+    {
+      "concept_id": "mcp",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m1.6-mcp.md",
+          "line": 49,
+          "page": null,
+          "excerpt": "Model Context Protocol (MCP) is an open protocol that standardizes how applications provide tools and context to LLMs. Instead of each integration requiring custom code in your agent, MCP servers expose a consistent interface that any MCP-aware client can connect to.",
+          "material_id": "lessons/m1.6-mcp",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m1/m1.6-mcp.md",
+          "sha256": "896a7d85b8b2d6cfe8448eb6898011266631d1988e524fa4b91bcef4799c9ee9"
+        }
+      ]
+    },
+    {
+      "concept_id": "auth",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m1.6-mcp.md",
+          "line": 26,
+          "page": null,
+          "excerpt": "<button class=\"lt-tab\" data-p=\"lab2\" role=\"tab\" aria-selected=\"false\">Advanced OAuth</button>",
+          "material_id": "lessons/m1.6-mcp",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m1/m1.6-mcp.md",
+          "sha256": "896a7d85b8b2d6cfe8448eb6898011266631d1988e524fa4b91bcef4799c9ee9"
+        }
+      ]
+    },
+    {
+      "concept_id": "state",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m1.7-messages-threads-checkpointers.md",
+          "line": 77,
+          "page": null,
+          "excerpt": "A **thread** is one ongoing conversation or run history. If you want an agent to remember previous turns across separate `invoke()` calls, give those calls the same `thread_id`:",
+          "material_id": "lessons/m1.7-messages-threads-checkpointers",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m1/m1.7-messages-threads-checkpointers.md",
+          "sha256": "32a3e38ca801b803509416cf26801c9e65d316f3ba686b369c90ba95567684ad"
+        }
+      ]
+    },
+    {
+      "concept_id": "checkpointing",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m1.7-messages-threads-checkpointers.md",
+          "line": 104,
+          "page": null,
+          "excerpt": "A **checkpointer** saves thread state between calls. Without a checkpointer, there is nowhere to store the history for later. A `thread_id` is just an address; the checkpointer is the storage system that knows how to save and load whatever’s at that address, and a single checkpointer instance holds many threads at once. For local development, the simplest checkpointer is `MemorySaver()`:",
+          "material_id": "lessons/m1.7-messages-threads-checkpointers",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m1/m1.7-messages-threads-checkpointers.md",
+          "sha256": "32a3e38ca801b803509416cf26801c9e65d316f3ba686b369c90ba95567684ad"
+        }
+      ]
+    },
+    {
+      "concept_id": "durable-execution",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m1.7-messages-threads-checkpointers.md",
+          "line": 119,
+          "page": null,
+          "excerpt": "This is what makes multi-turn state reliable: the checkpointer saves the current thread, and the next call with the same `thread_id` can continue from that saved state.",
+          "material_id": "lessons/m1.7-messages-threads-checkpointers",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m1/m1.7-messages-threads-checkpointers.md",
+          "sha256": "32a3e38ca801b803509416cf26801c9e65d316f3ba686b369c90ba95567684ad"
+        }
+      ]
+    },
+    {
+      "concept_id": "state-replay",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m1.7-messages-threads-checkpointers.md",
+          "line": 140,
+          "page": null,
+          "excerpt": "## Time Travel",
+          "material_id": "lessons/m1.7-messages-threads-checkpointers",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m1/m1.7-messages-threads-checkpointers.md",
+          "sha256": "32a3e38ca801b803509416cf26801c9e65d316f3ba686b369c90ba95567684ad"
+        }
+      ]
+    },
+    {
+      "concept_id": "hitl",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m1.8-hitl.md",
+          "line": 40,
+          "page": null,
+          "excerpt": "In the tools lesson, you saw that tools can do more than retrieve information: they can also take actions. In the previous lesson, you saw how messages, threads, and checkpointers let an agent save and resume state. Human-in-the-Loop (HITL) combines those ideas: pause before a sensitive action and let a person approve, edit, reject, or respond to it.",
+          "material_id": "lessons/m1.8-hitl",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m1/m1.8-hitl.md",
+          "sha256": "dd2b4fbda81067f16f01bdd0f8424559060846f2c81f915e5940d4a7e5dfc744"
+        }
+      ]
+    },
+    {
+      "concept_id": "human-collaboration",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m1.8-hitl.md",
+          "line": 604,
+          "page": null,
+          "excerpt": "## Lab 2: Asking the User a Question",
+          "material_id": "lessons/m1.8-hitl",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m1/m1.8-hitl.md",
+          "sha256": "dd2b4fbda81067f16f01bdd0f8424559060846f2c81f915e5940d4a7e5dfc744"
+        }
+      ]
+    },
+    {
+      "concept_id": "filesystem",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m2.1-the-deep-agent-environment.md",
+          "line": 58,
+          "page": null,
+          "excerpt": "*The LLM calls standard filesystem tools; the backend determines where the data actually lives.*",
+          "material_id": "lessons/m2.1-the-deep-agent-environment",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m2/m2.1-the-deep-agent-environment.md",
+          "sha256": "2ca6345de8ac30ebacfa8bb9fc645174fd4af2459bbab86d36efbd70dc52acf0"
+        }
+      ]
+    },
+    {
+      "concept_id": "threat-modeling",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m2.2-filesystem-backends.md",
+          "line": 248,
+          "page": null,
+          "excerpt": "<a id=\"permissions\"></a>",
+          "material_id": "lessons/m2.2-filesystem-backends",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m2/m2.2-filesystem-backends.md",
+          "sha256": "2dbb154a7f6b8b7994b6c3d6204aacf47665248849de044cbce49f771a0a9b75"
+        }
+      ]
+    },
+    {
+      "concept_id": "sandboxing",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m2.3-sandboxes-and-localshell.md",
+          "line": 100,
+          "page": null,
+          "excerpt": "A sandbox is a temporary, isolated workspace containing a filesystem, command execution environment, and other resources. Sandbox backends run commands inside that workspace instead of on your host machine.",
+          "material_id": "lessons/m2.3-sandboxes-and-localshell",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m2/m2.3-sandboxes-and-localshell.md",
+          "sha256": "b75e6f9febd0dd7c8d7278968301548285efee76549e811b5c647c0c6a08876a"
+        }
+      ]
+    },
+    {
+      "concept_id": "coding-agents",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m2.3-sandboxes-and-localshell.md",
+          "line": 76,
+          "page": null,
+          "excerpt": "Shell-capable backends expose an `execute(command)` tool. The agent calls it to run scripts it has written, invoke CLI tools, and compile and test code. The combined command output, exit code, and execution metadata come back as a tool result on the next LLM call.",
+          "material_id": "lessons/m2.3-sandboxes-and-localshell",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m2/m2.3-sandboxes-and-localshell.md",
+          "sha256": "b75e6f9febd0dd7c8d7278968301548285efee76549e811b5c647c0c6a08876a"
+        }
+      ]
+    },
+    {
+      "concept_id": "code-interpreter",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m2.4-interpreter.md",
+          "line": 46,
+          "page": null,
+          "excerpt": "**Interpreters are a lighter-weight code execution option.** They embed a JavaScript runtime directly in the agent loop with no cloud infrastructure and no API calls to spin up a shell environment. The tradeoff is a narrower direct capability set: JavaScript standard library only, no external packages, no direct filesystem, and no direct network access.",
+          "material_id": "lessons/m2.4-interpreter",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m2/m2.4-interpreter.md",
+          "sha256": "a73cb09ef9cf1c187a50e8bde41badb82948457b4783c37fc8da4388058d6990"
+        }
+      ]
+    },
+    {
+      "concept_id": "programmatic-tools",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m2.4-interpreter.md",
+          "line": 372,
+          "page": null,
+          "excerpt": "## Lab 2: Programmatic Tool Calling with Chinook",
+          "material_id": "lessons/m2.4-interpreter",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m2/m2.4-interpreter.md",
+          "sha256": "a73cb09ef9cf1c187a50e8bde41badb82948457b4783c37fc8da4388058d6990"
+        }
+      ]
+    },
+    {
+      "concept_id": "codeact",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m2.4-interpreter.md",
+          "line": 50,
+          "page": null,
+          "excerpt": "*The LLM writes code; the Interpreter runs it and returns the real result.*",
+          "material_id": "lessons/m2.4-interpreter",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m2/m2.4-interpreter.md",
+          "sha256": "a73cb09ef9cf1c187a50e8bde41badb82948457b4783c37fc8da4388058d6990"
+        }
+      ]
+    },
+    {
+      "concept_id": "context-engineering",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m3.1-summarization-context-offloading.md",
+          "line": 42,
+          "page": null,
+          "excerpt": "Long-running agents build up long message histories, and Deep Agents handles this in two ways. Summarization condenses older messages once the context window fills up. Offloading catches large tool results and human messages before they reach the model, saves the full content to the filesystem, and leaves a short pointer in its place.",
+          "material_id": "lessons/m3.1-summarization-context-offloading",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m3/m3.1-summarization-context-offloading.md",
+          "sha256": "ae56f3c58a89d7b6baf2c25b0c5261e7a2912f2d249cc15759fcda542d89d4e9"
+        }
+      ]
+    },
+    {
+      "concept_id": "compaction",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m3.1-summarization-context-offloading.md",
+          "line": 66,
+          "page": null,
+          "excerpt": "When the context hits 85%, the middleware picks a cutoff point that keeps the most recent messages intact and summarizes older messages into a single block. The messages being summarized are appended to /conversation\\_history/{session\\_id}.md on the filesystem. The middleware generates the session ID internally. The summary message the model receives includes a link to that file, so the agent can read those older sections back with read\\_file if it needs the detail. Because a summary is far more compact than the messages it replaces, the token count drops sharply and the conversation can continue.",
+          "material_id": "lessons/m3.1-summarization-context-offloading",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m3/m3.1-summarization-context-offloading.md",
+          "sha256": "ae56f3c58a89d7b6baf2c25b0c5261e7a2912f2d249cc15759fcda542d89d4e9"
+        }
+      ]
+    },
+    {
+      "concept_id": "context-offload",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m3.1-summarization-context-offloading.md",
+          "line": 42,
+          "page": null,
+          "excerpt": "Long-running agents build up long message histories, and Deep Agents handles this in two ways. Summarization condenses older messages once the context window fills up. Offloading catches large tool results and human messages before they reach the model, saves the full content to the filesystem, and leaves a short pointer in its place.",
+          "material_id": "lessons/m3.1-summarization-context-offloading",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m3/m3.1-summarization-context-offloading.md",
+          "sha256": "ae56f3c58a89d7b6baf2c25b0c5261e7a2912f2d249cc15759fcda542d89d4e9"
+        }
+      ]
+    },
+    {
+      "concept_id": "procedural-memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m3.2-skills.md",
+          "line": 35,
+          "page": null,
+          "excerpt": "A skill is a directory containing a `SKILL.md` file. Skills follow an [open standard](../readings/agentskills-io-specification-f36ae400.md), which means they are portable across agents and shareable across teams.",
+          "material_id": "lessons/m3.2-skills",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m3/m3.2-skills.md",
+          "sha256": "7405f9970da59864c49d50d68aadf88c526cf44f1cfabe1904c11019fbcc6caf"
+        }
+      ]
+    },
+    {
+      "concept_id": "progressive-disclosure",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m3.2-skills.md",
+          "line": 83,
+          "page": null,
+          "excerpt": "Skills use a three-stage pattern to keep the agent’s context lean:",
+          "material_id": "lessons/m3.2-skills",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m3/m3.2-skills.md",
+          "sha256": "7405f9970da59864c49d50d68aadf88c526cf44f1cfabe1904c11019fbcc6caf"
+        }
+      ]
+    },
+    {
+      "concept_id": "memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m3.3-memory.md",
+          "line": 39,
+          "page": null,
+          "excerpt": "Agent memory splits into two scopes: short-term and long-term.",
+          "material_id": "lessons/m3.3-memory",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m3/m3.3-memory.md",
+          "sha256": "7dba431571336d05b921b8785763ed4d976d78146e3bfc764c2a9f79c725bc26"
+        }
+      ]
+    },
+    {
+      "concept_id": "working-memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m3.3-memory.md",
+          "line": 43,
+          "page": null,
+          "excerpt": "| **Short-term memory** | The running message history for a single thread. It’s tracked automatically by the checkpointer and does not persist beyond that thread. |",
+          "material_id": "lessons/m3.3-memory",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m3/m3.3-memory.md",
+          "sha256": "7dba431571336d05b921b8785763ed4d976d78146e3bfc764c2a9f79c725bc26"
+        }
+      ]
+    },
+    {
+      "concept_id": "memory-scoping",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m3.3-memory.md",
+          "line": 194,
+          "page": null,
+          "excerpt": "## Scoping memory",
+          "material_id": "lessons/m3.3-memory",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m3/m3.3-memory.md",
+          "sha256": "7dba431571336d05b921b8785763ed4d976d78146e3bfc764c2a9f79c725bc26"
+        }
+      ]
+    },
+    {
+      "concept_id": "personalization",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m3.3-memory.md",
+          "line": 44,
+          "page": null,
+          "excerpt": "| **Long-term memory** | What the agent has learned that should carry over across threads: user preferences, project conventions, recurring facts. It’s tracked in a persistent store or filesystem, separate from any one thread’s message history. |",
+          "material_id": "lessons/m3.3-memory",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m3/m3.3-memory.md",
+          "sha256": "7dba431571336d05b921b8785763ed4d976d78146e3bfc764c2a9f79c725bc26"
+        }
+      ]
+    },
+    {
+      "concept_id": "memory-maintenance",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m3.3-memory.md",
+          "line": 123,
+          "page": null,
+          "excerpt": "## How memory is updated",
+          "material_id": "lessons/m3.3-memory",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m3/m3.3-memory.md",
+          "sha256": "7dba431571336d05b921b8785763ed4d976d78146e3bfc764c2a9f79c725bc26"
+        }
+      ]
+    },
+    {
+      "concept_id": "planning",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m4.1-delegation.md",
+          "line": 41,
+          "page": null,
+          "excerpt": "- **Planning**: `write_todos` keeps a visible task list so the main agent can track what is pending, in progress, and complete. It’s opt-in, enabled by adding `TodoListMiddleware` when you build the agent.",
+          "material_id": "lessons/m4.1-delegation",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m4/m4.1-delegation.md",
+          "sha256": "fe59c4888157accfb8430fda98b86443d7e0c992511b6eba87ca1e7e4421ac8d"
+        }
+      ]
+    },
+    {
+      "concept_id": "multi-agent",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m4.1-delegation.md",
+          "line": 42,
+          "page": null,
+          "excerpt": "- **Delegation**: subagents let the main agent hand focused work to another agent with its own instructions, tools, and context.",
+          "material_id": "lessons/m4.1-delegation",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m4/m4.1-delegation.md",
+          "sha256": "fe59c4888157accfb8430fda98b86443d7e0c992511b6eba87ca1e7e4421ac8d"
+        }
+      ]
+    },
+    {
+      "concept_id": "orchestrator-workers",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m4.1-delegation.md",
+          "line": 81,
+          "page": null,
+          "excerpt": "<text x=\"370\" y=\"53\" text-anchor=\"middle\" font-size=\"11\" fill=\"#99D3FF\" font-family=\"'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace\">A supervisor splits the work; specialists run in parallel</text>",
+          "material_id": "lessons/m4.1-delegation",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m4/m4.1-delegation.md",
+          "sha256": "fe59c4888157accfb8430fda98b86443d7e0c992511b6eba87ca1e7e4421ac8d"
+        }
+      ]
+    },
+    {
+      "concept_id": "context-isolation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m4.1-delegation.md",
+          "line": 146,
+          "page": null,
+          "excerpt": "## Context isolation",
+          "material_id": "lessons/m4.1-delegation",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m4/m4.1-delegation.md",
+          "sha256": "fe59c4888157accfb8430fda98b86443d7e0c992511b6eba87ca1e7e4421ac8d"
+        }
+      ]
+    },
+    {
+      "concept_id": "agent-as-tool",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m4.1-delegation.md",
+          "line": 35,
+          "page": null,
+          "excerpt": "Long-running agents need coordination. A big task can span many steps, tool calls, files, and intermediate results. Without an explicit way to track the plan and isolate specialized work, the main agent can drift or overload its context.",
+          "material_id": "lessons/m4.1-delegation",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m4/m4.1-delegation.md",
+          "sha256": "fe59c4888157accfb8430fda98b86443d7e0c992511b6eba87ca1e7e4421ac8d"
+        }
+      ]
+    },
+    {
+      "concept_id": "shared-memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m4.1-delegation.md",
+          "line": 67,
+          "page": null,
+          "excerpt": "The list is saved in the agent's state. Across turns, it persists when you use the same thread with a checkpointer, following the thread pattern introduced earlier in the course. On a long task the agent always has an explicit, up-to-date plan to check against instead of trying to hold the whole thing in its head. Think of it as writing the steps on a whiteboard and ticking them off as it goes.",
+          "material_id": "lessons/m4.1-delegation",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m4/m4.1-delegation.md",
+          "sha256": "fe59c4888157accfb8430fda98b86443d7e0c992511b6eba87ca1e7e4421ac8d"
+        }
+      ]
+    },
+    {
+      "concept_id": "parallelization",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m4.2-building-a-subagent-team.md",
+          "line": 43,
+          "page": null,
+          "excerpt": "The main agent is the **editor**. It knows the distributor’s top four genres (**Rock, Latin, Metal, and Alternative & Punk**) and kicks off a research subagent for each one, all at once. Each researcher goes off and looks up what’s new in its genre, then hands back a short, polished segment. The editor collects the four segments, assembles them into one newsletter, and renders it as a styled HTML page.",
+          "material_id": "lessons/m4.2-building-a-subagent-team",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m4/m4.2-building-a-subagent-team.md",
+          "sha256": "dd126ab7ca0a04efbcf4a418ea82edae9907b240f342cf37259fc9364f6efa47"
+        }
+      ]
+    },
+    {
+      "concept_id": "deep-research",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m4.2-building-a-subagent-team.md",
+          "line": 43,
+          "page": null,
+          "excerpt": "The main agent is the **editor**. It knows the distributor’s top four genres (**Rock, Latin, Metal, and Alternative & Punk**) and kicks off a research subagent for each one, all at once. Each researcher goes off and looks up what’s new in its genre, then hands back a short, polished segment. The editor collects the four segments, assembles them into one newsletter, and renders it as a styled HTML page.",
+          "material_id": "lessons/m4.2-building-a-subagent-team",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m4/m4.2-building-a-subagent-team.md",
+          "sha256": "dd126ab7ca0a04efbcf4a418ea82edae9907b240f342cf37259fc9364f6efa47"
+        }
+      ]
+    },
+    {
+      "concept_id": "dynamic-delegation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m4.3-dynamic-subagents.md",
+          "line": 50,
+          "page": null,
+          "excerpt": "Now say the job is 1,000 sales transcripts, same task on every one: summarize it. There’s no longer a short list the model can enumerate in its head, and someone still has to track which ones are done.",
+          "material_id": "lessons/m4.3-dynamic-subagents",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m4/m4.3-dynamic-subagents.md",
+          "sha256": "31401e1c7ff7c9a5bc93aa686a7484a96ff9c5df474f73fe68e0ea1dc3ce8800"
+        }
+      ]
+    },
+    {
+      "concept_id": "sales-agents",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m5.1-putting-it-all-together.md",
+          "line": 21,
+          "page": null,
+          "excerpt": "## The project: a sales assistant for Chinook",
+          "material_id": "lessons/m5.1-putting-it-all-together",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m5/m5.1-putting-it-all-together.md",
+          "sha256": "1c13a33750c99ae23c8414fd0dea7971bcc264ded8da730e2e7777e9cd2f39b6"
+        }
+      ]
+    },
+    {
+      "concept_id": "deployment",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m5.2-local-deployment.md",
+          "line": 50,
+          "page": null,
+          "excerpt": "## From a script to a service",
+          "material_id": "lessons/m5.2-local-deployment",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m5/m5.2-local-deployment.md",
+          "sha256": "9ee2bbf9afe8e5df6cdbc240d10fabf50db46b30bbb69b1d9525922593af03e7"
+        }
+      ]
+    },
+    {
+      "concept_id": "langgraph",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m5.2-local-deployment.md",
+          "line": 52,
+          "page": null,
+          "excerpt": "`langgraph dev` (part of the `langgraph-cli` package) provides a cloud-deployment-like environment on your local machine: it hosts your agent behind an HTTP API and runs the supporting infrastructure around it.",
+          "material_id": "lessons/m5.2-local-deployment",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m5/m5.2-local-deployment.md",
+          "sha256": "9ee2bbf9afe8e5df6cdbc240d10fabf50db46b30bbb69b1d9525922593af03e7"
+        }
+      ]
+    },
+    {
+      "concept_id": "observability",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m5.2-local-deployment.md",
+          "line": 81,
+          "page": null,
+          "excerpt": "`langgraph dev` includes a chat and debugging interface called “Studio”. As shown in the diagram, Studio uses the API endpoints provided by `langgraph dev` to allow you to converse with your agent via chat as well as examine and control the underlying agentic loop via a graphical debugger.",
+          "material_id": "lessons/m5.2-local-deployment",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m5/m5.2-local-deployment.md",
+          "sha256": "9ee2bbf9afe8e5df6cdbc240d10fabf50db46b30bbb69b1d9525922593af03e7"
+        }
+      ]
+    },
+    {
+      "concept_id": "async-agents",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m5.4-async-subagents.md",
+          "line": 44,
+          "page": null,
+          "excerpt": "Async subagents let a supervisor agent launch background tasks that return immediately, so the supervisor can continue interacting with the user while subagents work concurrently. The supervisor can check progress, send follow-up instructions, or cancel tasks at any point.",
+          "material_id": "lessons/m5.4-async-subagents",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m5/m5.4-async-subagents.md",
+          "sha256": "94a1567696f88c6543532caee15326d5cb3f57638e6d48281a7e38aaf987ecda"
+        }
+      ]
+    },
+    {
+      "concept_id": "prompt-injection",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m5.5-sandbox-async-agent.md",
+          "line": 62,
+          "page": null,
+          "excerpt": "![Step 4 of 6 · The Error Channel Is Untrusted](https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m5/images/m5.5-sandbox-step4-error-injection.svg?v=2)",
+          "material_id": "lessons/m5.5-sandbox-async-agent",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m5/m5.5-sandbox-async-agent.md",
+          "sha256": "f791765b7333d399cd28a4a9c1e627607c7028b80ba238c6d3621bcf15d675dc"
+        }
+      ]
+    },
+    {
+      "concept_id": "privacy",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m2.3-sandboxes-and-localshell.md",
+          "line": 115,
+          "page": null,
+          "excerpt": "Sandbox-as-a-tool keeps the LLM API key on the host, away from the untrusted code running in the sandbox. But an agent often needs other keys too, to reach services on the user’s behalf. LangSmith Sandboxes can attach those keys to outgoing requests without exposing them to the code the agent runs. The slideshow below shows how:",
+          "material_id": "lessons/m2.3-sandboxes-and-localshell",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m2/m2.3-sandboxes-and-localshell.md",
+          "sha256": "b75e6f9febd0dd7c8d7278968301548285efee76549e811b5c647c0c6a08876a"
+        }
+      ]
+    },
+    {
+      "concept_id": "managed-agents",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m6.1-what-is-managed-deep-agents.md",
+          "line": 12,
+          "page": null,
+          "excerpt": "# What Is Managed Deep Agents?",
+          "material_id": "lessons/m6.1-what-is-managed-deep-agents",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m6/m6.1-what-is-managed-deep-agents.md",
+          "sha256": "ddbdeb77046d7b22577df6af131d3fc4acd47e80727b1d705314c6cd8ab97b0b"
+        }
+      ]
+    },
+    {
+      "concept_id": "long-context",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m4.3-dynamic-subagents.md",
+          "line": 799,
+          "page": null,
+          "excerpt": "> **Core insight:** instead of a model treating a long context as one monolithic input, split it into pieces, call each piece, and combine the results, recursing on any piece still too big to handle directly.",
+          "material_id": "lessons/m4.3-dynamic-subagents",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m4/m4.3-dynamic-subagents.md",
+          "sha256": "31401e1c7ff7c9a5bc93aa686a7484a96ff9c5df474f73fe68e0ea1dc3ce8800"
+        }
+      ]
+    },
+    {
+      "concept_id": "recursive-agents",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m4.3-dynamic-subagents.md",
+          "line": 904,
+          "page": null,
+          "excerpt": "Deep Agents’ dynamic subagents use that same divide-and-conquer technique, but dispatch full agents rather than recursing on the same model call. The LangChain team’s more precise term for that is **recursive agents (RA)**; “RLM” is the popular shorthand you’ll see used for the pattern generally.",
+          "material_id": "lessons/m4.3-dynamic-subagents",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m4/m4.3-dynamic-subagents.md",
+          "sha256": "31401e1c7ff7c9a5bc93aa686a7484a96ff9c5df474f73fe68e0ea1dc3ce8800"
+        }
+      ]
+    },
+    {
+      "concept_id": "evaluation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m4.3-dynamic-subagents.md",
+          "line": 910,
+          "page": null,
+          "excerpt": "The OOLONG benchmark (long-context reasoning and aggregation) is the same shape of test the paper runs, and running it ourselves against the interpreter-enabled agent from this lesson agrees with the paper’s direction, at more than one context length:",
+          "material_id": "lessons/m4.3-dynamic-subagents",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m4/m4.3-dynamic-subagents.md",
+          "sha256": "31401e1c7ff7c9a5bc93aa686a7484a96ff9c5df474f73fe68e0ea1dc3ce8800"
+        }
+      ]
+    },
+    {
+      "concept_id": "db-query",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/langchain-deep-agents/markdown/lessons/m2.4-interpreter.md",
+          "line": 152,
+          "page": null,
+          "excerpt": "const genres = JSON.parse(await tools.queryChinook({ sql: `",
+          "material_id": "lessons/m2.4-interpreter",
+          "category": "lessons",
+          "source_url": "https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m2/m2.4-interpreter.md",
+          "sha256": "a73cb09ef9cf1c187a50e8bde41badb82948457b4783c37fc8da4388058d6990"
+        }
+      ]
+    }
+  ]
+}

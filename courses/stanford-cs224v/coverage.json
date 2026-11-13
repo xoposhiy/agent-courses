@@ -1,0 +1,129 @@
+{
+  "scope": "Current course information, schedule, project page, linked materials, homework links, and all references in the curated reading list.",
+  "course_page_links": 34,
+  "excluded_links": [
+    {
+      "url": "https://suif.stanford.edu/~lam/",
+      "label": "Monica Lam",
+      "linked_from": [
+        "https://web.stanford.edu/class/cs224v/"
+      ],
+      "reason": "Staff biography, campus map, or enrollment listing"
+    },
+    {
+      "url": "https://zikai-zhou.github.io/",
+      "label": "Cyrus Zhou",
+      "linked_from": [
+        "https://web.stanford.edu/class/cs224v/"
+      ],
+      "reason": "Staff biography, campus map, or enrollment listing"
+    },
+    {
+      "url": "https://harshitjoshi.com/",
+      "label": "Harshit Joshi",
+      "linked_from": [
+        "https://web.stanford.edu/class/cs224v/"
+      ],
+      "reason": "Staff biography, campus map, or enrollment listing"
+    },
+    {
+      "url": "https://www.jeongyeon.kim/",
+      "label": "Jeongyeon Kim",
+      "linked_from": [
+        "https://web.stanford.edu/class/cs224v/"
+      ],
+      "reason": "Staff biography, campus map, or enrollment listing"
+    },
+    {
+      "url": "https://vidhyakshayakannan.github.io/",
+      "label": "Vidhyakshaya Kannan",
+      "linked_from": [
+        "https://web.stanford.edu/class/cs224v/"
+      ],
+      "reason": "Staff biography, campus map, or enrollment listing"
+    },
+    {
+      "url": "https://dransyhe.github.io/",
+      "label": "Yu He",
+      "linked_from": [
+        "https://web.stanford.edu/class/cs224v/"
+      ],
+      "reason": "Staff biography, campus map, or enrollment listing"
+    },
+    {
+      "url": "http://campus-map.stanford.edu/?srch=CoDa",
+      "label": "CoDa B80",
+      "linked_from": [
+        "https://web.stanford.edu/class/cs224v/"
+      ],
+      "reason": "Staff biography, campus map, or enrollment listing"
+    },
+    {
+      "url": "https://navigator.stanford.edu/classes/1272/2029",
+      "label": "class #2029",
+      "linked_from": [
+        "https://web.stanford.edu/class/cs224v/"
+      ],
+      "reason": "Staff biography, campus map, or enrollment listing"
+    },
+    {
+      "url": "https://web.stanford.edu/class/cs224v/schedule_2025.html",
+      "label": "Fall 2025",
+      "linked_from": [
+        "https://web.stanford.edu/class/cs224v/schedule.html"
+      ],
+      "reason": "Past course offering; the requested edition is Fall 2026"
+    },
+    {
+      "url": "https://web.stanford.edu/class/cs224v/schedule_2024.html",
+      "label": "Fall 2024",
+      "linked_from": [
+        "https://web.stanford.edu/class/cs224v/schedule.html"
+      ],
+      "reason": "Past course offering; the requested edition is Fall 2026"
+    },
+    {
+      "url": "https://web.stanford.edu/class/cs224v/schedule_2023.html",
+      "label": "Fall 2023",
+      "linked_from": [
+        "https://web.stanford.edu/class/cs224v/schedule.html"
+      ],
+      "reason": "Past course offering; the requested edition is Fall 2026"
+    }
+  ],
+  "missing_course_page_links": [],
+  "homework_links": [
+    {
+      "url": "https://colab.research.google.com/drive/1gl9cYgOLZvKMaMTMo_GRrNomOPspjair?authuser=1",
+      "material_id": "repositories/cs224vf26-assignment1-public/rare_disease_diagnosis-ipynb",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/repositories/cs224vf26-assignment1-public/rare_disease_diagnosis-ipynb.md"
+    },
+    {
+      "url": "https://docs.google.com/spreadsheets/d/1NI2Xk8aolZkuyBXrcy1yKLWc5ADGZvmn-ql8cY4JRyo/edit?gid=0#gid=0",
+      "material_id": "assignments/homework-disease-allocation-spreadsheet",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "markdown_path": null
+    },
+    {
+      "url": "https://colab.research.google.com/drive/1imjDe4sDvjtLW8tFz12nNCPWV0TDk28C?usp=sharing",
+      "material_id": "notebooks/hw2-react-aos",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/notebooks/hw2-react-aos.md"
+    },
+    {
+      "url": "https://colab.research.google.com/drive/1YwmG0Nn9_XUiMmJltLnC4zjzzvcJHBwz?usp=sharing",
+      "material_id": "notebooks/hw2-satir-verdict",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/notebooks/hw2-satir-verdict.md"
+    }
+  ],
+  "missing_homework_links": [],
+  "reading_inventory_path": "reading-inventory.json",
+  "project_coverage_path": "project-coverage.json",
+  "source_link_gaps_path": "source-link-gaps.json"
+}

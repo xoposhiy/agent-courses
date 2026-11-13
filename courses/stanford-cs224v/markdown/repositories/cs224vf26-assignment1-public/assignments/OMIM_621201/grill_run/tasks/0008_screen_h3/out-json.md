@@ -1,0 +1,56 @@
+# Homework 1 public teaching repository: assignments/OMIM_621201/grill_run/tasks/0008_screen_h3/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621201/grill_run/tasks/0008_screen_h3/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621201/grill_run/tasks/0008_screen_h3/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "GTF3C3-related neurodevelopmental disorder literature specifically links mutations in GTF3C3 to neuroradiological findings including delayed myelination and corpus callosum hypoplasia.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "Papuc et al. support GTF3C3 as a disease candidate gene associated with epileptic encephalopathy and note phenotypes such as delayed myelination and a thin corpus callosum.",
+      "stance": "supports",
+      "source": {
+        "title": "The role of recessive inheritance in early-onset epileptic encephalopathies: a combined whole-exome sequencing and copy number study",
+        "authors": [
+          "SM Papuc",
+          "L Abela",
+          "K Steindl",
+          "A Begemann"
+        ],
+        "year": 2019,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.nature.com/articles/s41431-018-0299-8",
+        "quote": "such as delayed myelination, thin corpus callosum or cerebellar \u2026 Furthermore, the yeast ortholog of GTF3C3, Tfc4, has been shown to \u2026 Thus, we consider GTF3C3 as a candidate for \u2026"
+      },
+      "numbers": []
+    },
+    {
+      "text": "Chapleau et al. review white matter disorders associated with subunits of the TFIIIC complex (GTF3C5 and GTF3C3), highlighting features including corpus callosum hypoplasia and myelination defects.",
+      "stance": "supports",
+      "source": {
+        "title": "White matter disorders at the intersection of transcription, RNA processing and translation",
+        "authors": [
+          "A Chapleau",
+          "F Villa Tob\u00f3n",
+          "G Bernard"
+        ],
+        "year": 2026,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.nature.com/articles/s41582-026-01248-1",
+        "quote": "tial and permanent lack of myelination, presenting as diffuse \u2026 of the TFIIIC complex (GTF3C5and GTF3C3), a key initiator of Pol \u2026 matter hyperintensities, corpus callosum hypoplasia and \u2026"
+      },
+      "numbers": []
+    }
+  ]
+}
+```

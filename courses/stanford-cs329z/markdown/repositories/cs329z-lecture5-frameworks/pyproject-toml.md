@@ -1,0 +1,31 @@
+# Code: lecture5-frameworks: pyproject.toml
+
+[Course index](../../../README.md) · [Original source](https://github.com/cs329z/lecture5-frameworks/blob/HEAD/pyproject.toml) · [Raw file](../../../raw/repositories/cs329z-lecture5-frameworks/pyproject.toml)
+
+Retrieved: 2026-11-13T16:20:40.422150+00:00
+
+```toml
+[project]
+name = "lecture5-frameworks"
+version = "0.1.0"
+description = "CS329Z Lecture 5: experimenting with DSPy, LangGraph, and Temporal"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "dspy[deno]>=3.4.0",
+    "langchain>=1.4.3",
+    "langchain-openai>=1.6.7",
+    "langchain-anthropic>=1.7.5",
+    "temporalio>=1.34.0",
+    "python-dotenv>=1.2.4",
+    "langgraph>=1.2",
+    "numpy>=2.5.3",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29",
+    "jupyter>=1.1",
+]
+
+```

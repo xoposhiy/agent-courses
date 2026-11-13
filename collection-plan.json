@@ -1,0 +1,94 @@
+{
+  "collected_at": "2026-11-13",
+  "purpose": "Reference corpus for a spring-semester AI-agent development course for strong first-year programmers.",
+  "sources": [
+    {
+      "id": "stanford-cs329z",
+      "resource_number": 1,
+      "title": "Engineering AI Agents",
+      "institution": "Stanford",
+      "url": "https://cs329z.stanford.edu/",
+      "folder": "courses/stanford-cs329z",
+      "role": "pilot"
+    },
+    {
+      "id": "columbia-coms4995",
+      "resource_number": 2,
+      "title": "Designing LLM Agents",
+      "institution": "Columbia",
+      "url": "https://designing-agents.github.io/",
+      "folder": "courses/columbia-coms4995"
+    },
+    {
+      "id": "cmu-11768",
+      "resource_number": 4,
+      "title": "AI Agents",
+      "institution": "Carnegie Mellon",
+      "url": "https://www.cmu-agents.com/",
+      "folder": "courses/cmu-11768"
+    },
+    {
+      "id": "langchain-deep-agents",
+      "resource_number": 10,
+      "title": "Introduction to Deep Agents",
+      "institution": "LangChain Academy",
+      "url": "https://academy.langchain.com/courses/foundation-introduction-to-deepagents",
+      "folder": "courses/langchain-deep-agents"
+    },
+    {
+      "id": "stanford-cs224v",
+      "resource_number": 12,
+      "title": "Agentic AI",
+      "institution": "Stanford",
+      "url": "https://web.stanford.edu/class/cs224v/",
+      "folder": "courses/stanford-cs224v"
+    },
+    {
+      "id": "dlai-agentic-evals",
+      "resource_number": 15,
+      "title": "Evaluating and Improving Agentic Applications",
+      "institution": "DeepLearning.AI / Arize",
+      "url": "https://www.deeplearning.ai/courses/evaluating-and-improving-agentic-applications",
+      "folder": "courses/dlai-agentic-evals"
+    },
+    {
+      "id": "colorado-csci7000",
+      "resource_number": 17,
+      "title": "Building AI Agents",
+      "institution": "CU Boulder",
+      "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+      "folder": "courses/colorado-csci7000"
+    },
+    {
+      "id": "agentic-large-language-models",
+      "title": "Agentic Large Language Models",
+      "authors": [
+        "Max van Duijn",
+        "Michiel van der Meer",
+        "Aske Plaat",
+        "Niki van Stein"
+      ],
+      "url": "https://arxiv.org/abs/2610.13455",
+      "folder": "courses/agentic-large-language-models",
+      "kind": "book"
+    }
+  ],
+  "scope": {
+    "include": [
+      "course-owned pages",
+      "published slides and lecture notes",
+      "assignment and project instructions",
+      "official teaching repositories and notebooks",
+      "course-curated public readings, required and optional, one level",
+      "public transcripts and captions when retrievable"
+    ],
+    "exclude": [
+      "recursive mirrors of unrelated sites",
+      "installed dependencies",
+      "large model weights",
+      "private or unpublished materials",
+      "large video binaries"
+    ],
+    "record_gaps": true
+  }
+}

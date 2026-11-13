@@ -1,0 +1,68 @@
+# Homework 1 public teaching repository: assignments/OMIM_620450/grill_run/tasks/0025_screen_h10/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620450/grill_run/tasks/0025_screen_h10/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620450/grill_run/tasks/0025_screen_h10/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Identification of a de novo missense variant in TAF4 in a patient with severe DLD and non-verbal IQ >= 70 supports a phenotypic continuum beyond pLoF-associated intellectual disability.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "In a prospective cohort of 25 individuals with severe developmental language disorder and no intellectual disability (non-verbal IQ >= 70), a likely pathogenic de novo missense variant in TAF4 was identified in an individual displaying DLD within the spectrum of TAF4-related disorders.",
+      "stance": "supports",
+      "source": {
+        "title": "Genome sequencing reveals high diagnostic yield in children with severe sporadic developmental language disorder",
+        "authors": [
+          "MGP Kennis",
+          "L van Haaften",
+          "K van Hulst"
+        ],
+        "year": 2026,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.nature.com/articles/s41431-026-02214-7",
+        "quote": "In individual 6, we found a likely pathogenic de novo missense \u2026 Haploinsufficiency of TAF4 is associated with a develop\u2026 , fit within the phenotype of TAF4-related disorders."
+      },
+      "numbers": [
+        {
+          "metric": "non-verbal IQ threshold",
+          "value": 70
+        },
+        {
+          "metric": "cohort size",
+          "value": 25
+        }
+      ]
+    },
+    {
+      "text": "The initial cohort defining TAF4-related neurodevelopmental disorder described eight individuals all carrying de novo putative loss-of-function variants, with common features including intellectual disability.",
+      "stance": "supports",
+      "source": {
+        "title": "De novo putative loss\u2010of\u2010function variants in TAF4 are associated with a neuro\u2010developmental disorder",
+        "authors": [
+          "BDE Janssen",
+          "MJH van den Boogaard"
+        ],
+        "year": 2022,
+        "journal": null,
+        "doi": "10.1002/humu.24444",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/humu.24444",
+        "quote": "We here present a cohort of eight individuals, each carrying de novo putative loss-of-function (pLoF) variants in TAF4 and expressing phenotypes consistent with a neuro-developmental disorder (NDD). Common features include intellectual disability, abnormal behavior, and facial dysmorphisms."
+      },
+      "numbers": [
+        {
+          "metric": "cohort size of individuals carrying de novo pLoF variants",
+          "value": 8
+        }
+      ]
+    }
+  ]
+}
+```

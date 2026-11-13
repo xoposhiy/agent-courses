@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/main.css">
+  <title></title>
+</head>
+<body>
+  <div class="header">
+    <h1 class="title">CS 224V </h1>
+    <h2 class="subtitle">Agentic AI</h2>
+    <h2 class="subtitle">Fall 2026</h2>
+    <nav>
+      <a href="index.html">Info</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="CS224V_Readings.pdf">Readings</a>
+      <a href="projects.html">Projects</a>
+      <!-- <a href="assignments.html">Assignments</a>
+      <a href="project.html">project</a>-->
+    </nav>
+  </div>
+ <div class="container">
+
+    <div class="panel overview">
+      <h2>Project Info</h2>
+
+      <b>Each project will be in a group of 2 students.</b>
+       
+
+      <p>A core part of CS 224V is a project you work on throughout the quarter. We have mentors and advisors across many disciplines who have signed on to help you with these projects, from Stanford and from external partners. <b>All projects are mentored and supervised on a weekly basis.</b></p>
+
+      <p>
+        <a href="https://docs.google.com/document/d/17GsPD8IzaSJ_MnGj-yqZgw1MG65bohxeTHeFqz68hi4/edit?usp=sharing">The project proposals document</a> is the starting point for choosing a topic. <b>You are most welcome to propose your own project</b> &mdash; please post it in that document so it can attract partners.
+      </p>
+    </div>
+    <!--
+	      <p>Projects from CS 224V have produced key research papers that inspired commercial deep research products (OpenAI Deep Research, Google Gemini Deep Research, Databricks Genie Deep Research Mode). The open-source software has been downloaded and used in industry, and pilots based on the technology, hosted at <a href="https://WWKnowledge.org">WWKnowledge.org</a>, have been used by over 800K consumers, journalists, and historians. Many projects build on previous years' technology to advance the state of the art for the year after. <i>Will your project show up on that list next year?</i></p>
+
+    <div class="panel overview">
+      <h2>Infrastructure for Your Project</h2>
+
+      <p>This year we are making available <b>AOS (Agentic OS)</b>, a new architecture on which you can build your own agents. You are welcome to use any tools you like. However, your project must use state-of-the-art tools and concepts, and cannot be built with vanilla LLMs by simply prompting them with the problem statement.</p>
+
+      <p>AOS is an open, accountable platform for collaborative agent systems, with a layered architecture: a <b>semantic file system</b> for persistent knowledge and artifacts, <b>application platforms</b> for long-horizon interaction and accountable decision making, and <b>team workflow support</b> for shared workspaces and collaboration. As an open-source, model-agnostic platform, it makes smaller and open-weight models more effective, and supports data sovereignty by letting organizations deploy, audit, extend, and govern it in their own environments.</p>
+
+      <h3>Semantic file system</h3>
+      <p><b>Ingestion</b></p>
+      <ul>
+        <li><b>CHURRO</b>: an open-weight vision-language model for historical prints and manuscripts. Trained on the largest annotated historical dataset to date, spanning 46 language clusters and 22 centuries, it is more accurate than the best commercial model at 0.6% of the cost.</li>
+      </ul>
+      <p><b>Semantic retrieval</b></p>
+      <ul>
+        <li><b>SUQL</b> (Structured and Unstructured Query Language): a query language that composes information from databases and textual corpora.</li>
+        <li><b>SLIDERS</b>: handles document sets of arbitrary size by structuring long documents chunk by chunk, where long-context LLMs are expensive, inaccurate, and never long enough.</li>
+        <li><b>SatIR</b>: fast, high-precision, high-recall retrieval that finds documents whose constraints are satisfied by the data in the input query (e.g. clinical trials).</li>
+      </ul>
+      <p><b>Knowledge curation</b></p>
+      <ul>
+        <li><b>WikiChat</b>: question answering over a text corpus.</li>
+        <li><b>Co-STORM</b>: an interactive deep researcher that writes a one-pager.</li>
+        <li><b>DataTalk</b>: an interactive question-answering interface to databases.</li>
+        <li><b>DataSTORM</b>: insight discovery across documents and databases.</li>
+        <li><b>GRILL</b>: an interactive deep researcher that can curate hundreds of papers.</li>
+      </ul>
+
+      <h3>Application frameworks</h3>
+      <ul>
+        <li><b>Genie Worksheets</b>: creation of long-horizon, long-context conversational task agents with a significantly higher completion rate than function calling, integrating retrieval from free text and structured data with programmable conversational agent policies.</li>
+        <li><b>VERDICT</b>: accountable decision making that returns a verifiable, faithful, consistent, and actionable rationale using formal methods. VERDICT uses LLMs to translate documents into formal SMT formulae so that theorem provers can perform the complex logical tasks. (Currently developed for clinical trial matching.)</li>
+      </ul>
+    </div>
+
+    <div class="panel overview">
+      <h2>Project Axes</h2>
+      <p>There are two major approaches to defining a project: you can start with an application area, or with a technique. For the latter, you will still need a domain to test your technique on.</p>
+
+      <h3>A. Domain driven</h3>
+      <ol>
+        <li>What is your domain of interest?</li>
+        <li>What is the challenge in your project? For example: human-computer interaction; precision, recall, accountability; long context; long horizon; or unknown &mdash; you may need to build the first prototype to discover the challenge.</li>
+        <li>Which techniques are you planning to use or to improve?</li>
+        <li>How are you planning to evaluate your solution?</li>
+      </ol>
+
+      <p>Take medicine as an example. OpenEvidence's accuracy on diagnosis and treatment in the MedXpertQA benchmark is limited to 44%. How can we improve it? Simply applying RAG to the PubMed literature does not work, because each paper reports the findings of one experiment; doctors rely on guidelines, which experts create by curating many papers on a topic. That opens up a range of problems:</p>
+      <ul>
+        <li><b>Scientific biomedical discovery with experimentation</b> (curation of knowledge). Which genes are responsible for drug resistance? Starting from wet-lab results that identify a long list of candidate genes, scour the literature to prioritize genes for further experimentation.</li>
+        <li><b>Data-driven discoveries to inform new guidelines</b> (data-driven discovery). From large numbers of patient records, can we find causal relationships between treatments and outcomes? Can we identify potential confounders from doctors' notes?</li>
+        <li><b>Guidelines writing</b> (curation of knowledge). How do we synthesize the findings across many medical publications?</li>
+        <li><b>Application of guidelines</b> (decision making). Diagnosis of rare diseases, where doctors lack experience and must apply known guidelines to patient records.</li>
+        <li><b>Guidelines conformance</b> (decision making). Can we apply guidelines to determine a treatment, or to check that a doctor's treatment conforms to them?</li>
+        <li><b>Answering doctors' queries on EHRs</b> (question answering). Why was a certain treatment or test ordered? What was the sequence of treatments? How long did diagnosis take? Were there misdiagnoses? What drug side effects were experienced?</li>
+      </ul>
+
+      <h3>B. Technique driven</h3>
+      <p>You are welcome to improve the components of AOS or add new functionality. Some problems we have identified:</p>
+      <ol>
+        <li><b>CHURRO</b>: no VLM today can handle Chinese newspapers typeset in the 1800s and early 1900s. Automatically synthesizing training data that teaches VLMs to handle such papers is a particularly attractive approach.</li>
+        <li><b>SLIDERS</b>: how do we support sophisticated queries over patient records?</li>
+        <li><b>GRILL</b>: how do we improve management of hypotheses and report generation? How do we perform deep analysis across domains, e.g. compiling information on rare diseases or compiling medical guidelines?</li>
+        <li><b>DataSTORM and GRILL</b>: how do we integrate the two so that literature search can be combined with data analysis?</li>
+        <li><b>Genie Worksheets</b>: can we derive worksheets from English descriptions, or from the accessibility information on websites?</li>
+        <li><b>VERDICT</b>: explore accountability in other domains &mdash; rare disease diagnosis and guideline adherence in medicine, governance compliance in finance.</li>
+      </ol>
+    </div>
+
+    <div class="panel overview">
+      <h2>Proposals and Deliverables</h2>
+
+      <h3>Mentor-written proposals</h3>
+      <p>If you take a mentor-written proposal, you will submit a <b>full project proposal</b> on Gradescope. This is an extended version of the mentor-written proposal. It can be largely the same as what your mentor provided, but you should edit it if you are narrowing or expanding the scope and customizing it to your interests. It should have more detail on when each phase of the project will be completed, the datasets you will use, a proposed weekly schedule, and what each partner will work on.</p>
+      <p>In addition to the fields already in the mentor-written proposal, the full project proposal asks you to fill out:</p>
+      <b>Prior work:<br>
+      Expected demo at the end of the quarter:<br>
+      Weekly schedule:<br></b>
+
+      <h3>Custom proposals</h3>
+      <p>If you are doing a custom project, you will have to sign up to present it in class. <b>Signing up is mandatory.</b> If you sign up early, you will get more feedback, which you can use to update your final proposal.</p>
+      <p>Please still review the mentor-written proposals for examples of the level of detail we are looking for as you propose your custom project.</p>
+      <p>The full project proposal asks you to fill out:</p>
+      <b>Title:<br>
+      Team Member(s):<br>
+      Key Question:<br>
+      Motivation:<br>
+      Project description:<br>
+      Mentor (if known):<br>
+      Prior work:<br>
+      Expected demo at the end of the quarter:<br>
+      Weekly schedule:<br></b>
+      <br>
+      <p>Please use the following format: <a href="https://docs.google.com/document/d/1rwANoLm_PDRW7Jowi13VYrpe3oflfnaYk75gDZSIClk/edit?usp=sharing">Project Template</a></p>
+
+      <h2>Final Project Presentation, Poster, and Paper</h2>
+
+      <p>At the end of the quarter we host a presentation and poster session for all final projects. Each group makes a 60-second presentation at the beginning, in our usual lecture location, and we move on to the poster session afterward. We adopt the same <a href="https://docs.google.com/document/d/1J8-TVVvndimSwq3jGzpMO_OtPAx_EaU9nUiiPUQdVpY/edit?tab=t.0">poster session guidelines</a> as CS 224N. Dates are on the <a href="schedule.html">Schedule</a>.</p>
+      <p>A final paper about your project is due in finals week. You should also submit your code, along with a README explaining how to run your program for a demo, at the same time as the paper. It is recommended to include a short video demo of your project along with your code.</p>
+
+      <h3>Here is a suggested outline of the final paper:</h3>
+
+      (1) Abstract: 2-3 paragraphs summarizing the paper, including the results<br>
+      (2) Introduction, which includes the motivation, main idea, and overall contribution<br>
+      (3) Related work<br>
+      (4) The core ideas<br>
+      (5) Experimental results<br>
+      (7) What you learned and future work<br>
+      (8) Conclusion<br>
+      (9) Appendix: Examples, Prompts that you engineered ...<br>
+
+      We recommend using ACL style for your paper: <a href="https://github.com/acl-org/acl-style-files">ACL style files</a>
+    </div>
+
+    <div class="panel overview">
+      <h2>Publications from Past CS 224V Projects</h2>
+      <p><b>2023</b></p>
+      <ul>
+        <li><a href="https://aclanthology.org/2023.findings-emnlp.157/">WikiChat: Stopping the Hallucination of Large Language Model Chatbots by Few-Shot Grounding on Wikipedia</a>. Sina J. Semnani, Violet Z. Yao*, Heidi C. Zhang*, Monica S. Lam. EMNLP 2023.</li>
+      </ul>
+      <p><b>2024</b></p>
+      <ul>
+        <li>SUQL: Conversational Search over Structured and Unstructured Data with Large Language Models. Shicheng Liu, Jialiang Xu, Wesley Tjangnaka, Sina J. Semnani, Chen Jie Yu, Monica S. Lam. Findings of NAACL 2024.</li>
+        <li>Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models. Yijia Shao, Yucheng Jiang, Theodore A. Kanell, Peter Xu, Omar Khattab, Monica S. Lam. NAACL 2024.</li>
+        <li>SPAGHETTI: Open-Domain Question Answering from Heterogeneous Data Sources with Retrieval and Semantic Parsing. Heidi C. Zhang, Sina J. Semnani, Farhad Ghassemi, Jialiang Xu, Shicheng Liu, Monica S. Lam. Findings of ACL 2024.</li>
+        <li>SPINACH: SPARQL-Based Information Navigation for Challenging Real-World Questions. Shicheng Liu*, Sina J. Semnani*, Harold Triedman, Jialiang Xu, Isaac Dan Zhao, Monica S. Lam. Findings of EMNLP 2024.</li>
+        <li>Into the Unknown Unknowns: Engaged Human Learning through Participation in Language Model Agent Conversations. Yucheng Jiang, Yijia Shao, Dekun Ma, Sina J. Semnani, Monica S. Lam. EMNLP 2024.</li>
+      </ul>
+      <p><b>2025</b></p>
+      <ul>
+        <li>Using Artificial Intelligence to Improve Empathetic Statements in Autistic Adolescents and Adults: A Randomized Clinical Trial. Koegel LK, Ponder E, Bruzzese T, Wang M, Semnani SJ, Chi N, Koegel BL, Lin TY, Swarnakar A, Lam MS. J Autism Dev Disord, 2025.</li>
+        <li>Controllable and Reliable Knowledge-Intensive and Task-Oriented Conversational Agents with Declarative GenieWorksheets. Harshit Joshi, Shicheng Liu, James Chen, Robert Weigle, Monica S. Lam. ACL 2025.</li>
+        <li>LEMONADE: A Large Multilingual Expert-Annotated Abstractive Event Dataset for the Real World. Sina J. Semnani, Pingyue Zhang, Wanyue Zhai, Haozhuo Li, Ryan Beauchamp, Trey Billing, Katayoun Kishi, Manling Li, Monica S. Lam. Findings of ACL 2025.</li>
+        <li>CHURRO: Making History Readable with an Open-Weight Large Vision-Language Model for High-Accuracy, Low-Cost Historical Text Recognition. Sina J. Semnani, Han Zhang, Xinyan He, Merve Tekgürler, Monica S. Lam. EMNLP 2025.</li>
+        <li>Detecting Corpus-Level Knowledge Inconsistencies in Wikipedia with Large Language Models. Sina J. Semnani, Jirayu Burapacheep, Arpandeep Khatua, Thanawan Atchariyachanvanit, Zheng Wang, Monica S. Lam. EMNLP 2025.</li>
+      </ul>
+      <p><b>2026</b></p>
+      <ul>
+        <li>SatIR: Scalable High-Recall Constraint-Satisfaction-Based Information Retrieval for Clinical Trials Matching. Zikai Zhou, Yufei Jin, Yilin Xu, Yu-Chiang Wang, Chieh-Ju Chao, Monica S. Lam. COLM 2026.</li>
+        <li>DataSTORM: Deep Research on Large-Scale Databases using Exploratory Data Analysis and Data Storytelling. Shicheng Liu, Yucheng Jiang, Sajid Farook, Camila Nicollier Sanchez, David Fernando Castro Pena, Monica S. Lam. COLM 2026.</li>
+        <li>Accountable AI with Grounded, Faithful, Consistent, Actionable Rationale: A Case Study in Clinical Trial Matching with VERDICT. Zikai Zhou, Yufei Jin, Yilin Xu, Yu-Chiang Wang, Chieh-Ju Chao, Monica S. Lam. EMNLP 2026.</li>
+      </ul>
+    </div>
+-->
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+# Homework 1 public teaching repository: assignments/OMIM_620985/grill_run/tasks/0006_ground_3/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620985/grill_run/tasks/0006_ground_3/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620985/grill_run/tasks/0006_ground_3/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "term": "Global developmental delay (HP:0001263)",
+  "definition": "A neurodevelopmental condition and frequent indication for genetic referral characterized by significant delays across developmental milestones, encompassing overlapping phenotypes affecting cognitive, motor, language, or social skills.",
+  "source": {
+    "title": "Strict network analysis of evolutionary conserved and brain-expressed genes reveals new putative candidates implicated in Intellectual Disability and in Global \u2026",
+    "authors": [
+      "RM Piergiorge",
+      "ATR de Vasconcelos"
+    ],
+    "year": 2021,
+    "journal": null,
+    "doi": "10.1080/15622975.2020.1821916",
+    "pmid": null,
+    "pmc": null,
+    "url": "https://www.tandfonline.com/doi/abs/10.1080/15622975.2020.1821916",
+    "quote": "Intellectual Disability (ID) and Global Development Delay (GDD) are frequent reasons for referral to genetic services and although they present overlapping phenotypes concerning cognitive, motor, language, or social skills, they are not exactly synonymous."
+  }
+}
+```

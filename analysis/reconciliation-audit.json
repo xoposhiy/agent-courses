@@ -1,0 +1,511 @@
+[
+  {
+    "source_id": "stanford-cs329z",
+    "concept_id": "beam-search",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs329z",
+    "concept_id": "rlhf",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs329z",
+    "concept_id": "long-context",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs329z",
+    "concept_id": "kv-cache",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs329z",
+    "concept_id": "speculative-decoding",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs329z",
+    "concept_id": "serving",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs329z",
+    "concept_id": "multi-agent-debate",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs329z",
+    "concept_id": "reward-model",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs329z",
+    "concept_id": "cost-quality",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs329z",
+    "concept_id": "harness-optimization",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs329z",
+    "concept_id": "recursive-agents",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs329z",
+    "concept_id": "user-simulation",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "columbia-coms4995",
+    "concept_id": "long-context",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "columbia-coms4995",
+    "concept_id": "error-analysis",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "columbia-coms4995",
+    "concept_id": "cost-quality",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "columbia-coms4995",
+    "concept_id": "code-grader",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "columbia-coms4995",
+    "concept_id": "semantic-memory",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "prompt-optimization",
+    "action": "remove",
+    "reason": "The cited passage is harness search, which is distinct from prompt optimization."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "harness-optimization",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "reward-model",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "context-offload",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "prompting",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "reflexion",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "few-shot",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "langgraph",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "error-analysis",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "programmatic-tools",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "auth",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "deployment",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "vlm",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "outcome-eval",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "knowledge-curation",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "speculative-decoding",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "world-models",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "cost-quality",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "refactoring",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "emergent-norms",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "social-simulation",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "cmu-11768",
+    "concept_id": "social-behavior",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "langchain-deep-agents",
+    "concept_id": "long-context",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "langchain-deep-agents",
+    "concept_id": "recursive-agents",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "langchain-deep-agents",
+    "concept_id": "evaluation",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "langchain-deep-agents",
+    "concept_id": "db-query",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs224v",
+    "concept_id": "compaction",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs224v",
+    "concept_id": "memory",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs224v",
+    "concept_id": "context-isolation",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs224v",
+    "concept_id": "llm-judge",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs224v",
+    "concept_id": "rubrics",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs224v",
+    "concept_id": "judge-validation",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs224v",
+    "concept_id": "user-simulation",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs224v",
+    "concept_id": "work-impact",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs224v",
+    "concept_id": "error-analysis",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs224v",
+    "concept_id": "multi-agent-failures",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs224v",
+    "concept_id": "personalization",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs224v",
+    "concept_id": "embeddings",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs224v",
+    "concept_id": "sparse-retrieval",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs224v",
+    "concept_id": "reranking",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs224v",
+    "concept_id": "verification",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs224v",
+    "concept_id": "hitl",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "stanford-cs224v",
+    "concept_id": "deep-research",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "dlai-agentic-evals",
+    "concept_id": "routing",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "colorado-csci7000",
+    "concept_id": "rag",
+    "action": "set",
+    "coverage": "assigned",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "colorado-csci7000",
+    "concept_id": "cot",
+    "action": "set",
+    "coverage": "assigned",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "colorado-csci7000",
+    "concept_id": "self-consistency",
+    "action": "set",
+    "coverage": "assigned",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "colorado-csci7000",
+    "concept_id": "shared-memory",
+    "action": "set",
+    "coverage": "assigned",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "colorado-csci7000",
+    "concept_id": "context-engineering",
+    "action": "set",
+    "coverage": "assigned",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "agentic-large-language-models",
+    "concept_id": "auth",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Cross-course review found available teaching evidence for a concept registered later."
+  },
+  {
+    "source_id": "columbia-coms4995",
+    "concept_id": "tiered-memory",
+    "action": "remove",
+    "reason": "A list of storage backends does not establish a managed tiered-memory architecture."
+  },
+  {
+    "source_id": "columbia-coms4995",
+    "concept_id": "trajectory-eval",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Lecture evaluates the action sequence and the actual task result separately."
+  },
+  {
+    "source_id": "columbia-coms4995",
+    "concept_id": "outcome-eval",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Lecture evaluates the action sequence and the actual task result separately."
+  },
+  {
+    "source_id": "agentic-large-language-models",
+    "concept_id": "self-consistency",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Use the chapter explanation rather than a matching bibliography title."
+  },
+  {
+    "source_id": "agentic-large-language-models",
+    "concept_id": "tree-thoughts",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Use the chapter explanation rather than a matching bibliography title."
+  },
+  {
+    "source_id": "agentic-large-language-models",
+    "concept_id": "code-grader",
+    "action": "set",
+    "coverage": "taught",
+    "reason": "Use the chapter explanation rather than a matching bibliography title."
+  }
+]

@@ -1,0 +1,462 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 6,
+    "text": "In the last video, you saw how production can reveal situations\nthat never made it into your offline benchmark."
+  },
+  {
+    "startInSeconds": 6,
+    "endInSeconds": 14,
+    "text": "Now, let's follow one of those situations all the way through the\nimprovement loop with Northwind. First, look at the offline results."
+  },
+  {
+    "startInSeconds": 14,
+    "endInSeconds": 21,
+    "text": "Suppose Northwind has a policy compliance score of 96%.\nThat sounds pretty good, and it may be."
+  },
+  {
+    "startInSeconds": 21,
+    "endInSeconds": 27,
+    "text": "But before you conclude that the agent handles refunds reliably,\nit's worth looking at the cases that produced that score."
+  },
+  {
+    "startInSeconds": 27,
+    "endInSeconds": 31,
+    "text": "Most of the refund examples in the test set are very direct."
+  },
+  {
+    "startInSeconds": 31,
+    "endInSeconds": 39,
+    "text": "A customer says, \"Refund order 1842,\" or, \"I want a refund for order\n2271.\" Those are useful cases."
+  },
+  {
+    "startInSeconds": 39,
+    "endInSeconds": 45,
+    "text": "They show that when the customer states the intent clearly,\nthe agent can recognize the request and follow the refund process."
+  },
+  {
+    "startInSeconds": 45,
+    "endInSeconds": 51,
+    "text": "But then, a real customer writes, \"I bought this last week\nand it doesn't fit. Can I get my money back?\""
+  },
+  {
+    "startInSeconds": 51,
+    "endInSeconds": 55,
+    "text": "They never used the word \"refund\", but that's clearly\nwhat they're asking for."
+  },
+  {
+    "startInSeconds": 55,
+    "endInSeconds": 60,
+    "text": "So you search the offline dataset for similar examples\nand you don't find one."
+  },
+  {
+    "startInSeconds": 60,
+    "endInSeconds": 66,
+    "text": "The test set contains explicit refund requests,\nbut nothing phrased this way. That's an important distinction."
+  },
+  {
+    "startInSeconds": 66,
+    "endInSeconds": 73,
+    "text": "It doesn't mean the 96% score was wrong.\nThe score told you how the agent performed on the cases you gave it."
+  },
+  {
+    "startInSeconds": 73,
+    "endInSeconds": 79,
+    "text": "Production has now shown you a case the tests didn't cover.\nSo let's open the trace and see what happened."
+  },
+  {
+    "startInSeconds": 79,
+    "endInSeconds": 83,
+    "text": "The customer says the item doesn't fit and asks for their money back."
+  },
+  {
+    "startInSeconds": 83,
+    "endInSeconds": 89,
+    "text": "Instead of recognizing that as a refund request,\nthe agent responds more like this is a general product complaint:"
+  },
+  {
+    "startInSeconds": 89,
+    "endInSeconds": 90,
+    "text": "\"I'm sorry it didn't work out."
+  },
+  {
+    "startInSeconds": 90,
+    "endInSeconds": 97,
+    "text": "Would you like to fill out our feedback form?\"\nThat's a sympathetic answer, but it never enters the refund process."
+  },
+  {
+    "startInSeconds": 97,
+    "endInSeconds": 104,
+    "text": "And you can see that in the trajectory. There's no customer\nverification, no order lookup, and no refund tool call."
+  },
+  {
+    "startInSeconds": 104,
+    "endInSeconds": 107,
+    "text": "So the problem starts before any of those tools come into play."
+  },
+  {
+    "startInSeconds": 107,
+    "endInSeconds": 111,
+    "text": "The agent never recognized that this message should trigger\nthe refund workflow."
+  },
+  {
+    "startInSeconds": 111,
+    "endInSeconds": 118,
+    "text": "Now you have something much more useful than a failed production\nconversation. You have a concrete behavior you can reproduce and test."
+  },
+  {
+    "startInSeconds": 118,
+    "endInSeconds": 124,
+    "text": "Take the customer's original message and add it to your offline\ndataset exactly as it appeared:"
+  },
+  {
+    "startInSeconds": 124,
+    "endInSeconds": 126,
+    "text": "\"I bought this last week and it doesn't fit."
+  },
+  {
+    "startInSeconds": 126,
+    "endInSeconds": 127,
+    "text": "Can I get my money back?\""
+  },
+  {
+    "startInSeconds": 127,
+    "endInSeconds": 133,
+    "text": "Keeping the original phrasing matters because that phrasing is part of\nwhat your existing benchmark was missing."
+  },
+  {
+    "startInSeconds": 133,
+    "endInSeconds": 136,
+    "text": "Then write down what the agent should do in this case."
+  },
+  {
+    "startInSeconds": 136,
+    "endInSeconds": 140,
+    "text": "It should recognize that the customer wants a refund,\nfollow the refund policy,"
+  },
+  {
+    "startInSeconds": 140,
+    "endInSeconds": 144,
+    "text": "and perform whatever customer and order checks are required\nbefore processing it."
+  },
+  {
+    "startInSeconds": 144,
+    "endInSeconds": 149,
+    "text": "You can then use the evaluators you already have to check those\nparts of the behavior."
+  },
+  {
+    "startInSeconds": 149,
+    "endInSeconds": 153,
+    "text": "A policy evaluator can tell you whether the refund\nrules were followed,"
+  },
+  {
+    "startInSeconds": 153,
+    "endInSeconds": 158,
+    "text": "and your tool evaluators can check whether the required lookups\nand actions actually happened."
+  },
+  {
+    "startInSeconds": 158,
+    "endInSeconds": 164,
+    "text": "At this point, something important has changed. This is no longer a\nproduction failure that you happened to observe once."
+  },
+  {
+    "startInSeconds": 164,
+    "endInSeconds": 172,
+    "text": "It's now a test case you can run every time you modify the agent.\nThe trace also gives you a clue about where to look next."
+  },
+  {
+    "startInSeconds": 172,
+    "endInSeconds": 179,
+    "text": "The failure happens before the agent calls any refund tools, because\nit never recognizes the request as a refund in the first place."
+  },
+  {
+    "startInSeconds": 179,
+    "endInSeconds": 185,
+    "text": "So one place worth investigating is the instruction that tells the\nagent when to enter the refund workflow."
+  },
+  {
+    "startInSeconds": 185,
+    "endInSeconds": 189,
+    "text": "You might also look at the examples the agent has been given."
+  },
+  {
+    "startInSeconds": 189,
+    "endInSeconds": 193,
+    "text": "If every refund example says something explicit like\n\"refund this order\","
+  },
+  {
+    "startInSeconds": 193,
+    "endInSeconds": 197,
+    "text": "the agent may not have enough guidance for requests such\nas \"can I get my money back?\""
+  },
+  {
+    "startInSeconds": 197,
+    "endInSeconds": 202,
+    "text": "That gives you a direction for your next change,\nYou could clarify the refund routing instruction,"
+  },
+  {
+    "startInSeconds": 202,
+    "endInSeconds": 207,
+    "text": "or maybe add a few examples that express refund\nintent in different ways."
+  },
+  {
+    "startInSeconds": 207,
+    "endInSeconds": 211,
+    "text": "The exact change depends on how the Northwind agent is implemented."
+  },
+  {
+    "startInSeconds": 211,
+    "endInSeconds": 217,
+    "text": "So you wouldn't want to guess the final fix from this trace alone,\nbut now you have a concrete hypothesis to test."
+  },
+  {
+    "startInSeconds": 217,
+    "endInSeconds": 223,
+    "text": "And when you test it, don't run only the new production case.\nrun the older refund examples, too."
+  },
+  {
+    "startInSeconds": 223,
+    "endInSeconds": 231,
+    "text": "You still want refund order 1842 to work exactly as it did before.\nThen run the rest of your known-good cases as well."
+  },
+  {
+    "startInSeconds": 231,
+    "endInSeconds": 235,
+    "text": "If you make the agent more sensitive to indirect refund requests,"
+  },
+  {
+    "startInSeconds": 235,
+    "endInSeconds": 239,
+    "text": "you want to make sure it doesn't start interpreting ordinary product\nquestions as refunds."
+  },
+  {
+    "startInSeconds": 239,
+    "endInSeconds": 241,
+    "text": "So your benchmark has gotten bigger."
+  },
+  {
+    "startInSeconds": 241,
+    "endInSeconds": 247,
+    "text": "It still contains the refund cases you already knew about\nand the other behaviors you've been protecting."
+  },
+  {
+    "startInSeconds": 247,
+    "endInSeconds": 250,
+    "text": "And now it also contains this new production case."
+  },
+  {
+    "startInSeconds": 250,
+    "endInSeconds": 255,
+    "text": "That means you should run the updated agent on that expanded benchmark\nwith the same evaluators."
+  },
+  {
+    "startInSeconds": 255,
+    "endInSeconds": 261,
+    "text": "Then look first at the case that came from production.\nWhen the customer says, \"I bought this last week and it doesn't fit."
+  },
+  {
+    "startInSeconds": 261,
+    "endInSeconds": 266,
+    "text": "Can I get my money back?\", does the agent now recognize the refund\nintent and enter the right workflow?"
+  },
+  {
+    "startInSeconds": 266,
+    "endInSeconds": 273,
+    "text": "If it does, check the other refund cases next. Do those still work?\nAnd then look at the rest of the benchmark."
+  },
+  {
+    "startInSeconds": 273,
+    "endInSeconds": 279,
+    "text": "Did anything else change that you didn't intend? This is the same\nimprovement process you've been using throughout the module."
+  },
+  {
+    "startInSeconds": 279,
+    "endInSeconds": 284,
+    "text": "The only difference is where this particular test case came from.\nIt came from a real customer."
+  },
+  {
+    "startInSeconds": 284,
+    "endInSeconds": 290,
+    "text": "And if you fix the behavior, you keep the case.\nYou don't remove it because the problem is gone."
+  },
+  {
+    "startInSeconds": 290,
+    "endInSeconds": 294,
+    "text": "That customer has shown you one way that the agent can\nfail, and from now on,"
+  },
+  {
+    "startInSeconds": 294,
+    "endInSeconds": 297,
+    "text": "future versions should have to prove that they don't\nbring the failure back."
+  },
+  {
+    "startInSeconds": 297,
+    "endInSeconds": 303,
+    "text": "That's how your benchmark gets stronger over time.\nSome cases begin as failures you discover during development."
+  },
+  {
+    "startInSeconds": 303,
+    "endInSeconds": 311,
+    "text": "Others begin as capabilities you want the agent to gain.\nOthers come from regressions introduced by your own changes."
+  },
+  {
+    "startInSeconds": 311,
+    "endInSeconds": 318,
+    "text": "And yet others come from production, because real users will always\ncreate situations you didn't think to write down in advance."
+  },
+  {
+    "startInSeconds": 318,
+    "endInSeconds": 323,
+    "text": "Each time that happens, you can take what you learned and add it to\nthe next evaluation."
+  },
+  {
+    "startInSeconds": 323,
+    "endInSeconds": 329,
+    "text": "By the time you've gone through several rounds of improvement, you're\nno longer testing the agent against the benchmark you started with."
+  },
+  {
+    "startInSeconds": 329,
+    "endInSeconds": 332,
+    "text": "You're testing it against a record of what you've\nlearned about the system."
+  },
+  {
+    "startInSeconds": 332,
+    "endInSeconds": 338,
+    "text": "the failures that mattered, the behaviors you fixed,\nand the cases you now know you need to protect."
+  },
+  {
+    "startInSeconds": 338,
+    "endInSeconds": 345,
+    "text": "And that's the improvement stage of the process.\nYou started this module with the evaluation results already in hand."
+  },
+  {
+    "startInSeconds": 345,
+    "endInSeconds": 350,
+    "text": "You had traces, datasets, and evaluators that could show you where the\nagent was succeeding and where it was failing."
+  },
+  {
+    "startInSeconds": 350,
+    "endInSeconds": 358,
+    "text": "Then, you use that evidence to choose what to improve, make a targeted\nchange, and compare the new version against the old one."
+  },
+  {
+    "startInSeconds": 358,
+    "endInSeconds": 362,
+    "text": "And as you saw, improving your agent is rarely about one\nchange and one result."
+  },
+  {
+    "startInSeconds": 362,
+    "endInSeconds": 367,
+    "text": "A fix can solve the problem you were aiming at and still introduce a\nregression somewhere else."
+  },
+  {
+    "startInSeconds": 367,
+    "endInSeconds": 373,
+    "text": "So, you inspect what changed, look at the traces,\nrefine the intervention, and run the comparison again."
+  },
+  {
+    "startInSeconds": 373,
+    "endInSeconds": 379,
+    "text": "Once the agent is in production, real users give you new cases to\nbring back into that same loop."
+  },
+  {
+    "startInSeconds": 379,
+    "endInSeconds": 387,
+    "text": "And that brings us to the end of this course. So let's zoom back out\nto the full evaluation framework you've been working through."
+  },
+  {
+    "startInSeconds": 387,
+    "endInSeconds": 390,
+    "text": "The first stage in the process was to Observe."
+  },
+  {
+    "startInSeconds": 390,
+    "endInSeconds": 395,
+    "text": "You looked closely at what the agent actually did,\nfound failures in its responses and actions,"
+  },
+  {
+    "startInSeconds": 395,
+    "endInSeconds": 397,
+    "text": "and gathered the evidence that showed where things went wrong."
+  },
+  {
+    "startInSeconds": 397,
+    "endInSeconds": 399,
+    "text": "Then came Benchmark."
+  },
+  {
+    "startInSeconds": 399,
+    "endInSeconds": 405,
+    "text": "You took those individual failures and turned them into criteria you\ncould apply consistently across many different cases."
+  },
+  {
+    "startInSeconds": 405,
+    "endInSeconds": 412,
+    "text": "You worked out what should count as a pass, what should count\nas a failure, and created examples with the judgments you expected."
+  },
+  {
+    "startInSeconds": 412,
+    "endInSeconds": 419,
+    "text": "In Evaluate, you turn those criteria into automated checks\nand tested how well those checks agreed with human judgment."
+  },
+  {
+    "startInSeconds": 419,
+    "endInSeconds": 425,
+    "text": "Once you trusted the evaluation setup, you could use it to measure the\nagent across a larger set of cases."
+  },
+  {
+    "startInSeconds": 425,
+    "endInSeconds": 430,
+    "text": "And finally, in Improve, you use those measurements\nto improve the system."
+  },
+  {
+    "startInSeconds": 430,
+    "endInSeconds": 435,
+    "text": "You found the patterns that mattered, chose where to intervene,\ntested changes against the stable benchmark,"
+  },
+  {
+    "startInSeconds": 435,
+    "endInSeconds": 441,
+    "text": "checked for regressions and trade-offs, and kept adding new evidence\nas the agent encountered the real world."
+  },
+  {
+    "startInSeconds": 441,
+    "endInSeconds": 450,
+    "text": "And then, the cycle continues. Improve gives you new traces to\ninvestigate. New failures may lead you to refine your criteria."
+  },
+  {
+    "startInSeconds": 450,
+    "endInSeconds": 457,
+    "text": "New behavior may require you to update your evaluations, and those\nevaluations then give you the evidence for the next improvement."
+  },
+  {
+    "startInSeconds": 457,
+    "endInSeconds": 464,
+    "text": "So the four stages connect into one ongoing process: Observe,\nBenchmark, Evaluate, Improve."
+  },
+  {
+    "startInSeconds": 464,
+    "endInSeconds": 468,
+    "text": "The goal isn't just to know whether an agent is good or bad."
+  },
+  {
+    "startInSeconds": 468,
+    "endInSeconds": 473,
+    "text": "It's to build a process that helps you understand the behavior of your\nagent, measure it in a way you can trust,"
+  },
+  {
+    "startInSeconds": 473,
+    "endInSeconds": 476,
+    "text": "and make better decisions about how to improve it."
+  },
+  {
+    "startInSeconds": 476,
+    "endInSeconds": 482,
+    "text": "That's the core of the evaluation loop, and that brings us to the end\nof this course. Congratulations!"
+  },
+  {
+    "startInSeconds": 482,
+    "endInSeconds": 486,
+    "text": "I hope you find the skills you've learned here useful as you build AI\napplications going forward."
+  }
+]

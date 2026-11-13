@@ -1,0 +1,67 @@
+# Homework 1 public teaching repository: assignments/OMIM_620985/grill_run/tasks/0007_screen_h1/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620985/grill_run/tasks/0007_screen_h1/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620985/grill_run/tasks/0007_screen_h1/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature confirms MSL2-related neurodevelopmental disorder (Karayol-Borroto-Haghshenas syndrome) consistently presents with core global developmental delay and intellectual disability across cohorts.",
+  "confidence": 0.9,
+  "evidence": [
+    {
+      "text": "Karayol et al. identified a cohort of 25 individuals with heterozygous de novo MSL2 variants presenting with neurodevelopmental disorder phenotypes including global developmental delay and intellectual disability.",
+      "stance": "supports",
+      "source": {
+        "title": "MSL2 variants lead to a neurodevelopmental syndrome with lack of coordination, epilepsy, specific dysmorphisms, and a distinct episignature",
+        "authors": [
+          "R Karayol",
+          "MC Borroto",
+          "S Haghshenas"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.cell.com/ajhg/fulltext/S0002-9297(24)00164-2",
+        "quote": "MSL2 variants were associated with NDD phenotypes including global developmental delay, intellectual disability, hypotonia, and motor issues such as coordination problems, feeding difficulties, and gait disturbance."
+      },
+      "numbers": [
+        {
+          "metric": "cohort size",
+          "value": 25
+        }
+      ]
+    },
+    {
+      "text": "Lu et al. evaluated clinical features associated with novel MSL2 protein-truncating variants, noting developmental delay and intellectual disability among the core phenotypes.",
+      "stance": "supports",
+      "source": {
+        "title": "Novel protein-truncating variants of a chromatin-modifying gene MSL2 in syndromic neurodevelopmental disorders",
+        "authors": [
+          "X Lu",
+          "K Ng",
+          "F Pinto e Vairo",
+          "J Collins",
+          "R Cohn"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.nature.com/articles/s41431-024-01576-0",
+        "quote": "These include the developmental delay, intellectual disability, ASD, hypotonia, epicanthal"
+      },
+      "numbers": [
+        {
+          "metric": "detailed clinical cases reported",
+          "value": 3
+        }
+      ]
+    }
+  ]
+}
+```

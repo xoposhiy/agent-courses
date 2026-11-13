@@ -1,0 +1,34 @@
+# Homework 1 public teaching repository: assignments/OMIM_617527/grill_run/tasks/0008_screen_h1/sources.txt
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_617527/grill_run/tasks/0008_screen_h1/sources.txt) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_617527/grill_run/tasks/0008_screen_h1/sources.txt)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```txt
+SOURCES (the only material you may cite; copy locators exactly):
+
+[1] Progressive microcephaly (Concept Id: C1850456)
+    (authors not shown)
+    https://www.ncbi.nlm.nih.gov/medgen/340542
+    snippet: Progressive microcephaly is diagnosed when the head circumference falls progressively behind age- and gender-dependent norms.
+
+[2] Entry - #617527 - NEURODEVELOPMENTAL DISORDER ...
+    (authors not shown)
+    https://omim.org/entry/617527
+    snippet: Neurodevelopmental disorder with progressive microcephaly, spasticity, and brain anomalies (NDMSBA) is an autosomal recessive neurodevelopmental disorder ...
+
+[3] Microcephaly, Postnatal Progressive, with Seizures and ...
+    (authors not shown)
+    https://www.malacards.org/card/microcephaly_postnatal_progressive_with_seizures_and_brain_atrophy
+    snippet: A disorder characterized by postnatal progressive microcephaly and severe developmental retardation associated with cerebral and cerebellar atrophy. Infants ...
+
+[4] Progressive Microcephaly: SLC1A4 Variants and Diagnosis
+    (authors not shown)
+    https://sequencing.com/education-center/medical/progressive-microcephaly?srsltid=AU7gw4Xa3J80FLv5NsBVZRKeQm9nRomIIwWGDBRxk1aei84Uoscc--QH
+    snippet: Progressive microcephaly can be caused by genetic mutations, infections, or other factors that affect a child's brain development. Recent ...
+
+[5] Postnatal Progressive Microcephaly with Seizures and ...
+    (authors not shown)
+    https://www.jewishgenetics.org/genetic-disorders/search-genetic-disorders/postnatal-progressive-microcephaly-with-seizures-and-brain-atrophy/
+    snippet: Postnatal progressive microcephaly with seizures and brain atrophy is a condition linked to a small head size (microcephaly), seizures, and ...
+```

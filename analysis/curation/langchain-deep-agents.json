@@ -1,0 +1,468 @@
+{
+  "source_id": "langchain-deep-agents",
+  "summary": "A hands-on course on configuring and deploying Deep Agents. It covers models, prompts, tools, MCP, thread state, approval, filesystems, sandboxes, interpreters, context, skills, memory, and subagents through a sales-assistant project.",
+  "limitations": [
+    "The analysis uses 29 public lesson documents from the archived course repository.",
+    "Python and TypeScript versions, repeated diagrams, quizzes, and matching code files count once per course.",
+    "Optional advanced sandbox and asynchronous-agent lessons are available and included. Product-specific instructions describe the archived version."
+  ],
+  "new_concepts": [
+    {
+      "id": "model-selection",
+      "label": "Model selection and provider integration",
+      "kind": "topic",
+      "definition": "Choose a model for capability, cost, privacy, and tool support and connect its API.",
+      "aliases": [
+        "model providers",
+        "model selection"
+      ],
+      "parent_id": "frameworks"
+    },
+    {
+      "id": "filesystem",
+      "label": "Agent filesystem and storage backends",
+      "kind": "topic",
+      "definition": "Expose file tools while controlling where files are stored and how they persist.",
+      "aliases": [
+        "filesystem backends",
+        "agent filesystem"
+      ],
+      "parent_id": "harness"
+    },
+    {
+      "id": "code-interpreter",
+      "label": "Embedded code interpreter",
+      "kind": "method",
+      "definition": "Run generated code in an interpreter within the agent loop.",
+      "aliases": [
+        "code interpreter",
+        "interpreter middleware"
+      ],
+      "parent_id": "tool-use"
+    },
+    {
+      "id": "programmatic-tools",
+      "label": "Programmatic tool composition",
+      "kind": "pattern",
+      "definition": "Write code that calls and combines several tools in one execution.",
+      "aliases": [
+        "programmatic tool calling",
+        "PTC"
+      ],
+      "parent_id": "tool-use"
+    },
+    {
+      "id": "middleware",
+      "label": "Agent middleware",
+      "kind": "concept",
+      "definition": "Add reusable behavior around model calls, tool calls, and agent execution.",
+      "aliases": [
+        "middleware hooks"
+      ],
+      "parent_id": "harness"
+    },
+    {
+      "id": "auth",
+      "label": "Tool authentication and credential handling",
+      "kind": "topic",
+      "definition": "Authenticate tool connections and control how credentials reach tools.",
+      "aliases": [
+        "OAuth",
+        "credential brokering"
+      ],
+      "parent_id": "safety"
+    },
+    {
+      "id": "deployment",
+      "label": "Agent deployment and service APIs",
+      "kind": "topic",
+      "definition": "Run an agent as a persistent service with APIs and supporting infrastructure.",
+      "aliases": [
+        "agent deployment",
+        "agent server"
+      ],
+      "parent_id": "frameworks"
+    },
+    {
+      "id": "managed-agents",
+      "label": "Managed agent hosting",
+      "kind": "tool",
+      "definition": "Use a hosted service to run agents and provide storage, tools, and interfaces.",
+      "aliases": [
+        "Managed Deep Agents",
+        "MDA"
+      ],
+      "parent_id": "deployment"
+    },
+    {
+      "id": "dynamic-delegation",
+      "label": "Dynamic subagent creation and batch delegation",
+      "kind": "pattern",
+      "definition": "Create or schedule subagents for a changing list of work items.",
+      "aliases": [
+        "dynamic subagents",
+        "batch subagents"
+      ],
+      "parent_id": "multi-agent"
+    },
+    {
+      "id": "memory-scoping",
+      "label": "Memory scoping and user isolation",
+      "kind": "pattern",
+      "definition": "Keep persistent memories separate by user, thread, or workspace.",
+      "aliases": [
+        "memory isolation",
+        "memory namespaces"
+      ],
+      "parent_id": "memory"
+    },
+    {
+      "id": "state-replay",
+      "label": "State replay and branching",
+      "kind": "pattern",
+      "definition": "Inspect earlier checkpoints and resume or fork from a previous state.",
+      "aliases": [
+        "time travel",
+        "state branching"
+      ],
+      "parent_id": "checkpointing"
+    },
+    {
+      "id": "sales-agents",
+      "label": "Sales and business assistants",
+      "kind": "application",
+      "definition": "Use an agent to manage customer requests, business data, reports, or messages.",
+      "aliases": [
+        "sales assistants",
+        "business assistants"
+      ],
+      "parent_id": null
+    }
+  ],
+  "coverage": [
+    {
+      "concept_id": "agent-architecture",
+      "source": "markdown/lessons/m1.1-overview.md",
+      "needle": "An agent wraps the LLM",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "harness",
+      "source": "markdown/lessons/m1.1-overview.md",
+      "needle": "capabilities the harness gives it",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "long-horizon",
+      "source": "markdown/lessons/m1.1-overview.md",
+      "needle": "long-horizon",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "frameworks",
+      "source": "markdown/lessons/m1.2-running-a-deep-agent.md",
+      "needle": "Deep Agents is a harness",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "model-selection",
+      "source": "markdown/lessons/m1.3-models.md",
+      "needle": "model-agnostic design",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "prompting",
+      "source": "markdown/lessons/m1.4-system-prompt.md",
+      "needle": "guides the model",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "persona",
+      "source": "markdown/lessons/m1.4-system-prompt.md",
+      "needle": "pirate, cowboy",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "kv-cache",
+      "source": "markdown/lessons/m1.4-system-prompt.md",
+      "needle": "prompt caching",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "safety",
+      "source": "markdown/lessons/m1.4-system-prompt.md",
+      "needle": "refuse or redirect",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "tool-use",
+      "source": "markdown/lessons/m1.5-tools.md",
+      "needle": "Tools are functions",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "structured-output",
+      "source": "markdown/lessons/m1.5-tools.md",
+      "needle": "schema",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "middleware",
+      "source": "markdown/lessons/m1.5-tools.md",
+      "needle": "Middleware",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "mcp",
+      "source": "markdown/lessons/m1.6-mcp.md",
+      "needle": "standardizes how applications",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "auth",
+      "source": "markdown/lessons/m1.6-mcp.md",
+      "needle": "OAuth",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "state",
+      "source": "markdown/lessons/m1.7-messages-threads-checkpointers.md",
+      "needle": "A **thread** is one ongoing conversation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "checkpointing",
+      "source": "markdown/lessons/m1.7-messages-threads-checkpointers.md",
+      "needle": "A **checkpointer** saves thread state",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "durable-execution",
+      "source": "markdown/lessons/m1.7-messages-threads-checkpointers.md",
+      "needle": "can continue from that saved state",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "state-replay",
+      "source": "markdown/lessons/m1.7-messages-threads-checkpointers.md",
+      "needle": "Time Travel",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "hitl",
+      "source": "markdown/lessons/m1.8-hitl.md",
+      "needle": "approve, edit, reject",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "human-collaboration",
+      "source": "markdown/lessons/m1.8-hitl.md",
+      "needle": "Asking the User a Question",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "filesystem",
+      "source": "markdown/lessons/m2.1-the-deep-agent-environment.md",
+      "needle": "The LLM calls standard filesystem tools",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "threat-modeling",
+      "source": "markdown/lessons/m2.2-filesystem-backends.md",
+      "needle": "Permissions",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "sandboxing",
+      "source": "markdown/lessons/m2.3-sandboxes-and-localshell.md",
+      "needle": "temporary, isolated workspace",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "coding-agents",
+      "source": "markdown/lessons/m2.3-sandboxes-and-localshell.md",
+      "needle": "compile and test code",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "code-interpreter",
+      "source": "markdown/lessons/m2.4-interpreter.md",
+      "needle": "Interpreters are a lighter-weight",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "programmatic-tools",
+      "source": "markdown/lessons/m2.4-interpreter.md",
+      "needle": "Programmatic Tool Calling with Chinook",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "codeact",
+      "source": "markdown/lessons/m2.4-interpreter.md",
+      "needle": "The LLM writes code",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "context-engineering",
+      "source": "markdown/lessons/m3.1-summarization-context-offloading.md",
+      "needle": "Long-running agents build up long message histories",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "compaction",
+      "source": "markdown/lessons/m3.1-summarization-context-offloading.md",
+      "needle": "summarizes older messages",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "context-offload",
+      "source": "markdown/lessons/m3.1-summarization-context-offloading.md",
+      "needle": "saves the full content to the filesystem",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "procedural-memory",
+      "source": "markdown/lessons/m3.2-skills.md",
+      "needle": "A skill is a directory",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "progressive-disclosure",
+      "source": "markdown/lessons/m3.2-skills.md",
+      "needle": "three-stage pattern",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "memory",
+      "source": "markdown/lessons/m3.3-memory.md",
+      "needle": "Agent memory splits into two scopes",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "working-memory",
+      "source": "markdown/lessons/m3.3-memory.md",
+      "needle": "Short-term memory",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "memory-scoping",
+      "source": "markdown/lessons/m3.3-memory.md",
+      "needle": "Scoping memory",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "personalization",
+      "source": "markdown/lessons/m3.3-memory.md",
+      "needle": "user preferences",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "memory-maintenance",
+      "source": "markdown/lessons/m3.3-memory.md",
+      "needle": "How memory is updated",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "planning",
+      "source": "markdown/lessons/m4.1-delegation.md",
+      "needle": "write_todos",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "multi-agent",
+      "source": "markdown/lessons/m4.1-delegation.md",
+      "needle": "subagents let the main agent",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "orchestrator-workers",
+      "source": "markdown/lessons/m4.1-delegation.md",
+      "needle": "A supervisor splits the work",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "context-isolation",
+      "source": "markdown/lessons/m4.1-delegation.md",
+      "needle": "Context isolation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "agent-as-tool",
+      "source": "markdown/lessons/m4.1-delegation.md",
+      "needle": "task",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "shared-memory",
+      "source": "markdown/lessons/m4.1-delegation.md",
+      "needle": "list is saved in the agent's state",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "parallelization",
+      "source": "markdown/lessons/m4.2-building-a-subagent-team.md",
+      "needle": "all at once",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "deep-research",
+      "source": "markdown/lessons/m4.2-building-a-subagent-team.md",
+      "needle": "research subagent",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "dynamic-delegation",
+      "source": "markdown/lessons/m4.3-dynamic-subagents.md",
+      "needle": "1,000 sales transcripts",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "sales-agents",
+      "source": "markdown/lessons/m5.1-putting-it-all-together.md",
+      "needle": "sales assistant",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "deployment",
+      "source": "markdown/lessons/m5.2-local-deployment.md",
+      "needle": "From a script to a service",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "langgraph",
+      "source": "markdown/lessons/m5.2-local-deployment.md",
+      "needle": "langgraph dev",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "observability",
+      "source": "markdown/lessons/m5.2-local-deployment.md",
+      "needle": "debugging interface",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "async-agents",
+      "source": "markdown/lessons/m5.4-async-subagents.md",
+      "needle": "launch background tasks",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "prompt-injection",
+      "source": "markdown/lessons/m5.5-sandbox-async-agent.md",
+      "needle": "injection",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "privacy",
+      "source": "markdown/lessons/m2.3-sandboxes-and-localshell.md",
+      "needle": "without exposing them to the code",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "managed-agents",
+      "source": "markdown/lessons/m6.1-what-is-managed-deep-agents.md",
+      "needle": "Managed Deep Agents",
+      "coverage": "taught"
+    }
+  ]
+}

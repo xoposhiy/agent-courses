@@ -1,0 +1,25 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.litellm_cache/
+.cache/
+
+# Local environments and build artifacts
+.pixi/
+.coverage
+build/
+dist/
+docs/_build/
+*.egg-info/
+
+# Local data and logs
+workdir/
+workdir
+debug.log
+debug_logs*
+.env

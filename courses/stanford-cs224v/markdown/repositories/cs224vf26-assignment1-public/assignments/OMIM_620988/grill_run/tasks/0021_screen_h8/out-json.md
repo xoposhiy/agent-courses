@@ -1,0 +1,65 @@
+# Homework 1 public teaching repository: assignments/OMIM_620988/grill_run/tasks/0021_screen_h8/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620988/grill_run/tasks/0021_screen_h8/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620988/grill_run/tasks/0021_screen_h8/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature shows cardiac abnormalities in 4/14 (28.6%) patients in Calame et al., challenging the <10% frequency hypothesis, though specific structural malformations like non-compaction may be less common.",
+  "confidence": 0.35,
+  "evidence": [
+    {
+      "text": "In a cohort of individuals with monoallelic DHX9 variants, cardiac abnormalities were observed in 4 out of 14 assessed individuals (28.6%), which exceeds the hypothesized <10% threshold.",
+      "stance": "contradicts",
+      "source": {
+        "title": "Monoallelic variation in DHX9, the gene encoding the DExH ...",
+        "authors": [
+          "DG Calame"
+        ],
+        "year": 2023,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": "PMC10432148",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10432148/",
+        "quote": "Other features seen in two or more individuals were cardiac abnormalities (4/14), hyperreflexia (3/14), failure to thrive (2/14), short stature"
+      },
+      "numbers": [
+        {
+          "metric": "cardiac abnormalities proportion",
+          "value": "4/14"
+        }
+      ]
+    },
+    {
+      "text": "Yamada et al. identified a heterozygous de novo DHX9 p.(Gly414Arg) variant in a single patient presenting with short stature, intellectual disability, and ventricular non-compaction cardiomyopathy, with cardiac conduction abnormalities recapitulated in Dhx9 mutant mice.",
+      "stance": "neutral",
+      "source": {
+        "title": "Heterozygous loss-of-function DHX9 variants are associated with neurodevelopmental disorders: Human genetic and experimental evidences",
+        "authors": [
+          "M Yamada",
+          "Y Nitta",
+          "T Uehara",
+          "H Suzuki",
+          "F Miya"
+        ],
+        "year": 2023,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.sciencedirect.com/science/article/pii/S1769721223001106",
+        "quote": "Herein, we report a patients with a heterozygous de novo missense variant, p.(Gly414Arg) of DHX9 who presented with a short stature, intellectual disability, and ventricular non-compaction cardiomyopathy."
+      },
+      "numbers": [
+        {
+          "metric": "reported patients with ventricular non-compaction cardiomyopathy in study",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}
+```

@@ -1,0 +1,74 @@
+# Homework 1 public teaching repository: assignments/OMIM_618089/grill_run/tasks/0011_screen_h5/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_618089/grill_run/tasks/0011_screen_h5/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_618089/grill_run/tasks/0011_screen_h5/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature confirms FBXO11-related disorder is characterized by static neurodevelopmental delay rather than neurodegeneration, lacks major structural malformations like limb reductions, and typically exhibits mild microcephaly (24%) or macrocephaly rather than profound microcephaly.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "In a cohort of 21 individuals with FBXO11 variants, microcephaly was present in only 24%, neuroimaging findings were nonspecific, and presentation centered on mild ID and subtle dysmorphism without progressive neurodegeneration.",
+      "stance": "supports",
+      "source": {
+        "title": "Defining FBXO11-Related Neurodevelopmental Disorder: Clinical, Molecular and Facial Assessment of 21 Patients",
+        "authors": [
+          "H Goel",
+          "G Garg",
+          "TS Barakat",
+          "G Barcia",
+          "A Bourgois"
+        ],
+        "year": 2026,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.researchsquare.com/article/rs-10148333/latest",
+        "quote": "Mild intellectual disability (86%), facial dysmorphism (67%), hypotonia (62%), and behavioural dysregulation (62%) were the most prevalent features. Microcephaly occurred in 24%, while seizures were present in 43%. Brain imaging abnormalities were nonspecific"
+      },
+      "numbers": [
+        {
+          "metric": "microcephaly prevalence",
+          "value": "24%"
+        },
+        {
+          "metric": "cohort size",
+          "value": 21
+        }
+      ]
+    },
+    {
+      "text": "In 12 Chinese individuals across 5 families with FBXO11 variants, major structural malformations were not observed, supporting the absence of gross structural birth defects such as limb reduction anomalies.",
+      "stance": "supports",
+      "source": {
+        "title": "FBXO11 variants are associated with intellectual disability and variable clinical manifestation in Chinese affected individuals",
+        "authors": [
+          "X Pan",
+          "L Liu",
+          "X Zhang",
+          "X Tang",
+          "G Qian",
+          "H Qiu"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.nature.com/articles/s10038-024-01255-4",
+        "quote": "Distinguishingly, malformation was not observed in all the affected individuals."
+      },
+      "numbers": [
+        {
+          "metric": "affected individuals",
+          "value": 12
+        }
+      ]
+    }
+  ]
+}
+```

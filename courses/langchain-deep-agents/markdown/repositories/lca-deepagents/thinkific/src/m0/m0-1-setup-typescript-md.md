@@ -1,0 +1,211 @@
+# Official course repository: Python, TypeScript, lesson sources, and agent UI: thinkific/src/m0/m0.1-setup-typescript.md
+
+[Course index](../../../../../../README.md) · [Original source](https://github.com/langchain-ai/lca-deepagents/blob/HEAD/thinkific/src/m0/m0.1-setup-typescript.md) · [Raw file](../../../../../../raw/repositories/lca-deepagents/thinkific/src/m0/m0.1-setup-typescript.md)
+
+Retrieved: 2026-11-13T16:50:31.645872+00:00
+
+[For translation, open lesson in new tab and use Chrome translate](../../../../../lessons/m0.1-setup-typescript.md)
+
+<a id="getting-set-up-typescript"></a>
+
+
+# Getting Set Up (TypeScript)
+
+Follow these steps to get your environment ready for the course.
+
+---
+
+<a id="setup"></a>
+
+
+## Setup
+
+<a id="prerequisites"></a>
+
+
+### Prerequisites
+
+- Node.js 24.15+
+- [pnpm](https://pnpm.io/): [how to install](#installing-pnpm)
+- LLM Model API key: choose your favorite provider. The course defaults to Anthropic ([sign up for an Anthropic API key here](https://console.anthropic.com/))
+- LangSmith API key: [how to get one](#getting-started-with-langsmith)
+- Tavily API key (optional, for the Module 4 & 5 web-search labs): [get a free key](https://app.tavily.com)
+
+<a id="installation"></a>
+
+
+### Installation
+
+Clone the repository and move to the `typescript` directory:
+
+```text
+git clone --depth 1 https://github.com/langchain-ai/lca-deepagents.git
+cd lca-deepagents/typescript
+```
+
+Make a copy of `.env.example`:
+
+```text
+cp .env.example .env
+```
+
+Insert API keys directly into `.env` (LangSmith and your model provider are both required):
+
+```text
+# LangSmith: tracing and observability
+LANGSMITH_API_KEY=lsv2_...
+LANGSMITH_TRACING=true
+LANGSMITH_AGENT_ID=lca-deepagents
+LANGSMITH_AGENT_ENVIRONMENT=development
+# Non-US region? Uncomment your endpoint (else your API key won't authenticate):
+# LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com    # GCP EU
+# LANGSMITH_ENDPOINT=https://apac.api.smith.langchain.com  # GCP APAC
+
+# Model provider API keys: set the one you're using
+ANTHROPIC_API_KEY=your-anthropic-api-key
+# OPENAI_API_KEY=your-openai-api-key
+# GOOGLE_API_KEY=your-google-api-key
+
+# OpenRouter: optional, for trying free hosted open-source models (used in the Models lesson)
+# Get a free key at https://openrouter.ai/keys
+# OPENROUTER_API_KEY=sk-or-v1-...
+
+# Tavily web search - for the research labs (Module 4 and the Module 5
+# newsletter). Leave blank to run those labs without web search.
+# Get a free key at https://app.tavily.com
+TAVILY_API_KEY=
+```
+
+This course uses `dotenv/config`; `.env` values are loaded automatically when a lesson script starts, but — unlike the Python course — they do not override values already set in your shell environment.
+
+**Using a different provider?** Adding its key to `.env` isn’t enough; also switch the `model` and `strongModel` lines in `typescript/models.ts` (see lesson 1.3).
+
+Set `LANGSMITH_AGENT_ID` to your LangSmith agent ID and keep `LANGSMITH_AGENT_ENVIRONMENT=development` for local lessons. Set both values together, and remove any legacy `LANGSMITH_PROJECT` setting from `.env` and your shell to avoid conflicting trace destinations.
+
+Install dependencies:
+
+```text
+pnpm install
+```
+
+<a id="setup-verification"></a>
+
+
+### Setup Verification
+
+After completing the steps above, run the following to verify your environment:
+
+```text
+cd typescript
+pnpm tsx ./env_utils.ts
+```
+
+You should see masked values for each key in your `.env` file. If anything shows `<not set>`, see [Setup Verification Issues](#setup-verification-issues).
+
+<a id="optional-taking-the-course-via-a-coding-agent"></a>
+
+
+### Optional: Taking the Course via a Coding Agent
+
+The Deep Agents Course Skill allows you to take the course from within an AI tool. The tutor covers the exact material in this course, providing you a different medium of learning.
+
+```text
+cd lca-deepagents
+npx skills add langchain-ai/lca-tutors/lca-deepagents
+```
+
+Invoke the tutor with `/lca-deepagents`. For more instructions on how to use the tutor skill, check out the skills’ [README](../../../../../tutors/README.md).
+
+---
+
+<a id="setup-details"></a>
+
+
+## Setup Details
+
+<a id="setup-verification-issues"></a>
+
+
+### Setup Verification Issues
+
+Cannot find module ‘deepagents’ (or similar)
+
+You’re likely running a lesson script without having installed dependencies first.
+
+**Solution:** Run `pnpm install` from the `typescript` directory.
+
+
+Missing or invalid API key errors
+
+The key exists in `.env.example` but has no value in your `.env` file.
+
+**Solution:** Open `typescript/.env` and fill in the missing value.
+
+
+LangSmith tracing errors
+
+If you see tracing errors at runtime, check that both `LANGSMITH_TRACING=true` and a valid `LANGSMITH_API_KEY` are set in your `.env` file. If you don’t have a LangSmith account yet, set `LANGSMITH_TRACING=false` to disable tracing until you do.
+
+
+Wrong Node.js version
+
+The course requires Node.js 24.15+.
+
+**Solution:** Install Node.js 24.15+ from [nodejs.org](https://nodejs.org/), or use a version manager like [nvm](https://github.com/nvm-sh/nvm) / [fnm](https://github.com/Schniz/fnm).
+
+<a id="getting-started-with-langsmith"></a>
+
+
+### Getting Started with LangSmith
+
+- Create a [LangSmith](https://smith.langchain.com/) account
+- Go to **Settings → API Keys** and create a new API key
+- Create or select an agent, copy its ID into `LANGSMITH_AGENT_ID`, and use its `development` environment for the course
+
+<a id="installing-pnpm"></a>
+
+
+### Installing pnpm
+
+See the [pnpm installation docs](../../../../../readings/pnpm-io-installation-b6a99ebf.md) for full instructions. Common options:
+
+```text
+# Via Corepack (bundled with Node.js 16.13 through 24; install separately on Node.js 25+)
+corepack enable
+corepack prepare pnpm@latest --activate
+
+# macOS with Homebrew
+brew install pnpm
+
+# Standalone script (macOS / Linux)
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+```
+
+---
+
+<a id="recap"></a>
+
+
+## Recap
+
+- Install pnpm, clone the repo, copy `.env.example`, fill in your API keys, run `pnpm install`
+- Install LangChain skills and the LangChain Docs MCP server to make your coding agent significantly more effective
+
+<a id="next"></a>
+
+
+## Next
+
+The next lesson introduces the Deep Agents framework and walks through your first agent.
+
+---
+
+<a id="references"></a>
+
+
+## References
+
+**Documentation:**
+
+- [pnpm installation](../../../../../readings/pnpm-io-installation-b6a99ebf.md)
+- [LangSmith](https://smith.langchain.com/)

@@ -1,0 +1,27 @@
+# Homework 1 public teaching repository: assignments/OMIM_620775/grill_run/tasks/0003_ground_0/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620775/grill_run/tasks/0003_ground_0/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620775/grill_run/tasks/0003_ground_0/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "term": "OMIM #620775",
+  "definition": "OMIM #620775 designates congenital neuromuscular disorder with dysmorphic facies (NMDF), an ultra-rare autosomal recessive disorder caused by biallelic variants in the FILIP1 gene on chromosome 6q14, characterized clinically by congenital neuromuscular involvement, impaired skeletal muscle function, and dysmorphic facial features.",
+  "source": {
+    "title": "Systematic analysis of homozygous autosomal copy number losses in exomes improves diagnostic yield and uncovers ultra-rare recessive disorders",
+    "authors": [
+      "A Chaurasia",
+      "A Shukla",
+      "S Pande"
+    ],
+    "year": 2026,
+    "journal": null,
+    "doi": "10.1038/s41431-026-02158-y",
+    "pmid": "42362802",
+    "pmc": null,
+    "url": "https://www.nature.com/articles/s41431-026-02158-y",
+    "quote": "FILIP1-related congenital neuromuscular disorder with dysmorphic facies (OMIM #620775) is now indexed in OMIM and has been shown to be characterized by impaired skeletal"
+  }
+}
+```

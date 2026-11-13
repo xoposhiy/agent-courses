@@ -1,0 +1,254 @@
+[
+  {
+    "url": "https://web.stanford.edu/class/cs224v/index.html",
+    "label": "Info",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/",
+      "https://web.stanford.edu/class/cs224v/schedule.html",
+      "https://web.stanford.edu/class/cs224v/projects.html"
+    ]
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs224v/schedule.html",
+    "label": "Schedule",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/",
+      "https://web.stanford.edu/class/cs224v/",
+      "https://web.stanford.edu/class/cs224v/",
+      "https://web.stanford.edu/class/cs224v/schedule.html",
+      "https://web.stanford.edu/class/cs224v/projects.html"
+    ]
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs224v/CS224V_Readings.pdf",
+    "label": "Readings",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/",
+      "https://web.stanford.edu/class/cs224v/schedule.html",
+      "https://web.stanford.edu/class/cs224v/projects.html"
+    ]
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs224v/projects.html",
+    "label": "Projects",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/",
+      "https://web.stanford.edu/class/cs224v/",
+      "https://web.stanford.edu/class/cs224v/schedule.html",
+      "https://web.stanford.edu/class/cs224v/projects.html"
+    ]
+  },
+  {
+    "url": "https://forms.gle/BD8VXCCkEGKLpMwG8",
+    "label": "Project Proposal Form",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/",
+      "https://web.stanford.edu/class/cs224v/schedule.html"
+    ]
+  },
+  {
+    "url": "https://suif.stanford.edu/~lam/",
+    "label": "Monica Lam",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/"
+    ]
+  },
+  {
+    "url": "https://zikai-zhou.github.io/",
+    "label": "Cyrus Zhou",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/"
+    ]
+  },
+  {
+    "url": "https://harshitjoshi.com/",
+    "label": "Harshit Joshi",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/"
+    ]
+  },
+  {
+    "url": "https://www.jeongyeon.kim/",
+    "label": "Jeongyeon Kim",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/"
+    ]
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs224v/",
+    "label": "Mahathi Mangipudi",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/"
+    ]
+  },
+  {
+    "url": "https://vidhyakshayakannan.github.io/",
+    "label": "Vidhyakshaya Kannan",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/"
+    ]
+  },
+  {
+    "url": "https://dransyhe.github.io/",
+    "label": "Yu He",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/"
+    ]
+  },
+  {
+    "url": "http://campus-map.stanford.edu/?srch=CoDa",
+    "label": "CoDa B80",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/"
+    ]
+  },
+  {
+    "url": "https://canvas.stanford.edu/courses/230723",
+    "label": "Canvas",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/",
+      "https://web.stanford.edu/class/cs224v/"
+    ]
+  },
+  {
+    "url": "https://canvas.stanford.edu/courses/230723/external_tools/74302",
+    "label": "Gradescope",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/"
+    ]
+  },
+  {
+    "url": "https://edstem.org/us/courses/100778/",
+    "label": "Ed",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/"
+    ]
+  },
+  {
+    "url": "https://navigator.stanford.edu/classes/1272/2029",
+    "label": "class #2029",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/"
+    ]
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-introduction.pdf",
+    "label": "Introduction",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/schedule.html"
+    ]
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-DeepResearch.pdf",
+    "label": "Knowledge Curation",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/schedule.html"
+    ]
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs224v/cs224v_2026_hw1.pdf",
+    "label": "Homework 1 out",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/schedule.html"
+    ]
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-SMT-match.pdf",
+    "label": "Accountable AI: SMT",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/schedule.html"
+    ]
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs224v/cs224v_2026_hw2.pdf",
+    "label": "Homework 2 out",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/schedule.html"
+    ]
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-SATIR.pdf",
+    "label": "Constraint Satisfaction Based Retrievers",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/schedule.html",
+      "https://web.stanford.edu/class/cs224v/schedule.html"
+    ]
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-freetext.pdf",
+    "label": "How to RAG without hallucination",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/schedule.html"
+    ]
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-agentic.pdf",
+    "label": "Introduction to ReAct Agents for Querying Knowledge Bases and Graphs",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/schedule.html"
+    ]
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-data-driven-deep-research.pdf",
+    "label": "Agentic Data-Driven Research",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/schedule.html"
+    ]
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-new-suql.pdf",
+    "label": "Querying Hybrid (Structured and Unstructured) Data",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/schedule.html"
+    ]
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-newWorksheet.pdf",
+    "label": "Minimizing hallucination in task-oriented agents",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/schedule.html"
+    ]
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs224v/lectures_2026/l-churro.pdf",
+    "label": "VLMs for Transcription",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/schedule.html"
+    ]
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs224v/lectures_2026/I-sliders.pdf",
+    "label": "Long-Context Long-Horizon Deep Researcher",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/schedule.html"
+    ]
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs224v/schedule_2025.html",
+    "label": "Fall 2025",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/schedule.html"
+    ]
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs224v/schedule_2024.html",
+    "label": "Fall 2024",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/schedule.html"
+    ]
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs224v/schedule_2023.html",
+    "label": "Fall 2023",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/schedule.html"
+    ]
+  },
+  {
+    "url": "https://docs.google.com/document/d/17GsPD8IzaSJ_MnGj-yqZgw1MG65bohxeTHeFqz68hi4/edit?usp=sharing",
+    "label": "The project proposals document",
+    "linked_from": [
+      "https://web.stanford.edu/class/cs224v/projects.html"
+    ]
+  }
+]

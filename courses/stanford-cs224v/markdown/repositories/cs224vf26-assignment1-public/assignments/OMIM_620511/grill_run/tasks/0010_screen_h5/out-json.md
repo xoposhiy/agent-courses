@@ -1,0 +1,63 @@
+# Homework 1 public teaching repository: assignments/OMIM_620511/grill_run/tasks/0010_screen_h5/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620511/grill_run/tasks/0010_screen_h5/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620511/grill_run/tasks/0010_screen_h5/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature confirms SCAF4 variants cause Fliedner-Zweier syndrome with variable penetrance of seizures and neurodevelopmental features across cohorts.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "In the initial characterization of the SCAF4-associated neurodevelopmental disorder, seizures occurred in four individuals (50%), and affected individuals showed variable neurodevelopmental and structural manifestations.",
+      "stance": "supports",
+      "source": {
+        "title": "Variants in SCAF4 Cause a Neurodevelopmental Disorder ...",
+        "authors": [
+          "A Fliedner"
+        ],
+        "year": 2020,
+        "journal": null,
+        "doi": "10.1016/j.ajhg.2020.06.019",
+        "pmid": "32730804",
+        "pmc": null,
+        "url": "https://www.sciencedirect.com/science/article/pii/S0002929720302287",
+        "quote": "Seizures occurred in four individuals (50%) and included myoclonic seizures in two and intractable seizures in one. Brain MRIs were performed ..."
+      },
+      "numbers": [
+        {
+          "metric": "seizure frequency in cohort",
+          "value": "4 individuals (50%)"
+        }
+      ]
+    },
+    {
+      "text": "An expanded cohort of 50 individuals confirmed that frequent findings include mild developmental delay with speech impairment, seizures, and skeletal abnormalities, with variable phenotypic severity.",
+      "stance": "supports",
+      "source": {
+        "title": "Further delineation of the SCAF4-associated neurodevelopmental disorder",
+        "authors": [
+          "CM Schmid",
+          "A Gregor",
+          "A Ruiz"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.nature.com/articles/s41431-024-01760-2",
+        "quote": "Frequent clinical findings were mild developmental delay with speech impairment, seizures, and skeletal abnormalities such as clubfoot, scoliosis or hip dysplasia."
+      },
+      "numbers": [
+        {
+          "metric": "cohort size",
+          "value": 50
+        }
+      ]
+    }
+  ]
+}
+```

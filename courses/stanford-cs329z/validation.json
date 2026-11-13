@@ -1,0 +1,29 @@
+{
+  "validator": "tools/validate_corpus.py",
+  "course": {
+    "id": "stanford-cs329z",
+    "folder": "courses/stanford-cs329z",
+    "raw_files": 427,
+    "markdown_files": 278,
+    "bytes": 397704615,
+    "local_links_checked": 1436,
+    "broken_local_links": [],
+    "manifest_type": "dict",
+    "manifest_records": 283,
+    "statuses": {
+      "downloaded": 278,
+      "access_blocked": 1,
+      "failed": 2,
+      "requires_login": 2
+    },
+    "conversion_statuses": {
+      "converted": 215,
+      "converted_with_limitations": 63,
+      "failed": 3,
+      "not_available": 2
+    },
+    "pdf_pages": 2730
+  },
+  "errors": [],
+  "structural_checked_at": "2026-11-13T17:39:24.846270+00:00"
+}

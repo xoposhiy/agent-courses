@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designing LLM Agents - COMS 4995-15 | Columbia University</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <style>
+
+        .grading-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .grading-item {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border: 1px solid #dee2e6;
+            border-top: 4px solid #1D4F91;
+            text-align: center;
+        }
+
+        .grading-item strong {
+            display: block;
+            font-size: 1.8em;
+            color: #1D4F91;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .module {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #6CACE4;
+        }
+
+        .module h3 {
+            margin-top: 0;
+            color: #1D4F91;
+        }
+
+        .week {
+            padding: 8px 0;
+            padding-left: 20px;
+            border-left: 2px solid #ddd;
+            margin-left: 10px;
+        }
+
+        .assignment {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #6CACE4;
+        }
+
+        .assignment h3 {
+            color: #1D4F91;
+        }
+
+        .assignment ul {
+            margin-left: 20px;
+        }
+
+        .assignment li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .class-info {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border: 1px solid #dee2e6;
+            border-left: 4px solid #1D4F91;
+            margin-bottom: 30px;
+        }
+
+        .class-info p {
+            margin-bottom: 10px;
+            text-align: left;
+            font-size: 1.05em;
+        }
+
+        .class-info h2 {
+            margin-top: 0;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        table {
+            width: 100%;
+            min-width: 600px;
+            border-collapse: collapse;
+            background-color: white;
+            border: 1px solid #dee2e6;
+            font-size: 0.9em;
+        }
+
+        th {
+            background-color: #1D4F91;
+            color: white;
+            padding: 10px 10px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9em;
+            letter-spacing: 0.5px;
+        }
+
+        th:nth-child(1),
+        td:nth-child(1) {
+            width: 70px;
+            min-width: 70px;
+        }
+
+        th:nth-child(2),
+        td:nth-child(2) {
+            width: 100px;
+            min-width: 100px;
+        }
+
+        td {
+            padding: 10px 10px;
+            border-bottom: 1px solid #dee2e6;
+            vertical-align: middle;
+        }
+
+        tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        td a {
+            color: #1D4F91;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+            font-weight: 600;
+        }
+
+        td a:hover {
+            border-bottom-color: #1D4F91;
+        }
+
+        .hw-release {
+            color: #1e7e34;
+        }
+
+        .hw-release a {
+            color: #1e7e34;
+            font-weight: 600;
+        }
+
+        .hw-due {
+            color: #dc3545;
+        }
+
+        .spring-break {
+            background-color: #fff3cd;
+            font-style: italic;
+        }
+
+        .module-header {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+            font-weight: 600;
+            font-size: 0.9em;
+            padding: 8px 10px;
+            border-top: 2px solid #dee2e6;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .module-header td {
+            border-bottom: none;
+        }
+
+        #important-links ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 15px;
+        }
+
+        #important-links li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.05em;
+        }
+
+        #important-links li:before {
+            content: "→";
+            color: #1D4F91;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        #important-links a {
+            color: #1D4F91;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        #important-links a:hover {
+            border-bottom-color: #1D4F91;
+        }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .staff-member {
+            text-align: center;
+        }
+
+        .staff-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            display: block;
+            border: 3px solid #1D4F91;
+        }
+
+        .staff-name {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #1D4F91;
+            margin-bottom: 8px;
+        }
+
+        .staff-name a {
+            color: #1D4F91;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .staff-name a:hover {
+            color: #6CACE4;
+            text-decoration: underline;
+        }
+
+        .staff-role {
+            font-size: 0.95em;
+            color: #666;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        .staff-email {
+            font-size: 0.95em;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .staff-hours {
+            font-size: 0.95em;
+            color: #2c3e50;
+            margin-bottom: 12px;
+        }
+
+        .staff-bio {
+            font-size: 0.95em;
+            color: #2c3e50;
+            line-height: 1.6;
+            text-align: center;
+            padding: 0 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div class="header-content">
+            <div class="course-number">COMS 4995-15</div>
+            <h1>Designing LLM Agents</h1>
+            <div class="professor">
+                <p><strong>Professor:</strong> Shreya Havaldar</p>
+                <p><strong>Email:</strong> sph2154@columbia.edu</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+        <section id="class-info">
+            <div class="class-info">
+                <h2>Class Information</h2>
+                <p><strong>Time:</strong> Mondays, 7:00 PM - 9:30 PM</p>
+                <p><strong>Location:</strong> 415 Schapiro CEPSR</p>
+                <p><strong>Term:</strong> Fall 2026</p>
+            </div>
+        </section>
+
+        <section id="description">
+            <h2>Description</h2>
+            <p>Welcome to COMS 4995-15! In this course, you will learn how to practically instantiate and apply LLMs by designing intelligent, interactive agents. Moving beyond basic prompting, this course explores the full lifecycle of building LLM-powered applications, from reasoning and planning to extending capabilities with memory, retrieval, and tool integration. Through hands-on projects, you will learn techniques such as Retrieval-Augmented Generation (RAG) and multi-step agent design, while also addressing reliability and safety by diagnosing failure modes, implementing guardrails, and conducting systematic evaluations. The course culminates in a final project where you build and present your own LLM agent. Python proficiency is required, but no prior machine learning background is assumed.</p>
+        </section>
+
+        <section id="important-links">
+            <h2>Important Links</h2>
+            <ul>
+                <li><a href="syllabus.html">Syllabus</a></li>
+                <li><a href="https://courseworks2.columbia.edu/courses/258235">Courseworks</a></li>
+            </ul>
+        </section>
+
+        <section id="schedule">
+            <h2>Course Schedule</h2>
+            
+            <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Week</th>
+                        <th>Date</th>
+                        <th>Lecture Topic</th>
+                        <th>Homework</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="module-header">
+                        <td colspan="4">Module 1: Interacting with LLMs</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Sep 14</td>
+                        <td>What is an Agent? A brief history of language modeling <a href="assets/lecture_slides/week1.pdf">[slides]</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Sep 21</td>
+                        <td>LLM architectures and training <a href="assets/lecture_slides/week2.pdf">[slides]</a> <a href="activities/gradient_descent.py">[gradient_descent.py]</a> <a href="activities/gradient_descent_solutions.py">[solutions]</a></td>
+                        <td><span class="hw-release"><a href="HW1.html">HW 1 Released</a></span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Sep 28</td>
+                        <td>How does an LLM generate text? <a href="assets/lecture_slides/week3.pdf">[slides]</a> <a href="activities/beam_search.py">[beam_search.py]</a> <a href="activities/beam_search_solutions.py">[solutions]</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Oct 5</td>
+                        <td>Prompting, Reasoning, &amp; Memory <a href="assets/lecture_slides/week4.pdf">[slides]</a> <a href="activities/autoprompting.py">[autoprompting.py]</a> <a href="activities/autoprompting_solutions.py">[solutions]</a> <a href="activities/gemini.py">[gemini.py]</a></td>
+                        <td><span class="hw-due">HW 1 Due</span><br><span class="hw-release"><a href="HW2.html">HW 2 Released</a></span></td>
+                    </tr>
+                    <tr class="module-header">
+                        <td colspan="4">Module 2: Building an LLM Agent</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Oct 12</td>
+                        <td>Post-training &amp; Retrieval <a href="assets/lecture_slides/week5.pdf">[slides]</a> <a href="activities/reward_model.py">[reward_model.py]</a> <a href="activities/reward_model_solutions.py">[solutions]</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Oct 19</td>
+                        <td>The Agentic Harness <a href="assets/lecture_slides/week6.pdf">[slides]</a> <a href="activities/planning.py">[planning.py]</a> <a href="activities/planning_answers.py">[solutions]</a></td>
+                        <td><span class="hw-due">HW 2 Due</span><br><span class="hw-release"><a href="HW3.html">HW 3 Released</a></span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Oct 26</td>
+                        <td>Tool Calling, Frameworks, &amp; MCP <a href="assets/lecture_slides/week7.pdf">[slides]</a> <a href="activities/web_search.py">[web_search.py]</a> <a href="activities/web_search_solutions.py">[solutions]</a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="spring-break">
+                        <td>-</td>
+                        <td>Nov 2</td>
+                        <td>Academic Holiday - No Class</td>
+                        <td><span class="hw-due">HW 3 Due</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Nov 9</td>
+                        <td>AI safety <a href="assets/lecture_slides/week9.pdf">[slides]</a></td>
+                        <td><span class="hw-release"><a href="project.html">Final Project Released</a></span></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Nov 16</td>
+                        <td>In-class HW 3 Demos</td>
+                        <td><span class="hw-due">Project Proposal Due</span><br></td>
+                    </tr>
+                    <tr class="module-header">
+                        <td colspan="4">Module 3: LLM Agents in the real world</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Nov 23</td>
+                        <td>Vibe coding</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Nov 30</td>
+                        <td>Guest Lectures: LLM agents in industry</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Dec 7</td>
+                        <td>Final Project Presentations</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Dec 14</td>
+                        <td>Final Project Presentations</td>
+                        <td><span class="hw-due">Final Project Due</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </section>
+
+        <section id="policies">
+            <h2>Assignments & Grading</h2>
+            <p>Assignments are due at 11:59 PM Eastern Time. Every student has 3 late days that may be used at their discretion across the semester; beyond this allowance, late work will not be accepted. Grades will be 45% homeworks, 35% final project, and 20% participation. Participation is based on attendance + completion of class labs and activities. You are allowed to miss class 2 times without penalty.</p>
+        </section>
+
+        <section id="staff">
+            <h2>Course Staff</h2>
+            <div class="staff-grid">
+                <div class="staff-member">
+                    <img src="assets/images/shreya-havaldar.png" alt="Shreya Havaldar" class="staff-image">
+                    <div class="staff-name"><a href="https://shreyahavaldar.com/" target="_blank">Shreya Havaldar</a></div>
+                    <div class="staff-role">Professor</div>
+                    <div class="staff-email">sph2154@columbia.edu</div>
+                    <div class="staff-hours"><strong>OH: after class or by appointment</strong></div>
+                    <div class="staff-bio">Shreya is an AI researcher at Bloomberg. She received her PhD in 2026 from UPenn, researching sociotechnical LLM alignment. She likes yoga, baking, NYT's connections, and her dog Plato (pictured above). She dislikes rate limits and celery.</div>
+                </div>
+                <div class="staff-member">
+                    <img src="assets/images/aaditya.jpg" alt="Aaditya Barve" class="staff-image">
+                    <div class="staff-name"><a href="https://www.linkedin.com/in/aadityabarve" target="_blank">Aaditya Barve</a></div>
+                    <div class="staff-role">TA</div>
+                    <div class="staff-email">asb2333@columbia.edu</div>
+                    <div class="staff-hours"><strong>OH: Fri 11am-1pm, Schermerholn SLC, 3rd floor</strong></div>
+                    <div class="staff-bio">Aaditya is a computer science master’s student with a background in systems and machine learning. He likes trekking, lifting and anime. He dislikes waking up early for 8 AM classes.</div>
+                </div>
+            </div>
+        </section>
+        </div>
+    </div>
+</body>
+</html>

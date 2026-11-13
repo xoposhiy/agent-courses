@@ -1,0 +1,62 @@
+# Homework 1 public teaching repository: assignments/OMIM_621421/grill_run/tasks/0047_judge_cov_final/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621421/grill_run/tasks/0047_judge_cov_final/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621421/grill_run/tasks/0047_judge_cov_final/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "fields": [
+    {
+      "field": "Clinical phenotypes reported in affected individuals with Ramond-Elliott neurodevelopmental syndrome (TRA2B variants), including the exact wording from the paper and the matching standard HPO term if identifiable",
+      "covered": true,
+      "contributing_aspects": [
+        "phenotype-frequency",
+        "cohort-resolution",
+        "diagnostic-criteria",
+        "seizures",
+        "infantile-spasms",
+        "differential-diagnosis",
+        "penetrance",
+        "epilepsy"
+      ]
+    },
+    {
+      "field": "Cohort-specific frequencies (numerator and denominator, not percentages alone) for each reported clinical phenotype, linked to specific cohorts and cited with a PMID or DOI",
+      "covered": false,
+      "contributing_aspects": []
+    },
+    {
+      "field": "Most discriminating clinical findings present in most affected individuals but uncommon in disorders commonly confused with this syndrome, including the specific names of overlapping disorders and an assessment of confidence in the distinction",
+      "covered": true,
+      "contributing_aspects": [
+        "differential diagnosis",
+        "microcephalic DEE",
+        "phenotypic specificity",
+        "ocular phenotype",
+        "exclusion criteria"
+      ]
+    },
+    {
+      "field": "Clinical findings explicitly evaluated and found absent in affected individuals, whose presence would argue against the diagnosis",
+      "covered": true,
+      "contributing_aspects": [
+        "Exclusionary / absent phenotypes",
+        "ocular phenotype",
+        "differential diagnosis",
+        "exclusion criteria"
+      ]
+    },
+    {
+      "field": "Phenotype differences correlated with variant type, variant position, patient age, or patient sex",
+      "covered": false,
+      "contributing_aspects": []
+    },
+    {
+      "field": "Any clinical findings reported by one paper and explicitly contradicted by another",
+      "covered": false,
+      "contributing_aspects": []
+    }
+  ]
+}
+```

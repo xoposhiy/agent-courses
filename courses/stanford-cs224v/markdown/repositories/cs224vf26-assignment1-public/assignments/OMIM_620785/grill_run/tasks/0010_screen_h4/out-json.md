@@ -1,0 +1,69 @@
+# Homework 1 public teaching repository: assignments/OMIM_620785/grill_run/tasks/0010_screen_h4/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620785/grill_run/tasks/0010_screen_h4/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620785/grill_run/tasks/0010_screen_h4/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Most reported ACBD6 pathogenic variants are loss-of-function presenting with early-onset progressive disease, making hypomorphic missense correlations plausible but needing verification.",
+  "confidence": 0.65,
+  "evidence": [
+    {
+      "text": "In a cohort of 45 affected individuals with biallelic ACBD6 variants, 18 of 20 identified pathogenic variants were loss-of-function, presenting with early-onset progressive postural deformities and dystonia in over 90% of individuals.",
+      "stance": "supports",
+      "source": {
+        "title": "Bi-allelic ACBD6 variants lead to a neurodevelopmental syndrome with progressive and complex movement disorders",
+        "authors": [
+          "R Kaiyrzhanov",
+          "A Rad",
+          "SJ Lin",
+          "A Bertoli"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": "10.1093/brain/awad380",
+        "pmid": "37951597",
+        "pmc": null,
+        "url": "https://academic.oup.com/brain/article-abstract/147/4/1436/7407365",
+        "quote": "identified 45 affected individuals from 28 unrelated families (consanguinity 93%) with bi-allelic pathogenic, predominantly loss-of-function (18/20) variants in ACBD6."
+      },
+      "numbers": [
+        {
+          "metric": "predominantly loss-of-function variant count",
+          "value": "18/20"
+        },
+        {
+          "metric": "dystonia frequency",
+          "value": "94%"
+        },
+        {
+          "metric": "early-onset progressive postural deformities frequency",
+          "value": "97%"
+        }
+      ]
+    },
+    {
+      "text": "Neurodevelopmental disorder genes including ACBD6 were noted to have unclear or expanding genotype-phenotype relationships across broader dystonia cohorts.",
+      "stance": "neutral",
+      "source": {
+        "title": "Genetic diversity and expanded phenotypes in dystonia: insights from large\u2010scale exome sequencing",
+        "authors": [
+          "M Thomsen",
+          "F Ott",
+          "S Loens"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": "10.1002/acn3.70100",
+        "pmid": "40533913",
+        "pmc": "PMC12343315",
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/acn3.70100",
+        "quote": "neurodevelopmental disorder genes that frequently include \u2026 inconsistent or unclear genotype\u2013phenotype relationships; \u2026 the recently proposed genes ATP5F1B, ACBD6, and \u2026"
+      },
+      "numbers": []
+    }
+  ]
+}
+```

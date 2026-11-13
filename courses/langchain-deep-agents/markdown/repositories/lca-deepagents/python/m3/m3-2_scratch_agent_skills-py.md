@@ -1,0 +1,29 @@
+# Official course repository: Python, TypeScript, lesson sources, and agent UI: python/m3/m3.2_scratch_agent_skills.py
+
+[Course index](../../../../../README.md) · [Original source](https://github.com/langchain-ai/lca-deepagents/blob/HEAD/python/m3/m3.2_scratch_agent_skills.py) · [Raw file](../../../../../raw/repositories/lca-deepagents/python/m3/m3.2_scratch_agent_skills.py)
+
+Retrieved: 2026-11-13T16:50:31.645872+00:00
+
+```python
+from pathlib import Path
+
+from deepagents import create_deep_agent
+from deepagents.backends.filesystem import FilesystemBackend
+
+from models import model
+
+m3_dir = Path(__file__).parent
+backend = FilesystemBackend(root_dir=str(m3_dir), virtual_mode=True)
+
+agent = create_deep_agent(
+    model=model,
+    name="Sales_Assistant",
+    backend=backend,
+    skills=["/skills"],
+    system_prompt="You are a sales assistant.",
+)
+
+result = agent.invoke({"messages": [{"role": "user", "content": "Qualify this lead: Acme Corp, 200-person logistics company. I spoke with Sarah Chen, VP of Sales: she's the decision maker. They have $45k budgeted for CRM this year. Main pain: deals are slipping through the cracks due to poor pipeline visibility. They want a solution live by end of Q3."}]})
+print(result["messages"][-1].text)
+
+```

@@ -1,0 +1,38 @@
+### Result
+2169. [POST] https://o4509013218689024.ingest.us.sentry.io/api/4509634183823360/envelope/?sentry_version=7&sentry_key=2de93cf7c048719b0411db7737ba5ade&sentry_client=sentry.javascript.nextjs%2F10.56.0 => [200] 
+2170. [POST] https://o4509013218689024.ingest.us.sentry.io/api/4509634183823360/envelope/?sentry_version=7&sentry_key=2de93cf7c048719b0411db7737ba5ade&sentry_client=sentry.javascript.nextjs%2F10.56.0 => [200] 
+2171. [POST] https://o4509013218689024.ingest.us.sentry.io/api/4509634183823360/envelope/?sentry_version=7&sentry_key=2de93cf7c048719b0411db7737ba5ade&sentry_client=sentry.javascript.nextjs%2F10.56.0 => [200] 
+2172. [GET] https://api.docent.transluce.org/rest/label/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/label_sets => [200] 
+2173. [GET] https://api.docent.transluce.org/rest/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/collection_details => [200] 
+2174. [GET] https://api.docent.transluce.org/rest/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/permissions => [200] 
+2175. [GET] https://api.docent.transluce.org/rest/auth/config => [200] 
+2176. [GET] https://api.docent.transluce.org/rest/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/collection/metadata => [200] 
+2177. [GET] https://api.docent.transluce.org/rest/reading/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/reading-plan/81230a32-88e0-42af-82c9-101660ab1d89 => [200] 
+2178. [GET] https://api.docent.transluce.org/rest/reading/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/reading-plans?owned_only=false => [200] 
+2179. [GET] https://api.docent.transluce.org/rest/reading/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/presets?owned_only=false => [200] 
+2180. [GET] https://docent.transluce.org/dashboard/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e?_rsc=nzgz7 => [200] 
+2181. [GET] https://docent.transluce.org/dashboard/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/analysis-plan?_rsc=nzgz7 => [200] 
+2182. [GET] https://docent.transluce.org/signup?_rsc=nzgz7 => [200] 
+2183. [GET] https://docent.transluce.org/dashboard?_rsc=nzgz7 => [200] 
+2184. [GET] https://docent.transluce.org/dashboard/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/agent_run?_rsc=nzgz7 => [200] 
+2185. [GET] https://docent.transluce.org/dashboard/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/labels?_rsc=nzgz7 => [200] 
+2186. [GET] https://docent.transluce.org/dashboard/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/charts?_rsc=nzgz7 => [200] 
+2188. [POST] https://api.docent.transluce.org/rest/dql/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/execute => [200] 
+2189. [GET] https://api.docent.transluce.org/rest/reading/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/reading/d3e8d144-e03d-46a0-9f22-744dbf8476c8/results-page?offset=0&limit=20&include_output=true => [200] 
+2190. [POST] https://api.docent.transluce.org/rest/dql/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/execute => [200] 
+2191. [GET] https://api.docent.transluce.org/rest/reading/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/reading/8cc1ff68-1db3-4554-b253-152fa84d1188/results-page?offset=0&limit=20&include_output=true => [200] 
+2192. [POST] https://api.docent.transluce.org/rest/dql/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/execute => [200] 
+2193. [GET] https://api.docent.transluce.org/rest/reading/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/reading/2c74901e-2be7-49e6-9554-e6952ee329de/results-page?offset=0&limit=20&include_output=true => [200] 
+2194. [POST] https://api.docent.transluce.org/rest/dql/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/execute => [200] 
+2195. [GET] https://api.docent.transluce.org/rest/reading/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/reading/e0844e08-d73e-4925-b794-054d23be0f95/results-page?offset=0&limit=20&include_output=true => [200] 
+2196. [GET] https://api.docent.transluce.org/rest/settings/preferences => [401] 
+2197. [GET] https://api.docent.transluce.org/rest/reading/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/reading-plans?owned_only=false&name=Terminal-Bench+cross-model+failure+explanations => [200] 
+2208. [GET] https://api.docent.transluce.org/rest/reading/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/reading-plans?owned_only=false&name=Terminal-Bench+cross-model+failure+explanations => [200] 
+
+Note: 79 static requests not shown, run with --static option to see them.
+### Page
+- Page URL: https://docent.transluce.org/dashboard/9bafeb94-3f6e-4d03-bd01-1ae8476e3f6e/analysis-plan/81230a32-88e0-42af-82c9-101660ab1d89
+- Page Title: Terminal-Bench cross-model failure explanations | Docent
+- Console: 1 errors, 0 warnings
+### Events
+- New console entries: .playwright-cli\console-2026-11-13T17-04-14-528Z.log#L1

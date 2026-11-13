@@ -1,0 +1,40 @@
+# Homework 1 public teaching repository: assignments/OMIM_618505/grill_run/tasks/0035_screen_h16/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_618505/grill_run/tasks/0035_screen_h16/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_618505/grill_run/tasks/0035_screen_h16/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Early discovery cohorts identified dysmorphic facial features across patients, but expanded series highlight variable expressivity where facial gestalt alone cannot definitively confirm or exclude the disorder.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "The discovery study described 12 unrelated patients harboring de novo KDM6B alterations who presented with developmental delay, intellectual disability, and dysmorphic facial features.",
+      "stance": "supports",
+      "source": {
+        "title": "Genetic variants in the KDM6B gene are associated with neurodevelopmental delays and dysmorphic features",
+        "authors": [
+          "ES Stolerman",
+          "E Francisco",
+          "JL Stallworth"
+        ],
+        "year": 2019,
+        "journal": null,
+        "doi": "10.1002/ajmg.a.61173",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ajmg.a.61173",
+        "quote": "We have identified a number of de novo alterations in the KDM6B gene via whole exome sequencing (WES) in a cohort of 12 unrelated patients with developmental delay, intellectual disability, dysmorphic facial features, and other clinical findings."
+      },
+      "numbers": [
+        {
+          "metric": "initial discovery cohort size",
+          "value": 12
+        }
+      ]
+    }
+  ]
+}
+```

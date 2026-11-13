@@ -1,0 +1,372 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 4,
+    "text": "When you build an AI application, you want it to do what you expect."
+  },
+  {
+    "startInSeconds": 4,
+    "endInSeconds": 8,
+    "text": "And when it doesn't, you want to know what's going\nwrong so you can fix it."
+  },
+  {
+    "startInSeconds": 8,
+    "endInSeconds": 13,
+    "text": "But without a clear process for testing and improving your\napplication, you can end up working blind."
+  },
+  {
+    "startInSeconds": 13,
+    "endInSeconds": 18,
+    "text": "You might put your faith in a few successful examples and then chase\nafter failures as they appear."
+  },
+  {
+    "startInSeconds": 18,
+    "endInSeconds": 25,
+    "text": "But fixing the example in front of you doesn't tell you whether you've\nsolved the broader problem or broken something else along the way."
+  },
+  {
+    "startInSeconds": 25,
+    "endInSeconds": 33,
+    "text": "So, how do you put together an effective evaluation process? Broadly\nspeaking, you can think of the evaluation process in four parts."
+  },
+  {
+    "startInSeconds": 33,
+    "endInSeconds": 37,
+    "text": "First, you analyze what the agent should do and how\nit actually behaves."
+  },
+  {
+    "startInSeconds": 37,
+    "endInSeconds": 44,
+    "text": "You look for situations where it might fail and use error analysis to\nidentify and group the failures you observe."
+  },
+  {
+    "startInSeconds": 44,
+    "endInSeconds": 49,
+    "text": "Second, you use what you've learned to build and refine a\nreusable set of test cases,"
+  },
+  {
+    "startInSeconds": 49,
+    "endInSeconds": 52,
+    "text": "with clear criteria for judging whether the agent succeeds."
+  },
+  {
+    "startInSeconds": 52,
+    "endInSeconds": 57,
+    "text": "Third, you use evaluators to judge the results and measure how\nwell the agent performs."
+  },
+  {
+    "startInSeconds": 57,
+    "endInSeconds": 64,
+    "text": "And fourth, you use those findings to make changes,\nthen test again to see what improved and whether anything got worse."
+  },
+  {
+    "startInSeconds": 64,
+    "endInSeconds": 68,
+    "text": "These four parts give you the overall process you'll learn to use\nthroughout this course."
+  },
+  {
+    "startInSeconds": 68,
+    "endInSeconds": 72,
+    "text": "They form an ongoing cycle, with each round informing the next."
+  },
+  {
+    "startInSeconds": 72,
+    "endInSeconds": 75,
+    "text": "And once people start using your application,"
+  },
+  {
+    "startInSeconds": 75,
+    "endInSeconds": 80,
+    "text": "you can monitor how it handles their requests and bring any new\nproblems you find back into that cycle."
+  },
+  {
+    "startInSeconds": 80,
+    "endInSeconds": 87,
+    "text": "So in this video, you'll get a quick overview of how the first two\nparts fit together before you explore them further in Module 2."
+  },
+  {
+    "startInSeconds": 87,
+    "endInSeconds": 90,
+    "text": "The first part is analyzing the agent's behavior."
+  },
+  {
+    "startInSeconds": 90,
+    "endInSeconds": 94,
+    "text": "But to recognize when the agent does something wrong,\nyou need to know what it should have done."
+  },
+  {
+    "startInSeconds": 94,
+    "endInSeconds": 102,
+    "text": "So you start by establishing the requirements for its job, what it\nneeds to accomplish, what it must get right, and what it must avoid."
+  },
+  {
+    "startInSeconds": 102,
+    "endInSeconds": 105,
+    "text": "And you may discover that you haven't fully worked that out yourself."
+  },
+  {
+    "startInSeconds": 105,
+    "endInSeconds": 112,
+    "text": "If a Northwind customer leaves out their size, should the agent ask\nbefore recommending clothes, or can it make suggestions first?"
+  },
+  {
+    "startInSeconds": 112,
+    "endInSeconds": 118,
+    "text": "If you haven't decided what's acceptable, you don't yet have a basis\nfor calling those responses right or wrong."
+  },
+  {
+    "startInSeconds": 118,
+    "endInSeconds": 124,
+    "text": "Sometimes the first problem to address is a gap in your own\nunderstanding of what the job requires."
+  },
+  {
+    "startInSeconds": 124,
+    "endInSeconds": 127,
+    "text": "So, where do you turn to work out what the agent should do?"
+  },
+  {
+    "startInSeconds": 127,
+    "endInSeconds": 134,
+    "text": "You look at what customers need, the company policies the agent must\nfollow, and the knowledge of people who understand the work."
+  },
+  {
+    "startInSeconds": 134,
+    "endInSeconds": 140,
+    "text": "For Northwind, recommend clothes describes the task,\nbut it doesn't tell you what makes a recommendation good."
+  },
+  {
+    "startInSeconds": 140,
+    "endInSeconds": 146,
+    "text": "The recommendations need to suit the customer's needs and reflect the\ncatalog and stock information."
+  },
+  {
+    "startInSeconds": 146,
+    "endInSeconds": 151,
+    "text": "Making those expectations explicit gives you something specific to\njudge the agent's behavior against."
+  },
+  {
+    "startInSeconds": 151,
+    "endInSeconds": 154,
+    "text": "There may be several good recommendations for the same customer."
+  },
+  {
+    "startInSeconds": 154,
+    "endInSeconds": 159,
+    "text": "You can still evaluate how well each one meets their needs without\nrequiring one correct answer."
+  },
+  {
+    "startInSeconds": 159,
+    "endInSeconds": 164,
+    "text": "You won't necessarily have every requirement worked out at the start,\nSome may be unclear,"
+  },
+  {
+    "startInSeconds": 164,
+    "endInSeconds": 168,
+    "text": "or you may not realize something matters until you see\nthe agent get it wrong."
+  },
+  {
+    "startInSeconds": 168,
+    "endInSeconds": 174,
+    "text": "So these are working expectations that you'll clarify and add to,\nas you examine what the agent actually does."
+  },
+  {
+    "startInSeconds": 174,
+    "endInSeconds": 178,
+    "text": "With those requirements in mind, you can begin error analysis."
+  },
+  {
+    "startInSeconds": 178,
+    "endInSeconds": 183,
+    "text": "The goal is to understand where the agent falls short so you can\ndecide what needs attention."
+  },
+  {
+    "startInSeconds": 183,
+    "endInSeconds": 186,
+    "text": "You can start by looking closely at a handful of examples."
+  },
+  {
+    "startInSeconds": 186,
+    "endInSeconds": 191,
+    "text": "You don't need a formal evaluation system or metrics to begin learning\nwhat needs improvement."
+  },
+  {
+    "startInSeconds": 191,
+    "endInSeconds": 195,
+    "text": "You examine its actual behavior against your requirements\nand look for patterns"
+  },
+  {
+    "startInSeconds": 195,
+    "endInSeconds": 201,
+    "text": "so you can recognize broader problems rather than treating every\nmistake as a separate issue."
+  },
+  {
+    "startInSeconds": 201,
+    "endInSeconds": 207,
+    "text": "As you examine those failures, there are two kinds of problems to be\naware of as you think forward to improving your application."
+  },
+  {
+    "startInSeconds": 207,
+    "endInSeconds": 211,
+    "text": "First, the problem may be in how you've prompted the model\nor organized the agent's work."
+  },
+  {
+    "startInSeconds": 211,
+    "endInSeconds": 217,
+    "text": "You know what it should do, but its instructions may be vague,\nincomplete, or conflicting."
+  },
+  {
+    "startInSeconds": 217,
+    "endInSeconds": 225,
+    "text": "For example, you expect Northwind to recommend clothes available in\nthe customer's size, but you never instructed the agent to check that."
+  },
+  {
+    "startInSeconds": 225,
+    "endInSeconds": 230,
+    "text": "In that case, you need to improve the instructions,\nor the way that you set up the agent to do the job."
+  },
+  {
+    "startInSeconds": 230,
+    "endInSeconds": 236,
+    "text": "Second, even when you've clearly specified what you want,\nthe model can still struggle to do it reliably."
+  },
+  {
+    "startInSeconds": 236,
+    "endInSeconds": 241,
+    "text": "Clear instructions don't guarantee that the model will follow them\nsuccessfully every time."
+  },
+  {
+    "startInSeconds": 241,
+    "endInSeconds": 243,
+    "text": "Both of these issues call for different responses,"
+  },
+  {
+    "startInSeconds": 243,
+    "endInSeconds": 249,
+    "text": "so it's good to be thinking ahead to these differences when you begin\ninvestigating improvements later in the course."
+  },
+  {
+    "startInSeconds": 249,
+    "endInSeconds": 255,
+    "text": "That brings you to the second part of the evaluation process:\nbuilding test cases and defining how you'll judge the results."
+  },
+  {
+    "startInSeconds": 255,
+    "endInSeconds": 259,
+    "text": "The problems you found through error analysis give you a starting\npoint for those cases."
+  },
+  {
+    "startInSeconds": 259,
+    "endInSeconds": 265,
+    "text": "Each case describes a situation you want the agent to handle\nand what you expect it to do."
+  },
+  {
+    "startInSeconds": 265,
+    "endInSeconds": 271,
+    "text": "You collect these into an evaluation set,\nso you can check how well the agent performs across those situations."
+  },
+  {
+    "startInSeconds": 271,
+    "endInSeconds": 276,
+    "text": "You include examples of past failures because you want to check\nwhether you've fixed them."
+  },
+  {
+    "startInSeconds": 276,
+    "endInSeconds": 282,
+    "text": "But you also need to test the everyday work the agent should do well,\nalong with challenging situations where it might struggle."
+  },
+  {
+    "startInSeconds": 282,
+    "endInSeconds": 287,
+    "text": "Together, these help you assess more than just whether a particular\nmistake has been fixed,"
+  },
+  {
+    "startInSeconds": 287,
+    "endInSeconds": 294,
+    "text": "and you can reuse the same cases after making changes to see what\nimproved and whether anything got worse."
+  },
+  {
+    "startInSeconds": 294,
+    "endInSeconds": 301,
+    "text": "As you discover new problems or clarify your requirements,\nyou update the set so it continues to test what matters."
+  },
+  {
+    "startInSeconds": 301,
+    "endInSeconds": 307,
+    "text": "Once you've decided what situations to test, you need to specify how\nyou'll judge whether the agent met your requirements."
+  },
+  {
+    "startInSeconds": 307,
+    "endInSeconds": 312,
+    "text": "That means deciding what you'll check in each result and what would\ncount as success or failure."
+  },
+  {
+    "startInSeconds": 312,
+    "endInSeconds": 318,
+    "text": "You record those criteria in a rubric, a written guide for\nevaluating the results."
+  },
+  {
+    "startInSeconds": 318,
+    "endInSeconds": 321,
+    "text": "It also identifies the information needed to make each decision."
+  },
+  {
+    "startInSeconds": 321,
+    "endInSeconds": 328,
+    "text": "You can include examples of results that pass or fail,\nwith explanations of why, to show how they apply the criteria."
+  },
+  {
+    "startInSeconds": 328,
+    "endInSeconds": 334,
+    "text": "You need to be specific about what counts as meeting each requirement,\nso you don't leave too much open for interpretation."
+  },
+  {
+    "startInSeconds": 334,
+    "endInSeconds": 338,
+    "text": "You also need to cover the different requirements of the task."
+  },
+  {
+    "startInSeconds": 338,
+    "endInSeconds": 343,
+    "text": "For Northwind, checking availability alone could approve clothes\nthat don't suit the customer."
+  },
+  {
+    "startInSeconds": 343,
+    "endInSeconds": 349,
+    "text": "Checking availability and suitability separately helps you see\nwhich requirement the agent met and which it missed."
+  },
+  {
+    "startInSeconds": 349,
+    "endInSeconds": 354,
+    "text": "You can then try the rubric on actual results to see whether it's\nclear enough to use."
+  },
+  {
+    "startInSeconds": 354,
+    "endInSeconds": 360,
+    "text": "If you can't decide whether a result meets a requirement,\nyou may need more information or a clearer requirement."
+  },
+  {
+    "startInSeconds": 360,
+    "endInSeconds": 367,
+    "text": "Working through those questions helps you judge results more\nconsistently. So that covers the first half of this overview."
+  },
+  {
+    "startInSeconds": 367,
+    "endInSeconds": 372,
+    "text": "You've seen how to analyze the agent's behavior, decide what to test,\nand define how to judge the results."
+  },
+  {
+    "startInSeconds": 372,
+    "endInSeconds": 377,
+    "text": "In the next video, you'll see the second half of this overview of\nthe evaluation process,"
+  },
+  {
+    "startInSeconds": 377,
+    "endInSeconds": 382,
+    "text": "with a look at measuring performance and using the findings to make\nand test improvements."
+  },
+  {
+    "startInSeconds": 382,
+    "endInSeconds": 383,
+    "text": "I'll see you there."
+  }
+]

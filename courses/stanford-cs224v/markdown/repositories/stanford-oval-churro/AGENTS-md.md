@@ -1,0 +1,38 @@
+# Project code: stanford-oval/Churro: AGENTS.md
+
+[Course index](../../../README.md) · [Original source](https://github.com/stanford-oval/Churro/blob/HEAD/AGENTS.md) · [Raw file](../../../raw/repositories/stanford-oval-churro/AGENTS.md)
+
+Retrieved: 2026-11-13T17:04:51.902331+00:00
+
+# AGENTS
+
+This repo is `churro-ocr`, a Python 3.12+ OCR and page-detection toolkit for historical documents.
+
+## Repo Layout
+
+- `src/churro_ocr/`: library code and CLI entrypoints
+- `tests/`: pytest suite and test assets
+- `docs/`: Sphinx documentation source
+- `scripts/` and `tooling/`: packaging, benchmarking, and evaluation helpers
+
+## Preferred Workflow
+
+Use Pixi from the repo root:
+
+```bash
+pixi install
+pixi run format
+pixi run lint
+pixi run typecheck
+pixi run test
+pixi run docs-build
+pixi run package-check
+```
+
+After each change, review docs to see if it needs updating and run the relevant Pixi tasks to check your work.
+
+## Guardrails
+
+- Prefer the Pixi tasks above over ad hoc commands.
+- Keep library changes in `src/churro_ocr/` and add or update tests in `tests/`.
+- Do not enable live integration tests unless the task explicitly calls for them and the required credentials are available.

@@ -1,0 +1,467 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 7,
+    "text": "In the last video, you evaluated the trajectory of a run:\nwhich steps happened, the order they happened in,"
+  },
+  {
+    "startInSeconds": 7,
+    "endInSeconds": 10,
+    "text": "and whether information moved correctly from one step to the next."
+  },
+  {
+    "startInSeconds": 10,
+    "endInSeconds": 15,
+    "text": "That works well when everything you need to judge the run is\ncontained in that one trace."
+  },
+  {
+    "startInSeconds": 15,
+    "endInSeconds": 22,
+    "text": "But sometimes, the rule the agent breaks was established earlier in\nthe conversation. Think about the dog shelter agent."
+  },
+  {
+    "startInSeconds": 22,
+    "endInSeconds": 30,
+    "text": "A volunteer says, \"I can only do walks before 6:00 p.m.\"\nThe agent acknowledges that, and continues helping them look at dogs."
+  },
+  {
+    "startInSeconds": 30,
+    "endInSeconds": 38,
+    "text": "A few turns later, the volunteer says, \"Pepper sounds good.\nCan you book me for tomorrow?\" The agent books Pepper for 7:00 PM."
+  },
+  {
+    "startInSeconds": 38,
+    "endInSeconds": 43,
+    "text": "If you only looked at that last request and response,\nthe booking might seem completely reasonable."
+  },
+  {
+    "startInSeconds": 43,
+    "endInSeconds": 47,
+    "text": "The volunteer asked for Pepper tomorrow, Pepper was available,\nand the booking succeeded."
+  },
+  {
+    "startInSeconds": 47,
+    "endInSeconds": 52,
+    "text": "The problem is that the volunteer had already said they couldn't do\nanything after 6:00."
+  },
+  {
+    "startInSeconds": 52,
+    "endInSeconds": 58,
+    "text": "So the evidence you need to judge that booking isn't all in the final\nturn. Some of it lives earlier in the conversation."
+  },
+  {
+    "startInSeconds": 58,
+    "endInSeconds": 61,
+    "text": "That's where the scope of the evaluation has to get wider again."
+  },
+  {
+    "startInSeconds": 61,
+    "endInSeconds": 69,
+    "text": "Instead of looking at one trace in isolation, you look at the session,\nthe sequence of traces that belong to the same conversation."
+  },
+  {
+    "startInSeconds": 69,
+    "endInSeconds": 77,
+    "text": "With that, the evaluator can see both the earlier constraint and the\nlater booking, and with that context, the failure becomes obvious."
+  },
+  {
+    "startInSeconds": 77,
+    "endInSeconds": 81,
+    "text": "The agent understood the instruction when it was given,\nbut it stopped respecting it later."
+  },
+  {
+    "startInSeconds": 81,
+    "endInSeconds": 89,
+    "text": "That's one kind of multi-turn failure we usually call instruction\ndrift. You can see something similar with Northwind."
+  },
+  {
+    "startInSeconds": 89,
+    "endInSeconds": 93,
+    "text": "Suppose a customer says early in the conversation,\n\"My order number is 4521.\""
+  },
+  {
+    "startInSeconds": 93,
+    "endInSeconds": 98,
+    "text": "A few turns later, after discussing the item, they ask,\n\"Can you refund it?\""
+  },
+  {
+    "startInSeconds": 98,
+    "endInSeconds": 105,
+    "text": "The relevant information was already available, yet the agent asks for\nthe order number again, or worse, refunds a different order."
+  },
+  {
+    "startInSeconds": 105,
+    "endInSeconds": 112,
+    "text": "In those cases, the problem is that the agent failed to carry the\ncontext forward. That's called a context loss failure."
+  },
+  {
+    "startInSeconds": 112,
+    "endInSeconds": 119,
+    "text": "And sometimes the information does carry forward,\nbut it doesn't propagate correctly into the later action."
+  },
+  {
+    "startInSeconds": 119,
+    "endInSeconds": 127,
+    "text": "Imagine Northwind verifies customer C103 in one turn,\nSeveral turns later, the customer asks for a refund on order 4521."
+  },
+  {
+    "startInSeconds": 127,
+    "endInSeconds": 131,
+    "text": "The refund action may happen in a different trace\nfrom the verification."
+  },
+  {
+    "startInSeconds": 131,
+    "endInSeconds": 138,
+    "text": "So if your evaluator looks at only the refund trace, it might conclude\nthat the customer was never verified. But that would be wrong."
+  },
+  {
+    "startInSeconds": 138,
+    "endInSeconds": 142,
+    "text": "The verification did happen. It just happened earlier in the session."
+  },
+  {
+    "startInSeconds": 142,
+    "endInSeconds": 150,
+    "text": "For a requirement like verify the customer before issuing a refund,\nthe evaluator needs enough context to search across turns."
+  },
+  {
+    "startInSeconds": 150,
+    "endInSeconds": 155,
+    "text": "This is why the scope of the evaluator has to match the\nscope of the requirement."
+  },
+  {
+    "startInSeconds": 155,
+    "endInSeconds": 161,
+    "text": "If the question is, did the agent pass the right order ID into this\ntool call, one tool call may be enough."
+  },
+  {
+    "startInSeconds": 161,
+    "endInSeconds": 167,
+    "text": "For a question like, did verification happen before the refund,\none trajectory may be enough."
+  },
+  {
+    "startInSeconds": 167,
+    "endInSeconds": 170,
+    "text": "But if verification happened several turns earlier,"
+  },
+  {
+    "startInSeconds": 170,
+    "endInSeconds": 176,
+    "text": "or if the user gave an instruction that should remain active\nthroughout the conversation, you need to look at the entire session."
+  },
+  {
+    "startInSeconds": 176,
+    "endInSeconds": 180,
+    "text": "Suppose you want to test one of these multi-turn behaviors repeatedly."
+  },
+  {
+    "startInSeconds": 180,
+    "endInSeconds": 187,
+    "text": "Take this Northwind requirement: The customer does not want the refund\nprocessed until they have seen the amount and explicitly confirmed it."
+  },
+  {
+    "startInSeconds": 187,
+    "endInSeconds": 194,
+    "text": "Here's what a correct conversation might look like. The customer\nstarts by saying, \"Don't refund anything until I confirm the amount.\""
+  },
+  {
+    "startInSeconds": 194,
+    "endInSeconds": 204,
+    "text": "The agent replies, \"Understood. I won't process a refund until you\nconfirm.\" Then the customer asks, \"How much did I pay for order 4521?\""
+  },
+  {
+    "startInSeconds": 204,
+    "endInSeconds": 208,
+    "text": "The agent looks up the order and replies, \"You paid $49.99.\""
+  },
+  {
+    "startInSeconds": 208,
+    "endInSeconds": 213,
+    "text": "At this point, the agent has the information it needs to issue the\nrefund, but it still shouldn't do it."
+  },
+  {
+    "startInSeconds": 213,
+    "endInSeconds": 219,
+    "text": "the customer hasn't confirmed yet. Then the customer says, \"Okay,\ngo ahead with the refund.\""
+  },
+  {
+    "startInSeconds": 219,
+    "endInSeconds": 226,
+    "text": "Only now does the agent call process_refund for $49.99.\nThat's the behavior you want to preserve."
+  },
+  {
+    "startInSeconds": 226,
+    "endInSeconds": 229,
+    "text": "Now compare it with a broken version of the same conversation."
+  },
+  {
+    "startInSeconds": 229,
+    "endInSeconds": 236,
+    "text": "The customer again says, \"Don't refund anything until I confirm the\namount.\" The agent acknowledges the instruction."
+  },
+  {
+    "startInSeconds": 236,
+    "endInSeconds": 240,
+    "text": "Then the customer asks, \"How much did I pay for order 4521?\""
+  },
+  {
+    "startInSeconds": 240,
+    "endInSeconds": 247,
+    "text": "The agent looks up the order, sees that the amount is $49.99,\nand immediately calls process_refund."
+  },
+  {
+    "startInSeconds": 247,
+    "endInSeconds": 250,
+    "text": "Only after that does the customer say, \"Okay, go ahead.\""
+  },
+  {
+    "startInSeconds": 250,
+    "endInSeconds": 258,
+    "text": "The refund itself may be valid, the amount may be correct, and even\nthe tool call may succeed, but the agent acted one turn too early."
+  },
+  {
+    "startInSeconds": 258,
+    "endInSeconds": 264,
+    "text": "The failure only becomes visible when you compare what happened in the\nlater turn with the instruction the customer gave"
+  },
+  {
+    "startInSeconds": 264,
+    "endInSeconds": 266,
+    "text": "at the beginning of the session."
+  },
+  {
+    "startInSeconds": 266,
+    "endInSeconds": 272,
+    "text": "If you want to run this scenario against different versions of the\nagent, one option is to use a scripted user."
+  },
+  {
+    "startInSeconds": 272,
+    "endInSeconds": 279,
+    "text": "You predefine the user side of the conversation, so each agent version\nreceives the same exact messages in the same situations."
+  },
+  {
+    "startInSeconds": 279,
+    "endInSeconds": 288,
+    "text": "For this test, both versions get, \"Don't refund anything until I\nconfirm the amount.\" then, \"How much did I pay for order 4521?\""
+  },
+  {
+    "startInSeconds": 288,
+    "endInSeconds": 294,
+    "text": "And once the agent has reported the amount,\nthe customer gives the go-ahead. Now the user behavior is controlled."
+  },
+  {
+    "startInSeconds": 294,
+    "endInSeconds": 300,
+    "text": "If one version waits for that final confirmation and another processes\nthe refund before it arrives,"
+  },
+  {
+    "startInSeconds": 300,
+    "endInSeconds": 306,
+    "text": "you have a meaningful difference in the agent's behavior, rather than\na difference caused by the customer saying different things."
+  },
+  {
+    "startInSeconds": 306,
+    "endInSeconds": 311,
+    "text": "A scripted user works especially well when you already know the\ninteraction you want to test."
+  },
+  {
+    "startInSeconds": 311,
+    "endInSeconds": 315,
+    "text": "However, conversations don't always follow the path you expected."
+  },
+  {
+    "startInSeconds": 315,
+    "endInSeconds": 323,
+    "text": "Imagine another refund test where the customer begins with, \"I want my\nmoney back.\" The agent responds, \"Sure, which order do you mean?\""
+  },
+  {
+    "startInSeconds": 323,
+    "endInSeconds": 329,
+    "text": "If your test only contained a fixed sequence of pre-written messages,\nyou now need some way to respond to that question."
+  },
+  {
+    "startInSeconds": 329,
+    "endInSeconds": 332,
+    "text": "That's where a simulated user can be useful."
+  },
+  {
+    "startInSeconds": 332,
+    "endInSeconds": 337,
+    "text": "Instead of specifying every exact message in advance,\nyou assign the customer role to an LLM,"
+  },
+  {
+    "startInSeconds": 337,
+    "endInSeconds": 340,
+    "text": "and you give it a goal and the information they know."
+  },
+  {
+    "startInSeconds": 340,
+    "endInSeconds": 347,
+    "text": "For example, the simulated customer wants a refund for Order 4521.\nIf the agent asks, \"Which order do you mean?\""
+  },
+  {
+    "startInSeconds": 347,
+    "endInSeconds": 357,
+    "text": "the simulated customer can reply, \"Order 4521.\" If the agent then\nsays, \"The refundable amount is $49.99. Would you like me to proceed?\""
+  },
+  {
+    "startInSeconds": 357,
+    "endInSeconds": 363,
+    "text": "the simulated customer answers, \"Yes.\"\nThat lets the conversation adapt to what the agent actually does."
+  },
+  {
+    "startInSeconds": 363,
+    "endInSeconds": 373,
+    "text": "The tradeoff is that the customer side can vary too. One run might\nphrase the answer as Order 4521, while another might say It's 4521."
+  },
+  {
+    "startInSeconds": 373,
+    "endInSeconds": 378,
+    "text": "Or the simulated user may respond differently depending on\nwhat the agent asks."
+  },
+  {
+    "startInSeconds": 378,
+    "endInSeconds": 385,
+    "text": "That flexibility is useful when you want to explore more natural\nconversations, but it also introduces another source of variation."
+  },
+  {
+    "startInSeconds": 385,
+    "endInSeconds": 389,
+    "text": "So ultimately, the choice depends on what you're trying to evaluate."
+  },
+  {
+    "startInSeconds": 389,
+    "endInSeconds": 395,
+    "text": "If you want two agent versions to face the exact same interaction,\na scripted user gives you tighter control."
+  },
+  {
+    "startInSeconds": 395,
+    "endInSeconds": 399,
+    "text": "If you want to test how the agent handles conversations\nthat can branch in different directions,"
+  },
+  {
+    "startInSeconds": 399,
+    "endInSeconds": 402,
+    "text": "a simulated user gives you more flexibility."
+  },
+  {
+    "startInSeconds": 402,
+    "endInSeconds": 411,
+    "text": "Whichever approach you use, it helps to start with a conversation you\nalready know should pass. So go back to the Northwind refund example."
+  },
+  {
+    "startInSeconds": 411,
+    "endInSeconds": 417,
+    "text": "In a known-good session, the agent looks up the order,\ntells the customer the refundable amount, waits for confirmation,"
+  },
+  {
+    "startInSeconds": 417,
+    "endInSeconds": 420,
+    "text": "and only then calls process_refund."
+  },
+  {
+    "startInSeconds": 420,
+    "endInSeconds": 428,
+    "text": "Run your session-level evaluator on that case first. If the evaluator\nsays this conversation failed, don't start diagnosing the agent yet."
+  },
+  {
+    "startInSeconds": 428,
+    "endInSeconds": 435,
+    "text": "The problem may be in the evaluator or in the test setup.\nOnce the clean case behaves as expected, run the broken session."
+  },
+  {
+    "startInSeconds": 435,
+    "endInSeconds": 441,
+    "text": "This time, the user gives the same instruction, asks for the same\namount, but the agent issues the refund before the user"
+  },
+  {
+    "startInSeconds": 441,
+    "endInSeconds": 444,
+    "text": "says \"Okay, go ahead.\""
+  },
+  {
+    "startInSeconds": 444,
+    "endInSeconds": 451,
+    "text": "Now the evaluator has a very specific question to answer.\nDid the refund happen only after the customer confirmed it?"
+  },
+  {
+    "startInSeconds": 451,
+    "endInSeconds": 455,
+    "text": "You can apply the same idea to identity verification."
+  },
+  {
+    "startInSeconds": 455,
+    "endInSeconds": 460,
+    "text": "Suppose the conversation begins with Northwind successfully\nverifying customer C103."
+  },
+  {
+    "startInSeconds": 460,
+    "endInSeconds": 466,
+    "text": "Then the customer spends several turns asking questions about order\n4521. Later, they ask for a refund."
+  },
+  {
+    "startInSeconds": 466,
+    "endInSeconds": 473,
+    "text": "If the refund happens in Turn 6, the evaluator shouldn't look only at\nTurn 6 and say, \"I don't see any verification here.\""
+  },
+  {
+    "startInSeconds": 473,
+    "endInSeconds": 481,
+    "text": "It needs to look back through the session and see that the customer\nwas already verified in an earlier turn. That's the key idea."
+  },
+  {
+    "startInSeconds": 481,
+    "endInSeconds": 485,
+    "text": "You don't want to give every evaluator the entire conversation\njust because you can."
+  },
+  {
+    "startInSeconds": 485,
+    "endInSeconds": 489,
+    "text": "You want to give it enough evidence to answer the\nrequirement you're checking."
+  },
+  {
+    "startInSeconds": 489,
+    "endInSeconds": 495,
+    "text": "A wrong tool argument can be judged from just one call,\nwhile a sequence problem may need the whole trajectory."
+  },
+  {
+    "startInSeconds": 495,
+    "endInSeconds": 501,
+    "text": "A standing instruction or a piece of context that has to persist\nacross turns may need the whole session."
+  },
+  {
+    "startInSeconds": 501,
+    "endInSeconds": 507,
+    "text": "Matching the evaluator scope to the requirement keeps the check\nfocused, and makes the result easier to interpret."
+  },
+  {
+    "startInSeconds": 507,
+    "endInSeconds": 511,
+    "text": "At this point, you can evaluate quite a lot about\nhow the agent behaves."
+  },
+  {
+    "startInSeconds": 511,
+    "endInSeconds": 517,
+    "text": "You can inspect individual actions, the path through a task,\nand requirements that stretch across several turns,"
+  },
+  {
+    "startInSeconds": 517,
+    "endInSeconds": 521,
+    "text": "but there's still one thing none of those checks can guarantee."
+  },
+  {
+    "startInSeconds": 521,
+    "endInSeconds": 527,
+    "text": "The agent can follow the right-looking process and then tell a\nNorthwind customer, \"Your refund has been processed,\""
+  },
+  {
+    "startInSeconds": 527,
+    "endInSeconds": 534,
+    "text": "or tell a dog shelter volunteer, \"Your outing is booked,\"\nHow do you know that the refund or booking actually exists?"
+  },
+  {
+    "startInSeconds": 534,
+    "endInSeconds": 540,
+    "text": "For that, you need to look outside the conversation and check the\nstate of the system itself. That's what you'll do in the next video."
+  }
+]

@@ -1,0 +1,4506 @@
+{
+  "unit": "distinct course",
+  "denominator": 7,
+  "book_in_denominator": false,
+  "parent_counts_inferred": false,
+  "rows": [
+    {
+      "concept_id": "agent-architecture",
+      "concept": "Agent architecture",
+      "kind": "topic",
+      "course_count": 7,
+      "taught_course_count": 7,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 7,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "dlai-agentic-evals",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "dlai-agentic-evals",
+        "colorado-csci7000"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "evaluation",
+      "concept": "Agent evaluation and benchmarks",
+      "kind": "topic",
+      "course_count": 7,
+      "taught_course_count": 6,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 7,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "dlai-agentic-evals",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "prompting",
+      "concept": "Prompt design",
+      "kind": "topic",
+      "course_count": 7,
+      "taught_course_count": 6,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 7,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "dlai-agentic-evals",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "tool-use",
+      "concept": "Tool use and function calling",
+      "kind": "topic",
+      "course_count": 7,
+      "taught_course_count": 6,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 7,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "dlai-agentic-evals",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "hitl",
+      "concept": "Human oversight and approval",
+      "kind": "pattern",
+      "course_count": 6,
+      "taught_course_count": 6,
+      "assigned_course_count": 0,
+      "planned_course_count": 1,
+      "book_present": true,
+      "evidence_file_count": 6,
+      "courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "dlai-agentic-evals",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "dlai-agentic-evals",
+        "colorado-csci7000"
+      ],
+      "assigned_courses": [],
+      "planned_courses": [
+        "stanford-cs329z"
+      ]
+    },
+    {
+      "concept_id": "structured-output",
+      "concept": "Structured output and constrained decoding",
+      "kind": "method",
+      "course_count": 6,
+      "taught_course_count": 6,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 6,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "observability",
+      "concept": "Tracing and observability",
+      "kind": "topic",
+      "course_count": 6,
+      "taught_course_count": 6,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 6,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "frameworks",
+      "concept": "Agent frameworks and orchestration",
+      "kind": "topic",
+      "course_count": 6,
+      "taught_course_count": 5,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 6,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "harness",
+      "concept": "Agent harness design",
+      "kind": "topic",
+      "course_count": 6,
+      "taught_course_count": 5,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 6,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "memory",
+      "concept": "Agent memory",
+      "kind": "topic",
+      "course_count": 6,
+      "taught_course_count": 5,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 6,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "context-engineering",
+      "concept": "Context engineering",
+      "kind": "topic",
+      "course_count": 6,
+      "taught_course_count": 5,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 6,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "planning",
+      "concept": "Planning and task decomposition",
+      "kind": "topic",
+      "course_count": 6,
+      "taught_course_count": 5,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 6,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "coding-agents",
+      "concept": "Coding and terminal agents",
+      "kind": "application",
+      "course_count": 5,
+      "taught_course_count": 5,
+      "assigned_course_count": 0,
+      "planned_course_count": 1,
+      "book_present": true,
+      "evidence_file_count": 5,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "colorado-csci7000"
+      ],
+      "assigned_courses": [],
+      "planned_courses": [
+        "columbia-coms4995"
+      ]
+    },
+    {
+      "concept_id": "compaction",
+      "concept": "Context summarization and compaction",
+      "kind": "pattern",
+      "course_count": 5,
+      "taught_course_count": 5,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 5,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "state",
+      "concept": "Conversation and execution state",
+      "kind": "concept",
+      "course_count": 5,
+      "taught_course_count": 5,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 5,
+      "courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "colorado-csci7000"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "long-context",
+      "concept": "Long-context modeling",
+      "kind": "topic",
+      "course_count": 5,
+      "taught_course_count": 5,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 5,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "parallelization",
+      "concept": "Parallel execution",
+      "kind": "pattern",
+      "course_count": 5,
+      "taught_course_count": 5,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 5,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "safety",
+      "concept": "Agent safety and guardrails",
+      "kind": "topic",
+      "course_count": 5,
+      "taught_course_count": 4,
+      "assigned_course_count": 1,
+      "planned_course_count": 1,
+      "book_present": true,
+      "evidence_file_count": 5,
+      "courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "dlai-agentic-evals",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": [
+        "stanford-cs329z"
+      ]
+    },
+    {
+      "concept_id": "cost-quality",
+      "concept": "Cost, latency, and quality tradeoffs",
+      "kind": "topic",
+      "course_count": 5,
+      "taught_course_count": 4,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 5,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "dlai-agentic-evals",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "error-analysis",
+      "concept": "Error analysis and failure taxonomy",
+      "kind": "method",
+      "course_count": 5,
+      "taught_course_count": 4,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 5,
+      "courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v",
+        "dlai-agentic-evals",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "grounding",
+      "concept": "Evidence grounding and hallucination control",
+      "kind": "topic",
+      "course_count": 5,
+      "taught_course_count": 4,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 5,
+      "courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v",
+        "dlai-agentic-evals",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "human-eval",
+      "concept": "Human evaluation",
+      "kind": "method",
+      "course_count": 5,
+      "taught_course_count": 4,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 5,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "stanford-cs224v",
+        "dlai-agentic-evals",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "multi-agent",
+      "concept": "Multi-agent systems",
+      "kind": "topic",
+      "course_count": 5,
+      "taught_course_count": 4,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 5,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "orchestrator-workers",
+      "concept": "Orchestrator and workers",
+      "kind": "pattern",
+      "course_count": 5,
+      "taught_course_count": 4,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 5,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "react",
+      "concept": "ReAct",
+      "kind": "pattern",
+      "course_count": 5,
+      "taught_course_count": 4,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 5,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "reflection",
+      "concept": "Reflection and self-correction",
+      "kind": "pattern",
+      "course_count": 5,
+      "taught_course_count": 4,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 5,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "rag",
+      "concept": "Retrieval-augmented generation",
+      "kind": "topic",
+      "course_count": 5,
+      "taught_course_count": 4,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 5,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "shared-memory",
+      "concept": "Shared memory and task coordination",
+      "kind": "pattern",
+      "course_count": 5,
+      "taught_course_count": 4,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 5,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "sft",
+      "concept": "Supervised fine-tuning",
+      "kind": "method",
+      "course_count": 5,
+      "taught_course_count": 4,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 5,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "trajectory-eval",
+      "concept": "Trajectory and process evaluation",
+      "kind": "topic",
+      "course_count": 5,
+      "taught_course_count": 4,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 5,
+      "courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v",
+        "dlai-agentic-evals",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "code-grader",
+      "concept": "Code-based evaluators",
+      "kind": "method",
+      "course_count": 4,
+      "taught_course_count": 4,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "dlai-agentic-evals"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "context-isolation",
+      "concept": "Context isolation",
+      "kind": "pattern",
+      "course_count": 4,
+      "taught_course_count": 4,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "context-offload",
+      "concept": "Context offloading",
+      "kind": "pattern",
+      "course_count": 4,
+      "taught_course_count": 4,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "embeddings",
+      "concept": "Embedding-based retrieval",
+      "kind": "method",
+      "course_count": 4,
+      "taught_course_count": 4,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "rubrics",
+      "concept": "Evaluation rubrics",
+      "kind": "method",
+      "course_count": 4,
+      "taught_course_count": 4,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "judge-validation",
+      "concept": "Judge validation and bias",
+      "kind": "topic",
+      "course_count": 4,
+      "taught_course_count": 4,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "llm-judge",
+      "concept": "LLM as a judge",
+      "kind": "method",
+      "course_count": 4,
+      "taught_course_count": 4,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "long-horizon",
+      "concept": "Long-horizon agent tasks",
+      "kind": "topic",
+      "course_count": 4,
+      "taught_course_count": 4,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 4,
+      "courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "mcp",
+      "concept": "Model Context Protocol",
+      "kind": "protocol",
+      "course_count": 4,
+      "taught_course_count": 4,
+      "assigned_course_count": 0,
+      "planned_course_count": 1,
+      "book_present": true,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": [
+        "colorado-csci7000"
+      ]
+    },
+    {
+      "concept_id": "personalization",
+      "concept": "Personalization and user modeling",
+      "kind": "topic",
+      "course_count": 4,
+      "taught_course_count": 4,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "plan-execute",
+      "concept": "Plan then execute",
+      "kind": "pattern",
+      "course_count": 4,
+      "taught_course_count": 4,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "reliability",
+      "concept": "Reliability and repeated-run evaluation",
+      "kind": "topic",
+      "course_count": 4,
+      "taught_course_count": 4,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "routing",
+      "concept": "Routing",
+      "kind": "pattern",
+      "course_count": 4,
+      "taught_course_count": 4,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "dlai-agentic-evals"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "sparse-retrieval",
+      "concept": "Sparse retrieval",
+      "kind": "method",
+      "course_count": 4,
+      "taught_course_count": 4,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "tool-eval",
+      "concept": "Tool-call evaluation",
+      "kind": "topic",
+      "course_count": 4,
+      "taught_course_count": 4,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "dlai-agentic-evals"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "user-simulation",
+      "concept": "User and environment simulation",
+      "kind": "method",
+      "course_count": 4,
+      "taught_course_count": 4,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "stanford-cs224v",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "workflow-agent",
+      "concept": "Workflows versus agents",
+      "kind": "concept",
+      "course_count": 4,
+      "taught_course_count": 4,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "colorado-csci7000"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "agent-as-tool",
+      "concept": "Agent as a tool",
+      "kind": "pattern",
+      "course_count": 4,
+      "taught_course_count": 3,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "verification",
+      "concept": "Answer verification",
+      "kind": "pattern",
+      "course_count": 4,
+      "taught_course_count": 3,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 4,
+      "courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "benchmark-design",
+      "concept": "Benchmark and test-set design",
+      "kind": "topic",
+      "course_count": 4,
+      "taught_course_count": 3,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "dlai-agentic-evals",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "cot",
+      "concept": "Chain of thought",
+      "kind": "pattern",
+      "course_count": 4,
+      "taught_course_count": 3,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "human-collaboration",
+      "concept": "Human-agent collaboration",
+      "kind": "topic",
+      "course_count": 4,
+      "taught_course_count": 3,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 4,
+      "courses": [
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "reasoning",
+      "concept": "Multi-step reasoning",
+      "kind": "topic",
+      "course_count": 4,
+      "taught_course_count": 3,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "reflexion",
+      "concept": "Reflexion",
+      "kind": "method",
+      "course_count": 4,
+      "taught_course_count": 3,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "rl",
+      "concept": "Reinforcement learning",
+      "kind": "topic",
+      "course_count": 4,
+      "taught_course_count": 3,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "sandboxing",
+      "concept": "Sandboxed execution",
+      "kind": "method",
+      "course_count": 4,
+      "taught_course_count": 3,
+      "assigned_course_count": 1,
+      "planned_course_count": 1,
+      "book_present": false,
+      "evidence_file_count": 4,
+      "courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": [
+        "stanford-cs329z"
+      ]
+    },
+    {
+      "concept_id": "self-consistency",
+      "concept": "Self-consistency",
+      "kind": "pattern",
+      "course_count": 4,
+      "taught_course_count": 3,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "synthetic-data",
+      "concept": "Synthetic data and trajectory generation",
+      "kind": "method",
+      "course_count": 4,
+      "taught_course_count": 3,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 4,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "dlai-agentic-evals",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "abstention",
+      "concept": "Abstention and uncertainty handling",
+      "kind": "pattern",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 3,
+      "courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "dlai-agentic-evals"
+      ],
+      "taught_courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "codeact",
+      "concept": "CodeAct",
+      "kind": "pattern",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "decoding",
+      "concept": "Decoding and sampling",
+      "kind": "topic",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "dlai-agentic-evals"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "deep-research",
+      "concept": "Deep research agents",
+      "kind": "application",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 3,
+      "courses": [
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "cmu-11768",
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "chunking",
+      "concept": "Document chunking and indexing",
+      "kind": "method",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "durable-execution",
+      "concept": "Durable execution and recovery",
+      "kind": "pattern",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "few-shot",
+      "concept": "Few-shot prompting",
+      "kind": "method",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "human-demos",
+      "concept": "Human demonstrations and feedback",
+      "kind": "method",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "langgraph",
+      "concept": "LangGraph",
+      "kind": "tool",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 1,
+      "book_present": false,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": [
+        "colorado-csci7000"
+      ]
+    },
+    {
+      "concept_id": "memory-maintenance",
+      "concept": "Memory maintenance and consolidation",
+      "kind": "pattern",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "model-training",
+      "concept": "Model training and post-training",
+      "kind": "topic",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "multi-agent-failures",
+      "concept": "Multi-agent failure analysis",
+      "kind": "topic",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "privacy",
+      "concept": "Privacy and user data protection",
+      "kind": "topic",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 1,
+      "book_present": true,
+      "evidence_file_count": 3,
+      "courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": [
+        "stanford-cs329z"
+      ]
+    },
+    {
+      "concept_id": "procedural-memory",
+      "concept": "Procedural memory and skills",
+      "kind": "concept",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 1,
+      "book_present": false,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": [
+        "stanford-cs224v"
+      ]
+    },
+    {
+      "concept_id": "progressive-disclosure",
+      "concept": "Progressive disclosure",
+      "kind": "pattern",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "prompt-injection",
+      "concept": "Prompt injection",
+      "kind": "concept",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 1,
+      "book_present": false,
+      "evidence_file_count": 3,
+      "courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": [
+        "stanford-cs329z"
+      ]
+    },
+    {
+      "concept_id": "kv-cache",
+      "concept": "Prompt prefix and KV caching",
+      "kind": "method",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "retrieval-eval",
+      "concept": "Retrieval evaluation",
+      "kind": "topic",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "reward-hacking",
+      "concept": "Reward hacking and evaluation gaming",
+      "kind": "concept",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 1,
+      "book_present": false,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": [
+        "stanford-cs224v"
+      ]
+    },
+    {
+      "concept_id": "reward-model",
+      "concept": "Reward modeling",
+      "kind": "method",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "outcome-eval",
+      "concept": "Task outcome and state-change verification",
+      "kind": "topic",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 3,
+      "courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "dlai-agentic-evals"
+      ],
+      "taught_courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "threat-modeling",
+      "concept": "Threat modeling and least privilege",
+      "kind": "method",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 3,
+      "courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "columbia-coms4995",
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "data-curation",
+      "concept": "Training data selection and quality",
+      "kind": "topic",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "transformer",
+      "concept": "Transformer and attention",
+      "kind": "concept",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "working-memory",
+      "concept": "Working memory",
+      "kind": "concept",
+      "course_count": 3,
+      "taught_course_count": 3,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "harness-optimization",
+      "concept": "Automatic harness improvement",
+      "kind": "method",
+      "course_count": 3,
+      "taught_course_count": 2,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "knowledge-curation",
+      "concept": "Knowledge curation and synthesis",
+      "kind": "topic",
+      "course_count": 3,
+      "taught_course_count": 2,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 3,
+      "courses": [
+        "cmu-11768",
+        "stanford-cs224v",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "cmu-11768",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "multi-agent-debate",
+      "concept": "Multi-agent debate",
+      "kind": "pattern",
+      "course_count": 3,
+      "taught_course_count": 2,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 3,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "deployment",
+      "concept": "Agent deployment and service APIs",
+      "kind": "topic",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 2,
+      "courses": [
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "filesystem",
+      "concept": "Agent filesystem and storage backends",
+      "kind": "topic",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 2,
+      "courses": [
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "refactoring",
+      "concept": "Agentic debugging and refactoring",
+      "kind": "application",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 2,
+      "courses": [
+        "cmu-11768",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "cmu-11768",
+        "colorado-csci7000"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "agentic-rag",
+      "concept": "Agentic retrieval",
+      "kind": "pattern",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 2,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "async-agents",
+      "concept": "Asynchronous agent coordination",
+      "kind": "pattern",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 2,
+      "courses": [
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "beam-search",
+      "concept": "Beam search",
+      "kind": "method",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 2,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "checkpointing",
+      "concept": "Checkpointing and resuming",
+      "kind": "pattern",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 2,
+      "courses": [
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "citation-eval",
+      "concept": "Citation and evidence evaluation",
+      "kind": "topic",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 2,
+      "courses": [
+        "cmu-11768",
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "cmu-11768",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "error-recovery",
+      "concept": "Error handling and retries",
+      "kind": "pattern",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 2,
+      "courses": [
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "grpo",
+      "concept": "Group relative policy optimization",
+      "kind": "method",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 2,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "hybrid-search",
+      "concept": "Hybrid retrieval",
+      "kind": "method",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 2,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "serving",
+      "concept": "Inference serving and performance",
+      "kind": "topic",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 2,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "inference-scaling",
+      "concept": "Inference-time scaling",
+      "kind": "method",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 2,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "distillation",
+      "concept": "Knowledge distillation",
+      "kind": "method",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 2,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "llm-foundations",
+      "concept": "Language model foundations",
+      "kind": "topic",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 2,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "db-query",
+      "concept": "Natural-language database and graph queries",
+      "kind": "application",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 2,
+      "courses": [
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "langchain-deep-agents",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "persona",
+      "concept": "Persona and response style control",
+      "kind": "application",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 2,
+      "courses": [
+        "columbia-coms4995",
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "columbia-coms4995",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "programmatic-tools",
+      "concept": "Programmatic tool composition",
+      "kind": "pattern",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 2,
+      "courses": [
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "prompt-chain",
+      "concept": "Prompt chaining",
+      "kind": "pattern",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 2,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "ppo",
+      "concept": "Proximal policy optimization",
+      "kind": "method",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 2,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "recursive-agents",
+      "concept": "Recursive and self-modifying agents",
+      "kind": "pattern",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 2,
+      "courses": [
+        "stanford-cs329z",
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "red-teaming",
+      "concept": "Red teaming and adversarial evaluation",
+      "kind": "method",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 2,
+      "courses": [
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "regression-eval",
+      "concept": "Regression and version comparison",
+      "kind": "method",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 2,
+      "courses": [
+        "cmu-11768",
+        "dlai-agentic-evals"
+      ],
+      "taught_courses": [
+        "cmu-11768",
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "rlhf",
+      "concept": "Reinforcement learning from human feedback",
+      "kind": "method",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 2,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "reranking",
+      "concept": "Reranking and late interaction",
+      "kind": "method",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 2,
+      "courses": [
+        "stanford-cs329z",
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "semantic-memory",
+      "concept": "Semantic memory",
+      "kind": "concept",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 2,
+      "courses": [
+        "stanford-cs329z",
+        "columbia-coms4995"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "columbia-coms4995"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "speculative-decoding",
+      "concept": "Speculative decoding",
+      "kind": "method",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 2,
+      "courses": [
+        "stanford-cs329z",
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "stanford-cs329z",
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "tokenization",
+      "concept": "Tokenization",
+      "kind": "method",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 2,
+      "courses": [
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "columbia-coms4995",
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "auth",
+      "concept": "Tool authentication and credential handling",
+      "kind": "topic",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 2,
+      "courses": [
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "cmu-11768",
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "vlm",
+      "concept": "Vision-language models",
+      "kind": "topic",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 2,
+      "courses": [
+        "cmu-11768",
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "cmu-11768",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "work-impact",
+      "concept": "Work automation and social impact",
+      "kind": "topic",
+      "course_count": 2,
+      "taught_course_count": 2,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 2,
+      "courses": [
+        "cmu-11768",
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "cmu-11768",
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "episodic-memory",
+      "concept": "Episodic memory",
+      "kind": "concept",
+      "course_count": 2,
+      "taught_course_count": 1,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 2,
+      "courses": [
+        "stanford-cs329z",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "session-eval",
+      "concept": "Multi-turn and session evaluation",
+      "kind": "topic",
+      "course_count": 2,
+      "taught_course_count": 1,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 2,
+      "courses": [
+        "dlai-agentic-evals",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "schema-induction",
+      "concept": "Schema induction and information extraction",
+      "kind": "method",
+      "course_count": 2,
+      "taught_course_count": 1,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 2,
+      "courses": [
+        "stanford-cs224v",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "tool-discovery",
+      "concept": "Tool discovery and selection",
+      "kind": "method",
+      "course_count": 2,
+      "taught_course_count": 1,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 2,
+      "courses": [
+        "stanford-cs329z",
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "stanford-cs329z"
+      ],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "agent-handoff",
+      "concept": "Agent handoffs",
+      "kind": "pattern",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs329z"
+      ],
+      "taught_courses": [
+        "stanford-cs329z"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "middleware",
+      "concept": "Agent middleware",
+      "kind": "concept",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "a2a",
+      "concept": "Agent2Agent protocol",
+      "kind": "protocol",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs329z"
+      ],
+      "taught_courses": [
+        "stanford-cs329z"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "prompt-optimization",
+      "concept": "Automatic prompt optimization",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs329z"
+      ],
+      "taught_courses": [
+        "stanford-cs329z"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "best-of-n",
+      "concept": "Best-of-N selection",
+      "kind": "pattern",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "clinical-agents",
+      "concept": "Clinical decision and literature agents",
+      "kind": "application",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "computer-use",
+      "concept": "Computer-use and web agents",
+      "kind": "application",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 1,
+      "courses": [
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "canonicalization",
+      "concept": "Concept canonicalization and ontologies",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "constraint-retrieval",
+      "concept": "Constraint-satisfaction retrieval",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "controlled-eval",
+      "concept": "Controlled improvement experiments",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "dlai-agentic-evals"
+      ],
+      "taught_courses": [
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "rl-credit",
+      "concept": "Credit assignment and advantage estimation",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "structured-research",
+      "concept": "Data-driven research and analysis",
+      "kind": "application",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "data-reconciliation",
+      "concept": "Database reconciliation and deduplication",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "provenance",
+      "concept": "Decision rationale and data provenance",
+      "kind": "concept",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "declarative-agents",
+      "concept": "Declarative task-oriented agent specifications",
+      "kind": "pattern",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "dialogue-state",
+      "concept": "Dialogue state tracking and management",
+      "kind": "topic",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "dpo",
+      "concept": "Direct preference optimization",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 1,
+      "courses": [
+        "columbia-coms4995"
+      ],
+      "taught_courses": [
+        "columbia-coms4995"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "rl-systems",
+      "concept": "Distributed and asynchronous RL systems",
+      "kind": "topic",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "dspy",
+      "concept": "DSPy",
+      "kind": "tool",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs329z"
+      ],
+      "taught_courses": [
+        "stanford-cs329z"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "dynamic-delegation",
+      "concept": "Dynamic subagent creation and batch delegation",
+      "kind": "pattern",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "code-interpreter",
+      "concept": "Embedded code interpreter",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "emergent-norms",
+      "concept": "Emergent communication and social norms",
+      "kind": "concept",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 1,
+      "courses": [
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "critic-loop",
+      "concept": "Evaluator and optimizer loop",
+      "kind": "pattern",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs329z"
+      ],
+      "taught_courses": [
+        "stanford-cs329z"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "evaluator-metrics",
+      "concept": "Evaluator precision, recall, and agreement",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "dlai-agentic-evals"
+      ],
+      "taught_courses": [
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "rl-exploration",
+      "concept": "Exploration and curriculum design",
+      "kind": "topic",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "smt",
+      "concept": "Formal reasoning with SMT",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "gradient-training",
+      "concept": "Gradient descent and backpropagation",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 1,
+      "courses": [
+        "columbia-coms4995"
+      ],
+      "taught_courses": [
+        "columbia-coms4995"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "graph-rag",
+      "concept": "Graph-based retrieval",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs329z"
+      ],
+      "taught_courses": [
+        "stanford-cs329z"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "document-transcription",
+      "concept": "Historical document transcription",
+      "kind": "application",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "hypothesis-ledger",
+      "concept": "Hypothesis and evidence ledger",
+      "kind": "pattern",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "lora",
+      "concept": "Low-rank adaptation",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 1,
+      "courses": [
+        "columbia-coms4995"
+      ],
+      "taught_courses": [
+        "columbia-coms4995"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "managed-agents",
+      "concept": "Managed agent hosting",
+      "kind": "tool",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "memory-eval",
+      "concept": "Memory evaluation",
+      "kind": "topic",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs329z"
+      ],
+      "taught_courses": [
+        "stanford-cs329z"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "memory-poisoning",
+      "concept": "Memory poisoning",
+      "kind": "concept",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "columbia-coms4995"
+      ],
+      "taught_courses": [
+        "columbia-coms4995"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "memory-scoping",
+      "concept": "Memory scoping and user isolation",
+      "kind": "pattern",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "imputation",
+      "concept": "Missing-data imputation and assumptions",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "compression",
+      "concept": "Model compression and quantization",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 1,
+      "courses": [
+        "columbia-coms4995"
+      ],
+      "taught_courses": [
+        "columbia-coms4995"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "model-selection",
+      "concept": "Model selection and provider integration",
+      "kind": "topic",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 1,
+      "courses": [
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "observation-masking",
+      "concept": "Observation masking",
+      "kind": "pattern",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs329z"
+      ],
+      "taught_courses": [
+        "stanford-cs329z"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "perspective-search",
+      "concept": "Perspective-guided research",
+      "kind": "pattern",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "rl-policy-gradient",
+      "concept": "Policy gradient methods",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "proactive",
+      "concept": "Proactive and mixed-initiative agents",
+      "kind": "pattern",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 1,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": [
+        "stanford-cs329z"
+      ]
+    },
+    {
+      "concept_id": "production-eval",
+      "concept": "Production monitoring and evaluation feedback",
+      "kind": "pattern",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "dlai-agentic-evals"
+      ],
+      "taught_courses": [
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "hybrid-data",
+      "concept": "Queries over structured and unstructured data",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "requirements",
+      "concept": "Requirements and expected behavior",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "dlai-agentic-evals"
+      ],
+      "taught_courses": [
+        "dlai-agentic-evals"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "research-methods",
+      "concept": "Research design and paper critique",
+      "kind": "topic",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "colorado-csci7000"
+      ],
+      "taught_courses": [
+        "colorado-csci7000"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "research-reproduction",
+      "concept": "Research result reproduction",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "caching",
+      "concept": "Response caching",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "columbia-coms4995"
+      ],
+      "taught_courses": [
+        "columbia-coms4995"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "sales-agents",
+      "concept": "Sales and business assistants",
+      "kind": "application",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 1,
+      "courses": [
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "semantic-parsing",
+      "concept": "Semantic parsing to formal queries",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs224v"
+      ],
+      "taught_courses": [
+        "stanford-cs224v"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "skill-induction",
+      "concept": "Skill induction from experience",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "sliding-memory",
+      "concept": "Sliding-window conversation memory",
+      "kind": "pattern",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "columbia-coms4995"
+      ],
+      "taught_courses": [
+        "columbia-coms4995"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "social-simulation",
+      "concept": "Social simulation with agents",
+      "kind": "application",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 1,
+      "courses": [
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "soft-prompts",
+      "concept": "Soft prompt tuning",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "columbia-coms4995"
+      ],
+      "taught_courses": [
+        "columbia-coms4995"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "state-replay",
+      "concept": "State replay and branching",
+      "kind": "pattern",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "langchain-deep-agents"
+      ],
+      "taught_courses": [
+        "langchain-deep-agents"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "social-behavior",
+      "concept": "Strategic and social agent behavior",
+      "kind": "topic",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 1,
+      "courses": [
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "tiered-memory",
+      "concept": "Tiered memory",
+      "kind": "pattern",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs329z"
+      ],
+      "taught_courses": [
+        "stanford-cs329z"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "tree-thoughts",
+      "concept": "Tree of thoughts",
+      "kind": "pattern",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 1,
+      "courses": [
+        "columbia-coms4995"
+      ],
+      "taught_courses": [
+        "columbia-coms4995"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "visual-grounding",
+      "concept": "Visual interface grounding",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "worktree-isolation",
+      "concept": "Workspace isolation",
+      "kind": "pattern",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "stanford-cs329z"
+      ],
+      "taught_courses": [
+        "stanford-cs329z"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "world-models",
+      "concept": "World models",
+      "kind": "concept",
+      "course_count": 1,
+      "taught_course_count": 1,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 1,
+      "courses": [
+        "cmu-11768"
+      ],
+      "taught_courses": [
+        "cmu-11768"
+      ],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "developer-alignment",
+      "concept": "Developer-agent alignment",
+      "kind": "topic",
+      "course_count": 1,
+      "taught_course_count": 0,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": false,
+      "evidence_file_count": 1,
+      "courses": [
+        "colorado-csci7000"
+      ],
+      "taught_courses": [],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "scientific-workflows",
+      "concept": "Scientific workflow automation",
+      "kind": "application",
+      "course_count": 1,
+      "taught_course_count": 0,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 1,
+      "courses": [
+        "colorado-csci7000"
+      ],
+      "taught_courses": [],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "self-play",
+      "concept": "Self-play training",
+      "kind": "method",
+      "course_count": 1,
+      "taught_course_count": 0,
+      "assigned_course_count": 1,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 1,
+      "courses": [
+        "colorado-csci7000"
+      ],
+      "taught_courses": [],
+      "assigned_courses": [
+        "colorado-csci7000"
+      ],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "activation-patching",
+      "concept": "Activation patching and causal intervention",
+      "kind": "method",
+      "course_count": 0,
+      "taught_course_count": 0,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 0,
+      "courses": [],
+      "taught_courses": [],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "game-agents",
+      "concept": "Agents for games and puzzles",
+      "kind": "application",
+      "course_count": 0,
+      "taught_course_count": 0,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 0,
+      "courses": [],
+      "taught_courses": [],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "behavioral-experiments",
+      "concept": "Behavioral experiments on agents",
+      "kind": "method",
+      "course_count": 0,
+      "taught_course_count": 0,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 0,
+      "courses": [],
+      "taught_courses": [],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "bdi",
+      "concept": "Belief-desire-intention agents",
+      "kind": "concept",
+      "course_count": 0,
+      "taught_course_count": 0,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 0,
+      "courses": [],
+      "taught_courses": [],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "cognitive-perspectives",
+      "concept": "Cognitive analysis of agents",
+      "kind": "topic",
+      "course_count": 0,
+      "taught_course_count": 0,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 0,
+      "courses": [],
+      "taught_courses": [],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "consciousness",
+      "concept": "Consciousness and agency theories",
+      "kind": "topic",
+      "course_count": 0,
+      "taught_course_count": 0,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 0,
+      "courses": [],
+      "taught_courses": [],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "scaling-laws",
+      "concept": "Language model scaling laws",
+      "kind": "concept",
+      "course_count": 0,
+      "taught_course_count": 0,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 0,
+      "courses": [],
+      "taught_courses": [],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "interpretability",
+      "concept": "Mechanistic interpretability",
+      "kind": "topic",
+      "course_count": 0,
+      "taught_course_count": 0,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 0,
+      "courses": [],
+      "taught_courses": [],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "meta-learning",
+      "concept": "Meta-learning",
+      "kind": "topic",
+      "course_count": 0,
+      "taught_course_count": 0,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 0,
+      "courses": [],
+      "taught_courses": [],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "metacognition",
+      "concept": "Metacognition and self-knowledge",
+      "kind": "topic",
+      "course_count": 0,
+      "taught_course_count": 0,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 0,
+      "courses": [],
+      "taught_courses": [],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "circuits",
+      "concept": "Model circuit analysis",
+      "kind": "method",
+      "course_count": 0,
+      "taught_course_count": 0,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 0,
+      "courses": [],
+      "taught_courses": [],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "model-collapse",
+      "concept": "Model collapse and synthetic-data risks",
+      "kind": "concept",
+      "course_count": 0,
+      "taught_course_count": 0,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 0,
+      "courses": [],
+      "taught_courses": [],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "model-based-rl",
+      "concept": "Model-based reinforcement learning",
+      "kind": "method",
+      "course_count": 0,
+      "taught_course_count": 0,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 0,
+      "courses": [],
+      "taught_courses": [],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "moral-behavior",
+      "concept": "Moral judgment and ethical behavior",
+      "kind": "topic",
+      "course_count": 0,
+      "taught_course_count": 0,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 0,
+      "courses": [],
+      "taught_courses": [],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "query-rewriting",
+      "concept": "Query rewriting and expansion",
+      "kind": "method",
+      "course_count": 0,
+      "taught_course_count": 0,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 0,
+      "courses": [],
+      "taught_courses": [],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "sparse-autoencoders",
+      "concept": "Sparse autoencoders for feature discovery",
+      "kind": "method",
+      "course_count": 0,
+      "taught_course_count": 0,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 0,
+      "courses": [],
+      "taught_courses": [],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "theory-of-mind",
+      "concept": "Theory of mind",
+      "kind": "concept",
+      "course_count": 0,
+      "taught_course_count": 0,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 0,
+      "courses": [],
+      "taught_courses": [],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "trading-agents",
+      "concept": "Trading and financial assistants",
+      "kind": "application",
+      "course_count": 0,
+      "taught_course_count": 0,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 0,
+      "courses": [],
+      "taught_courses": [],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "travel-agents",
+      "concept": "Travel and flight assistants",
+      "kind": "application",
+      "course_count": 0,
+      "taught_course_count": 0,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 0,
+      "courses": [],
+      "taught_courses": [],
+      "assigned_courses": [],
+      "planned_courses": []
+    },
+    {
+      "concept_id": "vla",
+      "concept": "Vision-language-action models",
+      "kind": "topic",
+      "course_count": 0,
+      "taught_course_count": 0,
+      "assigned_course_count": 0,
+      "planned_course_count": 0,
+      "book_present": true,
+      "evidence_file_count": 0,
+      "courses": [],
+      "taught_courses": [],
+      "assigned_courses": [],
+      "planned_courses": []
+    }
+  ]
+}

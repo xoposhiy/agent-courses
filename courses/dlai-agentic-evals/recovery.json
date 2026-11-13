@@ -1,0 +1,57 @@
+{
+  "method": "Discourse base62 SHA-1 decoded to a public 3X CDN original, then verified against downloaded file bytes",
+  "source_topic": "https://community.deeplearning.ai/t/evals-lecture-notes/896118",
+  "encoding_reference": "https://meta.discourse.org/t/converting-short-upload-urls-to-full-urls/131760",
+  "files": [
+    {
+      "module": 1,
+      "advertised_url": "https://community.deeplearning.ai/uploads/short-url/c8xBrMPWqkILoU6CWXklx4kFs8Z.pdf",
+      "recovered_url": "https://global.discourse-cdn.com/dlai/original/3X/5/5/5511474bc19c467f66a1d5b76ae6301c58e464d5.pdf",
+      "expected_sha1": "5511474bc19c467f66a1d5b76ae6301c58e464d5",
+      "actual_sha1": "5511474bc19c467f66a1d5b76ae6301c58e464d5",
+      "sha1_matches": true,
+      "pages": 60,
+      "first_page_text": "Evaluating & Improving \nAgentic Applications\nLaurie Voss"
+    },
+    {
+      "module": 2,
+      "advertised_url": "https://community.deeplearning.ai/uploads/short-url/9wgIKm0rLjWcOnUJdsVphq2ms98.pdf",
+      "recovered_url": "https://global.discourse-cdn.com/dlai/original/3X/4/2/42b96553ad0415e8fc965096711ee974d49f4196.pdf",
+      "expected_sha1": "42b96553ad0415e8fc965096711ee974d49f4196",
+      "actual_sha1": "42b96553ad0415e8fc965096711ee974d49f4196",
+      "sha1_matches": true,
+      "pages": 52,
+      "first_page_text": "Module 2\nObserving & \nBenchmarking \nAgents"
+    },
+    {
+      "module": 3,
+      "advertised_url": "https://community.deeplearning.ai/uploads/short-url/tLSAIa9bPtyFDEq1AqLAkqDmyfR.pdf",
+      "recovered_url": "https://global.discourse-cdn.com/dlai/original/3X/d/0/d0a8a01b0dd03a3502bd9e3a03b6ea994cbc28df.pdf",
+      "expected_sha1": "d0a8a01b0dd03a3502bd9e3a03b6ea994cbc28df",
+      "actual_sha1": "d0a8a01b0dd03a3502bd9e3a03b6ea994cbc28df",
+      "sha1_matches": true,
+      "pages": 55,
+      "first_page_text": "Building Evaluators \nYou Can Trust\nModule 3"
+    },
+    {
+      "module": 4,
+      "advertised_url": "https://community.deeplearning.ai/uploads/short-url/6g4jtQ0QNcMsyIOESETOiLUWS1m.pdf",
+      "recovered_url": "https://global.discourse-cdn.com/dlai/original/3X/2/b/2bde11f1c30ca57f2de23cfe4e779fafc9de0b7c.pdf",
+      "expected_sha1": "2bde11f1c30ca57f2de23cfe4e779fafc9de0b7c",
+      "actual_sha1": "2bde11f1c30ca57f2de23cfe4e779fafc9de0b7c",
+      "sha1_matches": true,
+      "pages": 55,
+      "first_page_text": "Actions, \nConversations, and \nOutcomes\nModule 4"
+    },
+    {
+      "module": 5,
+      "advertised_url": "https://community.deeplearning.ai/uploads/short-url/rkaTE0Pcgkuc0v9pBgWMsTHy9bd.pdf",
+      "recovered_url": "https://global.discourse-cdn.com/dlai/original/3X/b/f/bf828ca0e9d7ad63146803dca92ed5b3d204e39b.pdf",
+      "expected_sha1": "bf828ca0e9d7ad63146803dca92ed5b3d204e39b",
+      "actual_sha1": "bf828ca0e9d7ad63146803dca92ed5b3d204e39b",
+      "sha1_matches": true,
+      "pages": 66,
+      "first_page_text": "Improving agentic \napplications\nModule 5"
+    }
+  ]
+}

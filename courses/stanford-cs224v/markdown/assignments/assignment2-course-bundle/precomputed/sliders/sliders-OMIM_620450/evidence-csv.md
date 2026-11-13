@@ -1,0 +1,146 @@
+# Homework 2 bundle: precomputed/sliders/sliders-OMIM_620450/evidence.csv
+
+[Course index](../../../../../../README.md) · [Original source](https://drive.google.com/file/d/1VPlTDJULw4qIkQuVcHxxPh4Q50Nvmi-z/view#archive-member=precomputed/sliders/sliders-OMIM_620450/evidence.csv) · [Raw file](../../../../../../raw/assignments/assignment2-course-bundle/precomputed/sliders/sliders-OMIM_620450/evidence.csv)
+
+Retrieved: 2026-11-13T17:00:50.402745+00:00
+
+```csv
+table,row_id,field,value,quote,document,start_line,end_line,quote_verified
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:0,disease_name,"Intellectual Developmental Disorder, Autosomal Dominant 73","# Clinical Identification of Intellectual Developmental Disorder, Autosomal Dominant 73 (OMIM #620450)",report.md,1,1,True
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:0,rule_or_step_title,Negative Diagnostic Criteria: Major Congenital Heart Disease Exclusion,"## Negative Diagnostic Criteria: Systematic Absences Arguing Against TAF4 Variants
+
+Clinical identification of *TAF4* haploinsufficiency is largely guided by ""negative criteria""—features that, if present, strongly suggest an alternate etiology (F5):
+
+- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).",report.md,65,69,False
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:0,phenotype_name,Major Congenital Heart Disease,"- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).",report.md,69,69,True
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:0,rule_category,exclusion_criterion,"Clinical identification of *TAF4* haploinsufficiency is largely guided by ""negative criteria""—features that, if present, strongly suggest an alternate etiology (F5):
+
+- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).",report.md,67,69,False
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:0,phenotype_status_required,must_be_absent,"Clinical identification of *TAF4* haploinsufficiency is largely guided by ""negative criteria""—features that, if present, strongly suggest an alternate etiology (F5):
+
+- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).",report.md,67,69,False
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:0,matching_criterion_description,"Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in TAF4 pLoF series; presence suggests an alternate etiology.","Clinical identification of *TAF4* haploinsufficiency is largely guided by ""negative criteria""—features that, if present, strongly suggest an alternate etiology (F5):
+
+- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).",report.md,67,69,False
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:0,cohort_frequency,0/8,"- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).",report.md,69,69,True
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:1,disease_name,"Intellectual Developmental Disorder, Autosomal Dominant 73","# Clinical Identification of Intellectual Developmental Disorder, Autosomal Dominant 73 (OMIM #620450)",report.md,1,1,True
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:1,rule_or_step_title,Negative Diagnostic Criteria: Structural Gastrointestinal Anomalies Exclusion,"## Negative Diagnostic Criteria: Systematic Absences Arguing Against TAF4 Variants
+
+Clinical identification of *TAF4* haploinsufficiency is largely guided by ""negative criteria""—features that, if present, strongly suggest an alternate etiology (F5):
+
+- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).
+- **Structural Gastrointestinal Anomalies:** Tracheoesophageal fistulae, esophageal atresia, and gut malrotations have not been reported in primary *TAF4* probands (0/8) (F5, F11).",report.md,65,70,False
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:1,phenotype_name,Structural Gastrointestinal Anomalies,"- **Structural Gastrointestinal Anomalies:** Tracheoesophageal fistulae, esophageal atresia, and gut malrotations have not been reported in primary *TAF4* probands (0/8) (F5, F11).",report.md,70,70,True
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:1,rule_category,exclusion_criterion,"Clinical identification of *TAF4* haploinsufficiency is largely guided by ""negative criteria""—features that, if present, strongly suggest an alternate etiology (F5):
+
+- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).
+- **Structural Gastrointestinal Anomalies:** Tracheoesophageal fistulae, esophageal atresia, and gut malrotations have not been reported in primary *TAF4* probands (0/8) (F5, F11).",report.md,67,70,False
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:1,phenotype_status_required,must_be_absent,"Clinical identification of *TAF4* haploinsufficiency is largely guided by ""negative criteria""—features that, if present, strongly suggest an alternate etiology (F5):
+
+- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).
+- **Structural Gastrointestinal Anomalies:** Tracheoesophageal fistulae, esophageal atresia, and gut malrotations have not been reported in primary *TAF4* probands (0/8) (F5, F11).",report.md,67,70,False
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:1,matching_criterion_description,"Tracheoesophageal fistulae, esophageal atresia, and gut malrotations have not been reported in primary TAF4 probands (0/8).","Clinical identification of *TAF4* haploinsufficiency is largely guided by ""negative criteria""—features that, if present, strongly suggest an alternate etiology (F5):
+
+- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).
+- **Structural Gastrointestinal Anomalies:** Tracheoesophageal fistulae, esophageal atresia, and gut malrotations have not been reported in primary *TAF4* probands (0/8) (F5, F11).",report.md,67,70,False
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:1,cohort_frequency,0/8,"- **Structural Gastrointestinal Anomalies:** Tracheoesophageal fistulae, esophageal atresia, and gut malrotations have not been reported in primary *TAF4* probands (0/8) (F5, F11).",report.md,70,70,True
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:2,disease_name,"Intellectual Developmental Disorder, Autosomal Dominant 73","# Clinical Identification of Intellectual Developmental Disorder, Autosomal Dominant 73 (OMIM #620450)",report.md,1,1,True
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:2,rule_or_step_title,Negative Diagnostic Criteria: Severe Visceral and Renal Agenesis Exclusion,"## Negative Diagnostic Criteria: Systematic Absences Arguing Against TAF4 Variants
+
+Clinical identification of *TAF4* haploinsufficiency is largely guided by ""negative criteria""—features that, if present, strongly suggest an alternate etiology (F5):
+
+- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).
+- **Structural Gastrointestinal Anomalies:** Tracheoesophageal fistulae, esophageal atresia, and gut malrotations have not been reported in primary *TAF4* probands (0/8) (F5, F11).
+- **Severe Visceral and Renal Agenesis:** Renal agenesis, severe cystic renal dysplasia, and diaphragmatic hernias argue decisively against *TAF4* haploinsufficiency (F5).",report.md,65,71,False
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:2,phenotype_name,Severe Visceral and Renal Agenesis,"- **Severe Visceral and Renal Agenesis:** Renal agenesis, severe cystic renal dysplasia, and diaphragmatic hernias argue decisively against *TAF4* haploinsufficiency (F5).",report.md,71,71,True
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:2,rule_category,exclusion_criterion,"Clinical identification of *TAF4* haploinsufficiency is largely guided by ""negative criteria""—features that, if present, strongly suggest an alternate etiology (F5):
+
+- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).
+- **Structural Gastrointestinal Anomalies:** Tracheoesophageal fistulae, esophageal atresia, and gut malrotations have not been reported in primary *TAF4* probands (0/8) (F5, F11).
+- **Severe Visceral and Renal Agenesis:** Renal agenesis, severe cystic renal dysplasia, and diaphragmatic hernias argue decisively against *TAF4* haploinsufficiency (F5).",report.md,67,71,False
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:2,phenotype_status_required,must_be_absent,"Clinical identification of *TAF4* haploinsufficiency is largely guided by ""negative criteria""—features that, if present, strongly suggest an alternate etiology (F5):
+
+- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).
+- **Structural Gastrointestinal Anomalies:** Tracheoesophageal fistulae, esophageal atresia, and gut malrotations have not been reported in primary *TAF4* probands (0/8) (F5, F11).
+- **Severe Visceral and Renal Agenesis:** Renal agenesis, severe cystic renal dysplasia, and diaphragmatic hernias argue decisively against *TAF4* haploinsufficiency (F5).",report.md,67,71,False
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:2,matching_criterion_description,"Renal agenesis, severe cystic renal dysplasia, and diaphragmatic hernias argue decisively against TAF4 haploinsufficiency.","Clinical identification of *TAF4* haploinsufficiency is largely guided by ""negative criteria""—features that, if present, strongly suggest an alternate etiology (F5):
+
+- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).
+- **Structural Gastrointestinal Anomalies:** Tracheoesophageal fistulae, esophageal atresia, and gut malrotations have not been reported in primary *TAF4* probands (0/8) (F5, F11).
+- **Severe Visceral and Renal Agenesis:** Renal agenesis, severe cystic renal dysplasia, and diaphragmatic hernias argue decisively against *TAF4* haploinsufficiency (F5).",report.md,67,71,False
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:3,disease_name,"Intellectual Developmental Disorder, Autosomal Dominant 73","# Clinical Identification of Intellectual Developmental Disorder, Autosomal Dominant 73 (OMIM #620450)",report.md,1,1,True
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:3,rule_or_step_title,Negative Diagnostic Criteria: Early Progressive Microcephaly / Suture Fusion Exclusion,"## Negative Diagnostic Criteria: Systematic Absences Arguing Against TAF4 Variants
+
+Clinical identification of *TAF4* haploinsufficiency is largely guided by ""negative criteria""—features that, if present, strongly suggest an alternate etiology (F5):
+
+- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).
+- **Structural Gastrointestinal Anomalies:** Tracheoesophageal fistulae, esophageal atresia, and gut malrotations have not been reported in primary *TAF4* probands (0/8) (F5, F11).
+- **Severe Visceral and Renal Agenesis:** Renal agenesis, severe cystic renal dysplasia, and diaphragmatic hernias argue decisively against *TAF4* haploinsufficiency (F5).
+- **Early Progressive Microcephaly / Suture Fusion:** Premature craniosynostosis is absent in primary cohorts (F11).",report.md,65,72,False
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:3,phenotype_name,Premature craniosynostosis,- **Early Progressive Microcephaly / Suture Fusion:** Premature craniosynostosis is absent in primary cohorts (F11).,report.md,72,72,True
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:3,rule_category,exclusion_criterion,"Clinical identification of *TAF4* haploinsufficiency is largely guided by ""negative criteria""—features that, if present, strongly suggest an alternate etiology (F5):
+
+- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).
+- **Structural Gastrointestinal Anomalies:** Tracheoesophageal fistulae, esophageal atresia, and gut malrotations have not been reported in primary *TAF4* probands (0/8) (F5, F11).
+- **Severe Visceral and Renal Agenesis:** Renal agenesis, severe cystic renal dysplasia, and diaphragmatic hernias argue decisively against *TAF4* haploinsufficiency (F5).
+- **Early Progressive Microcephaly / Suture Fusion:** Premature craniosynostosis is absent in primary cohorts (F11).",report.md,67,72,False
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:3,phenotype_status_required,must_be_absent,"Clinical identification of *TAF4* haploinsufficiency is largely guided by ""negative criteria""—features that, if present, strongly suggest an alternate etiology (F5):
+
+- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).
+- **Structural Gastrointestinal Anomalies:** Tracheoesophageal fistulae, esophageal atresia, and gut malrotations have not been reported in primary *TAF4* probands (0/8) (F5, F11).
+- **Severe Visceral and Renal Agenesis:** Renal agenesis, severe cystic renal dysplasia, and diaphragmatic hernias argue decisively against *TAF4* haploinsufficiency (F5).
+- **Early Progressive Microcephaly / Suture Fusion:** Premature craniosynostosis is absent in primary cohorts (F11).",report.md,67,72,False
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:3,matching_criterion_description,Premature craniosynostosis is absent in primary cohorts.,"Clinical identification of *TAF4* haploinsufficiency is largely guided by ""negative criteria""—features that, if present, strongly suggest an alternate etiology (F5):
+
+- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).
+- **Structural Gastrointestinal Anomalies:** Tracheoesophageal fistulae, esophageal atresia, and gut malrotations have not been reported in primary *TAF4* probands (0/8) (F5, F11).
+- **Severe Visceral and Renal Agenesis:** Renal agenesis, severe cystic renal dysplasia, and diaphragmatic hernias argue decisively against *TAF4* haploinsufficiency (F5).
+- **Early Progressive Microcephaly / Suture Fusion:** Premature craniosynostosis is absent in primary cohorts (F11).",report.md,67,72,False
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:4,disease_name,"Intellectual Developmental Disorder, Autosomal Dominant 73","# Clinical Identification of Intellectual Developmental Disorder, Autosomal Dominant 73 (OMIM #620450)",report.md,1,1,True
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:4,rule_or_step_title,Negative Diagnostic Criteria: Catastrophic / Refractory Epileptic Encephalopathy Exclusion,"## Negative Diagnostic Criteria: Systematic Absences Arguing Against TAF4 Variants
+
+Clinical identification of *TAF4* haploinsufficiency is largely guided by ""negative criteria""—features that, if present, strongly suggest an alternate etiology (F5):
+
+- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).
+- **Structural Gastrointestinal Anomalies:** Tracheoesophageal fistulae, esophageal atresia, and gut malrotations have not been reported in primary *TAF4* probands (0/8) (F5, F11).
+- **Severe Visceral and Renal Agenesis:** Renal agenesis, severe cystic renal dysplasia, and diaphragmatic hernias argue decisively against *TAF4* haploinsufficiency (F5).
+- **Early Progressive Microcephaly / Suture Fusion:** Premature craniosynostosis is absent in primary cohorts (F11).
+- **Catastrophic / Refractory Epileptic Encephalopathy:** The presence of continuous spike-wave discharges, infantile spasms, or intractable pharmacoresistant epilepsy within the first year of life argues strongly against *TAF4* pathology (F9).",report.md,65,73,False
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:4,phenotype_name,Catastrophic / Refractory Epileptic Encephalopathy,"- **Catastrophic / Refractory Epileptic Encephalopathy:** The presence of continuous spike-wave discharges, infantile spasms, or intractable pharmacoresistant epilepsy within the first year of life argues strongly against *TAF4* pathology (F9).",report.md,73,73,True
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:4,rule_category,exclusion_criterion,"Clinical identification of *TAF4* haploinsufficiency is largely guided by ""negative criteria""—features that, if present, strongly suggest an alternate etiology (F5):
+
+- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).
+- **Structural Gastrointestinal Anomalies:** Tracheoesophageal fistulae, esophageal atresia, and gut malrotations have not been reported in primary *TAF4* probands (0/8) (F5, F11).
+- **Severe Visceral and Renal Agenesis:** Renal agenesis, severe cystic renal dysplasia, and diaphragmatic hernias argue decisively against *TAF4* haploinsufficiency (F5).
+- **Early Progressive Microcephaly / Suture Fusion:** Premature craniosynostosis is absent in primary cohorts (F11).
+- **Catastrophic / Refractory Epileptic Encephalopathy:** The presence of continuous spike-wave discharges, infantile spasms, or intractable pharmacoresistant epilepsy within the first year of life argues strongly against *TAF4* pathology (F9).",report.md,67,73,False
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:4,phenotype_status_required,must_be_absent,"Clinical identification of *TAF4* haploinsufficiency is largely guided by ""negative criteria""—features that, if present, strongly suggest an alternate etiology (F5):
+
+- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).
+- **Structural Gastrointestinal Anomalies:** Tracheoesophageal fistulae, esophageal atresia, and gut malrotations have not been reported in primary *TAF4* probands (0/8) (F5, F11).
+- **Severe Visceral and Renal Agenesis:** Renal agenesis, severe cystic renal dysplasia, and diaphragmatic hernias argue decisively against *TAF4* haploinsufficiency (F5).
+- **Early Progressive Microcephaly / Suture Fusion:** Premature craniosynostosis is absent in primary cohorts (F11).
+- **Catastrophic / Refractory Epileptic Encephalopathy:** The presence of continuous spike-wave discharges, infantile spasms, or intractable pharmacoresistant epilepsy within the first year of life argues strongly against *TAF4* pathology (F9).",report.md,67,73,False
+phenotypic_matching_rules,eddb9365b8ae970e:0:phenotypic_matching_rules:4,matching_criterion_description,"The presence of continuous spike-wave discharges, infantile spasms, or intractable pharmacoresistant epilepsy within the first year of life argues strongly against TAF4 pathology.","Clinical identification of *TAF4* haploinsufficiency is largely guided by ""negative criteria""—features that, if present, strongly suggest an alternate etiology (F5):
+
+- **Major Congenital Heart Disease (CHD):** Complex cyanotic cardiac defects, outflow tract malformations, and truncus arteriosus are absent (0/8) in *TAF4* pLoF series (Janssen et al., 2022) (F5).
+- **Structural Gastrointestinal Anomalies:** Tracheoesophageal fistulae, esophageal atresia, and gut malrotations have not been reported in primary *TAF4* probands (0/8) (F5, F11).
+- **Severe Visceral and Renal Agenesis:** Renal agenesis, severe cystic renal dysplasia, and diaphragmatic hernias argue decisively against *TAF4* haploinsufficiency (F5).
+- **Early Progressive Microcephaly / Suture Fusion:** Premature craniosynostosis is absent in primary cohorts (F11).
+- **Catastrophic / Refractory Epileptic Encephalopathy:** The presence of continuous spike-wave discharges, infantile spasms, or intractable pharmacoresistant epilepsy within the first year of life argues strongly against *TAF4* pathology (F9).",report.md,67,73,False
+phenotypic_differential_matching,eddb9365b8ae970e:0:phenotypic_differential_matching:0,target_disease,"Intellectual Developmental Disorder, Autosomal Dominant 73","# Clinical Identification of Intellectual Developmental Disorder, Autosomal Dominant 73 (OMIM #620450)",report.md,1,1,True
+phenotypic_differential_matching,eddb9365b8ae970e:0:phenotypic_differential_matching:0,mimic_disease,TAF1-related intellectual disability,"   - *TAF1-related intellectual disability* (X-linked intellectual disability, Cheng, 2019, DOI: 10.1002/humu.23936) (F9).",report.md,40,40,True
+phenotypic_differential_matching,eddb9365b8ae970e:0:phenotypic_differential_matching:0,overlapping_phenotypes,"intellectual disability, neurodevelopmental delay","1. **Other TFIID-Complex Subunit Neurodevelopmental Disorders (TAF-opathies):**
+   - *TAF2-related disorder* (autosomal recessive mental retardation-40, Lesieur, 2021, DOI: 10.1016/j.ejmg.2021.104323) (F4).
+   - *TAF6-related Alazami-Yuan syndrome* (autosomal recessive, Staykova et al., 2024, DOI: 10.1055/s-0043-1772575) (F6, F14).
+   - *TAF8-related neurodevelopmental disorder* (autosomal recessive, Zaccai, 2025) (F2).
+   - *TAF1-related intellectual disability* (X-linked intellectual disability, Cheng, 2019, DOI: 10.1002/humu.23936) (F9).",report.md,36,40,False
+phenotypic_differential_matching,eddb9365b8ae970e:0:phenotypic_differential_matching:0,discriminating_phenotype,Absence of Severe Epileptic Encephalopathy / Infantile Refractory Spasms,"2. **Rank 2: Absence of Severe Epileptic Encephalopathy / Infantile Refractory Spasms**
+   - *Frequency in TAF4:* Seizure penetrance is <30% (<2/8 individuals), typically manifesting as isolated febrile or easily controlled episodes rather than catastrophic infantile spasms or progressive refractory encephalopathy (F9, F10).
+   - *Discriminatory Value:* Differentiates *TAF4* probands from severe early-onset neurodevelopmental encephalopathies (such as select *TAF1* or epileptic encephalopathy cohorts) (F9).",report.md,54,56,True
+phenotypic_differential_matching,eddb9365b8ae970e:0:phenotypic_differential_matching:0,discriminating_logic,"Seizure penetrance in TAF4 is <30% (<2/8), manifesting as isolated febrile or easily controlled episodes rather than catastrophic infantile spasms or progressive refractory encephalopathy seen in severe early-onset neurodevelopmental encephalopathies like select TAF1 cohorts.","2. **Rank 2: Absence of Severe Epileptic Encephalopathy / Infantile Refractory Spasms**
+   - *Frequency in TAF4:* Seizure penetrance is <30% (<2/8 individuals), typically manifesting as isolated febrile or easily controlled episodes rather than catastrophic infantile spasms or progressive refractory encephalopathy (F9, F10).
+   - *Discriminatory Value:* Differentiates *TAF4* probands from severe early-onset neurodevelopmental encephalopathies (such as select *TAF1* or epileptic encephalopathy cohorts) (F9).",report.md,54,56,False
+phenotypic_differential_matching,eddb9365b8ae970e:0:phenotypic_differential_matching:0,diagnostic_confidence,high,   - *Confidence:* **Moderate to High**.,report.md,57,57,True
+
+```

@@ -1,0 +1,49 @@
+# Homework 1 public teaching repository: assignments/OMIM_621421/grill_run/tasks/0012_deep_h1/meta.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621421/grill_run/tasks/0012_deep_h1/meta.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621421/grill_run/tasks/0012_deep_h1/meta.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "mode": "research",
+  "model": "gemini-3.8-flash",
+  "executor": "direct",
+  "queries": [
+    "\"TRA2B\" \"neurodevelopmental syndrome\" \"microcephaly\" \"hypotonia\"",
+    "Ramond Elliott neurodevelopmental syndrome TRA2B phenotype OMIM 621421"
+  ],
+  "n_hits": 3,
+  "hits": [
+    {
+      "id": "https://www.sciencedirect.com/science/article/pii/S109836002201070X",
+      "title": "Clustered variants in the 5\u2032 coding region of TRA2B cause a distinctive neurodevelopmental syndrome",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.sciencedirect.com/science/article/pii/S109836002201070X",
+      "abstract_chars": 1765
+    },
+    {
+      "id": "https://digital.lib.washington.edu/researchworks/items/828fc341-3f17-40b6-b4b1-bc296adbf28f",
+      "title": "Molecular and Cellular Phenotypes of AUTS2 Deficiency in the Developing Mouse Cortex and Hippocampus",
+      "pmid": null,
+      "doi": null,
+      "url": "https://digital.lib.washington.edu/researchworks/items/828fc341-3f17-40b6-b4b1-bc296adbf28f",
+      "abstract_chars": 0
+    },
+    {
+      "id": "https://panelapp-aus.org/panels/138/gene/TRA2B/",
+      "title": "Gene: TRA2B (Microcephaly)",
+      "pmid": null,
+      "doi": null,
+      "url": "https://panelapp-aus.org/panels/138/gene/TRA2B/",
+      "abstract_chars": 0
+    }
+  ],
+  "input_tokens": 3364,
+  "output_tokens": 2832,
+  "usd": 0.01018,
+  "seconds": 21.5,
+  "ok": true
+}
+```

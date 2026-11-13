@@ -1,0 +1,200 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - dialog [ref=e4]:
+      - generic:
+        - region "Notifications alt+T" [active]
+      - generic [ref=e5]:
+        - heading "Log In to Continue" [level=2] [ref=e6]
+        - button "Close modal" [ref=e8] [cursor=pointer]
+        - generic [ref=e12]:
+          - img "Sign in" [ref=e14]
+          - paragraph [ref=e15]: Access your courses, track your progress, and join our community of AI learners.
+          - button "Log In" [ref=e16] [cursor=pointer]
+      - button "Close modal" [ref=e18] [cursor=pointer]: close
+    - banner [ref=e19]:
+      - generic [ref=e20]:
+        - button "Toggle sidebar" [ref=e21] [cursor=pointer]
+        - link [ref=e24] [cursor=pointer]:
+          - /url: /
+          - img "DeepLearning.AI" [ref=e25]
+      - generic [ref=e26]:
+        - generic [ref=e27]: /
+        - link "Evaluating and Improving Agentic Applications" [ref=e28] [cursor=pointer]:
+          - /url: https://www.deeplearning.ai/courses/evaluating-and-improving-agentic-applications
+        - generic [ref=e29]: /
+        - navigation "Breadcrumb" [ref=e31]:
+          - list [ref=e32]:
+            - listitem [ref=e33]:
+              - button "Module 1" [ref=e35] [cursor=pointer]
+        - generic [ref=e39]:
+          - link "Previous lesson" [ref=e40] [cursor=pointer]:
+            - /url: /courses/evaluating-and-improving-agentic-applications/lesson/gy3a4e/traces
+            - text: Go to Previous
+          - link "Next lesson" [ref=e43] [cursor=pointer]:
+            - /url: /courses/evaluating-and-improving-agentic-applications/lesson/3sxuzjlf/lab-1%3A-trace-an-agent-with-python
+            - text: Go to Next
+      - generic [ref=e46]:
+        - button "Syllabus" [ref=e47] [cursor=pointer]
+        - link "Courses" [ref=e50] [cursor=pointer]:
+          - /url: /
+        - button "Log In" [ref=e52] [cursor=pointer]
+    - generic [ref=e53]:
+      - main [ref=e55]:
+        - generic [ref=e56]:
+          - generic:
+            - img "deco top"
+            - img "deco bottom"
+            - generic:
+              - img "Evaluating and Improving Agentic Applications"
+          - generic [ref=e58]:
+            - generic [ref=e59]: Log In to continue learning
+            - heading "Evaluating and Improving Agentic Applications" [level=1] [ref=e60]
+            - generic [ref=e61]:
+              - generic [ref=e62]: Intermediate
+              - generic [ref=e66]: 15h7m
+          - button "Join Now" [ref=e70] [cursor=pointer]
+          - generic [ref=e71]:
+            - generic [ref=e72]:
+              - heading "Topics" [level=3] [ref=e73]
+              - generic [ref=e74]:
+                - generic [ref=e75]: Agents
+                - generic [ref=e76]: Evaluation and Monitoring
+            - generic [ref=e77]:
+              - heading "What you'll learn" [level=3] [ref=e78]
+              - generic [ref=e79]:
+                - article [ref=e84]:
+                  - paragraph [ref=e85]: "Error analysis and test sets: Read your agent’s traces, label recurring failures, and turn them into a reusable test set you can rerun after every change."
+                - article [ref=e90]:
+                  - paragraph [ref=e91]: "Trustworthy evaluators: Automate evaluation with code and LLM judges you can rely on, so you don’t have to review every result by hand."
+                - article [ref=e96]:
+                  - paragraph [ref=e97]: "Evaluation-driven improvement: Use your evals to check that every change makes your agent better without breaking anything else."
+            - generic [ref=e98]:
+              - heading "Collaborator" [level=3] [ref=e99]
+              - generic [ref=e101]:
+                - list [ref=e102]:
+                  - listitem [ref=e103]:
+                    - link [ref=e104] [cursor=pointer]:
+                      - /url: https://www.deeplearning.ai/courses/?courses_date_desc%5BrefinementList%5D%5Bcourse_type%5D%5B0%5D=Short%20Courses&courses_date_desc%5BrefinementList%5D%5Bpartnership%5D%5B0%5D=Arize%20AI
+                      - img "Arize AI" [ref=e105]
+                - link "Arize AI" [ref=e107] [cursor=pointer]:
+                  - /url: https://www.deeplearning.ai/courses/?courses_date_desc%5BrefinementList%5D%5Bcourse_type%5D%5B0%5D=Short%20Courses&courses_date_desc%5BrefinementList%5D%5Bpartnership%5D%5B0%5D=Arize%20AI
+            - generic [ref=e108]:
+              - heading "Instructor" [level=3] [ref=e109]
+              - generic [ref=e110]: Laurie Voss
+      - generic [ref=e111]:
+        - generic "close sidebar"
+        - generic [ref=e113]:
+          - generic [ref=e114]: "Module 1: Foundations of Evals"
+          - list [ref=e117]:
+            - link "A Conversation Between Laurie Voss and Andrew Ng Video ・ 8m" [ref=e118] [cursor=pointer]:
+              - /url: /courses/evaluating-and-improving-agentic-applications/lesson/53tpudpi/a-conversation-between-laurie-voss-and-andrew-ng
+              - listitem [ref=e119]:
+                - generic [ref=e124]:
+                  - generic [ref=e125]: A Conversation Between Laurie Voss and Andrew Ng
+                  - generic [ref=e126]:
+                    - generic [ref=e127]: Video
+                    - generic [ref=e128]: ・
+                    - generic [ref=e129]: 8m
+            - link "Why Evals Matter Video ・ 6m" [ref=e130] [cursor=pointer]:
+              - /url: /courses/evaluating-and-improving-agentic-applications/lesson/ldijc37i/why-evals-matter
+              - listitem [ref=e131]:
+                - generic [ref=e136]:
+                  - generic [ref=e137]: Why Evals Matter
+                  - generic [ref=e138]:
+                    - generic [ref=e139]: Video
+                    - generic [ref=e140]: ・
+                    - generic [ref=e141]: 6m
+            - link "The Evals Process Part 1 Video ・ 6m" [ref=e142] [cursor=pointer]:
+              - /url: /courses/evaluating-and-improving-agentic-applications/lesson/bvl0kh83/the-evals-process-part-1
+              - listitem [ref=e143]:
+                - generic [ref=e148]:
+                  - generic [ref=e149]: The Evals Process Part 1
+                  - generic [ref=e150]:
+                    - generic [ref=e151]: Video
+                    - generic [ref=e152]: ・
+                    - generic [ref=e153]: 6m
+            - link "The Evals Process Part 2 Video ・ 5m" [ref=e154] [cursor=pointer]:
+              - /url: /courses/evaluating-and-improving-agentic-applications/lesson/eg5nacsy/the-evals-process-part-2
+              - listitem [ref=e155]:
+                - generic [ref=e160]:
+                  - generic [ref=e161]: The Evals Process Part 2
+                  - generic [ref=e162]:
+                    - generic [ref=e163]: Video
+                    - generic [ref=e164]: ・
+                    - generic [ref=e165]: 5m
+            - link "Traces Video ・ 6m" [ref=e166] [cursor=pointer]:
+              - /url: /courses/evaluating-and-improving-agentic-applications/lesson/gy3a4e/traces
+              - listitem [ref=e167]:
+                - generic [ref=e172]:
+                  - generic [ref=e173]: Traces
+                  - generic [ref=e174]:
+                    - generic [ref=e175]: Video
+                    - generic [ref=e176]: ・
+                    - generic [ref=e177]: 6m
+            - 'link "Reading Lab 1: How Tracing Works Reading ・ 10m" [ref=e178] [cursor=pointer]':
+              - /url: /courses/evaluating-and-improving-agentic-applications/lesson/bvl0k28r/reading-lab-1%3A-how-tracing-works
+              - listitem [ref=e179]:
+                - generic [ref=e184]:
+                  - generic [ref=e185]: "Reading Lab 1: How Tracing Works"
+                  - generic [ref=e186]:
+                    - generic [ref=e187]: Reading
+                    - generic [ref=e188]: ・
+                    - generic [ref=e189]: 10m
+            - 'link "Lab 1: Trace an Agent with Python Code Example ・ 30m" [ref=e190] [cursor=pointer]':
+              - /url: /courses/evaluating-and-improving-agentic-applications/lesson/3sxuzjlf/lab-1%3A-trace-an-agent-with-python
+              - listitem [ref=e191]:
+                - generic [ref=e196]:
+                  - generic [ref=e197]: "Lab 1: Trace an Agent with Python"
+                  - generic [ref=e198]:
+                    - generic [ref=e199]: Code Example
+                    - generic [ref=e200]: ・
+                    - generic [ref=e201]: 30m
+            - 'link "Lab 2: Trace an Agent with Phoenix Code Example ・ 30m" [ref=e202] [cursor=pointer]':
+              - /url: /courses/evaluating-and-improving-agentic-applications/lesson/79ywr3/lab-2%3A-trace-an-agent-with-phoenix
+              - listitem [ref=e203]:
+                - generic [ref=e208]:
+                  - generic [ref=e209]: "Lab 2: Trace an Agent with Phoenix"
+                  - generic [ref=e210]:
+                    - generic [ref=e211]: Code Example
+                    - generic [ref=e212]: ・
+                    - generic [ref=e213]: 30m
+            - link "Join the Deeplearning.AI Forum! Reading ・ 10m" [ref=e214] [cursor=pointer]:
+              - /url: /courses/evaluating-and-improving-agentic-applications/lesson/cno79b0z/join-the-deeplearning.ai-forum!
+              - listitem [ref=e215]:
+                - generic [ref=e220]:
+                  - generic [ref=e221]: Join the Deeplearning.AI Forum!
+                  - generic [ref=e222]:
+                    - generic [ref=e223]: Reading
+                    - generic [ref=e224]: ・
+                    - generic [ref=e225]: 10m
+            - generic [ref=e226]: Graded Assignments
+            - generic [ref=e232]: Optional Material
+            - link "[Optional] Give Feedback" [ref=e238] [cursor=pointer]:
+              - /url: /courses/evaluating-and-improving-agentic-applications/course-feedback?nextUrl=%2Fcourses%2Fevaluating-and-improving-agentic-applications%2Flesson%2Fa4ui1p%2Fdefine-application-requirements&listingIndex=0&courseSlug=evaluating-and-improving-agentic-applications
+              - listitem [ref=e239]:
+                - generic [ref=e240]: "[Optional] Give Feedback"
+            - generic [ref=e247]:
+              - generic [ref=e248]: Next
+              - 'link "Module 2: Observing and Benchmarking Agents" [ref=e249] [cursor=pointer]':
+                - /url: /courses/evaluating-and-improving-agentic-applications/lesson/a4ui1p/define-application-requirements
+          - list [ref=e254]:
+            - generic [ref=e257]:
+              - generic [ref=e258]:
+                - generic [ref=e259]:
+                  - generic: Course Details
+                  - link [ref=e260] [cursor=pointer]:
+                    - /url: https://www.deeplearning.ai/courses/evaluating-and-improving-agentic-applications
+                - generic [ref=e263]:
+                  - text: Forum
+                  - link [ref=e264] [cursor=pointer]:
+                    - /url: https://community.deeplearning.ai/?utm_campaign=forum-engagement&utm_medium=learning-platform
+                - generic [ref=e267]:
+                  - text: Feedback
+                  - link [ref=e268] [cursor=pointer]:
+                    - /url: /courses/evaluating-and-improving-agentic-applications/course-feedback?nextUrl=%2Fcourses%2Fevaluating-and-improving-agentic-applications%2Flesson%2Fa4ui1p%2Fdefine-application-requirements&listingIndex=0&courseSlug=evaluating-and-improving-agentic-applications
+              - generic [ref=e271]:
+                - text: Help
+                - link [ref=e272] [cursor=pointer]:
+                  - /url: https://info.deeplearning.ai/knowledge-base
+    - region "Notifications alt+T"
+  - alert [ref=e275]

@@ -1,0 +1,841 @@
+# Homework 2 bundle: precomputed/sliders/sliders-OMIM_620511/evidence.csv
+
+[Course index](../../../../../../README.md) · [Original source](https://drive.google.com/file/d/1VPlTDJULw4qIkQuVcHxxPh4Q50Nvmi-z/view#archive-member=precomputed/sliders/sliders-OMIM_620511/evidence.csv) · [Raw file](../../../../../../raw/assignments/assignment2-course-bundle/precomputed/sliders/sliders-OMIM_620511/evidence.csv)
+
+Retrieved: 2026-11-13T17:00:50.402745+00:00
+
+```csv
+table,row_id,field,value,quote,document,start_line,end_line,quote_verified
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:0,disease_name,Fliedner-Zweier syndrome,"# Clinical Identification and Phenotypic Delineation of Fliedner-Zweier Syndrome (SCAF4-Related Neurodevelopmental Disorder)
+
+Fliedner-Zweier syndrome (FZS; OMIM #620511) is an autosomal dominant neurodevelopmental condition caused by heterozygous loss-of-function variants in *SCAF4* (SR-related CTD-associated factor 4), which encodes an RNA polymerase II CTD-binding factor critical for mRNA transcription termination and suppression of premature cleavage and polyadenylation [F1, F2]. While early ascertainment suggested a uniform, recognizable presentation, recent cohort expansions encompassing at least 68 to 69 cumulative individuals across international series have revealed significant variable expressivity and incomplete penetrance [F1, F2, F18].
+
+---
+
+## 1. Phenotypic Spectrum and Documented Clinical Frequencies
+
+Identifying an individual with Fliedner-Zweier syndrome from clinical phenotype alone is exceptionally difficult because its core features overlap broadly with common neurodevelopmental presentations [F2, F5]. Across documented cohorts, prominent developmental delay and expressive speech impairment represent the most consistently penetrant features, even in individuals with preserved or borderline general intellectual abilities [F4, F5, F7].
+
+### Cohort-Level Frequencies and Verbatim Phenotypes
+
+| Cohort / Source | Verbatim Clinical Finding | Human Phenotype Ontology (HPO) Term | Count / Assessed Individuals (Fraction, %) | Finding Attribution |
+| :--- | :--- | :--- | :--- | :--- |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Developmental delay / intellectual disability spectrum (ranging from normal IQ to severe ID) | Intellectual disability (HP:0001249) / Global developmental delay (HP:0001263) | Evaluated across an expanded multicenter cohort of 50 novel individuals (incomplete penetrance demonstrated; normal IQ observed in transmitting carriers and select probands) | [F1, F4, F7] |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Inherited loss-of-function transmission | Autosomal dominant inheritance (HP:0000006) | 13/50 inherited cases (with 23/50 de novo cases established in cohort) | [F1, F11, F15] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Developmental delay and/or intellectual disability | Intellectual disability (HP:0001249) | 13/13 (100%) in initial discovery series (9 distinct pathogenic germline variants identified) | [F4, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Speech and language impairment | Speech delay (HP:0000750) | 13/13 (100%) in initial discovery series | [F7, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Muscular hypotonia | Muscular hypotonia (HP:0001252) | 9/12 (75%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Behavioral abnormalities (e.g., ADHD, autistic features) | Abnormal repetitive mannerism / Behavioral abnormality (HP:0000708) | 8/11 (73%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Facial dysmorphic features | Facial dysmorphism (HP:0001999) | 11/13 (85%) | [F10] |
+| **Fliedner et al. (2020)**<br>(DOI: [10.1016/j.ajhg.2020.06.019](https://doi.org/10.1016/j.ajhg.2020.06.019)) | Inherited transmission in discovery series | Autosomal dominant inheritance (HP:0000006) | 1/9 (11%) families (8/9 de novo) | [F1, F11] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Seizures / focal epilepsy | Focal-onset seizure (HP:0007359) / Seizure (HP:0001250) | 3/3 (100%) in epilepsy-ascertained series (median onset age: 4 years) | [F9, F13] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Normal brain MRI | Normal brain morphology (HP:0002534) | 2/3 (66.7%) structurally normal on neuroimaging | [F9] |
+| **Schmid et al. (2025)**; **Chen et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2); [10.3389/fgene.2025.1487352](https://doi.org/10.3389/fgene.2025.1487352)) | Skeletal abnormalities (clubfoot, scoliosis, hip dysplasia) | Talipes equinovarus (HP:0001762), Scoliosis (HP:0002650), Hip dysplasia (HP:0001385) | Recurrent core syndromic finding noted across 50 novel cases and cumulative 69 reviewed patients | [F2, F5, F12] |
+| **Yan et al. (2025)**<br>(PMID: [41811042](https://pubmed.ncbi.nlm.nih.gov/41811042/)) | Isolated de novo Chinese case evaluation | Global developmental delay (HP:0001263) | 1/1 evaluated proband (age 4.58 years) | [F1, F2, F10] |
+
+---
+
+## 2. Discriminative Features and Clinical Differential Diagnosis
+
+Bedside differentiation of Fliedner-Zweier syndrome solely on clinical criteria is **not achievable with moderate or high clinical confidence**, and the confidence of bedside distinction without sequencing is very low [F2, F15]. Fliedner-Zweier syndrome exhibits extensive phenotypic pleiotropy: affected individuals present with non-specific developmental delay, a wide cognitive spectrum (from completely normal IQ or borderline intellectual disability to severe ID), variable speech delay, behavioral abnormalities (ADHD, autism spectrum traits), skeletal anomalies, and seizures [F1, F2, F4, F5].
+
+### Confused Overlapping Disorders and Confidence of Distinction
+
+1. **Spliceosomal and Transcription-Elongation Machinery Syndromes**:
+   - *Overlapping entities*: *SRRM1*-related neurodevelopmental disorder (Altay et al., 2026, [10.1038/s41431-025-01966-y](https://doi.org/10.1038/s41431-025-01966-y)), *THOC6*-related neurodevelopmental disorder, *RNU4ATAC*-related microcephalic dwarfism/syndromes, and *SCAF8*-associated conditions [F2, F15].
+   - *Overlapping findings*: Shared disruption of general mRNA transcription elongation and splicing creates converging clinical phenotypes involving developmental delay, speech limitations, muscular hypotonia, and non-specific skeletal anomalies [F2, F15].
+   - *Confidence of bedside distinction*: **Very Low (<0.30)**. Transcriptome deregulations affect thousands of downstream targets (e.g., >9,000 deregulated genes and ~2,900 differentially spliced transcripts [F2]), producing convergent neurodevelopmental disruptions that cannot be separated clinically without exome or genome sequencing [F2, F15].
+2. **Chromatin Remodeling Syndromes (e.g., Coffin-Siris Syndrome, *ARID1B* / *SMARCA4*)**:
+   - *Overlapping findings*: Muscular hypotonia, intellectual impairment, expressive language delay, and subtle craniofacial dysmorphisms [F15].
+   - *Discriminating clues*: Coffin-Siris and related SWI/SNFopathies frequently show fifth-digit nail/distal phalanx hypoplasia, pronounced coarse facial coarsening, and structural internal organ malformations, whereas FZS dysmorphism remains subtle and unclassifiable [F10, F15].
+   - *Confidence of bedside distinction*: **Low to Moderate**. While digit hypoplasia points toward Coffin-Siris, genomic sequencing remains mandatory [F2, F15].
+
+### Most Discriminating Features of Fliedner-Zweier Syndrome
+When comparing an affected individual to patients with generic neurodevelopmental delay, the combination of features that raises suspicion includes:
+- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].
+- **Co-occurrence of axial and lower-extremity joint positional anomalies**: Recurrent skeletal signs specifically encompass scoliosis, developmental dysplasia of the hip, and clubfoot (talipes equinovarus) [F5, F12].
+- **Pharmacoresponsive focal epilepsy**: When seizures occur (median onset around 4 years of age), they often present as focal seizures responsive to standard anti-seizure medications [F9, F13].
+
+---
+
+## 3. Exclusionary Criteria: Absent Features that Argue Against Diagnosis
+
+Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:",report.md,1,55,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:0,rule_or_step_title,Exclusionary Criteria,"## 3. Exclusionary Criteria: Absent Features that Argue Against Diagnosis
+
+Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].",report.md,53,57,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:0,phenotype_name,Severe Congenital Heart Defects,"1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].",report.md,57,57,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:0,rule_category,exclusion_criterion,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].",report.md,55,57,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:0,phenotype_status_required,must_be_absent,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].",report.md,55,57,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:0,matching_criterion_description,"Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed and argue strongly against the diagnosis.","Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].",report.md,55,57,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:0,cohort_frequency,0%,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].",report.md,55,57,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:1,disease_name,Fliedner-Zweier syndrome,"# Clinical Identification and Phenotypic Delineation of Fliedner-Zweier Syndrome (SCAF4-Related Neurodevelopmental Disorder)
+
+Fliedner-Zweier syndrome (FZS; OMIM #620511) is an autosomal dominant neurodevelopmental condition caused by heterozygous loss-of-function variants in *SCAF4* (SR-related CTD-associated factor 4), which encodes an RNA polymerase II CTD-binding factor critical for mRNA transcription termination and suppression of premature cleavage and polyadenylation [F1, F2]. While early ascertainment suggested a uniform, recognizable presentation, recent cohort expansions encompassing at least 68 to 69 cumulative individuals across international series have revealed significant variable expressivity and incomplete penetrance [F1, F2, F18].
+
+---
+
+## 1. Phenotypic Spectrum and Documented Clinical Frequencies
+
+Identifying an individual with Fliedner-Zweier syndrome from clinical phenotype alone is exceptionally difficult because its core features overlap broadly with common neurodevelopmental presentations [F2, F5]. Across documented cohorts, prominent developmental delay and expressive speech impairment represent the most consistently penetrant features, even in individuals with preserved or borderline general intellectual abilities [F4, F5, F7].
+
+### Cohort-Level Frequencies and Verbatim Phenotypes
+
+| Cohort / Source | Verbatim Clinical Finding | Human Phenotype Ontology (HPO) Term | Count / Assessed Individuals (Fraction, %) | Finding Attribution |
+| :--- | :--- | :--- | :--- | :--- |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Developmental delay / intellectual disability spectrum (ranging from normal IQ to severe ID) | Intellectual disability (HP:0001249) / Global developmental delay (HP:0001263) | Evaluated across an expanded multicenter cohort of 50 novel individuals (incomplete penetrance demonstrated; normal IQ observed in transmitting carriers and select probands) | [F1, F4, F7] |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Inherited loss-of-function transmission | Autosomal dominant inheritance (HP:0000006) | 13/50 inherited cases (with 23/50 de novo cases established in cohort) | [F1, F11, F15] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Developmental delay and/or intellectual disability | Intellectual disability (HP:0001249) | 13/13 (100%) in initial discovery series (9 distinct pathogenic germline variants identified) | [F4, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Speech and language impairment | Speech delay (HP:0000750) | 13/13 (100%) in initial discovery series | [F7, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Muscular hypotonia | Muscular hypotonia (HP:0001252) | 9/12 (75%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Behavioral abnormalities (e.g., ADHD, autistic features) | Abnormal repetitive mannerism / Behavioral abnormality (HP:0000708) | 8/11 (73%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Facial dysmorphic features | Facial dysmorphism (HP:0001999) | 11/13 (85%) | [F10] |
+| **Fliedner et al. (2020)**<br>(DOI: [10.1016/j.ajhg.2020.06.019](https://doi.org/10.1016/j.ajhg.2020.06.019)) | Inherited transmission in discovery series | Autosomal dominant inheritance (HP:0000006) | 1/9 (11%) families (8/9 de novo) | [F1, F11] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Seizures / focal epilepsy | Focal-onset seizure (HP:0007359) / Seizure (HP:0001250) | 3/3 (100%) in epilepsy-ascertained series (median onset age: 4 years) | [F9, F13] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Normal brain MRI | Normal brain morphology (HP:0002534) | 2/3 (66.7%) structurally normal on neuroimaging | [F9] |
+| **Schmid et al. (2025)**; **Chen et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2); [10.3389/fgene.2025.1487352](https://doi.org/10.3389/fgene.2025.1487352)) | Skeletal abnormalities (clubfoot, scoliosis, hip dysplasia) | Talipes equinovarus (HP:0001762), Scoliosis (HP:0002650), Hip dysplasia (HP:0001385) | Recurrent core syndromic finding noted across 50 novel cases and cumulative 69 reviewed patients | [F2, F5, F12] |
+| **Yan et al. (2025)**<br>(PMID: [41811042](https://pubmed.ncbi.nlm.nih.gov/41811042/)) | Isolated de novo Chinese case evaluation | Global developmental delay (HP:0001263) | 1/1 evaluated proband (age 4.58 years) | [F1, F2, F10] |
+
+---
+
+## 2. Discriminative Features and Clinical Differential Diagnosis
+
+Bedside differentiation of Fliedner-Zweier syndrome solely on clinical criteria is **not achievable with moderate or high clinical confidence**, and the confidence of bedside distinction without sequencing is very low [F2, F15]. Fliedner-Zweier syndrome exhibits extensive phenotypic pleiotropy: affected individuals present with non-specific developmental delay, a wide cognitive spectrum (from completely normal IQ or borderline intellectual disability to severe ID), variable speech delay, behavioral abnormalities (ADHD, autism spectrum traits), skeletal anomalies, and seizures [F1, F2, F4, F5].
+
+### Confused Overlapping Disorders and Confidence of Distinction
+
+1. **Spliceosomal and Transcription-Elongation Machinery Syndromes**:
+   - *Overlapping entities*: *SRRM1*-related neurodevelopmental disorder (Altay et al., 2026, [10.1038/s41431-025-01966-y](https://doi.org/10.1038/s41431-025-01966-y)), *THOC6*-related neurodevelopmental disorder, *RNU4ATAC*-related microcephalic dwarfism/syndromes, and *SCAF8*-associated conditions [F2, F15].
+   - *Overlapping findings*: Shared disruption of general mRNA transcription elongation and splicing creates converging clinical phenotypes involving developmental delay, speech limitations, muscular hypotonia, and non-specific skeletal anomalies [F2, F15].
+   - *Confidence of bedside distinction*: **Very Low (<0.30)**. Transcriptome deregulations affect thousands of downstream targets (e.g., >9,000 deregulated genes and ~2,900 differentially spliced transcripts [F2]), producing convergent neurodevelopmental disruptions that cannot be separated clinically without exome or genome sequencing [F2, F15].
+2. **Chromatin Remodeling Syndromes (e.g., Coffin-Siris Syndrome, *ARID1B* / *SMARCA4*)**:
+   - *Overlapping findings*: Muscular hypotonia, intellectual impairment, expressive language delay, and subtle craniofacial dysmorphisms [F15].
+   - *Discriminating clues*: Coffin-Siris and related SWI/SNFopathies frequently show fifth-digit nail/distal phalanx hypoplasia, pronounced coarse facial coarsening, and structural internal organ malformations, whereas FZS dysmorphism remains subtle and unclassifiable [F10, F15].
+   - *Confidence of bedside distinction*: **Low to Moderate**. While digit hypoplasia points toward Coffin-Siris, genomic sequencing remains mandatory [F2, F15].
+
+### Most Discriminating Features of Fliedner-Zweier Syndrome
+When comparing an affected individual to patients with generic neurodevelopmental delay, the combination of features that raises suspicion includes:
+- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].
+- **Co-occurrence of axial and lower-extremity joint positional anomalies**: Recurrent skeletal signs specifically encompass scoliosis, developmental dysplasia of the hip, and clubfoot (talipes equinovarus) [F5, F12].
+- **Pharmacoresponsive focal epilepsy**: When seizures occur (median onset around 4 years of age), they often present as focal seizures responsive to standard anti-seizure medications [F9, F13].
+
+---
+
+## 3. Exclusionary Criteria: Absent Features that Argue Against Diagnosis
+
+Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].",report.md,1,58,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:1,rule_or_step_title,Exclusionary Criteria,"## 3. Exclusionary Criteria: Absent Features that Argue Against Diagnosis
+
+Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].",report.md,53,58,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:1,phenotype_name,Profound Microcephaly or Macrocephaly at Birth,2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].,report.md,58,58,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:1,rule_category,exclusion_criterion,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].",report.md,55,58,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:1,phenotype_status_required,must_be_absent,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].",report.md,55,58,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:1,matching_criterion_description,Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent; presence argues strongly against diagnosis.,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].",report.md,55,58,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:1,cohort_frequency,0%,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].",report.md,55,58,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:2,disease_name,Fliedner-Zweier syndrome,"# Clinical Identification and Phenotypic Delineation of Fliedner-Zweier Syndrome (SCAF4-Related Neurodevelopmental Disorder)
+
+Fliedner-Zweier syndrome (FZS; OMIM #620511) is an autosomal dominant neurodevelopmental condition caused by heterozygous loss-of-function variants in *SCAF4* (SR-related CTD-associated factor 4), which encodes an RNA polymerase II CTD-binding factor critical for mRNA transcription termination and suppression of premature cleavage and polyadenylation [F1, F2]. While early ascertainment suggested a uniform, recognizable presentation, recent cohort expansions encompassing at least 68 to 69 cumulative individuals across international series have revealed significant variable expressivity and incomplete penetrance [F1, F2, F18].
+
+---
+
+## 1. Phenotypic Spectrum and Documented Clinical Frequencies
+
+Identifying an individual with Fliedner-Zweier syndrome from clinical phenotype alone is exceptionally difficult because its core features overlap broadly with common neurodevelopmental presentations [F2, F5]. Across documented cohorts, prominent developmental delay and expressive speech impairment represent the most consistently penetrant features, even in individuals with preserved or borderline general intellectual abilities [F4, F5, F7].
+
+### Cohort-Level Frequencies and Verbatim Phenotypes
+
+| Cohort / Source | Verbatim Clinical Finding | Human Phenotype Ontology (HPO) Term | Count / Assessed Individuals (Fraction, %) | Finding Attribution |
+| :--- | :--- | :--- | :--- | :--- |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Developmental delay / intellectual disability spectrum (ranging from normal IQ to severe ID) | Intellectual disability (HP:0001249) / Global developmental delay (HP:0001263) | Evaluated across an expanded multicenter cohort of 50 novel individuals (incomplete penetrance demonstrated; normal IQ observed in transmitting carriers and select probands) | [F1, F4, F7] |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Inherited loss-of-function transmission | Autosomal dominant inheritance (HP:0000006) | 13/50 inherited cases (with 23/50 de novo cases established in cohort) | [F1, F11, F15] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Developmental delay and/or intellectual disability | Intellectual disability (HP:0001249) | 13/13 (100%) in initial discovery series (9 distinct pathogenic germline variants identified) | [F4, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Speech and language impairment | Speech delay (HP:0000750) | 13/13 (100%) in initial discovery series | [F7, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Muscular hypotonia | Muscular hypotonia (HP:0001252) | 9/12 (75%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Behavioral abnormalities (e.g., ADHD, autistic features) | Abnormal repetitive mannerism / Behavioral abnormality (HP:0000708) | 8/11 (73%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Facial dysmorphic features | Facial dysmorphism (HP:0001999) | 11/13 (85%) | [F10] |
+| **Fliedner et al. (2020)**<br>(DOI: [10.1016/j.ajhg.2020.06.019](https://doi.org/10.1016/j.ajhg.2020.06.019)) | Inherited transmission in discovery series | Autosomal dominant inheritance (HP:0000006) | 1/9 (11%) families (8/9 de novo) | [F1, F11] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Seizures / focal epilepsy | Focal-onset seizure (HP:0007359) / Seizure (HP:0001250) | 3/3 (100%) in epilepsy-ascertained series (median onset age: 4 years) | [F9, F13] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Normal brain MRI | Normal brain morphology (HP:0002534) | 2/3 (66.7%) structurally normal on neuroimaging | [F9] |
+| **Schmid et al. (2025)**; **Chen et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2); [10.3389/fgene.2025.1487352](https://doi.org/10.3389/fgene.2025.1487352)) | Skeletal abnormalities (clubfoot, scoliosis, hip dysplasia) | Talipes equinovarus (HP:0001762), Scoliosis (HP:0002650), Hip dysplasia (HP:0001385) | Recurrent core syndromic finding noted across 50 novel cases and cumulative 69 reviewed patients | [F2, F5, F12] |
+| **Yan et al. (2025)**<br>(PMID: [41811042](https://pubmed.ncbi.nlm.nih.gov/41811042/)) | Isolated de novo Chinese case evaluation | Global developmental delay (HP:0001263) | 1/1 evaluated proband (age 4.58 years) | [F1, F2, F10] |
+
+---
+
+## 2. Discriminative Features and Clinical Differential Diagnosis
+
+Bedside differentiation of Fliedner-Zweier syndrome solely on clinical criteria is **not achievable with moderate or high clinical confidence**, and the confidence of bedside distinction without sequencing is very low [F2, F15]. Fliedner-Zweier syndrome exhibits extensive phenotypic pleiotropy: affected individuals present with non-specific developmental delay, a wide cognitive spectrum (from completely normal IQ or borderline intellectual disability to severe ID), variable speech delay, behavioral abnormalities (ADHD, autism spectrum traits), skeletal anomalies, and seizures [F1, F2, F4, F5].
+
+### Confused Overlapping Disorders and Confidence of Distinction
+
+1. **Spliceosomal and Transcription-Elongation Machinery Syndromes**:
+   - *Overlapping entities*: *SRRM1*-related neurodevelopmental disorder (Altay et al., 2026, [10.1038/s41431-025-01966-y](https://doi.org/10.1038/s41431-025-01966-y)), *THOC6*-related neurodevelopmental disorder, *RNU4ATAC*-related microcephalic dwarfism/syndromes, and *SCAF8*-associated conditions [F2, F15].
+   - *Overlapping findings*: Shared disruption of general mRNA transcription elongation and splicing creates converging clinical phenotypes involving developmental delay, speech limitations, muscular hypotonia, and non-specific skeletal anomalies [F2, F15].
+   - *Confidence of bedside distinction*: **Very Low (<0.30)**. Transcriptome deregulations affect thousands of downstream targets (e.g., >9,000 deregulated genes and ~2,900 differentially spliced transcripts [F2]), producing convergent neurodevelopmental disruptions that cannot be separated clinically without exome or genome sequencing [F2, F15].
+2. **Chromatin Remodeling Syndromes (e.g., Coffin-Siris Syndrome, *ARID1B* / *SMARCA4*)**:
+   - *Overlapping findings*: Muscular hypotonia, intellectual impairment, expressive language delay, and subtle craniofacial dysmorphisms [F15].
+   - *Discriminating clues*: Coffin-Siris and related SWI/SNFopathies frequently show fifth-digit nail/distal phalanx hypoplasia, pronounced coarse facial coarsening, and structural internal organ malformations, whereas FZS dysmorphism remains subtle and unclassifiable [F10, F15].
+   - *Confidence of bedside distinction*: **Low to Moderate**. While digit hypoplasia points toward Coffin-Siris, genomic sequencing remains mandatory [F2, F15].
+
+### Most Discriminating Features of Fliedner-Zweier Syndrome
+When comparing an affected individual to patients with generic neurodevelopmental delay, the combination of features that raises suspicion includes:
+- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].
+- **Co-occurrence of axial and lower-extremity joint positional anomalies**: Recurrent skeletal signs specifically encompass scoliosis, developmental dysplasia of the hip, and clubfoot (talipes equinovarus) [F5, F12].
+- **Pharmacoresponsive focal epilepsy**: When seizures occur (median onset around 4 years of age), they often present as focal seizures responsive to standard anti-seizure medications [F9, F13].
+
+---
+
+## 3. Exclusionary Criteria: Absent Features that Argue Against Diagnosis
+
+Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].",report.md,1,59,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:2,rule_or_step_title,Exclusionary Criteria,"## 3. Exclusionary Criteria: Absent Features that Argue Against Diagnosis
+
+Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].",report.md,53,59,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:2,phenotype_name,Limb Reduction Defects,"3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].",report.md,59,59,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:2,rule_category,exclusion_criterion,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].",report.md,55,59,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:2,phenotype_status_required,must_be_absent,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].",report.md,55,59,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:2,matching_criterion_description,Congenital terminal or intercalary limb reductions are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities.,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].",report.md,55,59,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:2,cohort_frequency,0%,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].",report.md,55,59,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:3,disease_name,Fliedner-Zweier syndrome,"# Clinical Identification and Phenotypic Delineation of Fliedner-Zweier Syndrome (SCAF4-Related Neurodevelopmental Disorder)
+
+Fliedner-Zweier syndrome (FZS; OMIM #620511) is an autosomal dominant neurodevelopmental condition caused by heterozygous loss-of-function variants in *SCAF4* (SR-related CTD-associated factor 4), which encodes an RNA polymerase II CTD-binding factor critical for mRNA transcription termination and suppression of premature cleavage and polyadenylation [F1, F2]. While early ascertainment suggested a uniform, recognizable presentation, recent cohort expansions encompassing at least 68 to 69 cumulative individuals across international series have revealed significant variable expressivity and incomplete penetrance [F1, F2, F18].
+
+---
+
+## 1. Phenotypic Spectrum and Documented Clinical Frequencies
+
+Identifying an individual with Fliedner-Zweier syndrome from clinical phenotype alone is exceptionally difficult because its core features overlap broadly with common neurodevelopmental presentations [F2, F5]. Across documented cohorts, prominent developmental delay and expressive speech impairment represent the most consistently penetrant features, even in individuals with preserved or borderline general intellectual abilities [F4, F5, F7].
+
+### Cohort-Level Frequencies and Verbatim Phenotypes
+
+| Cohort / Source | Verbatim Clinical Finding | Human Phenotype Ontology (HPO) Term | Count / Assessed Individuals (Fraction, %) | Finding Attribution |
+| :--- | :--- | :--- | :--- | :--- |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Developmental delay / intellectual disability spectrum (ranging from normal IQ to severe ID) | Intellectual disability (HP:0001249) / Global developmental delay (HP:0001263) | Evaluated across an expanded multicenter cohort of 50 novel individuals (incomplete penetrance demonstrated; normal IQ observed in transmitting carriers and select probands) | [F1, F4, F7] |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Inherited loss-of-function transmission | Autosomal dominant inheritance (HP:0000006) | 13/50 inherited cases (with 23/50 de novo cases established in cohort) | [F1, F11, F15] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Developmental delay and/or intellectual disability | Intellectual disability (HP:0001249) | 13/13 (100%) in initial discovery series (9 distinct pathogenic germline variants identified) | [F4, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Speech and language impairment | Speech delay (HP:0000750) | 13/13 (100%) in initial discovery series | [F7, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Muscular hypotonia | Muscular hypotonia (HP:0001252) | 9/12 (75%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Behavioral abnormalities (e.g., ADHD, autistic features) | Abnormal repetitive mannerism / Behavioral abnormality (HP:0000708) | 8/11 (73%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Facial dysmorphic features | Facial dysmorphism (HP:0001999) | 11/13 (85%) | [F10] |
+| **Fliedner et al. (2020)**<br>(DOI: [10.1016/j.ajhg.2020.06.019](https://doi.org/10.1016/j.ajhg.2020.06.019)) | Inherited transmission in discovery series | Autosomal dominant inheritance (HP:0000006) | 1/9 (11%) families (8/9 de novo) | [F1, F11] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Seizures / focal epilepsy | Focal-onset seizure (HP:0007359) / Seizure (HP:0001250) | 3/3 (100%) in epilepsy-ascertained series (median onset age: 4 years) | [F9, F13] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Normal brain MRI | Normal brain morphology (HP:0002534) | 2/3 (66.7%) structurally normal on neuroimaging | [F9] |
+| **Schmid et al. (2025)**; **Chen et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2); [10.3389/fgene.2025.1487352](https://doi.org/10.3389/fgene.2025.1487352)) | Skeletal abnormalities (clubfoot, scoliosis, hip dysplasia) | Talipes equinovarus (HP:0001762), Scoliosis (HP:0002650), Hip dysplasia (HP:0001385) | Recurrent core syndromic finding noted across 50 novel cases and cumulative 69 reviewed patients | [F2, F5, F12] |
+| **Yan et al. (2025)**<br>(PMID: [41811042](https://pubmed.ncbi.nlm.nih.gov/41811042/)) | Isolated de novo Chinese case evaluation | Global developmental delay (HP:0001263) | 1/1 evaluated proband (age 4.58 years) | [F1, F2, F10] |
+
+---
+
+## 2. Discriminative Features and Clinical Differential Diagnosis
+
+Bedside differentiation of Fliedner-Zweier syndrome solely on clinical criteria is **not achievable with moderate or high clinical confidence**, and the confidence of bedside distinction without sequencing is very low [F2, F15]. Fliedner-Zweier syndrome exhibits extensive phenotypic pleiotropy: affected individuals present with non-specific developmental delay, a wide cognitive spectrum (from completely normal IQ or borderline intellectual disability to severe ID), variable speech delay, behavioral abnormalities (ADHD, autism spectrum traits), skeletal anomalies, and seizures [F1, F2, F4, F5].
+
+### Confused Overlapping Disorders and Confidence of Distinction
+
+1. **Spliceosomal and Transcription-Elongation Machinery Syndromes**:
+   - *Overlapping entities*: *SRRM1*-related neurodevelopmental disorder (Altay et al., 2026, [10.1038/s41431-025-01966-y](https://doi.org/10.1038/s41431-025-01966-y)), *THOC6*-related neurodevelopmental disorder, *RNU4ATAC*-related microcephalic dwarfism/syndromes, and *SCAF8*-associated conditions [F2, F15].
+   - *Overlapping findings*: Shared disruption of general mRNA transcription elongation and splicing creates converging clinical phenotypes involving developmental delay, speech limitations, muscular hypotonia, and non-specific skeletal anomalies [F2, F15].
+   - *Confidence of bedside distinction*: **Very Low (<0.30)**. Transcriptome deregulations affect thousands of downstream targets (e.g., >9,000 deregulated genes and ~2,900 differentially spliced transcripts [F2]), producing convergent neurodevelopmental disruptions that cannot be separated clinically without exome or genome sequencing [F2, F15].
+2. **Chromatin Remodeling Syndromes (e.g., Coffin-Siris Syndrome, *ARID1B* / *SMARCA4*)**:
+   - *Overlapping findings*: Muscular hypotonia, intellectual impairment, expressive language delay, and subtle craniofacial dysmorphisms [F15].
+   - *Discriminating clues*: Coffin-Siris and related SWI/SNFopathies frequently show fifth-digit nail/distal phalanx hypoplasia, pronounced coarse facial coarsening, and structural internal organ malformations, whereas FZS dysmorphism remains subtle and unclassifiable [F10, F15].
+   - *Confidence of bedside distinction*: **Low to Moderate**. While digit hypoplasia points toward Coffin-Siris, genomic sequencing remains mandatory [F2, F15].
+
+### Most Discriminating Features of Fliedner-Zweier Syndrome
+When comparing an affected individual to patients with generic neurodevelopmental delay, the combination of features that raises suspicion includes:
+- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].
+- **Co-occurrence of axial and lower-extremity joint positional anomalies**: Recurrent skeletal signs specifically encompass scoliosis, developmental dysplasia of the hip, and clubfoot (talipes equinovarus) [F5, F12].
+- **Pharmacoresponsive focal epilepsy**: When seizures occur (median onset around 4 years of age), they often present as focal seizures responsive to standard anti-seizure medications [F9, F13].
+
+---
+
+## 3. Exclusionary Criteria: Absent Features that Argue Against Diagnosis
+
+Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].
+4. **Anterior Chamber Dysgenesis / Corneal Clouding**: Severe structural ocular anterior segment malformations (e.g., Peters anomaly, congenital corneal clouding) are absent [F6].",report.md,1,60,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:3,rule_or_step_title,Exclusionary Criteria,"## 3. Exclusionary Criteria: Absent Features that Argue Against Diagnosis
+
+Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].
+4. **Anterior Chamber Dysgenesis / Corneal Clouding**: Severe structural ocular anterior segment malformations (e.g., Peters anomaly, congenital corneal clouding) are absent [F6].",report.md,53,60,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:3,phenotype_name,Anterior Chamber Dysgenesis / Corneal Clouding,"4. **Anterior Chamber Dysgenesis / Corneal Clouding**: Severe structural ocular anterior segment malformations (e.g., Peters anomaly, congenital corneal clouding) are absent [F6].",report.md,60,60,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:3,rule_category,exclusion_criterion,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].
+4. **Anterior Chamber Dysgenesis / Corneal Clouding**: Severe structural ocular anterior segment malformations (e.g., Peters anomaly, congenital corneal clouding) are absent [F6].",report.md,55,60,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:3,phenotype_status_required,must_be_absent,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].
+4. **Anterior Chamber Dysgenesis / Corneal Clouding**: Severe structural ocular anterior segment malformations (e.g., Peters anomaly, congenital corneal clouding) are absent [F6].",report.md,55,60,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:3,matching_criterion_description,Severe structural ocular anterior segment malformations are absent and argue strongly against the diagnosis.,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].
+4. **Anterior Chamber Dysgenesis / Corneal Clouding**: Severe structural ocular anterior segment malformations (e.g., Peters anomaly, congenital corneal clouding) are absent [F6].",report.md,55,60,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:3,cohort_frequency,0%,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].
+4. **Anterior Chamber Dysgenesis / Corneal Clouding**: Severe structural ocular anterior segment malformations (e.g., Peters anomaly, congenital corneal clouding) are absent [F6].",report.md,55,60,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:4,disease_name,Fliedner-Zweier syndrome,"# Clinical Identification and Phenotypic Delineation of Fliedner-Zweier Syndrome (SCAF4-Related Neurodevelopmental Disorder)
+
+Fliedner-Zweier syndrome (FZS; OMIM #620511) is an autosomal dominant neurodevelopmental condition caused by heterozygous loss-of-function variants in *SCAF4* (SR-related CTD-associated factor 4), which encodes an RNA polymerase II CTD-binding factor critical for mRNA transcription termination and suppression of premature cleavage and polyadenylation [F1, F2]. While early ascertainment suggested a uniform, recognizable presentation, recent cohort expansions encompassing at least 68 to 69 cumulative individuals across international series have revealed significant variable expressivity and incomplete penetrance [F1, F2, F18].
+
+---
+
+## 1. Phenotypic Spectrum and Documented Clinical Frequencies
+
+Identifying an individual with Fliedner-Zweier syndrome from clinical phenotype alone is exceptionally difficult because its core features overlap broadly with common neurodevelopmental presentations [F2, F5]. Across documented cohorts, prominent developmental delay and expressive speech impairment represent the most consistently penetrant features, even in individuals with preserved or borderline general intellectual abilities [F4, F5, F7].
+
+### Cohort-Level Frequencies and Verbatim Phenotypes
+
+| Cohort / Source | Verbatim Clinical Finding | Human Phenotype Ontology (HPO) Term | Count / Assessed Individuals (Fraction, %) | Finding Attribution |
+| :--- | :--- | :--- | :--- | :--- |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Developmental delay / intellectual disability spectrum (ranging from normal IQ to severe ID) | Intellectual disability (HP:0001249) / Global developmental delay (HP:0001263) | Evaluated across an expanded multicenter cohort of 50 novel individuals (incomplete penetrance demonstrated; normal IQ observed in transmitting carriers and select probands) | [F1, F4, F7] |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Inherited loss-of-function transmission | Autosomal dominant inheritance (HP:0000006) | 13/50 inherited cases (with 23/50 de novo cases established in cohort) | [F1, F11, F15] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Developmental delay and/or intellectual disability | Intellectual disability (HP:0001249) | 13/13 (100%) in initial discovery series (9 distinct pathogenic germline variants identified) | [F4, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Speech and language impairment | Speech delay (HP:0000750) | 13/13 (100%) in initial discovery series | [F7, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Muscular hypotonia | Muscular hypotonia (HP:0001252) | 9/12 (75%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Behavioral abnormalities (e.g., ADHD, autistic features) | Abnormal repetitive mannerism / Behavioral abnormality (HP:0000708) | 8/11 (73%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Facial dysmorphic features | Facial dysmorphism (HP:0001999) | 11/13 (85%) | [F10] |
+| **Fliedner et al. (2020)**<br>(DOI: [10.1016/j.ajhg.2020.06.019](https://doi.org/10.1016/j.ajhg.2020.06.019)) | Inherited transmission in discovery series | Autosomal dominant inheritance (HP:0000006) | 1/9 (11%) families (8/9 de novo) | [F1, F11] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Seizures / focal epilepsy | Focal-onset seizure (HP:0007359) / Seizure (HP:0001250) | 3/3 (100%) in epilepsy-ascertained series (median onset age: 4 years) | [F9, F13] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Normal brain MRI | Normal brain morphology (HP:0002534) | 2/3 (66.7%) structurally normal on neuroimaging | [F9] |
+| **Schmid et al. (2025)**; **Chen et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2); [10.3389/fgene.2025.1487352](https://doi.org/10.3389/fgene.2025.1487352)) | Skeletal abnormalities (clubfoot, scoliosis, hip dysplasia) | Talipes equinovarus (HP:0001762), Scoliosis (HP:0002650), Hip dysplasia (HP:0001385) | Recurrent core syndromic finding noted across 50 novel cases and cumulative 69 reviewed patients | [F2, F5, F12] |
+| **Yan et al. (2025)**<br>(PMID: [41811042](https://pubmed.ncbi.nlm.nih.gov/41811042/)) | Isolated de novo Chinese case evaluation | Global developmental delay (HP:0001263) | 1/1 evaluated proband (age 4.58 years) | [F1, F2, F10] |
+
+---
+
+## 2. Discriminative Features and Clinical Differential Diagnosis
+
+Bedside differentiation of Fliedner-Zweier syndrome solely on clinical criteria is **not achievable with moderate or high clinical confidence**, and the confidence of bedside distinction without sequencing is very low [F2, F15]. Fliedner-Zweier syndrome exhibits extensive phenotypic pleiotropy: affected individuals present with non-specific developmental delay, a wide cognitive spectrum (from completely normal IQ or borderline intellectual disability to severe ID), variable speech delay, behavioral abnormalities (ADHD, autism spectrum traits), skeletal anomalies, and seizures [F1, F2, F4, F5].
+
+### Confused Overlapping Disorders and Confidence of Distinction
+
+1. **Spliceosomal and Transcription-Elongation Machinery Syndromes**:
+   - *Overlapping entities*: *SRRM1*-related neurodevelopmental disorder (Altay et al., 2026, [10.1038/s41431-025-01966-y](https://doi.org/10.1038/s41431-025-01966-y)), *THOC6*-related neurodevelopmental disorder, *RNU4ATAC*-related microcephalic dwarfism/syndromes, and *SCAF8*-associated conditions [F2, F15].
+   - *Overlapping findings*: Shared disruption of general mRNA transcription elongation and splicing creates converging clinical phenotypes involving developmental delay, speech limitations, muscular hypotonia, and non-specific skeletal anomalies [F2, F15].
+   - *Confidence of bedside distinction*: **Very Low (<0.30)**. Transcriptome deregulations affect thousands of downstream targets (e.g., >9,000 deregulated genes and ~2,900 differentially spliced transcripts [F2]), producing convergent neurodevelopmental disruptions that cannot be separated clinically without exome or genome sequencing [F2, F15].
+2. **Chromatin Remodeling Syndromes (e.g., Coffin-Siris Syndrome, *ARID1B* / *SMARCA4*)**:
+   - *Overlapping findings*: Muscular hypotonia, intellectual impairment, expressive language delay, and subtle craniofacial dysmorphisms [F15].
+   - *Discriminating clues*: Coffin-Siris and related SWI/SNFopathies frequently show fifth-digit nail/distal phalanx hypoplasia, pronounced coarse facial coarsening, and structural internal organ malformations, whereas FZS dysmorphism remains subtle and unclassifiable [F10, F15].
+   - *Confidence of bedside distinction*: **Low to Moderate**. While digit hypoplasia points toward Coffin-Siris, genomic sequencing remains mandatory [F2, F15].
+
+### Most Discriminating Features of Fliedner-Zweier Syndrome
+When comparing an affected individual to patients with generic neurodevelopmental delay, the combination of features that raises suspicion includes:
+- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].
+- **Co-occurrence of axial and lower-extremity joint positional anomalies**: Recurrent skeletal signs specifically encompass scoliosis, developmental dysplasia of the hip, and clubfoot (talipes equinovarus) [F5, F12].
+- **Pharmacoresponsive focal epilepsy**: When seizures occur (median onset around 4 years of age), they often present as focal seizures responsive to standard anti-seizure medications [F9, F13].
+
+---
+
+## 3. Exclusionary Criteria: Absent Features that Argue Against Diagnosis
+
+Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].
+4. **Anterior Chamber Dysgenesis / Corneal Clouding**: Severe structural ocular anterior segment malformations (e.g., Peters anomaly, congenital corneal clouding) are absent [F6].
+5. **Progressive Neuroregression or Neurodegenerative Decline**: Fliedner-Zweier syndrome is a static neurodevelopmental delay/disability; progressive neurodegenerative loss of previously acquired motor, cognitive, or speech milestones strongly excludes FZS and points to lysosomal, mitochondrial, or Rett-like neurodegenerative entities [F6].",report.md,1,61,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:4,rule_or_step_title,Exclusionary Criteria,"## 3. Exclusionary Criteria: Absent Features that Argue Against Diagnosis
+
+Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].
+4. **Anterior Chamber Dysgenesis / Corneal Clouding**: Severe structural ocular anterior segment malformations (e.g., Peters anomaly, congenital corneal clouding) are absent [F6].
+5. **Progressive Neuroregression or Neurodegenerative Decline**: Fliedner-Zweier syndrome is a static neurodevelopmental delay/disability; progressive neurodegenerative loss of previously acquired motor, cognitive, or speech milestones strongly excludes FZS and points to lysosomal, mitochondrial, or Rett-like neurodegenerative entities [F6].",report.md,53,61,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:4,phenotype_name,Progressive Neuroregression or Neurodegenerative Decline,"5. **Progressive Neuroregression or Neurodegenerative Decline**: Fliedner-Zweier syndrome is a static neurodevelopmental delay/disability; progressive neurodegenerative loss of previously acquired motor, cognitive, or speech milestones strongly excludes FZS and points to lysosomal, mitochondrial, or Rett-like neurodegenerative entities [F6].",report.md,61,61,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:4,rule_category,exclusion_criterion,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].
+4. **Anterior Chamber Dysgenesis / Corneal Clouding**: Severe structural ocular anterior segment malformations (e.g., Peters anomaly, congenital corneal clouding) are absent [F6].
+5. **Progressive Neuroregression or Neurodegenerative Decline**: Fliedner-Zweier syndrome is a static neurodevelopmental delay/disability; progressive neurodegenerative loss of previously acquired motor, cognitive, or speech milestones strongly excludes FZS and points to lysosomal, mitochondrial, or Rett-like neurodegenerative entities [F6].",report.md,55,61,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:4,phenotype_status_required,must_be_absent,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].
+4. **Anterior Chamber Dysgenesis / Corneal Clouding**: Severe structural ocular anterior segment malformations (e.g., Peters anomaly, congenital corneal clouding) are absent [F6].
+5. **Progressive Neuroregression or Neurodegenerative Decline**: Fliedner-Zweier syndrome is a static neurodevelopmental delay/disability; progressive neurodegenerative loss of previously acquired motor, cognitive, or speech milestones strongly excludes FZS and points to lysosomal, mitochondrial, or Rett-like neurodegenerative entities [F6].",report.md,55,61,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:4,matching_criterion_description,"Progressive neurodegenerative loss of previously acquired motor, cognitive, or speech milestones strongly excludes FZS.","Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].
+4. **Anterior Chamber Dysgenesis / Corneal Clouding**: Severe structural ocular anterior segment malformations (e.g., Peters anomaly, congenital corneal clouding) are absent [F6].
+5. **Progressive Neuroregression or Neurodegenerative Decline**: Fliedner-Zweier syndrome is a static neurodevelopmental delay/disability; progressive neurodegenerative loss of previously acquired motor, cognitive, or speech milestones strongly excludes FZS and points to lysosomal, mitochondrial, or Rett-like neurodegenerative entities [F6].",report.md,55,61,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:4,cohort_frequency,0%,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].
+4. **Anterior Chamber Dysgenesis / Corneal Clouding**: Severe structural ocular anterior segment malformations (e.g., Peters anomaly, congenital corneal clouding) are absent [F6].
+5. **Progressive Neuroregression or Neurodegenerative Decline**: Fliedner-Zweier syndrome is a static neurodevelopmental delay/disability; progressive neurodegenerative loss of previously acquired motor, cognitive, or speech milestones strongly excludes FZS and points to lysosomal, mitochondrial, or Rett-like neurodegenerative entities [F6].",report.md,55,61,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:5,disease_name,Fliedner-Zweier syndrome,"# Clinical Identification and Phenotypic Delineation of Fliedner-Zweier Syndrome (SCAF4-Related Neurodevelopmental Disorder)
+
+Fliedner-Zweier syndrome (FZS; OMIM #620511) is an autosomal dominant neurodevelopmental condition caused by heterozygous loss-of-function variants in *SCAF4* (SR-related CTD-associated factor 4), which encodes an RNA polymerase II CTD-binding factor critical for mRNA transcription termination and suppression of premature cleavage and polyadenylation [F1, F2]. While early ascertainment suggested a uniform, recognizable presentation, recent cohort expansions encompassing at least 68 to 69 cumulative individuals across international series have revealed significant variable expressivity and incomplete penetrance [F1, F2, F18].
+
+---
+
+## 1. Phenotypic Spectrum and Documented Clinical Frequencies
+
+Identifying an individual with Fliedner-Zweier syndrome from clinical phenotype alone is exceptionally difficult because its core features overlap broadly with common neurodevelopmental presentations [F2, F5]. Across documented cohorts, prominent developmental delay and expressive speech impairment represent the most consistently penetrant features, even in individuals with preserved or borderline general intellectual abilities [F4, F5, F7].
+
+### Cohort-Level Frequencies and Verbatim Phenotypes
+
+| Cohort / Source | Verbatim Clinical Finding | Human Phenotype Ontology (HPO) Term | Count / Assessed Individuals (Fraction, %) | Finding Attribution |
+| :--- | :--- | :--- | :--- | :--- |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Developmental delay / intellectual disability spectrum (ranging from normal IQ to severe ID) | Intellectual disability (HP:0001249) / Global developmental delay (HP:0001263) | Evaluated across an expanded multicenter cohort of 50 novel individuals (incomplete penetrance demonstrated; normal IQ observed in transmitting carriers and select probands) | [F1, F4, F7] |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Inherited loss-of-function transmission | Autosomal dominant inheritance (HP:0000006) | 13/50 inherited cases (with 23/50 de novo cases established in cohort) | [F1, F11, F15] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Developmental delay and/or intellectual disability | Intellectual disability (HP:0001249) | 13/13 (100%) in initial discovery series (9 distinct pathogenic germline variants identified) | [F4, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Speech and language impairment | Speech delay (HP:0000750) | 13/13 (100%) in initial discovery series | [F7, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Muscular hypotonia | Muscular hypotonia (HP:0001252) | 9/12 (75%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Behavioral abnormalities (e.g., ADHD, autistic features) | Abnormal repetitive mannerism / Behavioral abnormality (HP:0000708) | 8/11 (73%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Facial dysmorphic features | Facial dysmorphism (HP:0001999) | 11/13 (85%) | [F10] |
+| **Fliedner et al. (2020)**<br>(DOI: [10.1016/j.ajhg.2020.06.019](https://doi.org/10.1016/j.ajhg.2020.06.019)) | Inherited transmission in discovery series | Autosomal dominant inheritance (HP:0000006) | 1/9 (11%) families (8/9 de novo) | [F1, F11] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Seizures / focal epilepsy | Focal-onset seizure (HP:0007359) / Seizure (HP:0001250) | 3/3 (100%) in epilepsy-ascertained series (median onset age: 4 years) | [F9, F13] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Normal brain MRI | Normal brain morphology (HP:0002534) | 2/3 (66.7%) structurally normal on neuroimaging | [F9] |
+| **Schmid et al. (2025)**; **Chen et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2); [10.3389/fgene.2025.1487352](https://doi.org/10.3389/fgene.2025.1487352)) | Skeletal abnormalities (clubfoot, scoliosis, hip dysplasia) | Talipes equinovarus (HP:0001762), Scoliosis (HP:0002650), Hip dysplasia (HP:0001385) | Recurrent core syndromic finding noted across 50 novel cases and cumulative 69 reviewed patients | [F2, F5, F12] |
+| **Yan et al. (2025)**<br>(PMID: [41811042](https://pubmed.ncbi.nlm.nih.gov/41811042/)) | Isolated de novo Chinese case evaluation | Global developmental delay (HP:0001263) | 1/1 evaluated proband (age 4.58 years) | [F1, F2, F10] |
+
+---
+
+## 2. Discriminative Features and Clinical Differential Diagnosis
+
+Bedside differentiation of Fliedner-Zweier syndrome solely on clinical criteria is **not achievable with moderate or high clinical confidence**, and the confidence of bedside distinction without sequencing is very low [F2, F15]. Fliedner-Zweier syndrome exhibits extensive phenotypic pleiotropy: affected individuals present with non-specific developmental delay, a wide cognitive spectrum (from completely normal IQ or borderline intellectual disability to severe ID), variable speech delay, behavioral abnormalities (ADHD, autism spectrum traits), skeletal anomalies, and seizures [F1, F2, F4, F5].
+
+### Confused Overlapping Disorders and Confidence of Distinction
+
+1. **Spliceosomal and Transcription-Elongation Machinery Syndromes**:
+   - *Overlapping entities*: *SRRM1*-related neurodevelopmental disorder (Altay et al., 2026, [10.1038/s41431-025-01966-y](https://doi.org/10.1038/s41431-025-01966-y)), *THOC6*-related neurodevelopmental disorder, *RNU4ATAC*-related microcephalic dwarfism/syndromes, and *SCAF8*-associated conditions [F2, F15].
+   - *Overlapping findings*: Shared disruption of general mRNA transcription elongation and splicing creates converging clinical phenotypes involving developmental delay, speech limitations, muscular hypotonia, and non-specific skeletal anomalies [F2, F15].
+   - *Confidence of bedside distinction*: **Very Low (<0.30)**. Transcriptome deregulations affect thousands of downstream targets (e.g., >9,000 deregulated genes and ~2,900 differentially spliced transcripts [F2]), producing convergent neurodevelopmental disruptions that cannot be separated clinically without exome or genome sequencing [F2, F15].
+2. **Chromatin Remodeling Syndromes (e.g., Coffin-Siris Syndrome, *ARID1B* / *SMARCA4*)**:
+   - *Overlapping findings*: Muscular hypotonia, intellectual impairment, expressive language delay, and subtle craniofacial dysmorphisms [F15].
+   - *Discriminating clues*: Coffin-Siris and related SWI/SNFopathies frequently show fifth-digit nail/distal phalanx hypoplasia, pronounced coarse facial coarsening, and structural internal organ malformations, whereas FZS dysmorphism remains subtle and unclassifiable [F10, F15].
+   - *Confidence of bedside distinction*: **Low to Moderate**. While digit hypoplasia points toward Coffin-Siris, genomic sequencing remains mandatory [F2, F15].
+
+### Most Discriminating Features of Fliedner-Zweier Syndrome
+When comparing an affected individual to patients with generic neurodevelopmental delay, the combination of features that raises suspicion includes:
+- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].
+- **Co-occurrence of axial and lower-extremity joint positional anomalies**: Recurrent skeletal signs specifically encompass scoliosis, developmental dysplasia of the hip, and clubfoot (talipes equinovarus) [F5, F12].
+- **Pharmacoresponsive focal epilepsy**: When seizures occur (median onset around 4 years of age), they often present as focal seizures responsive to standard anti-seizure medications [F9, F13].
+
+---
+
+## 3. Exclusionary Criteria: Absent Features that Argue Against Diagnosis
+
+Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].
+4. **Anterior Chamber Dysgenesis / Corneal Clouding**: Severe structural ocular anterior segment malformations (e.g., Peters anomaly, congenital corneal clouding) are absent [F6].
+5. **Progressive Neuroregression or Neurodegenerative Decline**: Fliedner-Zweier syndrome is a static neurodevelopmental delay/disability; progressive neurodegenerative loss of previously acquired motor, cognitive, or speech milestones strongly excludes FZS and points to lysosomal, mitochondrial, or Rett-like neurodegenerative entities [F6].
+6. **Gross Structural Brain Malformations**: More than 70% of evaluated patients demonstrate entirely normal brain anatomy on neuroimaging (or minor, non-specific findings such as mild ventriculomegaly or corpus callosum hypoplasia); gross malformations of cortical development (e.g., lissencephaly, pachygyria, holoprosencephaly) argue strongly against *SCAF4* etiology [F3, F9].",report.md,1,62,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:5,rule_or_step_title,Exclusionary Criteria,"## 3. Exclusionary Criteria: Absent Features that Argue Against Diagnosis
+
+Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].
+4. **Anterior Chamber Dysgenesis / Corneal Clouding**: Severe structural ocular anterior segment malformations (e.g., Peters anomaly, congenital corneal clouding) are absent [F6].
+5. **Progressive Neuroregression or Neurodegenerative Decline**: Fliedner-Zweier syndrome is a static neurodevelopmental delay/disability; progressive neurodegenerative loss of previously acquired motor, cognitive, or speech milestones strongly excludes FZS and points to lysosomal, mitochondrial, or Rett-like neurodegenerative entities [F6].
+6. **Gross Structural Brain Malformations**: More than 70% of evaluated patients demonstrate entirely normal brain anatomy on neuroimaging (or minor, non-specific findings such as mild ventriculomegaly or corpus callosum hypoplasia); gross malformations of cortical development (e.g., lissencephaly, pachygyria, holoprosencephaly) argue strongly against *SCAF4* etiology [F3, F9].",report.md,53,62,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:5,phenotype_name,Gross Structural Brain Malformations,"6. **Gross Structural Brain Malformations**: More than 70% of evaluated patients demonstrate entirely normal brain anatomy on neuroimaging (or minor, non-specific findings such as mild ventriculomegaly or corpus callosum hypoplasia); gross malformations of cortical development (e.g., lissencephaly, pachygyria, holoprosencephaly) argue strongly against *SCAF4* etiology [F3, F9].",report.md,62,62,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:5,rule_category,exclusion_criterion,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].
+4. **Anterior Chamber Dysgenesis / Corneal Clouding**: Severe structural ocular anterior segment malformations (e.g., Peters anomaly, congenital corneal clouding) are absent [F6].
+5. **Progressive Neuroregression or Neurodegenerative Decline**: Fliedner-Zweier syndrome is a static neurodevelopmental delay/disability; progressive neurodegenerative loss of previously acquired motor, cognitive, or speech milestones strongly excludes FZS and points to lysosomal, mitochondrial, or Rett-like neurodegenerative entities [F6].
+6. **Gross Structural Brain Malformations**: More than 70% of evaluated patients demonstrate entirely normal brain anatomy on neuroimaging (or minor, non-specific findings such as mild ventriculomegaly or corpus callosum hypoplasia); gross malformations of cortical development (e.g., lissencephaly, pachygyria, holoprosencephaly) argue strongly against *SCAF4* etiology [F3, F9].",report.md,55,62,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:5,phenotype_status_required,must_be_absent,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].
+4. **Anterior Chamber Dysgenesis / Corneal Clouding**: Severe structural ocular anterior segment malformations (e.g., Peters anomaly, congenital corneal clouding) are absent [F6].
+5. **Progressive Neuroregression or Neurodegenerative Decline**: Fliedner-Zweier syndrome is a static neurodevelopmental delay/disability; progressive neurodegenerative loss of previously acquired motor, cognitive, or speech milestones strongly excludes FZS and points to lysosomal, mitochondrial, or Rett-like neurodegenerative entities [F6].
+6. **Gross Structural Brain Malformations**: More than 70% of evaluated patients demonstrate entirely normal brain anatomy on neuroimaging (or minor, non-specific findings such as mild ventriculomegaly or corpus callosum hypoplasia); gross malformations of cortical development (e.g., lissencephaly, pachygyria, holoprosencephaly) argue strongly against *SCAF4* etiology [F3, F9].",report.md,55,62,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:5,matching_criterion_description,"Gross malformations of cortical development argue strongly against SCAF4 etiology, as >70% of evaluated patients show normal brain anatomy.","Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].
+4. **Anterior Chamber Dysgenesis / Corneal Clouding**: Severe structural ocular anterior segment malformations (e.g., Peters anomaly, congenital corneal clouding) are absent [F6].
+5. **Progressive Neuroregression or Neurodegenerative Decline**: Fliedner-Zweier syndrome is a static neurodevelopmental delay/disability; progressive neurodegenerative loss of previously acquired motor, cognitive, or speech milestones strongly excludes FZS and points to lysosomal, mitochondrial, or Rett-like neurodegenerative entities [F6].
+6. **Gross Structural Brain Malformations**: More than 70% of evaluated patients demonstrate entirely normal brain anatomy on neuroimaging (or minor, non-specific findings such as mild ventriculomegaly or corpus callosum hypoplasia); gross malformations of cortical development (e.g., lissencephaly, pachygyria, holoprosencephaly) argue strongly against *SCAF4* etiology [F3, F9].",report.md,55,62,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:5,cohort_frequency,0%,"Because positive findings are heterogeneous, negative criteria provide critical exclusionary value. Systematic evaluation of large cohorts (Schmid et al., 2025; Yan et al., 2025; n = 50 novel cases, 69 total reviewed) establishes that the following findings are **consistently absent** in Fliedner-Zweier syndrome; their presence argues strongly against the diagnosis [F6]:
+
+1. **Severe Congenital Heart Defects**: Complex cardiac malformations requiring early surgical intervention (such as transposition of the great arteries, hypoplastic left heart syndrome, or tetralogy of Fallot) have not been observed as core features of *SCAF4* haploinsufficiency [F6].
+2. **Profound Microcephaly or Macrocephaly at Birth**: Extreme congenital cranial volume anomalies (head circumference < -3 SD or > +3 SD at birth) are absent [F6].
+3. **Limb Reduction Defects**: Congenital terminal or intercalary limb reductions (e.g., amelia, phocomelia, ectrodactyly) are completely absent; skeletal manifestations are restricted to joint positioning and axial alignment abnormalities (scoliosis, hip dysplasia, clubfoot) [F5, F6, F14].
+4. **Anterior Chamber Dysgenesis / Corneal Clouding**: Severe structural ocular anterior segment malformations (e.g., Peters anomaly, congenital corneal clouding) are absent [F6].
+5. **Progressive Neuroregression or Neurodegenerative Decline**: Fliedner-Zweier syndrome is a static neurodevelopmental delay/disability; progressive neurodegenerative loss of previously acquired motor, cognitive, or speech milestones strongly excludes FZS and points to lysosomal, mitochondrial, or Rett-like neurodegenerative entities [F6].
+6. **Gross Structural Brain Malformations**: More than 70% of evaluated patients demonstrate entirely normal brain anatomy on neuroimaging (or minor, non-specific findings such as mild ventriculomegaly or corpus callosum hypoplasia); gross malformations of cortical development (e.g., lissencephaly, pachygyria, holoprosencephaly) argue strongly against *SCAF4* etiology [F3, F9].",report.md,55,62,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:6,disease_name,Fliedner-Zweier syndrome,"# Clinical Identification and Phenotypic Delineation of Fliedner-Zweier Syndrome (SCAF4-Related Neurodevelopmental Disorder)
+
+Fliedner-Zweier syndrome (FZS; OMIM #620511) is an autosomal dominant neurodevelopmental condition caused by heterozygous loss-of-function variants in *SCAF4* (SR-related CTD-associated factor 4), which encodes an RNA polymerase II CTD-binding factor critical for mRNA transcription termination and suppression of premature cleavage and polyadenylation [F1, F2]. While early ascertainment suggested a uniform, recognizable presentation, recent cohort expansions encompassing at least 68 to 69 cumulative individuals across international series have revealed significant variable expressivity and incomplete penetrance [F1, F2, F18].
+
+---
+
+## 1. Phenotypic Spectrum and Documented Clinical Frequencies
+
+Identifying an individual with Fliedner-Zweier syndrome from clinical phenotype alone is exceptionally difficult because its core features overlap broadly with common neurodevelopmental presentations [F2, F5]. Across documented cohorts, prominent developmental delay and expressive speech impairment represent the most consistently penetrant features, even in individuals with preserved or borderline general intellectual abilities [F4, F5, F7].
+
+### Cohort-Level Frequencies and Verbatim Phenotypes
+
+| Cohort / Source | Verbatim Clinical Finding | Human Phenotype Ontology (HPO) Term | Count / Assessed Individuals (Fraction, %) | Finding Attribution |
+| :--- | :--- | :--- | :--- | :--- |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Developmental delay / intellectual disability spectrum (ranging from normal IQ to severe ID) | Intellectual disability (HP:0001249) / Global developmental delay (HP:0001263) | Evaluated across an expanded multicenter cohort of 50 novel individuals (incomplete penetrance demonstrated; normal IQ observed in transmitting carriers and select probands) | [F1, F4, F7] |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Inherited loss-of-function transmission | Autosomal dominant inheritance (HP:0000006) | 13/50 inherited cases (with 23/50 de novo cases established in cohort) | [F1, F11, F15] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Developmental delay and/or intellectual disability | Intellectual disability (HP:0001249) | 13/13 (100%) in initial discovery series (9 distinct pathogenic germline variants identified) | [F4, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Speech and language impairment | Speech delay (HP:0000750) | 13/13 (100%) in initial discovery series | [F7, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Muscular hypotonia | Muscular hypotonia (HP:0001252) | 9/12 (75%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Behavioral abnormalities (e.g., ADHD, autistic features) | Abnormal repetitive mannerism / Behavioral abnormality (HP:0000708) | 8/11 (73%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Facial dysmorphic features | Facial dysmorphism (HP:0001999) | 11/13 (85%) | [F10] |
+| **Fliedner et al. (2020)**<br>(DOI: [10.1016/j.ajhg.2020.06.019](https://doi.org/10.1016/j.ajhg.2020.06.019)) | Inherited transmission in discovery series | Autosomal dominant inheritance (HP:0000006) | 1/9 (11%) families (8/9 de novo) | [F1, F11] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Seizures / focal epilepsy | Focal-onset seizure (HP:0007359) / Seizure (HP:0001250) | 3/3 (100%) in epilepsy-ascertained series (median onset age: 4 years) | [F9, F13] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Normal brain MRI | Normal brain morphology (HP:0002534) | 2/3 (66.7%) structurally normal on neuroimaging | [F9] |
+| **Schmid et al. (2025)**; **Chen et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2); [10.3389/fgene.2025.1487352](https://doi.org/10.3389/fgene.2025.1487352)) | Skeletal abnormalities (clubfoot, scoliosis, hip dysplasia) | Talipes equinovarus (HP:0001762), Scoliosis (HP:0002650), Hip dysplasia (HP:0001385) | Recurrent core syndromic finding noted across 50 novel cases and cumulative 69 reviewed patients | [F2, F5, F12] |
+| **Yan et al. (2025)**<br>(PMID: [41811042](https://pubmed.ncbi.nlm.nih.gov/41811042/)) | Isolated de novo Chinese case evaluation | Global developmental delay (HP:0001263) | 1/1 evaluated proband (age 4.58 years) | [F1, F2, F10] |
+
+---
+
+## 2. Discriminative Features and Clinical Differential Diagnosis
+
+Bedside differentiation of Fliedner-Zweier syndrome solely on clinical criteria is **not achievable with moderate or high clinical confidence**, and the confidence of bedside distinction without sequencing is very low [F2, F15]. Fliedner-Zweier syndrome exhibits extensive phenotypic pleiotropy: affected individuals present with non-specific developmental delay, a wide cognitive spectrum (from completely normal IQ or borderline intellectual disability to severe ID), variable speech delay, behavioral abnormalities (ADHD, autism spectrum traits), skeletal anomalies, and seizures [F1, F2, F4, F5].
+
+### Confused Overlapping Disorders and Confidence of Distinction
+
+1. **Spliceosomal and Transcription-Elongation Machinery Syndromes**:
+   - *Overlapping entities*: *SRRM1*-related neurodevelopmental disorder (Altay et al., 2026, [10.1038/s41431-025-01966-y](https://doi.org/10.1038/s41431-025-01966-y)), *THOC6*-related neurodevelopmental disorder, *RNU4ATAC*-related microcephalic dwarfism/syndromes, and *SCAF8*-associated conditions [F2, F15].
+   - *Overlapping findings*: Shared disruption of general mRNA transcription elongation and splicing creates converging clinical phenotypes involving developmental delay, speech limitations, muscular hypotonia, and non-specific skeletal anomalies [F2, F15].
+   - *Confidence of bedside distinction*: **Very Low (<0.30)**. Transcriptome deregulations affect thousands of downstream targets (e.g., >9,000 deregulated genes and ~2,900 differentially spliced transcripts [F2]), producing convergent neurodevelopmental disruptions that cannot be separated clinically without exome or genome sequencing [F2, F15].
+2. **Chromatin Remodeling Syndromes (e.g., Coffin-Siris Syndrome, *ARID1B* / *SMARCA4*)**:
+   - *Overlapping findings*: Muscular hypotonia, intellectual impairment, expressive language delay, and subtle craniofacial dysmorphisms [F15].
+   - *Discriminating clues*: Coffin-Siris and related SWI/SNFopathies frequently show fifth-digit nail/distal phalanx hypoplasia, pronounced coarse facial coarsening, and structural internal organ malformations, whereas FZS dysmorphism remains subtle and unclassifiable [F10, F15].
+   - *Confidence of bedside distinction*: **Low to Moderate**. While digit hypoplasia points toward Coffin-Siris, genomic sequencing remains mandatory [F2, F15].
+
+### Most Discriminating Features of Fliedner-Zweier Syndrome
+When comparing an affected individual to patients with generic neurodevelopmental delay, the combination of features that raises suspicion includes:
+- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].",report.md,1,47,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:6,rule_or_step_title,Most Discriminating Features,"### Most Discriminating Features of Fliedner-Zweier Syndrome
+When comparing an affected individual to patients with generic neurodevelopmental delay, the combination of features that raises suspicion includes:
+- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].",report.md,45,47,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:6,phenotype_name,Severe expressive language delay relative to general cognitive performance,"- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].",report.md,47,47,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:6,rule_category,discriminating_feature,"### Most Discriminating Features of Fliedner-Zweier Syndrome
+When comparing an affected individual to patients with generic neurodevelopmental delay, the combination of features that raises suspicion includes:
+- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].",report.md,45,47,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:6,phenotype_status_required,must_be_present,"When comparing an affected individual to patients with generic neurodevelopmental delay, the combination of features that raises suspicion includes:
+- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].",report.md,46,47,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:6,matching_criterion_description,Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities.,"- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].",report.md,47,47,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:6,cohort_frequency,100%,"| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Speech and language impairment | Speech delay (HP:0000750) | 13/13 (100%) in initial discovery series | [F7, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Muscular hypotonia | Muscular hypotonia (HP:0001252) | 9/12 (75%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Behavioral abnormalities (e.g., ADHD, autistic features) | Abnormal repetitive mannerism / Behavioral abnormality (HP:0000708) | 8/11 (73%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Facial dysmorphic features | Facial dysmorphism (HP:0001999) | 11/13 (85%) | [F10] |
+| **Fliedner et al. (2020)**<br>(DOI: [10.1016/j.ajhg.2020.06.019](https://doi.org/10.1016/j.ajhg.2020.06.019)) | Inherited transmission in discovery series | Autosomal dominant inheritance (HP:0000006) | 1/9 (11%) families (8/9 de novo) | [F1, F11] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Seizures / focal epilepsy | Focal-onset seizure (HP:0007359) / Seizure (HP:0001250) | 3/3 (100%) in epilepsy-ascertained series (median onset age: 4 years) | [F9, F13] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Normal brain MRI | Normal brain morphology (HP:0002534) | 2/3 (66.7%) structurally normal on neuroimaging | [F9] |
+| **Schmid et al. (2025)**; **Chen et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2); [10.3389/fgene.2025.1487352](https://doi.org/10.3389/fgene.2025.1487352)) | Skeletal abnormalities (clubfoot, scoliosis, hip dysplasia) | Talipes equinovarus (HP:0001762), Scoliosis (HP:0002650), Hip dysplasia (HP:0001385) | Recurrent core syndromic finding noted across 50 novel cases and cumulative 69 reviewed patients | [F2, F5, F12] |
+| **Yan et al. (2025)**<br>(PMID: [41811042](https://pubmed.ncbi.nlm.nih.gov/41811042/)) | Isolated de novo Chinese case evaluation | Global developmental delay (HP:0001263) | 1/1 evaluated proband (age 4.58 years) | [F1, F2, F10] |
+
+---
+
+## 2. Discriminative Features and Clinical Differential Diagnosis
+
+Bedside differentiation of Fliedner-Zweier syndrome solely on clinical criteria is **not achievable with moderate or high clinical confidence**, and the confidence of bedside distinction without sequencing is very low [F2, F15]. Fliedner-Zweier syndrome exhibits extensive phenotypic pleiotropy: affected individuals present with non-specific developmental delay, a wide cognitive spectrum (from completely normal IQ or borderline intellectual disability to severe ID), variable speech delay, behavioral abnormalities (ADHD, autism spectrum traits), skeletal anomalies, and seizures [F1, F2, F4, F5].
+
+### Confused Overlapping Disorders and Confidence of Distinction
+
+1. **Spliceosomal and Transcription-Elongation Machinery Syndromes**:
+   - *Overlapping entities*: *SRRM1*-related neurodevelopmental disorder (Altay et al., 2026, [10.1038/s41431-025-01966-y](https://doi.org/10.1038/s41431-025-01966-y)), *THOC6*-related neurodevelopmental disorder, *RNU4ATAC*-related microcephalic dwarfism/syndromes, and *SCAF8*-associated conditions [F2, F15].
+   - *Overlapping findings*: Shared disruption of general mRNA transcription elongation and splicing creates converging clinical phenotypes involving developmental delay, speech limitations, muscular hypotonia, and non-specific skeletal anomalies [F2, F15].
+   - *Confidence of bedside distinction*: **Very Low (<0.30)**. Transcriptome deregulations affect thousands of downstream targets (e.g., >9,000 deregulated genes and ~2,900 differentially spliced transcripts [F2]), producing convergent neurodevelopmental disruptions that cannot be separated clinically without exome or genome sequencing [F2, F15].
+2. **Chromatin Remodeling Syndromes (e.g., Coffin-Siris Syndrome, *ARID1B* / *SMARCA4*)**:
+   - *Overlapping findings*: Muscular hypotonia, intellectual impairment, expressive language delay, and subtle craniofacial dysmorphisms [F15].
+   - *Discriminating clues*: Coffin-Siris and related SWI/SNFopathies frequently show fifth-digit nail/distal phalanx hypoplasia, pronounced coarse facial coarsening, and structural internal organ malformations, whereas FZS dysmorphism remains subtle and unclassifiable [F10, F15].
+   - *Confidence of bedside distinction*: **Low to Moderate**. While digit hypoplasia points toward Coffin-Siris, genomic sequencing remains mandatory [F2, F15].
+
+### Most Discriminating Features of Fliedner-Zweier Syndrome
+When comparing an affected individual to patients with generic neurodevelopmental delay, the combination of features that raises suspicion includes:
+- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].",report.md,18,47,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:7,disease_name,Fliedner-Zweier syndrome,"# Clinical Identification and Phenotypic Delineation of Fliedner-Zweier Syndrome (SCAF4-Related Neurodevelopmental Disorder)
+
+Fliedner-Zweier syndrome (FZS; OMIM #620511) is an autosomal dominant neurodevelopmental condition caused by heterozygous loss-of-function variants in *SCAF4* (SR-related CTD-associated factor 4), which encodes an RNA polymerase II CTD-binding factor critical for mRNA transcription termination and suppression of premature cleavage and polyadenylation [F1, F2]. While early ascertainment suggested a uniform, recognizable presentation, recent cohort expansions encompassing at least 68 to 69 cumulative individuals across international series have revealed significant variable expressivity and incomplete penetrance [F1, F2, F18].
+
+---
+
+## 1. Phenotypic Spectrum and Documented Clinical Frequencies
+
+Identifying an individual with Fliedner-Zweier syndrome from clinical phenotype alone is exceptionally difficult because its core features overlap broadly with common neurodevelopmental presentations [F2, F5]. Across documented cohorts, prominent developmental delay and expressive speech impairment represent the most consistently penetrant features, even in individuals with preserved or borderline general intellectual abilities [F4, F5, F7].
+
+### Cohort-Level Frequencies and Verbatim Phenotypes
+
+| Cohort / Source | Verbatim Clinical Finding | Human Phenotype Ontology (HPO) Term | Count / Assessed Individuals (Fraction, %) | Finding Attribution |
+| :--- | :--- | :--- | :--- | :--- |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Developmental delay / intellectual disability spectrum (ranging from normal IQ to severe ID) | Intellectual disability (HP:0001249) / Global developmental delay (HP:0001263) | Evaluated across an expanded multicenter cohort of 50 novel individuals (incomplete penetrance demonstrated; normal IQ observed in transmitting carriers and select probands) | [F1, F4, F7] |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Inherited loss-of-function transmission | Autosomal dominant inheritance (HP:0000006) | 13/50 inherited cases (with 23/50 de novo cases established in cohort) | [F1, F11, F15] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Developmental delay and/or intellectual disability | Intellectual disability (HP:0001249) | 13/13 (100%) in initial discovery series (9 distinct pathogenic germline variants identified) | [F4, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Speech and language impairment | Speech delay (HP:0000750) | 13/13 (100%) in initial discovery series | [F7, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Muscular hypotonia | Muscular hypotonia (HP:0001252) | 9/12 (75%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Behavioral abnormalities (e.g., ADHD, autistic features) | Abnormal repetitive mannerism / Behavioral abnormality (HP:0000708) | 8/11 (73%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Facial dysmorphic features | Facial dysmorphism (HP:0001999) | 11/13 (85%) | [F10] |
+| **Fliedner et al. (2020)**<br>(DOI: [10.1016/j.ajhg.2020.06.019](https://doi.org/10.1016/j.ajhg.2020.06.019)) | Inherited transmission in discovery series | Autosomal dominant inheritance (HP:0000006) | 1/9 (11%) families (8/9 de novo) | [F1, F11] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Seizures / focal epilepsy | Focal-onset seizure (HP:0007359) / Seizure (HP:0001250) | 3/3 (100%) in epilepsy-ascertained series (median onset age: 4 years) | [F9, F13] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Normal brain MRI | Normal brain morphology (HP:0002534) | 2/3 (66.7%) structurally normal on neuroimaging | [F9] |
+| **Schmid et al. (2025)**; **Chen et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2); [10.3389/fgene.2025.1487352](https://doi.org/10.3389/fgene.2025.1487352)) | Skeletal abnormalities (clubfoot, scoliosis, hip dysplasia) | Talipes equinovarus (HP:0001762), Scoliosis (HP:0002650), Hip dysplasia (HP:0001385) | Recurrent core syndromic finding noted across 50 novel cases and cumulative 69 reviewed patients | [F2, F5, F12] |
+| **Yan et al. (2025)**<br>(PMID: [41811042](https://pubmed.ncbi.nlm.nih.gov/41811042/)) | Isolated de novo Chinese case evaluation | Global developmental delay (HP:0001263) | 1/1 evaluated proband (age 4.58 years) | [F1, F2, F10] |
+
+---
+
+## 2. Discriminative Features and Clinical Differential Diagnosis
+
+Bedside differentiation of Fliedner-Zweier syndrome solely on clinical criteria is **not achievable with moderate or high clinical confidence**, and the confidence of bedside distinction without sequencing is very low [F2, F15]. Fliedner-Zweier syndrome exhibits extensive phenotypic pleiotropy: affected individuals present with non-specific developmental delay, a wide cognitive spectrum (from completely normal IQ or borderline intellectual disability to severe ID), variable speech delay, behavioral abnormalities (ADHD, autism spectrum traits), skeletal anomalies, and seizures [F1, F2, F4, F5].
+
+### Confused Overlapping Disorders and Confidence of Distinction
+
+1. **Spliceosomal and Transcription-Elongation Machinery Syndromes**:
+   - *Overlapping entities*: *SRRM1*-related neurodevelopmental disorder (Altay et al., 2026, [10.1038/s41431-025-01966-y](https://doi.org/10.1038/s41431-025-01966-y)), *THOC6*-related neurodevelopmental disorder, *RNU4ATAC*-related microcephalic dwarfism/syndromes, and *SCAF8*-associated conditions [F2, F15].
+   - *Overlapping findings*: Shared disruption of general mRNA transcription elongation and splicing creates converging clinical phenotypes involving developmental delay, speech limitations, muscular hypotonia, and non-specific skeletal anomalies [F2, F15].
+   - *Confidence of bedside distinction*: **Very Low (<0.30)**. Transcriptome deregulations affect thousands of downstream targets (e.g., >9,000 deregulated genes and ~2,900 differentially spliced transcripts [F2]), producing convergent neurodevelopmental disruptions that cannot be separated clinically without exome or genome sequencing [F2, F15].
+2. **Chromatin Remodeling Syndromes (e.g., Coffin-Siris Syndrome, *ARID1B* / *SMARCA4*)**:
+   - *Overlapping findings*: Muscular hypotonia, intellectual impairment, expressive language delay, and subtle craniofacial dysmorphisms [F15].
+   - *Discriminating clues*: Coffin-Siris and related SWI/SNFopathies frequently show fifth-digit nail/distal phalanx hypoplasia, pronounced coarse facial coarsening, and structural internal organ malformations, whereas FZS dysmorphism remains subtle and unclassifiable [F10, F15].
+   - *Confidence of bedside distinction*: **Low to Moderate**. While digit hypoplasia points toward Coffin-Siris, genomic sequencing remains mandatory [F2, F15].
+
+### Most Discriminating Features of Fliedner-Zweier Syndrome
+When comparing an affected individual to patients with generic neurodevelopmental delay, the combination of features that raises suspicion includes:
+- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].
+- **Co-occurrence of axial and lower-extremity joint positional anomalies**: Recurrent skeletal signs specifically encompass scoliosis, developmental dysplasia of the hip, and clubfoot (talipes equinovarus) [F5, F12].",report.md,1,48,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:7,rule_or_step_title,Most Discriminating Features,"### Most Discriminating Features of Fliedner-Zweier Syndrome
+When comparing an affected individual to patients with generic neurodevelopmental delay, the combination of features that raises suspicion includes:
+- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].
+- **Co-occurrence of axial and lower-extremity joint positional anomalies**: Recurrent skeletal signs specifically encompass scoliosis, developmental dysplasia of the hip, and clubfoot (talipes equinovarus) [F5, F12].",report.md,45,48,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:7,phenotype_name,Co-occurrence of axial and lower-extremity joint positional anomalies,"- **Co-occurrence of axial and lower-extremity joint positional anomalies**: Recurrent skeletal signs specifically encompass scoliosis, developmental dysplasia of the hip, and clubfoot (talipes equinovarus) [F5, F12].",report.md,48,48,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:7,rule_category,discriminating_feature,"### Most Discriminating Features of Fliedner-Zweier Syndrome
+When comparing an affected individual to patients with generic neurodevelopmental delay, the combination of features that raises suspicion includes:
+- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].
+- **Co-occurrence of axial and lower-extremity joint positional anomalies**: Recurrent skeletal signs specifically encompass scoliosis, developmental dysplasia of the hip, and clubfoot (talipes equinovarus) [F5, F12].",report.md,45,48,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:7,phenotype_status_required,supportive_if_present,"When comparing an affected individual to patients with generic neurodevelopmental delay, the combination of features that raises suspicion includes:
+- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].
+- **Co-occurrence of axial and lower-extremity joint positional anomalies**: Recurrent skeletal signs specifically encompass scoliosis, developmental dysplasia of the hip, and clubfoot (talipes equinovarus) [F5, F12].",report.md,46,48,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:7,matching_criterion_description,"Recurrent skeletal signs specifically encompass scoliosis, developmental dysplasia of the hip, and clubfoot (talipes equinovarus).","- **Co-occurrence of axial and lower-extremity joint positional anomalies**: Recurrent skeletal signs specifically encompass scoliosis, developmental dysplasia of the hip, and clubfoot (talipes equinovarus) [F5, F12].",report.md,48,48,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:8,disease_name,Fliedner-Zweier syndrome,"# Clinical Identification and Phenotypic Delineation of Fliedner-Zweier Syndrome (SCAF4-Related Neurodevelopmental Disorder)
+
+Fliedner-Zweier syndrome (FZS; OMIM #620511) is an autosomal dominant neurodevelopmental condition caused by heterozygous loss-of-function variants in *SCAF4* (SR-related CTD-associated factor 4), which encodes an RNA polymerase II CTD-binding factor critical for mRNA transcription termination and suppression of premature cleavage and polyadenylation [F1, F2]. While early ascertainment suggested a uniform, recognizable presentation, recent cohort expansions encompassing at least 68 to 69 cumulative individuals across international series have revealed significant variable expressivity and incomplete penetrance [F1, F2, F18].
+
+---
+
+## 1. Phenotypic Spectrum and Documented Clinical Frequencies
+
+Identifying an individual with Fliedner-Zweier syndrome from clinical phenotype alone is exceptionally difficult because its core features overlap broadly with common neurodevelopmental presentations [F2, F5]. Across documented cohorts, prominent developmental delay and expressive speech impairment represent the most consistently penetrant features, even in individuals with preserved or borderline general intellectual abilities [F4, F5, F7].
+
+### Cohort-Level Frequencies and Verbatim Phenotypes
+
+| Cohort / Source | Verbatim Clinical Finding | Human Phenotype Ontology (HPO) Term | Count / Assessed Individuals (Fraction, %) | Finding Attribution |
+| :--- | :--- | :--- | :--- | :--- |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Developmental delay / intellectual disability spectrum (ranging from normal IQ to severe ID) | Intellectual disability (HP:0001249) / Global developmental delay (HP:0001263) | Evaluated across an expanded multicenter cohort of 50 novel individuals (incomplete penetrance demonstrated; normal IQ observed in transmitting carriers and select probands) | [F1, F4, F7] |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Inherited loss-of-function transmission | Autosomal dominant inheritance (HP:0000006) | 13/50 inherited cases (with 23/50 de novo cases established in cohort) | [F1, F11, F15] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Developmental delay and/or intellectual disability | Intellectual disability (HP:0001249) | 13/13 (100%) in initial discovery series (9 distinct pathogenic germline variants identified) | [F4, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Speech and language impairment | Speech delay (HP:0000750) | 13/13 (100%) in initial discovery series | [F7, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Muscular hypotonia | Muscular hypotonia (HP:0001252) | 9/12 (75%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Behavioral abnormalities (e.g., ADHD, autistic features) | Abnormal repetitive mannerism / Behavioral abnormality (HP:0000708) | 8/11 (73%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Facial dysmorphic features | Facial dysmorphism (HP:0001999) | 11/13 (85%) | [F10] |
+| **Fliedner et al. (2020)**<br>(DOI: [10.1016/j.ajhg.2020.06.019](https://doi.org/10.1016/j.ajhg.2020.06.019)) | Inherited transmission in discovery series | Autosomal dominant inheritance (HP:0000006) | 1/9 (11%) families (8/9 de novo) | [F1, F11] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Seizures / focal epilepsy | Focal-onset seizure (HP:0007359) / Seizure (HP:0001250) | 3/3 (100%) in epilepsy-ascertained series (median onset age: 4 years) | [F9, F13] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Normal brain MRI | Normal brain morphology (HP:0002534) | 2/3 (66.7%) structurally normal on neuroimaging | [F9] |
+| **Schmid et al. (2025)**; **Chen et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2); [10.3389/fgene.2025.1487352](https://doi.org/10.3389/fgene.2025.1487352)) | Skeletal abnormalities (clubfoot, scoliosis, hip dysplasia) | Talipes equinovarus (HP:0001762), Scoliosis (HP:0002650), Hip dysplasia (HP:0001385) | Recurrent core syndromic finding noted across 50 novel cases and cumulative 69 reviewed patients | [F2, F5, F12] |
+| **Yan et al. (2025)**<br>(PMID: [41811042](https://pubmed.ncbi.nlm.nih.gov/41811042/)) | Isolated de novo Chinese case evaluation | Global developmental delay (HP:0001263) | 1/1 evaluated proband (age 4.58 years) | [F1, F2, F10] |
+
+---
+
+## 2. Discriminative Features and Clinical Differential Diagnosis
+
+Bedside differentiation of Fliedner-Zweier syndrome solely on clinical criteria is **not achievable with moderate or high clinical confidence**, and the confidence of bedside distinction without sequencing is very low [F2, F15]. Fliedner-Zweier syndrome exhibits extensive phenotypic pleiotropy: affected individuals present with non-specific developmental delay, a wide cognitive spectrum (from completely normal IQ or borderline intellectual disability to severe ID), variable speech delay, behavioral abnormalities (ADHD, autism spectrum traits), skeletal anomalies, and seizures [F1, F2, F4, F5].
+
+### Confused Overlapping Disorders and Confidence of Distinction
+
+1. **Spliceosomal and Transcription-Elongation Machinery Syndromes**:
+   - *Overlapping entities*: *SRRM1*-related neurodevelopmental disorder (Altay et al., 2026, [10.1038/s41431-025-01966-y](https://doi.org/10.1038/s41431-025-01966-y)), *THOC6*-related neurodevelopmental disorder, *RNU4ATAC*-related microcephalic dwarfism/syndromes, and *SCAF8*-associated conditions [F2, F15].
+   - *Overlapping findings*: Shared disruption of general mRNA transcription elongation and splicing creates converging clinical phenotypes involving developmental delay, speech limitations, muscular hypotonia, and non-specific skeletal anomalies [F2, F15].
+   - *Confidence of bedside distinction*: **Very Low (<0.30)**. Transcriptome deregulations affect thousands of downstream targets (e.g., >9,000 deregulated genes and ~2,900 differentially spliced transcripts [F2]), producing convergent neurodevelopmental disruptions that cannot be separated clinically without exome or genome sequencing [F2, F15].
+2. **Chromatin Remodeling Syndromes (e.g., Coffin-Siris Syndrome, *ARID1B* / *SMARCA4*)**:
+   - *Overlapping findings*: Muscular hypotonia, intellectual impairment, expressive language delay, and subtle craniofacial dysmorphisms [F15].
+   - *Discriminating clues*: Coffin-Siris and related SWI/SNFopathies frequently show fifth-digit nail/distal phalanx hypoplasia, pronounced coarse facial coarsening, and structural internal organ malformations, whereas FZS dysmorphism remains subtle and unclassifiable [F10, F15].
+   - *Confidence of bedside distinction*: **Low to Moderate**. While digit hypoplasia points toward Coffin-Siris, genomic sequencing remains mandatory [F2, F15].
+
+### Most Discriminating Features of Fliedner-Zweier Syndrome
+When comparing an affected individual to patients with generic neurodevelopmental delay, the combination of features that raises suspicion includes:
+- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].
+- **Co-occurrence of axial and lower-extremity joint positional anomalies**: Recurrent skeletal signs specifically encompass scoliosis, developmental dysplasia of the hip, and clubfoot (talipes equinovarus) [F5, F12].
+- **Pharmacoresponsive focal epilepsy**: When seizures occur (median onset around 4 years of age), they often present as focal seizures responsive to standard anti-seizure medications [F9, F13].",report.md,1,49,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:8,rule_or_step_title,Most Discriminating Features,"### Most Discriminating Features of Fliedner-Zweier Syndrome
+When comparing an affected individual to patients with generic neurodevelopmental delay, the combination of features that raises suspicion includes:
+- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].
+- **Co-occurrence of axial and lower-extremity joint positional anomalies**: Recurrent skeletal signs specifically encompass scoliosis, developmental dysplasia of the hip, and clubfoot (talipes equinovarus) [F5, F12].
+- **Pharmacoresponsive focal epilepsy**: When seizures occur (median onset around 4 years of age), they often present as focal seizures responsive to standard anti-seizure medications [F9, F13].",report.md,45,49,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:8,phenotype_name,Pharmacoresponsive focal epilepsy,"- **Pharmacoresponsive focal epilepsy**: When seizures occur (median onset around 4 years of age), they often present as focal seizures responsive to standard anti-seizure medications [F9, F13].",report.md,49,49,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:8,rule_category,discriminating_feature,"### Most Discriminating Features of Fliedner-Zweier Syndrome
+When comparing an affected individual to patients with generic neurodevelopmental delay, the combination of features that raises suspicion includes:
+- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].
+- **Co-occurrence of axial and lower-extremity joint positional anomalies**: Recurrent skeletal signs specifically encompass scoliosis, developmental dysplasia of the hip, and clubfoot (talipes equinovarus) [F5, F12].
+- **Pharmacoresponsive focal epilepsy**: When seizures occur (median onset around 4 years of age), they often present as focal seizures responsive to standard anti-seizure medications [F9, F13].",report.md,45,49,True
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:8,phenotype_status_required,supportive_if_present,"When comparing an affected individual to patients with generic neurodevelopmental delay, the combination of features that raises suspicion includes:
+- **Severe expressive language delay relative to general cognitive performance**: Speech deficits are consistently penetrant even in patients who preserve mild or near-normal non-verbal cognitive capacities [F4, F7].
+- **Co-occurrence of axial and lower-extremity joint positional anomalies**: Recurrent skeletal signs specifically encompass scoliosis, developmental dysplasia of the hip, and clubfoot (talipes equinovarus) [F5, F12].
+- **Pharmacoresponsive focal epilepsy**: When seizures occur (median onset around 4 years of age), they often present as focal seizures responsive to standard anti-seizure medications [F9, F13].",report.md,46,49,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:8,matching_criterion_description,"When seizures occur (median onset around 4 years of age), they often present as focal seizures responsive to standard anti-seizure medications.","- **Pharmacoresponsive focal epilepsy**: When seizures occur (median onset around 4 years of age), they often present as focal seizures responsive to standard anti-seizure medications [F9, F13].",report.md,49,49,False
+phenotypic_matching_rules,0be24418b1a14b4b:0:phenotypic_matching_rules:8,cohort_frequency,20-30%,"   - *Discovery Phase*: Fliedner et al. (2020; PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/)) reported global developmental delay and/or intellectual disability in 13/13 (100%) of assessed individuals [F4, F10].
+   - *Cohort Expansion*: Schmid et al. (2025; [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) demonstrated that intellectual disability exhibits incomplete penetrance, spanning a continuum from completely normal IQ to severe intellectual disability, with carrier parents and selected probands exhibiting preserved general cognitive capacity [F1, F4].
+2. **Epilepsy and Seizure Penetrance**:
+   - *Initial and Targeted Reports*: Initial reports indicated seizures in 20% to 30% of patients, whereas specialized epilepsy cohorts (Hu et al., 2024; Lin et al., 2024) documented 100% (3/3) seizure presence [F3, F13].",report.md,91,94,False
+phenotypic_differential_matching,0be24418b1a14b4b:0:phenotypic_differential_matching:0,target_disease,Fliedner-Zweier syndrome,"# Clinical Identification and Phenotypic Delineation of Fliedner-Zweier Syndrome (SCAF4-Related Neurodevelopmental Disorder)
+
+Fliedner-Zweier syndrome (FZS; OMIM #620511) is an autosomal dominant neurodevelopmental condition caused by heterozygous loss-of-function variants in *SCAF4* (SR-related CTD-associated factor 4), which encodes an RNA polymerase II CTD-binding factor critical for mRNA transcription termination and suppression of premature cleavage and polyadenylation [F1, F2]. While early ascertainment suggested a uniform, recognizable presentation, recent cohort expansions encompassing at least 68 to 69 cumulative individuals across international series have revealed significant variable expressivity and incomplete penetrance [F1, F2, F18].
+
+---
+
+## 1. Phenotypic Spectrum and Documented Clinical Frequencies
+
+Identifying an individual with Fliedner-Zweier syndrome from clinical phenotype alone is exceptionally difficult because its core features overlap broadly with common neurodevelopmental presentations [F2, F5]. Across documented cohorts, prominent developmental delay and expressive speech impairment represent the most consistently penetrant features, even in individuals with preserved or borderline general intellectual abilities [F4, F5, F7].
+
+### Cohort-Level Frequencies and Verbatim Phenotypes
+
+| Cohort / Source | Verbatim Clinical Finding | Human Phenotype Ontology (HPO) Term | Count / Assessed Individuals (Fraction, %) | Finding Attribution |
+| :--- | :--- | :--- | :--- | :--- |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Developmental delay / intellectual disability spectrum (ranging from normal IQ to severe ID) | Intellectual disability (HP:0001249) / Global developmental delay (HP:0001263) | Evaluated across an expanded multicenter cohort of 50 novel individuals (incomplete penetrance demonstrated; normal IQ observed in transmitting carriers and select probands) | [F1, F4, F7] |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Inherited loss-of-function transmission | Autosomal dominant inheritance (HP:0000006) | 13/50 inherited cases (with 23/50 de novo cases established in cohort) | [F1, F11, F15] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Developmental delay and/or intellectual disability | Intellectual disability (HP:0001249) | 13/13 (100%) in initial discovery series (9 distinct pathogenic germline variants identified) | [F4, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Speech and language impairment | Speech delay (HP:0000750) | 13/13 (100%) in initial discovery series | [F7, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Muscular hypotonia | Muscular hypotonia (HP:0001252) | 9/12 (75%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Behavioral abnormalities (e.g., ADHD, autistic features) | Abnormal repetitive mannerism / Behavioral abnormality (HP:0000708) | 8/11 (73%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Facial dysmorphic features | Facial dysmorphism (HP:0001999) | 11/13 (85%) | [F10] |
+| **Fliedner et al. (2020)**<br>(DOI: [10.1016/j.ajhg.2020.06.019](https://doi.org/10.1016/j.ajhg.2020.06.019)) | Inherited transmission in discovery series | Autosomal dominant inheritance (HP:0000006) | 1/9 (11%) families (8/9 de novo) | [F1, F11] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Seizures / focal epilepsy | Focal-onset seizure (HP:0007359) / Seizure (HP:0001250) | 3/3 (100%) in epilepsy-ascertained series (median onset age: 4 years) | [F9, F13] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Normal brain MRI | Normal brain morphology (HP:0002534) | 2/3 (66.7%) structurally normal on neuroimaging | [F9] |
+| **Schmid et al. (2025)**; **Chen et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2); [10.3389/fgene.2025.1487352](https://doi.org/10.3389/fgene.2025.1487352)) | Skeletal abnormalities (clubfoot, scoliosis, hip dysplasia) | Talipes equinovarus (HP:0001762), Scoliosis (HP:0002650), Hip dysplasia (HP:0001385) | Recurrent core syndromic finding noted across 50 novel cases and cumulative 69 reviewed patients | [F2, F5, F12] |
+| **Yan et al. (2025)**<br>(PMID: [41811042](https://pubmed.ncbi.nlm.nih.gov/41811042/)) | Isolated de novo Chinese case evaluation | Global developmental delay (HP:0001263) | 1/1 evaluated proband (age 4.58 years) | [F1, F2, F10] |
+
+---
+
+## 2. Discriminative Features and Clinical Differential Diagnosis
+
+Bedside differentiation of Fliedner-Zweier syndrome solely on clinical criteria is **not achievable with moderate or high clinical confidence**, and the confidence of bedside distinction without sequencing is very low [F2, F15]. Fliedner-Zweier syndrome exhibits extensive phenotypic pleiotropy: affected individuals present with non-specific developmental delay, a wide cognitive spectrum (from completely normal IQ or borderline intellectual disability to severe ID), variable speech delay, behavioral abnormalities (ADHD, autism spectrum traits), skeletal anomalies, and seizures [F1, F2, F4, F5].",report.md,1,32,True
+phenotypic_differential_matching,0be24418b1a14b4b:0:phenotypic_differential_matching:0,mimic_disease,Spliceosomal and Transcription-Elongation Machinery Syndromes,"1. **Spliceosomal and Transcription-Elongation Machinery Syndromes**:
+   - *Overlapping entities*: *SRRM1*-related neurodevelopmental disorder (Altay et al., 2026, [10.1038/s41431-025-01966-y](https://doi.org/10.1038/s41431-025-01966-y)), *THOC6*-related neurodevelopmental disorder, *RNU4ATAC*-related microcephalic dwarfism/syndromes, and *SCAF8*-associated conditions [F2, F15].",report.md,36,37,True
+phenotypic_differential_matching,0be24418b1a14b4b:0:phenotypic_differential_matching:0,overlapping_phenotypes,"developmental delay, speech limitations, muscular hypotonia, non-specific skeletal anomalies","   - *Overlapping findings*: Shared disruption of general mRNA transcription elongation and splicing creates converging clinical phenotypes involving developmental delay, speech limitations, muscular hypotonia, and non-specific skeletal anomalies [F2, F15].",report.md,38,38,False
+phenotypic_differential_matching,0be24418b1a14b4b:0:phenotypic_differential_matching:0,discriminating_phenotype,None (Requires exome or genome sequencing),"   - *Confidence of bedside distinction*: **Very Low (<0.30)**. Transcriptome deregulations affect thousands of downstream targets (e.g., >9,000 deregulated genes and ~2,900 differentially spliced transcripts [F2]), producing convergent neurodevelopmental disruptions that cannot be separated clinically without exome or genome sequencing [F2, F15].",report.md,39,39,False
+phenotypic_differential_matching,0be24418b1a14b4b:0:phenotypic_differential_matching:0,discriminating_logic,Transcriptome deregulations produce convergent neurodevelopmental disruptions that cannot be separated clinically without exome or genome sequencing.,"   - *Confidence of bedside distinction*: **Very Low (<0.30)**. Transcriptome deregulations affect thousands of downstream targets (e.g., >9,000 deregulated genes and ~2,900 differentially spliced transcripts [F2]), producing convergent neurodevelopmental disruptions that cannot be separated clinically without exome or genome sequencing [F2, F15].",report.md,39,39,False
+phenotypic_differential_matching,0be24418b1a14b4b:0:phenotypic_differential_matching:0,diagnostic_confidence,low,"   - *Confidence of bedside distinction*: **Very Low (<0.30)**. Transcriptome deregulations affect thousands of downstream targets (e.g., >9,000 deregulated genes and ~2,900 differentially spliced transcripts [F2]), producing convergent neurodevelopmental disruptions that cannot be separated clinically without exome or genome sequencing [F2, F15].",report.md,39,39,True
+phenotypic_differential_matching,0be24418b1a14b4b:0:phenotypic_differential_matching:1,target_disease,Fliedner-Zweier syndrome,"# Clinical Identification and Phenotypic Delineation of Fliedner-Zweier Syndrome (SCAF4-Related Neurodevelopmental Disorder)
+
+Fliedner-Zweier syndrome (FZS; OMIM #620511) is an autosomal dominant neurodevelopmental condition caused by heterozygous loss-of-function variants in *SCAF4* (SR-related CTD-associated factor 4), which encodes an RNA polymerase II CTD-binding factor critical for mRNA transcription termination and suppression of premature cleavage and polyadenylation [F1, F2]. While early ascertainment suggested a uniform, recognizable presentation, recent cohort expansions encompassing at least 68 to 69 cumulative individuals across international series have revealed significant variable expressivity and incomplete penetrance [F1, F2, F18].
+
+---
+
+## 1. Phenotypic Spectrum and Documented Clinical Frequencies
+
+Identifying an individual with Fliedner-Zweier syndrome from clinical phenotype alone is exceptionally difficult because its core features overlap broadly with common neurodevelopmental presentations [F2, F5]. Across documented cohorts, prominent developmental delay and expressive speech impairment represent the most consistently penetrant features, even in individuals with preserved or borderline general intellectual abilities [F4, F5, F7].
+
+### Cohort-Level Frequencies and Verbatim Phenotypes
+
+| Cohort / Source | Verbatim Clinical Finding | Human Phenotype Ontology (HPO) Term | Count / Assessed Individuals (Fraction, %) | Finding Attribution |
+| :--- | :--- | :--- | :--- | :--- |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Developmental delay / intellectual disability spectrum (ranging from normal IQ to severe ID) | Intellectual disability (HP:0001249) / Global developmental delay (HP:0001263) | Evaluated across an expanded multicenter cohort of 50 novel individuals (incomplete penetrance demonstrated; normal IQ observed in transmitting carriers and select probands) | [F1, F4, F7] |
+| **Schmid et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2)) | Inherited loss-of-function transmission | Autosomal dominant inheritance (HP:0000006) | 13/50 inherited cases (with 23/50 de novo cases established in cohort) | [F1, F11, F15] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Developmental delay and/or intellectual disability | Intellectual disability (HP:0001249) | 13/13 (100%) in initial discovery series (9 distinct pathogenic germline variants identified) | [F4, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Speech and language impairment | Speech delay (HP:0000750) | 13/13 (100%) in initial discovery series | [F7, F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Muscular hypotonia | Muscular hypotonia (HP:0001252) | 9/12 (75%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Behavioral abnormalities (e.g., ADHD, autistic features) | Abnormal repetitive mannerism / Behavioral abnormality (HP:0000708) | 8/11 (73%) | [F10] |
+| **Fliedner et al. (2020)**<br>(PMID: [33232675](https://pubmed.ncbi.nlm.nih.gov/33232675/); DOI: [10.1016/j.ajhg.2020.07.003](https://doi.org/10.1016/j.ajhg.2020.07.003)) | Facial dysmorphic features | Facial dysmorphism (HP:0001999) | 11/13 (85%) | [F10] |
+| **Fliedner et al. (2020)**<br>(DOI: [10.1016/j.ajhg.2020.06.019](https://doi.org/10.1016/j.ajhg.2020.06.019)) | Inherited transmission in discovery series | Autosomal dominant inheritance (HP:0000006) | 1/9 (11%) families (8/9 de novo) | [F1, F11] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Seizures / focal epilepsy | Focal-onset seizure (HP:0007359) / Seizure (HP:0001250) | 3/3 (100%) in epilepsy-ascertained series (median onset age: 4 years) | [F9, F13] |
+| **Hu et al. (2024)**<br>(DOI: [10.1016/j.seizure.2023.09.006](https://doi.org/10.1016/j.seizure.2023.09.006)) | Normal brain MRI | Normal brain morphology (HP:0002534) | 2/3 (66.7%) structurally normal on neuroimaging | [F9] |
+| **Schmid et al. (2025)**; **Chen et al. (2025)**<br>(DOI: [10.1038/s41431-024-01760-2](https://doi.org/10.1038/s41431-024-01760-2); [10.3389/fgene.2025.1487352](https://doi.org/10.3389/fgene.2025.1487352)) | Skeletal abnormalities (clubfoot, scoliosis, hip dysplasia) | Talipes equinovarus (HP:0001762), Scoliosis (HP:0002650), Hip dysplasia (HP:0001385) | Recurrent core syndromic finding noted across 50 novel cases and cumulative 69 reviewed patients | [F2, F5, F12] |
+| **Yan et al. (2025)**<br>(PMID: [41811042](https://pubmed.ncbi.nlm.nih.gov/41811042/)) | Isolated de novo Chinese case evaluation | Global developmental delay (HP:0001263) | 1/1 evaluated proband (age 4.58 years) | [F1, F2, F10] |
+
+---
+
+## 2. Discriminative Features and Clinical Differential Diagnosis
+
+Bedside differentiation of Fliedner-Zweier syndrome solely on clinical criteria is **not achievable with moderate or high clinical confidence**, and the confidence of bedside distinction without sequencing is very low [F2, F15]. Fliedner-Zweier syndrome exhibits extensive phenotypic pleiotropy: affected individuals present with non-specific developmental delay, a wide cognitive spectrum (from completely normal IQ or borderline intellectual disability to severe ID), variable speech delay, behavioral abnormalities (ADHD, autism spectrum traits), skeletal anomalies, and seizures [F1, F2, F4, F5].",report.md,1,32,True
+phenotypic_differential_matching,0be24418b1a14b4b:0:phenotypic_differential_matching:1,mimic_disease,Coffin-Siris Syndrome,"2. **Chromatin Remodeling Syndromes (e.g., Coffin-Siris Syndrome, *ARID1B* / *SMARCA4*)**:",report.md,40,40,True
+phenotypic_differential_matching,0be24418b1a14b4b:0:phenotypic_differential_matching:1,overlapping_phenotypes,"muscular hypotonia, intellectual impairment, expressive language delay, subtle craniofacial dysmorphisms","   - *Overlapping findings*: Muscular hypotonia, intellectual impairment, expressive language delay, and subtle craniofacial dysmorphisms [F15].",report.md,41,41,False
+phenotypic_differential_matching,0be24418b1a14b4b:0:phenotypic_differential_matching:1,discriminating_phenotype,"Fifth-digit nail/distal phalanx hypoplasia, pronounced facial coarsening, structural internal organ malformations","   - *Discriminating clues*: Coffin-Siris and related SWI/SNFopathies frequently show fifth-digit nail/distal phalanx hypoplasia, pronounced coarse facial coarsening, and structural internal organ malformations, whereas FZS dysmorphism remains subtle and unclassifiable [F10, F15].",report.md,42,42,False
+phenotypic_differential_matching,0be24418b1a14b4b:0:phenotypic_differential_matching:1,discriminating_logic,"Presence of fifth-digit nail/distal phalanx hypoplasia, facial coarsening, and internal organ malformations points toward Coffin-Siris, whereas FZS dysmorphism remains subtle and unclassifiable.","   - *Discriminating clues*: Coffin-Siris and related SWI/SNFopathies frequently show fifth-digit nail/distal phalanx hypoplasia, pronounced coarse facial coarsening, and structural internal organ malformations, whereas FZS dysmorphism remains subtle and unclassifiable [F10, F15].
+   - *Confidence of bedside distinction*: **Low to Moderate**. While digit hypoplasia points toward Coffin-Siris, genomic sequencing remains mandatory [F2, F15].",report.md,42,43,False
+phenotypic_differential_matching,0be24418b1a14b4b:0:phenotypic_differential_matching:1,diagnostic_confidence,moderate,"   - *Confidence of bedside distinction*: **Low to Moderate**. While digit hypoplasia points toward Coffin-Siris, genomic sequencing remains mandatory [F2, F15].",report.md,43,43,True
+
+```

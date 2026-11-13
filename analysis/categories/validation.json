@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "categories": 13,
+  "concepts": 205,
+  "local_links": 1091,
+  "checks": [
+    "all concepts have one primary category",
+    "category and subgroup IDs are valid",
+    "definitions and frequencies match the original analysis",
+    "CSV files match structured data",
+    "category totals match each course inventory",
+    "input hashes match",
+    "local links and concept anchors exist"
+  ]
+}

@@ -1,0 +1,26 @@
+# Homework 1 public teaching repository: assignments/OMIM_621535/grill_run/tasks/0003_ground_0/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621535/grill_run/tasks/0003_ground_0/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621535/grill_run/tasks/0003_ground_0/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "term": "SCA52",
+  "definition": "Spinocerebellar ataxia 52 (SCA52) is an autosomal dominant form of spinocerebellar ataxia caused by heterozygous mutation in the RAB3A (Ras-related protein Rab-3A) gene.",
+  "source": {
+    "title": "From genes to neuropathology: Integrative perspectives on the spectrum of spinocerebellar ataxias",
+    "authors": [
+      "JJ de Vries",
+      "MJ da Costa Caiado"
+    ],
+    "year": 2026,
+    "journal": null,
+    "doi": "10.5414/np301726",
+    "pmid": "42290274",
+    "pmc": null,
+    "url": "https://search.proquest.com/openview/0aa50d82ac7d4e1bb43aa33a08b43adb/1?pq-origsite=gscholar&cbl=2044862",
+    "quote": "The most recent addition is SCA52, caused by heterozygous mutation in the RAB3A (Ras-related"
+  }
+}
+```

@@ -1,0 +1,2078 @@
+{
+  "checked": 230,
+  "id_found": 230,
+  "no_visible_id": 0,
+  "mismatched_ids": [],
+  "documents": [
+    {
+      "id": "arxiv-2302-04761",
+      "expected_arxiv_id": "2302.04761",
+      "first_pages_arxiv_ids": [
+        "2302.04761"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2210-03629",
+      "expected_arxiv_id": "2210.03629",
+      "first_pages_arxiv_ids": [
+        "2210.03629"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2403-15452",
+      "expected_arxiv_id": "2403.15452",
+      "first_pages_arxiv_ids": [
+        "2403.15452"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2402-01030",
+      "expected_arxiv_id": "2402.01030",
+      "first_pages_arxiv_ids": [
+        "2402.01030"
+      ],
+      "id_found": true,
+      "pdf_title": " Executable Code Actions Elicit Better LLM Agents "
+    },
+    {
+      "id": "arxiv-2411-15100",
+      "expected_arxiv_id": "2411.15100",
+      "first_pages_arxiv_ids": [
+        "2411.15100"
+      ],
+      "id_found": true,
+      "pdf_title": "XGrammar: Flexible and Efficient Structured Generation Engine For Large Language Models"
+    },
+    {
+      "id": "arxiv-2602-12670",
+      "expected_arxiv_id": "2602.12670",
+      "first_pages_arxiv_ids": [
+        "2602.12670"
+      ],
+      "id_found": true,
+      "pdf_title": "SkillsBench: Benchmarking How Well Agent Skills Work Across Diverse Tasks"
+    },
+    {
+      "id": "arxiv-2310-08560",
+      "expected_arxiv_id": "2310.08560",
+      "first_pages_arxiv_ids": [
+        "2310.08560"
+      ],
+      "id_found": true,
+      "pdf_title": "MemGPT: Towards LLMs as Operating Systems"
+    },
+    {
+      "id": "arxiv-2409-07429",
+      "expected_arxiv_id": "2409.07429",
+      "first_pages_arxiv_ids": [
+        "2409.07429"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2504-06821",
+      "expected_arxiv_id": "2504.06821",
+      "first_pages_arxiv_ids": [
+        "2504.06821"
+      ],
+      "id_found": true,
+      "pdf_title": "Inducing Programmatic Skills for Agentic Tasks"
+    },
+    {
+      "id": "arxiv-2509-25140",
+      "expected_arxiv_id": "2509.25140",
+      "first_pages_arxiv_ids": [
+        "2509.25140"
+      ],
+      "id_found": true,
+      "pdf_title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory"
+    },
+    {
+      "id": "arxiv-2205-10625",
+      "expected_arxiv_id": "2205.10625",
+      "first_pages_arxiv_ids": [
+        "2205.10625"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2210-02406",
+      "expected_arxiv_id": "2210.02406",
+      "first_pages_arxiv_ids": [
+        "2210.02406"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2209-07753",
+      "expected_arxiv_id": "2209.07753",
+      "first_pages_arxiv_ids": [
+        "2209.07753"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2204-01691",
+      "expected_arxiv_id": "2204.01691",
+      "first_pages_arxiv_ids": [
+        "2204.01691"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2503-09572",
+      "expected_arxiv_id": "2503.09572",
+      "first_pages_arxiv_ids": [
+        "2503.09572"
+      ],
+      "id_found": true,
+      "pdf_title": "Plan-and-Act: Improving Planning of Agents for Long-Horizon Tasks"
+    },
+    {
+      "id": "arxiv-2506-07976",
+      "expected_arxiv_id": "2506.07976",
+      "first_pages_arxiv_ids": [
+        "2506.07976"
+      ],
+      "id_found": true,
+      "pdf_title": "Thinking vs. Doing: Agents that Reason by Scaling Test-Time Interaction"
+    },
+    {
+      "id": "arxiv-2602-16699",
+      "expected_arxiv_id": "2602.16699",
+      "first_pages_arxiv_ids": [
+        "2602.16699"
+      ],
+      "id_found": true,
+      "pdf_title": "Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents"
+    },
+    {
+      "id": "arxiv-2605-06639",
+      "expected_arxiv_id": "2605.06639",
+      "first_pages_arxiv_ids": [
+        "2605.06639"
+      ],
+      "id_found": true,
+      "pdf_title": "Recursive Agent Optimization"
+    },
+    {
+      "id": "arxiv-2606-01533",
+      "expected_arxiv_id": "2606.01533",
+      "first_pages_arxiv_ids": [
+        "2606.01533"
+      ],
+      "id_found": true,
+      "pdf_title": "Multi-Agent Computer Use"
+    },
+    {
+      "id": "arxiv-2307-13854",
+      "expected_arxiv_id": "2307.13854",
+      "first_pages_arxiv_ids": [
+        "2307.13854"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2401-13649",
+      "expected_arxiv_id": "2401.13649",
+      "first_pages_arxiv_ids": [
+        "2401.13649"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2404-07972",
+      "expected_arxiv_id": "2404.07972",
+      "first_pages_arxiv_ids": [
+        "2404.07972"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2508-09123",
+      "expected_arxiv_id": "2508.09123",
+      "first_pages_arxiv_ids": [
+        "2508.09123"
+      ],
+      "id_found": true,
+      "pdf_title": "OpenCUA: Open Foundations for Computer-Use Agents"
+    },
+    {
+      "id": "arxiv-2605-25624",
+      "expected_arxiv_id": "2605.25624",
+      "first_pages_arxiv_ids": [
+        "2605.25624"
+      ],
+      "id_found": true,
+      "pdf_title": "CUA-Gym: Scaling Verifiable Training Environments and Tasks for Computer-Use Agents"
+    },
+    {
+      "id": "arxiv-2308-08998",
+      "expected_arxiv_id": "2308.08998",
+      "first_pages_arxiv_ids": [
+        "2308.08998"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2312-06585",
+      "expected_arxiv_id": "2312.06585",
+      "first_pages_arxiv_ids": [
+        "2312.06585"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2402-03300",
+      "expected_arxiv_id": "2402.03300",
+      "first_pages_arxiv_ids": [
+        "2402.03300"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2503-20783",
+      "expected_arxiv_id": "2503.20783",
+      "first_pages_arxiv_ids": [
+        "2503.20783"
+      ],
+      "id_found": true,
+      "pdf_title": "Understanding R1-Zero-Like Training: A Critical Perspective"
+    },
+    {
+      "id": "arxiv-2504-12516",
+      "expected_arxiv_id": "2504.12516",
+      "first_pages_arxiv_ids": [
+        "2504.12516"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2506-11763",
+      "expected_arxiv_id": "2506.11763",
+      "first_pages_arxiv_ids": [
+        "2506.11763"
+      ],
+      "id_found": true,
+      "pdf_title": "DeepResearch Bench: A Comprehensive Benchmark for Deep Research Agents"
+    },
+    {
+      "id": "arxiv-2510-24701",
+      "expected_arxiv_id": "2510.24701",
+      "first_pages_arxiv_ids": [
+        "2510.24701"
+      ],
+      "id_found": true,
+      "pdf_title": "Tongyi DeepResearch Technical Report"
+    },
+    {
+      "id": "arxiv-2511-19399",
+      "expected_arxiv_id": "2511.19399",
+      "first_pages_arxiv_ids": [
+        "2511.19399"
+      ],
+      "id_found": true,
+      "pdf_title": "DR Tulu: Reinforcement Learning with Evolving Rubrics for Deep Research"
+    },
+    {
+      "id": "arxiv-2603-04384",
+      "expected_arxiv_id": "2603.04384",
+      "first_pages_arxiv_ids": [
+        "2603.04384"
+      ],
+      "id_found": true,
+      "pdf_title": "AgentIR: Reasoning-Aware Retrieval for Deep Research Agents"
+    },
+    {
+      "id": "arxiv-2604-11072",
+      "expected_arxiv_id": "2604.11072",
+      "first_pages_arxiv_ids": [
+        "2604.11072"
+      ],
+      "id_found": true,
+      "pdf_title": "Hodoscope: Unsupervised Monitoring for AI Misbehaviors"
+    },
+    {
+      "id": "arxiv-2603-01203",
+      "expected_arxiv_id": "2603.01203",
+      "first_pages_arxiv_ids": [
+        "2603.01203"
+      ],
+      "id_found": true,
+      "pdf_title": "How Well Does Agent Development Reflect Real-World Work?"
+    },
+    {
+      "id": "arxiv-2510-04374",
+      "expected_arxiv_id": "2510.04374",
+      "first_pages_arxiv_ids": [
+        "2510.04374"
+      ],
+      "id_found": true,
+      "pdf_title": "GDPval: Evaluating AI Model Performance on Real-World Economically Valuable Tasks"
+    },
+    {
+      "id": "arxiv-2606-09833",
+      "expected_arxiv_id": "2606.09833",
+      "first_pages_arxiv_ids": [
+        "2606.09833"
+      ],
+      "id_found": true,
+      "pdf_title": "CollabSkill: Evaluating Human-Agent Collaboration On Real-World Tasks"
+    },
+    {
+      "id": "arxiv-2609-04141",
+      "expected_arxiv_id": "2609.04141",
+      "first_pages_arxiv_ids": [
+        "2609.04141"
+      ],
+      "id_found": true,
+      "pdf_title": "Efficient Test-Time Adaptation through Human-AI Interaction"
+    },
+    {
+      "id": "arxiv-2506-06576",
+      "expected_arxiv_id": "2506.06576",
+      "first_pages_arxiv_ids": [
+        "2506.06576"
+      ],
+      "id_found": true,
+      "pdf_title": "Future of Work with AI Agents: Auditing Automation and Augmentation Potential across the U.S. Workforce"
+    },
+    {
+      "id": "arxiv-2305-14325",
+      "expected_arxiv_id": "2305.14325",
+      "first_pages_arxiv_ids": [
+        "2305.14325"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2609-21032",
+      "expected_arxiv_id": "2609.21032",
+      "first_pages_arxiv_ids": [
+        "2609.21032"
+      ],
+      "id_found": true,
+      "pdf_title": "Scaling Discovery through Test-Time Communication"
+    },
+    {
+      "id": "arxiv-2503-15478",
+      "expected_arxiv_id": "2503.15478",
+      "first_pages_arxiv_ids": [
+        "2503.15478"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2503-14481",
+      "expected_arxiv_id": "2503.14481",
+      "first_pages_arxiv_ids": [
+        "2503.14481"
+      ],
+      "id_found": true,
+      "pdf_title": "Don't lie to your friends: Learning what you know from collaborative self-play"
+    },
+    {
+      "id": "arxiv-2402-06782",
+      "expected_arxiv_id": "2402.06782",
+      "first_pages_arxiv_ids": [
+        "2402.06782"
+      ],
+      "id_found": true,
+      "pdf_title": "Debating with More Persuasive LLMs Leads to More Truthful Answers"
+    },
+    {
+      "id": "arxiv-2407-21787v3",
+      "expected_arxiv_id": "2407.21787",
+      "first_pages_arxiv_ids": [
+        "2407.21787"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2510-01123v1",
+      "expected_arxiv_id": "2510.01123",
+      "first_pages_arxiv_ids": [
+        "2510.01123"
+      ],
+      "id_found": true,
+      "pdf_title": "Rethinking Thinking Tokens: LLMs as Improvement Operators"
+    },
+    {
+      "id": "arxiv-2604-16529v1",
+      "expected_arxiv_id": "2604.16529",
+      "first_pages_arxiv_ids": [
+        "2604.16529"
+      ],
+      "id_found": true,
+      "pdf_title": "Scaling Test-Time Compute for Agentic Coding"
+    },
+    {
+      "id": "arxiv-2603-28052v1",
+      "expected_arxiv_id": "2603.28052",
+      "first_pages_arxiv_ids": [
+        "2603.28052"
+      ],
+      "id_found": true,
+      "pdf_title": "Meta-Harness: End-to-End Optimization of Model Harnesses"
+    },
+    {
+      "id": "arxiv-2401-09670",
+      "expected_arxiv_id": "2401.09670",
+      "first_pages_arxiv_ids": [
+        "2401.09670"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-1706-03762",
+      "expected_arxiv_id": "1706.03762",
+      "first_pages_arxiv_ids": [
+        "1706.03762"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2004-05150",
+      "expected_arxiv_id": "2004.05150",
+      "first_pages_arxiv_ids": [
+        "2004.05150"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2006-16236",
+      "expected_arxiv_id": "2006.16236",
+      "first_pages_arxiv_ids": [
+        "2006.16236"
+      ],
+      "id_found": true,
+      "pdf_title": "Transformers are RNNs:  Fast Autoregressive Transformers with Linear Attention"
+    },
+    {
+      "id": "arxiv-2102-11174",
+      "expected_arxiv_id": "2102.11174",
+      "first_pages_arxiv_ids": [
+        "2102.11174"
+      ],
+      "id_found": true,
+      "pdf_title": "Linear Transformers Are Secretly Fast Weight Programmers"
+    },
+    {
+      "id": "arxiv-2412-06464",
+      "expected_arxiv_id": "2412.06464",
+      "first_pages_arxiv_ids": [
+        "2412.06464"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2510-26692",
+      "expected_arxiv_id": "2510.26692",
+      "first_pages_arxiv_ids": [
+        "2510.26692"
+      ],
+      "id_found": true,
+      "pdf_title": "Kimi Linear: An Expressive, Efficient Attention Architecture"
+    },
+    {
+      "id": "arxiv-2512-02556",
+      "expected_arxiv_id": "2512.02556",
+      "first_pages_arxiv_ids": [
+        "2512.02556"
+      ],
+      "id_found": true,
+      "pdf_title": "DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models"
+    },
+    {
+      "id": "arxiv-2305-13245",
+      "expected_arxiv_id": "2305.13245",
+      "first_pages_arxiv_ids": [
+        "2305.13245"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2405-04434",
+      "expected_arxiv_id": "2405.04434",
+      "first_pages_arxiv_ids": [
+        "2405.04434"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2104-09864",
+      "expected_arxiv_id": "2104.09864",
+      "first_pages_arxiv_ids": [
+        "2104.09864"
+      ],
+      "id_found": true,
+      "pdf_title": "RoFormer"
+    },
+    {
+      "id": "arxiv-2305-19466",
+      "expected_arxiv_id": "2305.19466",
+      "first_pages_arxiv_ids": [
+        "2305.19466"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2306-15595",
+      "expected_arxiv_id": "2306.15595",
+      "first_pages_arxiv_ids": [
+        "2306.15595"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2309-00071",
+      "expected_arxiv_id": "2309.00071",
+      "first_pages_arxiv_ids": [
+        "2309.00071"
+      ],
+      "id_found": true,
+      "pdf_title": "YaRN: Efficient Context Window Extension of Large Language Models"
+    },
+    {
+      "id": "arxiv-2602-15763",
+      "expected_arxiv_id": "2602.15763",
+      "first_pages_arxiv_ids": [
+        "2602.15763"
+      ],
+      "id_found": true,
+      "pdf_title": "GLM-5: from Vibe Coding to Agentic Engineering"
+    },
+    {
+      "id": "arxiv-2607-24653",
+      "expected_arxiv_id": "2607.24653",
+      "first_pages_arxiv_ids": [
+        "2607.24653"
+      ],
+      "id_found": true,
+      "pdf_title": "Kimi K3: Open Frontier Intelligence"
+    },
+    {
+      "id": "arxiv-2606-19348",
+      "expected_arxiv_id": "2606.19348",
+      "first_pages_arxiv_ids": [
+        "2606.19348"
+      ],
+      "id_found": true,
+      "pdf_title": "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence"
+    },
+    {
+      "id": "arxiv-2310-01889",
+      "expected_arxiv_id": "2310.01889",
+      "first_pages_arxiv_ids": [
+        "2310.01889"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2311-04934",
+      "expected_arxiv_id": "2311.04934",
+      "first_pages_arxiv_ids": [
+        "2311.04934"
+      ],
+      "id_found": true,
+      "pdf_title": "Prompt Cache: Modular Attention Reuse for Low-Latency Inference"
+    },
+    {
+      "id": "arxiv-2606-13361",
+      "expected_arxiv_id": "2606.13361",
+      "first_pages_arxiv_ids": [
+        "2606.13361"
+      ],
+      "id_found": true,
+      "pdf_title": "Can I Buy Your KV Cache?"
+    },
+    {
+      "id": "arxiv-2309-06180",
+      "expected_arxiv_id": "2309.06180",
+      "first_pages_arxiv_ids": [
+        "2309.06180"
+      ],
+      "id_found": true,
+      "pdf_title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+    },
+    {
+      "id": "arxiv-2312-07104",
+      "expected_arxiv_id": "2312.07104",
+      "first_pages_arxiv_ids": [
+        "2312.07104"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2509-13313",
+      "expected_arxiv_id": "2509.13313",
+      "first_pages_arxiv_ids": [
+        "2509.13313"
+      ],
+      "id_found": true,
+      "pdf_title": "ReSum: Unlocking Long-Horizon Search Intelligence via Context Summarization"
+    },
+    {
+      "id": "arxiv-2504-19413",
+      "expected_arxiv_id": "2504.19413",
+      "first_pages_arxiv_ids": [
+        "2504.19413"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2303-11366",
+      "expected_arxiv_id": "2303.11366",
+      "first_pages_arxiv_ids": [
+        "2303.11366"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2308-10144",
+      "expected_arxiv_id": "2308.10144",
+      "first_pages_arxiv_ids": [
+        "2308.10144"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2410-08164",
+      "expected_arxiv_id": "2410.08164",
+      "first_pages_arxiv_ids": [
+        "2410.08164"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2306-07863",
+      "expected_arxiv_id": "2306.07863",
+      "first_pages_arxiv_ids": [
+        "2306.07863"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2406-14596",
+      "expected_arxiv_id": "2406.14596",
+      "first_pages_arxiv_ids": [
+        "2406.14596"
+      ],
+      "id_found": true,
+      "pdf_title": "VLM Agents Generate Their Own Memories: Distilling Experience into Embodied Programs of Thought"
+    },
+    {
+      "id": "arxiv-2305-16291",
+      "expected_arxiv_id": "2305.16291",
+      "first_pages_arxiv_ids": [
+        "2305.16291"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2006-08381",
+      "expected_arxiv_id": "2006.08381",
+      "first_pages_arxiv_ids": [
+        "2006.08381"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2211-16605",
+      "expected_arxiv_id": "2211.16605",
+      "first_pages_arxiv_ids": [
+        "2211.16605"
+      ],
+      "id_found": true,
+      "pdf_title": "Top-Down Synthesis for Library Learning"
+    },
+    {
+      "id": "arxiv-2106-11053",
+      "expected_arxiv_id": "2106.11053",
+      "first_pages_arxiv_ids": [
+        "2106.11053"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2310-19791",
+      "expected_arxiv_id": "2310.19791",
+      "first_pages_arxiv_ids": [
+        "2310.19791"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2504-07079",
+      "expected_arxiv_id": "2504.07079",
+      "first_pages_arxiv_ids": [
+        "2504.07079"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2510-15863",
+      "expected_arxiv_id": "2510.15863",
+      "first_pages_arxiv_ids": [
+        "2510.15863"
+      ],
+      "id_found": true,
+      "pdf_title": "PolySkill: Learning Generalizable Skills Through Polymorphic Abstraction"
+    },
+    {
+      "id": "arxiv-2401-12869",
+      "expected_arxiv_id": "2401.12869",
+      "first_pages_arxiv_ids": [
+        "2401.12869"
+      ],
+      "id_found": true,
+      "pdf_title": "TroVE: Inducing Verifiable and Efficient Toolboxes for Solving Programmatic Tasks"
+    },
+    {
+      "id": "arxiv-2606-15390",
+      "expected_arxiv_id": "2606.15390",
+      "first_pages_arxiv_ids": [
+        "2606.15390"
+      ],
+      "id_found": true,
+      "pdf_title": "Not All Skills Help: Measuring and Repairing Agent Knowledge"
+    },
+    {
+      "id": "arxiv-2205-11916",
+      "expected_arxiv_id": "2205.11916",
+      "first_pages_arxiv_ids": [
+        "2205.11916"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2305-04091",
+      "expected_arxiv_id": "2305.04091",
+      "first_pages_arxiv_ids": [
+        "2305.04091"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2203-14465",
+      "expected_arxiv_id": "2203.14465",
+      "first_pages_arxiv_ids": [
+        "2203.14465"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2501-12948",
+      "expected_arxiv_id": "2501.12948",
+      "first_pages_arxiv_ids": [
+        "2501.12948"
+      ],
+      "id_found": true,
+      "pdf_title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning"
+    },
+    {
+      "id": "arxiv-2512-24601",
+      "expected_arxiv_id": "2512.24601",
+      "first_pages_arxiv_ids": [
+        "2512.24601"
+      ],
+      "id_found": true,
+      "pdf_title": "Recursive Language Models"
+    },
+    {
+      "id": "arxiv-2206-10498",
+      "expected_arxiv_id": "2206.10498",
+      "first_pages_arxiv_ids": [
+        "2206.10498"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2209-11302",
+      "expected_arxiv_id": "2209.11302",
+      "first_pages_arxiv_ids": [
+        "2209.11302"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2210-02875",
+      "expected_arxiv_id": "2210.02875",
+      "first_pages_arxiv_ids": [
+        "2210.02875"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2410-05243",
+      "expected_arxiv_id": "2410.05243",
+      "first_pages_arxiv_ids": [
+        "2410.05243"
+      ],
+      "id_found": true,
+      "pdf_title": "Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents"
+    },
+    {
+      "id": "arxiv-2201-07207",
+      "expected_arxiv_id": "2201.07207",
+      "first_pages_arxiv_ids": [
+        "2201.07207"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2212-04088",
+      "expected_arxiv_id": "2212.04088",
+      "first_pages_arxiv_ids": [
+        "2212.04088"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2207-05608",
+      "expected_arxiv_id": "2207.05608",
+      "first_pages_arxiv_ids": [
+        "2207.05608"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2305-17390",
+      "expected_arxiv_id": "2305.17390",
+      "first_pages_arxiv_ids": [
+        "2305.17390"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2502-08235",
+      "expected_arxiv_id": "2502.08235",
+      "first_pages_arxiv_ids": [
+        "2502.08235"
+      ],
+      "id_found": true,
+      "pdf_title": "The Danger of Overthinking: Examining the Reasoning-Action Dilemma in Agentic Tasks"
+    },
+    {
+      "id": "arxiv-2511-02208",
+      "expected_arxiv_id": "2511.02208",
+      "first_pages_arxiv_ids": [
+        "2511.02208"
+      ],
+      "id_found": true,
+      "pdf_title": "Training Proactive and Personalized LLM Agents"
+    },
+    {
+      "id": "arxiv-2502-15840",
+      "expected_arxiv_id": "2502.15840",
+      "first_pages_arxiv_ids": [
+        "2502.15840"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2509-09677",
+      "expected_arxiv_id": "2509.09677",
+      "first_pages_arxiv_ids": [
+        "2509.09677"
+      ],
+      "id_found": true,
+      "pdf_title": "The Illusion of Diminishing Returns: Measuring Long Horizon Execution in LLMs"
+    },
+    {
+      "id": "arxiv-2311-05772",
+      "expected_arxiv_id": "2311.05772",
+      "first_pages_arxiv_ids": [
+        "2311.05772"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2605-14290",
+      "expected_arxiv_id": "2605.14290",
+      "first_pages_arxiv_ids": [
+        "2605.14290"
+      ],
+      "id_found": true,
+      "pdf_title": "Web Agents Should Adopt the Compile-and-Execute Paradigm"
+    },
+    {
+      "id": "arxiv-2402-01622",
+      "expected_arxiv_id": "2402.01622",
+      "first_pages_arxiv_ids": [
+        "2402.01622"
+      ],
+      "id_found": true,
+      "pdf_title": "TravelPlanner: A Benchmark for Real-World Planning with Language Agents"
+    },
+    {
+      "id": "arxiv-2402-00838",
+      "expected_arxiv_id": "2402.00838",
+      "first_pages_arxiv_ids": [
+        "2402.00838"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2305-06161",
+      "expected_arxiv_id": "2305.06161",
+      "first_pages_arxiv_ids": [
+        "2305.06161"
+      ],
+      "id_found": true,
+      "pdf_title": "StarCoder: may the source be with you!"
+    },
+    {
+      "id": "arxiv-2107-03374",
+      "expected_arxiv_id": "2107.03374",
+      "first_pages_arxiv_ids": [
+        "2107.03374"
+      ],
+      "id_found": true,
+      "pdf_title": "Evaluating Large Language Models Trained on Code"
+    },
+    {
+      "id": "arxiv-2308-12950",
+      "expected_arxiv_id": "2308.12950",
+      "first_pages_arxiv_ids": [
+        "2308.12950"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2409-12186",
+      "expected_arxiv_id": "2409.12186",
+      "first_pages_arxiv_ids": [
+        "2409.12186"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2204-05999",
+      "expected_arxiv_id": "2204.05999",
+      "first_pages_arxiv_ids": [
+        "2204.05999"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2207-14255",
+      "expected_arxiv_id": "2207.14255",
+      "first_pages_arxiv_ids": [
+        "2207.14255"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2308-07124",
+      "expected_arxiv_id": "2308.07124",
+      "first_pages_arxiv_ids": [
+        "2308.07124"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2207-01780",
+      "expected_arxiv_id": "2207.01780",
+      "first_pages_arxiv_ids": [
+        "2207.01780"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2009-10297",
+      "expected_arxiv_id": "2009.10297",
+      "first_pages_arxiv_ids": [
+        "2009.10297"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2305-01210",
+      "expected_arxiv_id": "2305.01210",
+      "first_pages_arxiv_ids": [
+        "2305.01210"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2203-07814",
+      "expected_arxiv_id": "2203.07814",
+      "first_pages_arxiv_ids": [
+        "2203.07814"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2401-15963",
+      "expected_arxiv_id": "2401.15963",
+      "first_pages_arxiv_ids": [
+        "2401.15963"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2405-15793",
+      "expected_arxiv_id": "2405.15793",
+      "first_pages_arxiv_ids": [
+        "2405.15793"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2407-01489",
+      "expected_arxiv_id": "2407.01489",
+      "first_pages_arxiv_ids": [
+        "2407.01489"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2503-09089",
+      "expected_arxiv_id": "2503.09089",
+      "first_pages_arxiv_ids": [
+        "2503.09089"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2310-06770",
+      "expected_arxiv_id": "2310.06770",
+      "first_pages_arxiv_ids": [
+        "2310.06770"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2412-21139",
+      "expected_arxiv_id": "2412.21139",
+      "first_pages_arxiv_ids": [
+        "2412.21139"
+      ],
+      "id_found": true,
+      "pdf_title": "Training Software Engineering Agents and Verifiers with SWE-Gym"
+    },
+    {
+      "id": "arxiv-2504-07164",
+      "expected_arxiv_id": "2504.07164",
+      "first_pages_arxiv_ids": [
+        "2504.07164"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2504-21798",
+      "expected_arxiv_id": "2504.21798",
+      "first_pages_arxiv_ids": [
+        "2504.21798"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2504-02605",
+      "expected_arxiv_id": "2504.02605",
+      "first_pages_arxiv_ids": [
+        "2504.02605"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2410-03859",
+      "expected_arxiv_id": "2410.03859",
+      "first_pages_arxiv_ids": [
+        "2410.03859"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2412-01769",
+      "expected_arxiv_id": "2412.01769",
+      "first_pages_arxiv_ids": [
+        "2412.01769"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2605-03546",
+      "expected_arxiv_id": "2605.03546",
+      "first_pages_arxiv_ids": [
+        "2605.03546"
+      ],
+      "id_found": true,
+      "pdf_title": "ProgramBench: Can Language Models Rebuild Programs From Scratch?"
+    },
+    {
+      "id": "arxiv-2603-13428",
+      "expected_arxiv_id": "2603.13428",
+      "first_pages_arxiv_ids": [
+        "2603.13428"
+      ],
+      "id_found": true,
+      "pdf_title": "SWE-Milestone: Evaluating AI Agents on Continuous Software Evolution"
+    },
+    {
+      "id": "arxiv-2406-12952",
+      "expected_arxiv_id": "2406.12952",
+      "first_pages_arxiv_ids": [
+        "2406.12952"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2512-12216",
+      "expected_arxiv_id": "2512.12216",
+      "first_pages_arxiv_ids": [
+        "2512.12216"
+      ],
+      "id_found": true,
+      "pdf_title": "Training Versatile Coding Agents in Synthetic Environments"
+    },
+    {
+      "id": "arxiv-2602-16819",
+      "expected_arxiv_id": "2602.16819",
+      "first_pages_arxiv_ids": [
+        "2602.16819"
+      ],
+      "id_found": true,
+      "pdf_title": "Hybrid-Gym: Training Coding Agents to Generalize Across Tasks"
+    },
+    {
+      "id": "arxiv-2405-15383",
+      "expected_arxiv_id": "2405.15383",
+      "first_pages_arxiv_ids": [
+        "2405.15383"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-1704-04368",
+      "expected_arxiv_id": "1704.04368",
+      "first_pages_arxiv_ids": [
+        "1704.04368"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2207-01206",
+      "expected_arxiv_id": "2207.01206",
+      "first_pages_arxiv_ids": [
+        "2207.01206"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2306-06070",
+      "expected_arxiv_id": "2306.06070",
+      "first_pages_arxiv_ids": [
+        "2306.06070"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2401-13919",
+      "expected_arxiv_id": "2401.13919",
+      "first_pages_arxiv_ids": [
+        "2401.13919"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2504-07981",
+      "expected_arxiv_id": "2504.07981",
+      "first_pages_arxiv_ids": [
+        "2504.07981"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2604-06126",
+      "expected_arxiv_id": "2604.06126",
+      "first_pages_arxiv_ids": [
+        "2604.06126"
+      ],
+      "id_found": true,
+      "pdf_title": "Gym-Anything: Turn any Software into an Agent Environment"
+    },
+    {
+      "id": "arxiv-2604-08516",
+      "expected_arxiv_id": "2604.08516",
+      "first_pages_arxiv_ids": [
+        "2604.08516"
+      ],
+      "id_found": true,
+      "pdf_title": "MolmoWeb: Open Visual Web Agent and Open Data for the Open Web"
+    },
+    {
+      "id": "arxiv-2507-20534",
+      "expected_arxiv_id": "2507.20534",
+      "first_pages_arxiv_ids": [
+        "2507.20534"
+      ],
+      "id_found": true,
+      "pdf_title": "Kimi K2: Open Agentic Intelligence"
+    },
+    {
+      "id": "arxiv-2606-24855",
+      "expected_arxiv_id": "2606.24855",
+      "first_pages_arxiv_ids": [
+        "2606.24855"
+      ],
+      "id_found": true,
+      "pdf_title": "OpenThoughts-Agent: Data Recipes for Agentic Models"
+    },
+    {
+      "id": "arxiv-2510-24702",
+      "expected_arxiv_id": "2510.24702",
+      "first_pages_arxiv_ids": [
+        "2510.24702"
+      ],
+      "id_found": true,
+      "pdf_title": "Agent Data Protocol: Unifying Datasets for Diverse, Effective Fine-tuning of LLM Agents"
+    },
+    {
+      "id": "arxiv-2505-20192",
+      "expected_arxiv_id": "2505.20192",
+      "first_pages_arxiv_ids": [
+        "2505.20192"
+      ],
+      "id_found": true,
+      "pdf_title": "FunReason: Enhancing Large Language Models' Function Calling via Self-Refinement Multiscale Loss and Automated Data Refinement"
+    },
+    {
+      "id": "arxiv-2405-14394",
+      "expected_arxiv_id": "2405.14394",
+      "first_pages_arxiv_ids": [
+        "2405.14394"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2507-07817",
+      "expected_arxiv_id": "2507.07817",
+      "first_pages_arxiv_ids": [
+        "2507.07817"
+      ],
+      "id_found": true,
+      "pdf_title": "On the Effect of Instruction Tuning Loss on Generalization"
+    },
+    {
+      "id": "arxiv-2508-06600",
+      "expected_arxiv_id": "2508.06600",
+      "first_pages_arxiv_ids": [
+        "2508.06600"
+      ],
+      "id_found": true,
+      "pdf_title": "BrowseComp-Plus: A More Fair and Transparent Evaluation Benchmark of Deep-Research Agent"
+    },
+    {
+      "id": "arxiv-2509-13160",
+      "expected_arxiv_id": "2509.13160",
+      "first_pages_arxiv_ids": [
+        "2509.13160"
+      ],
+      "id_found": true,
+      "pdf_title": "FinSearchComp: Towards a Realistic, Expert-Level Evaluation of Financial Search and Reasoning"
+    },
+    {
+      "id": "arxiv-2505-14963",
+      "expected_arxiv_id": "2505.14963",
+      "first_pages_arxiv_ids": [
+        "2505.14963"
+      ],
+      "id_found": true,
+      "pdf_title": "MedBrowseComp: Benchmarking Medical Deep Research and Computer Use"
+    },
+    {
+      "id": "arxiv-2506-13784",
+      "expected_arxiv_id": "2506.13784",
+      "first_pages_arxiv_ids": [
+        "2506.13784"
+      ],
+      "id_found": true,
+      "pdf_title": "ScholarSearch: Benchmarking Scholar Searching Ability of LLMs"
+    },
+    {
+      "id": "arxiv-2604-25256",
+      "expected_arxiv_id": "2604.25256",
+      "first_pages_arxiv_ids": [
+        "2604.25256"
+      ],
+      "id_found": true,
+      "pdf_title": "AutoResearchBench: Benchmarking AI Agents on Complex Scientific Literature Discovery"
+    },
+    {
+      "id": "arxiv-2509-00496",
+      "expected_arxiv_id": "2509.00496",
+      "first_pages_arxiv_ids": [
+        "2509.00496"
+      ],
+      "id_found": true,
+      "pdf_title": "ResearchQA: Evaluating Scholarly Question Answering at Scale Across 75 Fields with Survey-Mined Questions and Rubrics"
+    },
+    {
+      "id": "arxiv-2601-08536",
+      "expected_arxiv_id": "2601.08536",
+      "first_pages_arxiv_ids": [
+        "2601.08536"
+      ],
+      "id_found": true,
+      "pdf_title": "DeepResearch Bench II: Diagnosing Deep Research Agents via Rubrics from Expert Reports"
+    },
+    {
+      "id": "arxiv-2509-13305",
+      "expected_arxiv_id": "2509.13305",
+      "first_pages_arxiv_ids": [
+        "2509.13305"
+      ],
+      "id_found": true,
+      "pdf_title": "WebSailor-V2: Bridging the Chasm to Proprietary Agents via Synthetic Data and Scalable Reinforcement Learning"
+    },
+    {
+      "id": "arxiv-2505-22648",
+      "expected_arxiv_id": "2505.22648",
+      "first_pages_arxiv_ids": [
+        "2505.22648"
+      ],
+      "id_found": true,
+      "pdf_title": "WebDancer: Towards Autonomous Information Seeking Agency"
+    },
+    {
+      "id": "arxiv-2509-13310",
+      "expected_arxiv_id": "2509.13310",
+      "first_pages_arxiv_ids": [
+        "2509.13310"
+      ],
+      "id_found": true,
+      "pdf_title": "Scaling Agents via Continual Pre-training"
+    },
+    {
+      "id": "arxiv-2503-09516",
+      "expected_arxiv_id": "2503.09516",
+      "first_pages_arxiv_ids": [
+        "2503.09516"
+      ],
+      "id_found": true,
+      "pdf_title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning"
+    },
+    {
+      "id": "arxiv-2203-02155",
+      "expected_arxiv_id": "2203.02155",
+      "first_pages_arxiv_ids": [
+        "2203.02155"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-1506-02438",
+      "expected_arxiv_id": "1506.02438",
+      "first_pages_arxiv_ids": [
+        "1506.02438"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2305-20050",
+      "expected_arxiv_id": "2305.20050",
+      "first_pages_arxiv_ids": [
+        "2305.20050"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2505-24298",
+      "expected_arxiv_id": "2505.24298",
+      "first_pages_arxiv_ids": [
+        "2505.24298"
+      ],
+      "id_found": true,
+      "pdf_title": "AReaL: A Large-Scale Asynchronous Reinforcement Learning System for Language Reasoning"
+    },
+    {
+      "id": "arxiv-2605-07331",
+      "expected_arxiv_id": "2605.07331",
+      "first_pages_arxiv_ids": [
+        "2605.07331"
+      ],
+      "id_found": true,
+      "pdf_title": "Rethinking Importance Sampling in LLM Policy Optimization: A Cumulative Token Perspective"
+    },
+    {
+      "id": "arxiv-1707-06347",
+      "expected_arxiv_id": "1707.06347",
+      "first_pages_arxiv_ids": [
+        "1707.06347"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2506-13585",
+      "expected_arxiv_id": "2506.13585",
+      "first_pages_arxiv_ids": [
+        "2506.13585"
+      ],
+      "id_found": true,
+      "pdf_title": "MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention"
+    },
+    {
+      "id": "arxiv-2507-18071",
+      "expected_arxiv_id": "2507.18071",
+      "first_pages_arxiv_ids": [
+        "2507.18071"
+      ],
+      "id_found": true,
+      "pdf_title": "Group Sequence Policy Optimization"
+    },
+    {
+      "id": "arxiv-2503-14476",
+      "expected_arxiv_id": "2503.14476",
+      "first_pages_arxiv_ids": [
+        "2503.14476"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2512-07850",
+      "expected_arxiv_id": "2512.07850",
+      "first_pages_arxiv_ids": [
+        "2512.07850"
+      ],
+      "id_found": true,
+      "pdf_title": "SABER: Small Actions, Big Errors - Safeguarding Mutating Steps in LLM Agents"
+    },
+    {
+      "id": "arxiv-2603-08640",
+      "expected_arxiv_id": "2603.08640",
+      "first_pages_arxiv_ids": [
+        "2603.08640"
+      ],
+      "id_found": true,
+      "pdf_title": "PostTrainBench: Can LLM Agents Automate LLM Post-Training?"
+    },
+    {
+      "id": "arxiv-1503-02531",
+      "expected_arxiv_id": "1503.02531",
+      "first_pages_arxiv_ids": [
+        "1503.02531"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2306-13649",
+      "expected_arxiv_id": "2306.13649",
+      "first_pages_arxiv_ids": [
+        "2306.13649"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2601-18734",
+      "expected_arxiv_id": "2601.18734",
+      "first_pages_arxiv_ids": [
+        "2601.18734"
+      ],
+      "id_found": true,
+      "pdf_title": "Self-Distilled Reasoner: On-Policy Self-Distillation for Large Language Models"
+    },
+    {
+      "id": "arxiv-2406-13352v3",
+      "expected_arxiv_id": "2406.13352",
+      "first_pages_arxiv_ids": [
+        "2406.13352"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2309-15817v2",
+      "expected_arxiv_id": "2309.15817",
+      "first_pages_arxiv_ids": [
+        "2309.15817"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2507-20526",
+      "expected_arxiv_id": "2507.20526",
+      "first_pages_arxiv_ids": [
+        "2507.20526"
+      ],
+      "id_found": true,
+      "pdf_title": "Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition"
+    },
+    {
+      "id": "arxiv-2310-08419",
+      "expected_arxiv_id": "2310.08419",
+      "first_pages_arxiv_ids": [
+        "2310.08419"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2312-06942v5",
+      "expected_arxiv_id": "2312.06942",
+      "first_pages_arxiv_ids": [
+        "2312.06942"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2503-11926",
+      "expected_arxiv_id": "2503.11926",
+      "first_pages_arxiv_ids": [
+        "2503.11926"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2410-09024",
+      "expected_arxiv_id": "2410.09024",
+      "first_pages_arxiv_ids": [
+        "2410.09024"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2507-06134v2",
+      "expected_arxiv_id": "2507.06134",
+      "first_pages_arxiv_ids": [
+        "2507.06134"
+      ],
+      "id_found": true,
+      "pdf_title": "OpenAgentSafety: A Comprehensive Framework for Evaluating Real-World AI Agent Safety"
+    },
+    {
+      "id": "arxiv-2512-18311",
+      "expected_arxiv_id": "2512.18311",
+      "first_pages_arxiv_ids": [
+        "2512.18311"
+      ],
+      "id_found": true,
+      "pdf_title": "Monitoring Monitorability"
+    },
+    {
+      "id": "arxiv-2511-03690v1",
+      "expected_arxiv_id": "2511.03690",
+      "first_pages_arxiv_ids": [
+        "2511.03690"
+      ],
+      "id_found": true,
+      "pdf_title": "The OpenHands Software Agent SDK: A Composable and Extensible Foundation for Production Agents"
+    },
+    {
+      "id": "arxiv-2310-06770v1",
+      "expected_arxiv_id": "2310.06770",
+      "first_pages_arxiv_ids": [
+        "2310.06770"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2406-01304",
+      "expected_arxiv_id": "2406.01304",
+      "first_pages_arxiv_ids": [
+        "2406.01304"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2308-00352",
+      "expected_arxiv_id": "2308.00352",
+      "first_pages_arxiv_ids": [
+        "2308.00352"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2506-03011v1",
+      "expected_arxiv_id": "2506.03011",
+      "first_pages_arxiv_ids": [
+        "2506.03011"
+      ],
+      "id_found": true,
+      "pdf_title": "Coding Agents with Multimodal Browsing are Generalist Problem Solvers"
+    },
+    {
+      "id": "arxiv-2507-08149v1",
+      "expected_arxiv_id": "2507.08149",
+      "first_pages_arxiv_ids": [
+        "2507.08149"
+      ],
+      "id_found": true,
+      "pdf_title": "Code with Me or for Me? How Increasing AI Automation Transforms Developer Workflows"
+    },
+    {
+      "id": "arxiv-2510-26787",
+      "expected_arxiv_id": "2510.26787",
+      "first_pages_arxiv_ids": [
+        "2510.26787"
+      ],
+      "id_found": true,
+      "pdf_title": "Remote Labor Index: Measuring AI Automation of Remote Work"
+    },
+    {
+      "id": "arxiv-2608-12355",
+      "expected_arxiv_id": "2608.12355",
+      "first_pages_arxiv_ids": [
+        "2608.12355"
+      ],
+      "id_found": true,
+      "pdf_title": "Humans are Missing from AI Coding Agent Research"
+    },
+    {
+      "id": "arxiv-2605-26329",
+      "expected_arxiv_id": "2605.26329",
+      "first_pages_arxiv_ids": [
+        "2605.26329"
+      ],
+      "id_found": true,
+      "pdf_title": "JobBench: Aligning Agent Work With Human Will"
+    },
+    {
+      "id": "arxiv-2403-08140",
+      "expected_arxiv_id": "2403.08140",
+      "first_pages_arxiv_ids": [
+        "2403.08140"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2410-02907",
+      "expected_arxiv_id": "2410.02907",
+      "first_pages_arxiv_ids": [
+        "2410.02907"
+      ],
+      "id_found": true,
+      "pdf_title": " NNetNav: Unsupervised Learning of Browser Agents Through Environment Interaction in the Wild "
+    },
+    {
+      "id": "arxiv-2511-04703",
+      "expected_arxiv_id": "2511.04703",
+      "first_pages_arxiv_ids": [
+        "2511.04703"
+      ],
+      "id_found": true,
+      "pdf_title": "Measuring what Matters: Construct Validity in Large Language Model Benchmarks"
+    },
+    {
+      "id": "arxiv-2412-14161",
+      "expected_arxiv_id": "2412.14161",
+      "first_pages_arxiv_ids": [
+        "2412.14161"
+      ],
+      "id_found": true,
+      "pdf_title": "TheAgentCompany: Benchmarking LLM Agents on Consequential Real World Tasks"
+    },
+    {
+      "id": "arxiv-2601-11868",
+      "expected_arxiv_id": "2601.11868",
+      "first_pages_arxiv_ids": [
+        "2601.11868"
+      ],
+      "id_found": true,
+      "pdf_title": "Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces"
+    },
+    {
+      "id": "arxiv-2604-06996",
+      "expected_arxiv_id": "2604.06996",
+      "first_pages_arxiv_ids": [
+        "2604.06996"
+      ],
+      "id_found": true,
+      "pdf_title": "Self-Preference Bias in Rubric-Based Evaluation of Large Language Models"
+    },
+    {
+      "id": "arxiv-2403-07974",
+      "expected_arxiv_id": "2403.07974",
+      "first_pages_arxiv_ids": [
+        "2403.07974"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2501-16609",
+      "expected_arxiv_id": "2501.16609",
+      "first_pages_arxiv_ids": [
+        "2501.16609"
+      ],
+      "id_found": true,
+      "pdf_title": "CowPilot: A Framework for Autonomous and Human-Agent Collaborative Web Navigation"
+    },
+    {
+      "id": "arxiv-2602-17588",
+      "expected_arxiv_id": "2602.17588",
+      "first_pages_arxiv_ids": [
+        "2602.17588"
+      ],
+      "id_found": true,
+      "pdf_title": "Modeling Distinct Human Interaction in Web Agents"
+    },
+    {
+      "id": "arxiv-2610-19159",
+      "expected_arxiv_id": "2610.19159",
+      "first_pages_arxiv_ids": [
+        "2610.19159"
+      ],
+      "id_found": true,
+      "pdf_title": "Into the Unknown: Benchmarking AI agents on open scientific research problems"
+    },
+    {
+      "id": "arxiv-2507-06134",
+      "expected_arxiv_id": "2507.06134",
+      "first_pages_arxiv_ids": [
+        "2507.06134"
+      ],
+      "id_found": true,
+      "pdf_title": "OpenAgentSafety: A Comprehensive Framework for Evaluating Real-World AI Agent Safety"
+    },
+    {
+      "id": "arxiv-2602-08235",
+      "expected_arxiv_id": "2602.08235",
+      "first_pages_arxiv_ids": [
+        "2602.08235"
+      ],
+      "id_found": true,
+      "pdf_title": "When Benign Inputs Lead to Severe Harms: Eliciting Unsafe Unintended Behaviors of Computer-Use Agents"
+    },
+    {
+      "id": "arxiv-2603-14963",
+      "expected_arxiv_id": "2603.14963",
+      "first_pages_arxiv_ids": [
+        "2603.14963"
+      ],
+      "id_found": true,
+      "pdf_title": "Are We Automating the Joy Out of Work? Designing AI to Augment Work, Not Meaning"
+    },
+    {
+      "id": "arxiv-2303-10130",
+      "expected_arxiv_id": "2303.10130",
+      "first_pages_arxiv_ids": [
+        "2303.10130"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2305-14930",
+      "expected_arxiv_id": "2305.14930",
+      "first_pages_arxiv_ids": [
+        "2305.14930"
+      ],
+      "id_found": true,
+      "pdf_title": "In-Context Impersonation Reveals Large Language Models' Strengths and Biases"
+    },
+    {
+      "id": "arxiv-2307-07924",
+      "expected_arxiv_id": "2307.07924",
+      "first_pages_arxiv_ids": [
+        "2307.07924"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2603-21489",
+      "expected_arxiv_id": "2603.21489",
+      "first_pages_arxiv_ids": [
+        "2603.21489"
+      ],
+      "id_found": true,
+      "pdf_title": "Effective Strategies for Asynchronous Software Engineering Agents"
+    },
+    {
+      "id": "arxiv-2510-01285",
+      "expected_arxiv_id": "2510.01285",
+      "first_pages_arxiv_ids": [
+        "2510.01285"
+      ],
+      "id_found": true,
+      "pdf_title": "LLM-Based Multi-Agent Blackboard System for Information Discovery in Data Science"
+    },
+    {
+      "id": "arxiv-2606-10662",
+      "expected_arxiv_id": "2606.10662",
+      "first_pages_arxiv_ids": [
+        "2606.10662"
+      ],
+      "id_found": true,
+      "pdf_title": "Decentralized Multi-Agent Systems with Shared Context"
+    },
+    {
+      "id": "arxiv-2610-04862",
+      "expected_arxiv_id": "2610.04862",
+      "first_pages_arxiv_ids": [
+        "2610.04862"
+      ],
+      "id_found": true,
+      "pdf_title": "GitSwarm: Decentralized Compounding Inference"
+    },
+    {
+      "id": "arxiv-2608-12253",
+      "expected_arxiv_id": "2608.12253",
+      "first_pages_arxiv_ids": [
+        "2608.12253"
+      ],
+      "id_found": true,
+      "pdf_title": "One Frozen Simulator Is Not Enough: Simulator Collapse in Multi-Agent RL"
+    },
+    {
+      "id": "arxiv-2609-01491",
+      "expected_arxiv_id": "2609.01491",
+      "first_pages_arxiv_ids": [
+        "2609.01491"
+      ],
+      "id_found": true,
+      "pdf_title": "GlossoGen: Emergent Language in Complex Multi-Agent LLM Interactions"
+    },
+    {
+      "id": "arxiv-2510-25779",
+      "expected_arxiv_id": "2510.25779",
+      "first_pages_arxiv_ids": [
+        "2510.25779"
+      ],
+      "id_found": true,
+      "pdf_title": "Magentic Marketplace: An Open-Source Environment for Studying Agentic Markets"
+    },
+    {
+      "id": "arxiv-2304-03442",
+      "expected_arxiv_id": "2304.03442",
+      "first_pages_arxiv_ids": [
+        "2304.03442"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2107-03374v2",
+      "expected_arxiv_id": "2107.03374",
+      "first_pages_arxiv_ids": [
+        "2107.03374"
+      ],
+      "id_found": true,
+      "pdf_title": "Evaluating Large Language Models Trained on Code"
+    },
+    {
+      "id": "arxiv-2510-01171v4",
+      "expected_arxiv_id": "2510.01171",
+      "first_pages_arxiv_ids": [
+        "2510.01171"
+      ],
+      "id_found": true,
+      "pdf_title": "Verbalized Sampling: How to Mitigate Mode Collapse and Unlock LLM Diversity"
+    },
+    {
+      "id": "arxiv-2512-01127v1",
+      "expected_arxiv_id": "2512.01127",
+      "first_pages_arxiv_ids": [
+        "2512.01127"
+      ],
+      "id_found": true,
+      "pdf_title": "Mode-Conditioning Unlocks Superior Test-Time Scaling"
+    },
+    {
+      "id": "arxiv-2506-02355v2",
+      "expected_arxiv_id": "2506.02355",
+      "first_pages_arxiv_ids": [
+        "2506.02355"
+      ],
+      "id_found": true,
+      "pdf_title": "Rewarding the Unlikely: Lifting GRPO Beyond Distribution Sharpening"
+    },
+    {
+      "id": "arxiv-2412-21139v2",
+      "expected_arxiv_id": "2412.21139",
+      "first_pages_arxiv_ids": [
+        "2412.21139"
+      ],
+      "id_found": true,
+      "pdf_title": "Training Software Engineering Agents and Verifiers with SWE-Gym"
+    },
+    {
+      "id": "arxiv-2203-11171",
+      "expected_arxiv_id": "2203.11171",
+      "first_pages_arxiv_ids": [
+        "2203.11171"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2406-16838v2",
+      "expected_arxiv_id": "2406.16838",
+      "first_pages_arxiv_ids": [
+        "2406.16838"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2303-17651v2",
+      "expected_arxiv_id": "2303.17651",
+      "first_pages_arxiv_ids": [
+        "2303.17651"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2304-05128v2",
+      "expected_arxiv_id": "2304.05128",
+      "first_pages_arxiv_ids": [
+        "2304.05128"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2310-01798",
+      "expected_arxiv_id": "2310.01798",
+      "first_pages_arxiv_ids": [
+        "2310.01798"
+      ],
+      "id_found": true,
+      "pdf_title": ""
+    },
+    {
+      "id": "arxiv-2509-26626v2",
+      "expected_arxiv_id": "2509.26626",
+      "first_pages_arxiv_ids": [
+        "2509.26626"
+      ],
+      "id_found": true,
+      "pdf_title": "Recursive Self-Aggregation Unlocks Deep Thinking in Large Language Models"
+    },
+    {
+      "id": "arxiv-2609-00196v1",
+      "expected_arxiv_id": "2609.00196",
+      "first_pages_arxiv_ids": [
+        "2609.00196"
+      ],
+      "id_found": true,
+      "pdf_title": "WHALE: A Simple Recipe for Joint Harness-Weight Optimization"
+    },
+    {
+      "id": "arxiv-2505-22954v3",
+      "expected_arxiv_id": "2505.22954",
+      "first_pages_arxiv_ids": [
+        "2505.22954"
+      ],
+      "id_found": true,
+      "pdf_title": "Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents"
+    },
+    {
+      "id": "arxiv-2602-04837v1",
+      "expected_arxiv_id": "2602.04837",
+      "first_pages_arxiv_ids": [
+        "2602.04837"
+      ],
+      "id_found": true,
+      "pdf_title": "Group-Evolving Agents: Open-Ended Self-Improvement via Experience Sharing"
+    },
+    {
+      "id": "arxiv-2407-01476",
+      "expected_arxiv_id": "2407.01476",
+      "first_pages_arxiv_ids": [
+        "2407.01476"
+      ],
+      "id_found": true,
+      "pdf_title": "Tree Search for Language Model Agents"
+    }
+  ]
+}

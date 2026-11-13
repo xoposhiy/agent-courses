@@ -1,0 +1,6707 @@
+[
+  {
+    "text": "Hi everyone. I'm really glad to uh give",
+    "start": 0.32,
+    "duration": 5.039
+  },
+  {
+    "text": "the lecture today. Uh it's on super wise",
+    "start": 2.639,
+    "duration": 5.2
+  },
+  {
+    "text": "fine tuning for agents. So before I",
+    "start": 5.359,
+    "duration": 4.32
+  },
+  {
+    "text": "start, I want to ask like how many of",
+    "start": 7.839,
+    "duration": 4.321
+  },
+  {
+    "text": "you have trained agents before? Like",
+    "start": 9.679,
+    "duration": 5.04
+  },
+  {
+    "text": "please raise your hand.",
+    "start": 12.16,
+    "duration": 5.199
+  },
+  {
+    "text": "Okay. Um then how many of you have done",
+    "start": 14.719,
+    "duration": 5.281
+  },
+  {
+    "text": "SFT on agents?",
+    "start": 17.359,
+    "duration": 4.561
+  },
+  {
+    "text": "Okay, that's actually more than I",
+    "start": 20.0,
+    "duration": 5.76
+  },
+  {
+    "text": "expected. Um okay so I will be go over",
+    "start": 21.92,
+    "duration": 6.48
+  },
+  {
+    "text": "these topics today like uh because this",
+    "start": 25.76,
+    "duration": 4.24
+  },
+  {
+    "text": "is the first lecture on training of",
+    "start": 28.4,
+    "duration": 4.48
+  },
+  {
+    "text": "agents. So I will first give a overall",
+    "start": 30.0,
+    "duration": 5.12
+  },
+  {
+    "text": "introduction of like what is training of",
+    "start": 32.88,
+    "duration": 6.56
+  },
+  {
+    "text": "agents mean and uh and then go over SFT",
+    "start": 35.12,
+    "duration": 6.959
+  },
+  {
+    "text": "specific topics and also like",
+    "start": 39.44,
+    "duration": 4.56
+  },
+  {
+    "text": "transitioning into RL which will be the",
+    "start": 42.079,
+    "duration": 5.32
+  },
+  {
+    "text": "next three lectures.",
+    "start": 44.0,
+    "duration": 3.399
+  },
+  {
+    "text": "Okay. Um this is a sample trajectory",
+    "start": 49.28,
+    "duration": 7.279
+  },
+  {
+    "text": "sampled from sui gym. We can see there",
+    "start": 53.44,
+    "duration": 7.32
+  },
+  {
+    "text": "are different rows in the trajectory.",
+    "start": 56.559,
+    "duration": 4.201
+  },
+  {
+    "text": "Um so there are a row of system, row of",
+    "start": 62.399,
+    "duration": 6.961
+  },
+  {
+    "text": "user, row of assistant and observation.",
+    "start": 66.08,
+    "duration": 6.24
+  },
+  {
+    "text": "Like among these uh we can see there's",
+    "start": 69.36,
+    "duration": 5.52
+  },
+  {
+    "text": "only three assistant messages in this",
+    "start": 72.32,
+    "duration": 4.799
+  },
+  {
+    "text": "trajectory.",
+    "start": 74.88,
+    "duration": 5.04
+  },
+  {
+    "text": "Um",
+    "start": 77.119,
+    "duration": 5.04
+  },
+  {
+    "text": "so in the overall setting the agent",
+    "start": 79.92,
+    "duration": 4.72
+  },
+  {
+    "text": "receives an issue which is like given by",
+    "start": 82.159,
+    "duration": 5.201
+  },
+  {
+    "text": "the user and a couple of tools in a",
+    "start": 84.64,
+    "duration": 5.28
+  },
+  {
+    "text": "sandbox like for example in this case",
+    "start": 87.36,
+    "duration": 7.48
+  },
+  {
+    "text": "this is bash and a file edit tool.",
+    "start": 89.92,
+    "duration": 4.92
+  },
+  {
+    "text": "So in the process the agent produces ss",
+    "start": 94.96,
+    "duration": 6.479
+  },
+  {
+    "text": "and generates commands and uh reads the",
+    "start": 98.159,
+    "duration": 8.361
+  },
+  {
+    "text": "observations that those commands return",
+    "start": 101.439,
+    "duration": 5.081
+  },
+  {
+    "text": "at eventually the repository's own tasks",
+    "start": 106.64,
+    "duration": 4.56
+  },
+  {
+    "text": "like unit test will determine whether",
+    "start": 109.28,
+    "duration": 5.76
+  },
+  {
+    "text": "the run succeeded or not.",
+    "start": 111.2,
+    "duration": 5.68
+  },
+  {
+    "text": "There are several methods of updating",
+    "start": 115.04,
+    "duration": 3.2
+  },
+  {
+    "text": "the agent that we already discussed",
+    "start": 116.88,
+    "duration": 4.08
+  },
+  {
+    "text": "about like first context window. Um",
+    "start": 118.24,
+    "duration": 5.04
+  },
+  {
+    "text": "there are different pros and cons for",
+    "start": 120.96,
+    "duration": 4.0
+  },
+  {
+    "text": "different methods like for context",
+    "start": 123.28,
+    "duration": 4.64
+  },
+  {
+    "text": "window it has high fidelity to what",
+    "start": 124.96,
+    "duration": 6.16
+  },
+  {
+    "text": "already happened but it is costly noisy",
+    "start": 127.92,
+    "duration": 6.88
+  },
+  {
+    "text": "and does not decide what matters and for",
+    "start": 131.12,
+    "duration": 6.88
+  },
+  {
+    "text": "external artifacts it'sable",
+    "start": 134.8,
+    "duration": 5.439
+  },
+  {
+    "text": "editable retrievable and portable so",
+    "start": 138.0,
+    "duration": 5.76
+  },
+  {
+    "text": "very easy uh reading by human beings but",
+    "start": 140.239,
+    "duration": 5.521
+  },
+  {
+    "text": "it must be induced selected and",
+    "start": 143.76,
+    "duration": 3.44
+  },
+  {
+    "text": "maintained throughout the agent",
+    "start": 145.76,
+    "duration": 4.0
+  },
+  {
+    "text": "trajectory process. So today we'll be",
+    "start": 147.2,
+    "duration": 4.56
+  },
+  {
+    "text": "talking about updating model weights.",
+    "start": 149.76,
+    "duration": 4.4
+  },
+  {
+    "text": "This like could incur faster inferences",
+    "start": 151.76,
+    "duration": 5.52
+  },
+  {
+    "text": "and broader behavior change but like um",
+    "start": 154.16,
+    "duration": 5.359
+  },
+  {
+    "text": "because we need to train the model the",
+    "start": 157.28,
+    "duration": 4.64
+  },
+  {
+    "text": "process of training will be slower and",
+    "start": 159.519,
+    "duration": 5.121
+  },
+  {
+    "text": "more opaque because it's like blackboxed",
+    "start": 161.92,
+    "duration": 5.039
+  },
+  {
+    "text": "and model specific because it will incur",
+    "start": 164.64,
+    "duration": 4.08
+  },
+  {
+    "text": "a model specific behavior after",
+    "start": 166.959,
+    "duration": 3.681
+  },
+  {
+    "text": "training.",
+    "start": 168.72,
+    "duration": 4.799
+  },
+  {
+    "text": "So we change the weight like once and",
+    "start": 170.64,
+    "duration": 4.959
+  },
+  {
+    "text": "every call after that gets a new",
+    "start": 173.519,
+    "duration": 4.321
+  },
+  {
+    "text": "behavior with nothing extra in the",
+    "start": 175.599,
+    "duration": 3.761
+  },
+  {
+    "text": "prompt.",
+    "start": 177.84,
+    "duration": 3.52
+  },
+  {
+    "text": "And the first two things we discussed",
+    "start": 179.36,
+    "duration": 5.599
+  },
+  {
+    "text": "before like update only in seconds and",
+    "start": 181.36,
+    "duration": 6.48
+  },
+  {
+    "text": "um these like cost of a training run",
+    "start": 184.959,
+    "duration": 5.841
+  },
+  {
+    "text": "every time you change it",
+    "start": 187.84,
+    "duration": 5.28
+  },
+  {
+    "text": "and also you cannot open like the",
+    "start": 190.8,
+    "duration": 4.719
+  },
+  {
+    "text": "weights to see what's going on within a",
+    "start": 193.12,
+    "duration": 4.64
+  },
+  {
+    "text": "model or move the change to a different",
+    "start": 195.519,
+    "duration": 4.401
+  },
+  {
+    "text": "model. So this thing like is like",
+    "start": 197.76,
+    "duration": 6.68
+  },
+  {
+    "text": "onedirectional and opaque",
+    "start": 199.92,
+    "duration": 4.52
+  },
+  {
+    "text": "like to train a model we need",
+    "start": 205.28,
+    "duration": 4.0
+  },
+  {
+    "text": "trajectories. Then what does the",
+    "start": 207.12,
+    "duration": 4.72
+  },
+  {
+    "text": "trajectory teach? First of all how to",
+    "start": 209.28,
+    "duration": 4.72
+  },
+  {
+    "text": "write a tool call that this harness can",
+    "start": 211.84,
+    "duration": 4.08
+  },
+  {
+    "text": "actually run.",
+    "start": 214.0,
+    "duration": 4.4
+  },
+  {
+    "text": "Second like how to keep going when the",
+    "start": 215.92,
+    "duration": 4.319
+  },
+  {
+    "text": "conversation gets long because the",
+    "start": 218.4,
+    "duration": 4.479
+  },
+  {
+    "text": "trajectories in learn from like we're",
+    "start": 220.239,
+    "duration": 5.36
+  },
+  {
+    "text": "supposed to be long",
+    "start": 222.879,
+    "duration": 5.041
+  },
+  {
+    "text": "and what a tool call result uh what the",
+    "start": 225.599,
+    "duration": 5.441
+  },
+  {
+    "text": "tool result should look like. So um it",
+    "start": 227.92,
+    "duration": 5.2
+  },
+  {
+    "text": "waits for one instead of writing one",
+    "start": 231.04,
+    "duration": 4.4
+  },
+  {
+    "text": "itself",
+    "start": 233.12,
+    "duration": 4.96
+  },
+  {
+    "text": "and whatever else was in the data that",
+    "start": 235.44,
+    "duration": 4.32
+  },
+  {
+    "text": "what we use for training like for",
+    "start": 238.08,
+    "duration": 4.4
+  },
+  {
+    "text": "example extra commentary repeated",
+    "start": 239.76,
+    "duration": 5.119
+  },
+  {
+    "text": "commands and one way of solving a",
+    "start": 242.48,
+    "duration": 6.319
+  },
+  {
+    "text": "problem. There are several work",
+    "start": 244.879,
+    "duration": 6.401
+  },
+  {
+    "text": "to give a more broad overview of what",
+    "start": 248.799,
+    "duration": 5.121
+  },
+  {
+    "text": "training looks like in frontier labs or",
+    "start": 251.28,
+    "duration": 5.519
+  },
+  {
+    "text": "like maybe in academia as well. The full",
+    "start": 253.92,
+    "duration": 5.52
+  },
+  {
+    "text": "this is the full training pipeline. Um",
+    "start": 256.799,
+    "duration": 4.321
+  },
+  {
+    "text": "we first start with pre-training which",
+    "start": 259.44,
+    "duration": 4.24
+  },
+  {
+    "text": "is the largest amount of tokens but like",
+    "start": 261.12,
+    "duration": 4.48
+  },
+  {
+    "text": "this is the stage where uh where",
+    "start": 263.68,
+    "duration": 4.32
+  },
+  {
+    "text": "language models learn basic next token",
+    "start": 265.6,
+    "duration": 4.96
+  },
+  {
+    "text": "prediction and then mid-training this is",
+    "start": 268.0,
+    "duration": 4.56
+  },
+  {
+    "text": "like the second stage but like people",
+    "start": 270.56,
+    "duration": 3.919
+  },
+  {
+    "text": "have very different definitions for what",
+    "start": 272.56,
+    "duration": 4.8
+  },
+  {
+    "text": "mid training is uh like mid training is",
+    "start": 274.479,
+    "duration": 4.481
+  },
+  {
+    "text": "like anything that happens between",
+    "start": 277.36,
+    "duration": 3.6
+  },
+  {
+    "text": "pre-training and post- training some",
+    "start": 278.96,
+    "duration": 4.48
+  },
+  {
+    "text": "people even counts like SFT as",
+    "start": 280.96,
+    "duration": 4.959
+  },
+  {
+    "text": "mid-training nowadays and then but",
+    "start": 283.44,
+    "duration": 5.039
+  },
+  {
+    "text": "typically SFT is considered as like",
+    "start": 285.919,
+    "duration": 5.361
+  },
+  {
+    "text": "post-training stage. Um so after mid",
+    "start": 288.479,
+    "duration": 6.401
+  },
+  {
+    "text": "training we went to SFT. Uh we are like",
+    "start": 291.28,
+    "duration": 5.6
+  },
+  {
+    "text": "uh this will be covered today and then",
+    "start": 294.88,
+    "duration": 4.64
+  },
+  {
+    "text": "the next stage will be RL where it will",
+    "start": 296.88,
+    "duration": 4.879
+  },
+  {
+    "text": "be mostly rollouts and rewards which",
+    "start": 299.52,
+    "duration": 4.88
+  },
+  {
+    "text": "will be covered like later. But notice",
+    "start": 301.759,
+    "duration": 4.961
+  },
+  {
+    "text": "that like for most of pre-training mini",
+    "start": 304.4,
+    "duration": 4.88
+  },
+  {
+    "text": "training and SFT we can find fixed",
+    "start": 306.72,
+    "duration": 5.12
+  },
+  {
+    "text": "corpuses that we can uh train the model",
+    "start": 309.28,
+    "duration": 5.28
+  },
+  {
+    "text": "on. But for RL there's typically no",
+    "start": 311.84,
+    "duration": 6.079
+  },
+  {
+    "text": "fixed corpuses. it's like learned on the",
+    "start": 314.56,
+    "duration": 7.28
+  },
+  {
+    "text": "model's own like rollouts.",
+    "start": 317.919,
+    "duration": 8.161
+  },
+  {
+    "text": "So um I will supervise fine-tuning as a",
+    "start": 321.84,
+    "duration": 5.919
+  },
+  {
+    "text": "cold start before reinforcement",
+    "start": 326.08,
+    "duration": 4.559
+  },
+  {
+    "text": "learning. Um like cold start means that",
+    "start": 327.759,
+    "duration": 6.72
+  },
+  {
+    "text": "this checkpoint RL that begins from",
+    "start": 330.639,
+    "duration": 7.601
+  },
+  {
+    "text": "today's like uh this represent one of",
+    "start": 334.479,
+    "duration": 6.16
+  },
+  {
+    "text": "the most common pipeline for post",
+    "start": 338.24,
+    "duration": 5.519
+  },
+  {
+    "text": "training today. This is like um",
+    "start": 340.639,
+    "duration": 7.12
+  },
+  {
+    "text": "retrieved from Kim K3's report where the",
+    "start": 343.759,
+    "duration": 5.601
+  },
+  {
+    "text": "model like after pre-training and",
+    "start": 347.759,
+    "duration": 4.241
+  },
+  {
+    "text": "mid-training it do supervised finetuning",
+    "start": 349.36,
+    "duration": 5.279
+  },
+  {
+    "text": "first to initialize a baseline agentic",
+    "start": 352.0,
+    "duration": 4.96
+  },
+  {
+    "text": "capabilities and the next stage is",
+    "start": 354.639,
+    "duration": 5.28
+  },
+  {
+    "text": "reinforcement learning where models",
+    "start": 356.96,
+    "duration": 5.12
+  },
+  {
+    "text": "develop domain experts at varying",
+    "start": 359.919,
+    "duration": 4.481
+  },
+  {
+    "text": "reasoning efforts. The last stage is on",
+    "start": 362.08,
+    "duration": 4.399
+  },
+  {
+    "text": "policy distillation which consolidate",
+    "start": 364.4,
+    "duration": 4.88
+  },
+  {
+    "text": "the expert into like one model. Uh this",
+    "start": 366.479,
+    "duration": 5.28
+  },
+  {
+    "text": "is the last stage and we will cover the",
+    "start": 369.28,
+    "duration": 4.639
+  },
+  {
+    "text": "next uh the second and the third topic",
+    "start": 371.759,
+    "duration": 5.761
+  },
+  {
+    "text": "like in later lectures",
+    "start": 373.919,
+    "duration": 6.56
+  },
+  {
+    "text": "in Kim K3 the model learns to call tools",
+    "start": 377.52,
+    "duration": 6.64
+  },
+  {
+    "text": "and finish long tasks during SFT u",
+    "start": 380.479,
+    "duration": 6.241
+  },
+  {
+    "text": "before any RL",
+    "start": 384.16,
+    "duration": 6.479
+  },
+  {
+    "text": "and uh but some might ask so why don't",
+    "start": 386.72,
+    "duration": 7.919
+  },
+  {
+    "text": "we just use RL instead of like SFT why",
+    "start": 390.639,
+    "duration": 8.4
+  },
+  {
+    "text": "do we still do SFT nowadays um So this",
+    "start": 394.639,
+    "duration": 7.761
+  },
+  {
+    "text": "question deepseek R1 zero has like tried",
+    "start": 399.039,
+    "duration": 6.72
+  },
+  {
+    "text": "to seek response again like DeepSc R10",
+    "start": 402.4,
+    "duration": 6.32
+  },
+  {
+    "text": "run RL directly on the base models. Uh",
+    "start": 405.759,
+    "duration": 7.401
+  },
+  {
+    "text": "so before any SFT happens",
+    "start": 408.72,
+    "duration": 4.44
+  },
+  {
+    "text": "and they learned their lesson. So like",
+    "start": 413.199,
+    "duration": 4.961
+  },
+  {
+    "text": "in their very next model uh they put SFT",
+    "start": 415.12,
+    "duration": 5.519
+  },
+  {
+    "text": "back in R1 starts from a few thousands",
+    "start": 418.16,
+    "duration": 5.84
+  },
+  {
+    "text": "created examples of SFT because R10's",
+    "start": 420.639,
+    "duration": 6.081
+  },
+  {
+    "text": "answers just like mix languages and were",
+    "start": 424.0,
+    "duration": 5.68
+  },
+  {
+    "text": "hard to read without SFT. Uh I think the",
+    "start": 426.72,
+    "duration": 6.0
+  },
+  {
+    "text": "SFT stage established a high quality",
+    "start": 429.68,
+    "duration": 5.6
+  },
+  {
+    "text": "coord policy for the subsequent RL",
+    "start": 432.72,
+    "duration": 4.8
+  },
+  {
+    "text": "stage.",
+    "start": 435.28,
+    "duration": 5.759
+  },
+  {
+    "text": "This is a comparison of SFT and RL side",
+    "start": 437.52,
+    "duration": 6.32
+  },
+  {
+    "text": "by side. Um so for supervised",
+    "start": 441.039,
+    "duration": 4.72
+  },
+  {
+    "text": "fine-tuning it learns from recorded",
+    "start": 443.84,
+    "duration": 4.639
+  },
+  {
+    "text": "trajectories of agents whoever produced",
+    "start": 445.759,
+    "duration": 5.041
+  },
+  {
+    "text": "them like it can be produced by stronger",
+    "start": 448.479,
+    "duration": 5.761
+  },
+  {
+    "text": "models or even themselves and SF learn",
+    "start": 450.8,
+    "duration": 6.239
+  },
+  {
+    "text": "the signal of a target for every token",
+    "start": 454.24,
+    "duration": 5.519
+  },
+  {
+    "text": "and it needs data and GPUs to train a",
+    "start": 457.039,
+    "duration": 4.88
+  },
+  {
+    "text": "model with. It's good at learning tool",
+    "start": 459.759,
+    "duration": 5.121
+  },
+  {
+    "text": "calls formats and long tasks but is",
+    "start": 461.919,
+    "duration": 4.801
+  },
+  {
+    "text": "stuck with the demonstrations that are",
+    "start": 464.88,
+    "duration": 4.8
+  },
+  {
+    "text": "wrong or narrow or used up. For",
+    "start": 466.72,
+    "duration": 4.72
+  },
+  {
+    "text": "reinforcement learning, it's like learn",
+    "start": 469.68,
+    "duration": 5.04
+  },
+  {
+    "text": "from its own rollouts scored by a reward",
+    "start": 471.44,
+    "duration": 6.4
+  },
+  {
+    "text": "at the design for its domain. And uh it",
+    "start": 474.72,
+    "duration": 6.64
+  },
+  {
+    "text": "learns the signal of one number per roll",
+    "start": 477.84,
+    "duration": 6.4
+  },
+  {
+    "text": "out per per long roll out. And it needs",
+    "start": 481.36,
+    "duration": 5.119
+  },
+  {
+    "text": "a live environment, sandboxes and",
+    "start": 484.24,
+    "duration": 5.92
+  },
+  {
+    "text": "checkable rewards which are some like uh",
+    "start": 486.479,
+    "duration": 6.081
+  },
+  {
+    "text": "some interesting facts for our people to",
+    "start": 490.16,
+    "duration": 6.159
+  },
+  {
+    "text": "solve. And uh is good at sharpening what",
+    "start": 492.56,
+    "duration": 6.639
+  },
+  {
+    "text": "the model already attempts to. uh but",
+    "start": 496.319,
+    "duration": 5.28
+  },
+  {
+    "text": "the start is two weeks so the reward",
+    "start": 499.199,
+    "duration": 7.481
+  },
+  {
+    "text": "might sometimes not be like checked",
+    "start": 501.599,
+    "duration": 5.081
+  },
+  {
+    "text": "um in our lectures we'll be covering",
+    "start": 506.96,
+    "duration": 4.0
+  },
+  {
+    "text": "reinforcement learning in the next three",
+    "start": 509.36,
+    "duration": 4.4
+  },
+  {
+    "text": "lectures",
+    "start": 510.96,
+    "duration": 4.8
+  },
+  {
+    "text": "and I think next topic I'll be going",
+    "start": 513.76,
+    "duration": 3.92
+  },
+  {
+    "text": "through is like the trajectories as",
+    "start": 515.76,
+    "duration": 5.04
+  },
+  {
+    "text": "token sequences",
+    "start": 517.68,
+    "duration": 5.12
+  },
+  {
+    "text": "we all know from language models that",
+    "start": 520.8,
+    "duration": 4.159
+  },
+  {
+    "text": "there might be chat template that is",
+    "start": 522.8,
+    "duration": 4.24
+  },
+  {
+    "text": "different for each different language",
+    "start": 524.959,
+    "duration": 6.56
+  },
+  {
+    "text": "models So for each token sequence um",
+    "start": 527.04,
+    "duration": 7.359
+  },
+  {
+    "text": "like every boundary above is a template",
+    "start": 531.519,
+    "duration": 7.44
+  },
+  {
+    "text": "token and uh let's use the coin example",
+    "start": 534.399,
+    "duration": 8.321
+  },
+  {
+    "text": "queen template example here where um it",
+    "start": 538.959,
+    "duration": 8.081
+  },
+  {
+    "text": "has some special tokens like uh IM start",
+    "start": 542.72,
+    "duration": 6.64
+  },
+  {
+    "text": "and then like have special tokens like",
+    "start": 547.04,
+    "duration": 6.28
+  },
+  {
+    "text": "to call etc",
+    "start": 549.36,
+    "duration": 3.96
+  },
+  {
+    "text": "and we feed this trajectories through",
+    "start": 553.839,
+    "duration": 3.761
+  },
+  {
+    "text": "the template and you get one string",
+    "start": 555.839,
+    "duration": 3.601
+  },
+  {
+    "text": "string of token that represent the whole",
+    "start": 557.6,
+    "duration": 4.16
+  },
+  {
+    "text": "trajectory. Like for example, it might",
+    "start": 559.44,
+    "duration": 4.16
+  },
+  {
+    "text": "be going through multiple tool calls",
+    "start": 561.76,
+    "duration": 4.72
+  },
+  {
+    "text": "like 10 to calls and reaching a final",
+    "start": 563.6,
+    "duration": 5.84
+  },
+  {
+    "text": "answer, submitting a final trajectory to",
+    "start": 566.48,
+    "duration": 5.359
+  },
+  {
+    "text": "like some verifier. But like all of",
+    "start": 569.44,
+    "duration": 4.48
+  },
+  {
+    "text": "these will be represented as one string",
+    "start": 571.839,
+    "duration": 4.56
+  },
+  {
+    "text": "that will be fit into the training",
+    "start": 573.92,
+    "duration": 6.32
+  },
+  {
+    "text": "infrastructure to train a model. And the",
+    "start": 576.399,
+    "duration": 6.321
+  },
+  {
+    "text": "special tokens markers are single",
+    "start": 580.24,
+    "duration": 5.12
+  },
+  {
+    "text": "special tokens. The rest is what the",
+    "start": 582.72,
+    "duration": 6.48
+  },
+  {
+    "text": "agent could actually uh write and see in",
+    "start": 585.36,
+    "duration": 8.919
+  },
+  {
+    "text": "their trajectory that they output.",
+    "start": 589.2,
+    "duration": 5.079
+  },
+  {
+    "text": "And um different from a language model",
+    "start": 594.32,
+    "duration": 6.24
+  },
+  {
+    "text": "for agentic SFT, we might not train all",
+    "start": 598.0,
+    "duration": 5.68
+  },
+  {
+    "text": "of like the output the all of the",
+    "start": 600.56,
+    "duration": 5.52
+  },
+  {
+    "text": "trajectory. Like for example, here in",
+    "start": 603.68,
+    "duration": 4.719
+  },
+  {
+    "text": "the trajectory I represented, the gray",
+    "start": 606.08,
+    "duration": 4.56
+  },
+  {
+    "text": "boxes are the ones that we consider as",
+    "start": 608.399,
+    "duration": 4.641
+  },
+  {
+    "text": "context. So these will not be in uh",
+    "start": 610.64,
+    "duration": 5.28
+  },
+  {
+    "text": "calculated towards loss. Uh but the red",
+    "start": 613.04,
+    "duration": 7.12
+  },
+  {
+    "text": "boxed ones are where we calculate loss",
+    "start": 615.92,
+    "duration": 6.72
+  },
+  {
+    "text": "like cross entropy loss is what we",
+    "start": 620.16,
+    "duration": 5.84
+  },
+  {
+    "text": "usually use. But like we have apply a",
+    "start": 622.64,
+    "duration": 6.4
+  },
+  {
+    "text": "special mask there to assistant tokens",
+    "start": 626.0,
+    "duration": 4.88
+  },
+  {
+    "text": "that we only train on assistant tokens",
+    "start": 629.04,
+    "duration": 4.08
+  },
+  {
+    "text": "but not non-assistant tokens which are",
+    "start": 630.88,
+    "duration": 5.04
+  },
+  {
+    "text": "considered contexts.",
+    "start": 633.12,
+    "duration": 5.6
+  },
+  {
+    "text": "So the mask is like one bit per token",
+    "start": 635.92,
+    "duration": 4.64
+  },
+  {
+    "text": "saying whether the token's prediction",
+    "start": 638.72,
+    "duration": 5.119
+  },
+  {
+    "text": "like counts towards the final training",
+    "start": 640.56,
+    "duration": 5.6
+  },
+  {
+    "text": "and we want to minimize it because like",
+    "start": 643.839,
+    "duration": 4.401
+  },
+  {
+    "text": "minimizing it raises the probability of",
+    "start": 646.16,
+    "duration": 4.56
+  },
+  {
+    "text": "each recorded action like given",
+    "start": 648.24,
+    "duration": 5.12
+  },
+  {
+    "text": "everything before it has context. This",
+    "start": 650.72,
+    "duration": 5.52
+  },
+  {
+    "text": "will help increase uh the agent's",
+    "start": 653.36,
+    "duration": 5.44
+  },
+  {
+    "text": "capability of mimicking what is like",
+    "start": 656.24,
+    "duration": 6.64
+  },
+  {
+    "text": "already in the trajectory and um",
+    "start": 658.8,
+    "duration": 6.159
+  },
+  {
+    "text": "observations here are conditioning",
+    "start": 662.88,
+    "duration": 4.32
+  },
+  {
+    "text": "context but not prediction targets.",
+    "start": 664.959,
+    "duration": 3.041
+  },
+  {
+    "text": "Yeah.",
+    "start": 667.2,
+    "duration": 3.52
+  },
+  {
+    "text": ">> Why don't we try to also train with",
+    "start": 668.0,
+    "duration": 8.76
+  },
+  {
+    "text": "train like observation? It could result.",
+    "start": 670.72,
+    "duration": 6.04
+  },
+  {
+    "text": ">> Yeah. The question is like why don't we",
+    "start": 677.12,
+    "duration": 4.719
+  },
+  {
+    "text": "train models also on observations. Uh I",
+    "start": 678.959,
+    "duration": 4.641
+  },
+  {
+    "text": "would say like training on assistant",
+    "start": 681.839,
+    "duration": 4.721
+  },
+  {
+    "text": "messages are the general rule of thumb",
+    "start": 683.6,
+    "duration": 5.919
+  },
+  {
+    "text": "like in agentic SFT because like",
+    "start": 686.56,
+    "duration": 5.2
+  },
+  {
+    "text": "observations or user context might be",
+    "start": 689.519,
+    "duration": 5.041
+  },
+  {
+    "text": "given from the user or the environment",
+    "start": 691.76,
+    "duration": 5.44
+  },
+  {
+    "text": "instead of like given from predicted by",
+    "start": 694.56,
+    "duration": 5.36
+  },
+  {
+    "text": "the assistant but like I agree that like",
+    "start": 697.2,
+    "duration": 6.0
+  },
+  {
+    "text": "there are papers um existing that are",
+    "start": 699.92,
+    "duration": 5.52
+  },
+  {
+    "text": "training on observations and find it to",
+    "start": 703.2,
+    "duration": 5.04
+  },
+  {
+    "text": "be useful for predicting the world uh",
+    "start": 705.44,
+    "duration": 5.76
+  },
+  {
+    "text": "stage uh state. So like what I'm",
+    "start": 708.24,
+    "duration": 5.36
+  },
+  {
+    "text": "discussing here is like uh the general",
+    "start": 711.2,
+    "duration": 5.04
+  },
+  {
+    "text": "recipe but like you might do ablation",
+    "start": 713.6,
+    "duration": 5.679
+  },
+  {
+    "text": "studies or even innovations to see what",
+    "start": 716.24,
+    "duration": 4.88
+  },
+  {
+    "text": "might be the best option for your",
+    "start": 719.279,
+    "duration": 4.161
+  },
+  {
+    "text": "scenario.",
+    "start": 721.12,
+    "duration": 5.04
+  },
+  {
+    "text": ">> Just a quick followup about that there",
+    "start": 723.44,
+    "duration": 4.72
+  },
+  {
+    "text": "one particular paper that did that is",
+    "start": 726.16,
+    "duration": 4.32
+  },
+  {
+    "text": "called the computational world model",
+    "start": 728.16,
+    "duration": 4.56
+  },
+  {
+    "text": "that meta published. So they're training",
+    "start": 730.48,
+    "duration": 5.12
+  },
+  {
+    "text": "the model to like output the results of",
+    "start": 732.72,
+    "duration": 6.4
+  },
+  {
+    "text": "tool calls which are executing code. Um",
+    "start": 735.6,
+    "duration": 5.6
+  },
+  {
+    "text": "So they find that it's like pretty",
+    "start": 739.12,
+    "duration": 4.24
+  },
+  {
+    "text": "helpful on tasks that are aligned with",
+    "start": 741.2,
+    "duration": 4.639
+  },
+  {
+    "text": "like understanding execution semantics",
+    "start": 743.36,
+    "duration": 4.4
+  },
+  {
+    "text": "but like it also you could imagine it",
+    "start": 745.839,
+    "duration": 4.161
+  },
+  {
+    "text": "like takes up some kind of some of the",
+    "start": 747.76,
+    "duration": 5.36
+  },
+  {
+    "text": "capacity of the model. So yeah like",
+    "start": 750.0,
+    "duration": 5.12
+  },
+  {
+    "text": "definitely if your model is too small it",
+    "start": 753.12,
+    "duration": 3.68
+  },
+  {
+    "text": "might hurt its performance on other",
+    "start": 755.12,
+    "duration": 3.12
+  },
+  {
+    "text": "things. It's kind of like an open",
+    "start": 756.8,
+    "duration": 4.479
+  },
+  {
+    "text": "question of could it how does it impact",
+    "start": 758.24,
+    "duration": 5.12
+  },
+  {
+    "text": "kind of the base agentive abilities of",
+    "start": 761.279,
+    "duration": 3.921
+  },
+  {
+    "text": "the model but it could be like super",
+    "start": 763.36,
+    "duration": 3.44
+  },
+  {
+    "text": "useful for like world modeling or",
+    "start": 765.2,
+    "duration": 3.439
+  },
+  {
+    "text": "planning.",
+    "start": 766.8,
+    "duration": 3.44
+  },
+  {
+    "text": "So it's a little bit more experimental",
+    "start": 768.639,
+    "duration": 3.521
+  },
+  {
+    "text": "like",
+    "start": 770.24,
+    "duration": 4.48
+  },
+  {
+    "text": ">> yeah",
+    "start": 772.16,
+    "duration": 4.72
+  },
+  {
+    "text": "um to explain more on how the mask is",
+    "start": 774.72,
+    "duration": 4.559
+  },
+  {
+    "text": "built like first we have a render that",
+    "start": 776.88,
+    "duration": 4.399
+  },
+  {
+    "text": "the template writes the conversation as",
+    "start": 779.279,
+    "duration": 4.401
+  },
+  {
+    "text": "like one whole string and knows where",
+    "start": 781.279,
+    "duration": 5.521
+  },
+  {
+    "text": "each assistant span starts and ends with",
+    "start": 783.68,
+    "duration": 5.599
+  },
+  {
+    "text": "um some special tokens and then like uh",
+    "start": 786.8,
+    "duration": 4.32
+  },
+  {
+    "text": "tokenize those character positions",
+    "start": 789.279,
+    "duration": 4.24
+  },
+  {
+    "text": "become like token positions and then",
+    "start": 791.12,
+    "duration": 4.719
+  },
+  {
+    "text": "these uh we mask like the tokens inside",
+    "start": 793.519,
+    "duration": 5.281
+  },
+  {
+    "text": "an assistant as one and everything else",
+    "start": 795.839,
+    "duration": 4.641
+  },
+  {
+    "text": "get the zero because it's not trained",
+    "start": 798.8,
+    "duration": 4.0
+  },
+  {
+    "text": "on.",
+    "start": 800.48,
+    "duration": 4.56
+  },
+  {
+    "text": "And the template does the bookkeeping",
+    "start": 802.8,
+    "duration": 4.56
+  },
+  {
+    "text": "here because like where a system tax",
+    "start": 805.04,
+    "duration": 6.28
+  },
+  {
+    "text": "starts where it stops",
+    "start": 807.36,
+    "duration": 3.96
+  },
+  {
+    "text": "like uh by the time training starts the",
+    "start": 812.0,
+    "duration": 7.12
+  },
+  {
+    "text": "rows uh of system message of users of uh",
+    "start": 815.12,
+    "duration": 6.64
+  },
+  {
+    "text": "observations are gone. The trainer sees",
+    "start": 819.12,
+    "duration": 4.719
+  },
+  {
+    "text": "the string and the bits and nothing",
+    "start": 821.76,
+    "duration": 5.079
+  },
+  {
+    "text": "else.",
+    "start": 823.839,
+    "duration": 3.0
+  },
+  {
+    "text": "These are some masking controls across",
+    "start": 827.36,
+    "duration": 5.2
+  },
+  {
+    "text": "some like SFT frameworks. I really like",
+    "start": 829.44,
+    "duration": 5.199
+  },
+  {
+    "text": "one specific example is like llama",
+    "start": 832.56,
+    "duration": 4.32
+  },
+  {
+    "text": "factory where you can specify whether",
+    "start": 834.639,
+    "duration": 4.081
+  },
+  {
+    "text": "you want to train on the prompt as well,",
+    "start": 836.88,
+    "duration": 4.079
+  },
+  {
+    "text": "whether you want to mask a history uh",
+    "start": 838.72,
+    "duration": 6.72
+  },
+  {
+    "text": "when calculating loss. Um, so I can show",
+    "start": 840.959,
+    "duration": 7.281
+  },
+  {
+    "text": "an example of like real usage of llama",
+    "start": 845.44,
+    "duration": 5.8
+  },
+  {
+    "text": "factory.",
+    "start": 848.24,
+    "duration": 3.0
+  },
+  {
+    "text": "Um, this is one of the packages I really",
+    "start": 868.8,
+    "duration": 4.88
+  },
+  {
+    "text": "like to use when doing agentic SFT. You",
+    "start": 871.04,
+    "duration": 5.76
+  },
+  {
+    "text": "can like generate roll outs or synthetic",
+    "start": 873.68,
+    "duration": 5.519
+  },
+  {
+    "text": "trajectories and fit into like this",
+    "start": 876.8,
+    "duration": 5.36
+  },
+  {
+    "text": "infrastructure and identify your model",
+    "start": 879.199,
+    "duration": 5.2
+  },
+  {
+    "text": "that you want to train with and then",
+    "start": 882.16,
+    "duration": 4.32
+  },
+  {
+    "text": "just start training.",
+    "start": 884.399,
+    "duration": 5.521
+  },
+  {
+    "text": "Um you can specify arguments like uh",
+    "start": 886.48,
+    "duration": 4.799
+  },
+  {
+    "text": "whether you want to train the whole",
+    "start": 889.92,
+    "duration": 3.919
+  },
+  {
+    "text": "trajectory or you want to cut it off at",
+    "start": 891.279,
+    "duration": 5.12
+  },
+  {
+    "text": "some position or like we want to train",
+    "start": 893.839,
+    "duration": 7.401
+  },
+  {
+    "text": "on the context as well.",
+    "start": 896.399,
+    "duration": 4.841
+  },
+  {
+    "text": "So um",
+    "start": 908.8,
+    "duration": 5.92
+  },
+  {
+    "text": "there's another special token like the",
+    "start": 912.32,
+    "duration": 4.879
+  },
+  {
+    "text": "end of turn token where it's like",
+    "start": 914.72,
+    "duration": 4.559
+  },
+  {
+    "text": "represented differently for different",
+    "start": 917.199,
+    "duration": 4.32
+  },
+  {
+    "text": "models like for example for queen models",
+    "start": 919.279,
+    "duration": 6.401
+  },
+  {
+    "text": "it's represented as um this the uh the",
+    "start": 921.519,
+    "duration": 9.281
+  },
+  {
+    "text": "red token here of I am end and um for",
+    "start": 925.68,
+    "duration": 9.92
+  },
+  {
+    "text": "other models uh like like for example",
+    "start": 930.8,
+    "duration": 7.599
+  },
+  {
+    "text": "um probably Kimi Llama like they all",
+    "start": 935.6,
+    "duration": 4.96
+  },
+  {
+    "text": "have very different end of token end of",
+    "start": 938.399,
+    "duration": 4.721
+  },
+  {
+    "text": "turn tokens.",
+    "start": 940.56,
+    "duration": 4.48
+  },
+  {
+    "text": "So if you want to train a model you",
+    "start": 943.12,
+    "duration": 3.76
+  },
+  {
+    "text": "might need to take a look at what their",
+    "start": 945.04,
+    "duration": 4.799
+  },
+  {
+    "text": "chat template is so you don't like",
+    "start": 946.88,
+    "duration": 7.6
+  },
+  {
+    "text": "confuse the model during post training.",
+    "start": 949.839,
+    "duration": 8.8
+  },
+  {
+    "text": "And uh one thing I observed like when",
+    "start": 954.48,
+    "duration": 5.919
+  },
+  {
+    "text": "setting up training trajectories are",
+    "start": 958.639,
+    "duration": 4.721
+  },
+  {
+    "text": "people often times mixed up uh what to",
+    "start": 960.399,
+    "duration": 5.041
+  },
+  {
+    "text": "include in",
+    "start": 963.36,
+    "duration": 4.719
+  },
+  {
+    "text": "um calculating loss and what are like",
+    "start": 965.44,
+    "duration": 6.079
+  },
+  {
+    "text": "context only. Uh for example, the row",
+    "start": 968.079,
+    "duration": 6.161
+  },
+  {
+    "text": "header of assistant here is now trained",
+    "start": 971.519,
+    "duration": 6.081
+  },
+  {
+    "text": "for the agent to produce to generate and",
+    "start": 974.24,
+    "duration": 7.12
+  },
+  {
+    "text": "the model only produces um the red boxes",
+    "start": 977.6,
+    "duration": 7.44
+  },
+  {
+    "text": "here instead of the gray box and at last",
+    "start": 981.36,
+    "duration": 6.88
+  },
+  {
+    "text": "the model produces the stop token. So it",
+    "start": 985.04,
+    "duration": 5.599
+  },
+  {
+    "text": "has to be also be trained inside within",
+    "start": 988.24,
+    "duration": 6.88
+  },
+  {
+    "text": "the mask and also end of turn um is like",
+    "start": 990.639,
+    "duration": 6.401
+  },
+  {
+    "text": "actually a combination of multiple",
+    "start": 995.12,
+    "duration": 4.48
+  },
+  {
+    "text": "events instead of only one because end",
+    "start": 997.04,
+    "duration": 4.4
+  },
+  {
+    "text": "of turn means that you need to end this",
+    "start": 999.6,
+    "duration": 4.96
+  },
+  {
+    "text": "message you need to end this tool and",
+    "start": 1001.44,
+    "duration": 6.319
+  },
+  {
+    "text": "also you need to finish the task. Um so",
+    "start": 1004.56,
+    "duration": 5.76
+  },
+  {
+    "text": "like for example in Kimi K3's template",
+    "start": 1007.759,
+    "duration": 5.52
+  },
+  {
+    "text": "here down here um it actually spells",
+    "start": 1010.32,
+    "duration": 4.879
+  },
+  {
+    "text": "them apart with separate tokens for",
+    "start": 1013.279,
+    "duration": 3.92
+  },
+  {
+    "text": "better for the model to better learn how",
+    "start": 1015.199,
+    "duration": 5.161
+  },
+  {
+    "text": "to stop.",
+    "start": 1017.199,
+    "duration": 3.161
+  },
+  {
+    "text": "Another thing that um might be masked",
+    "start": 1022.8,
+    "duration": 6.399
+  },
+  {
+    "text": "out during a training process is",
+    "start": 1026.559,
+    "duration": 4.48
+  },
+  {
+    "text": "reasoning blocks. As we know reasoning",
+    "start": 1029.199,
+    "duration": 5.441
+  },
+  {
+    "text": "blocks are very long blocks and um",
+    "start": 1031.039,
+    "duration": 5.76
+  },
+  {
+    "text": "sometimes people only train on like",
+    "start": 1034.64,
+    "duration": 5.6
+  },
+  {
+    "text": "non-re reasoning parts. So only the like",
+    "start": 1036.799,
+    "duration": 6.561
+  },
+  {
+    "text": "actual tool calls or actual um",
+    "start": 1040.24,
+    "duration": 4.64
+  },
+  {
+    "text": "trajectories.",
+    "start": 1043.36,
+    "duration": 4.0
+  },
+  {
+    "text": "So there are typical several switches",
+    "start": 1044.88,
+    "duration": 5.2
+  },
+  {
+    "text": "that you can try to experiment with.",
+    "start": 1047.36,
+    "duration": 4.8
+  },
+  {
+    "text": "Does the reasoning stays in the context",
+    "start": 1050.08,
+    "duration": 4.56
+  },
+  {
+    "text": "or do they stay in the system message?",
+    "start": 1052.16,
+    "duration": 4.56
+  },
+  {
+    "text": "Uh if they say in the assistant message",
+    "start": 1054.64,
+    "duration": 6.0
+  },
+  {
+    "text": "whether should it be trained on",
+    "start": 1056.72,
+    "duration": 5.92
+  },
+  {
+    "text": "um in the context reason explain the",
+    "start": 1060.64,
+    "duration": 4.24
+  },
+  {
+    "text": "actions that follows the context uh",
+    "start": 1062.64,
+    "duration": 4.88
+  },
+  {
+    "text": "follows the context and if it is trained",
+    "start": 1064.88,
+    "duration": 4.48
+  },
+  {
+    "text": "on it becomes a style that the model",
+    "start": 1067.52,
+    "duration": 4.64
+  },
+  {
+    "text": "itself writes.",
+    "start": 1069.36,
+    "duration": 6.0
+  },
+  {
+    "text": "For example, Neimotron like Neimotra 3",
+    "start": 1072.16,
+    "duration": 5.36
+  },
+  {
+    "text": "ultra keeps like budget truncated",
+    "start": 1075.36,
+    "duration": 4.0
+  },
+  {
+    "text": "reasoning in the context and mask the",
+    "start": 1077.52,
+    "duration": 5.519
+  },
+  {
+    "text": "artificial cut off of the loss. These",
+    "start": 1079.36,
+    "duration": 6.24
+  },
+  {
+    "text": "are like model specific decisions that",
+    "start": 1083.039,
+    "duration": 5.041
+  },
+  {
+    "text": "are very different across different labs",
+    "start": 1085.6,
+    "duration": 7.959
+  },
+  {
+    "text": "or different frontier model development.",
+    "start": 1088.08,
+    "duration": 5.479
+  },
+  {
+    "text": "Um",
+    "start": 1093.679,
+    "duration": 2.321
+  },
+  {
+    "text": ">> yeah sure",
+    "start": 1095.28,
+    "duration": 5.56
+  },
+  {
+    "text": ">> what's the difference between",
+    "start": 1096.0,
+    "duration": 4.84
+  },
+  {
+    "text": ">> uh are you asking for why like reasoning",
+    "start": 1107.039,
+    "duration": 4.561
+  },
+  {
+    "text": "our mask sometimes? Yeah. Uh I'm",
+    "start": 1109.52,
+    "duration": 4.64
+  },
+  {
+    "text": "actually going over this right now like",
+    "start": 1111.6,
+    "duration": 4.24
+  },
+  {
+    "text": "because reason introjectories could be",
+    "start": 1114.16,
+    "duration": 3.519
+  },
+  {
+    "text": "very very long compared to the actual",
+    "start": 1115.84,
+    "duration": 4.719
+  },
+  {
+    "text": "tool call or the actual task completion",
+    "start": 1117.679,
+    "duration": 5.281
+  },
+  {
+    "text": "stage which might confuse the model to",
+    "start": 1120.559,
+    "duration": 4.321
+  },
+  {
+    "text": "produce like only long reasoning but",
+    "start": 1122.96,
+    "duration": 5.44
+  },
+  {
+    "text": "like mixed up with the final outcome. So",
+    "start": 1124.88,
+    "duration": 6.08
+  },
+  {
+    "text": "uh either reasoning sometimes reasoning",
+    "start": 1128.4,
+    "duration": 4.88
+  },
+  {
+    "text": "is mascal sometimes reasoning is train",
+    "start": 1130.96,
+    "duration": 4.24
+  },
+  {
+    "text": "and there is this paper last year of",
+    "start": 1133.28,
+    "duration": 4.639
+  },
+  {
+    "text": "balanced SFT which it aims to balance",
+    "start": 1135.2,
+    "duration": 4.719
+  },
+  {
+    "text": "like reasoning trajectories alongside",
+    "start": 1137.919,
+    "duration": 5.201
+  },
+  {
+    "text": "with the um execution or tool call",
+    "start": 1139.919,
+    "duration": 6.961
+  },
+  {
+    "text": "trajectory. So uh models can learn both.",
+    "start": 1143.12,
+    "duration": 6.76
+  },
+  {
+    "text": "Um",
+    "start": 1146.88,
+    "duration": 3.0
+  },
+  {
+    "text": "so long if we have very long reasoning",
+    "start": 1150.0,
+    "duration": 4.96
+  },
+  {
+    "text": "trajectories it could dominate the loss",
+    "start": 1152.559,
+    "duration": 5.201
+  },
+  {
+    "text": "and the short like tool call or test",
+    "start": 1154.96,
+    "duration": 6.0
+  },
+  {
+    "text": "completion is what we actually most need",
+    "start": 1157.76,
+    "duration": 6.64
+  },
+  {
+    "text": "for like correctness.",
+    "start": 1160.96,
+    "duration": 6.16
+  },
+  {
+    "text": "For example for a task of software",
+    "start": 1164.4,
+    "duration": 4.639
+  },
+  {
+    "text": "engineering we might want the model to",
+    "start": 1167.12,
+    "duration": 5.52
+  },
+  {
+    "text": "reason on what's its next step is but we",
+    "start": 1169.039,
+    "duration": 5.52
+  },
+  {
+    "text": "don't want the model to not actually",
+    "start": 1172.64,
+    "duration": 4.8
+  },
+  {
+    "text": "perform the next step. So um reasoning",
+    "start": 1174.559,
+    "duration": 5.761
+  },
+  {
+    "text": "and action or execution are both",
+    "start": 1177.44,
+    "duration": 4.88
+  },
+  {
+    "text": "important.",
+    "start": 1180.32,
+    "duration": 5.2
+  },
+  {
+    "text": "So in this paper of balance SFT they",
+    "start": 1182.32,
+    "duration": 5.359
+  },
+  {
+    "text": "introduce like rebalancing of uh",
+    "start": 1185.52,
+    "duration": 5.2
+  },
+  {
+    "text": "reasoning and um tool call which like",
+    "start": 1187.679,
+    "duration": 6.081
+  },
+  {
+    "text": "helps more on multi-turn like execution",
+    "start": 1190.72,
+    "duration": 6.199
+  },
+  {
+    "text": "of agents",
+    "start": 1193.76,
+    "duration": 3.159
+  },
+  {
+    "text": "and uh this is a table from MAI so",
+    "start": 1199.12,
+    "duration": 7.52
+  },
+  {
+    "text": "Microsoft MAI model MAI thinking model",
+    "start": 1202.96,
+    "duration": 6.24
+  },
+  {
+    "text": "um they have very different samples",
+    "start": 1206.64,
+    "duration": 4.24
+  },
+  {
+    "text": "across different capability they're",
+    "start": 1209.2,
+    "duration": 3.92
+  },
+  {
+    "text": "aiming to train. Like for example, they",
+    "start": 1210.88,
+    "duration": 4.96
+  },
+  {
+    "text": "categorize STEM capability and coding as",
+    "start": 1213.12,
+    "duration": 5.28
+  },
+  {
+    "text": "like one category and general agency",
+    "start": 1215.84,
+    "duration": 5.199
+  },
+  {
+    "text": "capability as another and general",
+    "start": 1218.4,
+    "duration": 5.519
+  },
+  {
+    "text": "helpfulness and safety as like another.",
+    "start": 1221.039,
+    "duration": 6.241
+  },
+  {
+    "text": "Uh from their sample weight you can see",
+    "start": 1223.919,
+    "duration": 6.321
+  },
+  {
+    "text": "like uh how different they are",
+    "start": 1227.28,
+    "duration": 5.92
+  },
+  {
+    "text": "considering each agent capability uh",
+    "start": 1230.24,
+    "duration": 6.24
+  },
+  {
+    "text": "capabilities importance. Um but like the",
+    "start": 1233.2,
+    "duration": 5.28
+  },
+  {
+    "text": "results are like the token ways are very",
+    "start": 1236.48,
+    "duration": 4.16
+  },
+  {
+    "text": "different from sample ways because",
+    "start": 1238.48,
+    "duration": 4.559
+  },
+  {
+    "text": "different capabilities might incur",
+    "start": 1240.64,
+    "duration": 4.8
+  },
+  {
+    "text": "different lengths of SF trajectories",
+    "start": 1243.039,
+    "duration": 4.561
+  },
+  {
+    "text": "where STEM and coding trajectories are",
+    "start": 1245.44,
+    "duration": 5.359
+  },
+  {
+    "text": "typically very long compared to uh maybe",
+    "start": 1247.6,
+    "duration": 7.28
+  },
+  {
+    "text": "general helpfulness and safety",
+    "start": 1250.799,
+    "duration": 8.401
+  },
+  {
+    "text": "where um in the MAI paper they tend to",
+    "start": 1254.88,
+    "duration": 6.08
+  },
+  {
+    "text": "uh balance the mixture or chose the",
+    "start": 1259.2,
+    "duration": 3.68
+  },
+  {
+    "text": "mixture by counting the number of",
+    "start": 1260.96,
+    "duration": 5.12
+  },
+  {
+    "text": "samples but like stem and coding traces",
+    "start": 1262.88,
+    "duration": 5.84
+  },
+  {
+    "text": "like are so long. So they nearly take",
+    "start": 1266.08,
+    "duration": 5.68
+  },
+  {
+    "text": "all the tokens they're training on",
+    "start": 1268.72,
+    "duration": 5.28
+  },
+  {
+    "text": "and whatever you balance by counting",
+    "start": 1271.76,
+    "duration": 4.56
+  },
+  {
+    "text": "trajectories you should also so this",
+    "start": 1274.0,
+    "duration": 4.48
+  },
+  {
+    "text": "answer is like you should also check",
+    "start": 1276.32,
+    "duration": 4.96
+  },
+  {
+    "text": "whether it's also balanced in tokens or",
+    "start": 1278.48,
+    "duration": 5.36
+  },
+  {
+    "text": "like whether the distribution in tokens",
+    "start": 1281.28,
+    "duration": 6.0
+  },
+  {
+    "text": "is what you preferred.",
+    "start": 1283.84,
+    "duration": 6.319
+  },
+  {
+    "text": "Um also these are some open problems in",
+    "start": 1287.28,
+    "duration": 5.44
+  },
+  {
+    "text": "supervising trajectories where the first",
+    "start": 1290.159,
+    "duration": 4.88
+  },
+  {
+    "text": "one is that we could not find a",
+    "start": 1292.72,
+    "duration": 4.16
+  },
+  {
+    "text": "published experiment that changes the",
+    "start": 1295.039,
+    "duration": 4.241
+  },
+  {
+    "text": "mask for agent SFT and measures what",
+    "start": 1296.88,
+    "duration": 5.36
+  },
+  {
+    "text": "happens but as uh Benu said there's like",
+    "start": 1299.28,
+    "duration": 6.56
+  },
+  {
+    "text": "a recent paper on uh computation world",
+    "start": 1302.24,
+    "duration": 5.36
+  },
+  {
+    "text": "model that like also trained on",
+    "start": 1305.84,
+    "duration": 4.719
+  },
+  {
+    "text": "observations as well. So I think this is",
+    "start": 1307.6,
+    "duration": 6.24
+  },
+  {
+    "text": "one open question that's like worth uh",
+    "start": 1310.559,
+    "duration": 6.801
+  },
+  {
+    "text": "experimenting on and also the careful",
+    "start": 1313.84,
+    "duration": 5.68
+  },
+  {
+    "text": "masking experiments are mostly single",
+    "start": 1317.36,
+    "duration": 5.12
+  },
+  {
+    "text": "term recently uh on instruction tuning",
+    "start": 1319.52,
+    "duration": 6.96
+  },
+  {
+    "text": "instead of on agents. Um and the one",
+    "start": 1322.48,
+    "duration": 6.64
+  },
+  {
+    "text": "case where unmasking the prompt helped",
+    "start": 1326.48,
+    "duration": 4.96
+  },
+  {
+    "text": "like had long prompts and short answers",
+    "start": 1329.12,
+    "duration": 6.48
+  },
+  {
+    "text": "and little um data like in the paper",
+    "start": 1331.44,
+    "duration": 6.64
+  },
+  {
+    "text": "below I attached like agent trajectories",
+    "start": 1335.6,
+    "duration": 4.64
+  },
+  {
+    "text": "are the opposite on all three. So I",
+    "start": 1338.08,
+    "duration": 3.76
+  },
+  {
+    "text": "still think this is an open question",
+    "start": 1340.24,
+    "duration": 5.36
+  },
+  {
+    "text": "that's like worth discussing.",
+    "start": 1341.84,
+    "duration": 7.04
+  },
+  {
+    "text": "Um also choosing the trajectories are",
+    "start": 1345.6,
+    "duration": 7.28
+  },
+  {
+    "text": "important for agent SFT as well.",
+    "start": 1348.88,
+    "duration": 7.12
+  },
+  {
+    "text": "Um so this is a table of like where",
+    "start": 1352.88,
+    "duration": 5.2
+  },
+  {
+    "text": "typical trajectories come from for agent",
+    "start": 1356.0,
+    "duration": 3.84
+  },
+  {
+    "text": "take SFT",
+    "start": 1358.08,
+    "duration": 5.36
+  },
+  {
+    "text": "on the left column like who run the task",
+    "start": 1359.84,
+    "duration": 5.68
+  },
+  {
+    "text": "like where to collect agent SFT",
+    "start": 1363.44,
+    "duration": 4.56
+  },
+  {
+    "text": "trajectory from either is from a strong",
+    "start": 1365.52,
+    "duration": 4.88
+  },
+  {
+    "text": "model that could run it or from the",
+    "start": 1368.0,
+    "duration": 5.2
+  },
+  {
+    "text": "model that like you are training on like",
+    "start": 1370.4,
+    "duration": 6.399
+  },
+  {
+    "text": "uh for example for MAI they use its own",
+    "start": 1373.2,
+    "duration": 7.2
+  },
+  {
+    "text": "reasoning runs or trajectories for SFT",
+    "start": 1376.799,
+    "duration": 6.721
+  },
+  {
+    "text": "and Um yeah, so like depending on the",
+    "start": 1380.4,
+    "duration": 6.48
+  },
+  {
+    "text": "roles um whether you keep everything you",
+    "start": 1383.52,
+    "duration": 6.159
+  },
+  {
+    "text": "got from the uh the generated trajectory",
+    "start": 1386.88,
+    "duration": 4.96
+  },
+  {
+    "text": "or you keep the runs that only passed",
+    "start": 1389.679,
+    "duration": 5.441
+  },
+  {
+    "text": "some threshold or verifier. So if you",
+    "start": 1391.84,
+    "duration": 5.199
+  },
+  {
+    "text": "keep everything that you generated from",
+    "start": 1395.12,
+    "duration": 4.08
+  },
+  {
+    "text": "a strong model that's like called plain",
+    "start": 1397.039,
+    "duration": 4.961
+  },
+  {
+    "text": "distillation. If you keep the runs that",
+    "start": 1399.2,
+    "duration": 6.08
+  },
+  {
+    "text": "pass some sort of verifiers like most of",
+    "start": 1402.0,
+    "duration": 5.76
+  },
+  {
+    "text": "the SFT falls into this category for",
+    "start": 1405.28,
+    "duration": 4.96
+  },
+  {
+    "text": "example Swimmatron",
+    "start": 1407.76,
+    "duration": 6.24
+  },
+  {
+    "text": "by Nvidia and opensource agent all falls",
+    "start": 1410.24,
+    "duration": 6.799
+  },
+  {
+    "text": "into this category. Um and then like if",
+    "start": 1414.0,
+    "duration": 5.679
+  },
+  {
+    "text": "you keep everything that you generated",
+    "start": 1417.039,
+    "duration": 5.76
+  },
+  {
+    "text": "from the model yourself then like this",
+    "start": 1419.679,
+    "duration": 5.761
+  },
+  {
+    "text": "an example is MAI but they felt like",
+    "start": 1422.799,
+    "duration": 7.521
+  },
+  {
+    "text": "little difference um using like FFTD and",
+    "start": 1425.44,
+    "duration": 7.76
+  },
+  {
+    "text": "uh if you keep the runs that pass the",
+    "start": 1430.32,
+    "duration": 6.64
+  },
+  {
+    "text": "verifier with the model of itself then",
+    "start": 1433.2,
+    "duration": 6.24
+  },
+  {
+    "text": "this is like called expert iteration",
+    "start": 1436.96,
+    "duration": 7.28
+  },
+  {
+    "text": "which should be like teased later.",
+    "start": 1439.44,
+    "duration": 7.52
+  },
+  {
+    "text": "So most agent SFD data sits in the like",
+    "start": 1444.24,
+    "duration": 5.28
+  },
+  {
+    "text": "top right box of like keeping only a",
+    "start": 1446.96,
+    "duration": 5.839
+  },
+  {
+    "text": "subset of filter data generated with a",
+    "start": 1449.52,
+    "duration": 5.92
+  },
+  {
+    "text": "strong model and because the stronger",
+    "start": 1452.799,
+    "duration": 4.641
+  },
+  {
+    "text": "model like writes better trajectories",
+    "start": 1455.44,
+    "duration": 4.88
+  },
+  {
+    "text": "than the student could and the tasks own",
+    "start": 1457.44,
+    "duration": 6.4
+  },
+  {
+    "text": "like task might be good as keeping uh",
+    "start": 1460.32,
+    "duration": 7.04
+  },
+  {
+    "text": "only the good trajectories",
+    "start": 1463.84,
+    "duration": 6.079
+  },
+  {
+    "text": "and uh in the bottom row the model makes",
+    "start": 1467.36,
+    "duration": 4.88
+  },
+  {
+    "text": "its own training data. So repeat the",
+    "start": 1469.919,
+    "duration": 4.481
+  },
+  {
+    "text": "loop like you get S for iteration which",
+    "start": 1472.24,
+    "duration": 4.88
+  },
+  {
+    "text": "will be covered later.",
+    "start": 1474.4,
+    "duration": 4.8
+  },
+  {
+    "text": "This is some results from sweet gym",
+    "start": 1477.12,
+    "duration": 5.52
+  },
+  {
+    "text": "which falls into the upper right like",
+    "start": 1479.2,
+    "duration": 5.52
+  },
+  {
+    "text": "you keep the runs that passed with a",
+    "start": 1482.64,
+    "duration": 5.519
+  },
+  {
+    "text": "stronger model that runs it category. uh",
+    "start": 1484.72,
+    "duration": 6.0
+  },
+  {
+    "text": "where it founds that like it achieves",
+    "start": 1488.159,
+    "duration": 5.841
+  },
+  {
+    "text": "much higher resolution rate after um",
+    "start": 1490.72,
+    "duration": 6.16
+  },
+  {
+    "text": "distilling from models like GT40 and",
+    "start": 1494.0,
+    "duration": 4.72
+  },
+  {
+    "text": "Cloud",
+    "start": 1496.88,
+    "duration": 4.159
+  },
+  {
+    "text": "while only keeping the trajectories that",
+    "start": 1498.72,
+    "duration": 7.959
+  },
+  {
+    "text": "pass um the repository tasks.",
+    "start": 1501.039,
+    "duration": 5.64
+  },
+  {
+    "text": "And um in terms of trajectory count and",
+    "start": 1507.919,
+    "duration": 6.801
+  },
+  {
+    "text": "saturation, scaling the number of",
+    "start": 1512.4,
+    "duration": 6.0
+  },
+  {
+    "text": "training trajectories might um result in",
+    "start": 1514.72,
+    "duration": 5.76
+  },
+  {
+    "text": "an increase in the model performance,",
+    "start": 1518.4,
+    "duration": 5.2
+  },
+  {
+    "text": "but like it might saturate at some point",
+    "start": 1520.48,
+    "duration": 6.72
+  },
+  {
+    "text": "and it's much easier for as uh for",
+    "start": 1523.6,
+    "duration": 6.079
+  },
+  {
+    "text": "saturation if you are using a smaller",
+    "start": 1527.2,
+    "duration": 5.2
+  },
+  {
+    "text": "model for training.",
+    "start": 1529.679,
+    "duration": 4.721
+  },
+  {
+    "text": "So",
+    "start": 1532.4,
+    "duration": 6.879
+  },
+  {
+    "text": "in the plot here like the authors of SGM",
+    "start": 1534.4,
+    "duration": 7.84
+  },
+  {
+    "text": "uses the same task set throughout of",
+    "start": 1539.279,
+    "duration": 5.121
+  },
+  {
+    "text": "software engineering and only the number",
+    "start": 1542.24,
+    "duration": 4.4
+  },
+  {
+    "text": "of sample data like changes. So",
+    "start": 1544.4,
+    "duration": 5.279
+  },
+  {
+    "text": "increased through time and accuracy was",
+    "start": 1546.64,
+    "duration": 5.039
+  },
+  {
+    "text": "still rising when the sampling budget",
+    "start": 1549.679,
+    "duration": 3.841
+  },
+  {
+    "text": "run out",
+    "start": 1551.679,
+    "duration": 4.961
+  },
+  {
+    "text": "and they had task to spare where like",
+    "start": 1553.52,
+    "duration": 5.039
+  },
+  {
+    "text": "what they run out of was compute to",
+    "start": 1556.64,
+    "duration": 5.919
+  },
+  {
+    "text": "sample more uh more runs and every point",
+    "start": 1558.559,
+    "duration": 6.161
+  },
+  {
+    "text": "in this plot uses the same task like",
+    "start": 1562.559,
+    "duration": 4.881
+  },
+  {
+    "text": "what happens when you add new task uh I",
+    "start": 1564.72,
+    "duration": 6.76
+  },
+  {
+    "text": "will be discussing like later",
+    "start": 1567.44,
+    "duration": 4.04
+  },
+  {
+    "text": "um but like not all agentic trajectory",
+    "start": 1572.08,
+    "duration": 5.04
+  },
+  {
+    "text": "might be like helpful. There are some",
+    "start": 1574.88,
+    "duration": 5.52
+  },
+  {
+    "text": "desirable behaviors even in successful",
+    "start": 1577.12,
+    "duration": 5.439
+  },
+  {
+    "text": "rollouts. Uh for successful we mean that",
+    "start": 1580.4,
+    "duration": 5.12
+  },
+  {
+    "text": "the final eventual uh task was",
+    "start": 1582.559,
+    "duration": 5.281
+  },
+  {
+    "text": "successfully completed. But there are",
+    "start": 1585.52,
+    "duration": 4.0
+  },
+  {
+    "text": "something intermediate that we might not",
+    "start": 1587.84,
+    "duration": 4.56
+  },
+  {
+    "text": "be able to measure",
+    "start": 1589.52,
+    "duration": 6.24
+  },
+  {
+    "text": "like this might be teaching undesirable",
+    "start": 1592.4,
+    "duration": 6.72
+  },
+  {
+    "text": "behaviors if we use this directly as SFT",
+    "start": 1595.76,
+    "duration": 6.0
+  },
+  {
+    "text": "data.",
+    "start": 1599.12,
+    "duration": 5.28
+  },
+  {
+    "text": "So let's assume that every run passed",
+    "start": 1601.76,
+    "duration": 4.96
+  },
+  {
+    "text": "its like unit test or like the",
+    "start": 1604.4,
+    "duration": 5.84
+  },
+  {
+    "text": "repositories tests. But look at how like",
+    "start": 1606.72,
+    "duration": 6.24
+  },
+  {
+    "text": "for example one edited and uh the red",
+    "start": 1610.24,
+    "duration": 5.84
+  },
+  {
+    "text": "box there like one edited and rerun test",
+    "start": 1612.96,
+    "duration": 6.16
+  },
+  {
+    "text": "in a loop for most of its turns and",
+    "start": 1616.08,
+    "duration": 5.04
+  },
+  {
+    "text": "another left print statements in the",
+    "start": 1619.12,
+    "duration": 4.159
+  },
+  {
+    "text": "final batch. So although the final",
+    "start": 1621.12,
+    "duration": 4.08
+  },
+  {
+    "text": "answer is wrong but this all might still",
+    "start": 1623.279,
+    "duration": 5.041
+  },
+  {
+    "text": "teach the model some wrong behaviors um",
+    "start": 1625.2,
+    "duration": 7.56
+  },
+  {
+    "text": "that it should not learn from SFT",
+    "start": 1628.32,
+    "duration": 4.44
+  },
+  {
+    "text": "and the loss copies like every action no",
+    "start": 1632.96,
+    "duration": 5.839
+  },
+  {
+    "text": "matter like whether it's good or not. So",
+    "start": 1636.24,
+    "duration": 4.559
+  },
+  {
+    "text": "train on these runs and the model learns",
+    "start": 1638.799,
+    "duration": 7.36
+  },
+  {
+    "text": "the best together with the eventual fix.",
+    "start": 1640.799,
+    "duration": 8.961
+  },
+  {
+    "text": "There are like some filters for uh what",
+    "start": 1646.159,
+    "duration": 7.361
+  },
+  {
+    "text": "counts as good SFT data like one very",
+    "start": 1649.76,
+    "duration": 6.799
+  },
+  {
+    "text": "simple example is like filtering real by",
+    "start": 1653.52,
+    "duration": 4.8
+  },
+  {
+    "text": "uh by length like length of the",
+    "start": 1656.559,
+    "duration": 5.041
+  },
+  {
+    "text": "trajectory u for example in a trajectory",
+    "start": 1658.32,
+    "duration": 7.76
+  },
+  {
+    "text": "with uh less than let's say five turns",
+    "start": 1661.6,
+    "duration": 7.679
+  },
+  {
+    "text": "it's probably likely that it's not very",
+    "start": 1666.08,
+    "duration": 6.0
+  },
+  {
+    "text": "good trajectories because like if it's",
+    "start": 1669.279,
+    "duration": 6.4
+  },
+  {
+    "text": "short there are like different",
+    "start": 1672.08,
+    "duration": 5.44
+  },
+  {
+    "text": "Um you you can say different things",
+    "start": 1675.679,
+    "duration": 3.761
+  },
+  {
+    "text": "about like short trajectories but either",
+    "start": 1677.52,
+    "duration": 4.0
+  },
+  {
+    "text": "is like short because it solve the task",
+    "start": 1679.44,
+    "duration": 6.08
+  },
+  {
+    "text": "correctly like at one try and then it's",
+    "start": 1681.52,
+    "duration": 6.8
+  },
+  {
+    "text": "difficult for agent to learn error",
+    "start": 1685.52,
+    "duration": 6.159
+  },
+  {
+    "text": "recovery abilities uh or it might just",
+    "start": 1688.32,
+    "duration": 6.16
+  },
+  {
+    "text": "like the trajectory is incorrect itself.",
+    "start": 1691.679,
+    "duration": 4.961
+  },
+  {
+    "text": "So it's like being very short or the",
+    "start": 1694.48,
+    "duration": 4.319
+  },
+  {
+    "text": "agent encounter like some errors when",
+    "start": 1696.64,
+    "duration": 4.24
+  },
+  {
+    "text": "generating the trajectory which makes us",
+    "start": 1698.799,
+    "duration": 4.401
+  },
+  {
+    "text": "very short. So like filtering by",
+    "start": 1700.88,
+    "duration": 4.399
+  },
+  {
+    "text": "trajectory lens is one of the useful",
+    "start": 1703.2,
+    "duration": 4.959
+  },
+  {
+    "text": "approaches that people do today. Um this",
+    "start": 1705.279,
+    "duration": 5.201
+  },
+  {
+    "text": "is like uh this ablation study is",
+    "start": 1708.159,
+    "duration": 7.961
+  },
+  {
+    "text": "performed by the paper open s agent.",
+    "start": 1710.48,
+    "duration": 5.64
+  },
+  {
+    "text": "So uh one of their conclusion is that",
+    "start": 1716.64,
+    "duration": 4.96
+  },
+  {
+    "text": "the best filter here is just count the",
+    "start": 1719.52,
+    "duration": 4.48
+  },
+  {
+    "text": "number of turns of agents and drops",
+    "start": 1721.6,
+    "duration": 6.24
+  },
+  {
+    "text": "every run that's shorter than five.",
+    "start": 1724.0,
+    "duration": 6.159
+  },
+  {
+    "text": "And turn count says like how much work a",
+    "start": 1727.84,
+    "duration": 5.76
+  },
+  {
+    "text": "run took uh but not whether the work was",
+    "start": 1730.159,
+    "duration": 6.081
+  },
+  {
+    "text": "any was good.",
+    "start": 1733.6,
+    "duration": 6.24
+  },
+  {
+    "text": "And uh um in this case a four turn clean",
+    "start": 1736.24,
+    "duration": 6.88
+  },
+  {
+    "text": "fix might got dropped um and a 14 turn",
+    "start": 1739.84,
+    "duration": 6.4
+  },
+  {
+    "text": "like messy trajectory might still get",
+    "start": 1743.12,
+    "duration": 7.84
+  },
+  {
+    "text": "kept but on average it still helped.",
+    "start": 1746.24,
+    "duration": 6.96
+  },
+  {
+    "text": "Another thing that's important for SFT",
+    "start": 1750.96,
+    "duration": 4.88
+  },
+  {
+    "text": "is like whether you can choose the best",
+    "start": 1753.2,
+    "duration": 5.04
+  },
+  {
+    "text": "teacher like the model itself being the",
+    "start": 1755.84,
+    "duration": 4.64
+  },
+  {
+    "text": "best model does not mean that that it",
+    "start": 1758.24,
+    "duration": 5.28
+  },
+  {
+    "text": "could be a best teacher. Um for the open",
+    "start": 1760.48,
+    "duration": 5.919
+  },
+  {
+    "text": "source agent paper they evaluated",
+    "start": 1763.52,
+    "duration": 5.12
+  },
+  {
+    "text": "several agents on like several",
+    "start": 1766.399,
+    "duration": 4.721
+  },
+  {
+    "text": "benchmarks and they found that the best",
+    "start": 1768.64,
+    "duration": 4.8
+  },
+  {
+    "text": "agent evaluated at that time which was",
+    "start": 1771.12,
+    "duration": 6.0
+  },
+  {
+    "text": "GPD 5.3 codeex is actually the worst",
+    "start": 1773.44,
+    "duration": 8.479
+  },
+  {
+    "text": "teacher among all of these uh models.",
+    "start": 1777.12,
+    "duration": 7.12
+  },
+  {
+    "text": "You can see that it resulted in like",
+    "start": 1781.919,
+    "duration": 4.561
+  },
+  {
+    "text": "less gain compared to other models or",
+    "start": 1784.24,
+    "duration": 5.039
+  },
+  {
+    "text": "even like some decrease in performances",
+    "start": 1786.48,
+    "duration": 6.96
+  },
+  {
+    "text": "after distilling from 255.3 codeex.",
+    "start": 1789.279,
+    "duration": 6.801
+  },
+  {
+    "text": "So if you want to distill from a",
+    "start": 1793.44,
+    "duration": 4.16
+  },
+  {
+    "text": "stronger model or if you want to",
+    "start": 1796.08,
+    "duration": 3.44
+  },
+  {
+    "text": "generate trajectories from a teacher",
+    "start": 1797.6,
+    "duration": 4.24
+  },
+  {
+    "text": "model uh you might need to choose your",
+    "start": 1799.52,
+    "duration": 5.759
+  },
+  {
+    "text": "teacher model wisely.",
+    "start": 1801.84,
+    "duration": 4.88
+  },
+  {
+    "text": ">> Yeah.",
+    "start": 1805.279,
+    "duration": 5.041
+  },
+  {
+    "text": ">> Teach on calls mainly how Is this",
+    "start": 1806.72,
+    "duration": 5.76
+  },
+  {
+    "text": "possible? So the codeex produces correct",
+    "start": 1810.32,
+    "duration": 4.719
+  },
+  {
+    "text": "tool calls but they are the least",
+    "start": 1812.48,
+    "duration": 6.559
+  },
+  {
+    "text": "efficient for training other models.",
+    "start": 1815.039,
+    "duration": 7.12
+  },
+  {
+    "text": "Is there like a reasoning behind it? How",
+    "start": 1819.039,
+    "duration": 6.64
+  },
+  {
+    "text": "could that be? Um there might be various",
+    "start": 1822.159,
+    "duration": 7.361
+  },
+  {
+    "text": "reasons behind it like for example um",
+    "start": 1825.679,
+    "duration": 7.201
+  },
+  {
+    "text": "GPT 5.3 codeex is good at training good",
+    "start": 1829.52,
+    "duration": 6.48
+  },
+  {
+    "text": "at um solving the task itself but like",
+    "start": 1832.88,
+    "duration": 5.679
+  },
+  {
+    "text": "the generated trajectory might not work",
+    "start": 1836.0,
+    "duration": 5.2
+  },
+  {
+    "text": "for the student model that much like",
+    "start": 1838.559,
+    "duration": 4.961
+  },
+  {
+    "text": "because the thinking mode might be very",
+    "start": 1841.2,
+    "duration": 4.8
+  },
+  {
+    "text": "different or the methods of solving the",
+    "start": 1843.52,
+    "duration": 7.2
+  },
+  {
+    "text": "task might be very different. Um so yeah",
+    "start": 1846.0,
+    "duration": 8.64
+  },
+  {
+    "text": "that's one of the explanations. Um also",
+    "start": 1850.72,
+    "duration": 7.12
+  },
+  {
+    "text": "like leaderboard rank only told like",
+    "start": 1854.64,
+    "duration": 6.8
+  },
+  {
+    "text": "whether um whether the models to run",
+    "start": 1857.84,
+    "duration": 6.559
+  },
+  {
+    "text": "things here and you should like try more",
+    "start": 1861.44,
+    "duration": 5.52
+  },
+  {
+    "text": "teachers and keeping the better student",
+    "start": 1864.399,
+    "duration": 6.921
+  },
+  {
+    "text": "that is cheap like by comparison",
+    "start": 1866.96,
+    "duration": 4.36
+  },
+  {
+    "text": "also for SFT ch like wisely choosing the",
+    "start": 1876.24,
+    "duration": 6.08
+  },
+  {
+    "text": "task sources are important. There are",
+    "start": 1880.32,
+    "duration": 3.839
+  },
+  {
+    "text": "just so many asset data assets out",
+    "start": 1882.32,
+    "duration": 5.2
+  },
+  {
+    "text": "there. Um but not probably not all of",
+    "start": 1884.159,
+    "duration": 5.281
+  },
+  {
+    "text": "them could work for the task you are",
+    "start": 1887.52,
+    "duration": 5.279
+  },
+  {
+    "text": "looking to train on. Um still done by",
+    "start": 1889.44,
+    "duration": 5.92
+  },
+  {
+    "text": "open source agent but like they perform",
+    "start": 1892.799,
+    "duration": 5.281
+  },
+  {
+    "text": "some abolition studies on how much like",
+    "start": 1895.36,
+    "duration": 5.6
+  },
+  {
+    "text": "each different task source of agent",
+    "start": 1898.08,
+    "duration": 5.28
+  },
+  {
+    "text": "trajectories could contribute to",
+    "start": 1900.96,
+    "duration": 4.4
+  },
+  {
+    "text": "different benchmarks. Like for example,",
+    "start": 1903.36,
+    "duration": 3.76
+  },
+  {
+    "text": "Sweet Smith contributed the most to",
+    "start": 1905.36,
+    "duration": 4.159
+  },
+  {
+    "text": "Sweetbench verified but it contribute",
+    "start": 1907.12,
+    "duration": 6.0
+  },
+  {
+    "text": "less to terminal bench.",
+    "start": 1909.519,
+    "duration": 3.601
+  },
+  {
+    "text": "And the choice of task source could",
+    "start": 1914.48,
+    "duration": 4.4
+  },
+  {
+    "text": "change the results the most like change",
+    "start": 1917.12,
+    "duration": 3.52
+  },
+  {
+    "text": "the results of training your model the",
+    "start": 1918.88,
+    "duration": 4.76
+  },
+  {
+    "text": "most.",
+    "start": 1920.64,
+    "duration": 3.0
+  },
+  {
+    "text": "Also different sources might help",
+    "start": 1924.24,
+    "duration": 3.6
+  },
+  {
+    "text": "different benchmarks. So like you should",
+    "start": 1926.24,
+    "duration": 4.159
+  },
+  {
+    "text": "spend your effort here before tuning",
+    "start": 1927.84,
+    "duration": 4.959
+  },
+  {
+    "text": "anything else. So you should try uh",
+    "start": 1930.399,
+    "duration": 5.841
+  },
+  {
+    "text": "which task might works out for your",
+    "start": 1932.799,
+    "duration": 5.76
+  },
+  {
+    "text": "for your particular benchmark and then",
+    "start": 1936.24,
+    "duration": 4.4
+  },
+  {
+    "text": "distill like maybe train on that",
+    "start": 1938.559,
+    "duration": 4.96
+  },
+  {
+    "text": "specific data set instead of training on",
+    "start": 1940.64,
+    "duration": 5.68
+  },
+  {
+    "text": "all you can get.",
+    "start": 1943.519,
+    "duration": 5.681
+  },
+  {
+    "text": "And one of their conclusion or empirical",
+    "start": 1946.32,
+    "duration": 5.599
+  },
+  {
+    "text": "conclusion is that it's best for you to",
+    "start": 1949.2,
+    "duration": 5.52
+  },
+  {
+    "text": "mix like four to eight sources of data",
+    "start": 1951.919,
+    "duration": 5.841
+  },
+  {
+    "text": "sets and because going wider than that",
+    "start": 1954.72,
+    "duration": 4.959
+  },
+  {
+    "text": "might not actually help you for your",
+    "start": 1957.76,
+    "duration": 5.56
+  },
+  {
+    "text": "particular benchmark.",
+    "start": 1959.679,
+    "duration": 3.641
+  },
+  {
+    "text": "Um we might think that scaling up just",
+    "start": 1965.6,
+    "duration": 6.079
+  },
+  {
+    "text": "simply could improve agentic",
+    "start": 1969.279,
+    "duration": 5.441
+  },
+  {
+    "text": "performances on benchmarks. But like um",
+    "start": 1971.679,
+    "duration": 6.24
+  },
+  {
+    "text": "empirical evidence shows the contrary.",
+    "start": 1974.72,
+    "duration": 5.92
+  },
+  {
+    "text": "Like if you only set up sample the same",
+    "start": 1977.919,
+    "duration": 5.521
+  },
+  {
+    "text": "rowouts from the same distribution then",
+    "start": 1980.64,
+    "duration": 5.039
+  },
+  {
+    "text": "performance at might actually drop or be",
+    "start": 1983.44,
+    "duration": 4.719
+  },
+  {
+    "text": "saturated over time as you increase the",
+    "start": 1985.679,
+    "duration": 4.641
+  },
+  {
+    "text": "number of rowouts. But on the other",
+    "start": 1988.159,
+    "duration": 4.0
+  },
+  {
+    "text": "hand, if like you increase the",
+    "start": 1990.32,
+    "duration": 5.04
+  },
+  {
+    "text": "distribution, for example, you add more",
+    "start": 1992.159,
+    "duration": 5.76
+  },
+  {
+    "text": "data through synthetic augmentation,",
+    "start": 1995.36,
+    "duration": 6.159
+  },
+  {
+    "text": "then like um the accuracy might still go",
+    "start": 1997.919,
+    "duration": 7.36
+  },
+  {
+    "text": "up as you add more examples.",
+    "start": 2001.519,
+    "duration": 6.561
+  },
+  {
+    "text": "So as you can see from the three um",
+    "start": 2005.279,
+    "duration": 5.441
+  },
+  {
+    "text": "plots here u both the blue curve",
+    "start": 2008.08,
+    "duration": 5.12
+  },
+  {
+    "text": "represents synthetic augmentation uh",
+    "start": 2010.72,
+    "duration": 5.04
+  },
+  {
+    "text": "with different distribution of the data",
+    "start": 2013.2,
+    "duration": 5.28
+  },
+  {
+    "text": "where the red curve represent up",
+    "start": 2015.76,
+    "duration": 4.56
+  },
+  {
+    "text": "sampling rollouts within the same",
+    "start": 2018.48,
+    "duration": 4.079
+  },
+  {
+    "text": "distribution. Both curves are from the",
+    "start": 2020.32,
+    "duration": 4.959
+  },
+  {
+    "text": "same like 10k data set and differ only",
+    "start": 2022.559,
+    "duration": 5.201
+  },
+  {
+    "text": "in where the extra data come from like",
+    "start": 2025.279,
+    "duration": 4.481
+  },
+  {
+    "text": "whether the extra data distribution is",
+    "start": 2027.76,
+    "duration": 6.039
+  },
+  {
+    "text": "the same with the prior data.",
+    "start": 2029.76,
+    "duration": 4.039
+  },
+  {
+    "text": "Um so the the pink curve adds more runs",
+    "start": 2034.159,
+    "duration": 6.4
+  },
+  {
+    "text": "of the same task and it flattens out",
+    "start": 2037.919,
+    "duration": 5.041
+  },
+  {
+    "text": "through time and the blue curves add new",
+    "start": 2040.559,
+    "duration": 6.681
+  },
+  {
+    "text": "task but it keeps climbing.",
+    "start": 2042.96,
+    "duration": 4.28
+  },
+  {
+    "text": "Um I also want to have a short",
+    "start": 2047.679,
+    "duration": 5.92
+  },
+  {
+    "text": "discussion like let's assume that we",
+    "start": 2050.24,
+    "duration": 6.399
+  },
+  {
+    "text": "have three runs of the same task and you",
+    "start": 2053.599,
+    "duration": 6.24
+  },
+  {
+    "text": "are deciding uh like which ones to use",
+    "start": 2056.639,
+    "duration": 5.921
+  },
+  {
+    "text": "for the training set. Let's say option A",
+    "start": 2059.839,
+    "duration": 4.721
+  },
+  {
+    "text": "where you have a short run that solved",
+    "start": 2062.56,
+    "duration": 5.2
+  },
+  {
+    "text": "the issue in four turns and option B a",
+    "start": 2064.56,
+    "duration": 6.16
+  },
+  {
+    "text": "long long run that made a wrong edit and",
+    "start": 2067.76,
+    "duration": 6.159
+  },
+  {
+    "text": "so this test failed and recovered and",
+    "start": 2070.72,
+    "duration": 5.52
+  },
+  {
+    "text": "option C a run that solved the issue",
+    "start": 2073.919,
+    "duration": 5.2
+  },
+  {
+    "text": "after 11 attempts um that changed",
+    "start": 2076.24,
+    "duration": 5.28
+  },
+  {
+    "text": "nothing.",
+    "start": 2079.119,
+    "duration": 4.72
+  },
+  {
+    "text": "Which of these would you keep in your",
+    "start": 2081.52,
+    "duration": 5.2
+  },
+  {
+    "text": "agent training trajectories?",
+    "start": 2083.839,
+    "duration": 4.721
+  },
+  {
+    "text": "And for the ones that you keep, which",
+    "start": 2086.72,
+    "duration": 6.0
+  },
+  {
+    "text": "actions um should carry the loss and",
+    "start": 2088.56,
+    "duration": 6.72
+  },
+  {
+    "text": "which of your answer would the minimum",
+    "start": 2092.72,
+    "duration": 6.8
+  },
+  {
+    "text": "term computer gets wrong?",
+    "start": 2095.28,
+    "duration": 7.88
+  },
+  {
+    "text": "Any any thoughts?",
+    "start": 2099.52,
+    "duration": 3.64
+  },
+  {
+    "text": "probably the B because we're training",
+    "start": 2103.28,
+    "duration": 6.0
+  },
+  {
+    "text": "only on two columns which means that the",
+    "start": 2105.76,
+    "duration": 5.44
+  },
+  {
+    "text": "context of the test doesn't really",
+    "start": 2109.28,
+    "duration": 3.76
+  },
+  {
+    "text": "matter and the fact that you will able",
+    "start": 2111.2,
+    "duration": 3.919
+  },
+  {
+    "text": "to solve the problem for turns is not as",
+    "start": 2113.04,
+    "duration": 4.72
+  },
+  {
+    "text": "valuable as being able to work on long",
+    "start": 2115.119,
+    "duration": 5.281
+  },
+  {
+    "text": "trajectories observing the tests and",
+    "start": 2117.76,
+    "duration": 4.88
+  },
+  {
+    "text": "recovering and getting the results on",
+    "start": 2120.4,
+    "duration": 4.56
+  },
+  {
+    "text": "like a harder configuration even though",
+    "start": 2122.64,
+    "duration": 4.719
+  },
+  {
+    "text": "it's",
+    "start": 2124.96,
+    "duration": 5.52
+  },
+  {
+    "text": ">> yeah I I think that makes sense",
+    "start": 2127.359,
+    "duration": 6.161
+  },
+  {
+    "text": "um but what we would think could be the",
+    "start": 2130.48,
+    "duration": 7.599
+  },
+  {
+    "text": "potential disadvantage of choosing B",
+    "start": 2133.52,
+    "duration": 8.319
+  },
+  {
+    "text": ">> more data, more computer training",
+    "start": 2138.079,
+    "duration": 6.161
+  },
+  {
+    "text": "and then the model gets smaller goals",
+    "start": 2141.839,
+    "duration": 5.601
+  },
+  {
+    "text": "and like excessive doing excessive goals",
+    "start": 2144.24,
+    "duration": 4.879
+  },
+  {
+    "text": "like",
+    "start": 2147.44,
+    "duration": 3.84
+  },
+  {
+    "text": ">> yeah uh other than that there's also a",
+    "start": 2149.119,
+    "duration": 3.921
+  },
+  {
+    "text": "probability of just learning the wrong",
+    "start": 2151.28,
+    "duration": 4.079
+  },
+  {
+    "text": "edit and not being able to learn the",
+    "start": 2153.04,
+    "duration": 5.2
+  },
+  {
+    "text": "recovery ability. So like there's both",
+    "start": 2155.359,
+    "duration": 6.0
+  },
+  {
+    "text": "sides of keeping this data but like so",
+    "start": 2158.24,
+    "duration": 6.24
+  },
+  {
+    "text": "it will improve the agents like error",
+    "start": 2161.359,
+    "duration": 6.561
+  },
+  {
+    "text": "recovery ability but it might also uh",
+    "start": 2164.48,
+    "duration": 6.8
+  },
+  {
+    "text": "incur wrong behaviors for agents.",
+    "start": 2167.92,
+    "duration": 6.36
+  },
+  {
+    "text": "Yeah.",
+    "start": 2171.28,
+    "duration": 3.0
+  },
+  {
+    "text": "Um any any other answers?",
+    "start": 2189.839,
+    "duration": 5.481
+  },
+  {
+    "text": ">> Yeah, go ahead.",
+    "start": 2195.92,
+    "duration": 6.48
+  },
+  {
+    "text": ">> Uh and what's your reasoning?",
+    "start": 2199.52,
+    "duration": 5.2
+  },
+  {
+    "text": "So like",
+    "start": 2202.4,
+    "duration": 5.439
+  },
+  {
+    "text": "behavior rather than going through",
+    "start": 2204.72,
+    "duration": 5.84
+  },
+  {
+    "text": "that.",
+    "start": 2207.839,
+    "duration": 5.52
+  },
+  {
+    "text": ">> Yeah. But uh on the other hand if like",
+    "start": 2210.56,
+    "duration": 7.84
+  },
+  {
+    "text": "for example it's um first try results in",
+    "start": 2213.359,
+    "duration": 8.24
+  },
+  {
+    "text": "like on the one hand like uh it's a",
+    "start": 2218.4,
+    "duration": 6.08
+  },
+  {
+    "text": "right behavior or the right results from",
+    "start": 2221.599,
+    "duration": 4.961
+  },
+  {
+    "text": "the start. But like on the other hand,",
+    "start": 2224.48,
+    "duration": 4.24
+  },
+  {
+    "text": "if you encounter like a wrong behavior",
+    "start": 2226.56,
+    "duration": 4.32
+  },
+  {
+    "text": "at the first turn, it might not be able",
+    "start": 2228.72,
+    "duration": 4.56
+  },
+  {
+    "text": "to learn like how to recover from it. So",
+    "start": 2230.88,
+    "duration": 5.04
+  },
+  {
+    "text": "like um I would say the best answer is",
+    "start": 2233.28,
+    "duration": 6.96
+  },
+  {
+    "text": "to incorporate both A and B. Um and like",
+    "start": 2235.92,
+    "duration": 7.28
+  },
+  {
+    "text": "so you want to increase or increase",
+    "start": 2240.24,
+    "duration": 5.28
+  },
+  {
+    "text": "number of data that like could cover the",
+    "start": 2243.2,
+    "duration": 5.12
+  },
+  {
+    "text": "most useful abilities towards your",
+    "start": 2245.52,
+    "duration": 5.8
+  },
+  {
+    "text": "benchmark.",
+    "start": 2248.32,
+    "duration": 3.0
+  },
+  {
+    "text": "Um",
+    "start": 2251.92,
+    "duration": 4.64
+  },
+  {
+    "text": "for the next section here I will talk",
+    "start": 2253.76,
+    "duration": 7.12
+  },
+  {
+    "text": "about my own work uh with um with",
+    "start": 2256.56,
+    "duration": 7.039
+  },
+  {
+    "text": "professor Graham Yubik. This is like uh",
+    "start": 2260.88,
+    "duration": 6.08
+  },
+  {
+    "text": "on developing a standardized format for",
+    "start": 2263.599,
+    "duration": 6.401
+  },
+  {
+    "text": "agentic SFT.",
+    "start": 2266.96,
+    "duration": 5.68
+  },
+  {
+    "text": "The paper is called Asian data protocol",
+    "start": 2270.0,
+    "duration": 5.92
+  },
+  {
+    "text": "where like this is motivated by each",
+    "start": 2272.64,
+    "duration": 5.68
+  },
+  {
+    "text": "data set was built each uh there are a",
+    "start": 2275.92,
+    "duration": 5.52
+  },
+  {
+    "text": "lot of agentic SFT data out there but",
+    "start": 2278.32,
+    "duration": 4.88
+  },
+  {
+    "text": "like each of them was built by a",
+    "start": 2281.44,
+    "duration": 3.6
+  },
+  {
+    "text": "different group a different lab like in",
+    "start": 2283.2,
+    "duration": 3.6
+  },
+  {
+    "text": "its own format towards a different",
+    "start": 2285.04,
+    "duration": 5.52
+  },
+  {
+    "text": "target audience. Um like for example for",
+    "start": 2286.8,
+    "duration": 7.44
+  },
+  {
+    "text": "web data sets some might be used HTML",
+    "start": 2290.56,
+    "duration": 6.72
+  },
+  {
+    "text": "for uh observations but my others might",
+    "start": 2294.24,
+    "duration": 5.04
+  },
+  {
+    "text": "be using accessibility tree structures.",
+    "start": 2297.28,
+    "duration": 4.4
+  },
+  {
+    "text": "So uh they are very different in terms",
+    "start": 2299.28,
+    "duration": 6.24
+  },
+  {
+    "text": "of the formatting and tool calls.",
+    "start": 2301.68,
+    "duration": 7.04
+  },
+  {
+    "text": "So for example, if I want to train on",
+    "start": 2305.52,
+    "duration": 6.64
+  },
+  {
+    "text": "both um go browse and mine to web where",
+    "start": 2308.72,
+    "duration": 5.359
+  },
+  {
+    "text": "go browse uses accessibility tree",
+    "start": 2312.16,
+    "duration": 5.6
+  },
+  {
+    "text": "structures for web observations and mind",
+    "start": 2314.079,
+    "duration": 7.121
+  },
+  {
+    "text": "to web uses HTMLs for understanding the",
+    "start": 2317.76,
+    "duration": 5.44
+  },
+  {
+    "text": "web content then it will be difficult",
+    "start": 2321.2,
+    "duration": 5.12
+  },
+  {
+    "text": "for me to incorporate both of them to",
+    "start": 2323.2,
+    "duration": 5.919
+  },
+  {
+    "text": "combine them together because um they",
+    "start": 2326.32,
+    "duration": 5.12
+  },
+  {
+    "text": "have different format and to train on",
+    "start": 2329.119,
+    "duration": 3.841
+  },
+  {
+    "text": "them together we need to write a",
+    "start": 2331.44,
+    "duration": 4.0
+  },
+  {
+    "text": "customized converter from each of them",
+    "start": 2332.96,
+    "duration": 5.52
+  },
+  {
+    "text": "to my specified agent format. So let's",
+    "start": 2335.44,
+    "duration": 6.399
+  },
+  {
+    "text": "say I want to train um open hands agent",
+    "start": 2338.48,
+    "duration": 5.68
+  },
+  {
+    "text": "on both go browse and mine to web. I",
+    "start": 2341.839,
+    "duration": 4.321
+  },
+  {
+    "text": "need to write a converter from go browse",
+    "start": 2344.16,
+    "duration": 4.08
+  },
+  {
+    "text": "to open hands and then mine to web to",
+    "start": 2346.16,
+    "duration": 4.0
+  },
+  {
+    "text": "open hands. So that's like a lot of",
+    "start": 2348.24,
+    "duration": 5.119
+  },
+  {
+    "text": "engineering work.",
+    "start": 2350.16,
+    "duration": 7.76
+  },
+  {
+    "text": "Um so in our paper we represent like a",
+    "start": 2353.359,
+    "duration": 6.961
+  },
+  {
+    "text": "trae we represent a trajectory that was",
+    "start": 2357.92,
+    "duration": 4.48
+  },
+  {
+    "text": "like in very different formats into a",
+    "start": 2360.32,
+    "duration": 4.72
+  },
+  {
+    "text": "standardized and a unique format that",
+    "start": 2362.4,
+    "duration": 5.28
+  },
+  {
+    "text": "could represent like a variety of",
+    "start": 2365.04,
+    "duration": 5.2
+  },
+  {
+    "text": "different agentic tasks",
+    "start": 2367.68,
+    "duration": 5.84
+  },
+  {
+    "text": "where we covered uh like like where you",
+    "start": 2370.24,
+    "duration": 6.08
+  },
+  {
+    "text": "read like each once and convert it to",
+    "start": 2373.52,
+    "duration": 4.96
+  },
+  {
+    "text": "our standardized format and then convert",
+    "start": 2376.32,
+    "duration": 3.92
+  },
+  {
+    "text": "our standardized format to your",
+    "start": 2378.48,
+    "duration": 4.639
+  },
+  {
+    "text": "specified agentic format. So you don't",
+    "start": 2380.24,
+    "duration": 6.16
+  },
+  {
+    "text": "need to write custom converters or uh to",
+    "start": 2383.119,
+    "duration": 5.121
+  },
+  {
+    "text": "be able to use multiple data sets for",
+    "start": 2386.4,
+    "duration": 4.84
+  },
+  {
+    "text": "training.",
+    "start": 2388.24,
+    "duration": 3.0
+  },
+  {
+    "text": "Like for example for the web data sets",
+    "start": 2391.599,
+    "duration": 7.201
+  },
+  {
+    "text": "we just talked about before. Um we keep",
+    "start": 2394.64,
+    "duration": 6.479
+  },
+  {
+    "text": "the HTML and accessibility tree",
+    "start": 2398.8,
+    "duration": 4.48
+  },
+  {
+    "text": "structures in our data structures",
+    "start": 2401.119,
+    "duration": 4.401
+  },
+  {
+    "text": "instead of only picking one. But like",
+    "start": 2403.28,
+    "duration": 4.4
+  },
+  {
+    "text": "you can still pick what you want and",
+    "start": 2405.52,
+    "duration": 3.92
+  },
+  {
+    "text": "convert to whatever format you want like",
+    "start": 2407.68,
+    "duration": 4.32
+  },
+  {
+    "text": "downstream. Uh when you perform agentic",
+    "start": 2409.44,
+    "duration": 5.2
+  },
+  {
+    "text": "training",
+    "start": 2412.0,
+    "duration": 6.0
+  },
+  {
+    "text": "um if like using our standardized format",
+    "start": 2414.64,
+    "duration": 5.92
+  },
+  {
+    "text": "each assets only need to convert itself",
+    "start": 2418.0,
+    "duration": 4.64
+  },
+  {
+    "text": "into our standardized format for once",
+    "start": 2420.56,
+    "duration": 4.88
+  },
+  {
+    "text": "and then convert our standardized format",
+    "start": 2422.64,
+    "duration": 6.0
+  },
+  {
+    "text": "once to your specified agentic format",
+    "start": 2425.44,
+    "duration": 5.44
+  },
+  {
+    "text": "once. So this will reduce the",
+    "start": 2428.64,
+    "duration": 6.52
+  },
+  {
+    "text": "computational overhead.",
+    "start": 2430.88,
+    "duration": 4.28
+  },
+  {
+    "text": "And once the data is in one format um",
+    "start": 2436.24,
+    "duration": 6.0
+  },
+  {
+    "text": "you still need to write it to your agent",
+    "start": 2439.76,
+    "duration": 4.64
+  },
+  {
+    "text": "format. So if I want to train open hands",
+    "start": 2442.24,
+    "duration": 4.879
+  },
+  {
+    "text": "I need to convert a agent uh agent data",
+    "start": 2444.4,
+    "duration": 6.4
+  },
+  {
+    "text": "protocol format into open hands format",
+    "start": 2447.119,
+    "duration": 6.161
+  },
+  {
+    "text": "and uh that's because like different",
+    "start": 2450.8,
+    "duration": 5.279
+  },
+  {
+    "text": "agent takes different actions. So the",
+    "start": 2453.28,
+    "duration": 4.88
+  },
+  {
+    "text": "same trajectory comes out to look",
+    "start": 2456.079,
+    "duration": 5.841
+  },
+  {
+    "text": "different uh for each agent.",
+    "start": 2458.16,
+    "duration": 5.679
+  },
+  {
+    "text": "This is also where you set the system",
+    "start": 2461.92,
+    "duration": 3.919
+  },
+  {
+    "text": "prompt and decide what to do when the",
+    "start": 2463.839,
+    "duration": 5.201
+  },
+  {
+    "text": "context get long.",
+    "start": 2465.839,
+    "duration": 4.961
+  },
+  {
+    "text": "And then you want to check the result",
+    "start": 2469.04,
+    "duration": 5.039
+  },
+  {
+    "text": "like do those who call pars and does",
+    "start": 2470.8,
+    "duration": 6.0
+  },
+  {
+    "text": "each call come from a come with a s a",
+    "start": 2474.079,
+    "duration": 5.601
+  },
+  {
+    "text": "function s and does the conversation end",
+    "start": 2476.8,
+    "duration": 6.68
+  },
+  {
+    "text": "the way it should be.",
+    "start": 2479.68,
+    "duration": 3.8
+  },
+  {
+    "text": "Um this is a analysis that we did",
+    "start": 2483.68,
+    "duration": 7.12
+  },
+  {
+    "text": "analyzing whether we want to train on um",
+    "start": 2487.2,
+    "duration": 6.399
+  },
+  {
+    "text": "diverse data instead of only one task",
+    "start": 2490.8,
+    "duration": 5.36
+  },
+  {
+    "text": "specific data. So like previously with",
+    "start": 2493.599,
+    "duration": 5.281
+  },
+  {
+    "text": "open source Asian that they disc they",
+    "start": 2496.16,
+    "duration": 5.6
+  },
+  {
+    "text": "examined whether um training on each",
+    "start": 2498.88,
+    "duration": 4.959
+  },
+  {
+    "text": "task could improve the performance on",
+    "start": 2501.76,
+    "duration": 4.0
+  },
+  {
+    "text": "different benchmarks but like that's",
+    "start": 2503.839,
+    "duration": 4.081
+  },
+  {
+    "text": "only training one on one of the data",
+    "start": 2505.76,
+    "duration": 4.4
+  },
+  {
+    "text": "sets. So they only examine the",
+    "start": 2507.92,
+    "duration": 5.12
+  },
+  {
+    "text": "effectiveness of training on um each",
+    "start": 2510.16,
+    "duration": 6.0
+  },
+  {
+    "text": "task source. Um but like here we",
+    "start": 2513.04,
+    "duration": 5.52
+  },
+  {
+    "text": "examined whether training on multiple",
+    "start": 2516.16,
+    "duration": 4.4
+  },
+  {
+    "text": "different sources could result in better",
+    "start": 2518.56,
+    "duration": 4.16
+  },
+  {
+    "text": "performance than training on a single",
+    "start": 2520.56,
+    "duration": 5.759
+  },
+  {
+    "text": "source. So we discovered that for almost",
+    "start": 2522.72,
+    "duration": 6.399
+  },
+  {
+    "text": "every different agent task agent",
+    "start": 2526.319,
+    "duration": 4.8
+  },
+  {
+    "text": "benchmark training on multiple different",
+    "start": 2529.119,
+    "duration": 3.761
+  },
+  {
+    "text": "sources will result in higher",
+    "start": 2531.119,
+    "duration": 4.401
+  },
+  {
+    "text": "performance compared to only training on",
+    "start": 2532.88,
+    "duration": 4.479
+  },
+  {
+    "text": "a single source. So improving the",
+    "start": 2535.52,
+    "duration": 5.44
+  },
+  {
+    "text": "diversity of data could help a lot in",
+    "start": 2537.359,
+    "duration": 7.081
+  },
+  {
+    "text": "agent take evaluation.",
+    "start": 2540.96,
+    "duration": 3.48
+  },
+  {
+    "text": "So we control this study using the same",
+    "start": 2544.48,
+    "duration": 4.08
+  },
+  {
+    "text": "harness, the same model and the same",
+    "start": 2546.8,
+    "duration": 4.72
+  },
+  {
+    "text": "evaluation format. Only the training",
+    "start": 2548.56,
+    "duration": 6.0
+  },
+  {
+    "text": "mixture change by incorporating a more",
+    "start": 2551.52,
+    "duration": 6.72
+  },
+  {
+    "text": "diverse set of data.",
+    "start": 2554.56,
+    "duration": 5.519
+  },
+  {
+    "text": "Yeah. And training on the mixture beat",
+    "start": 2558.24,
+    "duration": 4.96
+  },
+  {
+    "text": "the matching single domain set. So uh",
+    "start": 2560.079,
+    "duration": 7.52
+  },
+  {
+    "text": "even on the domain's own benchmark",
+    "start": 2563.2,
+    "duration": 6.8
+  },
+  {
+    "text": "and next I'll be talking about actually",
+    "start": 2567.599,
+    "duration": 5.52
+  },
+  {
+    "text": "running the training pipeline. These are",
+    "start": 2570.0,
+    "duration": 5.119
+  },
+  {
+    "text": "some real supervised fine tuning",
+    "start": 2573.119,
+    "duration": 4.161
+  },
+  {
+    "text": "configurations from the wild. Like for",
+    "start": 2575.119,
+    "duration": 6.161
+  },
+  {
+    "text": "example for Neatron 3 ultra they packed",
+    "start": 2577.28,
+    "duration": 9.36
+  },
+  {
+    "text": "uh 294 case u tokens into sequences with",
+    "start": 2581.28,
+    "duration": 9.28
+  },
+  {
+    "text": "uh 64 batch and their learning rate",
+    "start": 2586.64,
+    "duration": 7.52
+  },
+  {
+    "text": "decays like throughout time. for MEI",
+    "start": 2590.56,
+    "duration": 7.44
+  },
+  {
+    "text": "self distillation they pack like 128K",
+    "start": 2594.16,
+    "duration": 6.88
+  },
+  {
+    "text": "and with like a very large batch and a",
+    "start": 2598.0,
+    "duration": 6.319
+  },
+  {
+    "text": "learning rate um that also decays",
+    "start": 2601.04,
+    "duration": 6.079
+  },
+  {
+    "text": "through time but like uh was what might",
+    "start": 2604.319,
+    "duration": 5.201
+  },
+  {
+    "text": "different that is that like they did a",
+    "start": 2607.119,
+    "duration": 6.081
+  },
+  {
+    "text": "warm-up before starting the full SFT and",
+    "start": 2609.52,
+    "duration": 6.96
+  },
+  {
+    "text": "for a recently released model K2 Horizon",
+    "start": 2613.2,
+    "duration": 6.08
+  },
+  {
+    "text": "they were using 512K",
+    "start": 2616.48,
+    "duration": 5.52
+  },
+  {
+    "text": "um sequences with like three different",
+    "start": 2619.28,
+    "duration": 4.24
+  },
+  {
+    "text": "faces is they haven't released their",
+    "start": 2622.0,
+    "duration": 4.96
+  },
+  {
+    "text": "specific uh numbers yet um for SFD",
+    "start": 2623.52,
+    "duration": 6.0
+  },
+  {
+    "text": "configurations but like um they said",
+    "start": 2626.96,
+    "duration": 4.879
+  },
+  {
+    "text": "that like their learning rate decayed on",
+    "start": 2629.52,
+    "duration": 5.599
+  },
+  {
+    "text": "like high quality subsets",
+    "start": 2631.839,
+    "duration": 5.28
+  },
+  {
+    "text": ">> this is not parameter efficient piping",
+    "start": 2635.119,
+    "duration": 4.801
+  },
+  {
+    "text": "right this is just like full training on",
+    "start": 2637.119,
+    "duration": 4.72
+  },
+  {
+    "text": "trajectory how would you do pre-training",
+    "start": 2639.92,
+    "duration": 3.679
+  },
+  {
+    "text": "essentially except the data is different",
+    "start": 2641.839,
+    "duration": 5.441
+  },
+  {
+    "text": ">> yes but like uh also for pre-training",
+    "start": 2643.599,
+    "duration": 6.321
+  },
+  {
+    "text": "um I think people don't mask out like",
+    "start": 2647.28,
+    "duration": 4.16
+  },
+  {
+    "text": "non-agentic",
+    "start": 2649.92,
+    "duration": 4.76
+  },
+  {
+    "text": "parts also",
+    "start": 2651.44,
+    "duration": 3.24
+  },
+  {
+    "text": "expert routing during SFT.",
+    "start": 2656.24,
+    "duration": 5.839
+  },
+  {
+    "text": "Uh the frontier models that I discussed",
+    "start": 2659.839,
+    "duration": 4.561
+  },
+  {
+    "text": "in this lectures are mostly mix of",
+    "start": 2662.079,
+    "duration": 5.201
+  },
+  {
+    "text": "experts where the models that the public",
+    "start": 2664.4,
+    "duration": 7.439
+  },
+  {
+    "text": "papers fine-tune are dense.",
+    "start": 2667.28,
+    "duration": 7.36
+  },
+  {
+    "text": "uh find a mixture of expert model on",
+    "start": 2671.839,
+    "duration": 6.24
+  },
+  {
+    "text": "narrow agent data and a few experts take",
+    "start": 2674.64,
+    "duration": 6.88
+  },
+  {
+    "text": "most of the tokens like uh what is shown",
+    "start": 2678.079,
+    "duration": 6.561
+  },
+  {
+    "text": "in the right panel here.",
+    "start": 2681.52,
+    "duration": 6.16
+  },
+  {
+    "text": "We can see that um we have the most",
+    "start": 2684.64,
+    "duration": 6.56
+  },
+  {
+    "text": "tokens dense like at the left and as the",
+    "start": 2687.68,
+    "duration": 6.0
+  },
+  {
+    "text": "number of expert increase the token uh",
+    "start": 2691.2,
+    "duration": 4.159
+  },
+  {
+    "text": "the number of token we use like",
+    "start": 2693.68,
+    "duration": 4.679
+  },
+  {
+    "text": "decreases",
+    "start": 2695.359,
+    "duration": 3.0
+  },
+  {
+    "text": "and MAI is like balancing the routing uh",
+    "start": 2699.44,
+    "duration": 7.919
+  },
+  {
+    "text": "hard during the supervised stage and a",
+    "start": 2703.76,
+    "duration": 6.559
+  },
+  {
+    "text": "thousand times harder than during RL and",
+    "start": 2707.359,
+    "duration": 7.921
+  },
+  {
+    "text": "they raise drop to 15 Like I think",
+    "start": 2710.319,
+    "duration": 7.52
+  },
+  {
+    "text": "reading one or two technical reports",
+    "start": 2715.28,
+    "duration": 5.76
+  },
+  {
+    "text": "from Frontier Labs or um public papers",
+    "start": 2717.839,
+    "duration": 6.321
+  },
+  {
+    "text": "are important before you start doing SFD",
+    "start": 2721.04,
+    "duration": 4.72
+  },
+  {
+    "text": "because they provide a lot of",
+    "start": 2724.16,
+    "duration": 4.08
+  },
+  {
+    "text": "interesting insights that you could use",
+    "start": 2725.76,
+    "duration": 5.88
+  },
+  {
+    "text": "for SFT",
+    "start": 2728.24,
+    "duration": 3.4
+  },
+  {
+    "text": "and um packing whole conversations. So",
+    "start": 2733.2,
+    "duration": 8.08
+  },
+  {
+    "text": "um typically we don't want truncations",
+    "start": 2738.079,
+    "duration": 5.921
+  },
+  {
+    "text": "and splitting because we want the full",
+    "start": 2741.28,
+    "duration": 6.4
+  },
+  {
+    "text": "trajectory but uh in reality like each",
+    "start": 2744.0,
+    "duration": 6.079
+  },
+  {
+    "text": "conversation is assigned to the pack",
+    "start": 2747.68,
+    "duration": 5.679
+  },
+  {
+    "text": "whose like remaining capacity uh it most",
+    "start": 2750.079,
+    "duration": 6.76
+  },
+  {
+    "text": "tightly fits",
+    "start": 2753.359,
+    "duration": 3.48
+  },
+  {
+    "text": "and no conversation is actually splitted",
+    "start": 2757.68,
+    "duration": 6.159
+  },
+  {
+    "text": "or truncated which is like a deliberate",
+    "start": 2760.96,
+    "duration": 5.28
+  },
+  {
+    "text": "choice against hallucination. And this",
+    "start": 2763.839,
+    "duration": 5.041
+  },
+  {
+    "text": "this plot is like adapted from Neotron's",
+    "start": 2766.24,
+    "duration": 5.52
+  },
+  {
+    "text": "technical report.",
+    "start": 2768.88,
+    "duration": 5.28
+  },
+  {
+    "text": "And identical problems are kept out of",
+    "start": 2771.76,
+    "duration": 4.4
+  },
+  {
+    "text": "the same pack and packs are shuffled",
+    "start": 2774.16,
+    "duration": 7.679
+  },
+  {
+    "text": "afterwards for better training utility.",
+    "start": 2776.16,
+    "duration": 8.48
+  },
+  {
+    "text": "Another thing I want to cover here is",
+    "start": 2781.839,
+    "duration": 4.801
+  },
+  {
+    "text": "template drift",
+    "start": 2784.64,
+    "duration": 4.24
+  },
+  {
+    "text": "where the template you train with has to",
+    "start": 2786.64,
+    "duration": 4.24
+  },
+  {
+    "text": "be the template that you serve with to",
+    "start": 2788.88,
+    "duration": 5.36
+  },
+  {
+    "text": "ensure this alignment even down to the",
+    "start": 2790.88,
+    "duration": 6.239
+  },
+  {
+    "text": "whites space. So to have the best",
+    "start": 2794.24,
+    "duration": 5.599
+  },
+  {
+    "text": "utility of your model",
+    "start": 2797.119,
+    "duration": 6.0
+  },
+  {
+    "text": "and um you you render the same",
+    "start": 2799.839,
+    "duration": 5.441
+  },
+  {
+    "text": "trajectory twice like once with a tool",
+    "start": 2803.119,
+    "duration": 4.081
+  },
+  {
+    "text": "message after it and once resolved so",
+    "start": 2805.28,
+    "duration": 5.6
+  },
+  {
+    "text": "you can get two different strings.",
+    "start": 2807.2,
+    "duration": 5.76
+  },
+  {
+    "text": "When the two messages appended a",
+    "start": 2810.88,
+    "duration": 4.4
+  },
+  {
+    "text": "conditional thinking block uh changes",
+    "start": 2812.96,
+    "duration": 4.56
+  },
+  {
+    "text": "the earlier assistant turn and the",
+    "start": 2815.28,
+    "duration": 6.16
+  },
+  {
+    "text": "prefix no longer matches. So these are",
+    "start": 2817.52,
+    "duration": 10.2
+  },
+  {
+    "text": "uh like why it is fatal inside a tuloop.",
+    "start": 2821.44,
+    "duration": 6.28
+  },
+  {
+    "text": "Um yeah and also there are some publicly",
+    "start": 2830.96,
+    "duration": 4.879
+  },
+  {
+    "text": "released training artifacts. For",
+    "start": 2834.24,
+    "duration": 4.72
+  },
+  {
+    "text": "example, K2 Horizon's model card has a",
+    "start": 2835.839,
+    "duration": 6.161
+  },
+  {
+    "text": "stage bystage training table like uh for",
+    "start": 2838.96,
+    "duration": 5.359
+  },
+  {
+    "text": "each stem, each token and sequence",
+    "start": 2842.0,
+    "duration": 5.44
+  },
+  {
+    "text": "length and what each phase like was for.",
+    "start": 2844.319,
+    "duration": 5.28
+  },
+  {
+    "text": "That table is where the number on the",
+    "start": 2847.44,
+    "duration": 5.679
+  },
+  {
+    "text": "configuration slide like came from and",
+    "start": 2849.599,
+    "duration": 6.881
+  },
+  {
+    "text": "um I think K2 Horizon might be a good uh",
+    "start": 2853.119,
+    "duration": 4.72
+  },
+  {
+    "text": "way although I don't think their",
+    "start": 2856.48,
+    "duration": 3.52
+  },
+  {
+    "text": "technical report is officially released",
+    "start": 2857.839,
+    "duration": 4.081
+  },
+  {
+    "text": "yet but like if it's released I would",
+    "start": 2860.0,
+    "duration": 4.079
+  },
+  {
+    "text": "recommend taking a look because like",
+    "start": 2861.92,
+    "duration": 5.84
+  },
+  {
+    "text": "it's um it's like fully open containing",
+    "start": 2864.079,
+    "duration": 6.321
+  },
+  {
+    "text": "all the um details of training all the",
+    "start": 2867.76,
+    "duration": 6.0
+  },
+  {
+    "text": "data of training um even the loss like",
+    "start": 2870.4,
+    "duration": 5.36
+  },
+  {
+    "text": "they incurred during training through",
+    "start": 2873.76,
+    "duration": 4.16
+  },
+  {
+    "text": "weights and biases like ways and biases",
+    "start": 2875.76,
+    "duration": 4.319
+  },
+  {
+    "text": "is a common platform you use to monitor",
+    "start": 2877.92,
+    "duration": 5.04
+  },
+  {
+    "text": "loss during training. So you can look at",
+    "start": 2880.079,
+    "duration": 6.24
+  },
+  {
+    "text": "their actual uh enterprise level models",
+    "start": 2882.96,
+    "duration": 6.56
+  },
+  {
+    "text": "training loss curves and it also ships",
+    "start": 2886.319,
+    "duration": 5.52
+  },
+  {
+    "text": "like intermediate checkpoints at each",
+    "start": 2889.52,
+    "duration": 4.4
+  },
+  {
+    "text": "stage of their training that you can",
+    "start": 2891.839,
+    "duration": 5.041
+  },
+  {
+    "text": "continue training or um post train on",
+    "start": 2893.92,
+    "duration": 6.159
+  },
+  {
+    "text": "their pre-training checkpoints.",
+    "start": 2896.88,
+    "duration": 5.28
+  },
+  {
+    "text": "Also Neatron released the post training",
+    "start": 2900.079,
+    "duration": 3.681
+  },
+  {
+    "text": "checkpoints too like together with the",
+    "start": 2902.16,
+    "duration": 5.12
+  },
+  {
+    "text": "training data and their training recipe.",
+    "start": 2903.76,
+    "duration": 5.92
+  },
+  {
+    "text": "Um I would suggest like reading at least",
+    "start": 2907.28,
+    "duration": 4.72
+  },
+  {
+    "text": "one of these um that could like teach",
+    "start": 2909.68,
+    "duration": 5.04
+  },
+  {
+    "text": "you a lot on enterprise level training",
+    "start": 2912.0,
+    "duration": 6.28
+  },
+  {
+    "text": "uh SFT",
+    "start": 2914.72,
+    "duration": 3.56
+  },
+  {
+    "text": "more practically we want to do we want",
+    "start": 2918.96,
+    "duration": 4.639
+  },
+  {
+    "text": "to do is like we want to know whether",
+    "start": 2921.599,
+    "duration": 4.48
+  },
+  {
+    "text": "actually SFT worked after we train a",
+    "start": 2923.599,
+    "duration": 7.201
+  },
+  {
+    "text": "model or before we train a model. So uh",
+    "start": 2926.079,
+    "duration": 6.561
+  },
+  {
+    "text": "there might be mismatches between",
+    "start": 2930.8,
+    "duration": 4.48
+  },
+  {
+    "text": "training and running uh your experiments",
+    "start": 2932.64,
+    "duration": 6.56
+  },
+  {
+    "text": "on on evaluation benchmarks for example",
+    "start": 2935.28,
+    "duration": 6.88
+  },
+  {
+    "text": "um for what it has learned through like",
+    "start": 2939.2,
+    "duration": 4.96
+  },
+  {
+    "text": "trajectories. It might have the same",
+    "start": 2942.16,
+    "duration": 5.439
+  },
+  {
+    "text": "prefix and perform some edits and then",
+    "start": 2944.16,
+    "duration": 5.84
+  },
+  {
+    "text": "the test passed and then it submits the",
+    "start": 2947.599,
+    "duration": 5.921
+  },
+  {
+    "text": "job to a verifier but like in reality it",
+    "start": 2950.0,
+    "duration": 6.48
+  },
+  {
+    "text": "might incur another different edit than",
+    "start": 2953.52,
+    "duration": 4.799
+  },
+  {
+    "text": "the edit that you are trained on and",
+    "start": 2956.48,
+    "duration": 4.72
+  },
+  {
+    "text": "then the test failed. Um and then now",
+    "start": 2958.319,
+    "duration": 5.28
+  },
+  {
+    "text": "what the agent should do is not in SFD",
+    "start": 2961.2,
+    "duration": 6.24
+  },
+  {
+    "text": "data. So this is like very depend on the",
+    "start": 2963.599,
+    "duration": 6.48
+  },
+  {
+    "text": "agents like uh error recovery ability",
+    "start": 2967.44,
+    "duration": 6.28
+  },
+  {
+    "text": "that we just discussed.",
+    "start": 2970.079,
+    "duration": 3.641
+  },
+  {
+    "text": "So training grades only one action at a",
+    "start": 2975.28,
+    "duration": 5.839
+  },
+  {
+    "text": "time. Um always continuing the recorded",
+    "start": 2978.16,
+    "duration": 5.959
+  },
+  {
+    "text": "run",
+    "start": 2981.119,
+    "duration": 3.0
+  },
+  {
+    "text": "and also um",
+    "start": 2985.2,
+    "duration": 7.04
+  },
+  {
+    "text": "when models are deployed there is no",
+    "start": 2990.0,
+    "duration": 4.24
+  },
+  {
+    "text": "recording and every action the model",
+    "start": 2992.24,
+    "duration": 4.879
+  },
+  {
+    "text": "takes change what it might see next.",
+    "start": 2994.24,
+    "duration": 5.28
+  },
+  {
+    "text": "This is the reason why the loss curve of",
+    "start": 2997.119,
+    "duration": 5.361
+  },
+  {
+    "text": "training is not um like you can use it",
+    "start": 2999.52,
+    "duration": 5.2
+  },
+  {
+    "text": "to monitor whether training is going",
+    "start": 3002.48,
+    "duration": 4.4
+  },
+  {
+    "text": "well but you cannot use it to substitute",
+    "start": 3004.72,
+    "duration": 4.48
+  },
+  {
+    "text": "actual evaluation because like training",
+    "start": 3006.88,
+    "duration": 4.239
+  },
+  {
+    "text": "continues the recording and deployment",
+    "start": 3009.2,
+    "duration": 5.28
+  },
+  {
+    "text": "continues itself.",
+    "start": 3011.119,
+    "duration": 6.161
+  },
+  {
+    "text": "Uh one so as shown in example one",
+    "start": 3014.48,
+    "duration": 6.48
+  },
+  {
+    "text": "different addit here um and it is in in",
+    "start": 3017.28,
+    "duration": 5.6
+  },
+  {
+    "text": "a state no training run ever have",
+    "start": 3020.96,
+    "duration": 4.639
+  },
+  {
+    "text": "visited in that case the low loss",
+    "start": 3022.88,
+    "duration": 5.52
+  },
+  {
+    "text": "promise nothing but uh about what",
+    "start": 3025.599,
+    "duration": 6.641
+  },
+  {
+    "text": "happens there. So you need to um so you",
+    "start": 3028.4,
+    "duration": 6.56
+  },
+  {
+    "text": "need to monitor both training loss and",
+    "start": 3032.24,
+    "duration": 6.68
+  },
+  {
+    "text": "evaluation results.",
+    "start": 3034.96,
+    "duration": 3.96
+  },
+  {
+    "text": "Um speaking of evaluation results like",
+    "start": 3039.599,
+    "duration": 4.161
+  },
+  {
+    "text": "before trusting any number you should",
+    "start": 3041.839,
+    "duration": 4.801
+  },
+  {
+    "text": "check that you can um and a rule of",
+    "start": 3043.76,
+    "duration": 4.4
+  },
+  {
+    "text": "thumb is like you can check that you can",
+    "start": 3046.64,
+    "duration": 4.8
+  },
+  {
+    "text": "over fit 20 examples. Um if the loss",
+    "start": 3048.16,
+    "duration": 6.72
+  },
+  {
+    "text": "will not drop then the bug might be like",
+    "start": 3051.44,
+    "duration": 6.44
+  },
+  {
+    "text": "upstream",
+    "start": 3054.88,
+    "duration": 3.0
+  },
+  {
+    "text": "and then you can evaluate by running the",
+    "start": 3058.16,
+    "duration": 4.8
+  },
+  {
+    "text": "model in a harness and on task with",
+    "start": 3060.079,
+    "duration": 6.641
+  },
+  {
+    "text": "check checkable outcomes",
+    "start": 3062.96,
+    "duration": 6.32
+  },
+  {
+    "text": "and you can read you should read publish",
+    "start": 3066.72,
+    "duration": 4.72
+  },
+  {
+    "text": "numbers carefully. Sometimes they are",
+    "start": 3069.28,
+    "duration": 3.92
+  },
+  {
+    "text": "the best of like several harnesses",
+    "start": 3071.44,
+    "duration": 3.679
+  },
+  {
+    "text": "instead of like the results you can get",
+    "start": 3073.2,
+    "duration": 5.44
+  },
+  {
+    "text": "from a single run on single harness.",
+    "start": 3075.119,
+    "duration": 5.521
+  },
+  {
+    "text": "And you should try to match the split to",
+    "start": 3078.64,
+    "duration": 4.479
+  },
+  {
+    "text": "the claim by keeping all runs of one",
+    "start": 3080.64,
+    "duration": 4.56
+  },
+  {
+    "text": "task on the same site and split by",
+    "start": 3083.119,
+    "duration": 4.161
+  },
+  {
+    "text": "repository if you want to say it",
+    "start": 3085.2,
+    "duration": 6.119
+  },
+  {
+    "text": "generalizes to new ones.",
+    "start": 3087.28,
+    "duration": 4.039
+  },
+  {
+    "text": "Um yeah robustness across harnesses like",
+    "start": 3092.4,
+    "duration": 5.36
+  },
+  {
+    "text": "trajectories collected in one system",
+    "start": 3095.839,
+    "duration": 4.401
+  },
+  {
+    "text": "teach systems conventions along with the",
+    "start": 3097.76,
+    "duration": 4.0
+  },
+  {
+    "text": "task.",
+    "start": 3100.24,
+    "duration": 3.599
+  },
+  {
+    "text": "So for example, if I collect",
+    "start": 3101.76,
+    "duration": 4.799
+  },
+  {
+    "text": "trajectories through a agent open hands",
+    "start": 3103.839,
+    "duration": 5.201
+  },
+  {
+    "text": "that it might not like generalize to",
+    "start": 3106.559,
+    "duration": 5.52
+  },
+  {
+    "text": "cloud code or codeex",
+    "start": 3109.04,
+    "duration": 5.039
+  },
+  {
+    "text": "and collecting across like several",
+    "start": 3112.079,
+    "duration": 4.801
+  },
+  {
+    "text": "harnesses is how existing frontier labs",
+    "start": 3114.079,
+    "duration": 5.52
+  },
+  {
+    "text": "or academia labs avoid training a model",
+    "start": 3116.88,
+    "duration": 5.36
+  },
+  {
+    "text": "that only works for uh works in one",
+    "start": 3119.599,
+    "duration": 5.641
+  },
+  {
+    "text": "harness.",
+    "start": 3122.24,
+    "duration": 3.0
+  },
+  {
+    "text": "Um if you want to train uh like outside",
+    "start": 3127.52,
+    "duration": 5.76
+  },
+  {
+    "text": "the target domain, you should train on",
+    "start": 3130.88,
+    "duration": 5.439
+  },
+  {
+    "text": "one capability and move the others",
+    "start": 3133.28,
+    "duration": 5.36
+  },
+  {
+    "text": "whether or not like you want to measure",
+    "start": 3136.319,
+    "duration": 5.201
+  },
+  {
+    "text": "it. So if I want to have a good software",
+    "start": 3138.64,
+    "duration": 4.32
+  },
+  {
+    "text": "engineering model, I should still",
+    "start": 3141.52,
+    "duration": 3.28
+  },
+  {
+    "text": "probably train reasoning capabilities",
+    "start": 3142.96,
+    "duration": 4.8
+  },
+  {
+    "text": "because these capabilities might uh",
+    "start": 3144.8,
+    "duration": 5.68
+  },
+  {
+    "text": "transfer and also your mixture is the",
+    "start": 3147.76,
+    "duration": 5.12
+  },
+  {
+    "text": "control here and balancing it by",
+    "start": 3150.48,
+    "duration": 5.28
+  },
+  {
+    "text": "examples uh is not bal is not the same",
+    "start": 3152.88,
+    "duration": 6.08
+  },
+  {
+    "text": "as balancing it by tokens. This is a",
+    "start": 3155.76,
+    "duration": 6.4
+  },
+  {
+    "text": "lesson we learned from the MAI um MAI",
+    "start": 3158.96,
+    "duration": 5.44
+  },
+  {
+    "text": "technical report.",
+    "start": 3162.16,
+    "duration": 4.159
+  },
+  {
+    "text": "So evaluate the things you were not",
+    "start": 3164.4,
+    "duration": 3.52
+  },
+  {
+    "text": "trying to improve too instead of like",
+    "start": 3166.319,
+    "duration": 4.0
+  },
+  {
+    "text": "benchmaxing on only one domain that you",
+    "start": 3167.92,
+    "duration": 4.48
+  },
+  {
+    "text": "care about.",
+    "start": 3170.319,
+    "duration": 5.76
+  },
+  {
+    "text": "These are some takeaways from SFT. And",
+    "start": 3172.4,
+    "duration": 6.56
+  },
+  {
+    "text": "now moving towards like what SFT could",
+    "start": 3176.079,
+    "duration": 5.201
+  },
+  {
+    "text": "do to help RL.",
+    "start": 3178.96,
+    "duration": 6.159
+  },
+  {
+    "text": "Um yeah so RL provide I think in my",
+    "start": 3181.28,
+    "duration": 7.279
+  },
+  {
+    "text": "opinion RL provides the most gains where",
+    "start": 3185.119,
+    "duration": 6.0
+  },
+  {
+    "text": "uh when the SFT model is selected with",
+    "start": 3188.559,
+    "duration": 6.881
+  },
+  {
+    "text": "RL in mind. um to view the whole",
+    "start": 3191.119,
+    "duration": 7.281
+  },
+  {
+    "text": "training pipeline. I I think SFT is",
+    "start": 3195.44,
+    "duration": 5.04
+  },
+  {
+    "text": "where you can gain the most agent cap",
+    "start": 3198.4,
+    "duration": 4.64
+  },
+  {
+    "text": "general agentic capabilities from. But",
+    "start": 3200.48,
+    "duration": 6.16
+  },
+  {
+    "text": "for RL, you can gain domain specific or",
+    "start": 3203.04,
+    "duration": 7.36
+  },
+  {
+    "text": "better reasoning through RL. um existing",
+    "start": 3206.64,
+    "duration": 7.439
+  },
+  {
+    "text": "frontier labs like Neimotron or um K2",
+    "start": 3210.4,
+    "duration": 6.88
+  },
+  {
+    "text": "Horizon, they they all find that SFT is",
+    "start": 3214.079,
+    "duration": 6.24
+  },
+  {
+    "text": "where agents could gain models could",
+    "start": 3217.28,
+    "duration": 6.0
+  },
+  {
+    "text": "gain the most general agent uh",
+    "start": 3220.319,
+    "duration": 6.321
+  },
+  {
+    "text": "capabilities. Well, RL is um where you",
+    "start": 3223.28,
+    "duration": 7.36
+  },
+  {
+    "text": "want to train for a specific domain.",
+    "start": 3226.64,
+    "duration": 8.8
+  },
+  {
+    "text": "And um like also um the three key uh",
+    "start": 3230.64,
+    "duration": 8.4
+  },
+  {
+    "text": "takeaways from the table here are all",
+    "start": 3235.44,
+    "duration": 7.119
+  },
+  {
+    "text": "applied to no SFT at all barely at all",
+    "start": 3239.04,
+    "duration": 5.44
+  },
+  {
+    "text": "barely moves the base model. This is a",
+    "start": 3242.559,
+    "duration": 7.04
+  },
+  {
+    "text": "takeaway that we get from deepseek R10",
+    "start": 3244.48,
+    "duration": 8.079
+  },
+  {
+    "text": "and SFT alone stops well short of what",
+    "start": 3249.599,
+    "duration": 7.52
+  },
+  {
+    "text": "the pair reaches. So um",
+    "start": 3252.559,
+    "duration": 6.721
+  },
+  {
+    "text": "the winning recipe starts RL from a",
+    "start": 3257.119,
+    "duration": 4.321
+  },
+  {
+    "text": "checkpoint that was deliberately not",
+    "start": 3259.28,
+    "duration": 4.319
+  },
+  {
+    "text": "trained to its own best score but like",
+    "start": 3261.44,
+    "duration": 4.879
+  },
+  {
+    "text": "train towards like later uh for better",
+    "start": 3263.599,
+    "duration": 7.361
+  },
+  {
+    "text": "later RL. So I view SFT as a prior state",
+    "start": 3266.319,
+    "duration": 8.321
+  },
+  {
+    "text": "that could co-start agency capabilities",
+    "start": 3270.96,
+    "duration": 8.24
+  },
+  {
+    "text": "that is like well served for later RL.",
+    "start": 3274.64,
+    "duration": 8.4
+  },
+  {
+    "text": "Okay. Um that's all my lecture today and",
+    "start": 3279.2,
+    "duration": 7.627
+  },
+  {
+    "text": "um I welcome any questions.",
+    "start": 3283.04,
+    "duration": 5.807
+  },
+  {
+    "text": "[applause]",
+    "start": 3286.827,
+    "duration": 2.02
+  },
+  {
+    "text": ">> Yeah, we have time for questions.",
+    "start": 3292.64,
+    "duration": 6.479
+  },
+  {
+    "text": ">> Yeah,",
+    "start": 3296.24,
+    "duration": 6.079
+  },
+  {
+    "text": ">> I have a question regarding where you",
+    "start": 3299.119,
+    "duration": 5.761
+  },
+  {
+    "text": "said that it comes from.",
+    "start": 3302.319,
+    "duration": 5.121
+  },
+  {
+    "text": "What if there's no",
+    "start": 3304.88,
+    "duration": 4.719
+  },
+  {
+    "text": ">> Would you be able to just briefly repeat",
+    "start": 3307.44,
+    "duration": 3.6
+  },
+  {
+    "text": "the questions from the media?",
+    "start": 3309.599,
+    "duration": 4.561
+  },
+  {
+    "text": ">> Yeah, sure. Um, the question was, uh, we",
+    "start": 3311.04,
+    "duration": 5.12
+  },
+  {
+    "text": "were saying distillation happens when",
+    "start": 3314.16,
+    "duration": 3.76
+  },
+  {
+    "text": "you use a better model to generate",
+    "start": 3316.16,
+    "duration": 4.32
+  },
+  {
+    "text": "trajectories of SFT, but what will",
+    "start": 3317.92,
+    "duration": 8.159
+  },
+  {
+    "text": "happen if there's no better models? Um,",
+    "start": 3320.48,
+    "duration": 8.599
+  },
+  {
+    "text": "okay.",
+    "start": 3326.079,
+    "duration": 3.0
+  },
+  {
+    "text": "So what",
+    "start": 3329.839,
+    "duration": 6.561
+  },
+  {
+    "text": "so what MAI chose here is to distill",
+    "start": 3333.04,
+    "duration": 5.76
+  },
+  {
+    "text": "from itself. uh this is one of the",
+    "start": 3336.4,
+    "duration": 4.64
+  },
+  {
+    "text": "solutions and the other solution is like",
+    "start": 3338.8,
+    "duration": 4.88
+  },
+  {
+    "text": "for example for I think for frontiers",
+    "start": 3341.04,
+    "duration": 4.799
+  },
+  {
+    "text": "lab especially proprietary ones that",
+    "start": 3343.68,
+    "duration": 6.32
+  },
+  {
+    "text": "like lead the um",
+    "start": 3345.839,
+    "duration": 7.201
+  },
+  {
+    "text": "research of uh training training models",
+    "start": 3350.0,
+    "duration": 6.16
+  },
+  {
+    "text": "like for example open AI anthropic",
+    "start": 3353.04,
+    "duration": 6.24
+  },
+  {
+    "text": "um they rely more on gaining agentic",
+    "start": 3356.16,
+    "duration": 6.72
+  },
+  {
+    "text": "capabilities through RL um like SFD is",
+    "start": 3359.28,
+    "duration": 5.68
+  },
+  {
+    "text": "mostly on",
+    "start": 3362.88,
+    "duration": 5.84
+  },
+  {
+    "text": "SFD is mostly like I say a cold start",
+    "start": 3364.96,
+    "duration": 7.2
+  },
+  {
+    "text": "that like where the agents learn general",
+    "start": 3368.72,
+    "duration": 7.119
+  },
+  {
+    "text": "abilities but not improving um that much",
+    "start": 3372.16,
+    "duration": 6.32
+  },
+  {
+    "text": "because like if you are using SFT then",
+    "start": 3375.839,
+    "duration": 4.72
+  },
+  {
+    "text": "it's fundamentally limited by the",
+    "start": 3378.48,
+    "duration": 4.079
+  },
+  {
+    "text": "teacher model's capability. So if you",
+    "start": 3380.559,
+    "duration": 4.401
+  },
+  {
+    "text": "don't have better teacher model then you",
+    "start": 3382.559,
+    "duration": 5.76
+  },
+  {
+    "text": "might need to rely on RL for training.",
+    "start": 3384.96,
+    "duration": 7.159
+  },
+  {
+    "text": "That's that's my take.",
+    "start": 3388.319,
+    "duration": 3.8
+  },
+  {
+    "text": "in the first place before",
+    "start": 3393.839,
+    "duration": 5.921
+  },
+  {
+    "text": ">> um they have a lot of data like",
+    "start": 3397.28,
+    "duration": 4.88
+  },
+  {
+    "text": ">> just use",
+    "start": 3399.76,
+    "duration": 4.079
+  },
+  {
+    "text": ">> yeah there's like a huge amount of",
+    "start": 3402.16,
+    "duration": 4.8
+  },
+  {
+    "text": "trajectories out there",
+    "start": 3403.839,
+    "duration": 6.48
+  },
+  {
+    "text": ">> plus reinforcement learning which will",
+    "start": 3406.96,
+    "duration": 5.599
+  },
+  {
+    "text": "lectures",
+    "start": 3410.319,
+    "duration": 4.641
+  },
+  {
+    "text": ">> so for RL we don't rely on existing",
+    "start": 3412.559,
+    "duration": 4.321
+  },
+  {
+    "text": "trajectories but we rely on the model's",
+    "start": 3414.96,
+    "duration": 5.32
+  },
+  {
+    "text": "own like rules",
+    "start": 3416.88,
+    "duration": 3.4
+  },
+  {
+    "text": ">> does anyone use",
+    "start": 3421.52,
+    "duration": 4.96
+  },
+  {
+    "text": "pipeline anymore to adapt agents to",
+    "start": 3424.0,
+    "duration": 5.44
+  },
+  {
+    "text": "specific tasks like if you want to",
+    "start": 3426.48,
+    "duration": 5.839
+  },
+  {
+    "text": "navigate some complicated service you",
+    "start": 3429.44,
+    "duration": 5.28
+  },
+  {
+    "text": "would have like SFP in a sense you",
+    "start": 3432.319,
+    "duration": 4.641
+  },
+  {
+    "text": "explained now and then some smaller",
+    "start": 3434.72,
+    "duration": 7.68
+  },
+  {
+    "text": "cycle to like fine tune it is that",
+    "start": 3436.96,
+    "duration": 6.32
+  },
+  {
+    "text": "system",
+    "start": 3442.4,
+    "duration": 3.919
+  },
+  {
+    "text": ">> uh I think in general especially for the",
+    "start": 3443.28,
+    "duration": 5.76
+  },
+  {
+    "text": "prop priority model they expect you to",
+    "start": 3446.319,
+    "duration": 6.161
+  },
+  {
+    "text": "use like only like one single model but",
+    "start": 3449.04,
+    "duration": 6.559
+  },
+  {
+    "text": "might be after model XO merging uh but",
+    "start": 3452.48,
+    "duration": 5.359
+  },
+  {
+    "text": "like only one single model will be",
+    "start": 3455.599,
+    "duration": 5.361
+  },
+  {
+    "text": "actually be inferenced at like inference",
+    "start": 3457.839,
+    "duration": 7.52
+  },
+  {
+    "text": "time so I'm not sure about like the",
+    "start": 3460.96,
+    "duration": 7.119
+  },
+  {
+    "text": "proprietary ones but for um a recently",
+    "start": 3465.359,
+    "duration": 5.44
+  },
+  {
+    "text": "released open model K2 horizon they did",
+    "start": 3468.079,
+    "duration": 6.401
+  },
+  {
+    "text": "multiple rounds of um like fine-tuning",
+    "start": 3470.799,
+    "duration": 6.481
+  },
+  {
+    "text": "even after an SFT stage and the RL stage",
+    "start": 3474.48,
+    "duration": 6.24
+  },
+  {
+    "text": "so they did like some recurrent um",
+    "start": 3477.28,
+    "duration": 5.92
+  },
+  {
+    "text": "fine-tuning Even after the general",
+    "start": 3480.72,
+    "duration": 5.879
+  },
+  {
+    "text": "training stage,",
+    "start": 3483.2,
+    "duration": 3.399
+  },
+  {
+    "text": "Uh the question is like whether there is",
+    "start": 3502.0,
+    "duration": 6.079
+  },
+  {
+    "text": "still low rank adaptations. Um I think",
+    "start": 3504.319,
+    "duration": 5.681
+  },
+  {
+    "text": "for",
+    "start": 3508.079,
+    "duration": 5.201
+  },
+  {
+    "text": "labs that with sufficient resources",
+    "start": 3510.0,
+    "duration": 7.52
+  },
+  {
+    "text": "um they prefer full fine-tuning but uh",
+    "start": 3513.28,
+    "duration": 7.039
+  },
+  {
+    "text": "like for myself I've done uh low rank",
+    "start": 3517.52,
+    "duration": 5.839
+  },
+  {
+    "text": "adaptation before for better like",
+    "start": 3520.319,
+    "duration": 6.04
+  },
+  {
+    "text": "efficiency.",
+    "start": 3523.359,
+    "duration": 3.0
+  },
+  {
+    "text": "Yeah. Uh.",
+    "start": 3532.96,
+    "duration": 3.879
+  },
+  {
+    "text": ">> Oh, here.",
+    "start": 3542.64,
+    "duration": 2.479
+  },
+  {
+    "text": "model.",
+    "start": 3551.119,
+    "duration": 3.0
+  },
+  {
+    "text": ">> Um is the question do we want to",
+    "start": 3555.04,
+    "duration": 5.92
+  },
+  {
+    "text": "supervise it on wrong answers?",
+    "start": 3557.04,
+    "duration": 6.16
+  },
+  {
+    "text": "Uh I would say maybe we want to",
+    "start": 3560.96,
+    "duration": 4.32
+  },
+  {
+    "text": "supervise it on wrong intermediate",
+    "start": 3563.2,
+    "duration": 3.84
+  },
+  {
+    "text": "answers but we want we still want the",
+    "start": 3565.28,
+    "duration": 3.839
+  },
+  {
+    "text": "eventual results to be right because",
+    "start": 3567.04,
+    "duration": 4.88
+  },
+  {
+    "text": "that's like like for example if you are",
+    "start": 3569.119,
+    "duration": 4.801
+  },
+  {
+    "text": "using a coding agent to write some code",
+    "start": 3571.92,
+    "duration": 4.08
+  },
+  {
+    "text": "you don't want it to be wrong.",
+    "start": 3573.92,
+    "duration": 5.52
+  },
+  {
+    "text": ">> Yeah. For example like do we only like",
+    "start": 3576.0,
+    "duration": 5.119
+  },
+  {
+    "text": "supervise on the",
+    "start": 3579.44,
+    "duration": 3.52
+  },
+  {
+    "text": ">> Oh.",
+    "start": 3581.119,
+    "duration": 4.0
+  },
+  {
+    "text": "Oh well, I think we still need to",
+    "start": 3582.96,
+    "duration": 4.639
+  },
+  {
+    "text": "supervise on the like wrong edit because",
+    "start": 3585.119,
+    "duration": 5.361
+  },
+  {
+    "text": "that's like how we learn from the past",
+    "start": 3587.599,
+    "duration": 7.681
+  },
+  {
+    "text": "wrong behaviors. So um we supervise both",
+    "start": 3590.48,
+    "duration": 6.4
+  },
+  {
+    "text": "the right results and the recovery",
+    "start": 3595.28,
+    "duration": 4.6
+  },
+  {
+    "text": "process.",
+    "start": 3596.88,
+    "duration": 3.0
+  },
+  {
+    "text": ">> Is there a wrong",
+    "start": 3599.92,
+    "duration": 4.679
+  },
+  {
+    "text": "to the right?",
+    "start": 3604.799,
+    "duration": 6.401
+  },
+  {
+    "text": "Um I think it's typically determined",
+    "start": 3607.52,
+    "duration": 6.559
+  },
+  {
+    "text": "empirically like for example as I",
+    "start": 3611.2,
+    "duration": 5.359
+  },
+  {
+    "text": "mentioned you might want to train on a",
+    "start": 3614.079,
+    "duration": 5.04
+  },
+  {
+    "text": "smaller portion of the data but like",
+    "start": 3616.559,
+    "duration": 4.881
+  },
+  {
+    "text": "maybe with the same distribution or the",
+    "start": 3619.119,
+    "duration": 4.561
+  },
+  {
+    "text": "same task and see whether it works on a",
+    "start": 3621.44,
+    "duration": 4.56
+  },
+  {
+    "text": "smaller scale model um before running",
+    "start": 3623.68,
+    "duration": 6.48
+  },
+  {
+    "text": "anything like larger scale or scale up.",
+    "start": 3626.0,
+    "duration": 6.319
+  },
+  {
+    "text": "Um yeah, most of these are determined",
+    "start": 3630.16,
+    "duration": 4.56
+  },
+  {
+    "text": "empirically. Like for example, why does",
+    "start": 3632.319,
+    "duration": 7.841
+  },
+  {
+    "text": "the MAI people choose to um",
+    "start": 3634.72,
+    "duration": 9.28
+  },
+  {
+    "text": "choose to use 56% of STEM and coding? Uh",
+    "start": 3640.16,
+    "duration": 5.76
+  },
+  {
+    "text": "like they determined empirically this",
+    "start": 3644.0,
+    "duration": 4.4
+  },
+  {
+    "text": "might be the best setting for um their",
+    "start": 3645.92,
+    "duration": 5.12
+  },
+  {
+    "text": "model",
+    "start": 3648.4,
+    "duration": 5.679
+  },
+  {
+    "text": ">> for using like correctness to determine",
+    "start": 3651.04,
+    "duration": 5.44
+  },
+  {
+    "text": "um how much to weight an example.",
+    "start": 3654.079,
+    "duration": 4.321
+  },
+  {
+    "text": "Reinforcement learning actually will do",
+    "start": 3656.48,
+    "duration": 3.68
+  },
+  {
+    "text": "this sort of at the",
+    "start": 3658.4,
+    "duration": 5.12
+  },
+  {
+    "text": "level and um the reinforcement learning",
+    "start": 3660.16,
+    "duration": 5.439
+  },
+  {
+    "text": "because like we'll we'll talk about like",
+    "start": 3663.52,
+    "duration": 4.64
+  },
+  {
+    "text": "the way the gradient is set up in the RL",
+    "start": 3665.599,
+    "duration": 6.24
+  },
+  {
+    "text": "but like basically the more reward the",
+    "start": 3668.16,
+    "duration": 7.199
+  },
+  {
+    "text": "model gets on that example the higher",
+    "start": 3671.839,
+    "duration": 5.52
+  },
+  {
+    "text": "the weight of the gradient on that",
+    "start": 3675.359,
+    "duration": 4.641
+  },
+  {
+    "text": "example will be so if you have like",
+    "start": 3677.359,
+    "duration": 4.801
+  },
+  {
+    "text": "correctness as a signal RL will",
+    "start": 3680.0,
+    "duration": 5.92
+  },
+  {
+    "text": "effectively rewe it from you for you um",
+    "start": 3682.16,
+    "duration": 5.76
+  },
+  {
+    "text": "it does that implicitly at the",
+    "start": 3685.92,
+    "duration": 4.879
+  },
+  {
+    "text": "trajectory level So if the model is like",
+    "start": 3687.92,
+    "duration": 4.8
+  },
+  {
+    "text": "making some mistakes and then recovering",
+    "start": 3690.799,
+    "duration": 4.081
+  },
+  {
+    "text": "from them, it's going to reinforce",
+    "start": 3692.72,
+    "duration": 5.2
+  },
+  {
+    "text": "making those same mistakes again. If you",
+    "start": 3694.88,
+    "duration": 5.919
+  },
+  {
+    "text": "know that they're mistakes and have kind",
+    "start": 3697.92,
+    "duration": 4.48
+  },
+  {
+    "text": "of like a smarter way of, you know,",
+    "start": 3700.799,
+    "duration": 3.52
+  },
+  {
+    "text": "supervising the loss, you might be able",
+    "start": 3702.4,
+    "duration": 3.919
+  },
+  {
+    "text": "to do better, but those sorts of",
+    "start": 3704.319,
+    "duration": 4.0
+  },
+  {
+    "text": "approaches can be a little bit tricky to",
+    "start": 3706.319,
+    "duration": 4.48
+  },
+  {
+    "text": "set up. So the most common thing is to",
+    "start": 3708.319,
+    "duration": 5.28
+  },
+  {
+    "text": "um just uh use the overall reward on the",
+    "start": 3710.799,
+    "duration": 5.441
+  },
+  {
+    "text": "trajectory um and either like filter the",
+    "start": 3713.599,
+    "duration": 4.321
+  },
+  {
+    "text": "trajectories out to just choose the",
+    "start": 3716.24,
+    "duration": 5.359
+  },
+  {
+    "text": "correct ones and do SFT like you said or",
+    "start": 3717.92,
+    "duration": 6.48
+  },
+  {
+    "text": "um in reinforcement learning we can um",
+    "start": 3721.599,
+    "duration": 6.96
+  },
+  {
+    "text": "rely on um the algorithm to effectively",
+    "start": 3724.4,
+    "duration": 5.6
+  },
+  {
+    "text": "and we'll see more about that in a few",
+    "start": 3728.559,
+    "duration": 4.441
+  },
+  {
+    "text": "days",
+    "start": 3730.0,
+    "duration": 3.0
+  },
+  {
+    "text": "but yeah for like choosing kind of just",
+    "start": 3733.52,
+    "duration": 5.2
+  },
+  {
+    "text": "based on like you know the knowledge of",
+    "start": 3735.76,
+    "duration": 5.92
+  },
+  {
+    "text": "you know, this instance is a good fit",
+    "start": 3738.72,
+    "duration": 5.2
+  },
+  {
+    "text": "domainwise for your downstream test.",
+    "start": 3741.68,
+    "duration": 4.96
+  },
+  {
+    "text": "That ends up being a lot more empirical.",
+    "start": 3743.92,
+    "duration": 4.8
+  },
+  {
+    "text": "And there's methods people use to kind",
+    "start": 3746.64,
+    "duration": 4.88
+  },
+  {
+    "text": "of like if you have an evaluation set",
+    "start": 3748.72,
+    "duration": 5.839
+  },
+  {
+    "text": "and you can like compute the loss of",
+    "start": 3751.52,
+    "duration": 5.2
+  },
+  {
+    "text": "your model on that evaluation set, you",
+    "start": 3754.559,
+    "duration": 4.321
+  },
+  {
+    "text": "can use that as some signal to select",
+    "start": 3756.72,
+    "duration": 4.8
+  },
+  {
+    "text": "your data mixture. Um, but it's all just",
+    "start": 3758.88,
+    "duration": 4.16
+  },
+  {
+    "text": "sort of approximate because you're not",
+    "start": 3761.52,
+    "duration": 6.2
+  },
+  {
+    "text": "doing training on that data mixture.",
+    "start": 3763.04,
+    "duration": 4.68
+  },
+  {
+    "text": "Any other questions?",
+    "start": 3771.2,
+    "duration": 3.72
+  },
+  {
+    "text": "It's just the same as",
+    "start": 3782.72,
+    "duration": 6.56
+  },
+  {
+    "text": ">> uh do you mean the objective of",
+    "start": 3787.119,
+    "duration": 5.161
+  },
+  {
+    "text": "training?",
+    "start": 3789.28,
+    "duration": 3.0
+  },
+  {
+    "text": ">> Um that's a great question.",
+    "start": 3800.0,
+    "duration": 4.839
+  },
+  {
+    "text": "Do you have a general answer for that?",
+    "start": 3805.839,
+    "duration": 4.24
+  },
+  {
+    "text": ">> Yeah. Uh like you had said before, you",
+    "start": 3807.92,
+    "duration": 5.52
+  },
+  {
+    "text": "can think of SFT as being just like",
+    "start": 3810.079,
+    "duration": 6.161
+  },
+  {
+    "text": "pre-training except you are you're",
+    "start": 3813.44,
+    "duration": 4.159
+  },
+  {
+    "text": "formatting your data.",
+    "start": 3816.24,
+    "duration": 2.079
+  },
+  {
+    "text": ">> Yeah.",
+    "start": 3817.599,
+    "duration": 2.801
+  },
+  {
+    "text": ">> To you know have kind of like the",
+    "start": 3818.319,
+    "duration": 4.161
+  },
+  {
+    "text": "structured tags that put it into a chat",
+    "start": 3820.4,
+    "duration": 4.159
+  },
+  {
+    "text": "format and you're also applying a mask",
+    "start": 3822.48,
+    "duration": 4.4
+  },
+  {
+    "text": "to the loss. So you're not supervising",
+    "start": 3824.559,
+    "duration": 4.56
+  },
+  {
+    "text": "the model to output like you know the",
+    "start": 3826.88,
+    "duration": 4.4
+  },
+  {
+    "text": "results of tool calls typically",
+    "start": 3829.119,
+    "duration": 4.081
+  },
+  {
+    "text": ">> but the loss function that you're using",
+    "start": 3831.28,
+    "duration": 5.12
+  },
+  {
+    "text": "is the same like cross entropy loss that",
+    "start": 3833.2,
+    "duration": 5.119
+  },
+  {
+    "text": "you're using in pre-training you're just",
+    "start": 3836.4,
+    "duration": 5.76
+  },
+  {
+    "text": "applying it to different data and on um",
+    "start": 3838.319,
+    "duration": 5.76
+  },
+  {
+    "text": "just a subset of the",
+    "start": 3842.16,
+    "duration": 6.76
+  },
+  {
+    "text": ">> yeah that's your question",
+    "start": 3844.079,
+    "duration": 4.841
+  },
+  {
+    "text": ">> sorry what kind of imitation",
+    "start": 3851.44,
+    "duration": 3.04
+  },
+  {
+    "text": "Yeah. Yeah. This is like this is",
+    "start": 3860.319,
+    "duration": 3.841
+  },
+  {
+    "text": "imitation learning with with teacher",
+    "start": 3862.319,
+    "duration": 3.841
+  },
+  {
+    "text": "forcing. So like teacher forcing has",
+    "start": 3864.16,
+    "duration": 5.12
+  },
+  {
+    "text": "kind of a fixed context and doesn't uh",
+    "start": 3866.16,
+    "duration": 5.52
+  },
+  {
+    "text": "sample from the model at training time.",
+    "start": 3869.28,
+    "duration": 5.759
+  },
+  {
+    "text": "Um that's what these SF most of these SF",
+    "start": 3871.68,
+    "duration": 6.399
+  },
+  {
+    "text": "are choosing. Yeah. Yeah. Yeah, we'll",
+    "start": 3875.039,
+    "duration": 5.361
+  },
+  {
+    "text": "we'll talk about ones that s we'll talk",
+    "start": 3878.079,
+    "duration": 4.161
+  },
+  {
+    "text": "more about ones that have the model",
+    "start": 3880.4,
+    "duration": 3.439
+  },
+  {
+    "text": "produce the training data in the next",
+    "start": 3882.24,
+    "duration": 4.24
+  },
+  {
+    "text": "few lectures.",
+    "start": 3883.839,
+    "duration": 6.2
+  },
+  {
+    "text": ">> Yeah, good questions.",
+    "start": 3886.48,
+    "duration": 3.559
+  },
+  {
+    "text": "Well, let's thank you a",
+    "start": 3896.16,
+    "duration": 3.76
+  }
+]

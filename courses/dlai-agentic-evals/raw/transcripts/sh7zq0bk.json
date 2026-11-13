@@ -1,0 +1,297 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 7,
+    "text": "In the last video, you learned how to find and define requirements\nthat describe what your application should and shouldn't do."
+  },
+  {
+    "startInSeconds": 7,
+    "endInSeconds": 13,
+    "text": "But to find out whether your application meets those requirements,\nyou need to run it through those situations that test them."
+  },
+  {
+    "startInSeconds": 13,
+    "endInSeconds": 18,
+    "text": "So in this video, you'll learn how to come up with those situations\nand turn them into test cases,"
+  },
+  {
+    "startInSeconds": 18,
+    "endInSeconds": 21,
+    "text": "specifying what you'll give the application and what\nyou expect it to do."
+  },
+  {
+    "startInSeconds": 21,
+    "endInSeconds": 28,
+    "text": "Each test case should keep together the user request,\nthe relevant records or context, and the expected outcome."
+  },
+  {
+    "startInSeconds": 28,
+    "endInSeconds": 32,
+    "text": "This can be tricky because a single requirement can apply in lots of\ndifferent situations,"
+  },
+  {
+    "startInSeconds": 32,
+    "endInSeconds": 36,
+    "text": "so you'll want an initial set of cases that covers a meaningful range."
+  },
+  {
+    "startInSeconds": 36,
+    "endInSeconds": 41,
+    "text": "For example, the shelter application must only match volunteers with\ndogs they can safely handle."
+  },
+  {
+    "startInSeconds": 41,
+    "endInSeconds": 46,
+    "text": "That includes volunteers with different levels of experience,\ndogs with different handling needs,"
+  },
+  {
+    "startInSeconds": 46,
+    "endInSeconds": 49,
+    "text": "and situations where information about either one of those is missing."
+  },
+  {
+    "startInSeconds": 49,
+    "endInSeconds": 55,
+    "text": "One case won't tell you whether the application follows the rule\nacross those different situations."
+  },
+  {
+    "startInSeconds": 55,
+    "endInSeconds": 59,
+    "text": "So, let's start choosing situations for that safe\nmatching requirement."
+  },
+  {
+    "startInSeconds": 59,
+    "endInSeconds": 66,
+    "text": "A volunteer needs the experience and physical ability to handle the\ndog safely, and you'll want cases that test both."
+  },
+  {
+    "startInSeconds": 66,
+    "endInSeconds": 72,
+    "text": "Otherwise, you could have lots of cases about experience without ever\nchecking whether the volunteer can physically control the dog."
+  },
+  {
+    "startInSeconds": 72,
+    "endInSeconds": 80,
+    "text": "You can get those situations from a few different angles.\nOne approach is to think about what would make a match safe or unsafe."
+  },
+  {
+    "startInSeconds": 80,
+    "endInSeconds": 84,
+    "text": "For a dog that needs an experienced handler,\nyou could consider a first-time volunteer,"
+  },
+  {
+    "startInSeconds": 84,
+    "endInSeconds": 88,
+    "text": "and then someone with the experience and physical ability to\nhandle that dog safely."
+  },
+  {
+    "startInSeconds": 88,
+    "endInSeconds": 93,
+    "text": "You could also consider an experienced volunteer who can't\nphysically control the dog."
+  },
+  {
+    "startInSeconds": 93,
+    "endInSeconds": 100,
+    "text": "These situations let you check whether the application considers both\nexperience and physical ability when making a match."
+  },
+  {
+    "startInSeconds": 100,
+    "endInSeconds": 104,
+    "text": "Another approach is to consider what information the application will\nhave about the volunteer or dog."
+  },
+  {
+    "startInSeconds": 104,
+    "endInSeconds": 109,
+    "text": "You might try a situation with clear handling notes,\none where those notes are missing,"
+  },
+  {
+    "startInSeconds": 109,
+    "endInSeconds": 113,
+    "text": "and one where two notes disagree about whether a\nbeginner can handle the dog."
+  },
+  {
+    "startInSeconds": 113,
+    "endInSeconds": 119,
+    "text": "That lets you test what the application does when the information it\nhas is incomplete or contradictory."
+  },
+  {
+    "startInSeconds": 119,
+    "endInSeconds": 127,
+    "text": "A third approach is to change how the request is written while keeping\nthe facts the same. For example, \"Can I take Buddy out for a walk?\""
+  },
+  {
+    "startInSeconds": 127,
+    "endInSeconds": 135,
+    "text": "and \"I'd like to walk Buddy. Would that be okay?\" ask for the same\nthing. And you can also try shorter messages or spelling mistakes."
+  },
+  {
+    "startInSeconds": 135,
+    "endInSeconds": 139,
+    "text": "You're checking whether the application makes the same decision\nwhen someone asks in a different way."
+  },
+  {
+    "startInSeconds": 139,
+    "endInSeconds": 146,
+    "text": "These are ways to get ideas, so you don't have to apply all three to\nevery case or try every possible combination."
+  },
+  {
+    "startInSeconds": 146,
+    "endInSeconds": 150,
+    "text": "Start with situations the application is likely to face and problems\nyou've already seen,"
+  },
+  {
+    "startInSeconds": 150,
+    "endInSeconds": 153,
+    "text": "especially where a mistake could put someone at risk."
+  },
+  {
+    "startInSeconds": 153,
+    "endInSeconds": 160,
+    "text": "Once you've chosen some situations to test your requirement,\nthe next step is to work out what goes into each test case."
+  },
+  {
+    "startInSeconds": 160,
+    "endInSeconds": 166,
+    "text": "For the shelter, you'll need the volunteer request, the volunteer\nand dog information, and what you expect the agent to do."
+  },
+  {
+    "startInSeconds": 166,
+    "endInSeconds": 170,
+    "text": "So let's put those together for our unsafe match example."
+  },
+  {
+    "startInSeconds": 170,
+    "endInSeconds": 175,
+    "text": "The volunteer is experienced, but the 130-pound dog is too strong for\nthem to control safely."
+  },
+  {
+    "startInSeconds": 175,
+    "endInSeconds": 177,
+    "text": "Those are facts you'll include,"
+  },
+  {
+    "startInSeconds": 177,
+    "endInSeconds": 183,
+    "text": "and the expected outcome is to reject the match because experience\nalone isn't enough to meet the safe matching requirement."
+  },
+  {
+    "startInSeconds": 183,
+    "endInSeconds": 188,
+    "text": "Now take a dog the same volunteer has both the experience\nand physical ability to handle."
+  },
+  {
+    "startInSeconds": 188,
+    "endInSeconds": 193,
+    "text": "You'd expect approval, provided the other eligibility\nand availability conditions are met,"
+  },
+  {
+    "startInSeconds": 193,
+    "endInSeconds": 197,
+    "text": "and the shelter's policy calls for approving suitable matches."
+  },
+  {
+    "startInSeconds": 197,
+    "endInSeconds": 202,
+    "text": "But if the dog's handling notes are missing,\nshould the agent ask for more information or reject the match?"
+  },
+  {
+    "startInSeconds": 202,
+    "endInSeconds": 205,
+    "text": "The safe matching requirement doesn't settle that question."
+  },
+  {
+    "startInSeconds": 205,
+    "endInSeconds": 211,
+    "text": "Check the shelter's policy, and if it doesn't answer the question,\nask the people responsible to decide."
+  },
+  {
+    "startInSeconds": 211,
+    "endInSeconds": 215,
+    "text": "If the decision is to ask for the missing information\nbefore recommending a match,"
+  },
+  {
+    "startInSeconds": 215,
+    "endInSeconds": 219,
+    "text": "add that to the requirement and write it down as the expected outcome."
+  },
+  {
+    "startInSeconds": 219,
+    "endInSeconds": 223,
+    "text": "Until that decision is made, you don't yet know what response\nto count as correct."
+  },
+  {
+    "startInSeconds": 223,
+    "endInSeconds": 229,
+    "text": "That's a requirement problem that the test case helped reveal.\nAnd sometimes, more than one answer can be right."
+  },
+  {
+    "startInSeconds": 229,
+    "endInSeconds": 235,
+    "text": "If several dogs would be safe matches, don't make one particular dog\nthe only acceptable answer."
+  },
+  {
+    "startInSeconds": 235,
+    "endInSeconds": 242,
+    "text": "Instead, describe what makes a dog suitable. The volunteer must have\nthe experience and physical ability to handle it safely."
+  },
+  {
+    "startInSeconds": 242,
+    "endInSeconds": 247,
+    "text": "You can also include an example of an acceptable response if\nthat helps make the expectation clear."
+  },
+  {
+    "startInSeconds": 247,
+    "endInSeconds": 253,
+    "text": "Check that it follows the requirement, but remember that another\nsuitable dog or different wording can still be correct."
+  },
+  {
+    "startInSeconds": 253,
+    "endInSeconds": 255,
+    "text": "For the information you'll give the application,"
+  },
+  {
+    "startInSeconds": 255,
+    "endInSeconds": 260,
+    "text": "you can use examples you already have or create new ones for the\nsituations you want to test."
+  },
+  {
+    "startInSeconds": 260,
+    "endInSeconds": 268,
+    "text": "If an LLM helps generate them, check that they're realistic\nand fit the situation. Keep a note of where each example came from."
+  },
+  {
+    "startInSeconds": 268,
+    "endInSeconds": 274,
+    "text": "Later, that source will help you decide how much weight to give the\ncase and whether it belongs in the reusable benchmark."
+  },
+  {
+    "startInSeconds": 274,
+    "endInSeconds": 278,
+    "text": "So now you know how to take a requirement,\nchoose some situations to test,"
+  },
+  {
+    "startInSeconds": 278,
+    "endInSeconds": 282,
+    "text": "and work out what information goes into each case and what the\napplication should do."
+  },
+  {
+    "startInSeconds": 282,
+    "endInSeconds": 286,
+    "text": "Next, you'll run those cases and see what the\napplication actually does."
+  },
+  {
+    "startInSeconds": 286,
+    "endInSeconds": 290,
+    "text": "We'll review the results together, describe the problems we find,"
+  },
+  {
+    "startInSeconds": 290,
+    "endInSeconds": 294,
+    "text": "and group similar mistakes so we can decide which ones\nneed attention first."
+  },
+  {
+    "startInSeconds": 294,
+    "endInSeconds": 295,
+    "text": "I'll see you there."
+  }
+]

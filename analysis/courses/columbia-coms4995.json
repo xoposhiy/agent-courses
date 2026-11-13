@@ -1,0 +1,1267 @@
+{
+  "source_id": "columbia-coms4995",
+  "summary": "A practical introduction that builds from language modeling and decoding to memory, planning, tools, and agent safety. Homework covers data preparation, a small classifier, retrieval, conversation memory, and a grounded persona agent.",
+  "limitations": [
+    "Eight lecture decks and three homework descriptions are available.",
+    "The later vibe-coding session is schedule-only; it is excluded from confirmed frequency.",
+    "Exercise data, solutions, and starter implementations are supporting material rather than separate course occurrences."
+  ],
+  "new_concept_ids": [
+    "tokenization",
+    "gradient-training",
+    "beam-search",
+    "tree-thoughts",
+    "verification",
+    "soft-prompts",
+    "sliding-memory",
+    "rlhf",
+    "dpo",
+    "reward-model",
+    "lora",
+    "compression",
+    "caching",
+    "state",
+    "error-recovery",
+    "long-horizon",
+    "threat-modeling",
+    "red-teaming",
+    "memory-poisoning",
+    "grounding",
+    "abstention",
+    "persona"
+  ],
+  "concepts": [
+    {
+      "concept_id": "agent-architecture",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week1.md",
+          "line": 778,
+          "page": 53,
+          "excerpt": "The Cognitive Architecture of an Agent",
+          "material_id": "slides/week1",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week1.pdf",
+          "sha256": "8dd1e3b586c7554f19d7d8bc427bfd8e229b9fbe71c2ff70471ecf32ae981347"
+        }
+      ]
+    },
+    {
+      "concept_id": "llm-foundations",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week1.md",
+          "line": 235,
+          "page": 13,
+          "excerpt": "The Evolution of language models",
+          "material_id": "slides/week1",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week1.pdf",
+          "sha256": "8dd1e3b586c7554f19d7d8bc427bfd8e229b9fbe71c2ff70471ecf32ae981347"
+        }
+      ]
+    },
+    {
+      "concept_id": "react",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week1.md",
+          "line": 869,
+          "page": 58,
+          "excerpt": "The ReAct Pattern (Reasoning + Acting)",
+          "material_id": "slides/week1",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week1.pdf",
+          "sha256": "8dd1e3b586c7554f19d7d8bc427bfd8e229b9fbe71c2ff70471ecf32ae981347"
+        }
+      ]
+    },
+    {
+      "concept_id": "transformer",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week2.md",
+          "line": 560,
+          "page": 40,
+          "excerpt": "Components of the Transformer",
+          "material_id": "slides/week2",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week2.pdf",
+          "sha256": "9b8997136376b97922f13e9bea52c64584dfca71c38f070a36eb84c2edc12617"
+        }
+      ]
+    },
+    {
+      "concept_id": "gradient-training",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week2.md",
+          "line": 326,
+          "page": 24,
+          "excerpt": "All training pipelines use gradient descent/ascent",
+          "material_id": "slides/week2",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week2.pdf",
+          "sha256": "9b8997136376b97922f13e9bea52c64584dfca71c38f070a36eb84c2edc12617"
+        }
+      ]
+    },
+    {
+      "concept_id": "tokenization",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/assignments/hw1.md",
+          "line": 66,
+          "page": null,
+          "excerpt": "* **2.4 Byte pair encoding:** Implement BPE yourself, then train a byte-level tokenizer on a corpus.",
+          "material_id": "assignments/hw1",
+          "category": "assignments",
+          "source_url": "https://designing-agents.github.io/HW1.html",
+          "sha256": "88ae2d366b06a5538b90a1f0722c9bbb81163c416a85f1f26543f13cec49a1fe"
+        }
+      ]
+    },
+    {
+      "concept_id": "data-curation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/assignments/hw1.md",
+          "line": 55,
+          "page": null,
+          "excerpt": "* **1.3 Quality filter:** Drop documents by length, by how little text is real language, and by near-duplication against documents already kept.",
+          "material_id": "assignments/hw1",
+          "category": "assignments",
+          "source_url": "https://designing-agents.github.io/HW1.html",
+          "sha256": "88ae2d366b06a5538b90a1f0722c9bbb81163c416a85f1f26543f13cec49a1fe"
+        }
+      ]
+    },
+    {
+      "concept_id": "privacy",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/assignments/hw1.md",
+          "line": 54,
+          "page": null,
+          "excerpt": "* **1.2 Scrub PII:** Replace emails, URLs, phone numbers, and handles with placeholders while leaving alone strings that only look like personal information.",
+          "material_id": "assignments/hw1",
+          "category": "assignments",
+          "source_url": "https://designing-agents.github.io/HW1.html",
+          "sha256": "88ae2d366b06a5538b90a1f0722c9bbb81163c416a85f1f26543f13cec49a1fe"
+        }
+      ]
+    },
+    {
+      "concept_id": "decoding",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week3.md",
+          "line": 720,
+          "page": 48,
+          "excerpt": "Nucleus sampling (top-p)",
+          "material_id": "slides/week3",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week3.pdf",
+          "sha256": "d1021092d97513358cadd25176281e50df42665b4db844514b0f3d2dec5d55e5"
+        }
+      ]
+    },
+    {
+      "concept_id": "beam-search",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week3.md",
+          "line": 683,
+          "page": 44,
+          "excerpt": "Beam search",
+          "material_id": "slides/week3",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week3.pdf",
+          "sha256": "d1021092d97513358cadd25176281e50df42665b4db844514b0f3d2dec5d55e5"
+        }
+      ]
+    },
+    {
+      "concept_id": "model-training",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week3.md",
+          "line": 37,
+          "page": 3,
+          "excerpt": "Pre-training",
+          "material_id": "slides/week3",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week3.pdf",
+          "sha256": "d1021092d97513358cadd25176281e50df42665b4db844514b0f3d2dec5d55e5"
+        }
+      ]
+    },
+    {
+      "concept_id": "prompting",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week4.md",
+          "line": 82,
+          "page": 6,
+          "excerpt": "Prompts always involve instructions and context passed to an LLM to",
+          "material_id": "slides/week4",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week4.pdf",
+          "sha256": "049ffeedeef56f66e9923d61df75f0a2b582369e6ae15524420c19a24810ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "soft-prompts",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week4.md",
+          "line": 221,
+          "page": 15,
+          "excerpt": "Soft Prompting",
+          "material_id": "slides/week4",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week4.pdf",
+          "sha256": "049ffeedeef56f66e9923d61df75f0a2b582369e6ae15524420c19a24810ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "reasoning",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week4.md",
+          "line": 385,
+          "page": 24,
+          "excerpt": "Reasoning in LLMs refers to the capability of models to solve complex,",
+          "material_id": "slides/week4",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week4.pdf",
+          "sha256": "049ffeedeef56f66e9923d61df75f0a2b582369e6ae15524420c19a24810ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "cot",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week4.md",
+          "line": 437,
+          "page": 27,
+          "excerpt": "CoT improves multi-step reasoning by eliciting intermediate steps",
+          "material_id": "slides/week4",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week4.pdf",
+          "sha256": "049ffeedeef56f66e9923d61df75f0a2b582369e6ae15524420c19a24810ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "self-consistency",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week4.md",
+          "line": 493,
+          "page": 30,
+          "excerpt": "Self-consistency",
+          "material_id": "slides/week4",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week4.pdf",
+          "sha256": "049ffeedeef56f66e9923d61df75f0a2b582369e6ae15524420c19a24810ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "tree-thoughts",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week4.md",
+          "line": 510,
+          "page": 31,
+          "excerpt": "Tree of Thoughts (ToT)",
+          "material_id": "slides/week4",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week4.pdf",
+          "sha256": "049ffeedeef56f66e9923d61df75f0a2b582369e6ae15524420c19a24810ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "reflexion",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week4.md",
+          "line": 537,
+          "page": 33,
+          "excerpt": "Reflexion converts feedback into self-reflections stored in memory.",
+          "material_id": "slides/week4",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week4.pdf",
+          "sha256": "049ffeedeef56f66e9923d61df75f0a2b582369e6ae15524420c19a24810ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "reflection",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week4.md",
+          "line": 537,
+          "page": 33,
+          "excerpt": "Reflexion converts feedback into self-reflections stored in memory.",
+          "material_id": "slides/week4",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week4.pdf",
+          "sha256": "049ffeedeef56f66e9923d61df75f0a2b582369e6ae15524420c19a24810ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "verification",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week4.md",
+          "line": 554,
+          "page": 34,
+          "excerpt": "The LLM has to “verify” it’s answer before continuing",
+          "material_id": "slides/week4",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week4.pdf",
+          "sha256": "049ffeedeef56f66e9923d61df75f0a2b582369e6ae15524420c19a24810ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week4.md",
+          "line": 41,
+          "page": 3,
+          "excerpt": "Memory management",
+          "material_id": "slides/week4",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week4.pdf",
+          "sha256": "049ffeedeef56f66e9923d61df75f0a2b582369e6ae15524420c19a24810ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "context-engineering",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week4.md",
+          "line": 740,
+          "page": 46,
+          "excerpt": "“Memory” for an LLM means context selection and presentation.",
+          "material_id": "slides/week4",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week4.pdf",
+          "sha256": "049ffeedeef56f66e9923d61df75f0a2b582369e6ae15524420c19a24810ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "sliding-memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week4.md",
+          "line": 785,
+          "page": 50,
+          "excerpt": "In sliding window memory, you append only the N last turns.",
+          "material_id": "slides/week4",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week4.pdf",
+          "sha256": "049ffeedeef56f66e9923d61df75f0a2b582369e6ae15524420c19a24810ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "working-memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week4.md",
+          "line": 785,
+          "page": 50,
+          "excerpt": "In sliding window memory, you append only the N last turns.",
+          "material_id": "slides/week4",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week4.pdf",
+          "sha256": "049ffeedeef56f66e9923d61df75f0a2b582369e6ae15524420c19a24810ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "compaction",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week4.md",
+          "line": 813,
+          "page": 52,
+          "excerpt": "Summary-based compaction",
+          "material_id": "slides/week4",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week4.pdf",
+          "sha256": "049ffeedeef56f66e9923d61df75f0a2b582369e6ae15524420c19a24810ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "caching",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week4.md",
+          "line": 294,
+          "page": 20,
+          "excerpt": "Good practice: caching",
+          "material_id": "slides/week4",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week4.pdf",
+          "sha256": "049ffeedeef56f66e9923d61df75f0a2b582369e6ae15524420c19a24810ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "error-recovery",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week4.md",
+          "line": 288,
+          "page": 19,
+          "excerpt": "Good practice: exponential backoff",
+          "material_id": "slides/week4",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week4.pdf",
+          "sha256": "049ffeedeef56f66e9923d61df75f0a2b582369e6ae15524420c19a24810ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "structured-output",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/assignments/hw2.md",
+          "line": 68,
+          "page": null,
+          "excerpt": "* **2.5 Validate:** Check each extraction against the schema.",
+          "material_id": "assignments/hw2",
+          "category": "assignments",
+          "source_url": "https://designing-agents.github.io/HW2.html",
+          "sha256": "357c98e89ae3711daf14ec743599c17e64249abaae3a03daf577ab35ab5b2325"
+        }
+      ]
+    },
+    {
+      "concept_id": "few-shot",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/assignments/hw2.md",
+          "line": 65,
+          "page": null,
+          "excerpt": "* **2.2 Few-shot:** Do the same with worked examples in the prompt.",
+          "material_id": "assignments/hw2",
+          "category": "assignments",
+          "source_url": "https://designing-agents.github.io/HW2.html",
+          "sha256": "357c98e89ae3711daf14ec743599c17e64249abaae3a03daf577ab35ab5b2325"
+        }
+      ]
+    },
+    {
+      "concept_id": "retrieval-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/assignments/hw2.md",
+          "line": 55,
+          "page": null,
+          "excerpt": "* **1.7 Evaluate:** Report the share of n-grams that are distinct.",
+          "material_id": "assignments/hw2",
+          "category": "assignments",
+          "source_url": "https://designing-agents.github.io/HW2.html",
+          "sha256": "357c98e89ae3711daf14ec743599c17e64249abaae3a03daf577ab35ab5b2325"
+        }
+      ]
+    },
+    {
+      "concept_id": "sft",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week5.md",
+          "line": 226,
+          "page": 16,
+          "excerpt": "SFT teaches by example, focusing on formatting and imitation.",
+          "material_id": "slides/week5",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week5.pdf",
+          "sha256": "1eab06b184ab361976eac1adbb012ac8cf87aa0092d8d05a645bc630bc12ced2"
+        }
+      ]
+    },
+    {
+      "concept_id": "rl",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week5.md",
+          "line": 93,
+          "page": 7,
+          "excerpt": "RLHF (Reinforcement Learning from Human Feedback)",
+          "material_id": "slides/week5",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week5.pdf",
+          "sha256": "1eab06b184ab361976eac1adbb012ac8cf87aa0092d8d05a645bc630bc12ced2"
+        }
+      ]
+    },
+    {
+      "concept_id": "rlhf",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week5.md",
+          "line": 367,
+          "page": 23,
+          "excerpt": "Train a reward model (RM) to predict human preferences.",
+          "material_id": "slides/week5",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week5.pdf",
+          "sha256": "1eab06b184ab361976eac1adbb012ac8cf87aa0092d8d05a645bc630bc12ced2"
+        }
+      ]
+    },
+    {
+      "concept_id": "human-demos",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week5.md",
+          "line": 365,
+          "page": 23,
+          "excerpt": "Collect human preference comparisons (A vs. B) for model outputs.",
+          "material_id": "slides/week5",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week5.pdf",
+          "sha256": "1eab06b184ab361976eac1adbb012ac8cf87aa0092d8d05a645bc630bc12ced2"
+        }
+      ]
+    },
+    {
+      "concept_id": "dpo",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week5.md",
+          "line": 96,
+          "page": 7,
+          "excerpt": "DPO (Direct Preference Optimization)",
+          "material_id": "slides/week5",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week5.pdf",
+          "sha256": "1eab06b184ab361976eac1adbb012ac8cf87aa0092d8d05a645bc630bc12ced2"
+        }
+      ]
+    },
+    {
+      "concept_id": "reward-model",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week5.md",
+          "line": 343,
+          "page": 22,
+          "excerpt": "Learned reward models",
+          "material_id": "slides/week5",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week5.pdf",
+          "sha256": "1eab06b184ab361976eac1adbb012ac8cf87aa0092d8d05a645bc630bc12ced2"
+        }
+      ]
+    },
+    {
+      "concept_id": "reward-hacking",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week5.md",
+          "line": 391,
+          "page": 24,
+          "excerpt": "Reward hacking: The policy exploits spurious features the RM",
+          "material_id": "slides/week5",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week5.pdf",
+          "sha256": "1eab06b184ab361976eac1adbb012ac8cf87aa0092d8d05a645bc630bc12ced2"
+        }
+      ]
+    },
+    {
+      "concept_id": "lora",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week5.md",
+          "line": 812,
+          "page": 40,
+          "excerpt": "LoRA (Low-Rank Adaptation)",
+          "material_id": "slides/week5",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week5.pdf",
+          "sha256": "1eab06b184ab361976eac1adbb012ac8cf87aa0092d8d05a645bc630bc12ced2"
+        }
+      ]
+    },
+    {
+      "concept_id": "compression",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week5.md",
+          "line": 890,
+          "page": 45,
+          "excerpt": "Compression: makes aligned models deployable; requires re-evaluation.",
+          "material_id": "slides/week5",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week5.pdf",
+          "sha256": "1eab06b184ab361976eac1adbb012ac8cf87aa0092d8d05a645bc630bc12ced2"
+        }
+      ]
+    },
+    {
+      "concept_id": "rag",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week5.md",
+          "line": 908,
+          "page": 47,
+          "excerpt": "Retrieval-Augmented Generation (RAG)",
+          "material_id": "slides/week5",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week5.pdf",
+          "sha256": "1eab06b184ab361976eac1adbb012ac8cf87aa0092d8d05a645bc630bc12ced2"
+        }
+      ]
+    },
+    {
+      "concept_id": "chunking",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week5.md",
+          "line": 942,
+          "page": 48,
+          "excerpt": "Two parts to the RAG pipeline: Indexing and Generating",
+          "material_id": "slides/week5",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week5.pdf",
+          "sha256": "1eab06b184ab361976eac1adbb012ac8cf87aa0092d8d05a645bc630bc12ced2"
+        }
+      ]
+    },
+    {
+      "concept_id": "sparse-retrieval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week5.md",
+          "line": 980,
+          "page": 51,
+          "excerpt": "Sparse (keyword / BM25)",
+          "material_id": "slides/week5",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week5.pdf",
+          "sha256": "1eab06b184ab361976eac1adbb012ac8cf87aa0092d8d05a645bc630bc12ced2"
+        }
+      ]
+    },
+    {
+      "concept_id": "embeddings",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week5.md",
+          "line": 992,
+          "page": 51,
+          "excerpt": "Dense (embeddings / vector search)",
+          "material_id": "slides/week5",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week5.pdf",
+          "sha256": "1eab06b184ab361976eac1adbb012ac8cf87aa0092d8d05a645bc630bc12ced2"
+        }
+      ]
+    },
+    {
+      "concept_id": "hybrid-search",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week5.md",
+          "line": 1004,
+          "page": 52,
+          "excerpt": "In practice, a hybrid index is used (combination of sparse for identifiers +",
+          "material_id": "slides/week5",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week5.pdf",
+          "sha256": "1eab06b184ab361976eac1adbb012ac8cf87aa0092d8d05a645bc630bc12ced2"
+        }
+      ]
+    },
+    {
+      "concept_id": "grounding",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week5.md",
+          "line": 1056,
+          "page": 55,
+          "excerpt": "Generation issues: model ignores evidence or hallucinates despite",
+          "material_id": "slides/week5",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week5.pdf",
+          "sha256": "1eab06b184ab361976eac1adbb012ac8cf87aa0092d8d05a645bc630bc12ced2"
+        }
+      ]
+    },
+    {
+      "concept_id": "harness",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week6.md",
+          "line": 214,
+          "page": 16,
+          "excerpt": "Agent harness: the runtime infrastructure surrounding an LLM that turns",
+          "material_id": "slides/week6",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week6.pdf",
+          "sha256": "5c850f642a244b98bd81d59c75b28784c0eedf10f6600b09ff01055d962a17ed"
+        }
+      ]
+    },
+    {
+      "concept_id": "state",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week6.md",
+          "line": 299,
+          "page": 20,
+          "excerpt": "STATE = Everything the system currently knows",
+          "material_id": "slides/week6",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week6.pdf",
+          "sha256": "5c850f642a244b98bd81d59c75b28784c0eedf10f6600b09ff01055d962a17ed"
+        }
+      ]
+    },
+    {
+      "concept_id": "workflow-agent",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week6.md",
+          "line": 329,
+          "page": 22,
+          "excerpt": "Static vs. dynamic workflows",
+          "material_id": "slides/week6",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week6.pdf",
+          "sha256": "5c850f642a244b98bd81d59c75b28784c0eedf10f6600b09ff01055d962a17ed"
+        }
+      ]
+    },
+    {
+      "concept_id": "prompt-chain",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week6.md",
+          "line": 451,
+          "page": 27,
+          "excerpt": "Prompt chaining decomposes a task into sequential stages:",
+          "material_id": "slides/week6",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week6.pdf",
+          "sha256": "5c850f642a244b98bd81d59c75b28784c0eedf10f6600b09ff01055d962a17ed"
+        }
+      ]
+    },
+    {
+      "concept_id": "routing",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week6.md",
+          "line": 776,
+          "page": 47,
+          "excerpt": "Routing is a classification problem",
+          "material_id": "slides/week6",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week6.pdf",
+          "sha256": "5c850f642a244b98bd81d59c75b28784c0eedf10f6600b09ff01055d962a17ed"
+        }
+      ]
+    },
+    {
+      "concept_id": "planning",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week6.md",
+          "line": 905,
+          "page": 54,
+          "excerpt": "Iterative Planning",
+          "material_id": "slides/week6",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week6.pdf",
+          "sha256": "5c850f642a244b98bd81d59c75b28784c0eedf10f6600b09ff01055d962a17ed"
+        }
+      ]
+    },
+    {
+      "concept_id": "plan-execute",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week6.md",
+          "line": 972,
+          "page": 58,
+          "excerpt": "Plan-then-execute",
+          "material_id": "slides/week6",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week6.pdf",
+          "sha256": "5c850f642a244b98bd81d59c75b28784c0eedf10f6600b09ff01055d962a17ed"
+        }
+      ]
+    },
+    {
+      "concept_id": "long-horizon",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week6.md",
+          "line": 43,
+          "page": 3,
+          "excerpt": "They struggle with long-horizon tasks.",
+          "material_id": "slides/week6",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week6.pdf",
+          "sha256": "5c850f642a244b98bd81d59c75b28784c0eedf10f6600b09ff01055d962a17ed"
+        }
+      ]
+    },
+    {
+      "concept_id": "tool-use",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week7.md",
+          "line": 139,
+          "page": 7,
+          "excerpt": "Tool calling: The model emits a structured request indicating that an",
+          "material_id": "slides/week7",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week7.pdf",
+          "sha256": "613fd325101596e100aa1f1843953aeaf4f8a863acc34412d389076dbfd6c789"
+        }
+      ]
+    },
+    {
+      "concept_id": "parallelization",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week7.md",
+          "line": 488,
+          "page": 24,
+          "excerpt": "Sequential vs parallel tool calls",
+          "material_id": "slides/week7",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week7.pdf",
+          "sha256": "613fd325101596e100aa1f1843953aeaf4f8a863acc34412d389076dbfd6c789"
+        }
+      ]
+    },
+    {
+      "concept_id": "frameworks",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week7.md",
+          "line": 792,
+          "page": 37,
+          "excerpt": "An agentic framework is the foundational structure that governs how",
+          "material_id": "slides/week7",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week7.pdf",
+          "sha256": "613fd325101596e100aa1f1843953aeaf4f8a863acc34412d389076dbfd6c789"
+        }
+      ]
+    },
+    {
+      "concept_id": "mcp",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week7.md",
+          "line": 915,
+          "page": 43,
+          "excerpt": "Before MCP:",
+          "material_id": "slides/week7",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week7.pdf",
+          "sha256": "613fd325101596e100aa1f1843953aeaf4f8a863acc34412d389076dbfd6c789"
+        }
+      ]
+    },
+    {
+      "concept_id": "tool-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week7.md",
+          "line": 713,
+          "page": 33,
+          "excerpt": "How to evaluate tool calling?",
+          "material_id": "slides/week7",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week7.pdf",
+          "sha256": "613fd325101596e100aa1f1843953aeaf4f8a863acc34412d389076dbfd6c789"
+        }
+      ]
+    },
+    {
+      "concept_id": "evaluation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week7.md",
+          "line": 736,
+          "page": 34,
+          "excerpt": "Final-answer accuracy can hide a broken trajectory.",
+          "material_id": "slides/week7",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week7.pdf",
+          "sha256": "613fd325101596e100aa1f1843953aeaf4f8a863acc34412d389076dbfd6c789"
+        }
+      ]
+    },
+    {
+      "concept_id": "observability",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week7.md",
+          "line": 882,
+          "page": 40,
+          "excerpt": "Infrastructure — DB, sandbox, logging",
+          "material_id": "slides/week7",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week7.pdf",
+          "sha256": "613fd325101596e100aa1f1843953aeaf4f8a863acc34412d389076dbfd6c789"
+        }
+      ]
+    },
+    {
+      "concept_id": "hitl",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week7.md",
+          "line": 773,
+          "page": 36,
+          "excerpt": "Human approval points",
+          "material_id": "slides/week7",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week7.pdf",
+          "sha256": "613fd325101596e100aa1f1843953aeaf4f8a863acc34412d389076dbfd6c789"
+        }
+      ]
+    },
+    {
+      "concept_id": "safety",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week9.md",
+          "line": 1055,
+          "page": 72,
+          "excerpt": "What is a guardrail?",
+          "material_id": "slides/week9",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week9.pdf",
+          "sha256": "7ad661e1686bec7fcee49425c2e832c6108937c87103a0bc430a0f270fe6b35d"
+        }
+      ]
+    },
+    {
+      "concept_id": "prompt-injection",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week9.md",
+          "line": 433,
+          "page": 27,
+          "excerpt": "Indirect prompt injection",
+          "material_id": "slides/week9",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week9.pdf",
+          "sha256": "7ad661e1686bec7fcee49425c2e832c6108937c87103a0bc430a0f270fe6b35d"
+        }
+      ]
+    },
+    {
+      "concept_id": "sandboxing",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week9.md",
+          "line": 1394,
+          "page": 91,
+          "excerpt": "Designing a safe system: sandboxing",
+          "material_id": "slides/week9",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week9.pdf",
+          "sha256": "7ad661e1686bec7fcee49425c2e832c6108937c87103a0bc430a0f270fe6b35d"
+        }
+      ]
+    },
+    {
+      "concept_id": "threat-modeling",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week9.md",
+          "line": 1379,
+          "page": 90,
+          "excerpt": "Designing a safe system: least privilege",
+          "material_id": "slides/week9",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week9.pdf",
+          "sha256": "7ad661e1686bec7fcee49425c2e832c6108937c87103a0bc430a0f270fe6b35d"
+        }
+      ]
+    },
+    {
+      "concept_id": "red-teaming",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week9.md",
+          "line": 1447,
+          "page": 94,
+          "excerpt": "Red teaming and adversarial evaluation",
+          "material_id": "slides/week9",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week9.pdf",
+          "sha256": "7ad661e1686bec7fcee49425c2e832c6108937c87103a0bc430a0f270fe6b35d"
+        }
+      ]
+    },
+    {
+      "concept_id": "memory-poisoning",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week9.md",
+          "line": 511,
+          "page": 31,
+          "excerpt": "Memory poisoning",
+          "material_id": "slides/week9",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week9.pdf",
+          "sha256": "7ad661e1686bec7fcee49425c2e832c6108937c87103a0bc430a0f270fe6b35d"
+        }
+      ]
+    },
+    {
+      "concept_id": "abstention",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/assignments/hw3.md",
+          "line": 70,
+          "page": null,
+          "excerpt": "**Goal:** Say \"I don't know\" when the celebrity wouldn't know.",
+          "material_id": "assignments/hw3",
+          "category": "assignments",
+          "source_url": "https://designing-agents.github.io/HW3.html",
+          "sha256": "6cd709c7e26e0be6901a7884255dad180a8741742fd6d2ea1a7ff3f7a06745a9"
+        }
+      ]
+    },
+    {
+      "concept_id": "persona",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/assignments/hw3.md",
+          "line": 56,
+          "page": null,
+          "excerpt": "**Output:** a grounded content plan for the style module.",
+          "material_id": "assignments/hw3",
+          "category": "assignments",
+          "source_url": "https://designing-agents.github.io/HW3.html",
+          "sha256": "6cd709c7e26e0be6901a7884255dad180a8741742fd6d2ea1a7ff3f7a06745a9"
+        }
+      ]
+    },
+    {
+      "concept_id": "coding-agents",
+      "coverage": "planned",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/pages/index.md",
+          "line": 49,
+          "page": null,
+          "excerpt": "| 10 | Nov 23 | Vibe coding |  |",
+          "material_id": "pages/index",
+          "category": "pages",
+          "source_url": "https://designing-agents.github.io/",
+          "sha256": "45fb1876ab25bd9e443968be9525f50f9351020f5d5fee4e3f845c8215d47490"
+        }
+      ]
+    },
+    {
+      "concept_id": "long-context",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week4.md",
+          "line": 586,
+          "page": 35,
+          "excerpt": "Non-robust in long context: fails when the relevant fact is not near",
+          "material_id": "slides/week4",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week4.pdf",
+          "sha256": "049ffeedeef56f66e9923d61df75f0a2b582369e6ae15524420c19a24810ffd3"
+        }
+      ]
+    },
+    {
+      "concept_id": "error-analysis",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week7.md",
+          "line": 683,
+          "page": 32,
+          "excerpt": "Common tool failure modes",
+          "material_id": "slides/week7",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week7.pdf",
+          "sha256": "613fd325101596e100aa1f1843953aeaf4f8a863acc34412d389076dbfd6c789"
+        }
+      ]
+    },
+    {
+      "concept_id": "cost-quality",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week7.md",
+          "line": 723,
+          "page": 33,
+          "excerpt": "Latency",
+          "material_id": "slides/week7",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week7.pdf",
+          "sha256": "613fd325101596e100aa1f1843953aeaf4f8a863acc34412d389076dbfd6c789"
+        }
+      ]
+    },
+    {
+      "concept_id": "code-grader",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/assignments/hw2.md",
+          "line": 68,
+          "page": null,
+          "excerpt": "* **2.5 Validate:** Check each extraction against the schema.",
+          "material_id": "assignments/hw2",
+          "category": "assignments",
+          "source_url": "https://designing-agents.github.io/HW2.html",
+          "sha256": "357c98e89ae3711daf14ec743599c17e64249abaae3a03daf577ab35ab5b2325"
+        }
+      ]
+    },
+    {
+      "concept_id": "semantic-memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/assignments/hw2.md",
+          "line": 91,
+          "page": null,
+          "excerpt": "* **4.2 Fact store:** Pull durable facts out of each turn and search them with your Part 3 retriever.",
+          "material_id": "assignments/hw2",
+          "category": "assignments",
+          "source_url": "https://designing-agents.github.io/HW2.html",
+          "sha256": "357c98e89ae3711daf14ec743599c17e64249abaae3a03daf577ab35ab5b2325"
+        }
+      ]
+    },
+    {
+      "concept_id": "trajectory-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week7.md",
+          "line": 738,
+          "page": 34,
+          "excerpt": "Wrong tool → error → retry → error → right tool →",
+          "material_id": "slides/week7",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week7.pdf",
+          "sha256": "613fd325101596e100aa1f1843953aeaf4f8a863acc34412d389076dbfd6c789"
+        }
+      ]
+    },
+    {
+      "concept_id": "outcome-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/columbia-coms4995/markdown/slides/week7.md",
+          "line": 731,
+          "page": 33,
+          "excerpt": "Did the user actually get",
+          "material_id": "slides/week7",
+          "category": "slides",
+          "source_url": "https://designing-agents.github.io/assets/lecture_slides/week7.pdf",
+          "sha256": "613fd325101596e100aa1f1843953aeaf4f8a863acc34412d389076dbfd6c789"
+        }
+      ]
+    }
+  ]
+}

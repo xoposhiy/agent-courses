@@ -1,0 +1,307 @@
+
+\chapter[LLM Training Pipeline]{The Large Language Model Training Pipeline}\label{chap:pipeline}
+
+
+\begin{learningbox}
+In this chapter you will learn how language models are trained. Specifically, you will be able to:
+\begin{itemize}[leftmargin=*, nosep]
+    \item Describe the major stages of a basic  training pipeline and explain the purpose of the individual stage: {\em data acquisition, pretraining, finetuning, preference tuning, and inference}.
+    \item Distinguish {\em pretraining from finetuning}, and explain why preference tuning is applied after, and not before, them.
+    \item Explain how the {\em encoder/decoder} distinction shapes which training objective a model uses.
+    \item Identify common {\em benchmarks} used to evaluate language models, and state what capability each is meant to measure.
+\end{itemize}
+\end{learningbox}
+
+\begin{comment}
+In the previous chapter we have introduced the basic conceptual and technical elements of language modeling. These elements form the foundation of current language models. In this chapter, we will have a detailed look at how the models are trained by providing an overview of a typical training pipeline of LLMs. This includes the relevant \emph{pretraining} and \emph{posttraining} methods of standard (non-agentic) models. Note that later, in Chapter~\ref{chap:agents}, we will see further training methods, such as an agentic \emph{harness}, that will build on the training methods that we discuss in this chapter.  
+
+Modern language models are large neural networks that are constructed with transformer blocks.
+The transformer architecture uses the attention mechanism \citep{vaswani2017attention} to model connections between tokens, which ultimately yields versatile models for a wide range of tasks. But how do we construct these models and how might such language models be trained? 
+
+
+In the remainder of this chapter, we discuss various types of models (Section~\ref{sec:pipeline-models}), the individual training pipeline stages (Section~\ref{sec:pipeline-training}), and how to measure whether your trained model actually is useful through stratified testing (Section~\ref{sec:pipeline-benchmarks}).
+\end{comment}
+
+\section{Training Models}
+
+The training pipeline of a large language model follows a somewhat standard methodology: starting from a  model architecture where the parameters are initialized randomly, we train language capabilities through a process that is called {\em pretraining}. During pretraining, we feed large text corpora to our models, which they are trained on autoregressively. The result of this stage is a base model, which is generally not yet suited for specific, practical applications. Hence, we need to adapt it to a downstream task or purpose. This stage is called {\em posttraining}, where we show specific types of additional data to the model using which we elicit task-specific behavior, such as instruction-following or classification settings. 
+
+\subsection{Encoder versus Decoder Models}
+As we saw in the previous chapter, there are  two dominant styles of models. On the one hand, encoder models are able to create rich contextualized representations based on input data. However, most of the recent successes are based on the decoder models. While encoders are better at understanding tasks (classification, sentiment), decoders excel at generative tasks. Decoder models have grown in size, both in terms of number of trainable parameters, and the available training data. This leads to models that are surprisingly capable of generalization to unseen contexts.
+
+Let us have a look in more detail at the %Now that we have discussed the model's architecture, focusing on a decoder only, the next step is to dive into the 
+relevant steps in the decoder-only training pipeline.
+
+
+\subsection{Pretraining/Finetuning Paradigm}
+
+
+A central feature of the success of current training pipelines is the use of transfer learning. One of the standard applications of modern transformer models is to take a model that has been trained on a large, generic dataset, and then retrain it on a new task. The model is {\em pretrained} on the large, generic, corpus, and then {\em finetuned} on the new, specific, task, for which a small dataset is present. Finetuning for the new task is quick, since the dataset is small, but also since the pretrained weights have been transferred. The finetuning-training does not have to start from scratch. 
+
+%In the pretraining phase, generic knowledge is encoded in the weights of the model. Finetuning on the smaller dataset is quicker, and by making the distinction between pretraining and finetuning, models can be created quickly that perform well on specific tasks. The pretrained weights are reused (transferred) to jump start the training in the finetuning phase. 
+
+This pretraining/finetuning distinction of the transfer learning paradigm is at the heart of  large language model training pipelines. 
+Rather than starting the training from scratch, the model can reuse already-learned linguistic knowledge in new scenarios, thus speeding up the training process. Pretraining of large, commercial models may take months.  Usually, the new task is specific (such as question answering in a certain domain, or sentiment analysis). For the new task, a dedicated dataset will be used to finetune the model. During finetuning, a subset of the model's weights are updated carefully to retain the general linguistic capabilities of the pretrained model, while gaining an understanding of the new task. Finetuning a model to a new task takes typically on the order of minutes to hours.
+
+
+\subsection{Open and Closed Models} 
+\label{sec:pipeline-models}
+Popular LLMs are OpenAI's ChatGPT series \citep{achiam2023gpt,ouyang2022training}, Meta's LLaMa family \citep{touvron2023llama}, Google's Gemma \citep{chowdhery2023palm} and Gemini
+\citep{team2023gemini}, Anthropic's Claude family, Moonshot AI's Kimi, DeepSeek \citep{guo2025deepseek}, and Qwen \citep{bai2025qwen2}, among others. 
+
+There are different degrees of openness between these models. For example, a model's  training data can be made public, the network architecture of a model can be disclosed, and the trained  weights can be released.  However, the companies behind commercial models seldom publish all elements of their model and training procedure, as they seek to retain some competitive edge. 
+
+In response, the scientific community has developed fully open-source models, such as BLOOM \citep{le2023bloom}, Pythia \citep{biderman2023pythia}, and OLMo \citep{groeneveld2024olmoacceleratingsciencelanguage}, to contribute to the collective understanding  of how large language models work. Of these models all elements of the training pipeline are public, and they are the focus of this chapter. We also highlight certain aspects of some  commercial models.
+
+Although the models are all based on the transformer architecture, there are small differences between individual components and  their overall layout, for example to capitalize on hardware differences or specific optimizations developed by their respective creators. For instance, Google optimized Gemini for their TPU-based compute infrastructure \citep{jouppi2023tpu}. We discuss further improvements to the architecture %, specifically those aimed at optimizing the model (either in terms of memory or throughput) 
+extensively in Chapter~\ref{chap:scaling}. 
+
+
+%As pretraining data increases in size (often a considerable ratio of the total size of the internet), the line between in- and out-of-domain data becomes increasingly blurred, especially given that commercial vendors often do not specify the sources of their training data (either out of commercial interest or for other  reasons). Hence, when we wish to measure true generalization to unseen data,  we need to take measures to ensure that the model has not seen the data before (we wish to prevent {\em data contamination}).  
+
+\section{Training Pipeline}
+\label{sec:pipeline-training}
+We will now describe  in more detail the steps of a standard training pipeline.
+LLMs are constructed using an elaborate pipeline with different training phases \citep{radford2019language,minaee2024large}. We will  describe the phases, as shown in Figure~\ref{fig:llm-training-pipeline}. The combinations of individual phases are usually referred to as training {\em recipes}, as they denote the order in which the models were trained. At each phase, a new dataset may be used, together with a new loss function. Each phase is designed to imbue the model with a specific capability. This will become clear as we discuss the individual  phases.
+
+
+
+\begin{figure}
+    \centering
+    \includestandalone[width=\textwidth]{part1/visuals/tikz/llm_pipeline_overview}
+    \caption{Overview of the LLM training pipeline \citep{radford2019language,minaee2024large}.}
+    \label{fig:llm-training-pipeline}
+\end{figure}
+
+\subsection{Acquire Data}
+The first step in the pipeline is to acquire data. Typically,  massive, general-purpose text corpora are used \citep{brown2020language}.  The corpora consist of raw text without the need for manual  labeling. This data is typically aggregated from both curated and uncurated online sources, then refined through cleaning heuristics to mitigate the effect of harmful, private, or copyrighted content.
+%
+The corpora that are used for pretraining are large. Modern LLMs are trained on a web-scale magnitude of data, often reaching the scale of trillions of tokens. Some examples of datasets are:
+
+\begin{itemize}
+    \item Common Crawl:  a massive, non-profit snapshot of the web containing billions of pages; alternative sources include \url{https://archive.org}. While the size is unparalleled, the quality of the data is under discussion \citep{baack2024critical}. Many derivatives, such as C4 (Colossal Clean Crawled Corpus) present a filtered subset of English web text \citep{raffel2020exploringc4} to  enhance the quality of the data.
+    \item Dolma 3:  a data mixture that is  designed to maximize performance across a diverse suite of tasks. It is used in the OLMo open source/open data project \citep{olmo2025olmo3, soldaini2024dolma}.
+    \item SmolLM3:  utilizes a large three-stage training strategy with 11.2 trillion tokens that dynamically mixes web, math, and code data to optimize reasoning and knowledge acquisition \citep{bakouch2025smollm3}.
+\end{itemize}
+%
+Recent research emphasizes that data diversity is as critical as size for improving cross-domain knowledge and downstream generalization \citep{gao2020pile800gbdatasetdiverse}. The corpus called {\em The Pile} has been specifically created as a heterogeneous corpus. For example,  models trained on The Pile show significant gains in coding efficiency (Bits Per Byte, BPB)\footnote{Bits-Per-Byte is a tokenizer-agnostic metric from information theory that measures the average bits needed per symbol, reflecting coding efficiency, see also Section~\ref{sec:metrics}.} across disparate domains, such as GitHub repositories, medical papers, and philosophy texts (see Figure~\ref{fig:pile}). It is therefore often used as a benchmark, where successful performance on Pile BPB serves as an indicator of a model's world knowledge and complex reasoning abilities. 
+
+Curation of data for pretraining requires defining complex data cleaning pipelines that transform raw data from multiple sources into a single collection of cleaned, plain text documents. Often, this process focuses on quality assurance and safety. The curation process begins with source prioritization, where the mixture is  weighted toward high-quality sources such as Wikipedia, books, and other known curated sources. Further, to ensure the integrity of the corpus, researchers apply noise reduction heuristics to strip away boilerplate text, navigation menus, and possibly inappropriate content. Furthermore, de-duplication is performed at both the URL and document levels; this is essential to prevent the model from memorizing redundant information and overfitting on repetitive data.
+
+Beyond accuracy, the pipeline must select data that matches safety and ethical constraints. This too is commonly implemented through heuristic-based filtering. Furthermore, toxicity-detection systems are implemented to remove hate speech, although these methods often yield mixed results. A significant challenge in this phase is bias mitigation, as automated filters can inadvertently flag and suppress legitimate data written in specific dialects, such as African American English, leading to the accidental exclusion of diverse voices from the training set.
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.9\linewidth]{part1/visuals/the_pile.png}
+    \caption{Overview of the data sources inside The Pile dataset \citep{gao2020pile800gbdatasetdiverse}.}
+    \label{fig:pile}
+\end{figure}
+
+
+\subsection{Pretrain}
+The second step in the training pipeline is pretraining the model on the curated corpus, a process that yields a generalist natural language model. This stage uses a self-supervised transformer approach \citep{vaswani2017attention} on the unlabeled text. 
+
+In order to acquire  internal representations of language, conceptual semantic relationships, and world knowledge, the model is trained using masked-token cloze-like tasks. 
+%---where the model must iteratively predict masked tokens conditioned on a preceding context---the architecture develops .
+%
+In such tasks %Pretraining of LLMs is done using cloze-like tasks, in which 
+the objective is to  predict masked tokens conditioned on a preceding context of large corpora of sequences (i.e., representations of text, image patches). This process is self-supervised (no human-annotated data is required) and is known to yield rich representations of language, relations between concepts, and  world knowledge, in various forms. 
+
+Formally, the language modeling objective maximizes the probability of the tokens in a sentence $\mathcal{U} = \{u_{0}, \dots, u_{n} \}$, based on a window $k$ of existing tokens (Equation~\ref{eq:lm}). $L(\mathcal{U})$ is the {\em language modeling loss}.  
+
+\begin{equation}
+\label{eq:lm}   
+    L(\mathcal{U}) = \sum_i \log P(u_i | u_{i-k}, \dots, u_{i-1}; \Theta)
+\end{equation}
+
+Language models estimate these probabilities through trainable parameters $\Theta$, optimized via gradient updates. Given that model sizes range from millions to over a trillion parameters, large datasets are required to ensure convergence. During this training phase, teacher forcing is employed: the model makes a prediction, but the ground-truth token---rather than the model's own output---is provided as the input for the next step. In contrast, during autoregressive generation at inference time, the model must rely on its own  predictions as the input for subsequent tokens. Tokens are created by running the appropriate {\em tokenizer}, as explained in Section~\ref{sec:tokenization}.
+
+In pretraining, a key challenge is to ensure that the model learns efficiently and remains stable throughout the trillions of gradient updates. Over time, different strategies have evolved that aim to keep the training process under control. One such strategy is curriculum learning. In human learning, we start by learning easy concepts (such as addition) before we tackle more difficult concepts (multiplication, logarithms). In language modeling, this idea is used in data mixtures, or data curricula. Rather than training on all data types simultaneously, researchers select a specific mixture of data sources to train on first, see the example in Figure~\ref{fig:smollm3-mixture}. Creation of mixtures involves strategically ordering the data according to difficulty. In a training curriculum we start with easy-to-learn general web crawls, and then shift toward harder high-quality reasoning data (math and code) in later stages. The underlying idea is that this helps the model converge quicker on more complex logic \citep{bengio2009curriculum}.
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.75\linewidth]{part1/visuals/smollm3_mixture.png}
+    \caption{Example data mixtures for training SmolLM3 \citep{bakouch2025smollm3}.}
+    \label{fig:smollm3-mixture}
+\end{figure}
+
+Other mechanisms for stabilizing training  are employed, as training at this scale is notoriously unstable and prone to loss spikes \citep{takase2025spikemorestabilizingpretraining}. Stability is maintained through standard machine learning techniques such as weight decay, layer normalization, and sophisticated learning rate schedulers. The use of specialized optimizers and the monitoring of gradient norms helps to prevent parameters from diverging during the intensive pretraining process. An example of how switching embedding layers can lead to more stable training is shown in Figure~\ref{fig:glm-spike}. The left figure shows the training loss for the 336M and 752M BERT model. While the original architecture performs well on the 336M model, the modifications in (b) enable stable training with lower training loss \citep{shoeybi2020megatronlmtrainingmultibillionparameter}.
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.75\linewidth]{part1/visuals/glm_spike.png}
+    \caption{Training loss for the BERT model using the original architecture (a) and a rearranged architecture (b) \citep{shoeybi2020megatronlmtrainingmultibillionparameter}
+    }
+    \label{fig:glm-spike}
+\end{figure}
+
+
+\subsection{Finetune}
+After pretraining comes posttraining, of which the first important training step is finetuning.
+LLMs are rarely used in an autocomplete generic predict-next-word setting, people rather use them to answer questions, give advice and recall information. Finetuning is the process of taking a pretrained model that has already learned general language patterns, and then train it further on a smaller, more specific dataset. In finetuning, we apply a general model to a specific (narrow) task on a labeled dataset, using a supervised learning approach. 
+A popular efficient method is low-rank optimization, which finetunes a small subset of the parameters \citep{hu2021lora,wei2022emergent,minaee2024large}.
+
+\paragraph{Supervised Finetuning (SFT)}
+Finetuning can be applied to many specialized tasks. The most general models use {\em supervised finetuning} to be able to follow instructions and perform reasoning steps \citep{olmo2025olmo3}. The supervised finetuning step is especially important for smaller models, offering an efficient mechanism for significant improvements in general chat, reasoning, and function-calling capabilities. 
+
+
+Supervised finetuning is also used for more specialized tasks, such as toxicity reduction. WildChat \citep{zhao2024wildchat} provides over a million real-world user-ChatGPT interactions, capturing how humans prompt the LLM with varying complexity and toxicity. 
+
+For learning reasoning capabilities, OpenThoughts \citep{guha2025openthoughts} contains step-by-step reasoning chains, distilled from advanced models to enhance problem-solving capabilities in math, science, and coding. Human-obtained data is supplemented by synthetic data, which involves generating instructions and responses using  larger teacher models (such as GPT-5) to fill specific data gaps and scale up training volume \citep{zhang2026instruction}.
+ 
+%\paragraph{Other tasks}
+Finetuning does not only pertain to general instruction-following or reasoning. Other tasks can be, for example, translation from one language to another, or question answering in health-care or customer service. Especially for industrial applications, where tasks are narrow  and models are smaller, finetuning is a  fruitful undertaking.
+
+In Chapter~\ref{sec:tools} we will discuss the use of tools by LLMs, a central aspect of agentic LLM. The training to use tools also takes place in the supervised finetuning step in the training pipeline
+\citep{wei2022emergent,minaee2024large}. 
+
+
+Furthermore, finetuning is  instrumental in establishing a model's persona and deepening its expertise. For instance, organizations can train models to adopt a specific tone of voice, for example so that a customer service bot maintains a consistent brand identity, be that empathetic and formal or witty and casual. Finally, the injection of deep domain knowledge enables the model to master the intricate terminology and logic of niche fields, such as industry-specific patent information or debugging proprietary legacy code. 
+
+Ultimately, finetuning transforms a generalist predictor into a specialized expert, often allowing smaller, more efficient models to outperform larger foundational models on specific tasks.
+
+
+\subsection{Preference Tuning}
+A problem that surfaced in early models is that training tends to amplify extreme  socially unacceptable texts in the training data and run wild, crowding out moderate points of view.  Since then, an essential step for LLMs to become socially acceptable, is for pipelines to include a phase in which the model is tuned to behave in socially acceptable ways. This phase is called preference tuning. 
+
+In this phase we align the finetuned model with user expectations (preference alignment). The goal of this step is to improve the model to give socially acceptable answers, prevent hate speech, reduce hallucinations, and improve instruction adherence. 
+
+Standard methods for preference tuning include reinforcement learning with human feedback (RLHF) \citep{ouyang2022training}, which trains a reward model to approximate human values, and direct preference optimization (DPO) \citep{rafailov2024direct}, which optimizes the policy directly from preference data. A high-level overview of RLHF is shown in Figure~\ref{fig:rlhf-loop}. To address the bottleneck of human annotation, modern pipelines increasingly utilize reinforcement learning from AI feedback (RLAIF) \citep{bai2022constitutional}, where a stronger model generates the preference signals. 
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.5\linewidth]{part1/visuals/rlhf_loop.png}
+    \caption{High-level overview of RLHF: training a reward model (left), and optimizing a language model (the policy) with respect to that reward model \citet{dong2024rlhf}}
+    \label{fig:rlhf-loop}
+\end{figure}
+
+Achieving alignment with human values is not an easy task, and we usually distinguish between safety alignment, value alignment and preference alignment. In the latter case, a complication is that preferences are  subjective preferences (such as writing style) that change per person. 
+
+\paragraph{Value alignment}
+On a higher level, value alignment focuses on ensuring that the model’s underlying principles and worldviews resonate with broad human ethics. Unlike individual preferences, this involves anchoring the model to high-level concepts such as fairness, helpfulness, and honesty. In practice, this means the model is governed by a set of written principles (a {\em constitution}) to ensure that it adheres to the policies set out by the developer. 
+% alignment tax
+
+However, this value alignment usually leads to a trade-off, where optimizing a model for safety and helpfulness also degrades its performance on other capabilities, such as factual recall or creativity \citep{lin2024mitigating}. This trade-off is  otherwise known as the {\em alignment tax}.
+
+
+\paragraph{Safety alignment}
+Safety alignment is the process of setting hard boundaries on model behavior to prevent catastrophic or harmful outputs. While preference alignment might focus on tone, and value alignment on viewpoint, safety alignment focuses on adversarial robustness and the refusal of malicious prompts. Example methodologies for ensuring safety includes red teaming, where models are subjected to rigorous jailbreak attempts to identify vulnerabilities, and guard railing, where specific refusal boundaries for high-risk responses are filtered. 
+
+\paragraph{Objective alignment}
+Finally, for  domains where objective truths exist, such as mathematics or coding, methods known as reinforcement learning with verifiable rewards (RLVR) \citep{lambert2024tulu} are employed. Unlike standard RLHF, RLVR optimizes for objective correctness by leveraging ground-truth signals to robustly improve reasoning capabilities. Examples include code that compiles, or correct mathematical solutions. In the latter case, the Group Relative Policy Optimization (GRPO) algorithm is often used \citep{guo2025deepseek}, a variant of Proximal Policy Optimization (PPO) that enhances mathematical reasoning abilities while concurrently optimizing the memory usage of PPO. It does so by sampling multiple answers from the policy model and using their relative quality (as assessed by a verifier) to compute the rewards. Instead of relying on human labels for learning what counts as a good answer, the model gets direct rewards (+1, or -1) from a deterministic verifier \citep{guo2025deepseek, shao2024deepseekmath}, see Figure~\ref{fig:grpo}.
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.8\linewidth]{part1/visuals/grpo.png}
+    \caption{Comparison of RLHF (specifically, PPO) to RLVR (specifically, GRPO) method \citep{shao2024deepseekmath}}
+    \label{fig:grpo}
+\end{figure}
+
+\subsection{Infer}
+The final step in the training pipeline is the inference step. This is the step in which the trained model is finally used. 
+Here the user finally gets to interact with the model. Finally, we can use the fruits of our training efforts.
+
+At inference time, we use natural language prompts (instructions and questions) to obtain responses from the model.  Prompting is the preferred way of using LLMs to have the model answer our questions. Inference results can be sensitive to the way that a prompt is formulated. The use of certain words, or re-ordering words in the prompt, can  influence the answer of the model. This sensitivity has led to prompt engineering and context engineering,  skills that have become important for users of LLMs \citep{sahoo2024systematic}. 
+
+Interestingly, as we discussed in the previous chapter, in decoder models whose size is beyond hundreds of billions parameters a new learning method emerges: {\em in-context learning} (ICL) \citep{brown2020language,wei2022emergent}. In-context learning is a method where the prompt contains a small number of examples, together with an instruction. These examples point the model in a certain direction and it uses them to learn the answer. ICL is a form of within-prompt few-shot learning.  ICL is also a type of learning where no parameters of the model are changed---it is example learning without parameter training \citep{dong2022survey}. %Examples of ICL are zero-shot, one-shot, and then few-shot prompting, providing zero, one, and a couple examples for each inference. 
+
+In the remainder of this book we will see many examples of the way in which in-context learning is used, such as in  agentic harnesses. Inference-time in-context learning is a major driver of agentic LLM. 
+
+\subsection{Concluding Remarks}
+We have now described the phases of a typical LLM training pipeline. 
+Note that the  pipeline that we described is an example of a typical approach, and different models are trained in different ways. Current modern training pipelines are elaborate, and training is costly. Innovations to training pipelines are the topic of current research, see, for example, \citet{guo2025deepseek,team2025kimi}.
+
+Being able to obtain predictions quickly is key, and multiple techniques have been developed to speed up the process. For instance, is is important to strike a balance between the reasoning effort and response quality. Research into  {\em test time scaling} studies this trade-off. A higher inference-time effort costs more compute time, but may yield a better answer. We discuss these and other optimization techniques in Chapter~\ref{chap:scaling}.
+
+
+\section{Benchmarks, and Performance}
+\label{sec:pipeline-benchmarks}
+After the pipeline has been used to train the model, we wish to find out how well the model performs. 
+LLMs are created using a variety of modeling techniques, for different tasks, on different datasets. As a result, they have often obtained remarkable  capabilities. For example, LLMs perform well on natural language understanding tasks (GLUE, SQUAD, Xsum) \citep{wang2018glue,wang2019superglue,rajpurkar2016squad,narayan2018don}, translation \citep{kocmi2022findings,papineni2002bleu,sennrich2015improving}, question answering tasks \citep{roberts2020much}, and poetry composition \citep{zhang2024llm}, to name just a few domains. The broad applicability of LLMs shows their versatility, although the rapid development of the field, as well as ongoing research efforts, raise many open questions related to the capabilities of LLMs in many domains and contexts. 
+
+We will now discuss  benchmarks that are commonly used to test the performance of our models.
+
+\subsection{Common tasks}
+Let us have a closer look at some common LLM tasks. The tasks can largely be grouped  under the two language processing  categories that we introduced  previously: natural language understanding (NLU)  and natural language generation (NLG). 
+Depending on the category, the exact task formulation, and the underlying data,  the  performance metric will differ. We will discuss each separately.
+
+Note  that {\em performance} is an ambiguous term. In NLP, it is often used in the context of \emph{task performance} (accuracy), instead of \emph{computational performance} (speed). While exact  evaluation criteria differ depending on the task, modern evaluation practices primarily focus on task performance. However, how many of the calls to the LLM we make, and how quickly we can get responses from the model, is also important to achieve high scores on contemporary benchmarks, as we will see in later chapters. 
+
+
+\subsection{Metrics}\label{sec:metrics}
+In order to monitor or report the (task) performance of LLMs,   different metrics are used, depending on the stage of the training that we are in. 
+
+\paragraph{Pretraining Metrics}
+In pretraining, we are mostly interested in knowing whether the model  is able to accurately predict the next word. The standard metric is {\em perplexity}, shown in Equation~\ref{eq:perplexity}. Perplexity measures the model's uncertainty when predicting the next token, and is directly related to the cross-entropy loss function. Low perplexity indicates that the model  assigns high probability to the correct next tokens. For perplexity, lower is better. 
+
+\begin{equation}
+    \text{PPL}(X) = \exp \left( - \frac{1}{N} \sum_{i=1}^N \log P(x_i \mid x_{<i}) \right)
+    \label{eq:perplexity}
+\end{equation}
+
+\begin{equation}
+    \text{BPB} = - \frac{1}{B} \sum_{i=1}^N \log_2 P(x_i \mid x_{<i})
+    \label{eq:bits-per-byte}
+\end{equation}
+Perplexity is computed over tokens; adjusting perplexity to stick to word boundaries needs careful normalization \citep{pimentel-meister-2024-compute}. Moreover, even when adjusted, it is still tokenizer-specific, as other tokenizers can lead to other subwords and hence other probability distributions. 
+
+As an alternative, \emph{bits-per-byte} (BPB), shown in Equation~\ref{eq:bits-per-byte}, normalizes the loss to the byte level, which enables fair comparisons between models that use different tokenization schemes \citep{borgeaud2022improving}. It measures the average number of bits required to encode a single byte of data.
+
+\paragraph{Posttraining Metrics}
+In posttraining and inference,  when the model is used for problem solving, generation, or reasoning, we look at the deterministic success rates, based on ground truth data. Often, tasks are set up in multiple-choice question/answering formats, where there is a single correct answer. For these types of tasks, we commonly report {\em accuracy}, the percentage of questions for which a correct response is given. For accuracy, higher is better. 
+
+In the regular setup, the model needs to provide an answer in one unique attempt. However, since sampling from a language model is a stochastic process, we may request additional attempts, and see if the answer is among them. This is formalized in the {\em Pass@K} metric: the percentage of problems solved correctly on the model's $K$th attempt; higher is better. Common values for $K$ include 1, 5, 10, 100. 
+
+  
+
+\subsection{Common Benchmarks}
+While measuring the performance of LLMs remains an active area of research, many datasets have become commonplace for reporting their general capabilities. These datasets are designed to only be used for {\em evaluating} the quality of a model, and are not intended as additional training data. As such, they serve as semi-standardized benchmarks. Ongoing efforts for moving to field standards, such as MLCommons \citep{thiyagalingam2022ai}, show an increasing need for objective and sound evaluation setups. 
+
+
+\begin{table}[tb]
+    \centering
+    \begin{tabular}{@{}p{.18\textwidth}p{.30\textwidth}p{.28\textwidth}p{.18\textwidth}@{}}
+        \toprule
+        \textbf{Benchmark Name} & \textbf{Capability Tested} & \textbf{Task Format} & \textbf{Metric} \\
+        \midrule
+        \textbf{Humanity's Last Exam (HLE)} & General Intelligence, Multimodal Reasoning & Short-Answer, Multiple-Choice & Pass@1 \\
+        \textbf{Abstract Reasoning Challenge (ARC)} & General Intelligence & Visual Grid Pattern Completion & Pass@1 (Private Set) \\
+        \textbf{GPQA Diamond} & Expert-Level STEM Reasoning & Multiple-Choice & Pass@1 \\
+        \textbf{AIME 2025} & Advanced Mathematical Reasoning & Integer Answer (0-999) & Pass@1 \\
+        \textbf{SWE-Bench} & Agentic Coding, Real-World Software Engineering & Code Patch Generation & Pass@1 \\
+        \textbf{Fortress} & AI Safety, National Security Risk Assessment & Varies (Proprietary) & Avg Risk Score (ARS) \& Over-Refusal Score (ORS) \\
+        \textbf{MMLU} & Broad General Knowledge & Multiple-Choice & Pass@1 \\
+        \textbf{GSM8K} & Grade-School Mathematical Reasoning & Multi-Step Arithmetic & Pass@1 \\
+        \textbf{TruthfulQA} & Factual Correctness, Hallucination Detection & Question Answering & Pass@1 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Overview of common LLM benchmarks with the metrics reported on them}
+    \label{tab:llm-benchmarks}
+\end{table}
+
+\paragraph{Data Contamination}
+Modern benchmarks run a risk of data contamination~\citep{balloccu-etal-2024-leak}.
+As pretraining data increases in size (often a considerable ratio of the total size of the internet), the line between in- and out-of-domain data becomes increasingly blurred, especially given that commercial vendors often do not specify the sources of their training data (either out of commercial interest or for other  reasons). Hence, when we wish to measure true generalization to unseen data,  we need to ensure that the model has not seen the data before (we wish to prevent {\em data contamination}).
+
+It is common for benchmarks to host a public, freely accessible dataset for quick experimentation by developers, but to maintain a private dataset that commercial vendors have restricted access to, to prevent data contamination. Furthermore, in order to maintain the benchmark's usefulness into the future, developers often actively update the samples in the benchmark.
+
+In Table~\ref{tab:llm-benchmarks}, we provide a non-exhaustive list of general-purpose benchmarks that are popular at the time of writing.
+
+\section{Concluding Remarks}
+
+%\paragraph{Discussion}
+In the field of LLM development, it has become common for commercial LLM developers (such as  Anthropic, OpenAI, Google, DeepSeek, Mistral) to publish a tech report that  informs the expert public on how the model behaves across popular  benchmarks. Often, such as tech report is published as a preprint, without going through academic peer-review, and many details that would be  necessary for full scientific reproducibility (such as data recipe, model architecture) are left out, for commercial reasons. Nonetheless, these reports provide useful information % in combination with the benchmark leader boards, 
+to derive insights into what LLMs can and cannot do. 
+
+First, we find that modern LLMs demonstrate a distinct performance hierarchy across benchmarks, as they have effectively solved broad knowledge tasks, but  still struggle to master complex reasoning and autonomous agentic tasks. On static knowledge and professional exam benchmarks (such as MMLU and TruthfulQA), frontier models (such as GPT-5.2, Gemini 3 Pro, and Claude 4.5 Opus) have reached, at the time of writing, near-saturation, consistently scoring above 85–90\% and surpassing human expert baselines. 
+
+The newest generation of reasoning models (such as OpenAI's o1, DeepSeek-R1, and Qwen-3.5) have recently achieved great progress, pushing math and science pass rates from low percentages to expert levels. Despite these advances, the software engineering SWE-bench remains the ultimate stress test for reliability; while scores have risen from negligible (<2\%) to respectable levels (40-50\% on verified subsets) for top coding agents, the gap between answering a coding question and autonomously fixing a real-world repository issue remains a significant hurdle for modern AI.
+
+\paragraph{Open Questions}
+Open questions about the origin of  LLMs capabilities still remain. As the pipelines have grown complex, both in terms of training ({\em What data matters? What training steps are most important?}) and inference ({\em How to extract high quality reasoning traces?}), drawing  conclusions is difficult. For example, it is an open question whether pretraining or posttraining is more important, and whether knowledge comes mostly from pretraining, and posttraining only serves for finding a good task interface \citep{zhou2023lima}.
+
+The remaining parts of this book will discuss posttraining and inference-time reasoning methods and agent training methods. But first, we will look at scaling laws, in the next chapter. 
+
+
+\bibliographystyle{plainnat}
+\bibliography{agenticbook,refs,case,synthetic}

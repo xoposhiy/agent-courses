@@ -1,0 +1,5 @@
+requests==2.32.5
+beautifulsoup4==4.14.3
+markdownify==1.2.2
+PyMuPDF==1.27.1
+youtube-transcript-api==1.2.5

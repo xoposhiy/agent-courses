@@ -1,0 +1,14 @@
+# Homework 2 bundle: precomputed/sliders/sliders-OMIM_620528/phenotypic_differential_matching.csv
+
+[Course index](../../../../../../README.md) · [Original source](https://drive.google.com/file/d/1VPlTDJULw4qIkQuVcHxxPh4Q50Nvmi-z/view#archive-member=precomputed/sliders/sliders-OMIM_620528/phenotypic_differential_matching.csv) · [Raw file](../../../../../../raw/assignments/assignment2-course-bundle/precomputed/sliders/sliders-OMIM_620528/phenotypic_differential_matching.csv)
+
+Retrieved: 2026-11-13T17:00:50.402745+00:00
+
+```csv
+row_id,target_disease,mimic_disease,overlapping_phenotypes,discriminating_phenotype,discriminating_logic,diagnostic_confidence
+e390468191466629:0:phenotypic_differential_matching:0,dHMN11,Charcot-Marie-Tooth Disease Type 2,"Slowly progressive bilateral peroneal weakness, foot drop, distal muscle wasting, pes cavus, and depressed or absent ankle jerks",Preserved sensory neurophysiology (normal SNAPs),"In dHMN11, sensory nerve action potential (SNAP) amplitudes and conduction velocities remain completely normal while motor studies show reduced CMAPs; CMT2 routinely presents with reduced/unrecordable SNAPs and distal sensory deficits.",high
+e390468191466629:0:phenotypic_differential_matching:1,dHMN11,dHMN-V,Distal motor weakness without sensory involvement,Predominant early lower limb involvement,"Classical dHMN11 presents predominantly with early lower limb involvement and delayed motor milestones, whereas dHMN type V initiates primarily in the hand muscles.",high
+e390468191466629:0:phenotypic_differential_matching:2,dHMN11,Isolated Distal Myopathies,"Distal lower-limb weakness, foot drop, and selective fatty infiltration on muscle MRI",Coexisting neurogenic EMG abnormalities and dissociated reflex arc,"Neurogenic EMG abnormalities coexist with myopathic changes in dHMN11 and shows a dissociated reflex arc (ankle jerks lost, patellar jerks preserved/brisk), whereas myopathies lack chronic neurogenic denervation and spare/symmetrically dampen reflexes.",moderate
+e390468191466629:0:phenotypic_differential_matching:3,dHMN11,DEE5,Mutations occurring in the same gene (SPTAN1),Normal intellectual development and absence of infantile epilepsy,"dHMN11 patients exhibit completely normal intellectual development, intact language, normal cerebral architecture on brain MRI, and absolute absence of infantile epilepsy.",high
+
+```

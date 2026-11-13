@@ -1,0 +1,2467 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 2,
+    "text": "Hey Aparna, welcome to the course."
+  },
+  {
+    "startInSeconds": 2,
+    "endInSeconds": 4,
+    "text": "Why don't you introduce yourself to the audience"
+  },
+  {
+    "startInSeconds": 4,
+    "endInSeconds": 6,
+    "text": "and let everybody know who you are?"
+  },
+  {
+    "startInSeconds": 6,
+    "endInSeconds": 9,
+    "text": "Awesome. Hey everyone, my name's Aparna."
+  },
+  {
+    "startInSeconds": 9,
+    "endInSeconds": 11,
+    "text": "I'm one of the founders of Arize,"
+  },
+  {
+    "startInSeconds": 11,
+    "endInSeconds": 15,
+    "text": "I've been in the evals and observability category"
+  },
+  {
+    "startInSeconds": 15,
+    "endInSeconds": 17,
+    "text": "for many years now, and it's a"
+  },
+  {
+    "startInSeconds": 17,
+    "endInSeconds": 19,
+    "text": "deeply exciting category to be a part of."
+  },
+  {
+    "startInSeconds": 19,
+    "endInSeconds": 22,
+    "text": "Cool. So, one of the challenges we had"
+  },
+  {
+    "startInSeconds": 22,
+    "endInSeconds": 24,
+    "text": "putting this course together is that"
+  },
+  {
+    "startInSeconds": 24,
+    "endInSeconds": 26,
+    "text": "coding agents are advancing so quickly,"
+  },
+  {
+    "startInSeconds": 26,
+    "endInSeconds": 28,
+    "text": "a lot of stuff that used to be manual effort"
+  },
+  {
+    "startInSeconds": 28,
+    "endInSeconds": 30,
+    "text": "is now something that you'd ask an agent to do."
+  },
+  {
+    "startInSeconds": 30,
+    "endInSeconds": 32,
+    "text": "What's not in that category?"
+  },
+  {
+    "startInSeconds": 32,
+    "endInSeconds": 34,
+    "text": "Where is human judgment indispensable?"
+  },
+  {
+    "startInSeconds": 34,
+    "endInSeconds": 37,
+    "text": "That's a great question. I mean, on one hand I think that"
+  },
+  {
+    "startInSeconds": 37,
+    "endInSeconds": 41,
+    "text": "if you're still doing things the way that you were doing them last year,"
+  },
+  {
+    "startInSeconds": 41,
+    "endInSeconds": 43,
+    "text": "Yeah, that's probably not the right thing."
+  },
+  {
+    "startInSeconds": 43,
+    "endInSeconds": 45,
+    "text": "Um, but I also think that there's,"
+  },
+  {
+    "startInSeconds": 45,
+    "endInSeconds": 48,
+    "text": "you know, human judgment and"
+  },
+  {
+    "startInSeconds": 48,
+    "endInSeconds": 52,
+    "text": "being able to discern what is really good and bad"
+  },
+  {
+    "startInSeconds": 52,
+    "endInSeconds": 54,
+    "text": "for your business, for your use case,"
+  },
+  {
+    "startInSeconds": 54,
+    "endInSeconds": 58,
+    "text": "is still something that we really, truly need domain expertise to do."
+  },
+  {
+    "startInSeconds": 58,
+    "endInSeconds": 61,
+    "text": "So I think some of the best things that we've seen"
+  },
+  {
+    "startInSeconds": 61,
+    "endInSeconds": 65,
+    "text": "AI engineers or AI PMs do today is take that judgment"
+  },
+  {
+    "startInSeconds": 65,
+    "endInSeconds": 69,
+    "text": "and use that to define what really good evals"
+  },
+  {
+    "startInSeconds": 69,
+    "endInSeconds": 72,
+    "text": "or what data even needs to be traced and observed"
+  },
+  {
+    "startInSeconds": 72,
+    "endInSeconds": 75,
+    "text": "in order to write those evals."
+  },
+  {
+    "startInSeconds": 75,
+    "endInSeconds": 77,
+    "text": "Cool. So, a related"
+  },
+  {
+    "startInSeconds": 77,
+    "endInSeconds": 79,
+    "text": "question to that is you've said in the past"
+  },
+  {
+    "startInSeconds": 79,
+    "endInSeconds": 82,
+    "text": "that agents are now capable of coming up with evals themselves,"
+  },
+  {
+    "startInSeconds": 82,
+    "endInSeconds": 85,
+    "text": "uh, but we also say that, as you just said,"
+  },
+  {
+    "startInSeconds": 85,
+    "endInSeconds": 88,
+    "text": "domain experts are a huge part of evals."
+  },
+  {
+    "startInSeconds": 88,
+    "endInSeconds": 90,
+    "text": "Let's let's square those up. Where do you"
+  },
+  {
+    "startInSeconds": 90,
+    "endInSeconds": 94,
+    "text": "think that an agent can help, uh, put an eval together,"
+  },
+  {
+    "startInSeconds": 94,
+    "endInSeconds": 97,
+    "text": "and where's the line where the domain expert needs to get involved?"
+  },
+  {
+    "startInSeconds": 97,
+    "endInSeconds": 100,
+    "text": "Yeah, uh, great great question. I mean,"
+  },
+  {
+    "startInSeconds": 100,
+    "endInSeconds": 103,
+    "text": "So, first and foremost, I think,"
+  },
+  {
+    "startInSeconds": 103,
+    "endInSeconds": 107,
+    "text": "you know, there was a lot of, there's just a lot of"
+  },
+  {
+    "startInSeconds": 107,
+    "endInSeconds": 111,
+    "text": "traces and telemetry data that is being emitted right now."
+  },
+  {
+    "startInSeconds": 111,
+    "endInSeconds": 114,
+    "text": "You have agents that are all being traced."
+  },
+  {
+    "startInSeconds": 114,
+    "endInSeconds": 117,
+    "text": "You have agents that now review those traces."
+  },
+  {
+    "startInSeconds": 117,
+    "endInSeconds": 121,
+    "text": "You probably have agents that are reviewing those agents on top of it."
+  },
+  {
+    "startInSeconds": 121,
+    "endInSeconds": 123,
+    "text": "And so the volume of telemetry that is being,"
+  },
+  {
+    "startInSeconds": 123,
+    "endInSeconds": 126,
+    "text": "you know, just collected right now is massive."
+  },
+  {
+    "startInSeconds": 126,
+    "endInSeconds": 128,
+    "text": "And I just don't think,"
+  },
+  {
+    "startInSeconds": 128,
+    "endInSeconds": 131,
+    "text": "you know, observability five years ago, ten years ago used to be"
+  },
+  {
+    "startInSeconds": 131,
+    "endInSeconds": 133,
+    "text": "humans looking at dashboards"
+  },
+  {
+    "startInSeconds": 133,
+    "endInSeconds": 136,
+    "text": "and looking at metrics and logs."
+  },
+  {
+    "startInSeconds": 136,
+    "endInSeconds": 139,
+    "text": "You know, there's just the volume of data has grown to a point where,"
+  },
+  {
+    "startInSeconds": 139,
+    "endInSeconds": 142,
+    "text": "and maybe it was always, you know, such a great use case for agents,"
+  },
+  {
+    "startInSeconds": 142,
+    "endInSeconds": 145,
+    "text": "is that you're going to have agents running through those traces."
+  },
+  {
+    "startInSeconds": 145,
+    "endInSeconds": 147,
+    "text": "And what they're going to be really good at doing is figuring out patterns"
+  },
+  {
+    "startInSeconds": 147,
+    "endInSeconds": 152,
+    "text": "of what are types of questions that your users are asking, what are questions"
+  },
+  {
+    "startInSeconds": 152,
+    "endInSeconds": 157,
+    "text": "or common types of errors that are occurring for your user experience."
+  },
+  {
+    "startInSeconds": 157,
+    "endInSeconds": 159,
+    "text": "And what agents can really do is identify"
+  },
+  {
+    "startInSeconds": 159,
+    "endInSeconds": 162,
+    "text": "categories of things that might be"
+  },
+  {
+    "startInSeconds": 162,
+    "endInSeconds": 165,
+    "text": "even beyond the categories of what you might have thought"
+  },
+  {
+    "startInSeconds": 165,
+    "endInSeconds": 168,
+    "text": "evals should contain."
+  },
+  {
+    "startInSeconds": 168,
+    "endInSeconds": 170,
+    "text": "So, they're probably really good at figuring out"
+  },
+  {
+    "startInSeconds": 170,
+    "endInSeconds": 173,
+    "text": "the unknown unknowns."
+  },
+  {
+    "startInSeconds": 173,
+    "endInSeconds": 176,
+    "text": "And so what I think is a really great balance between the two right now"
+  },
+  {
+    "startInSeconds": 176,
+    "endInSeconds": 179,
+    "text": "is, one, you, you know, as"
+  },
+  {
+    "startInSeconds": 179,
+    "endInSeconds": 182,
+    "text": "the human judgment's really great at figuring out what do you want the end-user"
+  },
+  {
+    "startInSeconds": 182,
+    "endInSeconds": 186,
+    "text": "experience to be for the product or the agent that you're actually building?"
+  },
+  {
+    "startInSeconds": 186,
+    "endInSeconds": 189,
+    "text": "What do you want it to be doing? And so there's probably a core set of"
+  },
+  {
+    "startInSeconds": 189,
+    "endInSeconds": 193,
+    "text": "do you want them to leave feeling less frustrated? Do you want them to"
+  },
+  {
+    "startInSeconds": 193,
+    "endInSeconds": 196,
+    "text": "kind of reach an outcome"
+  },
+  {
+    "startInSeconds": 196,
+    "endInSeconds": 199,
+    "text": "of the use case that they're building towards."
+  },
+  {
+    "startInSeconds": 199,
+    "endInSeconds": 203,
+    "text": "And that's a great set to get an initial set of evals going."
+  },
+  {
+    "startInSeconds": 203,
+    "endInSeconds": 206,
+    "text": "What you can also do with these agents crawling your traces"
+  },
+  {
+    "startInSeconds": 206,
+    "endInSeconds": 210,
+    "text": "is figure out what are a whole other, you know, types of behaviors and signals"
+  },
+  {
+    "startInSeconds": 210,
+    "endInSeconds": 214,
+    "text": "that you can gather from the traces to figure out new types of evals."
+  },
+  {
+    "startInSeconds": 214,
+    "endInSeconds": 218,
+    "text": "And then, how do you continuously improve those evals so it's not just a,"
+  },
+  {
+    "startInSeconds": 218,
+    "endInSeconds": 221,
+    "text": "you know, one-shot approach? You're kind of continuously refining that"
+  },
+  {
+    "startInSeconds": 221,
+    "endInSeconds": 225,
+    "text": "based off of human judgment and the new traces that you're getting is"
+  },
+  {
+    "startInSeconds": 225,
+    "endInSeconds": 230,
+    "text": "kind of a great way to kind of use them both—the human judgment and the agents—"
+  },
+  {
+    "startInSeconds": 230,
+    "endInSeconds": 234,
+    "text": "to build better evals. I think one of the things that's also changed a lot"
+  },
+  {
+    "startInSeconds": 234,
+    "endInSeconds": 237,
+    "text": "is our perception of the data sets."
+  },
+  {
+    "startInSeconds": 237,
+    "endInSeconds": 239,
+    "text": "You probably agree with this too, is"
+  },
+  {
+    "startInSeconds": 239,
+    "endInSeconds": 241,
+    "text": "even 2 years ago we were spending a lot of"
+  },
+  {
+    "startInSeconds": 241,
+    "endInSeconds": 243,
+    "text": "time figuring out the right way to prompt things."
+  },
+  {
+    "startInSeconds": 243,
+    "endInSeconds": 245,
+    "text": "It probably doesn't matter anymore."
+  },
+  {
+    "startInSeconds": 245,
+    "endInSeconds": 248,
+    "text": "And so you can probably have the agent write"
+  },
+  {
+    "startInSeconds": 248,
+    "endInSeconds": 252,
+    "text": "a way better prompt for the evals,"
+  },
+  {
+    "startInSeconds": 252,
+    "endInSeconds": 255,
+    "text": "define a way better task for other agents"
+  },
+  {
+    "startInSeconds": 255,
+    "endInSeconds": 258,
+    "text": "than you probably will at this point."
+  },
+  {
+    "startInSeconds": 258,
+    "endInSeconds": 261,
+    "text": "And so, it's crazy to think, but really it is comes down to taste."
+  },
+  {
+    "startInSeconds": 261,
+    "endInSeconds": 263,
+    "text": "Can you"
+  },
+  {
+    "startInSeconds": 263,
+    "endInSeconds": 265,
+    "text": "define what good and bad is"
+  },
+  {
+    "startInSeconds": 265,
+    "endInSeconds": 269,
+    "text": "and help the agent learn that from your judgment."
+  },
+  {
+    "startInSeconds": 269,
+    "endInSeconds": 271,
+    "text": "One of the ways that I've seen it expressed is"
+  },
+  {
+    "startInSeconds": 271,
+    "endInSeconds": 275,
+    "text": "that humans now have to operate at a higher level,"
+  },
+  {
+    "startInSeconds": 275,
+    "endInSeconds": 277,
+    "text": "a higher level of abstraction on top of a loop"
+  },
+  {
+    "startInSeconds": 277,
+    "endInSeconds": 279,
+    "text": "that you've built for your evals."
+  },
+  {
+    "startInSeconds": 279,
+    "endInSeconds": 281,
+    "text": "Would you say that's a fair summary?"
+  },
+  {
+    "startInSeconds": 281,
+    "endInSeconds": 285,
+    "text": "I think that's a great way of putting it. It's, you know, at first"
+  },
+  {
+    "startInSeconds": 285,
+    "endInSeconds": 289,
+    "text": "engineers were writing very, very low-level code,"
+  },
+  {
+    "startInSeconds": 289,
+    "endInSeconds": 291,
+    "text": "and then there was abstraction languages on top of that."
+  },
+  {
+    "startInSeconds": 291,
+    "endInSeconds": 294,
+    "text": "And now, you know, engineers don't even code. They write prompts."
+  },
+  {
+    "startInSeconds": 294,
+    "endInSeconds": 299,
+    "text": "And now it's like, you're not even prompting individual eval templates."
+  },
+  {
+    "startInSeconds": 299,
+    "endInSeconds": 301,
+    "text": "You're probably prompting how do you have these agents that keep"
+  },
+  {
+    "startInSeconds": 301,
+    "endInSeconds": 305,
+    "text": "those eval templates up to date, and so there's there's levels to this."
+  },
+  {
+    "startInSeconds": 305,
+    "endInSeconds": 308,
+    "text": "So, one thing I've heard you talk a lot about is the coming of"
+  },
+  {
+    "startInSeconds": 308,
+    "endInSeconds": 312,
+    "text": "agents as judges instead of LLMs as judges."
+  },
+  {
+    "startInSeconds": 312,
+    "endInSeconds": 315,
+    "text": "How is an agent as a judge different from an LLM as a judge?"
+  },
+  {
+    "startInSeconds": 315,
+    "endInSeconds": 318,
+    "text": "Why do we need agents as judges? That's a"
+  },
+  {
+    "startInSeconds": 318,
+    "endInSeconds": 320,
+    "text": "Good question. Um,"
+  },
+  {
+    "startInSeconds": 320,
+    "endInSeconds": 324,
+    "text": "so I think what we realized was that,"
+  },
+  {
+    "startInSeconds": 324,
+    "endInSeconds": 327,
+    "text": "you know, we had spent years of individuals"
+  },
+  {
+    "startInSeconds": 327,
+    "endInSeconds": 329,
+    "text": "who were building, let's say,"
+  },
+  {
+    "startInSeconds": 329,
+    "endInSeconds": 333,
+    "text": "slightly less complex applications or agents,"
+  },
+  {
+    "startInSeconds": 333,
+    "endInSeconds": 336,
+    "text": "where this is kind of a decade of"
+  },
+  {
+    "startInSeconds": 336,
+    "endInSeconds": 340,
+    "text": "more and more autonomy in the agents that are being built."
+  },
+  {
+    "startInSeconds": 340,
+    "endInSeconds": 344,
+    "text": "And so, LLM as judges I think"
+  },
+  {
+    "startInSeconds": 344,
+    "endInSeconds": 347,
+    "text": "And to be honest, they're still really useful today as well, but they're"
+  },
+  {
+    "startInSeconds": 347,
+    "endInSeconds": 351,
+    "text": "really great for evaluating the quality of the outputs."
+  },
+  {
+    "startInSeconds": 351,
+    "endInSeconds": 355,
+    "text": "But where they tend to have gaps is"
+  },
+  {
+    "startInSeconds": 355,
+    "endInSeconds": 360,
+    "text": "understanding the entire journey that it took, or the entire trajectory"
+  },
+  {
+    "startInSeconds": 360,
+    "endInSeconds": 364,
+    "text": "that it often took, in order to debug an application."
+  },
+  {
+    "startInSeconds": 364,
+    "endInSeconds": 366,
+    "text": "And, ultimately,"
+  },
+  {
+    "startInSeconds": 366,
+    "endInSeconds": 369,
+    "text": "how do you then suggest improvements"
+  },
+  {
+    "startInSeconds": 369,
+    "endInSeconds": 371,
+    "text": "or fixes? And so"
+  },
+  {
+    "startInSeconds": 371,
+    "endInSeconds": 373,
+    "text": "agent as a judge is, think about it"
+  },
+  {
+    "startInSeconds": 373,
+    "endInSeconds": 376,
+    "text": "as instead of a single prompt evaluating"
+  },
+  {
+    "startInSeconds": 376,
+    "endInSeconds": 379,
+    "text": "the outputs of these agents, it is an entire"
+  },
+  {
+    "startInSeconds": 379,
+    "endInSeconds": 382,
+    "text": "agent evaluating the outputs of another agent."
+  },
+  {
+    "startInSeconds": 382,
+    "endInSeconds": 385,
+    "text": "And so here, it can adapt its"
+  },
+  {
+    "startInSeconds": 385,
+    "endInSeconds": 389,
+    "text": "criteria, it can modify how deep"
+  },
+  {
+    "startInSeconds": 389,
+    "endInSeconds": 392,
+    "text": "it needs to go in order to get more information to"
+  },
+  {
+    "startInSeconds": 392,
+    "endInSeconds": 396,
+    "text": "properly evaluate the quality of the output. And then it"
+  },
+  {
+    "startInSeconds": 396,
+    "endInSeconds": 399,
+    "text": "can be, of course, kicked off, it can kick off either other"
+  },
+  {
+    "startInSeconds": 399,
+    "endInSeconds": 403,
+    "text": "agents or kick itself off to go and put up improvements"
+  },
+  {
+    "startInSeconds": 403,
+    "endInSeconds": 404,
+    "text": "to fix"
+  },
+  {
+    "startInSeconds": 404,
+    "endInSeconds": 408,
+    "text": "the the issues that it had detected. And so,"
+  },
+  {
+    "startInSeconds": 408,
+    "endInSeconds": 411,
+    "text": "agent as a judge feels like an evolution of"
+  },
+  {
+    "startInSeconds": 411,
+    "endInSeconds": 414,
+    "text": "having these judges become more autonomous"
+  },
+  {
+    "startInSeconds": 414,
+    "endInSeconds": 417,
+    "text": "in the way that they evaluate other agents and"
+  },
+  {
+    "startInSeconds": 417,
+    "endInSeconds": 420,
+    "text": "kind of giving them a way to also"
+  },
+  {
+    "startInSeconds": 420,
+    "endInSeconds": 422,
+    "text": "close the loop and start improving the agents."
+  },
+  {
+    "startInSeconds": 422,
+    "endInSeconds": 426,
+    "text": "What are some of the failure modes for agentic judges"
+  },
+  {
+    "startInSeconds": 426,
+    "endInSeconds": 429,
+    "text": "that somebody putting them together can be cautious of?"
+  },
+  {
+    "startInSeconds": 429,
+    "endInSeconds": 431,
+    "text": "Because obviously, you're talking about the frontier of evals,"
+  },
+  {
+    "startInSeconds": 431,
+    "endInSeconds": 434,
+    "text": "and not everything's going to go perfectly."
+  },
+  {
+    "startInSeconds": 434,
+    "endInSeconds": 436,
+    "text": "I mean, I don't know if you think about this this way, Laurie,"
+  },
+  {
+    "startInSeconds": 436,
+    "endInSeconds": 438,
+    "text": "but sometimes"
+  },
+  {
+    "startInSeconds": 438,
+    "endInSeconds": 440,
+    "text": "There's just like a slop loop"
+  },
+  {
+    "startInSeconds": 440,
+    "endInSeconds": 443,
+    "text": "that ends up getting created"
+  },
+  {
+    "startInSeconds": 443,
+    "endInSeconds": 446,
+    "text": "where there's one piece of slop and then it just kind of snowballs."
+  },
+  {
+    "startInSeconds": 446,
+    "endInSeconds": 449,
+    "text": "And, you know, it's the one thing that I think about"
+  },
+  {
+    "startInSeconds": 449,
+    "endInSeconds": 453,
+    "text": "where human intervention and human judgment ends up becoming really important,"
+  },
+  {
+    "startInSeconds": 453,
+    "endInSeconds": 459,
+    "text": "so that the evals and how you're thinking about quality kind of stay—"
+  },
+  {
+    "startInSeconds": 459,
+    "endInSeconds": 462,
+    "text": "You know, they have to evolve. I don't think it's a one-shot type of process,"
+  },
+  {
+    "startInSeconds": 462,
+    "endInSeconds": 464,
+    "text": "but I think they kind of have to..."
+  },
+  {
+    "startInSeconds": 464,
+    "endInSeconds": 467,
+    "text": "you need to give it nudges so that"
+  },
+  {
+    "startInSeconds": 467,
+    "endInSeconds": 469,
+    "text": "it doesn't go you know down"
+  },
+  {
+    "startInSeconds": 469,
+    "endInSeconds": 473,
+    "text": "and think something's really an issue when it quite might not be."
+  },
+  {
+    "startInSeconds": 473,
+    "endInSeconds": 477,
+    "text": "And so that nuance is sometimes really helpful, and"
+  },
+  {
+    "startInSeconds": 477,
+    "endInSeconds": 479,
+    "text": "I think that that's"
+  },
+  {
+    "startInSeconds": 479,
+    "endInSeconds": 481,
+    "text": "it just so much again depends on the application."
+  },
+  {
+    "startInSeconds": 481,
+    "endInSeconds": 484,
+    "text": "You know, we obviously have an agent built inside of our own product, AX,"
+  },
+  {
+    "startInSeconds": 484,
+    "endInSeconds": 486,
+    "text": "and I think we've learned a lot from"
+  },
+  {
+    "startInSeconds": 486,
+    "endInSeconds": 490,
+    "text": "you know, kind of dogfooding and writing evals for our own agent."
+  },
+  {
+    "startInSeconds": 490,
+    "endInSeconds": 493,
+    "text": "And sometimes, you know, we realize that it can take AX"
+  },
+  {
+    "startInSeconds": 493,
+    "endInSeconds": 496,
+    "text": "you know, a couple different"
+  },
+  {
+    "startInSeconds": 496,
+    "endInSeconds": 499,
+    "text": "turns to understand ultimately what the user wants. But"
+  },
+  {
+    "startInSeconds": 499,
+    "endInSeconds": 503,
+    "text": "if the user's question didn't often start asking that,"
+  },
+  {
+    "startInSeconds": 503,
+    "endInSeconds": 506,
+    "text": "and actually their true intent was something else,"
+  },
+  {
+    "startInSeconds": 506,
+    "endInSeconds": 509,
+    "text": "sometimes the turns that they took was is actually fine."
+  },
+  {
+    "startInSeconds": 509,
+    "endInSeconds": 511,
+    "text": "Probably would have been similar to what a human did."
+  },
+  {
+    "startInSeconds": 511,
+    "endInSeconds": 514,
+    "text": "But if it took those turns even when the user was super direct,"
+  },
+  {
+    "startInSeconds": 514,
+    "endInSeconds": 516,
+    "text": "then then that's an issue. And so"
+  },
+  {
+    "startInSeconds": 516,
+    "endInSeconds": 518,
+    "text": "having that ability to figure out when"
+  },
+  {
+    "startInSeconds": 518,
+    "endInSeconds": 521,
+    "text": "you know, the trajectory is valid"
+  },
+  {
+    "startInSeconds": 521,
+    "endInSeconds": 524,
+    "text": "and when it's not, I think is is really interesting."
+  },
+  {
+    "startInSeconds": 524,
+    "endInSeconds": 526,
+    "text": "Um I think we're also going to see"
+  },
+  {
+    "startInSeconds": 526,
+    "endInSeconds": 529,
+    "text": "a ton of, not just quality,"
+  },
+  {
+    "startInSeconds": 529,
+    "endInSeconds": 532,
+    "text": "you know, there's a lot of quality um"
+  },
+  {
+    "startInSeconds": 532,
+    "endInSeconds": 535,
+    "text": "evals that teams tend to write on"
+  },
+  {
+    "startInSeconds": 535,
+    "endInSeconds": 539,
+    "text": "the actual outputs of the agents, but"
+  },
+  {
+    "startInSeconds": 539,
+    "endInSeconds": 542,
+    "text": "I think there's deeply more and more, you know, think about it more like"
+  },
+  {
+    "startInSeconds": 542,
+    "endInSeconds": 545,
+    "text": "cost-type evals or safety-type evals to"
+  },
+  {
+    "startInSeconds": 545,
+    "endInSeconds": 548,
+    "text": "kind of consider, you know, is the output,"
+  },
+  {
+    "startInSeconds": 548,
+    "endInSeconds": 552,
+    "text": "uh, you know, worth the ROI that was invested?"
+  },
+  {
+    "startInSeconds": 552,
+    "endInSeconds": 555,
+    "text": "Speaking of agents inside of our products,"
+  },
+  {
+    "startInSeconds": 555,
+    "endInSeconds": 557,
+    "text": "Arize AX has Signal,"
+  },
+  {
+    "startInSeconds": 557,
+    "endInSeconds": 560,
+    "text": "a built-in agent that reads your traces for you"
+  },
+  {
+    "startInSeconds": 560,
+    "endInSeconds": 562,
+    "text": "and suggests fixes to your app, which I think we can agree is pretty cool."
+  },
+  {
+    "startInSeconds": 563,
+    "endInSeconds": 565,
+    "text": "How do you see that fitting into the"
+  },
+  {
+    "startInSeconds": 565,
+    "endInSeconds": 568,
+    "text": "observe, benchmark, evaluate, improve workflow"
+  },
+  {
+    "startInSeconds": 568,
+    "endInSeconds": 571,
+    "text": "that we've been talking about in this course so far?"
+  },
+  {
+    "startInSeconds": 571,
+    "endInSeconds": 575,
+    "text": "I mean, I think it really is kind of just the"
+  },
+  {
+    "startInSeconds": 575,
+    "endInSeconds": 578,
+    "text": "future of how we're going to build these loops."
+  },
+  {
+    "startInSeconds": 578,
+    "endInSeconds": 582,
+    "text": "In the beginning, there was traces that were collected,"
+  },
+  {
+    "startInSeconds": 582,
+    "endInSeconds": 585,
+    "text": "and humans had to go through, read those traces,"
+  },
+  {
+    "startInSeconds": 585,
+    "endInSeconds": 589,
+    "text": "and look and try to find where the errors are in those traces."
+  },
+  {
+    "startInSeconds": 589,
+    "endInSeconds": 592,
+    "text": "Well, now you can have agents go through, and"
+  },
+  {
+    "startInSeconds": 592,
+    "endInSeconds": 595,
+    "text": "again, it doesn't replace the human, but it does a first pass"
+  },
+  {
+    "startInSeconds": 595,
+    "endInSeconds": 598,
+    "text": "to identify categories of issues and kind of—hence why we call it signal—"
+  },
+  {
+    "startInSeconds": 598,
+    "endInSeconds": 602,
+    "text": "find the signals within the traces."
+  },
+  {
+    "startInSeconds": 602,
+    "endInSeconds": 605,
+    "text": "And, you know, I know so many of us talk about this, but"
+  },
+  {
+    "startInSeconds": 605,
+    "endInSeconds": 608,
+    "text": "the most important way to improve your agent, I really think, is actually"
+  },
+  {
+    "startInSeconds": 608,
+    "endInSeconds": 613,
+    "text": "reading your traces and understanding the telemetry."
+  },
+  {
+    "startInSeconds": 613,
+    "endInSeconds": 615,
+    "text": "Even just spending and reading through five,"
+  },
+  {
+    "startInSeconds": 615,
+    "endInSeconds": 618,
+    "text": "six, seven traces, you start to understand—"
+  },
+  {
+    "startInSeconds": 618,
+    "endInSeconds": 620,
+    "text": "I feel like I end up walking away learning something"
+  },
+  {
+    "startInSeconds": 620,
+    "endInSeconds": 623,
+    "text": "from our own agent's traces. So,"
+  },
+  {
+    "startInSeconds": 623,
+    "endInSeconds": 626,
+    "text": "Signal first kind of does a bit of that heavy work"
+  },
+  {
+    "startInSeconds": 626,
+    "endInSeconds": 629,
+    "text": "and actually reviews the traces of your agent."
+  },
+  {
+    "startInSeconds": 629,
+    "endInSeconds": 632,
+    "text": "And there's a ton of flexibility to set it up"
+  },
+  {
+    "startInSeconds": 632,
+    "endInSeconds": 636,
+    "text": "so if you want it to— sample, if you want it to run on a cadence,"
+  },
+  {
+    "startInSeconds": 636,
+    "endInSeconds": 639,
+    "text": "if you want it to run on some kind of trigger, you can essentially"
+  },
+  {
+    "startInSeconds": 639,
+    "endInSeconds": 643,
+    "text": "define agents to do the agentic review of the traces."
+  },
+  {
+    "startInSeconds": 643,
+    "endInSeconds": 647,
+    "text": "It can surface up patterns of behavior and then"
+  },
+  {
+    "startInSeconds": 647,
+    "endInSeconds": 651,
+    "text": "highlight the ones that need a human's attention."
+  },
+  {
+    "startInSeconds": 651,
+    "endInSeconds": 654,
+    "text": "Um, it can also, if given access to"
+  },
+  {
+    "startInSeconds": 654,
+    "endInSeconds": 658,
+    "text": "a repo, if given access to additional context,"
+  },
+  {
+    "startInSeconds": 658,
+    "endInSeconds": 661,
+    "text": "it can actually go ahead and put up a fix for the issue."
+  },
+  {
+    "startInSeconds": 661,
+    "endInSeconds": 665,
+    "text": "If there's enough evidence and it feels confident about, hey, there's"
+  },
+  {
+    "startInSeconds": 665,
+    "endInSeconds": 667,
+    "text": "a root cause here that four or five, maybe"
+  },
+  {
+    "startInSeconds": 667,
+    "endInSeconds": 669,
+    "text": "20 different traces are kind of all alluding to,"
+  },
+  {
+    "startInSeconds": 669,
+    "endInSeconds": 672,
+    "text": "it can go ahead and put up a fix."
+  },
+  {
+    "startInSeconds": 672,
+    "endInSeconds": 674,
+    "text": "which is pretty incredible because now"
+  },
+  {
+    "startInSeconds": 674,
+    "endInSeconds": 677,
+    "text": "the same traces that a human had to go through,"
+  },
+  {
+    "startInSeconds": 677,
+    "endInSeconds": 680,
+    "text": "understand the pattern, and figure out what to go"
+  },
+  {
+    "startInSeconds": 680,
+    "endInSeconds": 682,
+    "text": "fix, you can kind of"
+  },
+  {
+    "startInSeconds": 682,
+    "endInSeconds": 684,
+    "text": "get the fix. You can then just test the fix,"
+  },
+  {
+    "startInSeconds": 684,
+    "endInSeconds": 688,
+    "text": "which also, of course, an agent can do, so test it,"
+  },
+  {
+    "startInSeconds": 688,
+    "endInSeconds": 690,
+    "text": "run the benchmark on it, make sure it didn't"
+  },
+  {
+    "startInSeconds": 690,
+    "endInSeconds": 692,
+    "text": "break anything,"
+  },
+  {
+    "startInSeconds": 692,
+    "endInSeconds": 695,
+    "text": "And so that that's a bit of how we're thinking about"
+  },
+  {
+    "startInSeconds": 695,
+    "endInSeconds": 699,
+    "text": "this next gen of observability is that it's no longer dependent on"
+  },
+  {
+    "startInSeconds": 699,
+    "endInSeconds": 703,
+    "text": "the human having to be the person who kicks off the loop"
+  },
+  {
+    "startInSeconds": 703,
+    "endInSeconds": 707,
+    "text": "every time."
+  },
+  {
+    "startInSeconds": 707,
+    "endInSeconds": 709,
+    "text": "it can be an agent that kicks off the loop,"
+  },
+  {
+    "startInSeconds": 709,
+    "endInSeconds": 711,
+    "text": "and it can be a human that actually reviews,"
+  },
+  {
+    "startInSeconds": 711,
+    "endInSeconds": 714,
+    "text": "makes it better, and like you always say, moves a level up"
+  },
+  {
+    "startInSeconds": 714,
+    "endInSeconds": 717,
+    "text": "where you are now kind of the controller"
+  },
+  {
+    "startInSeconds": 717,
+    "endInSeconds": 719,
+    "text": "or the the augmenter of that loop,"
+  },
+  {
+    "startInSeconds": 719,
+    "endInSeconds": 723,
+    "text": "and so you can make it better when it puts up PRs that"
+  },
+  {
+    "startInSeconds": 723,
+    "endInSeconds": 725,
+    "text": "are helpful, and we've seen this."
+  },
+  {
+    "startInSeconds": 725,
+    "endInSeconds": 727,
+    "text": "Like it doesn't always get it right. How do you give it feedback"
+  },
+  {
+    "startInSeconds": 727,
+    "endInSeconds": 730,
+    "text": "so that the agents get better?"
+  },
+  {
+    "startInSeconds": 730,
+    "endInSeconds": 734,
+    "text": "So now we're going to go into a little bit of a deep cut."
+  },
+  {
+    "startInSeconds": 734,
+    "endInSeconds": 735,
+    "text": "You've written that"
+  },
+  {
+    "startInSeconds": 735,
+    "endInSeconds": 739,
+    "text": "picking the best model doesn't fix a failing agent,"
+  },
+  {
+    "startInSeconds": 739,
+    "endInSeconds": 743,
+    "text": "and you've split the system into model, context, harness layers."
+  },
+  {
+    "startInSeconds": 743,
+    "endInSeconds": 746,
+    "text": "Walk me through that mental model. Why is that important?"
+  },
+  {
+    "startInSeconds": 746,
+    "endInSeconds": 749,
+    "text": "What do you get out of splitting up the model that way?"
+  },
+  {
+    "startInSeconds": 750,
+    "endInSeconds": 753,
+    "text": "I mean, I think I read this on X somewhere,"
+  },
+  {
+    "startInSeconds": 753,
+    "endInSeconds": 756,
+    "text": "someone said, you know, \"If you can't get the value"
+  },
+  {
+    "startInSeconds": 756,
+    "endInSeconds": 758,
+    "text": "with the models we have today,"
+  },
+  {
+    "startInSeconds": 758,
+    "endInSeconds": 761,
+    "text": "yeah, I think it's a you problem, not the model problem.\""
+  },
+  {
+    "startInSeconds": 761,
+    "endInSeconds": 765,
+    "text": "And I think what the person was maybe trying to say there was that"
+  },
+  {
+    "startInSeconds": 765,
+    "endInSeconds": 768,
+    "text": "even though the models are really powerful,"
+  },
+  {
+    "startInSeconds": 768,
+    "endInSeconds": 770,
+    "text": "how you actually use them,"
+  },
+  {
+    "startInSeconds": 770,
+    "endInSeconds": 773,
+    "text": "how do you build these loops and how do you actually use the contexts"
+  },
+  {
+    "startInSeconds": 773,
+    "endInSeconds": 777,
+    "text": "Yeah, I still think that those are really important engineering skills."
+  },
+  {
+    "startInSeconds": 777,
+    "endInSeconds": 779,
+    "text": "There's a whole, you know, new category around harness engineering,"
+  },
+  {
+    "startInSeconds": 779,
+    "endInSeconds": 782,
+    "text": "context engineering."
+  },
+  {
+    "startInSeconds": 782,
+    "endInSeconds": 784,
+    "text": "Um, and so when I think about"
+  },
+  {
+    "startInSeconds": 784,
+    "endInSeconds": 787,
+    "text": "What is the loop? And you've probably mentioned this as well, is that it's"
+  },
+  {
+    "startInSeconds": 787,
+    "endInSeconds": 790,
+    "text": "how do you repeatedly, you know, improve the harness,"
+  },
+  {
+    "startInSeconds": 790,
+    "endInSeconds": 794,
+    "text": "improve the context, or, I guess if you're a frontier lab,"
+  },
+  {
+    "startInSeconds": 794,
+    "endInSeconds": 798,
+    "text": "you know, improve the models. And the things that most AI engineers"
+  },
+  {
+    "startInSeconds": 798,
+    "endInSeconds": 801,
+    "text": "probably have within their control is the harness and the context."
+  },
+  {
+    "startInSeconds": 801,
+    "endInSeconds": 805,
+    "text": "And if you're using..."
+  },
+  {
+    "startInSeconds": 805,
+    "endInSeconds": 807,
+    "text": "an out-of-the-box kind of harness,"
+  },
+  {
+    "startInSeconds": 807,
+    "endInSeconds": 811,
+    "text": "like a Claude Code or Codex or Cursor harness,"
+  },
+  {
+    "startInSeconds": 811,
+    "endInSeconds": 814,
+    "text": "then really it's about how do you wield the context"
+  },
+  {
+    "startInSeconds": 814,
+    "endInSeconds": 817,
+    "text": "that you're giving the harness in order to get the best output."
+  },
+  {
+    "startInSeconds": 817,
+    "endInSeconds": 818,
+    "text": "I think it's just really helpful to think"
+  },
+  {
+    "startInSeconds": 818,
+    "endInSeconds": 820,
+    "text": "about it in terms of what you can control"
+  },
+  {
+    "startInSeconds": 820,
+    "endInSeconds": 825,
+    "text": "and what you can kind of change in order to test."
+  },
+  {
+    "startInSeconds": 825,
+    "endInSeconds": 827,
+    "text": "to see if you can get better outcomes."
+  },
+  {
+    "startInSeconds": 827,
+    "endInSeconds": 830,
+    "text": "We, I think, have gone through, you know, for our own agent and product, AX,"
+  },
+  {
+    "startInSeconds": 830,
+    "endInSeconds": 833,
+    "text": "we've actually built a harness."
+  },
+  {
+    "startInSeconds": 833,
+    "endInSeconds": 836,
+    "text": "And some of the things we learned in building the harness around"
+  },
+  {
+    "startInSeconds": 836,
+    "endInSeconds": 840,
+    "text": "you know, giving the agent and the model access to a file"
+  },
+  {
+    "startInSeconds": 840,
+    "endInSeconds": 843,
+    "text": "system and CLI tooling and having it have access to"
+  },
+  {
+    "startInSeconds": 843,
+    "endInSeconds": 847,
+    "text": "that to do the work was just, it was, I think, some"
+  },
+  {
+    "startInSeconds": 847,
+    "endInSeconds": 850,
+    "text": "of the same decisions that some of the harnesses by the frontier"
+  },
+  {
+    "startInSeconds": 850,
+    "endInSeconds": 853,
+    "text": "labs had also gotten to. But every time we did that,"
+  },
+  {
+    "startInSeconds": 853,
+    "endInSeconds": 857,
+    "text": "we also, I think we tried to keep other things constant."
+  },
+  {
+    "startInSeconds": 857,
+    "endInSeconds": 861,
+    "text": "Tried to keep the model constant, we tried to keep the context constant,"
+  },
+  {
+    "startInSeconds": 861,
+    "endInSeconds": 864,
+    "text": "and then we tested changes to the harness to be able to"
+  },
+  {
+    "startInSeconds": 864,
+    "endInSeconds": 866,
+    "text": "evaluate and see what really moved the needle."
+  },
+  {
+    "startInSeconds": 866,
+    "endInSeconds": 870,
+    "text": "It's helpful so that you kind of can run tests"
+  },
+  {
+    "startInSeconds": 870,
+    "endInSeconds": 873,
+    "text": "on what changes the game for your agents."
+  },
+  {
+    "startInSeconds": 873,
+    "endInSeconds": 877,
+    "text": "Speaking of which, lots of people are concerned about being locked into"
+  },
+  {
+    "startInSeconds": 877,
+    "endInSeconds": 879,
+    "text": "a particular harness or a specific model."
+  },
+  {
+    "startInSeconds": 880,
+    "endInSeconds": 883,
+    "text": "Talk me through how evals help avoid that problem."
+  },
+  {
+    "startInSeconds": 883,
+    "endInSeconds": 886,
+    "text": "Well, if you know what the performance with a frontier model and,"
+  },
+  {
+    "startInSeconds": 886,
+    "endInSeconds": 889,
+    "text": "you know, an out-of-the-box harness can be,"
+  },
+  {
+    "startInSeconds": 889,
+    "endInSeconds": 892,
+    "text": "it gives you a really good starting place to benchmark"
+  },
+  {
+    "startInSeconds": 892,
+    "endInSeconds": 895,
+    "text": "this is how good your agent is, and then"
+  },
+  {
+    "startInSeconds": 895,
+    "endInSeconds": 898,
+    "text": "is, the frontier models can be really expensive."
+  },
+  {
+    "startInSeconds": 898,
+    "endInSeconds": 901,
+    "text": "So you can swap them out for open-source models"
+  },
+  {
+    "startInSeconds": 901,
+    "endInSeconds": 903,
+    "text": "or just lower-cost models, and then"
+  },
+  {
+    "startInSeconds": 903,
+    "endInSeconds": 906,
+    "text": "evaluate to make sure that"
+  },
+  {
+    "startInSeconds": 906,
+    "endInSeconds": 908,
+    "text": "the things that really matter, you're not"
+  },
+  {
+    "startInSeconds": 908,
+    "endInSeconds": 910,
+    "text": "missing out on the quality of the"
+  },
+  {
+    "startInSeconds": 910,
+    "endInSeconds": 912,
+    "text": "agent you're building. So,"
+  },
+  {
+    "startInSeconds": 912,
+    "endInSeconds": 915,
+    "text": "I think evals are"
+  },
+  {
+    "startInSeconds": 915,
+    "endInSeconds": 917,
+    "text": "I mean, evals are kind of the best way to"
+  },
+  {
+    "startInSeconds": 917,
+    "endInSeconds": 919,
+    "text": "give yourself a benchmark, and then"
+  },
+  {
+    "startInSeconds": 919,
+    "endInSeconds": 922,
+    "text": "kind of either decide to verify regressions,"
+  },
+  {
+    "startInSeconds": 922,
+    "endInSeconds": 924,
+    "text": "or it's a benchmark for you to hill climb"
+  },
+  {
+    "startInSeconds": 924,
+    "endInSeconds": 926,
+    "text": "and see where you can get better."
+  },
+  {
+    "startInSeconds": 926,
+    "endInSeconds": 929,
+    "text": "So in this course, we got"
+  },
+  {
+    "startInSeconds": 929,
+    "endInSeconds": 932,
+    "text": "all the way up to production. We talked about"
+  },
+  {
+    "startInSeconds": 932,
+    "endInSeconds": 935,
+    "text": "taking your production traces and bringing them into your dataset,"
+  },
+  {
+    "startInSeconds": 935,
+    "endInSeconds": 937,
+    "text": "and improving your dataset that way. But one of the things"
+  },
+  {
+    "startInSeconds": 937,
+    "endInSeconds": 940,
+    "text": "that we didn't get into is post-production stuff,"
+  },
+  {
+    "startInSeconds": 940,
+    "endInSeconds": 943,
+    "text": "online evals, and monitoring. What are the"
+  },
+  {
+    "startInSeconds": 943,
+    "endInSeconds": 946,
+    "text": "big things that somebody who's just getting into"
+  },
+  {
+    "startInSeconds": 946,
+    "endInSeconds": 949,
+    "text": "observability and evaluations should know about"
+  },
+  {
+    "startInSeconds": 949,
+    "endInSeconds": 953,
+    "text": "using monitoring and dashboards to be really production-ready?"
+  },
+  {
+    "startInSeconds": 955,
+    "endInSeconds": 956,
+    "text": "Yeah, I"
+  },
+  {
+    "startInSeconds": 956,
+    "endInSeconds": 960,
+    "text": "think evals ends up being a really big term,"
+  },
+  {
+    "startInSeconds": 960,
+    "endInSeconds": 963,
+    "text": "and there's kind of evals you do during development"
+  },
+  {
+    "startInSeconds": 963,
+    "endInSeconds": 966,
+    "text": "and testing so that you can, again,"
+  },
+  {
+    "startInSeconds": 966,
+    "endInSeconds": 969,
+    "text": "check for regressions, hill climb, but"
+  },
+  {
+    "startInSeconds": 969,
+    "endInSeconds": 971,
+    "text": "I would really equally say"
+  },
+  {
+    "startInSeconds": 971,
+    "endInSeconds": 974,
+    "text": "evals in production are so,"
+  },
+  {
+    "startInSeconds": 974,
+    "endInSeconds": 976,
+    "text": "important to how you can detect"
+  },
+  {
+    "startInSeconds": 976,
+    "endInSeconds": 979,
+    "text": "your next set of—what are your next set of improvements"
+  },
+  {
+    "startInSeconds": 979,
+    "endInSeconds": 981,
+    "text": "or your next set of hills to climb."
+  },
+  {
+    "startInSeconds": 981,
+    "endInSeconds": 984,
+    "text": "And so really the telemetry"
+  },
+  {
+    "startInSeconds": 984,
+    "endInSeconds": 987,
+    "text": "and the traces that you end up"
+  },
+  {
+    "startInSeconds": 987,
+    "endInSeconds": 991,
+    "text": "collecting end up being a really good way for teams"
+  },
+  {
+    "startInSeconds": 991,
+    "endInSeconds": 994,
+    "text": "to run online evaluations, so evals that run"
+  },
+  {
+    "startInSeconds": 994,
+    "endInSeconds": 997,
+    "text": "on your live production traffic and"
+  },
+  {
+    "startInSeconds": 997,
+    "endInSeconds": 1001,
+    "text": "can be used to identify if there's common problems or"
+  },
+  {
+    "startInSeconds": 1001,
+    "endInSeconds": 1006,
+    "text": "patterns that you see from that trace, from the traces."
+  },
+  {
+    "startInSeconds": 1006,
+    "endInSeconds": 1009,
+    "text": "You know, online evals can have an interesting thing where"
+  },
+  {
+    "startInSeconds": 1009,
+    "endInSeconds": 1011,
+    "text": "you're evaluating your known,"
+  },
+  {
+    "startInSeconds": 1011,
+    "endInSeconds": 1014,
+    "text": "problems that you'll tend to quantify."
+  },
+  {
+    "startInSeconds": 1014,
+    "endInSeconds": 1018,
+    "text": "This is where I'm really excited about the future of agents as judges,"
+  },
+  {
+    "startInSeconds": 1018,
+    "endInSeconds": 1021,
+    "text": "so that they can find the unknown unknowns in your traces."
+  },
+  {
+    "startInSeconds": 1021,
+    "endInSeconds": 1025,
+    "text": "Exactly. Um, but I"
+  },
+  {
+    "startInSeconds": 1025,
+    "endInSeconds": 1028,
+    "text": "might even have a hot take here, which is that"
+  },
+  {
+    "startInSeconds": 1028,
+    "endInSeconds": 1032,
+    "text": "I think that the evals you run on your traces are honestly more,"
+  },
+  {
+    "startInSeconds": 1032,
+    "endInSeconds": 1036,
+    "text": "important for AI engineers and AI PMs"
+  },
+  {
+    "startInSeconds": 1036,
+    "endInSeconds": 1040,
+    "text": "who are actually building these AI products,"
+  },
+  {
+    "startInSeconds": 1040,
+    "endInSeconds": 1043,
+    "text": "because you don't— yeah, it's just like shipping a product."
+  },
+  {
+    "startInSeconds": 1043,
+    "endInSeconds": 1046,
+    "text": "You don't really know until it's out there in the real world"
+  },
+  {
+    "startInSeconds": 1046,
+    "endInSeconds": 1048,
+    "text": "and it's touching real users, and so you can—"
+  },
+  {
+    "startInSeconds": 1048,
+    "endInSeconds": 1051,
+    "text": "you can benchmark it all day long, but until—"
+  },
+  {
+    "startInSeconds": 1051,
+    "endInSeconds": 1053,
+    "text": "it's out there and you have real"
+  },
+  {
+    "startInSeconds": 1053,
+    "endInSeconds": 1055,
+    "text": "you know, real telemetry."
+  },
+  {
+    "startInSeconds": 1055,
+    "endInSeconds": 1058,
+    "text": "I think you learn, you end up learning a lot more from them."
+  },
+  {
+    "startInSeconds": 1058,
+    "endInSeconds": 1060,
+    "text": "Absolutely."
+  },
+  {
+    "startInSeconds": 1060,
+    "endInSeconds": 1064,
+    "text": "So, let's talk about the harder side of things."
+  },
+  {
+    "startInSeconds": 1064,
+    "endInSeconds": 1067,
+    "text": "You've obviously seen a ton of success stories of people using evals in production."
+  },
+  {
+    "startInSeconds": 1067,
+    "endInSeconds": 1069,
+    "text": "Let's talk about some of the failures."
+  },
+  {
+    "startInSeconds": 1069,
+    "endInSeconds": 1073,
+    "text": "What are some of the pitfalls that people new to the space fall into"
+  },
+  {
+    "startInSeconds": 1073,
+    "endInSeconds": 1076,
+    "text": "that mean they don't get to value with evals?"
+  },
+  {
+    "startInSeconds": 1076,
+    "endInSeconds": 1079,
+    "text": "That's an awesome question, actually."
+  },
+  {
+    "startInSeconds": 1079,
+    "endInSeconds": 1081,
+    "text": "I think they see a lot of new"
+  },
+  {
+    "startInSeconds": 1081,
+    "endInSeconds": 1083,
+    "text": "folks try to write some of the most complex"
+  },
+  {
+    "startInSeconds": 1083,
+    "endInSeconds": 1085,
+    "text": "evals possible,"
+  },
+  {
+    "startInSeconds": 1085,
+    "endInSeconds": 1088,
+    "text": "so a trace eval that looks at a specific span"
+  },
+  {
+    "startInSeconds": 1088,
+    "endInSeconds": 1091,
+    "text": "in order to evaluate"
+  },
+  {
+    "startInSeconds": 1091,
+    "endInSeconds": 1093,
+    "text": "if the agent did exactly this step"
+  },
+  {
+    "startInSeconds": 1093,
+    "endInSeconds": 1095,
+    "text": "in its entire trajectory. And"
+  },
+  {
+    "startInSeconds": 1095,
+    "endInSeconds": 1099,
+    "text": "to be honest, my my honest answer is you could start simple."
+  },
+  {
+    "startInSeconds": 1099,
+    "endInSeconds": 1101,
+    "text": "can start simple, can literally be,"
+  },
+  {
+    "startInSeconds": 1101,
+    "endInSeconds": 1105,
+    "text": "you know, a simple, is user happy, frustrated,"
+  },
+  {
+    "startInSeconds": 1105,
+    "endInSeconds": 1108,
+    "text": "or, you know, some way for you to get some signal on"
+  },
+  {
+    "startInSeconds": 1108,
+    "endInSeconds": 1111,
+    "text": "is the system working as intended or not."
+  },
+  {
+    "startInSeconds": 1111,
+    "endInSeconds": 1113,
+    "text": "the the product KPI"
+  },
+  {
+    "startInSeconds": 1113,
+    "endInSeconds": 1116,
+    "text": "or the agent KPI, I guess, that matters, but"
+  },
+  {
+    "startInSeconds": 1116,
+    "endInSeconds": 1118,
+    "text": "um, I'd say start simple,"
+  },
+  {
+    "startInSeconds": 1118,
+    "endInSeconds": 1120,
+    "text": "and it might be that you"
+  },
+  {
+    "startInSeconds": 1120,
+    "endInSeconds": 1123,
+    "text": "actually don't want to overspecify"
+  },
+  {
+    "startInSeconds": 1123,
+    "endInSeconds": 1125,
+    "text": "and let the agents find"
+  },
+  {
+    "startInSeconds": 1126,
+    "endInSeconds": 1129,
+    "text": "as many of these unknown unknowns in your traces."
+  },
+  {
+    "startInSeconds": 1129,
+    "endInSeconds": 1132,
+    "text": "And so I I think that's that's maybe the the thing I'd say for"
+  },
+  {
+    "startInSeconds": 1132,
+    "endInSeconds": 1136,
+    "text": "people who are starting new with evals. Cool."
+  },
+  {
+    "startInSeconds": 1136,
+    "endInSeconds": 1139,
+    "text": "And looking ahead a little bit,"
+  },
+  {
+    "startInSeconds": 1139,
+    "endInSeconds": 1143,
+    "text": "multi-agent systems are a super hot topic."
+  },
+  {
+    "startInSeconds": 1143,
+    "endInSeconds": 1146,
+    "text": "How does evaluation of multi-agent systems differ"
+  },
+  {
+    "startInSeconds": 1146,
+    "endInSeconds": 1149,
+    "text": "from what we've been talking about in this course?"
+  },
+  {
+    "startInSeconds": 1149,
+    "endInSeconds": 1152,
+    "text": "Oh man, that's a great question."
+  },
+  {
+    "startInSeconds": 1152,
+    "endInSeconds": 1155,
+    "text": "It's also a topic of a lot of some of the coolest research happening right now."
+  },
+  {
+    "startInSeconds": 1155,
+    "endInSeconds": 1158,
+    "text": "Um, I think two things. So, so one is"
+  },
+  {
+    "startInSeconds": 1158,
+    "endInSeconds": 1161,
+    "text": "the multi-agent systems again comes back down to the use cases."
+  },
+  {
+    "startInSeconds": 1161,
+    "endInSeconds": 1163,
+    "text": "You have kind of the product KPIs that"
+  },
+  {
+    "startInSeconds": 1163,
+    "endInSeconds": 1166,
+    "text": "the end-user evals that I think about."
+  },
+  {
+    "startInSeconds": 1166,
+    "endInSeconds": 1169,
+    "text": "I don't think those changes much whether you use"
+  },
+  {
+    "startInSeconds": 1169,
+    "endInSeconds": 1171,
+    "text": "a multi-agent system in order to deliver"
+  },
+  {
+    "startInSeconds": 1171,
+    "endInSeconds": 1173,
+    "text": "the right outcome, and so I think the quality-"
+  },
+  {
+    "startInSeconds": 1173,
+    "endInSeconds": 1176,
+    "text": "type evals"
+  },
+  {
+    "startInSeconds": 1176,
+    "endInSeconds": 1179,
+    "text": "still probably don't change that much,"
+  },
+  {
+    "startInSeconds": 1179,
+    "endInSeconds": 1181,
+    "text": "but I think the stuff that does matter"
+  },
+  {
+    "startInSeconds": 1181,
+    "endInSeconds": 1183,
+    "text": "for the people who are maybe building the harness"
+  },
+  {
+    "startInSeconds": 1183,
+    "endInSeconds": 1186,
+    "text": "or building the agent itself is, one,"
+  },
+  {
+    "startInSeconds": 1186,
+    "endInSeconds": 1190,
+    "text": "was it really more efficient to use multiple agents?"
+  },
+  {
+    "startInSeconds": 1190,
+    "endInSeconds": 1193,
+    "text": "Noam, I think, did a podcast on..."
+  },
+  {
+    "startInSeconds": 1193,
+    "endInSeconds": 1196,
+    "text": "the Dwarkesh podcast, where he was saying it's not always linear."
+  },
+  {
+    "startInSeconds": 1196,
+    "endInSeconds": 1200,
+    "text": "And sometimes you might need to do four agents to get a 2x,"
+  },
+  {
+    "startInSeconds": 1200,
+    "endInSeconds": 1202,
+    "text": "improvement in the efficiency."
+  },
+  {
+    "startInSeconds": 1202,
+    "endInSeconds": 1204,
+    "text": "And so, did it actually improve?"
+  },
+  {
+    "startInSeconds": 1204,
+    "endInSeconds": 1206,
+    "text": "And are the agents actually, just like humans,"
+  },
+  {
+    "startInSeconds": 1206,
+    "endInSeconds": 1209,
+    "text": "are we collaborating effectively?"
+  },
+  {
+    "startInSeconds": 1209,
+    "endInSeconds": 1213,
+    "text": "And so did they pass the information that they needed to each other?"
+  },
+  {
+    "startInSeconds": 1213,
+    "endInSeconds": 1215,
+    "text": "Were they able to self-organize,"
+  },
+  {
+    "startInSeconds": 1215,
+    "endInSeconds": 1219,
+    "text": "or did they need guidance in order to self-organize?"
+  },
+  {
+    "startInSeconds": 1219,
+    "endInSeconds": 1223,
+    "text": "And so those are all really interesting things I think about in more of the"
+  },
+  {
+    "startInSeconds": 1223,
+    "endInSeconds": 1226,
+    "text": "how did the multi-agent system ultimately arrive at the"
+  },
+  {
+    "startInSeconds": 1226,
+    "endInSeconds": 1230,
+    "text": "end result, or the answer, um, which is"
+  },
+  {
+    "startInSeconds": 1230,
+    "endInSeconds": 1234,
+    "text": "probably more interesting for the person who is actually building the system."
+  },
+  {
+    "startInSeconds": 1234,
+    "endInSeconds": 1238,
+    "text": "uh to understand things like efficiency and coordination"
+  },
+  {
+    "startInSeconds": 1238,
+    "endInSeconds": 1240,
+    "text": "of the agents."
+  },
+  {
+    "startInSeconds": 1240,
+    "endInSeconds": 1244,
+    "text": "Do you think the uh model capability is"
+  },
+  {
+    "startInSeconds": 1244,
+    "endInSeconds": 1246,
+    "text": "a barrier to multi-agent systems?"
+  },
+  {
+    "startInSeconds": 1246,
+    "endInSeconds": 1249,
+    "text": "Do you think we're going to see a leap forward in multi-agent systems"
+  },
+  {
+    "startInSeconds": 1249,
+    "endInSeconds": 1251,
+    "text": "as the models get better, or do you think it's more about"
+  },
+  {
+    "startInSeconds": 1251,
+    "endInSeconds": 1254,
+    "text": "the design of the multi-agent system?"
+  },
+  {
+    "startInSeconds": 1254,
+    "endInSeconds": 1257,
+    "text": "I, I mean, I think the models,"
+  },
+  {
+    "startInSeconds": 1257,
+    "endInSeconds": 1260,
+    "text": "I don't want to discount the models getting better at all"
+  },
+  {
+    "startInSeconds": 1260,
+    "endInSeconds": 1263,
+    "text": "because I think, definitely from the stuff we're reading"
+  },
+  {
+    "startInSeconds": 1263,
+    "endInSeconds": 1266,
+    "text": "and what the frontier labs are putting out there,"
+  },
+  {
+    "startInSeconds": 1266,
+    "endInSeconds": 1271,
+    "text": "I think multi-agent is on the top of everyone's mind."
+  },
+  {
+    "startInSeconds": 1271,
+    "endInSeconds": 1273,
+    "text": "Um, which, you know, going back to your point,"
+  },
+  {
+    "startInSeconds": 1273,
+    "endInSeconds": 1276,
+    "text": "it's going to be like another layer on top. Today you are"
+  },
+  {
+    "startInSeconds": 1276,
+    "endInSeconds": 1279,
+    "text": "the controller of multiple agents. Well, now you're going to be a director"
+  },
+  {
+    "startInSeconds": 1279,
+    "endInSeconds": 1282,
+    "text": "who's controlling multiple teams of agents, and so everyone's going to get"
+  },
+  {
+    "startInSeconds": 1282,
+    "endInSeconds": 1284,
+    "text": "a promotion in terms of the layers of hierarchy."
+  },
+  {
+    "startInSeconds": 1284,
+    "endInSeconds": 1288,
+    "text": "everyone's gonna have to move higher and higher up the stack."
+  },
+  {
+    "startInSeconds": 1288,
+    "endInSeconds": 1292,
+    "text": "So I think the models, that I think will happen."
+  },
+  {
+    "startInSeconds": 1292,
+    "endInSeconds": 1296,
+    "text": "The part that's still interesting to me is the harness design,"
+  },
+  {
+    "startInSeconds": 1296,
+    "endInSeconds": 1300,
+    "text": "because there is a lot of the merging of the harness and the model"
+  },
+  {
+    "startInSeconds": 1300,
+    "endInSeconds": 1303,
+    "text": "that's happened in some of the popular coding agents today."
+  },
+  {
+    "startInSeconds": 1303,
+    "endInSeconds": 1305,
+    "text": "but I think there's a whole"
+  },
+  {
+    "startInSeconds": 1305,
+    "endInSeconds": 1308,
+    "text": "world of the open source models"
+  },
+  {
+    "startInSeconds": 1308,
+    "endInSeconds": 1310,
+    "text": "and the open source harnesses that I think we're going to see the,"
+  },
+  {
+    "startInSeconds": 1310,
+    "endInSeconds": 1314,
+    "text": "I'm excited as the ability to really"
+  },
+  {
+    "startInSeconds": 1314,
+    "endInSeconds": 1317,
+    "text": "manipulate and kind of"
+  },
+  {
+    "startInSeconds": 1317,
+    "endInSeconds": 1320,
+    "text": "build on top of the open source harnesses becomes more common."
+  },
+  {
+    "startInSeconds": 1320,
+    "endInSeconds": 1324,
+    "text": "Mm-hmm. So, for somebody who's just finished this course,"
+  },
+  {
+    "startInSeconds": 1324,
+    "endInSeconds": 1326,
+    "text": "what's the thing they might be tempted to do"
+  },
+  {
+    "startInSeconds": 1326,
+    "endInSeconds": 1329,
+    "text": "that you'd warn them away from, like what's the"
+  },
+  {
+    "startInSeconds": 1329,
+    "endInSeconds": 1332,
+    "text": "most obvious trap that they'd fall into?"
+  },
+  {
+    "startInSeconds": 1332,
+    "endInSeconds": 1334,
+    "text": "I'd probably go back to the first, to the thing I said before,"
+  },
+  {
+    "startInSeconds": 1334,
+    "endInSeconds": 1337,
+    "text": "which is building really complex evals."
+  },
+  {
+    "startInSeconds": 1337,
+    "endInSeconds": 1339,
+    "text": "I think starting small, you know, evals is"
+  },
+  {
+    "startInSeconds": 1339,
+    "endInSeconds": 1342,
+    "text": "a is a way to accomplishing the"
+  },
+  {
+    "startInSeconds": 1342,
+    "endInSeconds": 1345,
+    "text": "business outcome."
+  },
+  {
+    "startInSeconds": 1345,
+    "endInSeconds": 1348,
+    "text": "product or the agent you're ultimately trying to build. And so, start simple"
+  },
+  {
+    "startInSeconds": 1348,
+    "endInSeconds": 1352,
+    "text": "and kind of expand on it as as it gets more complex."
+  },
+  {
+    "startInSeconds": 1352,
+    "endInSeconds": 1355,
+    "text": "Cool. Looking further ahead,"
+  },
+  {
+    "startInSeconds": 1355,
+    "endInSeconds": 1359,
+    "text": "what's something that's definitely part of the world of observability and evals right now"
+  },
+  {
+    "startInSeconds": 1359,
+    "endInSeconds": 1362,
+    "text": "that you think is going to go away in the next one to two years?"
+  },
+  {
+    "startInSeconds": 1362,
+    "endInSeconds": 1365,
+    "text": "Oh, um, easily just"
+  },
+  {
+    "startInSeconds": 1365,
+    "endInSeconds": 1367,
+    "text": "the prompt testing,"
+  },
+  {
+    "startInSeconds": 1367,
+    "endInSeconds": 1370,
+    "text": "prompt iterations is-"
+  },
+  {
+    "startInSeconds": 1370,
+    "endInSeconds": 1372,
+    "text": "I don't think anyone's doing that today."
+  },
+  {
+    "startInSeconds": 1372,
+    "endInSeconds": 1375,
+    "text": "But I do think that there's a lot of"
+  },
+  {
+    "startInSeconds": 1375,
+    "endInSeconds": 1377,
+    "text": "Yeah, still education on that."
+  },
+  {
+    "startInSeconds": 1377,
+    "endInSeconds": 1380,
+    "text": "Um, it's just uh I think"
+  },
+  {
+    "startInSeconds": 1380,
+    "endInSeconds": 1384,
+    "text": "the way you prompt does not matter as much anymore."
+  },
+  {
+    "startInSeconds": 1384,
+    "endInSeconds": 1386,
+    "text": "That's a really good point."
+  },
+  {
+    "startInSeconds": 1386,
+    "endInSeconds": 1389,
+    "text": "So now, what's probably going to be your favorite question,"
+  },
+  {
+    "startInSeconds": 1389,
+    "endInSeconds": 1392,
+    "text": "is what is your spiciest take on evals?"
+  },
+  {
+    "startInSeconds": 1392,
+    "endInSeconds": 1395,
+    "text": "What's something you believe about the space that"
+  },
+  {
+    "startInSeconds": 1395,
+    "endInSeconds": 1398,
+    "text": "you think other people in the space might disagree with?"
+  },
+  {
+    "startInSeconds": 1398,
+    "endInSeconds": 1401,
+    "text": "I think that the decision models have kind of changed"
+  },
+  {
+    "startInSeconds": 1401,
+    "endInSeconds": 1405,
+    "text": "the evals category forever. Um,"
+  },
+  {
+    "startInSeconds": 1405,
+    "endInSeconds": 1409,
+    "text": "if you're using a frontier model to do,"
+  },
+  {
+    "startInSeconds": 1409,
+    "endInSeconds": 1414,
+    "text": "more decision evals, so,"
+  },
+  {
+    "startInSeconds": 1414,
+    "endInSeconds": 1418,
+    "text": "you know, you have a very specific"
+  },
+  {
+    "startInSeconds": 1418,
+    "endInSeconds": 1420,
+    "text": "yes no classification"
+  },
+  {
+    "startInSeconds": 1420,
+    "endInSeconds": 1423,
+    "text": "use case type eval,"
+  },
+  {
+    "startInSeconds": 1423,
+    "endInSeconds": 1425,
+    "text": "I just don't think you should be using a frontier model for that."
+  },
+  {
+    "startInSeconds": 1425,
+    "endInSeconds": 1429,
+    "text": "You're just overpaying by 10 to 100x to do that"
+  },
+  {
+    "startInSeconds": 1429,
+    "endInSeconds": 1432,
+    "text": "um, for pretty much equivalent performance"
+  },
+  {
+    "startInSeconds": 1432,
+    "endInSeconds": 1435,
+    "text": "and significantly lower cost."
+  },
+  {
+    "startInSeconds": 1435,
+    "endInSeconds": 1437,
+    "text": "So I I think"
+  },
+  {
+    "startInSeconds": 1437,
+    "endInSeconds": 1440,
+    "text": "Decision models have kind of changed the game for evals."
+  },
+  {
+    "startInSeconds": 1440,
+    "endInSeconds": 1443,
+    "text": "And so now, what's interesting is, do you use"
+  },
+  {
+    "startInSeconds": 1443,
+    "endInSeconds": 1445,
+    "text": "a decision model to do the eval,"
+  },
+  {
+    "startInSeconds": 1445,
+    "endInSeconds": 1448,
+    "text": "and then you use maybe some of the more"
+  },
+  {
+    "startInSeconds": 1448,
+    "endInSeconds": 1450,
+    "text": "expensive frontier models,"
+  },
+  {
+    "startInSeconds": 1450,
+    "endInSeconds": 1452,
+    "text": "to then take actions based off of that"
+  },
+  {
+    "startInSeconds": 1452,
+    "endInSeconds": 1454,
+    "text": "eval's decision. So, that,"
+  },
+  {
+    "startInSeconds": 1454,
+    "endInSeconds": 1457,
+    "text": "where, that's where I think"
+  },
+  {
+    "startInSeconds": 1457,
+    "endInSeconds": 1459,
+    "text": "the space is probably going to go."
+  },
+  {
+    "startInSeconds": 1459,
+    "endInSeconds": 1462,
+    "text": "Cool. It's a super exciting time to be in evals for that reason."
+  },
+  {
+    "startInSeconds": 1462,
+    "endInSeconds": 1466,
+    "text": "Thank you so much for coming and joining us on the course,"
+  },
+  {
+    "startInSeconds": 1466,
+    "endInSeconds": 1468,
+    "text": "and thank you for giving your perspective."
+  },
+  {
+    "startInSeconds": 1468,
+    "endInSeconds": 1471,
+    "text": "Happy to be here. Thank you so much for having me."
+  }
+]

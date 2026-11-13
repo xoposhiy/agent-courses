@@ -1,0 +1,75 @@
+# Homework 1 public teaching repository: assignments/OMIM_620887/grill_run/tasks/0036_screen_h11/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620887/grill_run/tasks/0036_screen_h11/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620887/grill_run/tasks/0036_screen_h11/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "FDXR variants cause optic atrophy and auditory neuropathy (ANOA), with several reports indicating early-onset visual impairment and auditory neuropathy manifesting later in late childhood or adulthood (average onset around 11 years).",
+  "confidence": 0.75,
+  "evidence": [
+    {
+      "text": "In a study of non-isolated auditory neuropathy associated with mitochondrial genes including FDXR, the onset of hearing loss ranged from 2 to 25 years with an average age of 11 years.",
+      "stance": "supports",
+      "source": {
+        "title": "Identification of genetic mechanisms of non-isolated auditory neuropathy with various phenotypes in Chinese families",
+        "authors": [
+          "Y Cao",
+          "X Zhang",
+          "L Lan",
+          "D Li",
+          "J Li",
+          "L Xie",
+          "F Xiong"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": "10.1186/s13023-025-03540-7",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://link.springer.com/article/10.1186/s13023-025-03540-7",
+        "quote": "Patients' age of hearing loss onset ranged from 2 to 25 years, averaging 11 years."
+      },
+      "numbers": [
+        {
+          "metric": "average age of hearing loss onset (years)",
+          "value": 11
+        },
+        {
+          "metric": "minimum age of hearing loss onset (years)",
+          "value": 2
+        },
+        {
+          "metric": "maximum age of hearing loss onset (years)",
+          "value": 25
+        }
+      ]
+    },
+    {
+      "text": "A clinical report describes adult-onset auditory neuropathy spectrum disorder presenting in a 35-year-old patient with an FDXR variant, supporting that auditory neuropathy can present much later in life.",
+      "stance": "supports",
+      "source": {
+        "title": "Novel Variant of FDXR as a Molecular Etiology of Postlingual ...",
+        "authors": [
+          "BJ Kim"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": "PMC11375174",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11375174/",
+        "quote": "A 35-year-old woman was ascertained to have ANSD. Exome sequencing identified the genetic cause of hearing loss"
+      },
+      "numbers": [
+        {
+          "metric": "patient age at ascertainment (years)",
+          "value": 35
+        }
+      ]
+    }
+  ]
+}
+```

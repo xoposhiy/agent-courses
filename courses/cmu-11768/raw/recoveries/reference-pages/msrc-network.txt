@@ -1,0 +1,40 @@
+### Result
+2367. [GET] https://msrc.microsoft.com/update-guide/locale/en/translation.json => [200] 
+2368. [GET] https://msrc.microsoft.com/update-guide/locale/en/translation.json => [200] 
+2373. [HEAD] https://msrc.microsoft.com/update-guide => [200] 
+2374. [HEAD] https://msrc.microsoft.com/update-guide/ => [200] 
+2376. [GET] https://js.monitor.azure.com/scripts/b/ai.config.1.cfg.json => [200] 
+2377. [GET] https://msrc.microsoft.com/config/appsettings.json => [200] 
+2378. [POST] https://dc.services.visualstudio.com/v2/track => [439] 
+2379. [GET] https://msrc.microsoft.com/update-guide/locale/en/search.json => [200] 
+2380. [GET] https://msrc.microsoft.com/update-guide/locale/en/breadcrumb.json => [200] 
+2381. [GET] https://msrc.microsoft.com/update-guide/locale/en/search.json => [200] 
+2382. [GET] https://msrc.microsoft.com/update-guide/locale/en/breadcrumb.json => [200] 
+2383. [GET] https://msrc.microsoft.com/update-guide/locale/en/home.json => [200] 
+2384. [GET] https://msrc.microsoft.com/update-guide/locale/en/home.json => [200] 
+2421. [GET] https://api.msrc.microsoft.com/sug/v2.0/status => [200] 
+2428. [GET] https://msrc.microsoft.com/update-guide/locale/en/vulnerability.json => [200] 
+2429. [GET] https://msrc.microsoft.com/update-guide/locale/en/vulnerability.json => [200] 
+2431. [GET] https://msrc.microsoft.com/update-guide/locale/en/cvss.json => [200] 
+2432. [GET] https://msrc.microsoft.com/update-guide/locale/en/cvss.json => [200] 
+2435. [GET] https://msrc.microsoft.com/update-guide/locale/en/download.json => [200] 
+2436. [GET] https://msrc.microsoft.com/update-guide/locale/en/download.json => [200] 
+2442. [GET] https://msrc.microsoft.com/update-guide/locale/en/title.json => [200] 
+2443. [GET] https://msrc.microsoft.com/update-guide/locale/en/title.json => [200] 
+2444. [GET] https://api.msrc.microsoft.com/sug/v2.0/en-US/vulnerability/CVE-2025-32711 => [200] 
+2445. [GET] https://api.msrc.microsoft.com/sug/v2.0/en-US/acknowledgement?$filter=cveNumber%20eq%20%27CVE-2025-32711%27 => [200] 
+2446. [GET] https://api.msrc.microsoft.com/sug/v2.0/en-US/affectedProduct?$orderBy=releaseDate%20desc&$filter=cveNumber%20eq%20%27CVE-2025-32711%27 => [200] 
+2447. [GET] https://api.msrc.microsoft.com/sug/v2.0/en-US/metadata? => [200] 
+2450. [GET] https://api.msrc.microsoft.com/sug/v2.0/en-US/affectedProduct?$orderBy=releaseDate%20desc&$filter=cveNumber%20eq%20%27CVE-2025-32711%27 => [200] 
+2451. [POST] https://browser.events.data.microsoft.com/OneCollector/1.0/?cors=true&content-type=application/x-json-stream&w=0 => [200] 
+2453. [GET] https://msrc.microsoft.com/update-guide/locale/en/ack.json => [200] 
+2454. [GET] https://msrc.microsoft.com/update-guide/locale/en/ack.json => [200] 
+2455. [POST] https://dc.services.visualstudio.com/v2/track => [439] 
+
+Note: 61 static requests not shown, run with --static option to see them.
+### Page
+- Page URL: https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-32711
+- Page Title: CVE-2025-32711 - Security Update Guide - Microsoft - M365 Copilot Information Disclosure Vulnerability
+- Console: 2 errors, 0 warnings
+### Events
+- New console entries: .playwright-cli\console-2026-11-13T17-16-24-628Z.log#L2

@@ -1,0 +1,382 @@
+{
+  "discovered_links": 54,
+  "excluded_links": [
+    {
+      "url": "http://arxiv.org",
+      "reason": "Generic arXiv index"
+    },
+    {
+      "url": "https://docs.google.com/document/d/17GsPD8IzaSJ_MnGj-yqZgw1MG65bohxeTHeFqz68hi4/edit?tab=t.0#heading=h.6ty58v5e4gbw",
+      "reason": "Internal project-document navigation"
+    }
+  ],
+  "scope": "One level of linked project background and project starting-code repositories. Generic index/self-navigation links excluded.",
+  "accounted_links": [
+    {
+      "url": "https://WWKnowledge.org",
+      "material_id": "project-references/wwknowledge-org",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/project-references/wwknowledge-org.md"
+    },
+    {
+      "url": "https://arxiv.org/abs/2305.14292",
+      "material_id": "readings/arxiv-2305-14292",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2305-14292.md"
+    },
+    {
+      "url": "https://arxiv.org/abs/2311.09818",
+      "material_id": "readings/arxiv-2311-09818",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2311-09818.md"
+    },
+    {
+      "url": "https://arxiv.org/abs/2402.14207",
+      "material_id": "readings/arxiv-2402-14207",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2402-14207.md"
+    },
+    {
+      "url": "https://arxiv.org/abs/2406.00562",
+      "material_id": "readings/arxiv-2406-00562",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2406-00562.md"
+    },
+    {
+      "url": "https://arxiv.org/abs/2407.11417",
+      "material_id": "readings/arxiv-2407-11417",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2407-11417.md"
+    },
+    {
+      "url": "https://arxiv.org/abs/2408.15232",
+      "material_id": "readings/arxiv-2408-15232",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2408-15232.md"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39954218/",
+      "material_id": "readings/pmc-13346298",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/pmc-13346298.md"
+    },
+    {
+      "url": "https://arxiv.org/abs/2407.05674",
+      "material_id": "readings/arxiv-2407-05674",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2407-05674.md"
+    },
+    {
+      "url": "https://arxiv.org/abs/2506.00980",
+      "material_id": "readings/arxiv-2506-00980",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2506-00980.md"
+    },
+    {
+      "url": "https://almond-static.stanford.edu/papers/emnlp2025_historical_ocr.pdf",
+      "material_id": "readings/emnlp2025-historical-ocr",
+      "download_status": "failed",
+      "conversion_status": "failed",
+      "markdown_path": null
+    },
+    {
+      "url": "https://almond-static.stanford.edu/papers/emnlp2025_inconsistency_detection.pdf",
+      "material_id": "readings/emnlp2025-inconsistency-detection",
+      "download_status": "failed",
+      "conversion_status": "failed",
+      "markdown_path": null
+    },
+    {
+      "url": "https://arxiv.org/abs/2604.08849",
+      "material_id": "readings/arxiv-2604-08849",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2604-08849.md"
+    },
+    {
+      "url": "https://arxiv.org/abs/2604.06474",
+      "material_id": "readings/arxiv-2604-06474",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2604-06474.md"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.03366",
+      "material_id": "readings/arxiv-2609-03366",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2609-03366.md"
+    },
+    {
+      "url": "https://arxiv.org/abs/2604.22294",
+      "material_id": "readings/arxiv-2604-22294",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2604-22294.md"
+    },
+    {
+      "url": "https://drive.google.com/file/d/1wtyjSiZ6lNN7ffCZSX8e1wsKMdDAQpv0/view?usp=sharing",
+      "material_id": "project-references/general-coding-agents-vs-custom",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/project-references/general-coding-agents-vs-custom.md"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.18025",
+      "material_id": "readings/arxiv-2610-18025",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2610-18025.md"
+    },
+    {
+      "url": "https://drive.google.com/file/d/1--ypH_6j1oywlikk04ZTFynJxMrHxG7-/view",
+      "material_id": "project-references/project-background-drive-document-1-yph-6j1oywlikk04ztfynjxmrhxg7",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "markdown_path": null
+    },
+    {
+      "url": "https://aclanthology.org/2025.emnlp-main.1763",
+      "material_id": "readings/acl-2025-emnlp-main-1763",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/acl-2025-emnlp-main-1763.md"
+    },
+    {
+      "url": "https://github.com/stanford-oval/Churro",
+      "material_id": "repositories/stanford-oval-churro",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/repositories/stanford-oval-churro.md"
+    },
+    {
+      "url": "https://arxiv.org/abs/2409.02038?utm_source=chatgpt.com",
+      "material_id": "readings/arxiv-2409-02038",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2409-02038.md"
+    },
+    {
+      "url": "https://github.com/beaverbench/beaver?utm_source=chatgpt.com",
+      "material_id": "repositories/beaverbench-beaver",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/repositories/beaverbench-beaver.md"
+    },
+    {
+      "url": "https://aclanthology.org/2023.emnlp-main.436/?utm_source=chatgpt.com",
+      "material_id": "readings/acl-2023-emnlp-main-436",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/acl-2023-emnlp-main-436.md"
+    },
+    {
+      "url": "https://aclanthology.org/2025.naacl-long.13/?utm_source=chatgpt.com",
+      "material_id": "readings/acl-2025-naacl-long-13",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/acl-2025-naacl-long-13.md"
+    },
+    {
+      "url": "https://aclanthology.org/2020.emnlp-main.29/?utm_source=chatgpt.com",
+      "material_id": "readings/acl-2020-emnlp-main-29",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/acl-2020-emnlp-main-29.md"
+    },
+    {
+      "url": "http://sliders.genie.stanford.edu",
+      "material_id": "project-references/sliders-genie-stanford-edu",
+      "download_status": "downloaded",
+      "conversion_status": "failed",
+      "markdown_path": null
+    },
+    {
+      "url": "https://datatalk.biglocalnews.org/",
+      "material_id": "project-references/datatalk-biglocalnews-org",
+      "download_status": "downloaded",
+      "conversion_status": "failed",
+      "markdown_path": null
+    },
+    {
+      "url": "https://biglocalnews.org/content/about/",
+      "material_id": "project-references/biglocalnews-org-content-about",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/project-references/biglocalnews-org-content-about.md"
+    },
+    {
+      "url": "https://drive.google.com/file/d/1--ypH_6j1oywlikk04ZTFynJxMrHxG7-/view?usp=sharing",
+      "material_id": "project-references/project-background-drive-document-1-yph-6j1oywlikk04ztfynjxmrhxg7",
+      "download_status": "requires_login",
+      "conversion_status": "not_available",
+      "markdown_path": null
+    },
+    {
+      "url": "https://www.omim.org/statistics/update",
+      "material_id": "project-references/www-omim-org-statistics-update",
+      "download_status": "failed",
+      "conversion_status": "failed",
+      "markdown_path": null
+    },
+    {
+      "url": "https://www.omim.org/entry/500001",
+      "material_id": "project-references/www-omim-org-entry-500001",
+      "download_status": "failed",
+      "conversion_status": "failed",
+      "markdown_path": null
+    },
+    {
+      "url": "http://RareShare.org",
+      "material_id": "project-references/rareshare-org",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/project-references/rareshare-org.md"
+    },
+    {
+      "url": "https://www.orpha.net/en/disease/detail/2319",
+      "material_id": "project-references/www-orpha-net-en-disease-detail-2319",
+      "download_status": "downloaded",
+      "conversion_status": "failed",
+      "markdown_path": null
+    },
+    {
+      "url": "https://storm.genie.stanford.edu/article/juberg-hayward-syndrome-1387119",
+      "material_id": "project-references/storm-genie-stanford-edu-article-juberg-hayward-syndrome-1387119",
+      "download_status": "downloaded",
+      "conversion_status": "failed",
+      "markdown_path": null
+    },
+    {
+      "url": "https://ascopubs.org/doi/10.1200/JCO-26-02034",
+      "material_id": "project-references/ascopubs-org-doi-10-1200-jco-26-02034",
+      "download_status": "failed",
+      "conversion_status": "failed",
+      "markdown_path": null
+    },
+    {
+      "url": "https://www.raregenomics.org/patient-research-services",
+      "material_id": "project-references/www-raregenomics-org-patient-research-services",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/project-references/www-raregenomics-org-patient-research-services.md"
+    },
+    {
+      "url": "https://github.com/stanford-oval/genie-worksheets",
+      "material_id": "repositories/stanford-oval-genie-worksheets",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/repositories/stanford-oval-genie-worksheets.md"
+    },
+    {
+      "url": "https://arxiv.org/abs/2602.07962",
+      "material_id": "readings/arxiv-2602-07962",
+      "download_status": "downloaded",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/readings/arxiv-2602-07962.md"
+    },
+    {
+      "url": "https://www.anthropic.com/research/Evaluating-Claude-For-Bioinformatics-With-BioMysteryBench",
+      "material_id": "project-references/www-anthropic-com-research-evaluating-claude-for-bioinformatics-with-biomysterybench",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/project-references/www-anthropic-com-research-evaluating-claude-for-bioinformatics-with-biomysterybench.md"
+    },
+    {
+      "url": "https://github.com/harbor-framework/terminal-bench-science",
+      "material_id": "project-references/terminal-bench-science-readme",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/project-references/terminal-bench-science-readme.md"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/geo/",
+      "material_id": "project-references/www-ncbi-nlm-nih-gov-geo",
+      "download_status": "response_only",
+      "conversion_status": "failed",
+      "markdown_path": null
+    },
+    {
+      "url": "https://history.genie.stanford.edu/",
+      "material_id": "project-references/history-genie-stanford-edu",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/project-references/history-genie-stanford-edu.md"
+    },
+    {
+      "url": "https://artificialanalysis.ai/",
+      "material_id": "project-references/artificialanalysis-ai",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/project-references/artificialanalysis-ai.md"
+    },
+    {
+      "url": "https://benchmonitor.genie.stanford.edu/experimental/",
+      "material_id": "project-references/benchmonitor-genie-stanford-edu-experimental",
+      "download_status": "downloaded",
+      "conversion_status": "failed",
+      "markdown_path": null
+    },
+    {
+      "url": "https://agendawatch.org/",
+      "material_id": "project-references/agendawatch-org",
+      "download_status": "failed",
+      "conversion_status": "failed",
+      "markdown_path": null
+    },
+    {
+      "url": "https://www.aacr.org/professionals/research/aacr-project-genie/bpc/nsclc/",
+      "material_id": "project-references/www-aacr-org-professionals-research-aacr-project-genie-bpc-nsclc",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/project-references/www-aacr-org-professionals-research-aacr-project-genie-bpc-nsclc.md"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/tools/openftlist/",
+      "material_id": "project-references/pmc-ncbi-nlm-nih-gov-tools-openftlist",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/project-references/pmc-ncbi-nlm-nih-gov-tools-openftlist.md"
+    },
+    {
+      "url": "https://clinicaltrials.gov/about-site/trends-charts",
+      "material_id": "project-references/clinicaltrials-gov-about-site-trends-charts",
+      "download_status": "response_only",
+      "conversion_status": "failed",
+      "markdown_path": null
+    },
+    {
+      "url": "https://www.nbcnews.com/tech/tech-news/openevidence-ai-doctor-medical-physician-login-app-what-npi-uptodate-rcna341064",
+      "material_id": "project-references/www-nbcnews-com-tech-tech-news-openevidence-ai-doctor-medical-physician-login-app-what-npi-uptodate-rcna341064",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/project-references/www-nbcnews-com-tech-tech-news-openevidence-ai-doctor-medical-physician-login-app-what-npi-uptodate-rcna341064.md"
+    },
+    {
+      "url": "https://www.openevidence.com/announcements/introducing-the-openevidence-model-family",
+      "material_id": "project-references/www-openevidence-com-announcements-introducing-the-openevidence-model-family",
+      "download_status": "downloaded",
+      "conversion_status": "failed",
+      "markdown_path": null
+    },
+    {
+      "url": "https://med.stanford.edu/oncoshare.html",
+      "material_id": "project-references/med-stanford-edu-oncoshare-html",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/project-references/med-stanford-edu-oncoshare-html.md"
+    }
+  ],
+  "missing_links": [],
+  "accounted_link_count": 52
+}

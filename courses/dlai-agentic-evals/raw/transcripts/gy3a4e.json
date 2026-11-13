@@ -1,0 +1,362 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 4,
+    "text": "You've now seen the big picture of how to evaluate\nand improve an agent."
+  },
+  {
+    "startInSeconds": 4,
+    "endInSeconds": 11,
+    "text": "Before you put that process into practice, you need a way to see what\nthe agent actually does as it works through a task."
+  },
+  {
+    "startInSeconds": 11,
+    "endInSeconds": 16,
+    "text": "That's because if you only look at the agent's input and output,\nyou miss what it does in between."
+  },
+  {
+    "startInSeconds": 16,
+    "endInSeconds": 22,
+    "text": "For example, a customer might ask Northwind whether a jacket is\navailable in their size, and the agent says yes."
+  },
+  {
+    "startInSeconds": 22,
+    "endInSeconds": 28,
+    "text": "But between that question and the answer, the agent may be calling\ntools to look up the jacket and check inventory,"
+  },
+  {
+    "startInSeconds": 28,
+    "endInSeconds": 32,
+    "text": "interpreting the results, and deciding what to do next as it goes."
+  },
+  {
+    "startInSeconds": 32,
+    "endInSeconds": 34,
+    "text": "Problems can occur at any of those steps."
+  },
+  {
+    "startInSeconds": 34,
+    "endInSeconds": 40,
+    "text": "For example, the agent might have skipped the inventory check\nand simply made up the answer that the jacket was in stock."
+  },
+  {
+    "startInSeconds": 40,
+    "endInSeconds": 44,
+    "text": "From the response alone, you wouldn't know whether the agent had\nactually checked the inventory."
+  },
+  {
+    "startInSeconds": 44,
+    "endInSeconds": 50,
+    "text": "So before you get into evaluations, you need a window into agent\nbehavior. That's what a trace provides."
+  },
+  {
+    "startInSeconds": 50,
+    "endInSeconds": 55,
+    "text": "So in this video, you'll see how traces are put together,\nwhat their different parts record,"
+  },
+  {
+    "startInSeconds": 55,
+    "endInSeconds": 58,
+    "text": "and how you can use them to investigate the agent's behavior."
+  },
+  {
+    "startInSeconds": 58,
+    "endInSeconds": 62,
+    "text": "A trace brings together the recorded steps from one run of your agent."
+  },
+  {
+    "startInSeconds": 62,
+    "endInSeconds": 67,
+    "text": "A run is a single execution of the agent, from receiving a request to\nfinishing its response."
+  },
+  {
+    "startInSeconds": 67,
+    "endInSeconds": 72,
+    "text": "To see how that works, imagine a Northwind customer\nasking for a refund."
+  },
+  {
+    "startInSeconds": 72,
+    "endInSeconds": 76,
+    "text": "The agent might look up their order, check the return policy,\nand request the refund."
+  },
+  {
+    "startInSeconds": 76,
+    "endInSeconds": 84,
+    "text": "A trace records the model calls and tool calls along the way.\nEach recorded operation is called a span, with a beginning and an end."
+  },
+  {
+    "startInSeconds": 84,
+    "endInSeconds": 89,
+    "text": "So the order lookup could be one span,\nand processing the refund could be another."
+  },
+  {
+    "startInSeconds": 89,
+    "endInSeconds": 96,
+    "text": "Larger operations can contain smaller operations,\nwith their spans nested inside. That gives you a tree of spans."
+  },
+  {
+    "startInSeconds": 96,
+    "endInSeconds": 101,
+    "text": "The root span covers the whole request, with child spans beneath it\nfor operations such as the order lookup and refund."
+  },
+  {
+    "startInSeconds": 101,
+    "endInSeconds": 105,
+    "text": "The root is their parent, and those child spans can have\nchildren of their own."
+  },
+  {
+    "startInSeconds": 105,
+    "endInSeconds": 110,
+    "text": "The tree shows what happened during the run,\nbased on the operations your application records."
+  },
+  {
+    "startInSeconds": 110,
+    "endInSeconds": 117,
+    "text": "It isn't a fixed plan for the agent to follow,\nso another run might include different tool calls or repeated steps."
+  },
+  {
+    "startInSeconds": 117,
+    "endInSeconds": 122,
+    "text": "Now that you've seen how spans fit together,\nlet's look at what each span records about an operation."
+  },
+  {
+    "startInSeconds": 122,
+    "endInSeconds": 130,
+    "text": "Take the span for looking up the customer's order. Its name tells you\nwhich operation ran, and its type identifies it as a tool call."
+  },
+  {
+    "startInSeconds": 130,
+    "endInSeconds": 134,
+    "text": "The recorded input shows what was sent to the tool,\nsuch as an order ID."
+  },
+  {
+    "startInSeconds": 134,
+    "endInSeconds": 138,
+    "text": "The output shows what came back, such as the order details\nand the purchase price."
+  },
+  {
+    "startInSeconds": 138,
+    "endInSeconds": 145,
+    "text": "If the agent refunds the wrong amount, you can check whether it looked\nup the right order and what purchase price the tool returned."
+  },
+  {
+    "startInSeconds": 145,
+    "endInSeconds": 148,
+    "text": "A model-call span gives you a different view."
+  },
+  {
+    "startInSeconds": 148,
+    "endInSeconds": 154,
+    "text": "Its input can include the customer's message,\nthe agent's instructions, and information returned by earlier tools."
+  },
+  {
+    "startInSeconds": 154,
+    "endInSeconds": 161,
+    "text": "Its output records what the model generated,\nthat might be an answer for the customer or a request to use a tool."
+  },
+  {
+    "startInSeconds": 161,
+    "endInSeconds": 167,
+    "text": "For model calls, you can also capture token usage,\na measure of how much text the model took in and generated,"
+  },
+  {
+    "startInSeconds": 167,
+    "endInSeconds": 170,
+    "text": "along with the model version and the prompt used."
+  },
+  {
+    "startInSeconds": 170,
+    "endInSeconds": 173,
+    "text": "These details can be recorded as attributes on the span."
+  },
+  {
+    "startInSeconds": 173,
+    "endInSeconds": 178,
+    "text": "They help you understand the conditions of each run and check what\nchanged when comparing results."
+  },
+  {
+    "startInSeconds": 178,
+    "endInSeconds": 184,
+    "text": "Together, the model-call and tool-call spans let you follow\nwhich tools the model called, what they returned,"
+  },
+  {
+    "startInSeconds": 184,
+    "endInSeconds": 187,
+    "text": "and how the model responded afterward."
+  },
+  {
+    "startInSeconds": 187,
+    "endInSeconds": 192,
+    "text": "Spans also record when each operation started and ended,\nso you can see how long it took."
+  },
+  {
+    "startInSeconds": 192,
+    "endInSeconds": 198,
+    "text": "If the customer waited a long time, you can check whether the delay\ncame from the model call or the order lookup."
+  },
+  {
+    "startInSeconds": 198,
+    "endInSeconds": 205,
+    "text": "You can also spot repeated tool calls that added unnecessary work,\neven if the agent eventually gave a correct answer."
+  },
+  {
+    "startInSeconds": 205,
+    "endInSeconds": 209,
+    "text": "Just remember, a trace doesn't show everything\nhappening inside the model."
+  },
+  {
+    "startInSeconds": 209,
+    "endInSeconds": 215,
+    "text": "Even any reasoning text it includes is generated output,\nnot a direct view of the model's internal workings."
+  },
+  {
+    "startInSeconds": 215,
+    "endInSeconds": 223,
+    "text": "So how do you get your application to record these traces? You add\ncode that captures information about the operations as they happen."
+  },
+  {
+    "startInSeconds": 223,
+    "endInSeconds": 229,
+    "text": "Adding that recording is called instrumentation.\nYou don't necessarily have to write all that code yourself."
+  },
+  {
+    "startInSeconds": 229,
+    "endInSeconds": 234,
+    "text": "Depending on the framework and tracing integration,\nyou can automatically capture model calls and tool calls,"
+  },
+  {
+    "startInSeconds": 234,
+    "endInSeconds": 237,
+    "text": "including their inputs, outputs, and timing."
+  },
+  {
+    "startInSeconds": 237,
+    "endInSeconds": 242,
+    "text": "You can also add recording around your own functions when you need to\ncapture something the integration doesn't cover."
+  },
+  {
+    "startInSeconds": 242,
+    "endInSeconds": 249,
+    "text": "In this course, you'll use Phoenix to collect and inspect the traces.\nThe tracing integration sends it the recorded spans."
+  },
+  {
+    "startInSeconds": 249,
+    "endInSeconds": 256,
+    "text": "You can then open a run, follow the tree, and select a span to inspect\nits recorded inputs, outputs, and other details."
+  },
+  {
+    "startInSeconds": 256,
+    "endInSeconds": 260,
+    "text": "The lab takes you through setting up that connection.\nThe concepts aren't specific to Phoenix though."
+  },
+  {
+    "startInSeconds": 260,
+    "endInSeconds": 266,
+    "text": "You can use other tracing tools or write your own code to record\nand inspect the same information."
+  },
+  {
+    "startInSeconds": 266,
+    "endInSeconds": 271,
+    "text": "The important limit is that a trace only contains what\nyour setup recorded."
+  },
+  {
+    "startInSeconds": 271,
+    "endInSeconds": 275,
+    "text": "If an order lookup wasn't instrumented, you might see the model calls,\nbut miss the lookup between them."
+  },
+  {
+    "startInSeconds": 275,
+    "endInSeconds": 280,
+    "text": "So an absent span doesn't automatically mean the\nagent skipped an action."
+  },
+  {
+    "startInSeconds": 280,
+    "endInSeconds": 284,
+    "text": "Before drawing that conclusion, you need to know that the relevant\nwork was being captured."
+  },
+  {
+    "startInSeconds": 284,
+    "endInSeconds": 289,
+    "text": "With those records in place, now suppose a refund for a\ncustomer goes wrong."
+  },
+  {
+    "startInSeconds": 289,
+    "endInSeconds": 295,
+    "text": "The agent tells the customer their refund was processed, but the trace\nshows that the refund tool reported it hadn't been completed."
+  },
+  {
+    "startInSeconds": 295,
+    "endInSeconds": 300,
+    "text": "The model got that failure message, but still told the customer the\nrefund was on its way."
+  },
+  {
+    "startInSeconds": 300,
+    "endInSeconds": 303,
+    "text": "The trace gives you evidence you can use to evaluate the agent."
+  },
+  {
+    "startInSeconds": 303,
+    "endInSeconds": 309,
+    "text": "You can evaluate one operation, such as whether the agent looked up\nthe right order, or the overall result,"
+  },
+  {
+    "startInSeconds": 309,
+    "endInSeconds": 312,
+    "text": "such as whether it handled the refund correctly."
+  },
+  {
+    "startInSeconds": 312,
+    "endInSeconds": 316,
+    "text": "Once you've evaluated it, you can record your assessment\nalongside the trace."
+  },
+  {
+    "startInSeconds": 316,
+    "endInSeconds": 322,
+    "text": "In Phoenix, that's called an annotation, which can include a label\nor a score and an explanation."
+  },
+  {
+    "startInSeconds": 322,
+    "endInSeconds": 327,
+    "text": "Also note that a conversation between a customer and the agent can\ninclude several runs."
+  },
+  {
+    "startInSeconds": 327,
+    "endInSeconds": 334,
+    "text": "For example, the agent handles a refund request and responds,\nthen handles the customer's follow-up question in another run."
+  },
+  {
+    "startInSeconds": 334,
+    "endInSeconds": 339,
+    "text": "Each run has its own trace, which can contain multiple model\ncalls and tool calls."
+  },
+  {
+    "startInSeconds": 339,
+    "endInSeconds": 345,
+    "text": "A shared session ID groups those traces so you can follow the whole\nconversation. That wraps up module one."
+  },
+  {
+    "startInSeconds": 345,
+    "endInSeconds": 352,
+    "text": "You've seen why evals matter, how the evaluation process fits\ntogether, and how traces let you see what an agent actually did."
+  },
+  {
+    "startInSeconds": 352,
+    "endInSeconds": 356,
+    "text": "You'll get more practice working with traces in the lab\nand graded assignment."
+  },
+  {
+    "startInSeconds": 356,
+    "endInSeconds": 361,
+    "text": "Then, in module two, you'll start putting that evaluation\nprocess into practice,"
+  },
+  {
+    "startInSeconds": 361,
+    "endInSeconds": 365,
+    "text": "working out what the agent needs to do and investigating\nwhere it falls short."
+  },
+  {
+    "startInSeconds": 365,
+    "endInSeconds": 366,
+    "text": "I'll see you there."
+  }
+]

@@ -1,0 +1,14 @@
+# Homework 2 bundle: precomputed/sliders/sliders-OMIM_617988/phenotypic_matching_rules.csv
+
+[Course index](../../../../../../README.md) · [Original source](https://drive.google.com/file/d/1VPlTDJULw4qIkQuVcHxxPh4Q50Nvmi-z/view#archive-member=precomputed/sliders/sliders-OMIM_617988/phenotypic_matching_rules.csv) · [Raw file](../../../../../../raw/assignments/assignment2-course-bundle/precomputed/sliders/sliders-OMIM_617988/phenotypic_matching_rules.csv)
+
+Retrieved: 2026-11-13T17:00:50.402745+00:00
+
+```csv
+row_id,disease_name,rule_or_step_title,phenotype_name,rule_category,phenotype_status_required,matching_criterion_description,cohort_frequency
+d4b4aaf59d37ca04:0:phenotypic_matching_rules:0,Jaberi-Elahi Syndrome,Motor Development Delay Assessment,Motor development delay,inclusion_criterion,must_be_present,Patient exhibits motor delay (HP:0001270).,26/28 (92.9%)
+d4b4aaf59d37ca04:0:phenotypic_matching_rules:1,Jaberi-Elahi Syndrome,Ectodermal Phenotype Evaluation,Sparse hair / Hypotrichosis,discriminating_feature,supportive_if_present,"Patient exhibits sparse, slow-growing hair or hypotrichosis.",26/28 (92.9%)
+d4b4aaf59d37ca04:0:phenotypic_matching_rules:2,Jaberi-Elahi Syndrome,Rule Out Incompatible Features,Complex congenital heart disease,exclusion_criterion,must_be_absent,Presence of complex visceral or conotruncal cardiac malformations argues strongly against diagnosis.,
+d4b4aaf59d37ca04:0:phenotypic_matching_rules:3,Jaberi-Elahi Syndrome,Rule Out Incompatible Features,Hepatosplenomegaly,exclusion_criterion,must_be_absent,Hepatosplenomegaly or primary hepatic/renal failure rules out JABELS.,
+
+```

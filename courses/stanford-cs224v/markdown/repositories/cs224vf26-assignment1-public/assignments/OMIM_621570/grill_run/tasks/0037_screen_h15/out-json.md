@@ -1,0 +1,44 @@
+# Homework 1 public teaching repository: assignments/OMIM_621570/grill_run/tasks/0037_screen_h15/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621570/grill_run/tasks/0037_screen_h15/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621570/grill_run/tasks/0037_screen_h15/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Parenti et al. demonstrated distinct molecular mechanisms and episignatures for truncating vs in-frame MAU2 variants with microcephaly as a major hallmark, making genotype-phenotype severity stratification biologically plausible.",
+  "confidence": 0.7,
+  "evidence": [
+    {
+      "text": "Parenti et al. identified 18 individuals with 15 heterozygous MAU2 variants, finding that in-frame variants impair NIPBL-MAU2 interaction while truncating variants cause haploinsufficiency, generating two distinct episignatures with variable phenotypic severity including microcephaly.",
+      "stance": "supports",
+      "source": {
+        "title": "Pathogenic variants in the cohesin loader subunit MAU2 lead to a new Cornelia de Lange Syndrome subtype",
+        "authors": [
+          "I Parenti",
+          "A Hesters",
+          "M Gil"
+        ],
+        "year": 2025,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": "PMC12668068",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12668068/",
+        "quote": "MAU2 in-frame variants predominantly impair NIPBL\u2013MAU2 interaction, whereas truncating variants cause MAU2 haploinsufficiency and lead to NIPBL reduction. Most patients exhibit a DNA methylation profile compatible with the CdLS episignature. We also identified two MAU2 -specific episignatures that reflect variant-dependent molecular consequences. Affected individuals display a wide range of phenotypes, from classic CdLS to milder presentations, with short stature and microcephaly as consistent features."
+      },
+      "numbers": [
+        {
+          "metric": "individuals described",
+          "value": 18
+        },
+        {
+          "metric": "heterozygous MAU2 variants",
+          "value": 15
+        }
+      ]
+    }
+  ]
+}
+```

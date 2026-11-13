@@ -1,0 +1,43 @@
+{
+  "scope": "Public course pages, teaching repositories, course-assigned readings, and explicitly course-curated optional references, one level only.",
+  "schedule_rows": 30,
+  "categories": {
+    "Slides:": {
+      "unique_links": 18,
+      "represented": 18,
+      "available_as_markdown": 18,
+      "with_recorded_gap": [],
+      "not_collected": []
+    },
+    "Recording:": {
+      "unique_links": 9,
+      "represented": 9,
+      "available_as_markdown": 9,
+      "with_recorded_gap": [],
+      "not_collected": []
+    },
+    "Readings:": {
+      "unique_links": 56,
+      "represented": 56,
+      "available_as_markdown": 56,
+      "with_recorded_gap": [],
+      "not_collected": []
+    },
+    "references": {
+      "unique_links": 355,
+      "represented": 355,
+      "available_as_markdown": 347,
+      "with_recorded_gap": [
+        "https://app.grayswan.ai/arena/challenge/agent-red-teaming/leaderboard",
+        "https://digitalcollections.library.cmu.edu/cmu-collection/herbert-simon",
+        "https://en.wikipedia.org/w/index.php?oldid=824425456",
+        "https://github.com/neubig/slides/tree/main/slides/2026-09-25-fujitsu-openhands-en",
+        "https://smith.langchain.com/public/416d3c74-4b43-4883-b189-92a57431a819/r",
+        "https://smith.langchain.com/public/5e17b93a-17af-4386-ada0-9bd033f98a74/r",
+        "https://smith.langchain.com/public/aeddf201-687b-4389-acdb-137dd9683000/r",
+        "https://www.nobelprize.org/prizes/economic-sciences/1978/summary/"
+      ],
+      "not_collected": []
+    }
+  }
+}

@@ -1,0 +1,42 @@
+# Homework 1 public teaching repository: assignments/OMIM_620988/grill_run/tasks/0025_screen_h11/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620988/grill_run/tasks/0025_screen_h11/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620988/grill_run/tasks/0025_screen_h11/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "A de novo DHX9 ATP-binding site missense variant was reported with ventricular non-compaction cardiomyopathy and cardiac conduction defects in mouse models.",
+  "confidence": 0.8,
+  "evidence": [
+    {
+      "text": "Yamada et al. identified a heterozygous de novo missense variant p.(Gly414Arg) in the ATP-binding site (G-C-G-K-T) of DHX9 in an individual with short stature, intellectual disability, and ventricular non-compaction cardiomyopathy, and corresponding Dhx9 mutant mice exhibited cardiac conduction abnormalities.",
+      "stance": "supports",
+      "source": {
+        "title": "Heterozygous loss-of-function DHX9 variants are associated with neurodevelopmental disorders: Human genetic and experimental evidences",
+        "authors": [
+          "M Yamada",
+          "Y Nitta",
+          "T Uehara",
+          "H Suzuki",
+          "F Miya"
+        ],
+        "year": 2023,
+        "journal": null,
+        "doi": null,
+        "pmid": "37369308",
+        "pmc": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37369308/",
+        "quote": "Herein, we report a patients with a heterozygous de novo missense variant, p.(Gly414Arg) of DHX9 who presented with a short stature, intellectual disability, and ventricular non-compaction cardiomyopathy. The variant was located in the glycine codon of the ATP-binding site, G-C-G-K-T... Furthermore, in a gene-editing experiment of Dhx9 G416 to R416, corresponding to p.(Gly414Arg) in humans, heterozygous mice showed a reduced body size, reduced emotionality, and cardiac conduction abnormality."
+      },
+      "numbers": [
+        {
+          "metric": "patients with p.(Gly414Arg) presenting with ventricular non-compaction cardiomyopathy",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}
+```

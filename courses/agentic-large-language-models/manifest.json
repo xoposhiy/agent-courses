@@ -1,0 +1,1201 @@
+{
+  "schema_version": "1.0",
+  "source_id": "agentic-large-language-models",
+  "title": "Agentic Large Language Models",
+  "source_url": "https://arxiv.org/abs/2610.13455",
+  "retrieved_at": "2026-11-13T16:41:08.170505+00:00",
+  "materials": [
+    {
+      "id": "metadata/arxiv-record",
+      "title": "arXiv record and version history",
+      "url": "https://arxiv.org/abs/2610.13455",
+      "category": "metadata",
+      "retrieved_at": "2026-11-13T16:41:08.171521+00:00",
+      "notes": [],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/abs/2610.13455",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/metadata/arxiv-record.html",
+      "bytes": 39476,
+      "sha256": "b25685848f6c75cb85241dd760045318fd69a26a22f4bc079a4415a532025bf9",
+      "download_status": "downloaded",
+      "assets": [
+        {
+          "url": "https://arxiv.org/icons/licenses/zero-1.0.png",
+          "raw_path": "raw/assets/11a921e175cf9571.png",
+          "bytes": 865,
+          "sha256": "d7507cd66373fe290364be99c7b3ae89ddee9f4e50dbdac8f12516f71f487986"
+        },
+        {
+          "url": "https://arxiv.org/static/browse/0.3.4/images/icons/social/bibsonomy.png",
+          "raw_path": "raw/assets/c4a0462643ad6448.png",
+          "bytes": 612,
+          "sha256": "87f13998b8744eb9e3269ebe8cb9ab41fa48d1efd81ac1bf7cc7d728bcc3c087"
+        },
+        {
+          "url": "https://arxiv.org/static/browse/0.3.4/images/icons/social/reddit.png",
+          "raw_path": "raw/assets/39b083e3ccf73e0f.png",
+          "bytes": 380,
+          "sha256": "9aca12f78c56c559e0a905991b93098fbf17f47fde9e39f7673a400f83429010"
+        }
+      ],
+      "conversion_method": "html-main-content-to-markdown",
+      "conversion_status": "converted",
+      "markdown_path": "markdown/metadata/arxiv-record.md"
+    },
+    {
+      "id": "book/full-book-html",
+      "title": "Full book HTML",
+      "url": "https://arxiv.org/html/2610.13455v1",
+      "category": "book",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "notes": [
+        "The experimental HTML omits Figure 3.1. Its graphic was recovered by rendering the figure region from original PDF page 65; the original caption is preserved in Markdown."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/html/2610.13455v1",
+      "content_type": "text/html; charset=utf-8",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-with-latex-and-local-figures",
+      "assets": [
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/virtuous5.png",
+          "raw_path": "raw/source/figures/virtuous5.png",
+          "bytes": 256551,
+          "sha256": "3820d54ff5008b64a6f2ad0d49c2e2197d7dd33b9cf936860b218bb21bcba74b"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part1/visuals/ELIZA_conversation.jpg",
+          "raw_path": "raw/source/part1/visuals/ELIZA_conversation.jpg",
+          "bytes": 71463,
+          "sha256": "0a1eb2c3ddfb5d770ea7785bc2335a4067003e969135551a7420fc4882c0dd03"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/nlp_pipeline.png",
+          "raw_path": "raw/assets/nlp_pipeline.png",
+          "bytes": 18740,
+          "sha256": "72783fd30788c7eb405f564ce14c8dd6ae097dc7a4f155cdd52fc74926c76f74"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part1/visuals/Word_vector_illustration.jpg",
+          "raw_path": "raw/source/part1/visuals/Word_vector_illustration.jpg",
+          "bytes": 43009,
+          "sha256": "20a56a2fb356218564402fc302ad1a93ae1c0f182b66b1d019da1c848356108a"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part1/visuals/skipgram.png",
+          "raw_path": "raw/source/part1/visuals/skipgram.png",
+          "bytes": 11495,
+          "sha256": "e8c5aa49116d56d3a53387551a157162f1192a37c311d0cc99f99df0c2dc913d"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part1/visuals/cbow.png",
+          "raw_path": "raw/source/part1/visuals/cbow.png",
+          "bytes": 12015,
+          "sha256": "09b3c1918f567d88572bc2f98eb58284c30face3d3a768fff160b7f015834320"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/RNNcolah.png",
+          "raw_path": "raw/source/figures/RNNcolah.png",
+          "bytes": 130285,
+          "sha256": "4594446501a2b5d28b937d50993bb3111c00440438aea4081aef06b1caa59d28"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/LSTMcolah.png",
+          "raw_path": "raw/source/figures/LSTMcolah.png",
+          "bytes": 360527,
+          "sha256": "e879090707fa292b1756de922c7c9af6e69983e3cdd2a3a727bbcc4016327b03"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/encdec.png",
+          "raw_path": "raw/source/figures/encdec.png",
+          "bytes": 58632,
+          "sha256": "0af18ee71c3cc4bd74006c0107b06aa83d7f70f181ea9e275fd29e9c48887d9e"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part1/visuals/enc_dec.png",
+          "raw_path": "raw/source/part1/visuals/enc_dec.png",
+          "bytes": 115730,
+          "sha256": "eeed5db571d4b44ff776043563e0dd5c131b4c3a8b9dc771bb462d955809d204"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part1/visuals/transformer_full_architecture.png",
+          "raw_path": "raw/source/part1/visuals/transformer_full_architecture.png",
+          "bytes": 55967,
+          "sha256": "341ae8bbcc503f6cad3369a9ee49c249b09232bcdb7165a49ca4618ee2975a8e"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2610.13455v1#page=65",
+          "raw_path": "raw/assets/figure-3-1-from-pdf-page-65.png",
+          "bytes": 34945,
+          "sha256": "6b4dec4bcb97bf86a0d82eca5a40abc2510b9605ab731abb9f96db4a4b5c5f5a"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part1/visuals/the_pile.png",
+          "raw_path": "raw/source/part1/visuals/the_pile.png",
+          "bytes": 105602,
+          "sha256": "27f5d6aee59733953feb0a3d57e06e94c10674d83ec8de1fadcccb19a5fc1b1c"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part1/visuals/smollm3_mixture.png",
+          "raw_path": "raw/source/part1/visuals/smollm3_mixture.png",
+          "bytes": 306194,
+          "sha256": "85fc2daa46e5df8efbbe084eb616ccab56b46320a7df7acb7d450b8a5da9646a"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part1/visuals/glm_spike.png",
+          "raw_path": "raw/source/part1/visuals/glm_spike.png",
+          "bytes": 525854,
+          "sha256": "8e1a22e1a9c65d8106420a40dcc5a6ff94914827e9a3de65f39157ec297a12d6"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part1/visuals/rlhf_loop.png",
+          "raw_path": "raw/source/part1/visuals/rlhf_loop.png",
+          "bytes": 250362,
+          "sha256": "55368093eb66eddcaaa39446976c4c128b38af4ad7de285490d6ee53c5850d5e"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part1/visuals/grpo.png",
+          "raw_path": "raw/source/part1/visuals/grpo.png",
+          "bytes": 276830,
+          "sha256": "80eadc624cca893e381e1da38bcda246ef9b664bdd80ec8e84fedb22d5ef02da"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part1/visuals/scaling.png",
+          "raw_path": "raw/source/part1/visuals/scaling.png",
+          "bytes": 400113,
+          "sha256": "5b3f92c40380019b3f9051beecc19a578869e267ea472394ee892048d4dcf0eb"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part1/visuals/sample_efficiency_tokens.png",
+          "raw_path": "raw/source/part1/visuals/sample_efficiency_tokens.png",
+          "bytes": 315657,
+          "sha256": "994b54a60d04d66f1f1cbd78fbf489ab4fe10e3bf4fe4930d22b9c2a7d5b161f"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part1/visuals/isoflop.png",
+          "raw_path": "raw/source/part1/visuals/isoflop.png",
+          "bytes": 133732,
+          "sha256": "91cd46ce5107673f1deb052c338d5772ab1db6758a41aca1ba0936182c7ef74d"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part1/visuals/emergent.png",
+          "raw_path": "raw/source/part1/visuals/emergent.png",
+          "bytes": 139790,
+          "sha256": "32657fe29105bbcdb7eba605be8cc347066d3b334d3739b14718217f82815164"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part1/visuals/token_edit.png",
+          "raw_path": "raw/source/part1/visuals/token_edit.png",
+          "bytes": 121455,
+          "sha256": "7fd3ed2c1dd1c89d7be84e5d309a8c3ae1811450a15b669c2a75d18fd9aea5db"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part1/visuals/negative_scaling.png",
+          "raw_path": "raw/source/part1/visuals/negative_scaling.png",
+          "bytes": 214983,
+          "sha256": "9bdd94256789db405a2788668f4e2be76f3c7f5f6764abc10bd30bf5c0ad151a"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part1/visuals/Grokking_modular_addition.jpg",
+          "raw_path": "raw/source/part1/visuals/Grokking_modular_addition.jpg",
+          "bytes": 89252,
+          "sha256": "08d700a597e2e00858a2df662c5234f146916a4a0a896efd33f680616a092cc8"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part1/visuals/lora.png",
+          "raw_path": "raw/source/part1/visuals/lora.png",
+          "bytes": 87019,
+          "sha256": "eb06e6f39dbabf1a4d8a7f134bcc31a351db5a8d3d2aa75abed3b451ab7cbe7b"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part1/visuals/moe.png",
+          "raw_path": "raw/source/part1/visuals/moe.png",
+          "bytes": 138247,
+          "sha256": "b84dcb4078cacbac323e5a8c16916ba36999a9c12a33c7e95dbb5d70d07d08d2"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/ttt.png",
+          "raw_path": "raw/source/figures/ttt.png",
+          "bytes": 218371,
+          "sha256": "5b82367d0191ec554ed65c8ddc55af351d40787f8c0de29686e0c2e7964a46e0"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/totcode.png",
+          "raw_path": "raw/source/figures/totcode.png",
+          "bytes": 565629,
+          "sha256": "dffa64423b2702dad124e3ed1288b8008c61dbc131dc4170e7c7b4211c0b433a"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/tot-ex.png",
+          "raw_path": "raw/source/figures/tot-ex.png",
+          "bytes": 111605,
+          "sha256": "8ae9d942eda5554a58c03c1faa157aa9715c2b5c668d37385d9d8fa6403315ab"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/cot-tot.png",
+          "raw_path": "raw/source/figures/cot-tot.png",
+          "bytes": 281490,
+          "sha256": "90c6ab5834244d3bf995a3bda0a7e4ce47cb508d6a936ac1de2f75b8d48719d4"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/selfref.png",
+          "raw_path": "raw/source/figures/selfref.png",
+          "bytes": 266054,
+          "sha256": "5848bb874d2f41970133f55aee98e166adf148cf23c029c5825cde6b26c8025d"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/reflexion3.png",
+          "raw_path": "raw/source/figures/reflexion3.png",
+          "bytes": 113966,
+          "sha256": "b45a921f1a9ffb762b5f41d0fe1cf60bda50ff8e829ac0fab455983ebd272222"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/bot.png",
+          "raw_path": "raw/source/figures/bot.png",
+          "bytes": 207472,
+          "sha256": "53e95890c6e7632fb384e4c3ca7ec63dba70662d2a64a1584fc1279f829bc134"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/VQAbanana.png",
+          "raw_path": "raw/source/figures/VQAbanana.png",
+          "bytes": 603172,
+          "sha256": "a01415455b1ade0109f39ea477e2b9d9a17cbfb730e5d9b2335bb585a84e85af"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/captioning.png",
+          "raw_path": "raw/source/figures/captioning.png",
+          "bytes": 726138,
+          "sha256": "ec5ee595c586b968102071892925fda319830cf566c6172bcf633e057aedbc68"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/vlm.png",
+          "raw_path": "raw/source/figures/vlm.png",
+          "bytes": 164848,
+          "sha256": "bfc6d1c4d5ea5fdc9882f504faa94a57497d2a45481e85c941f486706107a4a2"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/stable.png",
+          "raw_path": "raw/source/figures/stable.png",
+          "bytes": 247513,
+          "sha256": "678ca969a8620c7addb5efe3d2ddbc2a20c9589f4b1772132a8151fbe1b3dad6"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/dalle.jpg",
+          "raw_path": "raw/source/figures/dalle.jpg",
+          "bytes": 33438,
+          "sha256": "8306961977f9d77fe414e2868ad2905aef94af40b3609a2c2c3dd97582fe5a00"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/flava.png",
+          "raw_path": "raw/source/figures/flava.png",
+          "bytes": 1303672,
+          "sha256": "021234f1d45adf27e7ffa965fc4affa28c5bf56c0ce013a8295b681b22c33c6f"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/dalle3.png",
+          "raw_path": "raw/source/figures/dalle3.png",
+          "bytes": 1319372,
+          "sha256": "a5aaadd379b217a8b90c329a1cb8764231292b0c2672797e262ecaa4ba6258c3"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/stablediff.png",
+          "raw_path": "raw/source/figures/stablediff.png",
+          "bytes": 1030333,
+          "sha256": "2dcc639b8e6a647a6827e1ffca1eb6aada013f56dc6209c0b9e29e8c93fe37c3"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/vla.jpg",
+          "raw_path": "raw/source/figures/vla.jpg",
+          "bytes": 43054,
+          "sha256": "d3aef10d81e1a726abd683e87203dfe77f7c7e8ae0af30c7afc33975427b3fde"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/vlas.jpg",
+          "raw_path": "raw/source/figures/vlas.jpg",
+          "bytes": 77646,
+          "sha256": "f9d6939f22f7589b0cee526a51396697e7039060d7628403d83b3882f541480b"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/cliport1.png",
+          "raw_path": "raw/source/figures/cliport1.png",
+          "bytes": 100676,
+          "sha256": "35d6c35c813df505733b06c3e08eac46947b8bffca4462c56aa543bffa534c76"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/cliport2.png",
+          "raw_path": "raw/source/figures/cliport2.png",
+          "bytes": 178182,
+          "sha256": "2813621bea260f96ab8ccf5d88aa355bbf074dc55603824eb4b4bbefa73fe09b"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/mobility.png",
+          "raw_path": "raw/source/figures/mobility.png",
+          "bytes": 293036,
+          "sha256": "fd5027c6029cea44c5089aa1a2fd6dcb9b193b74c250a4ce762ffba8b5a9504f"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/lmnav.png",
+          "raw_path": "raw/source/figures/lmnav.png",
+          "bytes": 1093739,
+          "sha256": "cf6eb8e0dc41796a3aa2f7c3f98b363c2e1993f7271ffafdc8888953d022aa07"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/rt2.png",
+          "raw_path": "raw/source/figures/rt2.png",
+          "bytes": 472148,
+          "sha256": "01db48beb13ac146d0c6816c6c2360f324f347c94818ff6055ad5bfa386f3860"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/magma.png",
+          "raw_path": "raw/source/figures/magma.png",
+          "bytes": 513347,
+          "sha256": "6420696263661650fc4cdbd29f26d7b9b8f8b26df4dca0fc51e6e4075027c477"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/pizero.png",
+          "raw_path": "raw/source/figures/pizero.png",
+          "bytes": 1044405,
+          "sha256": "fab8dd27aad5e218c1d1fb78d2e62cd28012a1dcfeb9977ea970099ffa4e4987"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/sokoban.png",
+          "raw_path": "raw/source/figures/sokoban.png",
+          "bytes": 8792,
+          "sha256": "f2fd0c5fb682bbd27022d7aa7d5b7920eb62fa4f7cba1d6d7c32784008e8c2be"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/alfworld.png",
+          "raw_path": "raw/source/figures/alfworld.png",
+          "bytes": 323963,
+          "sha256": "8c8b0d2bc4db10f7d1f9bc74e4456900958a17a16f971bfce513c0efcab14cc2"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/worldgpt.png",
+          "raw_path": "raw/source/figures/worldgpt.png",
+          "bytes": 283722,
+          "sha256": "aa54a796f825f51286e31fc0299e14c041bb5a182131ffeb182360dee85e6b48"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/webdreamer.png",
+          "raw_path": "raw/source/figures/webdreamer.png",
+          "bytes": 76571,
+          "sha256": "8c55bdadb30906de798a233652110d35437b990b32e5d56c8c1c53fed5a20605"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/worldcoder.png",
+          "raw_path": "raw/source/figures/worldcoder.png",
+          "bytes": 68229,
+          "sha256": "6510101db6872bc2cca6cf8f2b37dc75a68ea79e1cc769df934beef42197677c"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/balrog.png",
+          "raw_path": "raw/source/figures/balrog.png",
+          "bytes": 117736,
+          "sha256": "ef378dff4318f7c03112653cb1efddd9a0dfcbe19f5ff5ae3357545d5caabbec"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/balrogarch.png",
+          "raw_path": "raw/source/figures/balrogarch.png",
+          "bytes": 649829,
+          "sha256": "2209fd1ff2ce9084fca3ed4af6f5b42c186b3d688c551e4d2ea35a98e6a7f4c1"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/react.png",
+          "raw_path": "raw/source/figures/react.png",
+          "bytes": 508189,
+          "sha256": "9b42d80c49305165b413191cbc4de7eb85fc63ce7646456107d3d21a6efc2648"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/reflexion-code.png",
+          "raw_path": "raw/source/figures/reflexion-code.png",
+          "bytes": 257267,
+          "sha256": "b347d6c1c72f341558d91d9b419895b00e5297e37a411aea06af210ad7319730"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/alpha.png",
+          "raw_path": "raw/source/figures/alpha.png",
+          "bytes": 540739,
+          "sha256": "e285385dffa0b498718ddae4cc1aaf9d5416afb6c791c366242deceb6c09cf14"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/rainbow.png",
+          "raw_path": "raw/source/figures/rainbow.png",
+          "bytes": 969563,
+          "sha256": "7cf504090781a2100c811dd5a1b42e7a7a83c69103ecea91091c31d0e238c637"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/rainbow2.png",
+          "raw_path": "raw/source/figures/rainbow2.png",
+          "bytes": 959251,
+          "sha256": "c1d455b98f3d7a38e8790e1a80b0ad3eb5737a1902530c5dc5a6a1b2d3a02368"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/assist.png",
+          "raw_path": "raw/source/figures/assist.png",
+          "bytes": 98082,
+          "sha256": "456d3a8ff585cae41ac5c818a2780c5a136b392a9858b9443e4084d4a32f921d"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/medco.png",
+          "raw_path": "raw/source/figures/medco.png",
+          "bytes": 1494073,
+          "sha256": "a51775c2b7eb4fc7fed00bad34c70418be05c25697ea5df3d21f4e45b44cd378"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/swe.png",
+          "raw_path": "raw/source/figures/swe.png",
+          "bytes": 179074,
+          "sha256": "65414b6434fb019c0ddaa7f841ee1914476ed6720da6cf75e40686a439405db3"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/egosocialarena.png",
+          "raw_path": "raw/source/figures/egosocialarena.png",
+          "bytes": 1511682,
+          "sha256": "f39672f5e2ce1ce3e3d8834e00faaa34887744f167d8204047ddfcd7c3269529"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/tombench.png",
+          "raw_path": "raw/source/figures/tombench.png",
+          "bytes": 620549,
+          "sha256": "44703a510bbf153cf16879b69bc77227adf0d479af69eb1ffa4cc6b79e7f2ff4"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/radar.png",
+          "raw_path": "raw/source/figures/radar.png",
+          "bytes": 138799,
+          "sha256": "f2a6af2d648c3348bd388852ae44a102d3e00193c431f135e2fe665d31757619"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/llmcoordinationbank.jpg",
+          "raw_path": "raw/source/figures/llmcoordinationbank.jpg",
+          "bytes": 710679,
+          "sha256": "54e1484ac308d6429384071c582dd50bc9f4cfbd3e0fb8d2dcaf70ff02ed531a"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/water.png",
+          "raw_path": "raw/source/figures/water.png",
+          "bytes": 214046,
+          "sha256": "6da4a42465d7e158ed8ac25f731484c7faeb4550c36aff8d7e847360add2097a"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/CAMEL.png",
+          "raw_path": "raw/source/figures/CAMEL.png",
+          "bytes": 404034,
+          "sha256": "9eb5967c0f910c5c10fd27bb03c20ee9f700c321052d68b0fffdfe8dd1144ff4"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/chateval.png",
+          "raw_path": "raw/source/figures/chateval.png",
+          "bytes": 180400,
+          "sha256": "6519a27f2b58a70ee5bfaac22b97640c4e15743790324ddcd028f180b0c9a1e2"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/chatdev2.jpg",
+          "raw_path": "raw/source/figures/chatdev2.jpg",
+          "bytes": 166923,
+          "sha256": "c729e80c60029a2a646a3105838b1c24b9f58d20e2375bc16d13a2d62a0398bb"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/sotopia.jpg",
+          "raw_path": "raw/source/figures/sotopia.jpg",
+          "bytes": 311180,
+          "sha256": "88efa24bd741025a5ffb452b995d90a067a6f5164e28fa702a09b637ac0c2586"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/abm.png",
+          "raw_path": "raw/source/figures/abm.png",
+          "bytes": 277835,
+          "sha256": "1e9af6d0184bd4e23bb4b5e391c928f73b644f82db34b8516c9fc67e0a9a6a87"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/struct.png",
+          "raw_path": "raw/source/figures/struct.png",
+          "bytes": 190202,
+          "sha256": "a2ea0a4befc2df8c78fc7c712a5dcd4147e17d86fc182d781f2e945035150f81"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/simulacra1.png",
+          "raw_path": "raw/source/figures/simulacra1.png",
+          "bytes": 310859,
+          "sha256": "fe8598a840a3be9d857219de171920a3b001f347b7c1f3d456880225939b671b"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/simulacra2.png",
+          "raw_path": "raw/source/figures/simulacra2.png",
+          "bytes": 941599,
+          "sha256": "bd820077f868d331245976e1ae6203f1b6becaddc4a20305a14a8b753eeca595"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/oasis.png",
+          "raw_path": "raw/source/figures/oasis.png",
+          "bytes": 482212,
+          "sha256": "d2eb733b8a9cf2f902ff37b8ecf34bfd718c6189afbbb4fcb94ed833fc4bfe91"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/agentverse.png",
+          "raw_path": "raw/source/figures/agentverse.png",
+          "bytes": 879229,
+          "sha256": "3054102d1b6f19b8805e2648bdf2fc89e84d14c97f017731e689589bfc0f60f1"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/evolutionary1.png",
+          "raw_path": "raw/source/figures/evolutionary1.png",
+          "bytes": 153569,
+          "sha256": "69904d3082e494736ddf2851799df0e1882b2957e89e83fe4bef8c140bea9949"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/som.png",
+          "raw_path": "raw/source/figures/som.png",
+          "bytes": 808878,
+          "sha256": "851275532235c92690d7f1ee4a652a622ca639f6cfa3f511e1cc9e874d1a2978"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part6/visuals/data_stock.png",
+          "raw_path": "raw/source/part6/visuals/data_stock.png",
+          "bytes": 155637,
+          "sha256": "5a978c29718ea9282069f0ad949a9ddfadf4fc851c659830a5a34a4e9d5ca2f5"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part6/visuals/student_learner.png",
+          "raw_path": "raw/source/part6/visuals/student_learner.png",
+          "bytes": 100102,
+          "sha256": "7a827641c775d43f802bf90a4a711b53829eb015a877bae22b31eecc2a040f1f"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part6/visuals/unnatural.png",
+          "raw_path": "raw/source/part6/visuals/unnatural.png",
+          "bytes": 145878,
+          "sha256": "8a81f8e4b1d1d1894ca6f90bf26f94fc35c2022f3bd28fe666b812baf34bb907"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/part6/visuals/self-instruct.png",
+          "raw_path": "raw/source/part6/visuals/self-instruct.png",
+          "bytes": 175258,
+          "sha256": "cd35ec3a60704965ba5ab124c071bc707f95851cbdf80c180813549494f01daa"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/cartpole.png",
+          "raw_path": "raw/source/figures/cartpole.png",
+          "bytes": 43572,
+          "sha256": "3c66c03a8987488d3687dda6f86fdb0bd905913e13a9981d059ab0f8312ee196"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/metaharness.png",
+          "raw_path": "raw/source/figures/metaharness.png",
+          "bytes": 181737,
+          "sha256": "620165f803a17d3aa43c9afbcc6f42c57f161f1e2192d6d59dec7f26815c7fca"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/shepherd.png",
+          "raw_path": "raw/source/figures/shepherd.png",
+          "bytes": 1693811,
+          "sha256": "3cbf98e72fda45a89a56ed31d7b25e36d7580c8a3405a4160b374b35ac8b3c14"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1/figures/MI-concepts.png",
+          "raw_path": "raw/source/figures/MI-concepts.png",
+          "bytes": 650320,
+          "sha256": "49832f3998e4b71377d5608a946a8d4f71b5e7321c1995b4d296165a1ba3cd8d"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1#Ch2.F4.pic1",
+          "raw_path": "raw/assets/Ch2.F4.pic1.svg",
+          "bytes": 5656,
+          "sha256": "fd0e7c5437cd7e436b6541ce3eed29b5e4848b73183e1321df8bb89daef57a0d"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1#Ch7.F22.pic1",
+          "raw_path": "raw/assets/Ch7.F22.pic1.svg",
+          "bytes": 5664,
+          "sha256": "b15b21cbb35174d22d66cecfbc8ee24480f2ecfc3793ab856a73bb194b1fe4c8"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1#Ch7.F23.pic1",
+          "raw_path": "raw/assets/Ch7.F23.pic1.svg",
+          "bytes": 7832,
+          "sha256": "1f596d3e68037ca8142fae976e8b2fe03ea948f9fb10d1d5fe72340727627b91"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1#Ch9.F1.pic1",
+          "raw_path": "raw/assets/Ch9.F1.pic1.svg",
+          "bytes": 5656,
+          "sha256": "83f9d7fd5052141f8c056aa4d465225f9e4402dfedf61a45d71125ba26bbd7d5"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1#Ch9.F2.pic1",
+          "raw_path": "raw/assets/Ch9.F2.pic1.svg",
+          "bytes": 5671,
+          "sha256": "dfe191f1a8139c6edbd28b71e3f535f87d41b1bedfe43067c755e13f2cdb043a"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1#Ch9.F3.pic1",
+          "raw_path": "raw/assets/Ch9.F3.pic1.svg",
+          "bytes": 6202,
+          "sha256": "aec172ffbc50019139917721d2438c2b70e88ab7377ba0fe9d544f7da2558b5b"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1#Ch9.F4.pic1",
+          "raw_path": "raw/assets/Ch9.F4.pic1.svg",
+          "bytes": 3631,
+          "sha256": "3e61168c860ccec5da985c3f6d29419cd607e972345d9c7a753a898af7aaebd4"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1#Ch9.F5.pic1",
+          "raw_path": "raw/assets/Ch9.F5.pic1.svg",
+          "bytes": 3666,
+          "sha256": "c235e7a86fa4ad5b16fc392357aa508d07b63bec57eda956558788cd52a1fa4a"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1#Ch9.F6.pic1",
+          "raw_path": "raw/assets/Ch9.F6.pic1.svg",
+          "bytes": 7081,
+          "sha256": "922e293c2b52a32fc3a3ea31599d2de7786aa3fe295da0c9b987f48582787b77"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1#Ch9.F7.pic1",
+          "raw_path": "raw/assets/Ch9.F7.pic1.svg",
+          "bytes": 15431,
+          "sha256": "c7457b4365376c390c78ef0fb64433d07961eb50e0faf137a10ecf1d99c42a6f"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1#Ch9.F8.pic1",
+          "raw_path": "raw/assets/Ch9.F8.pic1.svg",
+          "bytes": 5905,
+          "sha256": "71f019afbb4a4cca5e6ced7838837256772efe273527b3d0196a11804fb86ba7"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1#Ch19.F2.pic1",
+          "raw_path": "raw/assets/Ch19.F2.pic1.svg",
+          "bytes": 17224,
+          "sha256": "31f30d9772dccf921a2c0c24a0017ffeba9f6951b0250e7b4592bfc736216e17"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1#Ch20.F2.pic1",
+          "raw_path": "raw/assets/Ch20.F2.pic1.svg",
+          "bytes": 5664,
+          "sha256": "6149585c3cb3369ed9e8c0acdd37606873bf897710c615c2e07f00e01ae3cbad"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1#Ch20.F3.pic1",
+          "raw_path": "raw/assets/Ch20.F3.pic1.svg",
+          "bytes": 5808,
+          "sha256": "ca87378b6279c63eca9c95fdba411421f255224d8e5406b528eff89eea4fa625"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1#Ch21.F3.pic1",
+          "raw_path": "raw/assets/Ch21.F3.pic1.svg",
+          "bytes": 20216,
+          "sha256": "fcb8dd9453a37db803e964253b434fe46a22d974fbc7e9fd914d629e3169a78f"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1#Ch21.F4.pic1",
+          "raw_path": "raw/assets/Ch21.F4.pic1.svg",
+          "bytes": 24137,
+          "sha256": "234b28569c6b880b7f63fb98ec9b75b3027cce92dfdc463a59f31c7ae84920db"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1#Ch21.F5.pic1",
+          "raw_path": "raw/assets/Ch21.F5.pic1.svg",
+          "bytes": 15357,
+          "sha256": "d7c0dca56316b92f192e3f8582030e78b43096249ffbd9662b3160ace4d10fa5"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1#Ch21.F6.pic1",
+          "raw_path": "raw/assets/Ch21.F6.pic1.svg",
+          "bytes": 18436,
+          "sha256": "4f96cd4dcce8ff752c7fc2ea2fe998b295eac554d854885311bfe9db51a7f823"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1#Ch21.F7.pic1",
+          "raw_path": "raw/assets/Ch21.F7.pic1.svg",
+          "bytes": 39133,
+          "sha256": "9603af52f80da7dd75ae89fb7033f5c72b2ceb7c354049c7a9a393c81fa5acf6"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.13455v1#Ch22.F1.pic1",
+          "raw_path": "raw/assets/Ch22.F1.pic1.svg",
+          "bytes": 17219,
+          "sha256": "19373b77d22fa08fecc0465d973e7ad678374fa3f03d0ed4076cf2632f6b3c4d"
+        }
+      ],
+      "markdown_path": "markdown/book/full-book-html.md"
+    },
+    {
+      "id": "originals/book-source.tar.gz",
+      "title": "Original TeX source archive",
+      "url": "https://arxiv.org/src/2610.13455v1",
+      "category": "originals",
+      "retrieved_at": "2026-11-13T16:41:21.614035+00:00",
+      "notes": [
+        "All original TeX and figure files are preserved in raw/source. Downloaded code was not executed."
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/src/2610.13455v1",
+      "content_type": "application/gzip",
+      "raw_path": "raw/originals/book-source.tar.gz",
+      "bytes": 42761992,
+      "sha256": "899a3463faf4fe381ee8fa7f36cd9bb2aa55cbbedda48a1380ac59523aa014c4",
+      "download_status": "downloaded",
+      "conversion_status": "not_applicable",
+      "conversion_method": "original-source-archive"
+    },
+    {
+      "id": "book/full-book-pdf",
+      "title": "Full book PDF: 472 pages",
+      "url": "https://arxiv.org/pdf/2610.13455v1",
+      "category": "book",
+      "retrieved_at": "2026-11-13T16:42:05.704063+00:00",
+      "notes": [
+        "Text extraction preserves source text block order and page boundaries. Read the original PDF for figures, equations, and exact layout.",
+        "Pages with little or no extractable text: 2, 14, 26, 28, 122, 124, 190, 192, 224, 226, 284, 286, 360, 362, 458, 460"
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/pdf/2610.13455v1",
+      "content_type": "application/pdf",
+      "raw_path": "raw/book/full-book-pdf.pdf",
+      "bytes": 31037280,
+      "sha256": "1db992a5135cafed50d1e53d90a92d8fceeb1f7052ccfb42edccf2aadd887461",
+      "download_status": "downloaded",
+      "page_count": 472,
+      "conversion_method": "pymupdf-text-by-page",
+      "conversion_status": "converted_with_limitations",
+      "markdown_path": "markdown/book/full-book-pdf.md"
+    },
+    {
+      "id": "chapters/chapter-01-introduction",
+      "title": "Chapter 1 Introduction",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch1",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch1",
+      "markdown_path": "markdown/chapters/chapter-01-introduction.md"
+    },
+    {
+      "id": "chapters/chapter-02-foundations-of-language-modeling-with-llms",
+      "title": "Chapter 2 Foundations of Language Modeling with LLMs",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch2",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch2",
+      "markdown_path": "markdown/chapters/chapter-02-foundations-of-language-modeling-with-llms.md"
+    },
+    {
+      "id": "chapters/chapter-03-the-large-language-model-training-pipeline",
+      "title": "Chapter 3 The Large Language Model Training Pipeline",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch3",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch3",
+      "markdown_path": "markdown/chapters/chapter-03-the-large-language-model-training-pipeline.md"
+    },
+    {
+      "id": "chapters/chapter-04-scaling-laws-and-efficient-large-language-models",
+      "title": "Chapter 4 Scaling Laws and Efficient Large Language Models",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch4",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch4",
+      "markdown_path": "markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md"
+    },
+    {
+      "id": "chapters/chapter-05-case-study-1-building-llms-from-scratch",
+      "title": "Chapter 5 Case Study 1: Building LLMs from Scratch",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch5",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch5",
+      "markdown_path": "markdown/chapters/chapter-05-case-study-1-building-llms-from-scratch.md"
+    },
+    {
+      "id": "chapters/chapter-06-multi-step-reasoning-in-llms",
+      "title": "Chapter 6 Multi-step Reasoning in LLMs",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch6",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch6",
+      "markdown_path": "markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md"
+    },
+    {
+      "id": "chapters/chapter-07-vision-action-and-world-models",
+      "title": "Chapter 7 Vision, Action and World Models",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch7",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch7",
+      "markdown_path": "markdown/chapters/chapter-07-vision-action-and-world-models.md"
+    },
+    {
+      "id": "chapters/chapter-08-metalearning",
+      "title": "Chapter 8 Metalearning",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch8",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch8",
+      "markdown_path": "markdown/chapters/chapter-08-metalearning.md"
+    },
+    {
+      "id": "chapters/chapter-09-interaction-styles-for-agentic-llms",
+      "title": "Chapter 9 Interaction Styles for Agentic LLMs",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch9",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch9",
+      "markdown_path": "markdown/chapters/chapter-09-interaction-styles-for-agentic-llms.md"
+    },
+    {
+      "id": "chapters/chapter-10-case-study-2-balrog-for-llm-reasoning-and-reflection",
+      "title": "Chapter 10 Case Study 2: BALROG for LLM Reasoning and Reflection",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch10",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch10",
+      "markdown_path": "markdown/chapters/chapter-10-case-study-2-balrog-for-llm-reasoning-and-reflection.md"
+    },
+    {
+      "id": "chapters/chapter-11-how-agents-use-tools-to-act-in-the-world",
+      "title": "Chapter 11 How Agents Use Tools to Act in the World",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch11",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch11",
+      "markdown_path": "markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md"
+    },
+    {
+      "id": "chapters/chapter-12-search-and-retrieval-in-agentic-llms",
+      "title": "Chapter 12 Search and Retrieval in Agentic LLMs",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch12",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch12",
+      "markdown_path": "markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md"
+    },
+    {
+      "id": "chapters/chapter-13-from-tools-to-assistants-real-world-applications",
+      "title": "Chapter 13 From Tools to Assistants: Real-World Applications",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch13",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch13",
+      "markdown_path": "markdown/chapters/chapter-13-from-tools-to-assistants-real-world-applications.md"
+    },
+    {
+      "id": "chapters/chapter-14-case-study-3-building-a-multi-agent-diagnosis-framework",
+      "title": "Chapter 14 Case Study 3: Building a Multi-Agent Diagnosis Framework",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch14",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch14",
+      "markdown_path": "markdown/chapters/chapter-14-case-study-3-building-a-multi-agent-diagnosis-framework.md"
+    },
+    {
+      "id": "chapters/chapter-15-studying-behavior-of-agentic-llms",
+      "title": "Chapter 15 Studying Behavior of Agentic LLMs",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch15",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch15",
+      "markdown_path": "markdown/chapters/chapter-15-studying-behavior-of-agentic-llms.md"
+    },
+    {
+      "id": "chapters/chapter-16-role-based-interaction-in-multi-llm-systems",
+      "title": "Chapter 16 Role-Based Interaction in Multi-LLM Systems",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch16",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch16",
+      "markdown_path": "markdown/chapters/chapter-16-role-based-interaction-in-multi-llm-systems.md"
+    },
+    {
+      "id": "chapters/chapter-17-emergent-behavior-in-multi-llm-systems",
+      "title": "Chapter 17 Emergent Behavior in Multi-LLM Systems",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch17",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch17",
+      "markdown_path": "markdown/chapters/chapter-17-emergent-behavior-in-multi-llm-systems.md"
+    },
+    {
+      "id": "chapters/chapter-18-case-study-4-simulating-societies-with-llm-agents",
+      "title": "Chapter 18 Case Study 4: Simulating Societies with LLM Agents",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch18",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch18",
+      "markdown_path": "markdown/chapters/chapter-18-case-study-4-simulating-societies-with-llm-agents.md"
+    },
+    {
+      "id": "chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms",
+      "title": "Chapter 19 *Synthetic Data Generation for Training Agentic LLMs",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch19",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch19",
+      "markdown_path": "markdown/chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms.md"
+    },
+    {
+      "id": "chapters/chapter-20-advanced-transformer-and-agentic-architectures",
+      "title": "Chapter 20 *Advanced Transformer and Agentic Architectures",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch20",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch20",
+      "markdown_path": "markdown/chapters/chapter-20-advanced-transformer-and-agentic-architectures.md"
+    },
+    {
+      "id": "chapters/chapter-21-mechanistic-interpretability-for-llm-agents",
+      "title": "Chapter 21 *Mechanistic Interpretability for LLM Agents",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch21",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch21",
+      "markdown_path": "markdown/chapters/chapter-21-mechanistic-interpretability-for-llm-agents.md"
+    },
+    {
+      "id": "chapters/chapter-22-cognitive-perspectives-on-agentic-llms",
+      "title": "Chapter 22 *Cognitive Perspectives on Agentic LLMs",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch22",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch22",
+      "markdown_path": "markdown/chapters/chapter-22-cognitive-perspectives-on-agentic-llms.md"
+    },
+    {
+      "id": "chapters/chapter-23-future-directions-for-agentic-llms",
+      "title": "Chapter 23 Future Directions for Agentic LLMs",
+      "url": "https://arxiv.org/html/2610.13455v1#Ch23",
+      "category": "chapters",
+      "retrieved_at": "2026-11-13T16:41:17.579179+00:00",
+      "download_status": "downloaded",
+      "conversion_status": "converted",
+      "conversion_method": "arxiv-html-chapter-with-latex-and-local-figures",
+      "raw_path": "raw/originals/book.html",
+      "bytes": 4086174,
+      "sha256": "a65cda084960fc6fa7bbc95bccb26aa12f486541ebc5d9cc0cd795c93d1dcf4c",
+      "notes": [
+        "Derived from the full original HTML; raw source contains the whole book."
+      ],
+      "source_section": "Ch23",
+      "markdown_path": "markdown/chapters/chapter-23-future-directions-for-agentic-llms.md"
+    }
+  ],
+  "notes": [
+    "This archive contains the complete 472-page PDF, full experimental arXiv HTML, and original TeX/figure source archive for version 1, submitted October 9, 2026.",
+    "Use CONTENTS.md and the 23 chapter files for reading. The full HTML Markdown also preserves part headings and front matter. HTML math is preserved as LaTeX, and internal references link to local chapter anchors.",
+    "The HTML is arXiv's experimental source rendering. The original PDF is the reference for exact layout and for any source-to-HTML differences. The bibliography is included in the book text but linked papers were not downloaded."
+  ],
+  "authors": [
+    "Max van Duijn",
+    "Michiel van der Meer",
+    "Aske Plaat",
+    "Niki van Stein"
+  ],
+  "counts": {
+    "materials": 27,
+    "downloaded": 27,
+    "markdown_files": 26,
+    "gaps": 0
+  }
+}

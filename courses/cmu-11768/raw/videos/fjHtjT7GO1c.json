@@ -1,0 +1,227 @@
+[
+  {
+    "text": "hey I'm Scott from cognition Ai and",
+    "start": 2.919,
+    "duration": 3.601
+  },
+  {
+    "text": "today I'm really excited to introduce",
+    "start": 5.16,
+    "duration": 3.96
+  },
+  {
+    "text": "you to Devon the first AI software",
+    "start": 6.52,
+    "duration": 4.76
+  },
+  {
+    "text": "engineer let me show you an example of",
+    "start": 9.12,
+    "duration": 4.2
+  },
+  {
+    "text": "Devon in",
+    "start": 11.28,
+    "duration": 3.8
+  },
+  {
+    "text": "action I'm going to ask Devon to",
+    "start": 13.32,
+    "duration": 3.12
+  },
+  {
+    "text": "Benchmark the performance of llama and a",
+    "start": 15.08,
+    "duration": 2.88
+  },
+  {
+    "text": "couple different API",
+    "start": 16.44,
+    "duration": 3.96
+  },
+  {
+    "text": "providers from now on Devon is in the",
+    "start": 17.96,
+    "duration": 3.36
+  },
+  {
+    "text": "driver's",
+    "start": 20.4,
+    "duration": 3.199
+  },
+  {
+    "text": "seat first Devon makes a step-by-step",
+    "start": 21.32,
+    "duration": 5.279
+  },
+  {
+    "text": "plan of how to tackle the",
+    "start": 23.599,
+    "duration": 3.0
+  },
+  {
+    "text": "problem after that it builds the whole",
+    "start": 26.64,
+    "duration": 3.399
+  },
+  {
+    "text": "project using all the same tools that",
+    "start": 28.64,
+    "duration": 4.2
+  },
+  {
+    "text": "human software engineer would use Devon",
+    "start": 30.039,
+    "duration": 5.36
+  },
+  {
+    "text": "has its own command",
+    "start": 32.84,
+    "duration": 6.2
+  },
+  {
+    "text": "line its own code",
+    "start": 35.399,
+    "duration": 3.641
+  },
+  {
+    "text": "editor and even its own",
+    "start": 39.079,
+    "duration": 5.0
+  },
+  {
+    "text": "browser in this case Devon decides to",
+    "start": 41.92,
+    "duration": 3.6
+  },
+  {
+    "text": "use the browser to pull up API",
+    "start": 44.079,
+    "duration": 3.16
+  },
+  {
+    "text": "documentation so that it can read up and",
+    "start": 45.52,
+    "duration": 5.0
+  },
+  {
+    "text": "learn how to plug into each of these",
+    "start": 47.239,
+    "duration": 3.281
+  },
+  {
+    "text": "apis here Deon runs into an unexpected",
+    "start": 51.76,
+    "duration": 4.56
+  },
+  {
+    "text": "error Devon actually decides to add a",
+    "start": 58.92,
+    "duration": 4.279
+  },
+  {
+    "text": "debugging print",
+    "start": 61.039,
+    "duration": 4.12
+  },
+  {
+    "text": "statement reruns the code with the",
+    "start": 63.199,
+    "duration": 4.361
+  },
+  {
+    "text": "debugging print statement and then uses",
+    "start": 65.159,
+    "duration": 4.241
+  },
+  {
+    "text": "the error in the logs to figure out how",
+    "start": 67.56,
+    "duration": 4.32
+  },
+  {
+    "text": "to fix the",
+    "start": 69.4,
+    "duration": 2.48
+  },
+  {
+    "text": "bug finally Devon decides to build and",
+    "start": 74.0,
+    "duration": 4.159
+  },
+  {
+    "text": "deploy a website with full styling as",
+    "start": 76.32,
+    "duration": 3.92
+  },
+  {
+    "text": "the",
+    "start": 78.159,
+    "duration": 5.801
+  },
+  {
+    "text": "visualization you can see the website",
+    "start": 80.24,
+    "duration": 5.839
+  },
+  {
+    "text": "here all of this is possible today",
+    "start": 83.96,
+    "duration": 3.32
+  },
+  {
+    "text": "because of the advancements that we've",
+    "start": 86.079,
+    "duration": 2.521
+  },
+  {
+    "text": "made in both reasoning and long-term",
+    "start": 87.28,
+    "duration": 4.08
+  },
+  {
+    "text": "planning it's hard problem and we've",
+    "start": 88.6,
+    "duration": 4.519
+  },
+  {
+    "text": "only just started but we're super",
+    "start": 91.36,
+    "duration": 3.0
+  },
+  {
+    "text": "excited about the progress that we've",
+    "start": 93.119,
+    "duration": 2.161
+  },
+  {
+    "text": "made so",
+    "start": 94.36,
+    "duration": 3.079
+  },
+  {
+    "text": "far in the meantime if you'd like to try",
+    "start": 95.28,
+    "duration": 4.92
+  },
+  {
+    "text": "out Devon on your own real world tasks",
+    "start": 97.439,
+    "duration": 4.241
+  },
+  {
+    "text": "send us a request below and we'd be",
+    "start": 100.2,
+    "duration": 4.36
+  },
+  {
+    "text": "happy to forward it to",
+    "start": 101.68,
+    "duration": 2.88
+  },
+  {
+    "text": "Devon",
+    "start": 108.399,
+    "duration": 3.0
+  }
+]

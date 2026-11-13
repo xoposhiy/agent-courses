@@ -1,0 +1,23 @@
+# Homework 1 public teaching repository: assignments/OMIM_620938/grill_run/tasks/0004_ground_1/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620938/grill_run/tasks/0004_ground_1/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620938/grill_run/tasks/0004_ground_1/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "term": "NFU1",
+  "definition": "NFU1 is a gene encoding an iron-sulfur (Fe-S) cluster scaffold protein involved in mitochondrial Fe-S protein assembly; homozygous or compound heterozygous pathogenic variants in NFU1 are responsible for autosomal recessive spastic paraplegia 93 (SPG93) and multiple mitochondrial dysfunctions syndrome 1.",
+  "source": {
+    "title": "608100 - NFU1 IRON-SULFUR CLUSTER SCAFFOLD",
+    "authors": [],
+    "year": null,
+    "journal": null,
+    "doi": null,
+    "pmid": null,
+    "pmc": null,
+    "url": "https://omim.org/entry/608100",
+    "quote": "The NFU1 gene encodes a protein that plays an essential role in the production of iron-sulfur (Fe-S) clusters"
+  }
+}
+```

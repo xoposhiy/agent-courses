@@ -1,0 +1,50 @@
+# Homework 1 public teaching repository: assignments/OMIM_617988/grill_run/tasks/0036_screen_h16/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_617988/grill_run/tasks/0036_screen_h16/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_617988/grill_run/tasks/0036_screen_h16/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Ectodermal manifestations including dental anomalies are reported in Jaberi-Elahi syndrome but may be age-dependent and frequently absent in infants, making overall penetrance an active question.",
+  "confidence": 0.45,
+  "evidence": [
+    {
+      "text": "Ectodermal findings including dental, hair, and nail abnormalities are described as features of GTPBP2-associated syndrome, but they appear to be age-related and most prominent in older individuals rather than universally present.",
+      "stance": "neutral",
+      "source": {
+        "title": "Clinical delineation of GTPBP2\u2010associated neuro\u2010ectodermal syndrome: Report of two new families and review of the literature",
+        "authors": [
+          "MT Carter",
+          "S Venkateswaran"
+        ],
+        "year": 2019,
+        "journal": null,
+        "doi": "10.1111/cge.13523",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/cge.13523",
+        "quote": "Key features of this clinically recognizable condition include prenatal onset microcephaly, tone abnormalities, and movement disorders, epilepsy, dysmorphic features, retinal dysfunction, ectodermal dysplasia, and brain iron accumulation. Our findings suggest that some aspects of the clinical presentation appear to be age-related; brain iron accumulation may appear only after childhood, and the ectodermal findings and peripheral neuropathy are most prominent in older individuals."
+      },
+      "numbers": []
+    },
+    {
+      "text": "A 4-month-old infant with confirmed biallelic pathogenic GTPBP2 variant presented with microcephaly, developmental delay, and hypotonia without overt ectodermal abnormalities.",
+      "stance": "supports",
+      "source": {
+        "title": "Jaberi-Elahi syndrome - NIH Genetic Testing Registry (GTR)",
+        "authors": [],
+        "year": null,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.ncbi.nlm.nih.gov/gtr/conditions/C4693848",
+        "quote": "Additional findings included left-sided pes equinovarus, secundum atrial septal defect, and periventricular white matter abnormalities on brain magnetic resonance imaging (MRI). No overt ectodermal abnormalities were observed."
+      },
+      "numbers": []
+    }
+  ]
+}
+```

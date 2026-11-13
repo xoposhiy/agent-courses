@@ -1,0 +1,68 @@
+# Homework 1 public teaching repository: assignments/OMIM_620793/grill_run/tasks/0018_screen_h9/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620793/grill_run/tasks/0018_screen_h9/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620793/grill_run/tasks/0018_screen_h9/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Pathogenic biallelic SNUPN variants directly cause spinocerebellar ataxia and cerebellar atrophy via splicing defects in Purkinje cells, broadening the disease spectrum beyond isolated limb-girdle muscular dystrophy.",
+  "confidence": 0.95,
+  "evidence": [
+    {
+      "text": "Biallelic SNUPN variants were identified in families with spinocerebellar atrophy, and knock-in mouse models demonstrated cerebellar ataxia, cerebellar atrophy, and Purkinje cell splicing defects, indicating cerebellar pathology is an intrinsic feature of SNUPN dysfunction.",
+      "stance": "supports",
+      "source": {
+        "title": "SNUPN variants cause spinocerebellar atrophy by disrupting global splicing in cerebellar Purkinje cells",
+        "authors": [
+          "M Okubo",
+          "M Ogawa",
+          "N Eura",
+          "YU Inoue",
+          "K Dewa",
+          "T Owa"
+        ],
+        "year": 2026,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://academic.oup.com/brain/article-abstract/149/3/1007/8483316",
+        "quote": "Mutations in the SNUPN gene... have recently been implicated in limb-girdle muscular dystrophy... We identified pathogenic variants in the SNUPN gene in two families with spinocerebellar atrophy... These results expand the clinical spectrum of SNUPN-related disorders beyond skeletal muscle and highlight splicing dysregulation as a potential mechanism underlying cerebellar atrophy."
+      },
+      "numbers": [
+        {
+          "metric": "families identified with spinocerebellar atrophy",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "text": "SNUPN-related muscular dystrophy encompasses phenotypes ranging from pure muscular dystrophy to complex multi-system manifestations including spinocerebellar ataxia, neurodevelopmental symptoms, and asymptomatic cerebellar atrophy.",
+      "stance": "supports",
+      "source": {
+        "title": "SNUPN\u2010Related Muscular Dystrophy: Novel Phenotypic, Pathological and Functional Protein Insights",
+        "authors": [
+          "N Muelas",
+          "P Iruzubieta",
+          "A Damborenea"
+        ],
+        "year": 2026,
+        "journal": null,
+        "doi": "10.1002/acn3.70211",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/acn3.70211",
+        "quote": "SNUPN-related muscular dystrophy or LGMDR29 is a new entity that covers from a congenital or childhood onset pure muscular dystrophy to more complex phenotypes combining neurodevelopmental features, cataracts, or spinocerebellar ataxia... One patient presented with asymptomatic cerebellar atrophy."
+      },
+      "numbers": [
+        {
+          "metric": "distinct SNUPN pathogenic variants described",
+          "value": 12
+        }
+      ]
+    }
+  ]
+}
+```

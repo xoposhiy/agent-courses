@@ -1,0 +1,73 @@
+# Homework 1 public teaching repository: assignments/OMIM_621295/grill_run/tasks/0008_screen_h1/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621295/grill_run/tasks/0008_screen_h1/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621295/grill_run/tasks/0008_screen_h1/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Biallelic NOTCH3 variants show divergent phenotypes: biallelic cysteine-involving variants cause adult-onset CADASIL-like stroke/dementia, while biallelic loss-of-function variants present in infancy or childhood with neurodevelopmental impairment.",
+  "confidence": 0.65,
+  "evidence": [
+    {
+      "text": "Biallelic cysteine-involving missense variants lead to early adulthood-onset stroke and dementia within the CADASIL spectrum, whereas biallelic loss-of-function variants cause a neurodevelopmental disorder with childhood-onset stroke and spasticity.",
+      "stance": "supports",
+      "source": {
+        "title": "Clinical and neuroradiological spectrum of biallelic variants in NOTCH3",
+        "authors": [
+          "P Iruzubieta",
+          "CAPF Alves",
+          "AM Al Shamsi"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": "10.1016/j.ebiom.2024.105297",
+        "pmid": "39191170",
+        "pmc": null,
+        "url": "https://www.thelancet.com/journals/ebiom/article/PIIS2352-3964(24)00333-5/fulltext?uuid=uuid%3A96be62e9-7005-4bb8-a3db-0ba3a222ee3a",
+        "quote": "Biallelic loss-of-function variants (26 patients) lead to a neurodevelopmental disorder characterised by spasticity, childhood-onset stroke, and periatrial white matter volume loss resembling periventricular leukomalacia. Conversely, patients with biallelic cysteine-involving missense variants (24 patients) fall within CADASIL spectrum phenotype with early adulthood onset stroke, dementia, and deep white matter lesions without significant volume loss."
+      },
+      "numbers": [
+        {
+          "metric": "biallelic loss-of-function patients",
+          "value": 26
+        },
+        {
+          "metric": "biallelic cysteine-involving missense patients",
+          "value": 24
+        }
+      ]
+    },
+    {
+      "text": "Patients with biallelic loss-of-function NOTCH3 variants presented in infancy (9 to 14 months) with developmental delay, seizures, and cognitive impairment, rather than beginning in the 3rd to 5th decades of life.",
+      "stance": "contradicts",
+      "source": {
+        "title": "Early-onset vascular leukoencephalopathy caused by bi-allelic NOTCH3 variants",
+        "authors": [
+          "MD Stellingwerff",
+          "C Nulton",
+          "G Helman"
+        ],
+        "year": 2022,
+        "journal": null,
+        "doi": "10.1055/a-1739-2722",
+        "pmid": "35026854",
+        "pmc": null,
+        "url": "https://www.thieme-connect.com/products/ejournals/html/10.1055/a-1739-2722",
+        "quote": "The patients presented at 9 to 14 months of age with developmental delay, seizures, or both. The disease course was characterized by cognitive impairment and variably recurrent strokes, migraine attacks, and seizures."
+      },
+      "numbers": [
+        {
+          "metric": "minimum age at presentation in months",
+          "value": 9
+        },
+        {
+          "metric": "maximum age at presentation in months",
+          "value": 14
+        }
+      ]
+    }
+  ]
+}
+```

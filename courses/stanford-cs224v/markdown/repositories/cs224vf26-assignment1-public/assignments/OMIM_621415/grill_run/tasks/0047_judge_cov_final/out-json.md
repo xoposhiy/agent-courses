@@ -1,0 +1,39 @@
+# Homework 1 public teaching repository: assignments/OMIM_621415/grill_run/tasks/0047_judge_cov_final/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621415/grill_run/tasks/0047_judge_cov_final/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621415/grill_run/tasks/0047_judge_cov_final/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "fields": [
+    {
+      "field": "Clinical phenotypes reported in affected individuals with LRRC7 variants (OMIM #621415), including numerator and denominator counts per cohort, original paper wording, standard HPO term, and paper PMID/DOI citation",
+      "covered": false,
+      "contributing_aspects": []
+    },
+    {
+      "field": "Most discriminating findings that are present in most affected individuals but uncommon in disorders commonly confused with this condition, including names of those differential disorders and confidence in the distinction",
+      "covered": false,
+      "contributing_aspects": []
+    },
+    {
+      "field": "Findings looked for and found absent in affected individuals whose presence argues against the diagnosis",
+      "covered": true,
+      "contributing_aspects": [
+        "exclusionary_findings"
+      ]
+    },
+    {
+      "field": "Phenotype differences correlated with variant type, variant position, age, or sex",
+      "covered": false,
+      "contributing_aspects": []
+    },
+    {
+      "field": "Contradictory findings reported between different papers",
+      "covered": false,
+      "contributing_aspects": []
+    }
+  ]
+}
+```

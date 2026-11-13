@@ -1,0 +1,49 @@
+# Homework 1 public teaching repository: assignments/OMIM_618428/grill_run/tasks/0042_screen_h16/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_618428/grill_run/tasks/0042_screen_h16/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_618428/grill_run/tasks/0042_screen_h16/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature establishes YWHAZ S230W as a gain-of-function variant hyperactivating the RAS-ERK pathway associated with a CFC-like RASopathy phenotype in Popov-Chang syndrome.",
+  "confidence": 0.85,
+  "evidence": [
+    {
+      "text": "The S230W variant of YWHAZ enhances Raf-stimulated Erk phosphorylation and behaves as a gain-of-function mutation in the RAS-ERK pathway that underlies a cardiofaciocutaneous (CFC) syndrome phenotype.",
+      "stance": "supports",
+      "source": {
+        "title": "A YWHAZ Variant Associated With Cardiofaciocutaneous ...",
+        "authors": [
+          "IK Popov"
+        ],
+        "year": 2019,
+        "journal": null,
+        "doi": "10.3389/fphys.2019.00388/full",
+        "pmid": "31024343",
+        "pmc": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31024343/",
+        "quote": "Our data provide strong support to the hypothesis that the S230W variant of YWHAZ is a gain-of-function mutation in the RAS-ERK pathway and may underlie a CFC phenotype."
+      },
+      "numbers": []
+    },
+    {
+      "text": "Popov-Chang syndrome is linked to the YWHAZ Ser230Trp variant, exhibiting a gain-of-function effect with heightened Ras-Erk pathway signaling activity.",
+      "stance": "supports",
+      "source": {
+        "title": "Entry - *601288 - TYROSINE 3-MONOOXYGENASE/ ...",
+        "authors": [],
+        "year": null,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://omim.org/entry/601288",
+        "quote": "gain-of-function effect with increased activity of the Ras-Erk signaling ... 0001 POPOV-CHANG SYNDROME. YWHAZ, SER230TRP SNP: rs1554612377"
+      },
+      "numbers": []
+    }
+  ]
+}
+```

@@ -1,0 +1,322 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 8,
+    "text": "In the previous video, you explored the first half of the evaluation\nprocess, analyzing the agent's behavior, building test cases,"
+  },
+  {
+    "startInSeconds": 8,
+    "endInSeconds": 10,
+    "text": "and defining criteria for judging the results."
+  },
+  {
+    "startInSeconds": 10,
+    "endInSeconds": 14,
+    "text": "Now in this video, you'll explore the second half of this overview."
+  },
+  {
+    "startInSeconds": 14,
+    "endInSeconds": 20,
+    "text": "Here, your goal is to measure how well the agent performs\nand use those findings to guide improvements."
+  },
+  {
+    "startInSeconds": 20,
+    "endInSeconds": 25,
+    "text": "So, how do you turn those test cases and criteria into\nevidence that you can use?"
+  },
+  {
+    "startInSeconds": 25,
+    "endInSeconds": 30,
+    "text": "You start with evaluators, which check the agent's responses\nand actions against your criteria."
+  },
+  {
+    "startInSeconds": 30,
+    "endInSeconds": 35,
+    "text": "To do that, you run the agent on your test cases and record its\nresponses and actions."
+  },
+  {
+    "startInSeconds": 35,
+    "endInSeconds": 40,
+    "text": "Some checks also need supporting information, such as the records\nthat the agent used."
+  },
+  {
+    "startInSeconds": 40,
+    "endInSeconds": 44,
+    "text": "You can review the results yourself or work with someone who\nunderstands the task."
+  },
+  {
+    "startInSeconds": 44,
+    "endInSeconds": 49,
+    "text": "But reviewing every result takes time, especially when you keep\ntesting after changes."
+  },
+  {
+    "startInSeconds": 49,
+    "endInSeconds": 57,
+    "text": "Code evaluators and LLM judges let you automate some of that work.\nUse code when you can write an explicit rule to make the check."
+  },
+  {
+    "startInSeconds": 57,
+    "endInSeconds": 64,
+    "text": "For Northwind, a code evaluator could compare the recommended product\nand requested size with the stock records, then return a pass or fail."
+  },
+  {
+    "startInSeconds": 64,
+    "endInSeconds": 70,
+    "text": "Other checks require interpretation. For example,\ndo those clothes suit a winter camping trip?"
+  },
+  {
+    "startInSeconds": 70,
+    "endInSeconds": 77,
+    "text": "You can use an LLM to assess the recommendation using your rubric,\nthe customer's request, and relevant product information."
+  },
+  {
+    "startInSeconds": 77,
+    "endInSeconds": 85,
+    "text": "When an LLM evaluates results this way, it's called an LLM judge.\nYou can implement both types of evaluator in your own Python code."
+  },
+  {
+    "startInSeconds": 85,
+    "endInSeconds": 89,
+    "text": "An evaluation platform can help you run the checks\nand organize the results,"
+  },
+  {
+    "startInSeconds": 89,
+    "endInSeconds": 92,
+    "text": "but you don't need a particular platform to use these methods."
+  },
+  {
+    "startInSeconds": 92,
+    "endInSeconds": 97,
+    "text": "In these examples, we'll be using Phoenix,\nan open-source solution from Arize."
+  },
+  {
+    "startInSeconds": 97,
+    "endInSeconds": 101,
+    "text": "But before you rely on these evaluators, you need to check\nthat they're making the right judgments."
+  },
+  {
+    "startInSeconds": 101,
+    "endInSeconds": 107,
+    "text": "They can miss failures or flag acceptable results,\nwhich could mislead you about what needs improving."
+  },
+  {
+    "startInSeconds": 107,
+    "endInSeconds": 113,
+    "text": "So compare their judgments with human judgments of the same results\nusing the same criteria and investigate disagreements."
+  },
+  {
+    "startInSeconds": 113,
+    "endInSeconds": 116,
+    "text": "The reviewer or the criteria may need correcting too."
+  },
+  {
+    "startInSeconds": 116,
+    "endInSeconds": 122,
+    "text": "You can then bring those individual judgments together to see how well\nthe agent performs across your evaluation set."
+  },
+  {
+    "startInSeconds": 122,
+    "endInSeconds": 128,
+    "text": "Once you have evaluators that can judge the agent's work,\nyou need to find out how consistently it meets your requirements."
+  },
+  {
+    "startInSeconds": 128,
+    "endInSeconds": 134,
+    "text": "An LLM can handle a request correctly on one run and fail on another,\neven with the same input."
+  },
+  {
+    "startInSeconds": 134,
+    "endInSeconds": 137,
+    "text": "And it may handle some kinds of requests while struggling with others."
+  },
+  {
+    "startInSeconds": 137,
+    "endInSeconds": 142,
+    "text": "So a few successful responses aren't enough to establish\nthat it does the job reliably."
+  },
+  {
+    "startInSeconds": 142,
+    "endInSeconds": 146,
+    "text": "That's why you measure performance across different\ncases and repeated runs."
+  },
+  {
+    "startInSeconds": 146,
+    "endInSeconds": 153,
+    "text": "Metrics, such as how often a requirement is met, help you understand\nhow consistently the agent performs in the situations you've tested,"
+  },
+  {
+    "startInSeconds": 153,
+    "endInSeconds": 155,
+    "text": "and where it needs attention."
+  },
+  {
+    "startInSeconds": 155,
+    "endInSeconds": 160,
+    "text": "You can use those measurements to decide where to focus your efforts\nand check whether your changes actually help."
+  },
+  {
+    "startInSeconds": 160,
+    "endInSeconds": 166,
+    "text": "You'll explore the practical methods in the later modules,\nstarting with building and testing evaluators in Module 3."
+  },
+  {
+    "startInSeconds": 166,
+    "endInSeconds": 172,
+    "text": "That brings you to the fourth and final part of the evaluation\nprocess: using what you've learned to improve the agent."
+  },
+  {
+    "startInSeconds": 172,
+    "endInSeconds": 176,
+    "text": "You're going to want to first decide what needs attention."
+  },
+  {
+    "startInSeconds": 176,
+    "endInSeconds": 181,
+    "text": "Your results help you identify problems,\nbut how often something fails isn't the only consideration."
+  },
+  {
+    "startInSeconds": 181,
+    "endInSeconds": 185,
+    "text": "A less common mistake might matter more because of the\nharm it could cause."
+  },
+  {
+    "startInSeconds": 185,
+    "endInSeconds": 190,
+    "text": "Improvement can also mean adding a capability or reducing cost\nwhile keeping the quality you need."
+  },
+  {
+    "startInSeconds": 190,
+    "endInSeconds": 194,
+    "text": "Then, investigate the problem before deciding what to change."
+  },
+  {
+    "startInSeconds": 194,
+    "endInSeconds": 199,
+    "text": "Different problems call for different fixes,\nso you want your changes to address what's actually going wrong."
+  },
+  {
+    "startInSeconds": 199,
+    "endInSeconds": 204,
+    "text": "For example, if Northwind gives product advice that isn't\nsupported by its catalog,"
+  },
+  {
+    "startInSeconds": 204,
+    "endInSeconds": 208,
+    "text": "you might discover that its instructions never required it to stick\nto that information."
+  },
+  {
+    "startInSeconds": 208,
+    "endInSeconds": 211,
+    "text": "Adding that requirement would be one change to try."
+  },
+  {
+    "startInSeconds": 211,
+    "endInSeconds": 217,
+    "text": "Other problems might call for better information,\nchanges to the tools or workflow, or a different model."
+  },
+  {
+    "startInSeconds": 217,
+    "endInSeconds": 223,
+    "text": "You're using what you found to decide what to change,\nrather than trying fixes without understanding the problem."
+  },
+  {
+    "startInSeconds": 223,
+    "endInSeconds": 226,
+    "text": "But making that change doesn't establish that it worked."
+  },
+  {
+    "startInSeconds": 226,
+    "endInSeconds": 230,
+    "text": "You still need to test whether it improved performance and whether\nanything else got worse."
+  },
+  {
+    "startInSeconds": 230,
+    "endInSeconds": 234,
+    "text": "To find out, you compare the original agent with the\nversion you changed."
+  },
+  {
+    "startInSeconds": 234,
+    "endInSeconds": 240,
+    "text": "You run both on the same test cases, and judge them using the same\ncriteria and evaluators."
+  },
+  {
+    "startInSeconds": 240,
+    "endInSeconds": 245,
+    "text": "That way, you're comparing their performance without also\nchanging how you measure it."
+  },
+  {
+    "startInSeconds": 245,
+    "endInSeconds": 252,
+    "text": "You want to check whether the problem you targeted has improved, but\nalso whether the agent still does the work it was already doing well."
+  },
+  {
+    "startInSeconds": 252,
+    "endInSeconds": 260,
+    "text": "A change can help in one situation and cause problems in another.\nThat loss of previously working behavior is called a regression."
+  },
+  {
+    "startInSeconds": 260,
+    "endInSeconds": 265,
+    "text": "For Northwind, the new instruction might reduce\nunsupported product advice,"
+  },
+  {
+    "startInSeconds": 265,
+    "endInSeconds": 270,
+    "text": "but also lead to unnecessary tool calls and make responses\nslower or more expensive."
+  },
+  {
+    "startInSeconds": 270,
+    "endInSeconds": 275,
+    "text": "So you need to look at what got better and what got worse\nbefore deciding whether the change is worth keeping."
+  },
+  {
+    "startInSeconds": 275,
+    "endInSeconds": 280,
+    "text": "That comparison helps you decide whether to keep the change,\nrevise it, or try something else."
+  },
+  {
+    "startInSeconds": 280,
+    "endInSeconds": 287,
+    "text": "And you still need to consider whether the results meet your\nrequirements. Better than before doesn't necessarily mean good enough."
+  },
+  {
+    "startInSeconds": 287,
+    "endInSeconds": 294,
+    "text": "If the evidence is unclear, you may need more testing before making\nthat decision. That concludes this overview of the evaluation process."
+  },
+  {
+    "startInSeconds": 294,
+    "endInSeconds": 298,
+    "text": "As you test the agent and see how it handles real requests,"
+  },
+  {
+    "startInSeconds": 298,
+    "endInSeconds": 302,
+    "text": "you'll discover problems that lead to further improvements\nand new things to evaluate."
+  },
+  {
+    "startInSeconds": 302,
+    "endInSeconds": 307,
+    "text": "You'll explore the details of this process throughout the course,\nstarting in Module 2."
+  },
+  {
+    "startInSeconds": 307,
+    "endInSeconds": 312,
+    "text": "But before you can put this process into practice,\nyou need evidence of what the agent actually did."
+  },
+  {
+    "startInSeconds": 312,
+    "endInSeconds": 319,
+    "text": "The final output won't necessarily show you which information it used,\nwhich tools it called, or whether it skipped something important."
+  },
+  {
+    "startInSeconds": 319,
+    "endInSeconds": 325,
+    "text": "Traces record those steps so you can examine them and check whether\nthe agent did what it was supposed to do."
+  },
+  {
+    "startInSeconds": 325,
+    "endInSeconds": 330,
+    "text": "So you'll wrap up this module with a look at traces and how they give\nyou the evidence you need for evaluation."
+  }
+]

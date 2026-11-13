@@ -1,0 +1,26 @@
+{
+  "course": {
+    "id": "agentic-large-language-models",
+    "folder": "courses/agentic-large-language-models",
+    "raw_files": 265,
+    "markdown_files": 26,
+    "bytes": 128947266,
+    "local_links_checked": 770,
+    "broken_local_links": [],
+    "manifest_type": "dict",
+    "manifest_records": 27,
+    "statuses": {
+      "downloaded": 27
+    },
+    "conversion_statuses": {
+      "converted": 25,
+      "not_applicable": 1,
+      "converted_with_limitations": 1
+    },
+    "pdf_pages": 472
+  },
+  "chapter_anchor_links_checked": 2328,
+  "figure_checksums_checked": 110,
+  "errors": [],
+  "structural_checked_at": "2026-11-13T17:39:24.846270+00:00"
+}

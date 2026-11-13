@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/main.css">
+        <title></title>
+        <style>
+          /* Table styles */
+          table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+          }
+          table, th, td {
+            border-bottom: 1px solid #e0e0e0;
+          }
+          th, td {
+            padding: 12px 15px;
+            text-align: left;
+          }
+          th {
+            background-color: #f5f5f5;
+            font-weight: bold;
+          }
+          tbody tr:nth-child(odd) {
+            background-color: #fafafa;
+          }
+        </style>
+    </head>
+<body>
+  <div class="header">
+    <h1 class="title">CS 224V </h1>
+    <h2 class="subtitle">Agentic AI</h2>
+    <h2 class="subtitle">Fall 2026</h2>
+    <nav>
+      <a href="index.html">Info</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="CS224V_Readings.pdf">Readings</a>
+      <a href="projects.html">Projects</a>
+      <!-- <a href="assignments.html">Assignments</a>
+      <a href="project.html">project</a>
+      <a href="Readings.pdf">readings</a>-->
+    </nav>
+  </div>
+  <div class="panel overview">
+          <h2>Course Schedule</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Topic</th>
+                <th>Description</th>
+                <th>Events</th>
+                <th>Deadlines</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>9/23</td>
+                <td><a href="lectures_2026/l-introduction.pdf">Introduction</a></td>
+                <td>LLMs hallucinate. How to turn LLMs into useful, dependable agents? Concept of computational thinking. Carefully designed LLM-based algorithms for reading, writing, retrieving data; scientific research&mdash;curation, insight discovery. Accountable AI. Course design and outline.</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>9/28</td>
+                <td><a href="lectures_2026/I-DeepResearch.pdf">Knowledge Curation</a></td>
+                <td>How to use LLMs to curate knowledge in an open domain? Research in the pre-writing stage by iteratively searching and reading from different perspectives; adding interactivity to allow personalization. System: STORM / Co-STORM</td>
+                <td><a href="cs224v_2026_hw1.pdf">Homework 1 out</a></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>9/30</td>
+                <td>Research project ideas</td>
+                <td>What are the ongoing research projects that students can participate in? AOS architecture. Knowledge retrieval, curation, discovery. Harnesses: scientific reasoning, accountable decision making, conversational management. Domain-specific agents. Harness training.</td>
+                <td></td>
+                <td>Student intro form due</td>
+              </tr>
+              <tr>
+                <td>10/5</td>
+                <td><a href="lectures_2026/l-SMT-match.pdf">Accountable AI: SMT</a></td>
+                <td>Accountability means that LLMs can provide a faithful rationale that is sound and complete. High-stakes decision making such as clinical trial matching requires better recall and precision than conventional embedding-similarity based retrieval. Constraint-satisfaction-based retrieval. Formulating constraints as SMT (satisfiability modulo theories) permits the use of a theorem prover as an accountable decision maker. Systems: SatIR, VERDICT</td>
+                <td></td>
+                <td>Homework 1 due (Oct 6, 11:59PM)</td>
+              </tr>
+              <tr>
+                <td>10/7</td>
+                <td>Student project ideas</td>
+                <td>Students pitching preliminary project ideas</td>
+                <td><a href="cs224v_2026_hw2.pdf">Homework 2 out</a><br><a href="https://forms.gle/BD8VXCCkEGKLpMwG8">Project proposal assignment out</a></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>10/12</td>
+                <td><a href="lectures_2026/l-SATIR.pdf">Constraint Satisfaction Based Retrievers</a></td>
+                <td>How to create a high-recall, high-precision retriever for documents containing many constraints? The retriever needs to be scalable and should retrieve all the documents whose constraints are satisfied while introducing very few false positives. Canonicalization, logic implications, salience for data imputation. Projection from SMT to relational algebra. System: SatIR</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>10/14</td>
+                <td><a href="lectures_2026/l-SATIR.pdf">Constraint Satisfaction Based Retrievers</a> + Project Proposals</td>
+                <td>Continuation of constraint satisfaction based retrievers. Groups present their proposals.</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>10/19</td>
+                <td><a href="lectures_2026/l-freetext.pdf">How to RAG without hallucination</a></td>
+                <td>How to create a hallucination-free conversational bot grounded on free text? RAG text retrieval; Summarization; Verifying generation; Response generation; Factuality in Persuasive Agents.  Evaluation methodology. System: WikiChat</td>
+                <td></td>
+                <td>Homework 2 and project proposal due (Oct 18, 11:59PM)</td>
+              </tr>
+              <tr>
+                <td>10/21</td>
+                <td>Project Proposals</td>
+                <td>Groups present their proposals</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>10/26</td>
+                <td><a href="lectures_2026/l-agentic.pdf">Introduction to ReAct Agents for Querying Knowledge Bases and Graphs</a></td>
+                <td>The ability to query knowledge databases and graphs using natural language greatly improves access of non-CS professionals to large troves of data (e.g. Wikidata has 15B facts). Semantic parsing. ReAct agents. Systems: SPINACH (Wikidata), DataTalk (FEC)</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>10/28</td>
+                <td><a href="lectures_2026/l-data-driven-deep-research.pdf">Agentic Data-Driven Research</a></td>
+                <td>Can we use agents to assist in data-driven research, which requires extracting insights from large tables of data? Reproduction of published research is an important step in the scientific process; can an agent automatically reproduce published findings? Principles from Exploratory Data Analysis and Data Storytelling. Reframes deep research over structured data as a thesis-driven analytical process. System: DataSTORM</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>11/2</td>
+                <td><a href="lectures_2026/l-new-suql.pdf">Querying Hybrid (Structured and Unstructured) Data</a></td>
+                <td>How to answer questions combining structured and unstructured data? SUQL: the first query language that combines information retrieval (NL) with database queries (SQL); Language design; Evaluation methodology.</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>11/4</td>
+                <td><a href="lectures_2026/l-newWorksheet.pdf">Minimizing hallucination in task-oriented agents</a></td>
+                <td>How to create a task-oriented agent that does not hallucinate? Genie Worksheet is the first high-level task-oriented agent specification language that lets users focus on the task to be done; low-level dialogue implementation details are left to the implementation of the language. How to scale the creation of effective and reliable agents across different domains easily? Implementation of the Genie Worksheet; formal dialogue state representation; semantic parsing; dialogue state tracking; response generation.</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>11/9</td>
+                <td><a href="lectures_2026/l-churro.pdf">VLMs for Transcription</a></td>
+                <td>Transcription of historical manuscripts and prints is challenging due to the use of old languages, unusual layouts, and the quality of the digitization. Data sets and fine-tuning of vision-language models to make historical documents accessible.</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>11/11</td>
+                <td><a href="lectures_2026/I-sliders.pdf">Long-Context Long-Horizon Deep Researcher</a></td>
+                <td>How to answer questions that require reading, analyzing, and comparing across large documents in a set? LLM contexts are never large enough. Automatic schematization, database construction, and data reconciliation. System: SLIDERS</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>11/16</td>
+                <td>Agent Context Management</td>
+                <td>How do we manage the context of long-horizon agents? Designs of existing harnesses; context compression; external storage; long-term memory and skills.</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>11/18</td>
+                <td>Behavior of LLM-based Harnesses</td>
+                <td>This lecture addresses how we should build agents in the face of many of the recent developments of frontier LLMs: Can coding agents perform general-purpose tasks? Can meta-optimizations improve custom-built agents? Can we trust the results of LLM outputs given their reward-hacking behavior?</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>11/23, 11/25</td>
+                <td></td>
+                <td>Thanksgiving Break</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>11/30</td>
+                <td></td>
+                <td>No class</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>12/2</td>
+                <td>Project Presentations</td>
+                <td>Groups present their final projects.</td>
+                <td></td>
+                <td>Final project presentation</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Past offerings: <a href="schedule_2025.html">Fall 2025</a> &middot; <a href="schedule_2024.html">Fall 2024</a> &middot; <a href="schedule_2023.html">Fall 2023</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

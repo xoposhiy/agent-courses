@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  trustworthyresponsible.ai - workshop landing page
+  SPEAKER PHOTOS: create a folder "speakers/" next to this file and drop in
+  square JPGs named exactly as referenced below (e.g. speakers/danny-dig.jpg).
+  Any file that is missing simply falls back to the speaker's initials.
+  STILL TO DO:
+  Academic applications: CLOSED 7 October 2026
+  Industry registration: CLOSED - workshop at capacity
+  Day 1 poster list: poster-session.pdf
+  Contact: danny.dig@colorado.edu
+  ============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Trustworthy &amp; Responsible AI - a two-day workshop at SEEC, CU Boulder East Campus, 4-5 November 2026. Registration is now closed; the workshop is at capacity.">
+<meta property="og:title" content="Trustworthy &amp; Responsible AI - 4-5 November 2026, CU Boulder">
+<meta property="og:description" content="Two days on building AI systems engineers and the public can rely on. Keynotes from NEC Labs and Boeing, with faculty from CU Boulder, UIUC, UT Austin and Utah. Registration is now closed.">
+<meta property="og:type" content="website">
+<style>:root{color-scheme:light dark;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Boulder Trustworthy AI Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
+<style>
+  :root{
+    --paper:#FAF8F4;
+    --surface:#FFFFFF;
+    --surface-2:#F3F0E9;
+    --deep:#16242B;
+    --deep-2:#1E3138;
+    --ink:#191A1C;
+    --ink-2:#4B4C4F;
+    --muted:#79756E;
+    --rule:#E3DFD6;
+    --rule-strong:#CFC9BC;
+    --gold:#A9822F;
+    --gold-soft:#CFB87C;
+    --accent:#146B66;
+    --accent-soft:#E2EEEC;
+    --on-deep:#F1EDE4;
+    --on-deep-2:#AFBCC0;
+    --focus:#146B66;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#131416;
+      --surface:#1A1C1F;
+      --surface-2:#202327;
+      --deep:#0E181D;
+      --deep-2:#18272D;
+      --ink:#F2EFE9;
+      --ink-2:#C4C0B8;
+      --muted:#928D85;
+      --rule:#2C2F33;
+      --rule-strong:#3C4045;
+      --gold:#D9BC78;
+      --gold-soft:#D9BC78;
+      --accent:#6FB3AE;
+      --accent-soft:#172C2B;
+      --on-deep:#F1EDE4;
+      --on-deep-2:#A9B6BA;
+      --focus:#6FB3AE;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#131416;
+    --surface:#1A1C1F;
+    --surface-2:#202327;
+    --deep:#0E181D;
+    --deep-2:#18272D;
+    --ink:#F2EFE9;
+    --ink-2:#C4C0B8;
+    --muted:#928D85;
+    --rule:#2C2F33;
+    --rule-strong:#3C4045;
+    --gold:#D9BC78;
+    --gold-soft:#D9BC78;
+    --accent:#6FB3AE;
+    --accent-soft:#172C2B;
+    --on-deep:#F1EDE4;
+    --on-deep-2:#A9B6BA;
+    --focus:#6FB3AE;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+    font-size:16.5px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  :focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:2px;}
+
+  .wrap{width:100%;max-width:1060px;margin:0 auto;padding-left:20px;padding-right:20px;}
+  .band{padding-block:clamp(52px,7vw,92px);}
+  .band + .band{border-top:1px solid var(--rule);}
+
+  .eyebrow{
+    font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 18px;
+  }
+  .eyebrow.on-deep{color:var(--gold-soft);}
+
+  h1,h2,h3{font-family:Newsreader,Georgia,"Times New Roman",serif;font-weight:500;text-wrap:balance;margin:0;}
+  h1{font-size:clamp(2.6rem,7.2vw,4.6rem);line-height:1.02;letter-spacing:-.018em;}
+  h2{font-size:clamp(1.85rem,3.9vw,2.7rem);line-height:1.12;letter-spacing:-.012em;}
+  h3{font-size:1.2rem;line-height:1.3;}
+  p{margin:0 0 1em;}
+  .lede{font-size:clamp(1.08rem,1.9vw,1.28rem);line-height:1.55;color:var(--ink-2);max-width:60ch;}
+  .measure{max-width:64ch;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:var(--deep);
+    color:var(--on-deep);
+    padding-block:clamp(44px,6.5vw,76px) clamp(40px,5.5vw,64px);
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;inset:auto 0 0 0;height:3px;
+    background:linear-gradient(90deg,var(--gold-soft) 0 32%,var(--accent) 32% 62%,var(--deep-2) 62% 100%);
+  }
+  .hero h1{color:var(--on-deep);}
+  .hero .kicker{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft);
+    margin:0 0 26px;
+  }
+  .hero .sub{
+    font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.5;color:var(--on-deep-2);
+    max-width:56ch;margin:22px 0 0;
+  }
+  .hero .sub em{font-family:Newsreader,Georgia,serif;font-style:italic;color:var(--on-deep);}
+  .factrail{
+    display:flex;flex-wrap:wrap;gap:0;margin:34px 0 0;
+    border-top:1px solid rgba(255,255,255,.14);
+  }
+  .factrail div{
+    padding:14px 26px 14px 0;margin-right:26px;
+    border-right:1px solid rgba(255,255,255,.14);
+  }
+  .factrail div:last-child{border-right:0;margin-right:0;padding-right:0;}
+  .factrail dt{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--on-deep-2);margin:0 0 4px;
+  }
+  .factrail dd{margin:0;font-size:15.5px;font-weight:500;color:var(--on-deep);}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin:34px 0 0;}
+  .btn{
+    display:inline-block;font-family:"IBM Plex Sans",sans-serif;font-size:15px;font-weight:600;
+    letter-spacing:.005em;text-decoration:none;padding:14px 26px;border-radius:2px;
+    background:var(--gold-soft);color:#16242B;border:1px solid var(--gold-soft);
+    transition:background .15s ease,color .15s ease;
+  }
+  .btn:hover{background:#E0CB93;border-color:#E0CB93;}
+  .btn-ghost{
+    background:transparent;color:var(--on-deep);border:1px solid rgba(255,255,255,.34);
+  }
+  .btn-ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.55);}
+  .note-inline{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--on-deep-2);
+    letter-spacing:.02em;max-width:46ch;line-height:1.5;
+  }
+
+  /* ---------- goals ---------- */
+  .goals{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:clamp(24px,3.5vw,44px);margin-top:40px;}
+  .goal{border-top:3px solid var(--gold);padding-top:20px;}
+  .goal h3{font-size:1.18rem;margin:0 0 10px;}
+  .goal p{margin:0;font-size:15.5px;line-height:1.5;color:var(--ink-2);}
+
+  /* ---------- why industry ---------- */
+  .why{margin-top:40px;border-top:1px solid var(--rule-strong);}
+  .why-item{
+    display:grid;grid-template-columns:minmax(0,19rem) minmax(0,1fr);
+    gap:clamp(16px,3vw,40px);padding:28px 0;border-bottom:1px solid var(--rule);
+  }
+  .why-item h3{margin:0;font-size:1.3rem;}
+  .why-item p{margin:0;font-size:15.5px;line-height:1.55;color:var(--ink-2);}
+  .why-item p b{color:var(--ink);font-weight:600;}
+
+  /* ---------- days ---------- */
+  .days{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(24px,3.5vw,48px);margin-top:44px;}
+  .day{border-top:3px solid var(--ink);padding-top:22px;}
+  .day.two{border-top-color:var(--accent);}
+  .day .daynum{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);margin:0 0 10px;display:flex;justify-content:space-between;gap:12px;
+  }
+  .day h3{font-size:1.5rem;margin:0 0 6px;}
+  .day .track-for{font-size:14px;color:var(--muted);margin:0 0 20px;}
+  .day ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;}
+  .day li{display:block;position:relative;padding-left:19px;font-size:15.5px;line-height:1.45;color:var(--ink-2);}
+  .day li::before{
+    content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;
+    background:var(--gold);
+  }
+  .day.two li::before{background:var(--accent);}
+  .day li b{color:var(--ink);font-weight:600;}
+
+  /* ---------- themes ---------- */
+  .themes{margin-top:44px;border-top:1px solid var(--rule-strong);}
+  .theme{
+    display:grid;grid-template-columns:minmax(0,7.5rem) minmax(0,1fr) minmax(0,15rem);
+    gap:clamp(16px,3vw,40px);padding:26px 0;border-bottom:1px solid var(--rule);
+  }
+  .theme .tag{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--muted);padding-top:5px;
+  }
+  .theme.flag .tag,.theme.panel .tag{color:var(--accent);}
+  .theme h3{margin:0 0 8px;font-size:1.32rem;}
+  .theme p{margin:0;font-size:15.5px;line-height:1.5;color:var(--ink-2);}
+  .who{
+    font-size:13.5px;line-height:1.5;color:var(--muted);padding-top:5px;
+  }
+  .who span{display:block;}
+  .who b{color:var(--ink-2);font-weight:500;}
+
+  /* ---------- sessions ---------- */
+  .sessions{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:0;
+    border-top:1px solid var(--rule);border-left:1px solid var(--rule);margin-top:44px;
+  }
+  .sess{
+    background:transparent;padding:26px 24px;
+    border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  }
+  .sess .src{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--gold);margin:0 0 10px;
+  }
+  .sess h3{font-size:1.1rem;margin:0 0 8px;}
+  .sess p{margin:0;font-size:14.5px;line-height:1.5;color:var(--ink-2);}
+
+  /* ---------- speakers ---------- */
+  .keynote{
+    background:var(--deep-2);color:var(--on-deep);padding:clamp(26px,3.5vw,40px);
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:clamp(26px,4vw,48px);margin-top:40px;
+    border-left:3px solid var(--gold-soft);
+  }
+  .keynote .eyebrow{color:var(--gold-soft);margin-bottom:10px;}
+  .keynote h3{font-size:clamp(1.3rem,2.6vw,1.7rem);color:var(--on-deep);margin:0 0 4px;}
+  .keynote .aff{font-size:14.5px;color:var(--on-deep-2);margin:0 0 12px;}
+  .keynote p{margin:0;color:var(--on-deep-2);font-size:15.5px;line-height:1.55;max-width:62ch;}
+  .keynote p b{color:var(--on-deep);font-weight:500;}
+
+  .roster{margin-top:40px;display:flex;flex-direction:column;gap:38px;}
+  .org h3{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;font-weight:500;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+    padding-bottom:10px;border-bottom:1px solid var(--rule-strong);margin:0 0 4px;
+  }
+  .org ul{list-style:none;margin:0;padding:0;
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0 clamp(20px,3vw,40px);}
+  .org li{display:flex;gap:14px;align-items:flex-start;padding:15px 0;border-bottom:1px solid var(--rule);}
+  .avatar{
+    flex:0 0 auto;width:52px;height:52px;border-radius:50%;position:relative;overflow:hidden;
+    background:var(--surface-2);border:1px solid var(--rule-strong);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .avatar::before{
+    content:attr(data-initials);
+    font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:14px;font-weight:500;
+    letter-spacing:.04em;color:var(--muted);
+  }
+  .avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+  .bio{display:flex;flex-direction:column;min-width:0;}
+  .org .nm{font-size:16px;font-weight:600;color:var(--ink);text-decoration:none;}
+  a.nm{
+    text-decoration:underline;text-decoration-color:var(--gold-soft);
+    text-decoration-thickness:1px;text-underline-offset:3px;
+  }
+  a.nm:hover{text-decoration-color:var(--gold);color:var(--gold);}
+  .org .tl{font-size:14.5px;color:var(--ink-2);line-height:1.4;display:block;margin-top:3px;}
+  .org .tl.tbd{color:var(--muted);font-style:italic;}
+  .keynote-head{display:flex;gap:18px;align-items:center;margin-bottom:12px;flex-wrap:wrap;}
+  .keynote .avatar{
+    width:76px;height:76px;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);
+  }
+  .keynote .avatar::before{color:var(--on-deep-2);font-size:19px;}
+  .keynote a.nm{color:var(--on-deep);}
+
+  /* ---------- attending ---------- */
+  .apply{background:var(--deep);color:var(--on-deep);}
+  .apply h2{color:var(--on-deep);}
+  .apply .lede{color:var(--on-deep-2);}
+  .closed{
+    margin-top:30px;padding:18px 22px;border-left:3px solid rgba(255,255,255,.3);
+    background:rgba(255,255,255,.04);
+  }
+  .closed p{margin:0;font-size:15px;line-height:1.55;color:var(--on-deep-2);max-width:70ch;}
+  .closed p b{color:var(--on-deep);font-weight:600;}
+  .closed a{color:var(--gold-soft);text-decoration-thickness:1px;text-underline-offset:3px;}
+
+  .paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(20px,3vw,32px);margin-top:36px;}
+  .path{
+    border:1px solid rgba(255,255,255,.2);border-top:3px solid var(--gold-soft);
+    padding:28px 26px;background:rgba(255,255,255,.04);
+    display:flex;flex-direction:column;
+  }
+  .path .plabel{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--gold-soft);margin:0 0 10px;
+  }
+  .path h3{font-size:1.35rem;color:var(--on-deep);margin:0 0 12px;}
+  .path p{margin:0 0 1em;font-size:15px;line-height:1.55;color:var(--on-deep-2);}
+  .path ul{list-style:none;margin:0 0 22px;padding:0;display:flex;flex-direction:column;gap:12px;}
+  .path li{
+    position:relative;padding-left:18px;font-size:14.5px;line-height:1.5;color:var(--on-deep-2);
+  }
+  .path li::before{
+    content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;
+    background:var(--gold-soft);
+  }
+  .path li b{color:var(--on-deep);font-weight:600;}
+  .path .confirmed{color:var(--gold-soft);font-style:italic;}
+  .path a.mail{color:var(--gold-soft);text-underline-offset:3px;}
+  .path .spacer{flex:1 1 auto;}
+  .path .fine{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;letter-spacing:.02em;
+    color:var(--on-deep-2);margin:12px 0 0;line-height:1.5;
+  }
+
+  /* ---------- logistics ---------- */
+  .logistics{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:clamp(24px,3.5vw,44px);margin-top:40px;}
+  .log{border-top:3px solid var(--accent);padding-top:20px;}
+  .log h3{font-size:1.18rem;margin:0 0 12px;}
+  .log p{margin:0 0 1em;font-size:15.5px;line-height:1.55;color:var(--ink-2);}
+  .log p:last-child{margin-bottom:0;}
+  .log a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px;}
+  .log .addr{
+    font-style:normal;display:block;font-size:16px;line-height:1.5;color:var(--ink);
+    margin:0 0 12px;
+  }
+  .sched{list-style:none;margin:0 0 16px;padding:0;display:flex;flex-direction:column;gap:14px;}
+  .sched li{border-top:1px solid var(--rule);padding-top:11px;}
+  .sched .d{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--muted);display:block;margin-bottom:5px;
+  }
+  .sched .t{font-size:15.5px;line-height:1.45;color:var(--ink);font-variant-numeric:tabular-nums;}
+
+  /* ---------- footer ---------- */
+  .foot-band{background:var(--surface-2);}
+  .footgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:clamp(24px,3vw,44px);}
+  .footgrid h4{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;font-weight:500;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;
+  }
+  .footgrid p{font-size:14.5px;line-height:1.55;color:var(--ink-2);margin:0 0 .5em;}
+  .footgrid a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px;}
+  .support{
+    margin-top:36px;padding-top:24px;border-top:1px solid var(--rule-strong);
+  }
+  .support h4{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;font-weight:500;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;
+  }
+  .support p{
+    font-size:14.5px;line-height:1.55;color:var(--ink-2);margin:0;max-width:78ch;
+  }
+  .colophon{
+    margin-top:38px;padding-top:20px;border-top:1px solid var(--rule-strong);
+    font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;letter-spacing:.06em;
+    color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 22px;
+  }
+
+  @media (max-width:760px){
+    .theme{grid-template-columns:minmax(0,1fr);gap:10px;}
+    .theme .tag{padding-top:0;}
+    .why-item{grid-template-columns:minmax(0,1fr);gap:10px;}
+    .who{padding-top:2px;}
+    .factrail div{border-right:0;padding-right:0;margin-right:0;padding-block:10px;}
+    .factrail{gap:0 34px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none !important;animation:none !important;}
+  }
+</style>
+
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">4–5 November 2026 · SEEC · CU Boulder East Campus</p>
+    <h1>Trustworthy &amp;<br>Responsible AI</h1>
+    <p class="sub">A two-day working meeting on building AI systems that engineers, scientists and the public can rely on — and on being honest about <em>where the line is.</em></p>
+
+    <dl class="factrail">
+      <div><dt>Dates</dt><dd>Wed 4 – Thu 5 Nov 2026</dd></div>
+      <div><dt>Venue</dt><dd>SEEC C120, CU Boulder</dd></div>
+      <div><dt>Speakers</dt><dd>40+ across 4 universities and industry</dd></div>
+      <div><dt>Cost</dt><dd>Free to attend</dd></div>
+    </dl>
+
+    <div class="cta-row">
+      <a class="btn" href="/agenda.html">See the detailed agenda</a>
+      <span class="note-inline">Registration is closed — the workshop is at capacity</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="band">
+    <div class="wrap">
+      <p class="eyebrow">Why we're convening</p>
+      <div class="measure">
+        <h2>Agentic AI is capable enough to design, decide and act. It is not yet trustworthy enough to deploy.</h2>
+        <p class="lede" style="margin-top:22px;">That gap is a research problem, an engineering problem and a judgment problem at once — and no single discipline owns it. Over two days we are bringing together the people working on all three: computer scientists building and verifying agents, engineers who have to validate AI in the physical world, researchers studying human oversight, cognitive impact and the future of work, people writing the governance that decides what an organization will and will not allow, and industry teams already shipping these systems.</p>
+        <p class="lede">This is a working meeting, not a conference. The goal is a community: shared problems, shared benchmarks, shared honesty about what does not work yet.</p>
+      </div>
+
+      <div class="goals">
+        <div class="goal">
+          <h3>Learn the cutting edge — and find partners</h3>
+          <p>See the newest research on making AI trustworthy and responsible, and meet the faculty and students you could partner with to advance your own R&amp;D.</p>
+        </div>
+        <div class="goal">
+          <h3>Build a community of practice</h3>
+          <p>Compare notes with peers across industry on what is actually working, so the hard lessons get shared rather than relearned company by company.</p>
+        </div>
+        <div class="goal">
+          <h3>Form long-term partnerships</h3>
+          <p>Build the relationships now that let us go after upcoming federal and private funding opportunities together, rather than separately.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="why-industry">
+    <div class="wrap">
+      <p class="eyebrow">Why industry should come</p>
+      <h2 class="measure">Three reasons to send your team to Boulder in November.</h2>
+
+      <div class="why">
+        <article class="why-item">
+          <h3>Learn the state of the art, from the people building it.</h3>
+          <p>Keynotes from <b>Haifeng Chen</b> (NEC Labs) on trustworthy enterprise software transformation, and <b>Dragos Margineantu</b> (Boeing) on building robust AI-based systems in the wild. Research talks from faculty at CU Boulder, UIUC, UT Austin and Utah cover testing and benchmarking AI agents, verification and guardrails, and AI security at scale.</p>
+        </article>
+
+        <article class="why-item">
+          <h3>See the open problems before they become your problems.</h3>
+          <p>Hallucinations in specialized domains, verifying AI-written code, governance gaps, and expertise erosion on teams. These are the risks companies are running into now.</p>
+        </article>
+
+        <article class="why-item">
+          <h3>Join a community of practice.</h3>
+          <p>Leaders and Practitioners from Amazon AWS, BAE Systems, Boeing, Google, Indeed, Intel, NEC, Workday and others will share what's working, what isn't, and how they're handling it — alongside the researchers who can help solve it.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="program">
+    <div class="wrap">
+      <p class="eyebrow">How the two days work</p>
+      <h2 class="measure">Day one is the research. Day two is your work.</h2>
+      <p class="lede" style="margin-top:20px;">This community wants both the frontier and the practicalities, and those are different rooms. So we split them across two days, and you are welcome at either or both.</p>
+
+      <div class="days">
+        <div class="day one">
+          <p class="daynum"><span>Day 1</span><span>Wed 4 Nov</span></p>
+          <h3>Research track</h3>
+          <p class="track-for">For people building, verifying and studying agentic systems.</p>
+          <ul>
+            <li><b>Faculty talks</b> from CU Boulder, UIUC, UT Austin and the University of Utah — on testing, verification and the systems underneath agents, and equally on the responsible side: cognitive impact, the future of work, and governance.</li>
+            <li><b>Two industry keynotes</b> — Haifeng Chen, NEC Laboratories America, on trustworthy enterprise software transformation; and Tristan Ravitch, Amazon AWS, on symbolic analysis of agentic plans.</li>
+            <li><b>Student research posters</b> — PhD and postdoc work, with time built in to actually read them.</li>
+          </ul>
+        </div>
+        <div class="day two">
+          <p class="daynum"><span>Day 2</span><span>Thu 5 Nov</span></p>
+          <h3>Practice track</h3>
+          <p class="track-for">For people who have to use this stuff on Monday.</p>
+          <ul>
+            <li><b>Industry keynote</b> — Dragos Margineantu, Boeing, on building robust AI-based systems in the wild.</li>
+            <li><b>Mini-tutorials</b> — hands-on sessions on the practices teams are adopting now.</li>
+            <li><b>Industry and academic panels</b> — where the two views of "trustworthy" disagree, in public, including agentic AI in low-resource, high-constraint domains.</li>
+            <li><b>Community best practices</b> — participants presenting what has worked, and what has quietly failed, in their own teams.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="topics">
+    <div class="wrap">
+      <p class="eyebrow">Topics our speakers cover</p>
+      <h2 class="measure">Ten threads run through both days — more than half of them on the responsible side.</h2>
+
+      <div class="themes">
+        <article class="theme">
+          <p class="tag">Thread</p>
+          <div>
+            <h3>Testing and benchmarking agents</h3>
+            <p>Agent harnesses are software, and software has bugs. Reproducible benchmarks of real harness failures, harness-centric test generation, and agents that diagnose and repair other agents — including hundreds of previously unknown bugs found in production open-source agentic systems.</p>
+          </div>
+          <div class="who">
+            <span><b>Yiling Lou</b> · UIUC</span>
+            <span><b>Lingming Zhang</b> · UIUC</span>
+            <span><b>Bogdan Stoica</b> · UIUC</span>
+            <span><b>Aditya Thimmaiah</b> · UT Austin</span>
+          </div>
+        </article>
+
+        <article class="theme">
+          <p class="tag">Thread</p>
+          <div>
+            <h3>Constraints, verification and guardrails</h3>
+            <p>What it takes to bound what an agent may do: enforcing temporal and grammatical constraints on generation, hybrid pipelines that pair LLM creativity with static and dynamic program analysis, neurosymbolic reasoning, formal semantics and runtime assurance.</p>
+          </div>
+          <div class="who">
+            <span><b>Saša Misailović</b> · UIUC</span>
+            <span><b>Sriram Sankaranarayanan</b> · CU Boulder</span>
+            <span><b>Alvaro Velasquez</b> · CU Boulder</span>
+            <span><b>Bor-Yuh Evan Chang</b> · CU Boulder</span>
+            <span><b>Gowtham Kaki</b> · CU Boulder</span>
+            <span><b>Danny Dig</b> · CU Boulder</span>
+          </div>
+        </article>
+
+        <article class="theme">
+          <p class="tag">Thread</p>
+          <div>
+            <h3>Securing and assuring agents</h3>
+            <p>What an agent is allowed to touch, and how you find out when that goes wrong: reasoning symbolically about the plans agents produce, red-teaming the tools and webpages they rely on, automated software vetting, and keeping multi-step workflows predictable in cost and quality.</p>
+          </div>
+          <div class="who">
+            <span><b>Tristan Ravitch</b> · Amazon AWS</span>
+            <span><b>Guanhong Tao</b> · University of Utah</span>
+            <span><b>Stefan Nagy</b> · University of Utah</span>
+            <span><b>Neeraja Yadwadkar</b> · UT Austin</span>
+          </div>
+        </article>
+
+        <article class="theme">
+          <p class="tag">Thread</p>
+          <div>
+            <h3>People, trust and consequences</h3>
+            <p>Keeping the human meaningfully in the loop as AI moves off the screen and into the physical world — what makes people trust an AI system in the built environment, what human–robot interaction teaches us about teaming with agents, how agents can adapt to individuals over time, and how to design for people at their most vulnerable.</p>
+          </div>
+          <div class="who">
+            <span><b>Ellen Do</b> · CU Boulder</span>
+            <span><b>Brad Hayes</b> · CU Boulder · CTO, Circadence</span>
+            <span><b>Kenneth Marino</b> · University of Utah</span>
+            <span><b>Amir Behzadan</b> · CU Boulder</span>
+            <span><b>Jed Brubaker</b> · CU Boulder</span>
+          </div>
+        </article>
+
+        <article class="theme panel">
+          <p class="tag">Panel</p>
+          <div>
+            <h3>AI governance</h3>
+            <p>Turning responsible-AI principles into policies teams can actually follow — what to write down, what to require, what to audit, and who signs off when an agent is allowed to act on the organization's behalf.</p>
+          </div>
+          <div class="who">
+            <span>Day 1 panel</span>
+            <span><b>Karen Furlani</b> · Ex-Worley</span>
+            <span><b>Michael Cooper</b> · Triarcus Systems</span>
+            <span><b>Rajdeep Mukherjee</b> · Amazon AWS</span>
+            <span><b>Moses Bazzi</b> · RMCyber</span>
+            <span><b>Brad Hayes</b> · CU Boulder (moderator)</span>
+          </div>
+        </article>
+
+        <article class="theme panel">
+          <p class="tag">Panel</p>
+          <div>
+            <h3>The future of work</h3>
+            <p>What sustained collaboration with AI does to human thinking — to judgment, to memory, to the willingness to sit with a hard problem — and what that means for jobs, teams and professional practice over the next decade. Evidence where we have it, honest uncertainty where we do not.</p>
+          </div>
+          <div class="who">
+            <span>Day 2 panel</span>
+            <span><b>Ajaykumar Rajasekharan</b> · Workday</span>
+            <span><b>Carolyn Ujcic</b> · Google</span>
+            <span><b>Scott James</b> · SoundlyRun</span>
+            <span><b>Taryn Heilman</b> · Indeed</span>
+            <span><b>John Regehr</b> · University of Utah (moderator)</span>
+          </div>
+        </article>
+
+        <article class="theme panel">
+          <p class="tag">Panel</p>
+          <div>
+            <h3>Durable skills in the GenAI era</h3>
+            <p>The role is shifting from using AI to supervising it. What engineers and researchers need to be able to do — verify work they did not produce, hold onto hard-won expertise, and stay effective as the tools move underneath them — and what employers and universities owe them.</p>
+          </div>
+          <div class="who">
+            <span>Day 2 panel</span>
+            <span><b>Bhavna Chhabra</b> · Ex-Google</span>
+            <span><b>Jaden Garza</b> · Half as Smart</span>
+            <span><b>Nita Meng</b> · Google</span>
+            <span><b>Sergio Ortega</b> · Amazon AWS</span>
+            <span><b>Amir Behzadan</b> · CU Boulder (moderator)</span>
+          </div>
+        </article>
+
+        <article class="theme panel">
+          <p class="tag">Panel</p>
+          <div>
+            <h3>Agentic AI in low-resource environments</h3>
+            <p>Finance, healthcare, manufacturing and defense have the hardest version of this problem: foundation models saw little of their domain data in training, so the general-purpose recipes underperform — and the constraints are strictest exactly where the models are weakest, with HIPAA and comparable privacy regimes, security review, and data that cannot leave the building.</p>
+          </div>
+          <div class="who">
+            <span>Day 2 panel</span>
+            <span><b>Dragos Margineantu</b> · Boeing</span>
+            <span><b>Kedar Naik</b> · BAE Systems</span>
+            <span><b>Yuki Kosaka</b> · NEC Labs America</span>
+            <span><b>Grzegorz Kakareko</b> · Workday</span>
+            <span><b>Sriram Sankaranarayanan</b> · CU Boulder (moderator)</span>
+          </div>
+        </article>
+
+        <article class="theme">
+          <p class="tag">Tutorial</p>
+          <div>
+            <h3>Tutorial: Responsible AI approaches to Speculative Design</h3>
+            <p>As AI systems are further oriented towards autonomous workflows and interactions with the physical world, engineers and developers should be equipped to anticipate the sociotechnical impacts of their work. This tutorial leverages core concepts from Responsible AI practice to help participants build their capacity to both imagine and mitigate potential risks as they design and build AI systems.</p>
+          </div>
+          <div class="who">
+            <span><b>Chris Persaud</b> · Intel</span>
+            <span><b>Casey Fiesler</b> · CU Boulder</span>
+          </div>
+        </article>
+
+        <article class="theme panel">
+          <p class="tag">Panel</p>
+          <div>
+            <h3>Teaching, curriculum and the next generation</h3>
+            <p>What changes in a computing education when students arrive already coding with agents — from people who are teaching those courses now. John Regehr teaches Utah's CS 3960 "Vibe Coding" alongside advanced compilers, bringing a compiler-testing researcher's standards for correctness to a classroom where students generate most of their code. Brad Hayes is teaching a new CU course, "Design, Build, and Think AI." Danny Dig has taught three: Building AI Agents, GenAI-augmented Software Engineering, and AI-driven Leadership. Alongside them, Tushar Udeshi is building AI learning tools at Khan Academy.</p>
+          </div>
+          <div class="who">
+            <span>Day 2 panel</span>
+            <span><b>Tushar Udeshi</b> · Khan Academy</span>
+            <span><b>John Regehr</b> · University of Utah</span>
+            <span><b>Brad Hayes</b> · CU Boulder · CTO, Circadence</span>
+            <span><b>Danny Dig</b> · CU Boulder</span>
+            <span><b>Bor-Yuh Evan Chang</b> · CU Boulder (moderator)</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="eyebrow">Day-two working sessions</p>
+      <h2 class="measure">Sessions you can bring back to your team on Monday.</h2>
+      <p class="lede" style="margin-top:20px;">Working sessions rather than talks, shaped by our pre-workshop community survey. Five of them are built directly around what industry teams are wrestling with — those are marked below.</p>
+
+      <div class="sessions">
+        <div class="sess">
+          <p class="src">For industry teams</p>
+          <h3>Agentic coding without the slop</h3>
+          <p>Practices for getting verifiable code from AI agents, including how to review code you didn't write.</p>
+        </div>
+        <div class="sess">
+          <p class="src">For industry teams</p>
+          <h3>Write your own AI governance</h3>
+          <p>A working session that ends with a draft AI policy for your team.</p>
+        </div>
+        <div class="sess">
+          <p class="src">For industry teams</p>
+          <h3>Bring your own problem</h3>
+          <p>A clinic where you arrive with a real challenge and leave with an expert contact and a next step.</p>
+        </div>
+        <div class="sess">
+          <p class="src">For industry teams</p>
+          <h3>Tool triage</h3>
+          <p>A straight assessment of which AI tools are worth adopting, and how to judge new ones six months from now.</p>
+        </div>
+        <div class="sess">
+          <p class="src">For industry teams</p>
+          <h3>Keeping your own judgment</h3>
+          <p>How teams can collaborate with AI without outsourcing the thinking.</p>
+        </div>
+        <div class="sess">
+          <p class="src">For industry teams</p>
+          <h3>Agentic AI where data is scarce</h3>
+          <p>Panel. What works in finance, healthcare, manufacturing and defense when the foundation model has barely seen your domain — and privacy, security and data residency bound every option.</p>
+        </div>
+        <div class="sess">
+          <h3>Responsible AI in the classroom</h3>
+          <p>Where AI belongs in a course, where it destroys the learning objective, and how to teach students to tell those apart — with John Regehr, who teaches Utah's "Vibe Coding" course.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="speakers">
+    <div class="wrap">
+      <p class="eyebrow">Who is speaking</p>
+      <h2 class="measure">Leaders in trustworthy and responsible AI from four top research universities and from industry.</h2>
+      <p class="lede" style="margin-top:20px;">More speakers from academia and industry are being confirmed now, particularly on the responsible-AI side — governance, cognitive impact, the future of work and durable skills. To be announced soon.</p>
+
+      <div class="keynote">
+        <div>
+          <p class="eyebrow">Keynote · Day 1</p>
+          <div class="keynote-head">
+            <span class="avatar" data-initials="HC" aria-hidden="true"><img src="speakers/haifeng-chen.jpg" alt=""></span>
+            <div>
+              <h3><a class="nm" href="https://www.nec-labs.com/research/data-science-system-security/people/haifeng-chen/" target="_blank" rel="noopener noreferrer">Haifeng Chen</a></h3>
+              <p class="aff" style="margin:4px 0 0;">Head, Data Science and System Security · NEC Laboratories America</p>
+            </div>
+          </div>
+          <p><b>Trustworthy Enterprise Software Transformation.</b> Chen leads NEC's data science department in Princeton, where his team works on LLM agents, uncertainty quantification, privacy, and anomaly detection and root-cause analysis in systems ranging from microservices to spacecraft. Over 80 patents and 100 peer-reviewed publications, earning multiple best paper awards.</p>
+        </div>
+
+        <div>
+          <p class="eyebrow">Keynote · Day 2</p>
+          <div class="keynote-head">
+            <span class="avatar" data-initials="DM" aria-hidden="true"><img src="speakers/dragos-margineantu.jpg" alt=""></span>
+            <div>
+              <h3><a class="nm" href="https://www.linkedin.com/in/ddm-aerospace-systems-ai/" target="_blank" rel="noopener noreferrer">Dragos Margineantu</a></h3>
+              <p class="aff" style="margin:4px 0 0;">Senior Technical Fellow, AI Chief Technologist · Boeing</p>
+            </div>
+          </div>
+          <p><b>Robust AI-based Systems in the Wild.</b> What principles for designing and deploying AI systems carry over to new domains, and what has to be answered before those systems are robust at runtime? Dragos works where decisions carry high risk and the data is sparse: the structure of modern AI systems, optimizing for constraints that are not fully specified, acting without a complete model of the real world, and building human-automation systems that are safe. <a class="nm" href="/dragos-margineantu-bio.pdf" target="_blank" rel="noopener noreferrer">Full biography (PDF)</a></p>
+        </div>
+      </div>
+
+      <div class="roster">
+        <div class="org">
+          <h3><span>CU Boulder</span></h3>
+          <ul>
+            <li>
+              <span class="avatar" data-initials="MR" aria-hidden="true"><img src="speakers/massimo-ruzzene.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.colorado.edu/mechanical/massimo-ruzzene" target="_blank" rel="noopener noreferrer">Massimo Ruzzene</a><span class="tl">Senior Vice Chancellor for Research and Innovation, Dean of the Institutes — Welcome and Opening</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="SK" aria-hidden="true"><img src="speakers/shelley-knuth.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.colorado.edu/rc/about/knuth" target="_blank" rel="noopener noreferrer">Shelley Knuth</a><span class="tl">Assistant Vice Chancellor for Research Computing — Welcome and Opening</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="MG" aria-hidden="true"><img src="speakers/michael-gooseff.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.colorado.edu/ceae/michael-gooseff" target="_blank" rel="noopener noreferrer">Michael Gooseff</a><span class="tl">Associate Dean for Research — Welcome and Opening</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="DD" aria-hidden="true"><img src="speakers/danny-dig.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://danny.cs.colorado.edu/" target="_blank" rel="noopener noreferrer">Danny Dig</a><span class="tl">Trustworthy Agentic AI for Code Renovation</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="AB" aria-hidden="true"><img src="speakers/amir-behzadan.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.colorado.edu/ceae/amir-behzadan" target="_blank" rel="noopener noreferrer">Amir Behzadan</a><span class="tl">Understanding Human Trust in AI Systems within the Built Environment</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="ED" aria-hidden="true"><img src="speakers/ellen-do.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.colorado.edu/atlas/ellen-yi-luen-do" target="_blank" rel="noopener noreferrer">Ellen Do</a><span class="tl">Reality, Refinement, and Agency: Crafting Controllable Human–AI Interactions</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="BH" aria-hidden="true"><img src="speakers/brad-hayes.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://bradhayes.info" target="_blank" rel="noopener noreferrer">Brad Hayes</a><span class="tl">CTO, Circadence — Creating Agents That Work With Humans: Insights from Human-Robot Interaction</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="CF" aria-hidden="true"><img src="speakers/casey-fiesler.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://caseyfiesler.com/" target="_blank" rel="noopener noreferrer">Casey Fiesler</a><span class="tl">Tutorial: Responsible AI Approaches to Speculative Design and Risk Mitigation</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="SS" aria-hidden="true"><img src="speakers/sriram-sankaranarayanan.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://home.cs.colorado.edu/~srirams/" target="_blank" rel="noopener noreferrer">Sriram Sankaranarayanan</a><span class="tl">CS Department Chair — Runtime Assurance for Safe Operation of Cyber-Physical Interfaces</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="AV" aria-hidden="true"><img src="speakers/alvaro-velasquez.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://alvarovelasquez.github.io" target="_blank" rel="noopener noreferrer">Alvaro Velasquez</a><span class="tl">Neurosymbolic agentic AI and assured autonomy</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="BC" aria-hidden="true"><img src="speakers/evan-chang.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://home.cs.colorado.edu/~bec/" target="_blank" rel="noopener noreferrer">Bor-Yuh Evan Chang</a><span class="tl">The Next 700 Static Analyzers for Agentic Workflows</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="GK" aria-hidden="true"><img src="speakers/gowtham-kaki.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://gowthamk.github.io/" target="_blank" rel="noopener noreferrer">Gowtham Kaki</a><span class="tl">Frugal Intelligence for Reliable Software Development</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="JB" aria-hidden="true"><img src="speakers/jed-brubaker.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.jedbrubaker.com" target="_blank" rel="noopener noreferrer">Jed Brubaker</a><span class="tl">Designing human-centered AI for sensitive contexts</span></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="org">
+          <h3><span>University of Illinois Urbana-Champaign</span></h3>
+          <ul>
+            <li>
+              <span class="avatar" data-initials="YL" aria-hidden="true"><img src="speakers/yiling-lou.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://yilinglou.github.io/" target="_blank" rel="noopener noreferrer">Yiling Lou</a><span class="tl">From Models to Systems: Engineering Reliable Agents through Harness-Centric Testing and Debugging</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="BS" aria-hidden="true"><img src="speakers/bogdan-stoica.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://bastoica.github.io/" target="_blank" rel="noopener noreferrer">Bogdan Stoica</a><span class="tl">Monitoring and Runtime Intervention on Agentic Trajectories</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="SM" aria-hidden="true"><img src="speakers/sasa-misailovic.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://misailo.cs.illinois.edu/" target="_blank" rel="noopener noreferrer">Saša Misailović</a><span class="tl">Enforcing Temporal Specifications for LLM Agents</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="LZ" aria-hidden="true"><img src="speakers/lingming-zhang.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://lingming.cs.illinois.edu/" target="_blank" rel="noopener noreferrer">Lingming Zhang</a><span class="tl">Designing, training and benchmarking agents for reliable software intelligence</span></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="org">
+          <h3><span>UT Austin</span></h3>
+          <ul>
+            <li>
+              <span class="avatar" data-initials="NY" aria-hidden="true"><img src="speakers/neeraja-yadwadkar.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://sites.utexas.edu/neeraja/" target="_blank" rel="noopener noreferrer">Neeraja Yadwadkar</a><span class="tl">Making Agentic AI Predictable: A Systems Perspective</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="AT" aria-hidden="true"><img src="speakers/aditya-thimmaiah.jpg" alt=""></span>
+              <span class="bio"><span class="nm">Aditya Thimmaiah</span><span class="tl">Testing Semantic Knowledge of Agents</span></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="org">
+          <h3><span>University of Utah</span></h3>
+          <ul>
+            <li>
+              <span class="avatar" data-initials="JR" aria-hidden="true"><img src="speakers/john-regehr.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://users.cs.utah.edu/~regehr/" target="_blank" rel="noopener noreferrer">John Regehr</a><span class="tl">AI in the classroom — teaching "Vibe Coding" alongside compiler correctness</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="SN" aria-hidden="true"><img src="speakers/stefan-nagy.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://users.cs.utah.edu/~snagy/" target="_blank" rel="noopener noreferrer">Stefan Nagy</a><span class="tl">AI in Automatic Software Vetting</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="GT" aria-hidden="true"><img src="speakers/guanhong-tao.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://tao.aisec.world" target="_blank" rel="noopener noreferrer">Guanhong Tao</a><span class="tl">From Deception to Action: Red-Teaming AI Agents</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="KM" aria-hidden="true"><img src="speakers/kenneth-marino.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://kennethmarino.com" target="_blank" rel="noopener noreferrer">Kenneth Marino</a><span class="tl">Adapting Multimodal AI Agents to Users Over Time</span></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="org">
+          <h3><span>Industry</span></h3>
+          <ul>
+            <li>
+              <span class="avatar" data-initials="HC" aria-hidden="true"><img src="speakers/haifeng-chen.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.nec-labs.com/research/data-science-system-security/people/haifeng-chen/" target="_blank" rel="noopener noreferrer">Haifeng Chen</a><span class="tl">NEC Labs America — Keynote: Trustworthy Enterprise Software Transformation</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="DM" aria-hidden="true"><img src="speakers/dragos-margineantu.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.linkedin.com/in/ddm-aerospace-systems-ai/" target="_blank" rel="noopener noreferrer">Dragos Margineantu</a><span class="tl">Boeing — Keynote: Robust AI-based Systems in the Wild</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="CP" aria-hidden="true"><img src="speakers/chris-persaud.jpg" alt=""></span>
+              <span class="bio"><span class="nm">Chris Persaud</span><span class="tl">Intel — Tutorial: Responsible AI Approaches to Speculative Design and Risk Mitigation</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="YK" aria-hidden="true"><img src="speakers/yuki-kosaka.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.nec-labs.com/about-us/office-of-the-president/" target="_blank" rel="noopener noreferrer">Yuki Kosaka</a><span class="tl">NEC Laboratories America - Assistant Vice President</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="RM" aria-hidden="true"><img src="speakers/rajdeep-mukherjee.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.linkedin.com/in/mukherjeerajdeep/" target="_blank" rel="noopener noreferrer">Rajdeep Mukherjee</a><span class="tl">Amazon Web Services (AWS) — Principal Scientist</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="JR" aria-hidden="true"><img src="speakers/joelle-rossback-dahl.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.linkedin.com/in/joelle-rossback-dahl-04253a25/" target="_blank" rel="noopener noreferrer">Joelle Rossback-Dahl</a><span class="tl">Amazon Web Services (AWS)</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="SO" aria-hidden="true"><img src="speakers/sergio-ortega.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.linkedin.com/in/sergioortegaai/" target="_blank" rel="noopener noreferrer">Sergio Ortega</a><span class="tl">Amazon Web Services (AWS) — Business Development GenAI for Public Sector</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="AM" aria-hidden="true"><img src="speakers/archit-malpure.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.linkedin.com/in/archit14696/" target="_blank" rel="noopener noreferrer">Archit Malpure</a><span class="tl">Amazon Web Services (AWS) — Solution Architect</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="TR" aria-hidden="true"><img src="speakers/tristan-ravitch.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://nochair.net/about/" target="_blank" rel="noopener noreferrer">Tristan Ravitch</a><span class="tl">Amazon Web Services (AWS), Principal Applied Scientist — Industry Research Keynote: Symbolic Analysis of Agentic Plans</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="JG" aria-hidden="true"><img src="speakers/jaden-garza.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.linkedin.com/in/jadengarza/" target="_blank" rel="noopener noreferrer">Jaden Garza</a><span class="tl">Half as Smart — Chief Executive Officer</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="NM" aria-hidden="true"><img src="speakers/nita-meng.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.linkedin.com/in/nita-meng/" target="_blank" rel="noopener noreferrer">Nita Meng</a><span class="tl">Google - Technical Program Manager</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="GK" aria-hidden="true"><img src="speakers/grzegorz-kakareko.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.linkedin.com/in/grzegorz-kakareko/" target="_blank" rel="noopener noreferrer">Grzegorz Kakareko</a><span class="tl">Workday - Senior Manager, AI Agents</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="MC" aria-hidden="true"><img src="speakers/michael-cooper.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.linkedin.com/in/michael-cooper1029/" target="_blank" rel="noopener noreferrer">Michael Cooper</a><span class="tl">Triarcus Systems - Founder</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="KF" aria-hidden="true"><img src="speakers/karen-furlani.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.linkedin.com/in/kfurlani/" target="_blank" rel="noopener noreferrer">Karen Furlani</a><span class="tl">Ex-Worley - Chief Risk Officer</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="MB" aria-hidden="true"><img src="speakers/moses-bazzi.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.linkedin.com/in/moses-b-095354182/" target="_blank" rel="noopener noreferrer">Moses Bazzi</a><span class="tl">RMCyber - AI Cybersecurity Consultant</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="SJ" aria-hidden="true"><img src="speakers/scott-james.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://soundlyrun.ai" target="_blank" rel="noopener noreferrer">Scott James</a><span class="tl">SoundlyRun - Founder</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="AR" aria-hidden="true"><img src="speakers/ajaykumar-rajasekharan.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.linkedin.com/in/ajaykumar-rajasekharan-phd-103927/" target="_blank" rel="noopener noreferrer">Ajaykumar Rajasekharan</a><span class="tl">Workday - Sr. Manager, AI Engineering</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="CU" aria-hidden="true"><img src="speakers/carolyn-ujcic.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.linkedin.com/in/carolynu/" target="_blank" rel="noopener noreferrer">Carolyn Ujcic</a><span class="tl">Google - Director</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="TU" aria-hidden="true"><img src="speakers/tushar-udeshi.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.linkedin.com/in/tushar-udeshi-434186/" target="_blank" rel="noopener noreferrer">Tushar Udeshi</a><span class="tl">Khan Academy - AI Architect</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="KN" aria-hidden="true"><img src="speakers/kedar-naik.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.linkedin.com/in/kedar-naik-14ab3a447" target="_blank" rel="noopener noreferrer">Kedar Naik</a><span class="tl">BAE Systems, Space &amp; Mission Systems - Chief Engineer, AI/ML</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="TH" aria-hidden="true"><img src="speakers/taryn-heilman.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.linkedin.com/in/tarynheilman/" target="_blank" rel="noopener noreferrer">Taryn Heilman</a><span class="tl">Indeed - Manager, ML Engineering and Responsible AI</span></span>
+            </li>
+            <li>
+              <span class="avatar" data-initials="BC" aria-hidden="true"><img src="speakers/bhavna-chhabra.jpg" alt=""></span>
+              <span class="bio"><a class="nm" href="https://www.linkedin.com/in/bhavna-chhabra/" target="_blank" rel="noopener noreferrer">Bhavna Chhabra</a><span class="tl">Ex-Google - Director</span></span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="band apply" id="apply">
+    <div class="wrap">
+      <p class="eyebrow on-deep">Attending</p>
+      <h2 class="measure">Registration is closed — the workshop is full.</h2>
+      <p class="lede" style="margin-top:20px;">Both days are at capacity. Thank you to everyone who registered — we are looking forward to seeing you at SEEC.</p>
+
+      <div class="closed">
+        <p><b>If you are registered:</b> check-in and badge pick-up open at <b>8:00 am in SEEC Room C120</b>, with breakfast. The full programme for both days is on the <a href="/agenda.html">agenda page</a>, and the Day 1 <a href="/poster-session.pdf" target="_blank" rel="noopener noreferrer">poster list is published as a PDF</a>.</p>
+      </div>
+
+      <div class="closed" style="margin-top:14px;">
+        <p><b>Anything else</b> — a question, a press enquiry, or interest in where the Center on Trustworthy and Responsible AI goes next — write to Danny Dig at <a href="/cdn-cgi/l/email-protection#d9bdb8b7b7a0f7bdb0be99bab6b5b6abb8bdb6f7bcbdac"><span class="__cf_email__" data-cfemail="f490959a9a8dda909d93b4979b989b8695909bda919081">[email&#160;protected]</span></a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="logistics">
+    <div class="wrap">
+      <p class="eyebrow">Planning your trip</p>
+      <h2 class="measure">Where it is, where to park, where to stay, and when to book your flights.</h2>
+
+      <div class="logistics">
+        <div class="log">
+          <h3>Getting there</h3>
+          <address class="addr">SEEC — Sustainability, Energy and Environment Complex<br><b>Room C120 — the auditorium</b><br>4001 Discovery Drive<br>Boulder, CO 80303</address>
+          <p>CU Boulder East Campus. <a href="https://www.google.com/maps/search/?api=1&amp;query=4001+Discovery+Drive+Boulder+CO+80303" target="_blank" rel="noopener noreferrer">Open in Maps</a> · <a href="https://www.colorado.edu/seec/media/6" target="_blank" rel="noopener noreferrer">SEEC floor plan</a></p>
+          <p>Denver International Airport (DIA) is the nearest airport, with shuttle, rideshare and rental options to Boulder.</p>
+        </div>
+
+        <div class="log">
+          <h3>Parking</h3>
+          <p>Space in the lots by SEEC is hit or miss, so <b>buy a permit sooner rather than later</b> instead of counting on finding something when you arrive.</p>
+          <ul class="sched">
+            <li>
+              <span class="d">Lot 556 · day permit</span>
+              <span class="t">$10 for the day — <a href="https://cuboulder.aimsparking.com/" target="_blank" rel="noopener noreferrer">buy in advance</a></span>
+            </li>
+            <li>
+              <span class="d">Lot 550 · metered</span>
+              <span class="t">Pay at the meter through the ParkMobile app</span>
+            </li>
+          </ul>
+          <p><a href="https://www.colorado.edu/seec/getting-here/parking" target="_blank" rel="noopener noreferrer">SEEC parking map and directions →</a></p>
+        </div>
+
+        <div class="log">
+          <h3>Where to stay</h3>
+          <p>The University of Colorado has negotiated reduced rates at a number of hotels in Boulder. If you are travelling in, book from that list rather than at the public rate.</p>
+          <p><a href="https://drive.google.com/file/d/1ab4JHokpWxklmc1cFwuVCmgLu0n0EChP/view?usp=sharing" target="_blank" rel="noopener noreferrer">Hotels with negotiated CU rates →</a></p>
+          <p>Boulder fills up in the autumn, so book early and mention the University of Colorado rate when you reserve.</p>
+        </div>
+
+        <div class="log">
+          <h3>Booking your flights</h3>
+          <ul class="sched">
+            <li>
+              <span class="d">Day 1 · Wed 4 Nov</span>
+              <span class="t">8:00 am breakfast → 7:00 pm, close of the banquet</span>
+            </li>
+            <li>
+              <span class="d">Day 2 · Thu 5 Nov</span>
+              <span class="t">8:00 am breakfast → 3:00 pm finish</span>
+            </li>
+          </ul>
+          <p>Book return flights out of DIA departing <b>after 7:00 pm on 5 November</b>. Day 1 runs through the evening banquet, which is where a good deal of the introductions actually happen — worth staying for.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band foot-band">
+    <div class="wrap">
+      <div class="footgrid">
+        <div>
+          <h4>Where</h4>
+          <p>SEEC — Sustainability, Energy and Environment Complex<br><b>Room C120</b> (the auditorium)<br>4001 Discovery Drive, Boulder, CO<br><a href="https://www.colorado.edu/seec/media/6" target="_blank" rel="noopener noreferrer">SEEC floor plan →</a></p>
+        </div>
+        <div>
+          <h4>When</h4>
+          <p>Wednesday 4 November 2026 — research track<br>Thursday 5 November 2026 — practice track<br><a href="/agenda.html">See the detailed agenda →</a></p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="/cdn-cgi/l/email-protection#e480858a8a9dca808d83a4878b888b9685808bca818091"><span class="__cf_email__" data-cfemail="c0a4a1aeaeb9eea4a9a780a3afacafb2a1a4afeea5a4b5">[email&#160;protected]</span></a></p>
+          <p>Organized by the Center on Trustworthy and Responsible AI initiative at CU Boulder.</p>
+        </div>
+      </div>
+      <div class="support">
+        <h4>Support</h4>
+        <p>This workshop is supported by NSF-OAC grant 2138286 and the University of Colorado Boulder.</p>
+      </div>
+
+      <div class="colophon">
+        <span>trustworthyresponsible.ai</span>
+        <span>University of Colorado Boulder</span>
+        <span>Programme informed by our pre-workshop community survey</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  (function () {
+    document.querySelectorAll('.avatar img').forEach(function (img) {
+      img.addEventListener('error', function () { img.remove(); });
+      if (img.complete && img.naturalWidth === 0) img.remove();
+    });
+  })();
+</script>
+
+</body>
+</html>

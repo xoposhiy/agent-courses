@@ -1,0 +1,204 @@
+{
+  "checked_at": "2026-11-13T17:39:24.846270+00:00",
+  "courses": [
+    {
+      "id": "stanford-cs329z",
+      "folder": "courses/stanford-cs329z",
+      "raw_files": 427,
+      "markdown_files": 278,
+      "bytes": 397704615,
+      "local_links_checked": 1436,
+      "broken_local_links": [],
+      "manifest_type": "dict",
+      "manifest_records": 283,
+      "statuses": {
+        "downloaded": 278,
+        "access_blocked": 1,
+        "failed": 2,
+        "requires_login": 2
+      },
+      "conversion_statuses": {
+        "converted": 215,
+        "converted_with_limitations": 63,
+        "failed": 3,
+        "not_available": 2
+      },
+      "pdf_pages": 2730
+    },
+    {
+      "id": "columbia-coms4995",
+      "folder": "courses/columbia-coms4995",
+      "raw_files": 186,
+      "markdown_files": 65,
+      "bytes": 33724684,
+      "local_links_checked": 396,
+      "broken_local_links": [],
+      "manifest_type": "dict",
+      "manifest_records": 67,
+      "statuses": {
+        "downloaded": 66,
+        "requires_login": 1
+      },
+      "conversion_statuses": {
+        "converted": 57,
+        "not_available": 1,
+        "converted_with_limitations": 8,
+        "failed": 1
+      },
+      "pdf_pages": 498
+    },
+    {
+      "id": "cmu-11768",
+      "folder": "courses/cmu-11768",
+      "raw_files": 1491,
+      "markdown_files": 721,
+      "bytes": 2149173322,
+      "local_links_checked": 7950,
+      "broken_local_links": [],
+      "manifest_type": "dict",
+      "manifest_records": 740,
+      "statuses": {
+        "downloaded": 731,
+        "requires_login": 2,
+        "failed": 7
+      },
+      "conversion_statuses": {
+        "converted": 442,
+        "not_required": 2,
+        "converted_with_limitations": 279,
+        "not_available": 6,
+        "failed": 11
+      },
+      "pdf_pages": 9695
+    },
+    {
+      "id": "langchain-deep-agents",
+      "folder": "courses/langchain-deep-agents",
+      "raw_files": 946,
+      "markdown_files": 606,
+      "bytes": 149020100,
+      "local_links_checked": 5400,
+      "broken_local_links": [],
+      "manifest_type": "dict",
+      "manifest_records": 613,
+      "statuses": {
+        "failed": 2,
+        "downloaded": 610,
+        "not_material": 1
+      },
+      "conversion_statuses": {
+        "failed": 6,
+        "converted": 531,
+        "converted_with_limitations": 75,
+        "not_applicable": 1
+      },
+      "pdf_pages": 43
+    },
+    {
+      "id": "stanford-cs224v",
+      "folder": "courses/stanford-cs224v",
+      "raw_files": 7274,
+      "markdown_files": 6747,
+      "bytes": 728007348,
+      "local_links_checked": 21790,
+      "broken_local_links": [],
+      "manifest_type": "dict",
+      "manifest_records": 6772,
+      "statuses": {
+        "downloaded": 6754,
+        "requires_login": 7,
+        "failed": 8,
+        "response_only": 3
+      },
+      "conversion_statuses": {
+        "converted": 6646,
+        "converted_with_limitations": 101,
+        "not_available": 7,
+        "failed": 18
+      },
+      "pdf_pages": 3327
+    },
+    {
+      "id": "dlai-agentic-evals",
+      "folder": "courses/dlai-agentic-evals",
+      "raw_files": 98,
+      "markdown_files": 38,
+      "bytes": 32180951,
+      "local_links_checked": 228,
+      "broken_local_links": [],
+      "manifest_type": "dict",
+      "manifest_records": 69,
+      "statuses": {
+        "downloaded": 40,
+        "failed": 5,
+        "requires_login": 14,
+        "requires_subscription": 10
+      },
+      "conversion_statuses": {
+        "converted": 33,
+        "failed": 5,
+        "converted_with_limitations": 5,
+        "not_applicable": 2,
+        "not_available": 24
+      },
+      "pdf_pages": 288
+    },
+    {
+      "id": "colorado-csci7000",
+      "folder": "courses/colorado-csci7000",
+      "raw_files": 97,
+      "markdown_files": 39,
+      "bytes": 89944844,
+      "local_links_checked": 293,
+      "broken_local_links": [],
+      "manifest_type": "dict",
+      "manifest_records": 51,
+      "statuses": {
+        "downloaded": 39,
+        "requires_login": 3,
+        "failed": 9
+      },
+      "conversion_statuses": {
+        "converted": 14,
+        "not_available": 3,
+        "converted_with_limitations": 25,
+        "failed": 9
+      },
+      "pdf_pages": 773
+    },
+    {
+      "id": "agentic-large-language-models",
+      "folder": "courses/agentic-large-language-models",
+      "raw_files": 265,
+      "markdown_files": 26,
+      "bytes": 128947266,
+      "local_links_checked": 770,
+      "broken_local_links": [],
+      "manifest_type": "dict",
+      "manifest_records": 27,
+      "statuses": {
+        "downloaded": 27
+      },
+      "conversion_statuses": {
+        "converted": 25,
+        "not_applicable": 1,
+        "converted_with_limitations": 1
+      },
+      "pdf_pages": 472
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "root_navigation": {
+    "local_links_checked": 97,
+    "broken_local_links": []
+  },
+  "totals": {
+    "courses": 8,
+    "raw_files": 10784,
+    "markdown_files": 8520,
+    "bytes": 3708703130,
+    "local_links_checked": 38360,
+    "broken_local_links": 0
+  }
+}

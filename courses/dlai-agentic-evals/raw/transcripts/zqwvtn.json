@@ -1,0 +1,477 @@
+[
+  {
+    "startInSeconds": 1,
+    "endInSeconds": 4,
+    "text": "So far, all the improvements you've made have happened offline."
+  },
+  {
+    "startInSeconds": 4,
+    "endInSeconds": 11,
+    "text": "You had a fixed set of cases, you changed the agent, and then you ran\nthe same cases again to see what improved and what regressed."
+  },
+  {
+    "startInSeconds": 11,
+    "endInSeconds": 19,
+    "text": "That gives you a controlled way to make changes before real users ever\nsee them. But once the agent is live, the environment changes."
+  },
+  {
+    "startInSeconds": 19,
+    "endInSeconds": 22,
+    "text": "Now people are going to ask things you didn't put in your test set."
+  },
+  {
+    "startInSeconds": 22,
+    "endInSeconds": 29,
+    "text": "They'll phrase familiar requests in unfamiliar ways,\nthey'll leave out context, combine several things into one message,"
+  },
+  {
+    "startInSeconds": 29,
+    "endInSeconds": 33,
+    "text": "and sometimes behave in ways that are hard to anticipate in advance."
+  },
+  {
+    "startInSeconds": 33,
+    "endInSeconds": 38,
+    "text": "So after deployment, one of the most important questions becomes,\nwhere do the next improvement targets come from?"
+  },
+  {
+    "startInSeconds": 38,
+    "endInSeconds": 43,
+    "text": "Usually, they come from production. Think about the dog shelter agent."
+  },
+  {
+    "startInSeconds": 43,
+    "endInSeconds": 48,
+    "text": "Maybe your offline test set includes a volunteer saying,\n\"I have limited mobility,\""
+  },
+  {
+    "startInSeconds": 48,
+    "endInSeconds": 53,
+    "text": "and the agent correctly recognizes that this matters when deciding\nwhich dogs are appropriate."
+  },
+  {
+    "startInSeconds": 53,
+    "endInSeconds": 58,
+    "text": "But a real volunteer might say, \"I can only walk\nfor about ten minutes.\""
+  },
+  {
+    "startInSeconds": 58,
+    "endInSeconds": 61,
+    "text": "The underlying constraint is similar, but the wording is different."
+  },
+  {
+    "startInSeconds": 61,
+    "endInSeconds": 66,
+    "text": "Or someone might ask, \"Is Pepper free Saturday, and if not,\ncan I switch to Sunday?\""
+  },
+  {
+    "startInSeconds": 66,
+    "endInSeconds": 71,
+    "text": "Now the agent has to handle availability and a fallback request\nin the same message."
+  },
+  {
+    "startInSeconds": 71,
+    "endInSeconds": 74,
+    "text": "And some problems have nothing to do with the wording of the request."
+  },
+  {
+    "startInSeconds": 74,
+    "endInSeconds": 79,
+    "text": "Maybe the agent gives the right answer,\nbut it takes 14 seconds instead of 2."
+  },
+  {
+    "startInSeconds": 79,
+    "endInSeconds": 85,
+    "text": "Maybe a shelter policy changes, so behavior that was correct last\nmonth is no longer correct today."
+  },
+  {
+    "startInSeconds": 85,
+    "endInSeconds": 89,
+    "text": "And what if a new kind of dog record appears with fields your original\nbenchmark never covered?"
+  },
+  {
+    "startInSeconds": 89,
+    "endInSeconds": 95,
+    "text": "A good offline benchmark can catch a lot,\nbut it can only test the situations that made it into the benchmark."
+  },
+  {
+    "startInSeconds": 95,
+    "endInSeconds": 103,
+    "text": "That's why production becomes another source of evidence for\noptimization. Your offline evals still have an important job."
+  },
+  {
+    "startInSeconds": 103,
+    "endInSeconds": 108,
+    "text": "They're where you can test a candidate change against known cases\nin a repeatable way."
+  },
+  {
+    "startInSeconds": 108,
+    "endInSeconds": 110,
+    "text": "Before releasing a new version,"
+  },
+  {
+    "startInSeconds": 110,
+    "endInSeconds": 115,
+    "text": "you can run it against the failures you wanted to improve\nand the cases you want to protect from regression."
+  },
+  {
+    "startInSeconds": 115,
+    "endInSeconds": 120,
+    "text": "You can also automate those checks as part of your development\nprocess, and for some applications,"
+  },
+  {
+    "startInSeconds": 120,
+    "endInSeconds": 124,
+    "text": "you may decide that certain evals have to meet a threshold\nbefore a release goes out."
+  },
+  {
+    "startInSeconds": 124,
+    "endInSeconds": 127,
+    "text": "The exact release rule depends on the product."
+  },
+  {
+    "startInSeconds": 127,
+    "endInSeconds": 134,
+    "text": "The important part is that offline evaluation gives you a stable place\nto compare versions before the new behavior reaches users."
+  },
+  {
+    "startInSeconds": 134,
+    "endInSeconds": 137,
+    "text": "Production gives you something different."
+  },
+  {
+    "startInSeconds": 137,
+    "endInSeconds": 143,
+    "text": "It shows you what your benchmark missed, and there are several sources\nof information you can use once the agent is live."
+  },
+  {
+    "startInSeconds": 143,
+    "endInSeconds": 152,
+    "text": "Let's go over four kinds of evidence that are commonly used.\nproduction monitoring, manual review, user feedback, and A/B testing."
+  },
+  {
+    "startInSeconds": 152,
+    "endInSeconds": 159,
+    "text": "In production monitoring, you run evaluators and track metrics across\nlive traces to see where problems are appearing at scale."
+  },
+  {
+    "startInSeconds": 159,
+    "endInSeconds": 163,
+    "text": "Suppose a policy evaluator suddenly starts\nflagging more conversations,"
+  },
+  {
+    "startInSeconds": 163,
+    "endInSeconds": 169,
+    "text": "or a metric such as average tool use or response latency starts\ncreeping higher after a release."
+  },
+  {
+    "startInSeconds": 169,
+    "endInSeconds": 175,
+    "text": "Production monitoring will alert you to that kind of problem\nand help you answer a key question: Where should I look?"
+  },
+  {
+    "startInSeconds": 175,
+    "endInSeconds": 182,
+    "text": "Once you find an interesting issue, you often need to inspect the\ntraces themselves. That's where manual review comes in."
+  },
+  {
+    "startInSeconds": 182,
+    "endInSeconds": 186,
+    "text": "Imagine 37 shelter conversations fail an eligibility evaluator."
+  },
+  {
+    "startInSeconds": 186,
+    "endInSeconds": 192,
+    "text": "The count tells you there's a problem, but it doesn't tell you what\nkind of problem. Open a few of those traces."
+  },
+  {
+    "startInSeconds": 192,
+    "endInSeconds": 197,
+    "text": "Did the agent skip the eligibility check?\nDid it call the right tool with the wrong argument?"
+  },
+  {
+    "startInSeconds": 197,
+    "endInSeconds": 201,
+    "text": "Did the lookup return the correct result, but the agent ignored it?"
+  },
+  {
+    "startInSeconds": 201,
+    "endInSeconds": 205,
+    "text": "Or did the agent follow the right process and still reach\nthe wrong conclusion?"
+  },
+  {
+    "startInSeconds": 205,
+    "endInSeconds": 210,
+    "text": "Reading the trace helps you turn a metric into a failure pattern you\ncan actually work on."
+  },
+  {
+    "startInSeconds": 210,
+    "endInSeconds": 216,
+    "text": "User feedback gives you another source of evidence.\nSometimes that's explicit, like a thumbs down or a complaint."
+  },
+  {
+    "startInSeconds": 216,
+    "endInSeconds": 218,
+    "text": "Sometimes it's behavioral."
+  },
+  {
+    "startInSeconds": 218,
+    "endInSeconds": 227,
+    "text": "A user asks the same question again and rephrases it three times,\nthen they abandon the conversation and ask to talk to a human agent."
+  },
+  {
+    "startInSeconds": 227,
+    "endInSeconds": 234,
+    "text": "None of those signals tells you exactly what failed on its own, but\nthey can point you towards interactions that deserve a closer look."
+  },
+  {
+    "startInSeconds": 234,
+    "endInSeconds": 241,
+    "text": "Once you have a candidate improvement, you may also want to compare\nversions on real traffic. That's where an A/B test can be useful."
+  },
+  {
+    "startInSeconds": 241,
+    "endInSeconds": 245,
+    "text": "You can send some traffic to the current version and some to\nthe revised version,"
+  },
+  {
+    "startInSeconds": 245,
+    "endInSeconds": 249,
+    "text": "then compare the outcomes that matter for your application."
+  },
+  {
+    "startInSeconds": 249,
+    "endInSeconds": 256,
+    "text": "The new version might help reduce policy failures or the amount of\nfollow-up turns users need to get to the outcome they're looking for."
+  },
+  {
+    "startInSeconds": 256,
+    "endInSeconds": 260,
+    "text": "Or it might lead the agent to answer just\nas accurately but take longer."
+  },
+  {
+    "startInSeconds": 260,
+    "endInSeconds": 267,
+    "text": "The important thing is that these methods answer different questions.\nMonitoring helps you find where something is happening."
+  },
+  {
+    "startInSeconds": 267,
+    "endInSeconds": 274,
+    "text": "Manual review helps you understand what happened. User feedback helps\nsurface problems that matter to the people using the system."
+  },
+  {
+    "startInSeconds": 274,
+    "endInSeconds": 279,
+    "text": "And A/B testing can help you see whether a change still looks\nuseful under real traffic."
+  },
+  {
+    "startInSeconds": 279,
+    "endInSeconds": 287,
+    "text": "You'll often use more than one of them on the same problem. There's\nanother thing production makes much more visible: operational cost."
+  },
+  {
+    "startInSeconds": 287,
+    "endInSeconds": 291,
+    "text": "Earlier, you saw this with the grounding rule you added to\nthe Northwind agent."
+  },
+  {
+    "startInSeconds": 291,
+    "endInSeconds": 296,
+    "text": "\"Never state a product detail unless a tool result supports it.\"\nRemember what happened?"
+  },
+  {
+    "startInSeconds": 296,
+    "endInSeconds": 302,
+    "text": "You got rid of ungrounded answers, but the new rule caused the agent\nto start making unnecessary tool calls."
+  },
+  {
+    "startInSeconds": 302,
+    "endInSeconds": 309,
+    "text": "At a small scale, one extra call may not look important.\nBut imagine that behavior repeating thousands of times a day."
+  },
+  {
+    "startInSeconds": 309,
+    "endInSeconds": 312,
+    "text": "You'll end up getting significantly more latency and cost."
+  },
+  {
+    "startInSeconds": 312,
+    "endInSeconds": 318,
+    "text": "The same is true for token use, model choice, repeated tool calls,\nunnecessary handoffs,"
+  },
+  {
+    "startInSeconds": 318,
+    "endInSeconds": 321,
+    "text": "or conversations where users have to keep asking for the same thing."
+  },
+  {
+    "startInSeconds": 321,
+    "endInSeconds": 326,
+    "text": "So when you monitor an agent in production,\ndon't look only at whether the answer was correct."
+  },
+  {
+    "startInSeconds": 326,
+    "endInSeconds": 332,
+    "text": "A useful system also has to behave efficiently enough for the\nenvironment it runs in."
+  },
+  {
+    "startInSeconds": 332,
+    "endInSeconds": 336,
+    "text": "This is where the offline and production sides of the improvement\nloop start to connect."
+  },
+  {
+    "startInSeconds": 336,
+    "endInSeconds": 343,
+    "text": "For the dog shelter agent, suppose production monitoring starts\nflagging conversations where volunteers mention physical limitations."
+  },
+  {
+    "startInSeconds": 343,
+    "endInSeconds": 349,
+    "text": "You open one of those traces and see a volunteer say,\n\"I can only walk for about ten minutes. Is Pepper free on Saturday?\""
+  },
+  {
+    "startInSeconds": 349,
+    "endInSeconds": 353,
+    "text": "The agent checks Pepper's availability and schedules the outing,"
+  },
+  {
+    "startInSeconds": 353,
+    "endInSeconds": 358,
+    "text": "but it never considers whether Pepper is a suitable match for someone\nwho can only walk for ten minutes."
+  },
+  {
+    "startInSeconds": 358,
+    "endInSeconds": 363,
+    "text": "most likely because of a physical impairment.\nNow you have a specific production failure."
+  },
+  {
+    "startInSeconds": 363,
+    "endInSeconds": 367,
+    "text": "Open the trace, and find the first place the behavior goes wrong."
+  },
+  {
+    "startInSeconds": 367,
+    "endInSeconds": 370,
+    "text": "In this case, the agent understood the scheduling request,"
+  },
+  {
+    "startInSeconds": 370,
+    "endInSeconds": 375,
+    "text": "but it didn't recognize the walking time limit as information\nthat should affect the match."
+  },
+  {
+    "startInSeconds": 375,
+    "endInSeconds": 378,
+    "text": "Next, decide what the agent should have done instead."
+  },
+  {
+    "startInSeconds": 378,
+    "endInSeconds": 384,
+    "text": "It should have treated \"I can only walk for about 10 minutes\"\nas a constraint on the kind of dog this volunteer can handle,"
+  },
+  {
+    "startInSeconds": 384,
+    "endInSeconds": 389,
+    "text": "checked Pepper against that constraint,\nand only then continued with scheduling."
+  },
+  {
+    "startInSeconds": 389,
+    "endInSeconds": 392,
+    "text": "Now, save that conversation as a new test case."
+  },
+  {
+    "startInSeconds": 392,
+    "endInSeconds": 398,
+    "text": "Keep the volunteer's original wording because that wording is part of\nwhat your old test set was missing."
+  },
+  {
+    "startInSeconds": 398,
+    "endInSeconds": 403,
+    "text": "Record the behavior you expect and add the case to your\noffline evaluation set."
+  },
+  {
+    "startInSeconds": 403,
+    "endInSeconds": 410,
+    "text": "Then, you can make a targeted change to the agent and run the updated\nversion against this new case. But don't run only this one."
+  },
+  {
+    "startInSeconds": 410,
+    "endInSeconds": 412,
+    "text": "Run the rest of your benchmark, too."
+  },
+  {
+    "startInSeconds": 412,
+    "endInSeconds": 416,
+    "text": "You still want the agent to handle the older mobility cases correctly,"
+  },
+  {
+    "startInSeconds": 416,
+    "endInSeconds": 422,
+    "text": "and you don't want a change made for this new phrasing to break\nscheduling requests that were already working."
+  },
+  {
+    "startInSeconds": 422,
+    "endInSeconds": 428,
+    "text": "If the new version now handles the 10-minute walking constraint\ncorrectly and the rest of the benchmark stays healthy,"
+  },
+  {
+    "startInSeconds": 428,
+    "endInSeconds": 430,
+    "text": "you have a stronger candidate to release."
+  },
+  {
+    "startInSeconds": 430,
+    "endInSeconds": 435,
+    "text": "Once that version is live, keep monitoring the same\nkinds of conversations."
+  },
+  {
+    "startInSeconds": 435,
+    "endInSeconds": 439,
+    "text": "Maybe the next volunteer says, \"I'm fine with short walks,\nbut nothing strenuous.\""
+  },
+  {
+    "startInSeconds": 439,
+    "endInSeconds": 446,
+    "text": "That may reveal another phrasing your offline set doesn't cover yet.\nAnd when that happens, you do the same thing again."
+  },
+  {
+    "startInSeconds": 446,
+    "endInSeconds": 453,
+    "text": "inspect the trace, establish the expected behavior,\nadd the case to your benchmark, and use it to guide the next change."
+  },
+  {
+    "startInSeconds": 453,
+    "endInSeconds": 456,
+    "text": "That's how production starts feeding the offline eval set."
+  },
+  {
+    "startInSeconds": 456,
+    "endInSeconds": 464,
+    "text": "Each real failure you decide is worth fixing becomes a case the next\nversion has to handle too. That gives you a continuous loop."
+  },
+  {
+    "startInSeconds": 464,
+    "endInSeconds": 470,
+    "text": "Production reveals something your existing tests missed,\nyou inspect it and turn it into a reproducible case,"
+  },
+  {
+    "startInSeconds": 470,
+    "endInSeconds": 477,
+    "text": "make a change and test it offline, then you release the new version\nand see what real users show you next."
+  },
+  {
+    "startInSeconds": 477,
+    "endInSeconds": 482,
+    "text": "Over time, your benchmark becomes more representative of the\nsituations your agent actually encounters,"
+  },
+  {
+    "startInSeconds": 482,
+    "endInSeconds": 489,
+    "text": "and your optimization process gets better, too, because each new\nfailure gives you another piece of evidence to work with."
+  },
+  {
+    "startInSeconds": 489,
+    "endInSeconds": 492,
+    "text": "In the next video, you'll follow that loop with\nNorthwind. See you there!"
+  }
+]

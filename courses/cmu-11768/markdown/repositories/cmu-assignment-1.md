@@ -1,0 +1,57 @@
+# Assignment 1
+
+[Course index](../../README.md) · [Original source](https://github.com/cmu-agents/assignment-1) · [Raw file](../../raw/repositories/cmu-assignment-1.zip)
+
+Retrieved: 2026-11-13T16:48:10.751888+00:00
+
+Original archive contains 46 files. Code was not executed.
+
+- [ASSIGNMENT.md](cmu-assignment-1/ASSIGNMENT-md.md)
+- [README.md](cmu-assignment-1/README-md.md)
+- [pyproject.toml](cmu-assignment-1/pyproject-toml.md)
+- [scripts/evaluate.py](cmu-assignment-1/scripts/evaluate-py.md)
+- [scripts/evaluate_swebench.py](cmu-assignment-1/scripts/evaluate_swebench-py.md)
+- [src/assignment/__init__.py](cmu-assignment-1/src/assignment/__init__-py.md)
+- [src/assignment/agent/__init__.py](cmu-assignment-1/src/assignment/agent/__init__-py.md)
+- [src/assignment/agent/base.py](cmu-assignment-1/src/assignment/agent/base-py.md)
+- [src/assignment/agent/chess_agent.py](cmu-assignment-1/src/assignment/agent/chess_agent-py.md)
+- [src/assignment/agent/chess_tools.py](cmu-assignment-1/src/assignment/agent/chess_tools-py.md)
+- [src/assignment/agent/code_agent.py](cmu-assignment-1/src/assignment/agent/code_agent-py.md)
+- [src/assignment/agent/tools.py](cmu-assignment-1/src/assignment/agent/tools-py.md)
+- [src/assignment/chess_sandbox.py](cmu-assignment-1/src/assignment/chess_sandbox-py.md)
+- [src/assignment/chess_server.py](cmu-assignment-1/src/assignment/chess_server-py.md)
+- [src/assignment/cli.py](cmu-assignment-1/src/assignment/cli-py.md)
+- [src/assignment/doctor.py](cmu-assignment-1/src/assignment/doctor-py.md)
+- [src/assignment/env.py](cmu-assignment-1/src/assignment/env-py.md)
+- [src/assignment/eval/__init__.py](cmu-assignment-1/src/assignment/eval/__init__-py.md)
+- [src/assignment/eval/harness.py](cmu-assignment-1/src/assignment/eval/harness-py.md)
+- [src/assignment/eval/instances.py](cmu-assignment-1/src/assignment/eval/instances-py.md)
+- [src/assignment/prompts.py](cmu-assignment-1/src/assignment/prompts-py.md)
+- [src/assignment/sandbox_python.py](cmu-assignment-1/src/assignment/sandbox_python-py.md)
+- [src/assignment/task.py](cmu-assignment-1/src/assignment/task-py.md)
+- [src/assignment/utils/image.py](cmu-assignment-1/src/assignment/utils/image-py.md)
+- [tasks/README.md](cmu-assignment-1/tasks/README-md.md)
+- [tasks/chess-skills/select-move/SKILL.md](cmu-assignment-1/tasks/chess-skills/select-move/SKILL-md.md)
+- [tasks/chess-terminal-move/problem_statement.md](cmu-assignment-1/tasks/chess-terminal-move/problem_statement-md.md)
+- [tasks/chess-terminal-move/public_tests/evaluation.json](cmu-assignment-1/tasks/chess-terminal-move/public_tests/evaluation-json.md)
+- [tasks/chess-terminal-move/task.json](cmu-assignment-1/tasks/chess-terminal-move/task-json.md)
+- [tasks/code-skills/submit-task/SKILL.md](cmu-assignment-1/tasks/code-skills/submit-task/SKILL-md.md)
+- [tasks/swebench/django__django-15368/instance.json](cmu-assignment-1/tasks/swebench/django__django-15368/instance-json.md)
+- [tasks/swebench/django__django-15368/problem_statement.md](cmu-assignment-1/tasks/swebench/django__django-15368/problem_statement-md.md)
+- [tests/test_agent.py](cmu-assignment-1/tests/test_agent-py.md)
+- [tests/test_chess_agent.py](cmu-assignment-1/tests/test_chess_agent-py.md)
+- [tests/test_chess_sandbox.py](cmu-assignment-1/tests/test_chess_sandbox-py.md)
+- [tests/test_env.py](cmu-assignment-1/tests/test_env-py.md)
+- [tests/test_infrastructure.py](cmu-assignment-1/tests/test_infrastructure-py.md)
+- [tests/test_smoke.py](cmu-assignment-1/tests/test_smoke-py.md)
+
+## Original assets and other files
+
+- [.env.example](../../raw/repositories/cmu-assignment-1/.env.example)
+- [.gitignore](../../raw/repositories/cmu-assignment-1/.gitignore)
+- [.gitmodules](../../raw/repositories/cmu-assignment-1/.gitmodules)
+- [Makefile](../../raw/repositories/cmu-assignment-1/Makefile)
+- [Dockerfile](../../raw/repositories/cmu-assignment-1/tasks/chess-terminal-move/Dockerfile)
+- [test_patch.diff](../../raw/repositories/cmu-assignment-1/tasks/chess-terminal-move/public_tests/test_patch.diff)
+- [test_patch.diff](../../raw/repositories/cmu-assignment-1/tasks/swebench/django__django-15368/test_patch.diff)
+- [uv.lock](../../raw/repositories/cmu-assignment-1/uv.lock)

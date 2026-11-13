@@ -1,0 +1,517 @@
+[
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Home",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Syllabus",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Research Project",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Paper Critiques",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperCritiques.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Paper Presentation",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperPresentation.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "https://cuboulder.zoom.us/j/99193569574",
+    "url": "https://cuboulder.zoom.us/j/99193569574"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Danny Dig",
+    "url": "http://danny.cs.colorado.edu"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Course Syllabus",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Slides presented in class",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/pdfs/W1L1.pdf"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Read an Engineering Research paper",
+    "url": "http://cseweb.ucsd.edu/~wgg/CSE210/howtoread.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Piazza",
+    "url": "https://piazza.com/colorado/fall2026/csci7000009"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "syllabus",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "A survey on large language model based autonomous agents",
+    "url": "https://link.springer.com/article/10.1007/s11704-024-40231-1?fromPaywallRec=true"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Large Language Model-Based Agents for Software Engineering: A Survey",
+    "url": "https://arxiv.org/pdf/2409.02977"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Agentic Software Engineering: Foundational Pillars and a Research Roadmap",
+    "url": "https://arxiv.org/pdf/2509.06216"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "research project",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Pitch Project Ideas",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/projectProposal.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+    "url": "https://arxiv.org/abs/2210.03629"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2303.11366"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Project Milestone 1",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone1.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+    "url": "https://arxiv.org/pdf/2302.04761"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Gorilla: Large Language Model Connected with Massive APIs",
+    "url": "https://arxiv.org/pdf/2305.15334"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "OpenHands: An Open Platform for AI Software Developers as Generalist Agents",
+    "url": "https://arxiv.org/pdf/2407.16741"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "this page",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperCritiques.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
+    "url": "https://arxiv.org/pdf/2405.15793"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "AutoCodeRover: Autonomous Program Improvement",
+    "url": "https://arxiv.org/pdf/2404.05427"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+    "url": "https://arxiv.org/pdf/2308.08155"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "METAGPT: Meta Programming for a Multi-Agent Collaborative Framework",
+    "url": "https://arxiv.org/pdf/2308.00352"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Improving Factuality and Reasoning in Language Models through Multiagent Debate",
+    "url": "https://openreview.net/pdf?id=zj7YuTE4t8"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Demystifying LLM-Based Software Engineering Agents",
+    "url": "https://dl.acm.org/doi/epdf/10.1145/3715754"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Project Milestone 2",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone2.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "MDCrow: automating molecular dynamics workflows with large language models",
+    "url": "https://iopscience.iop.org/article/10.1088/2632-2153/ae4b07/pdf"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "What Breaks When LLMs Code? Characterizing Operational Safety Failures of Agentic Code Assistants",
+    "url": "https://dl.acm.org/doi/epdf/10.1145/3832783.3834393"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "From Plan to Action: How Well Do Agents Follow the Plan?",
+    "url": "https://dl.acm.org/doi/10.1145/3832783.3834400"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Beyond Tool Selection: Diagnosing Downstream Failures in MCP Tool-Using LLM Agents",
+    "url": "https://openreview.net/pdf?id=PPculVvgEd"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Evaluating AI-based Scientific Knowledge Synthesis with Epidemiological Systematic Reviews",
+    "url": "https://arxiv.org/abs/2603.22327"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Harness2: Recursive Agent Harnessing for an Open World",
+    "url": "https://arxiv.org/pdf/2610.14224v1"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Position: Coding Benchmarks Are Misaligned with Agentic Software Engineering",
+    "url": "https://openreview.net/pdf?id=t32Hgnk7ou"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Why SWE-bench Verified no longer measures frontier coding capabilities",
+    "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Toward Training Superintelligent Software Agents through Self-Play SWE-RL",
+    "url": "https://arxiv.org/abs/2512.18552"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "How Coding Agents Fail Their Users: A Large-Scale Analysis of Developer-Agent Misalignment in 20,574 Real-World Sessions",
+    "url": "https://arxiv.org/abs/2605.29442"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Attend Workshop on Trustworthy & Responsible AI",
+    "url": "https://trustworthyresponsible.ai"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Project Milestone 3",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone3.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Project Milestone 4",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone4.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html",
+    "title": "Submit final project",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/finalProject.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html",
+    "title": "Home",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html",
+    "title": "Syllabus",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html",
+    "title": "Research Project",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html",
+    "title": "Paper Critiques",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperCritiques.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html",
+    "title": "Paper Presentation",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperPresentation.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html",
+    "title": "Piazza",
+    "url": "https://piazza.com/colorado/fall2026/csci7000009"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html",
+    "title": "Paper Critiques",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperCritiques.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html",
+    "title": "Paper Presentation",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperPresentation.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html",
+    "title": "Research Project",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html",
+    "title": "Paper Critique assignment",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperCritiques.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html",
+    "title": "article1",
+    "url": "https://medium.com/@cshirky/why-i-just-asked-my-students-to-put-their-laptops-away-7f5f7c50f368"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html",
+    "title": "article2",
+    "url": "http://www.sciencedirect.com/science/article/pii/S0360131512002254?np=y"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html",
+    "title": "Home",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html",
+    "title": "Syllabus",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html",
+    "title": "Research Project",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html",
+    "title": "Paper Critiques",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperCritiques.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html",
+    "title": "Paper Presentation",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperPresentation.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html",
+    "title": "Project Proposal",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/projectProposal.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html",
+    "title": "Milestone 1",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone1.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html",
+    "title": "Milestone 2",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone2.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html",
+    "title": "Milestone 3",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone3.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html",
+    "title": "Milestone 4",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone4.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html",
+    "title": "Final Project",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/finalProject.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperCritiques.html",
+    "title": "Home",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperCritiques.html",
+    "title": "Syllabus",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperCritiques.html",
+    "title": "Research Project",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperCritiques.html",
+    "title": "Paper Critiques",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperCritiques.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperCritiques.html",
+    "title": "Paper Presentation",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperPresentation.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperCritiques.html",
+    "title": "Read an Engineering Research paper",
+    "url": "http://cseweb.ucsd.edu/~wgg/CSE210/howtoread.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperPresentation.html",
+    "title": "Home",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperPresentation.html",
+    "title": "Syllabus",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperPresentation.html",
+    "title": "Research Project",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperPresentation.html",
+    "title": "Paper Critiques",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperCritiques.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperPresentation.html",
+    "title": "Paper Presentation",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperPresentation.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/projectProposal.html",
+    "title": "Home",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/projectProposal.html",
+    "title": "Syllabus",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/projectProposal.html",
+    "title": "Research Project",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/projectProposal.html",
+    "title": "Paper Critiques",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperCritiques.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/projectProposal.html",
+    "title": "Paper Presentation",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperPresentation.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone1.html",
+    "title": "Home",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone1.html",
+    "title": "Syllabus",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone1.html",
+    "title": "Research Project",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone1.html",
+    "title": "Paper Critiques",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperCritiques.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone1.html",
+    "title": "Paper Presentation",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperPresentation.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone1.html",
+    "title": "ACM template",
+    "url": "https://www.acm.org/publications/proceedings-template"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone1.html",
+    "title": "ACM Proceedings template",
+    "url": "http://www.acm.org/publications/proceedings-template"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone2.html",
+    "title": "Home",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone2.html",
+    "title": "Syllabus",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone2.html",
+    "title": "Research Project",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone2.html",
+    "title": "Paper Critiques",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperCritiques.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone2.html",
+    "title": "Paper Presentation",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperPresentation.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone2.html",
+    "title": "ACM SIG template",
+    "url": "https://www.acm.org/publications/proceedings-template"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone3.html",
+    "title": "Home",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/index.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone3.html",
+    "title": "Syllabus",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/syllabus.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone3.html",
+    "title": "Research Project",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/researchProject.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone3.html",
+    "title": "Paper Critiques",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperCritiques.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone3.html",
+    "title": "Paper Presentation",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/paperPresentation.html"
+  },
+  {
+    "source_page": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/milestone3.html",
+    "title": "Final Project",
+    "url": "https://danny.cs.colorado.edu/courses/csci7000-009_F26/finalProject.html"
+  }
+]

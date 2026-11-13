@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head><!-- first-paint --><script>(function(){var k='pnpm-stale-assets-reload';function r(){try{var l=+sessionStorage.getItem(k)||0;if(Date.now()-l<10000)return;sessionStorage.setItem(k,String(Date.now()))}catch(e){return}location.reload()}addEventListener('error',function(e){var t=e.target;if(!t||(t.tagName!=='SCRIPT'&&t.tagName!=='LINK'))return;if(/\/assets\//.test(t.src||t.href||''))r()},true);addEventListener('vite:preloadError',function(e){e.preventDefault();r()})})()</script><script>(function(){var t;try{t=localStorage.getItem("theme")}catch(e){}if(t!=='light'&&t!=='dark')t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)})()</script><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;1,400&display=swap" /><style>body{font-family:var(--typography-font-family,system-ui,sans-serif);background:var(--colors-surface-background,#fff);color:var(--colors-text-primary,#212121);margin:0}.docs-prerendered{box-sizing:border-box;overflow-wrap:break-word;max-width:860px;margin:0 auto;padding:88px 24px 48px;line-height:1.6}.docs-prerendered h1{margin:0 0 24px;font-size:36px;line-height:1.2}.docs-prerendered h2{margin:48px 0 16px;font-size:30px;line-height:1.2}.docs-prerendered h3{margin:32px 0 12px;font-size:24px;line-height:1.2}.docs-prerendered a{color:var(--colors-text-link,#f69220)}.docs-prerendered .hash-link{display:none}.docs-prerendered img{max-width:100%;height:auto}.docs-prerendered pre{background:var(--colors-surface-tertiary,#f8f9fa);border-radius:8px;padding:16px;overflow-x:auto}.docs-prerendered code{font-family:JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em}.docs-prerendered table{border-collapse:collapse;display:block;overflow-x:auto}.docs-prerendered th,.docs-prerendered td{border:1px solid var(--colors-border-default,#e0e0e0);padding:8px 12px}.docs-prerendered article+article{margin-top:48px}</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Installation | pnpm</title>
+    <meta name="description" content="pnpm 12 is a native executable and does not require Node.js after it is installed. The pnpm npm package installs on Node.js 18 or newer. The npx get-pnpm installer requires Node.js 22.13 or newer." />
+    <meta name="theme-color" content="#f69220" />
+    <link rel="icon" href="/img/favicon.png" />
+    <link rel="alternate" type="application/rss+xml" title="pnpm Blog RSS Feed" href="/blog/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="pnpm Blog Atom Feed" href="/blog/atom.xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="pnpm" />
+    <meta property="og:title" content="Installation | pnpm" />
+    <meta property="og:description" content="pnpm 12 is a native executable and does not require Node.js after it is installed. The pnpm npm package installs on Node.js 18 or newer. The npx get-pnpm installer requires Node.js 22.13 or newer." />
+    <meta property="og:image" content="https://pnpm.io/img/ogimage.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@pnpmjs" />
+    <meta name="twitter:title" content="Installation | pnpm" />
+    <meta name="twitter:description" content="pnpm 12 is a native executable and does not require Node.js after it is installed. The pnpm npm package installs on Node.js 18 or newer. The npx get-pnpm installer requires Node.js 22.13 or newer." />
+    <meta name="twitter:image" content="https://pnpm.io/img/ogimage.png" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPD4HWL84Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RPD4HWL84Z');
+    </script>
+
+    <script type="module" crossorigin src="/assets/index-m9HW45Yq.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BU2nWHdb.css">
+  <link rel="canonical" href="https://pnpm.io/installation" />
+    <meta property="og:url" content="https://pnpm.io/installation" />
+    <link rel="alternate" hreflang="en" href="https://pnpm.io/installation" />
+    <link rel="alternate" hreflang="it" href="https://pnpm.io/it/installation" />
+    <link rel="alternate" hreflang="zh" href="https://pnpm.io/zh/installation" />
+    <link rel="alternate" hreflang="ja" href="https://pnpm.io/ja/installation" />
+    <link rel="alternate" hreflang="ko" href="https://pnpm.io/ko/installation" />
+    <link rel="alternate" hreflang="pt" href="https://pnpm.io/pt/installation" />
+    <link rel="alternate" hreflang="zh-TW" href="https://pnpm.io/zh-TW/installation" />
+    <link rel="alternate" hreflang="ru" href="https://pnpm.io/ru/installation" />
+    <link rel="alternate" hreflang="uk" href="https://pnpm.io/uk/installation" />
+    <link rel="alternate" hreflang="fr" href="https://pnpm.io/fr/installation" />
+    <link rel="alternate" hreflang="tr" href="https://pnpm.io/tr/installation" />
+    <link rel="alternate" hreflang="es" href="https://pnpm.io/es/installation" />
+    <link rel="alternate" hreflang="id" href="https://pnpm.io/id/installation" />
+    <link rel="alternate" hreflang="x-default" href="https://pnpm.io/installation" />
+    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:version" content="12.x" />
+    <meta name="docsearch:docusaurus_tag" content="docs-default-12.x" />
+  </head>
+  <body>
+    <div id="root"><main class="docs-prerendered"><article><h1>Installation</h1><h2 id="prerequisites">Prerequisites<a class="hash-link" href="#prerequisites" aria-label="Direct link to Prerequisites">#</a></h2>
+<p>pnpm 12 is a native executable and does not require Node.js after it is installed. The <code>pnpm</code> npm package installs on Node.js 18 or newer. The <code>npx get-pnpm</code> installer requires Node.js 22.13 or newer.</p>
+<p>pnpm 12 is the current release line. The <code>latest</code> tag on npm points at it, so the commands below install pnpm 12 without naming a version.</p>
+<h3 id="supported-platforms">Supported platforms<a class="hash-link" href="#supported-platforms" aria-label="Direct link to Supported platforms">#</a></h3>
+<p>pnpm 12 ships a prebuilt binary for each of these targets:</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Operating system</th>
+<th>Architectures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linux (glibc)</td>
+<td>x64, arm64, riscv64, ppc64le, s390x</td>
+</tr>
+<tr>
+<td>Linux (musl)</td>
+<td>x64, arm64</td>
+</tr>
+<tr>
+<td>macOS</td>
+<td>arm64, x64</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>x64, arm64</td>
+</tr>
+<tr>
+<td>FreeBSD</td>
+<td>x64</td>
+</tr>
+<tr>
+<td>NetBSD</td>
+<td>x64</td>
+</tr>
+<tr>
+<td>Android</td>
+<td>arm64, x64</td>
+</tr>
+</tbody>
+</table></div>
+<p>FreeBSD, ppc64le, s390x, RISC-V, and Android were added in v12.4.0. The NetBSD binary is built and tested on NetBSD 10. On a target with no binary, install the JavaScript <a href="https://www.npmjs.com/package/pnpm/v/11">pnpm 11</a> instead.</p>
+<p>For StackBlitz WebContainers, see the experimental <a href="/webcontainers">WebAssembly distribution</a>.</p>
+<h2 id="using-pnpm">Using pnpm<a class="hash-link" href="#using-pnpm" aria-label="Direct link to Using pnpm">#</a></h2>
+<p>If you already have pnpm v11.10.0 or newer, update directly to pnpm 12:</p>
+<pre><code class="hljs language-sh"><span class="hljs-prompt" aria-hidden="true"></span><span class="hljs-command">pnpm</span> self-update
+</code></pre>
+<p>Inside a project that pins pnpm through the <code>packageManager</code> field, <a href="/cli/self-update"><code>self-update</code></a> only updates that pin instead of installing pnpm globally.</p>
+<h2 id="using-a-standalone-script">Using a standalone script<a class="hash-link" href="#using-a-standalone-script" aria-label="Direct link to Using a standalone script">#</a></h2>
+<p>You may install pnpm even if you don't have Node.js installed, using the following scripts.</p>
+<h3 id="on-windows">On Windows<a class="hash-link" href="#on-windows" aria-label="Direct link to On Windows">#</a></h3>
+<div class="admonition admonition-warning"><p class="admonition-title">Warning</p>
+<p>Sometimes, Windows Defender may block our executable if you install pnpm this way.</p>
+<p>Due to this issue, we currently recommend installing pnpm using <a href="#using-npm">npm</a> on Windows.</p>
+</div>
+<p>Using PowerShell:</p>
+<pre><code class="hljs language-powershell"><span class="hljs-built_in">Invoke-WebRequest</span> https://get.pnpm.io/install.ps1 <span class="hljs-literal">-UseBasicParsing</span> | <span class="hljs-built_in">Invoke-Expression</span>
+</code></pre>
+<p>On Windows, Microsoft Defender can slow down installation of packages. You can add pnpm to Microsoft Defender's list
+of excluded folders in a PowerShell window with administrator rights by executing:</p>
+<pre><code class="hljs language-powershell"><span class="hljs-built_in">Add-MpPreference</span> <span class="hljs-literal">-ExclusionPath</span> <span class="hljs-variable">$</span>(pnpm store path)
+</code></pre>
+<h3 id="on-posix-systems">On POSIX systems<a class="hash-link" href="#on-posix-systems" aria-label="Direct link to On POSIX systems">#</a></h3>
+<pre><code class="hljs language-sh"><span class="hljs-prompt" aria-hidden="true"></span><span class="hljs-command">curl</span> <span class="hljs-flag">-fsSL</span> <span class="hljs-link">https://get.pnpm.io/install.sh</span> <span class="hljs-operator">|</span> <span class="hljs-command">sh</span> -
+</code></pre>
+<p>If you don't have curl installed, you would like to use wget:</p>
+<pre><code class="hljs language-sh"><span class="hljs-prompt" aria-hidden="true"></span><span class="hljs-command">wget</span> <span class="hljs-flag">-qO-</span> <span class="hljs-link">https://get.pnpm.io/install.sh</span> <span class="hljs-operator">|</span> <span class="hljs-command">sh</span> -
+</code></pre>
+<div class="admonition admonition-tip"><p class="admonition-title">Tip</p>
+<p>You may use the <a href="/cli/runtime">pnpm runtime</a> command then to install Node.js.</p>
+</div>
+<h3 id="in-a-docker-container">In a Docker container<a class="hash-link" href="#in-a-docker-container" aria-label="Direct link to In a Docker container">#</a></h3>
+<pre><code class="hljs language-sh"><span class="hljs-comment"># bash</span>
+<span class="hljs-prompt" aria-hidden="true"></span><span class="hljs-command">wget</span> <span class="hljs-flag">-qO-</span> <span class="hljs-link">https://get.pnpm.io/install.sh</span> <span class="hljs-operator">|</span> <span class="hljs-command">env</span> <span class="hljs-attr">ENV</span>=<span class="hljs-string">"<span class="hljs-variable">$HOME</span>/.bashrc"</span> <span class="hljs-attr">SHELL</span>=<span class="hljs-string">"<span class="hljs-subst">$(<span class="hljs-command">which</span> bash)</span>"</span> <span class="hljs-command">bash</span> -
+<span class="hljs-comment"># sh</span>
+<span class="hljs-prompt" aria-hidden="true"></span><span class="hljs-command">wget</span> <span class="hljs-flag">-qO-</span> <span class="hljs-link">https://get.pnpm.io/install.sh</span> <span class="hljs-operator">|</span> <span class="hljs-command">env</span> <span class="hljs-attr">ENV</span>=<span class="hljs-string">"<span class="hljs-variable">$HOME</span>/.shrc"</span> <span class="hljs-attr">SHELL</span>=<span class="hljs-string">"<span class="hljs-subst">$(<span class="hljs-command">which</span> sh)</span>"</span> <span class="hljs-command">sh</span> -
+<span class="hljs-comment"># dash</span>
+<span class="hljs-prompt" aria-hidden="true"></span><span class="hljs-command">wget</span> <span class="hljs-flag">-qO-</span> <span class="hljs-link">https://get.pnpm.io/install.sh</span> <span class="hljs-operator">|</span> <span class="hljs-command">env</span> <span class="hljs-attr">ENV</span>=<span class="hljs-string">"<span class="hljs-variable">$HOME</span>/.dashrc"</span> <span class="hljs-attr">SHELL</span>=<span class="hljs-string">"<span class="hljs-subst">$(<span class="hljs-command">which</span> dash)</span>"</span> <span class="hljs-command">dash</span> -
+</code></pre>
+<h3 id="installing-a-specific-version">Installing a specific version<a class="hash-link" href="#installing-a-specific-version" aria-label="Direct link to Installing a specific version">#</a></h3>
+<p>Before running the install script, you may optionally set an env variable <code>PNPM_VERSION</code> to install a specific version of pnpm:</p>
+<pre><code class="hljs language-sh"><span class="hljs-prompt" aria-hidden="true"></span><span class="hljs-command">curl</span> <span class="hljs-flag">-fsSL</span> <span class="hljs-link">https://get.pnpm.io/install.sh</span> <span class="hljs-operator">|</span> <span class="hljs-command">env</span> <span class="hljs-attr">PNPM_VERSION</span>=<span class="hljs-operator">&#x3C;</span><span class="hljs-command">version</span><span class="hljs-operator">></span> sh -
+</code></pre>
+<h2 id="using-npm">Using npm<a class="hash-link" href="#using-npm" aria-label="Direct link to Using npm">#</a></h2>
+<pre><code class="hljs language-sh"><span class="hljs-prompt" aria-hidden="true"></span><span class="hljs-command">npx</span> get-pnpm
+</code></pre>
+<p>Node.js 22.13 or newer is needed to run this installer, but not to run pnpm afterwards.</p>
+<p>You can also install the <code>pnpm</code> package globally with npm, which needs Node.js 18 or newer:</p>
+<pre><code class="hljs language-sh"><span class="hljs-prompt" aria-hidden="true"></span><span class="hljs-command">npm</span> install <span class="hljs-flag">-g</span> pnpm@latest
+</code></pre>
+<div class="admonition admonition-tip"><p class="admonition-title">Tip</p>
+<p>Do you wanna use pnpm on CI servers? See: <a href="/continuous-integration">Continuous Integration</a>.</p>
+</div>
+<h2 id="compatibility">Compatibility<a class="hash-link" href="#compatibility" aria-label="Direct link to Compatibility">#</a></h2>
+<p>Here is a list of the supported pnpm versions with respective Node.js version support.</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Node.js</th>
+<th>pnpm 10</th>
+<th>pnpm 11</th>
+<th>pnpm 12</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Node.js 18</td>
+<td>✔️</td>
+<td>❌</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Node.js 20</td>
+<td>✔️</td>
+<td>❌</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Node.js 22</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Node.js 24</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Node.js 26</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+</tbody>
+</table></div>
+<p>pnpm 12 only needs Node.js when it is installed from npm; the version installed by the standalone script runs without Node.js.</p>
+<h2 id="troubleshooting">Troubleshooting<a class="hash-link" href="#troubleshooting" aria-label="Direct link to Troubleshooting">#</a></h2>
+<p>If pnpm is broken and you cannot fix it by reinstalling, you might need to remove it manually from the PATH.</p>
+<p>For example, a leftover install of an older, JavaScript-based pnpm earlier on PATH can shadow pnpm 12 and fail like this when running <code>pnpm install</code>:</p>
+<pre><code class="hljs language-text">C:\src>pnpm install
+internal/modules/cjs/loader.js:883
+  throw err;
+  ^
+
+
+
+Error: Cannot find module 'C:\Users\Bence\AppData\Roaming\npm\pnpm-global\4\node_modules\pnpm\bin\pnpm.js'
+←[90m    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:880:15)←[39m
+←[90m    at Function.Module._load (internal/modules/cjs/loader.js:725:27)←[39m
+←[90m    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)←[39m
+←[90m    at internal/main/run_main_module.js:17:47←[39m {
+  code: ←[32m'MODULE_NOT_FOUND'←[39m,
+  requireStack: []
+}
+</code></pre>
+<p>First, try to find the location of pnpm by running: <code>which pnpm</code>. If you're on Windows, run <code>where.exe pnpm.*</code>.
+You'll get the location of the pnpm command, for instance:</p>
+<pre><code class="hljs language-text">$ which pnpm
+/c/Program Files/nodejs/pnpm
+</code></pre>
+<p>Now that you know where the pnpm CLI is, open that directory and remove any pnpm-related files (<code>pnpm.cmd</code>, <code>pnpx.cmd</code>, <code>pnpm</code>, etc).
+Once done, install pnpm again and it should work as expected.</p>
+<h2 id="updating-pnpm">Updating pnpm<a class="hash-link" href="#updating-pnpm" aria-label="Direct link to Updating pnpm">#</a></h2>
+<p>To update pnpm, run the <a href="/cli/self-update"><code>self-update</code></a> command:</p>
+<pre><code class="hljs language-sh"><span class="hljs-prompt" aria-hidden="true"></span><span class="hljs-command">pnpm</span> self-update
+</code></pre>
+<h2 id="uninstalling-pnpm">Uninstalling pnpm<a class="hash-link" href="#uninstalling-pnpm" aria-label="Direct link to Uninstalling pnpm">#</a></h2>
+<p>If you need to remove the pnpm CLI from your system and any files it has written to your disk, see <a href="/uninstall">Uninstalling pnpm</a>.</p></article></main></div>
+  </body>
+</html>

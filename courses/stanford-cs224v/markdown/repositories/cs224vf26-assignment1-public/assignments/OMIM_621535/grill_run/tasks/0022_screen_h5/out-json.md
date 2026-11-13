@@ -1,0 +1,66 @@
+# Homework 1 public teaching repository: assignments/OMIM_621535/grill_run/tasks/0022_screen_h5/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621535/grill_run/tasks/0022_screen_h5/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621535/grill_run/tasks/0022_screen_h5/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature directly confirms that heterozygous RAB3A p.Arg83Trp causes adult-onset, slowly progressive cerebellar ataxia with mild spasticity and tremors.",
+  "confidence": 0.95,
+  "evidence": [
+    {
+      "text": "Miyamoto et al. report that the RAB3A c.247C>T p.(Arg83Trp) switch II variant causes autosomal-dominant spinocerebellar ataxia characterized by adult-onset, gradually progressive cerebellar symptoms, mild gait spasticity, and tremors.",
+      "stance": "supports",
+      "source": {
+        "title": "An R83W mutation in Rab3A causes autosomal-dominant cerebellar ataxia",
+        "authors": [
+          "R Miyamoto",
+          "A Sakane",
+          "H Morino"
+        ],
+        "year": 2026,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://academic.oup.com/hmg/article-abstract/35/3/ddaf186/8415318",
+        "quote": "Affected individuals presented with adult-onset, gradually progressive cerebellar symptoms, often accompanied by mild gait spasticity and tremors. Variable features of neurodevelopmental disorders were also observed... Functionally, the R83W mutation lies within the conserved switch II region of Rab3A, a domain critical for effector interaction."
+      },
+      "numbers": [
+        {
+          "metric": "families evaluated",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "text": "Roller et al. identified the recurrent RAB3A R83W variant across nine unrelated families presenting with cerebellar ataxia and spasticity within the ataxia-spasticity spectrum.",
+      "stance": "supports",
+      "source": {
+        "title": "The RAB3A hot spot variant R83W causes spasticity as part of the ataxia-spasticity spectrum",
+        "authors": [
+          "JR Roller",
+          "A Yahia",
+          "G Stevanin",
+          "AE Ahmed"
+        ],
+        "year": 2026,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://academic.oup.com/brain/article-abstract/149/4/e36/8408500",
+        "quote": "Arg83Trp), which we had previously identified in nine unrelated families presenting with pure cerebellar ataxia\u2026 To further and precisely explore the phenotypic spectrum of RAB3A, we"
+      },
+      "numbers": [
+        {
+          "metric": "unrelated families identified",
+          "value": 9
+        }
+      ]
+    }
+  ]
+}
+```

@@ -1,0 +1,27 @@
+# Homework 1 public teaching repository: assignments/OMIM_620401/grill_run/tasks/0004_ground_1/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620401/grill_run/tasks/0004_ground_1/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620401/grill_run/tasks/0004_ground_1/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "term": "SGSM3",
+  "definition": "SGSM3 (Small G Protein Signaling Modulator 3) encodes a small modulator protein that interacts with components of the RAS signaling pathway and is expressed in fetal and adult brain tissue. Biallelic loss-of-function mutations in SGSM3 cause intellectual developmental disorder, autosomal recessive 84 (OMIM #620401), clinically characterized by nonsyndromic intellectual disability and short stature.",
+  "source": {
+    "title": "A Strong Candidate Gene for Nonsyndromic Intellectual Disability Phenotype: SGSM3",
+    "authors": [
+      "A Turkyilmaz",
+      "KA Saglam",
+      "M Yilmaz"
+    ],
+    "year": 2025,
+    "journal": "Clin. Genet.",
+    "doi": "10.1111/cge.14631",
+    "pmid": "39390489",
+    "pmc": null,
+    "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/cge.14631",
+    "quote": "SGSM proteins are small modulator proteins interacting with proteins in the RAS signaling pathway. Studies with mouse and human tissues indicated that SGSM genes were highly expressed in the brain and could be expressed at different levels at different stages of development in fetal and adult brain tissue. It was first reported by Birnbaum et al. that the SGSM3 gene might be associated with a Mendelian inherited disease in families of Ashkenazi Jews with clinical manifestations of intellectual disability (ID). In this study, a novel homozygous stop-gain (NM_015705.6: c.1576C>T: p.(Arg526Ter)) variation was detected in the SGSM3 gene in two siblings with short stature and ID findings. The report of two cases with bi-allelic LOF variants in the SGSM3 gene from different populations with similar clinical manifestations strengthens the potential of this gene as a candidate gene for the nonsyndromic ID phenotype."
+  }
+}
+```

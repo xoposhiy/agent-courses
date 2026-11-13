@@ -1,0 +1,26 @@
+[
+  {
+    "file_id": "1gl9cYgOLZvKMaMTMo_GRrNomOPspjair",
+    "download_url": "https://drive.google.com/uc?export=download&id=1gl9cYgOLZvKMaMTMo_GRrNomOPspjair",
+    "http_status": 200,
+    "raw_path": "raw/notebooks/1gl9cYgOLZvKMaMTMo_GRrNomOPspjair.html",
+    "valid_notebook": false,
+    "bytes": 919944
+  },
+  {
+    "file_id": "1imjDe4sDvjtLW8tFz12nNCPWV0TDk28C",
+    "download_url": "https://drive.google.com/uc?export=download&id=1imjDe4sDvjtLW8tFz12nNCPWV0TDk28C",
+    "http_status": 200,
+    "raw_path": "raw/notebooks/1imjDe4sDvjtLW8tFz12nNCPWV0TDk28C.ipynb",
+    "valid_notebook": true,
+    "bytes": 143313
+  },
+  {
+    "file_id": "1YwmG0Nn9_XUiMmJltLnC4zjzzvcJHBwz",
+    "download_url": "https://drive.google.com/uc?export=download&id=1YwmG0Nn9_XUiMmJltLnC4zjzzvcJHBwz",
+    "http_status": 200,
+    "raw_path": "raw/notebooks/1YwmG0Nn9_XUiMmJltLnC4zjzzvcJHBwz.ipynb",
+    "valid_notebook": true,
+    "bytes": 156358
+  }
+]

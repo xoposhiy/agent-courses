@@ -1,0 +1,796 @@
+
+%\chapter{Interaction Styles for Agentic LLMs}\label{chap:agents}
+
+\chapter{Interaction Styles for Agentic LLMs}\label{chap:agents}
+
+%!!!!!!!!! 
+%The previous chapters introduced the foundations of Agentic LLMs: machine learning, language modeling, the benefit of size, in-context learning, multi-step reasoning, and finetuning and pretraining world models with data beyond language. We did so both at the prompt level, in-context, and at the parameter level, with pretraining and finetuning. The next part will introduce implementation methods and tools, to start building concrete agents. However, before we go to the next part, we will talk about learning  at the agent level,  how agents can learn from interaction with their environment. %For this purpose we will introduce a third type of learning: metalearning. 
+
+
+\begin{learningbox}
+In this chapter you will learn about  different agentic interaction styles and agentic memory.
+Specifically, you will be able to:
+\begin{itemize}[leftmargin=*, nosep]
+    \item Recognize three different historic types  of {\em agents in AI}, and how they connect to current agentic LLMs.  
+    
+    \item Recognize five different agentic LLM {\em interaction} styles. 
+    
+    \item Understand the importance of {\em memory} in agentic LLMs, and recognize different agentic memory architectures.
+
+\end{itemize}
+\end{learningbox}
+
+
+\begin{comment}
+Agents interact with the world, and they can learn during their interaction with the world. In this chapter we will discuss five agent styles, that feature progressively more advanced agent learning. We start with static learning of simple LLMs, and progress towards  dynamic learning styles in which the knowledge of metalearning, from the previous chapter, is quite useful. 
+
+Next, we discuss the topic of memory. In order for its interacting with the world to make sense, an agent needs to remember its past actions. Memory is necessary for  coherent conversations, for learning and adapting  behavior, and, on a higher level, for creating an identity. For this, we need to provide our LLM agent with a form of memory.
+
+However, we start this chapter with a short overview on the role of agents in the field of AI. 
+\end{comment}
+
+
+\section{Agents in AI}
+Agents play a central role in artificial intelligence, and we will first discuss some of the background of agents in AI. %Then, in Section~\ref{sec:styles} we will bring together the learning approaches of the past chapters into five agentic styles. Agents need to remember their state. In Section~\ref{sec:memory} we discuss the different types of memory that agents can have. %An early version of material in this chapter appeared as \citet{plaat2025agentic}.
+%We will now provide a brief overview of agents in the field of artificial intelligence. 
+
+\subsection{Agents Act and Adapt in their Environment}
+In artificial intelligence, entities that  act in the world are called {\em agents}. They are the AI equivalent of humans acting in the  world. In the  agent concept, AI researchers try to capture what they perceive to be the essence of what humans do---understanding intelligence by building it. 
+
+Agents are autonomous software systems that act in an environment. They (1) have goals,  they (2) perceive their environment, they (3)  make decisions, they (4)  take actions to achieve their goals, and, most importantly, they (5)  learn from experience. 
+Agents should  adapt to new information in order to achieve their goals better, or, in reinforcement learning terms, agents improve their action policy.
+
+Traditional computer programs are deterministic, they predictably follow pre-set instructions (this makes computers so useful to do things from accounting to control, in which predictability is paramount). LLM agents, in contrast, are less deterministic, and less predictable. %(and not just for the reasons that were discussed in the previous chapter). 
+They learn, and  change their behavior from time to time. They can autonomously reason, plan, and perform tasks using tools to perform simple workflows for users in areas such as coding, customer service, and data analysis. (They also hallucinate, make mistakes, and generally are unpredictable and undependable. In that respect, LLM agents are more like humans than computers.)
+
+Agents have been studied for quite some time in artificial intelligence.
+It is useful to distinguish  three types of agents: (1) robotic assistant agents, (2) belief-desire-intention agents, and (3) swarm agents. 
+
+\subsubsection{Robotic Assistants}
+First we discuss agents that are robotic assistants. 
+This view on AI agents is from the field of engineering: agents perform human-like tasks for humans. An agent is a tool to more easily achieve routine tasks. An example is a welding robot in a factory, an auto-pilot in an airplane, or a self-driving car that has to find  a safe route in an unpredictable environment.
+
+Further examples of such agents are virtual assistants, such as Alexa and Siri, or coding assistants such as CoPilot that help software developers become more productive, or customer service bots that help customers navigate the maze of rules of a company to achieve goals such as filing a complaint or getting a refund. Robotic assistant agents can have  significant reasoning abilities \citep{dorri2018multi}, and LLMs are increasingly used for such assistants \citep{plaat2025agentic}. 
+
+\subsubsection{Agents with Beliefs, Desires, and Intentions}
+Another view on AI agents is rooted in the field of cognitive science. Here the goal is for agents to model human cognitive processes, and agents have beliefs, desires and intentions (BDI). Cognitive science studies human thinking processes. AI agents can be used to implement cognitive models, and experiment with models of thinking: is the model able to reason logically, to cooperate with human players in a game of Bridge, to deconstruct a theater play by Shakespeare, to compose music, or to have self-awareness? Cognition may take many subtle forms, such as interpreting sensory input, guiding physical actions, and empathizing with others.
+
+Originally, BDI agents come from the tradition of logic reasoning. They are imbued with goals, which they pursue through actions. The literature in this field sees actions as a way to achieve the goals of an agent \citep{rao1995bdi,georgeff1998belief}.
+
+\subsubsection{Swarm Agents}
+A third view on AI agents stresses interaction patterns between large numbers of small agents. Where the previous multi-agent systems consisted of few, complex, agents that act and think---agents that could assist, or agents with beliefs, desires and intentions (BDI)---this approach  studies flocks and swarms of many, simple, agents. Now the emphasis is on emergent collaborative  behavior, behavior that emerges at a scale beyond the reasoning of the agents themselves. Can a swarm offer protection against a predator? What are the prerequisites for collaboration to occur? When is a society peaceful, when is it at war? What is a super-organism \citep{johnson2010deconstructing,wilson1989reviving}?
+
+Swarm agents come from the connectionist tradition of embodied AI  \citep{brooks1990elephants}. The agents communicate, and researchers are often interested in the emergence of large scale behavioral patterns such as cooperation and communication. A well-known swarm algorithm is ant colony optimization \citep{dorigo2007ant}, and a well-known software environment to study such patterns is Netlogo \citep{wilensky2015introduction}.\footnote{\url{https://www.netlogo.org}}
+
+Multi-agent systems and agentic LLMs are suitable for the study of all three types of approaches:  agents as  tools, agents as cognitive entities, and  agents that help  us study how to achieve peaceful societies (or how to conquer another). Part IV of this book is dedicated to agents as tools, and Part V is dedicated to cognition and agent societies.
+
+\subsection{Agentic LLMs as Reinforcement Learning Agents}
+The study of the behavior of intelligent agents has a long
+tradition in AI. A central aspect of agent behavior is how agents learn in their environment. Mechanisms by which agents learn from feedback are studied in reinforcement learning \citep{sutton2018reinforcement} and multi-agent reinforcement learning \citep{wong2021multiagent}. 
+
+In the next section we will discuss five  interaction styles that we see in agentic LLM. As preparation for this overview, we will provide a formal basis for agents that interact in the world using the language of reinforcement learning. 
+
+
+
+
+Figure~\ref{fig:rl} shows a  reinforcement learning  system that consists of an agent and an environment. In this system, the agent interacts with the
+environment through actions, and the environment responds with the new
+state of the system and a reward value, indicating how good the new
+state is. 
+
+The agent can learn from these reward values, and note which actions
+are favorable and which are unfavorable in each state. The goal of the agent is to find the optimal behavior for the environment, and thus, the best actions in each state. The agent uses the rewards to reinforce its notion of the best actions in each state, and thus learn a  function of optimal behavior. This function, mapping each state to an  action, is called the
+behavior policy, denoted as $\pi$.  The optimal policy is denoted as
+$\pi^*$. 
+%The parameters in a deep neural network are denoted as $\theta$, and the parameterized policy is thus written as $\pi_\theta$.  % The optimization goal of reinforcement learning makes sure that these actions are optimized, resulting in an optimal parameterized policy $\pi_\theta^*$ for the agent, telling it how to act optimally in  the environment.  
+If the agent learns
+through deep learning, then the policy is parameterized by the weights $\theta$
+of a neural network. 
+% reinforcement learning paradigm where the agents learns a parameterized policy from feedback on its interaction with the environment. In reinforcement learning, the agent and the world are modeled as a Markov Decision Process (MDP). An MDP consists of states, and actions that cause the MDP to transition to a new state.
+
+\begin{figure}
+  \begin{center}
+    \input figures/rl
+    \caption{The  reinforcement learning loop where the agent learns a parameterized policy $\pi_\theta$ from feedback rewards $r$ from the environment's transition $T$ and reward function $R$, upon the agent's actions $a$ \citep{sutton2018reinforcement}}\label{fig:rl}
+  \end{center}
+\end{figure}
+
+The world in which the agent operates is represented by the environment. The agent  takes actions and  changes the state of the environment. The environment has a probabilistic transition function that  computes the new
+state whenever an action has been performed by the agent. The environment also computes a corresponding reward for the new
+state. Thus, the environment is modeled with two functions: a
+transition function $T$ and a reward function $R$. %The goal of the agent is to compute in each state of the MDP, the best action to take. 
+
+This model, of an agent acting in an environment, receiving feedback
+to learn which actions caused good state transitions, and which did
+not, suits the concept of agentic LLMs quite well, as we will see in the next section. 
+
+
+\begin{figure}
+  \begin{center}
+    \input figures/rl-llm
+    \caption{Reinforcement learning where the agent uses an LLM to parameterize  policy $\pi_{LLM_{P\pi}}$ to use feedback $r$ from the environment to choose its actions $a$ }\label{fig:rl-llm}
+  \end{center}
+\end{figure}
+
+From the reinforcement learning point of view, we can use the  LLM  as a function in the agent: $LLM(prompt) \rightarrow answer$. The LLM can be used in different places in reinforcement learning: in the agent, or in the environment. For example, the agent can use the LLM as policy-improver. It can call an LLM with a certain prompt for the policy function $\pi_{LLM_{P\pi}}(s,r)$ that learns from environment feedback which actions to take in the different states that the environment can be in (see Figure~\ref{fig:rl-llm}). The LLM is given a prompt $P\pi$ that tells it to act as a policy improver  using  reward $r$, and returns an action $a$ for  state $s$. As we will see in Section~\ref{sec:icrl}, in-context reinforcement learning (ICRL) uses the LLM as a policy improver, and tree of thoughts can use an LLM to generate the successor actions. 
+
+\begin{figure}
+  \begin{center}
+    \input figures/rl-llm2
+    \caption{Reinforcement learning where both the agent and the environment use LLMs for $\pi$, $T$, and $R$. The LLMs are each given a prompt $Px$ to return an action, state, or reward value}\label{fig:rl-llm2}
+  \end{center}
+\end{figure}
+
+The LLM can also be used in the environment, %for the two functions that we customarily see in the environment, 
+to compute the reward of the state $LLM_{R(s)}$, or to compute the next state  $LLM_{T(s,a)}$, see Figure~\ref{fig:rl-llm2}. In the figure, the same LLM is now used for three different roles, with three different prompts: to perform the policy, the transition, and the reward function. For example, tree of thoughts can use an LLM to evaluate the reward of a state. There are many options in designing our agentic LLMs,
+as we will see next. We use the reinforcement learning paradigm to discuss and illustrate the different agentic styles.
+
+ 
+\section{Learning Mechanisms in Agentic LLMs}\label{sec:styles}
+The field of agentic LLM is new, and the previous chapters have shown many different approaches in which LLMs have been used in an agentic setting. In this section we will review the approaches that we have seen so far in this book. We distinguish the approaches based on their prompting method and their training method. 
+%Integreer Five Styles en Metalearning
+%8.2.1 Agent Styles
+%8.2.1.1 Query
+%8.2.1.2 ICL
+%8.2.1.3 CoT
+%8.2.1.4 ICRL
+%8.2.1.5 ReFT/RLVR/GRPO
+%8.2.2 Stable Learning (ReFT)
+%8.2.2.1 Metalearning few-shot history
+%8.2.2.2 inner/outer 
+%8.2.2.3 Stability techniques, incl HRM
+%8.3 Conclusion
+
+
+%Following the  agent types %, where agents have goals, and can reason, 
+We will describe five styles of interaction that fit agentic LLMs.
+Table~\ref{tab:fourstyles} summarizes the five  agent styles. %, as they have been developed in the literature. 
+We focus on the way
+that the LLM is prompted by the harness at inference time, and  how it is trained. All prompting styles can yield useful agentic assistants and interaction partners, that act in realistic ways, for certain domains. The more elaborate prompting styles have been developed in the pursuit for better performance in more challenging domains.
+
+The first column of the table gives the name of the agentic
+interaction style, from query to reinforcement finetuning. The second
+column lists the type of prompting of the styles, from a simple static
+instruction prompt without any examples, to a dynamic reinforcement
+learning prompt. The third column shows the training method of the
+LLM, whether it is pretrained or finetuned or both. The fourth column
+gives a concrete  example of the interaction style (with references to the
+literature). 
+
+\begin{table}
+\footnotesize\centering
+\begin{tabular}{l|c|c|c}
+{\em Agent type} & {\em Prompt} & {\em LLM}  & {\em Example} \\ \hline
+{\bf A}: Query & zero-shot user-written  & pretrained   & GPT-2 \citep{vaswani2017attention}\\
+ &  query or instruction &   & \\ \hline
+{\bf B}: In-Context Learning  & few-shot   & pretrained   & GPT-3 \citep{brown2020language}\\ 
+(supervised example) &  examples &    & \\ \hline
+{\bf C}: In-Context Learning  & chain-of-thought-steps  & pretrained   & Chain of Thought \citep{wei2022chain}\\ 
+(reasoning-steps)&  example &    & Zero-shot CoT \citep{kojima2022large}\\ \hline
+ & feedback harness   &   & Tree of Thoughts \citep{yao2024tree}\\
+{\bf D}: Self-Reflection  & prompt optimization & pretrained   &  LLaMea \citep{van2024llamea}\\
+ & search or RL&   &   ReAct \citep{yao2022react}\\ \hline
+{\bf E}: Reinforcement Finetuning  & RL prompt  & pretraining/   & RLVR  \citep{lambert2024tulu}\\ 
+ & optimization harness & finetuning   & \\ 
+\end{tabular} 
+    \caption{Five Agent Styles}\label{tab:fourstyles}
+\end{table}
+
+
+
+
+
+\subsection{Agentic Interaction Styles}
+We will now discuss the interaction styles. In the first three agent styles the prompt of the LLM is static. The prompt is
+written by the user and does not change. 
+
+
+\subsubsection{A. Query Prompt}
+The first interaction style is interacting with the LLM by giving it a simple instruction. Figure~\ref{fig:rlA} shows this  interaction style. It simply
+consists of an instruction written by the user. For example, {\em Lily
+missed the train. She felt very ...} to which the model hopefully
+responds with something like {\em angry}, or {\em sad}. The prompt is  purely a query, without
+any training examples. The learning style is zero-shot learning,
+instruction only.   
+%See Figure~\ref{fig:rlA}
+\begin{figure}
+  \begin{center}
+    \input figures/rlA
+    \caption{Style A: Static Query}\label{fig:rlA}
+  \end{center}
+\end{figure}
+The LLM is able to correctly answer many such queries because it has
+been pretrained on a large corpus of text, which may provide an answer
+to many of the queries that users may ask. The model  has also been finetuned for instruction answering. Examples of this
+interaction style are the early LLMs, such as GPT-2 \citep{vaswani2017attention}.
+
+
+\subsubsection{B. In-Context Learning}
+Next, we turn to in-context learning. %, which allows an interaction style that caused the ChatGPT frenzy to starts. 
+For machine learning,
+in-context learning is an exciting new type of learning, in addition
+to supervised and reinforcement learning. In a large language
+model in-context learning often achieves good results with just a few examples,
+achieving one of the main challenges of the field of machine learning.
+
+Compared to interaction style A, in-context few-shot learning is a more involved interaction style. 
+\begin{figure}
+  \begin{center}
+    \input figures/rlB
+    \caption{Style B: In Context Supervised Learning with a prompt based on few examples}\label{fig:rlB}
+  \end{center}
+\end{figure}
+In-context learning occurs when the user provides a few examples
+along with the query. In doing so, the user conditions  the decoder model to activate the correct
+part of the large amount of knowledge that is represented in its parameters. 
+
+Figure~\ref{fig:rlB} shows an illustration of a prompt that fits this
+interaction style. An example from the literature of this interaction style is GPT-3. The
+paper that introduced in-context learning  is
+\citet{brown2020language}. An example of a few-shot prompt is: {\em Fill
+in the dots: the
+sea-la mer, oysters-huitre, the window-la fenetre, cheese-...} to
+which the model hopefully responds with {\em fromage}.
+
+Note that in-context learning only emerges when the model is large
+enough. Originally, in-context learning emerged in
+models with around 100 billion parameters. At that size, the model
+was rich enough for the few prompt examples to activate the right
+parts of the model. As our LLM methods improve, this boundary keeps shrinking.
+
+\subsubsection{C. Chain of Thought}
+Next, we turn to another famous method, chain of thought learning \citep{wei2022chain}, Figure~\ref{fig:rlC}, top.  This method
+was developed, as we saw in Chapter~\ref{chap:reasoning}, to address
+the weakness of LLMs in solving simple math word reasoning problems. A disadvantage of the original chain of thought approach is that
+a new  prompt has to be written by the user for each new reasoning task at
+hand. A subsequent development was the zero-shot chain of thought prompt, Figure~\ref{fig:rlC}, bottom. \citet{kojima2022large} found that adding the generic sentence: {\em Let's
+think step by step} to  prompts already improves performance on many benchmarks, 
+although often not by as much as a hand-written task-specific prompt.
+\begin{figure}
+  \begin{center}
+    \input figures/rlC
+    \caption{Style C: Top: Chain of Thought: In-Context  Learning with an LLM based on examples of the reasoning steps; Bottom: Zero-shot Chain of Thought with an instruction that often works}\label{fig:rlC}
+  \end{center}
+\end{figure}
+As in the previous interaction style, chain of thought is an in-context few-shot learning method, although now
+the examples in the prompt are a few examples of the {\em steps} that the model
+should take before it provides its answer---whereas previously they were examples of facts. These steps help the model 
+arrive at the right answer, following a multi-step reasoning
+chain. The examples are not examples of  answers to activate parts of the model, but of steps on
+how to arrive at the answer. Example prompts for few-shot and zero-shot chain of thought
+have been shown in Figure~\ref{fig:cot} on page~\pageref{fig:cot}. % A zero-shot chain of thought prompt is to add the instruction: {\em Let's think step by step} to the original prompt.
+
+Again, as with in-context learning, chain of thought only works in models of sufficient size, and
+again, this size is getting smaller as our understanding of LLM methods
+increases and models are being finetuned for chain of thought. Furthermore, it is possible to  transfer 
+the learned reasoning methods from a large model to a model with
+orders of magnitude fewer parameters, by distillation \citep{li-etal-2023-symbolic}.  
+
+
+
+
+\subsubsection{D. Self-Reflection Harness}
+%\subsection{Dynamic (ICRL/ReFT) Agents}
+The preceding agentic interaction styles all used a single static
+prompt, achieving encouraging performance on many
+benchmarks. To perform well on planning problems, or other problems where state must be tracked,  a reasoning
+style is needed where prompts are optimized,  searching through options in a tree
+of possibilities. %, such as in planning problems, further methods had to be developed.
+
+We will now discuss two interaction styles where the LLM prompt is
+dynamically manipulated by a small algorithm that is external to the LLM. This algorithm is called a {\em harness}. The first style is in-context  (LLM parameters are not changed), while the second style (in the next subsection) also uses
+finetuning of the model.
+
+These interaction styles are  dynamic. 
+As we saw in the previous chapter on metalearning, a challenge of dynamic methods is to achieve a stable learning process.
+When training targets are changing,  learning algorithms may diverge, and extra care is needed to achieve convergence.
+Achieving predictable high performance with self-reflection is still an area of active research.
+
+The first dynamic prompting methods that we discuss 
+%are related to in-context reinforcement learning. This agentic interaction style 
+emerged out of
+the need to model more complex reasoning structures, that go beyond
+the straight line sequence of steps of chain of thought. First, simple search algorithms were introduced (tree of thoughts). Next, full fledged dynamic prompting  methods were introduced to manage prompt development (ReAct, reflexion, self refine). Often, the harness of these methods introduced short-term and long-term memories to remember state between LLM invocations.
+
+An interesting aspect of these methods is that  the LLM is
+used in different roles, for which it is called with different types of prompts. The original  role of the LLM in chain of thought
+tasks is to {\em evaluate} the answer in each reasoning step. This evaluation prompt is now augmented with
+a different type of prompt, to {\em generate} a new reasoning step. Sometimes a third type of prompt is added, whose task is to {\em improve} the prompt
+itself. Thus, a single model is used to self-reflect on itself through different prompts, managed by an external harness.
+
+\begin{figure}
+  \begin{center}
+    \input figures/rlD
+    \caption{Style D: Self-reflection with an LLM;
+      the prompt is being optimized in context with answers from an
+      LLM, first to generate subproblems, then to evaluate them; controlled by search (top), or reinforcement learning
+     (bottom)}\label{fig:rlD} 
+  \end{center}
+\end{figure}
+
+%\todo{Give Example prompts?}
+
+Figure~\ref{fig:rlD} shows these ideas. At the top, the self-reflection is controlled by a standard tree search algorithm, as in tree of thoughts \citep{yao2024tree}. At the bottom, a reinforcement learning loop controls self-reflection, where the prompt for policy $\pi$ is  updated with the history of (state, action, reward) triples (see also Section~\ref{sec:icrl}). 
+ 
+%\todo{Zoiets?}\todo{Willen we dat echt hier, of zijn de voorbeelden elders al gedaan? Zou elders moeten. We gaan toch niet pas in H8 de details van ToT of ReFT geven?}
+
+
+%intro. figure. prompt example. learning style. answer. name and reference of example models.
+%!!!!!!!!!!!!!!!!!!!
+
+
+\subsubsection{E. Reinforcement Finetuning Harness}
+Up to now, all learning was in-context, the model provided answers based on  examples provided in the context. The parameters of the LLM were not
+changed. Although ICL is easy to use, it limits learning. If we wish the model to adapt more profoundly to a certain environment,  if we wish the model to remember what it learned at inference time,  then it helps if the parameters can change. We call approaches that use this method  {\em reinforcement finetuning}. RLVR is a well-known example. % After a model is pretrained for a certain non-language domain, say, music, then it can be further finetuned from feedback from environment interaction.
+
+Figure~\ref{fig:rlE} provides an illustration, where the trainable model parameters are indicated as $\psi$. Note that the only difference with Figure~\ref{fig:rlD} (bottom) is the introduction of the $\psi$ parameters. In ReFT the LLM parameters $\psi$ change, they are finetuned  based on the rewards from the dataset. %Comparing this figure to Figure~\ref{fig:rlD} (bottom), 
+We should interpret the figures such that where learning at inference time was in-context, this has now changed, since we allow finetuning of the  parameters $\psi$. 
+%
+In the traditional LLM training pipeline, finetuning is a stage that comes before inference. However, for many important applications, such as math reasoning or coding, chain of thought multi-step inference-time roll-outs produce accurate rewards that can be used for finetuning. Therefore, in reinforcement finetuning, the model is  used to produce training targets at inference-time, that are then used to finetune the parameters of the same model---finetuning at inference-time. Reinforcement finetuning blurs the line between inference and finetuning, where supervised finetuning has a clear separation between training and inference.
+
+%\todo{Is it the same LLM for evaluation and for policy? Or two separate LLMs, with separate parameters? Need to look up ReFT. Should be separate, otherwise the agent is peeking into the environment, which is cheating, violates RL principle of separation of agent and environment}
+%!!!!!!!!!!!!!!!!!!!!!!!
+
+%intro. figure. prompt example. learning style. answer. name and reference of example models.
+%ReFT?
+
+\begin{figure}
+  \begin{center}
+    \input figures/rlE
+    \caption{Style E: Reinforcement Finetuning of the LLM parameters
+      $LLM^\psi$ in addition to  reinforcement learning of the
+      policy $\pi$ parameters $\pi_\theta$
+      \citep{luong2024reft}.}\label{fig:rlE} 
+  \end{center}
+\end{figure}
+
+In LLM training there are three main training/inference moments: (1) pretraining, (2) finetuning, (3) testing (inference).  Self-reflection (Style D) does reinforcement learning at inference time.
+%First, we pretrain the transformer on a large text natural language corpus, yielding an LLM. Second, we finetune for a certain task---say, zoological question answering---on a part of a task-specific benchmark. Third, we test: we pick an example from the held-out part of the task-specific benchmark and query the LLM with a prompt. This can be a static prompt (style A), or a more advanced style (B, C, D), including ICRL. ICRL would involve repeatedly prompting the LLM with the history of previous answers to try to get an improved answer. 
+%
+In style E, reinforcement finetuning, we do not do reinforcement learning at test time (3), but  at finetune time (2). %In style D  the LLM with an evaluation prompt provides the feedback to train on, at test time. In style E (ReFT/GRPO/RLVR) the benchmark training split provides the feedback signal to train on, at finetuning time.
+%
+%Traditionally, finetuning is performed with  supervised finetuning. DeepSeek \citep{guo2025deepseek} reports significant efficiency gains  using the  reinforcement finetuning method group relative policy optimization (GRPO)  \citep{shao2024deepseekmath}, which uses inference time Chain of Thought results as finetuning targets. Other popular RLVR methods are   \citep{lambert2024tulu,guo2025deepseek,wen2025reinforcement,yue2025does,luong2024reft}.
+%
+In agentic LLM, this interaction style allows the LLM to learn from agent interaction with the world. 
+
+For the dynamic agentic styles D and E, care must be taken to achieve stable convergence. As of this writing, few works have been published that report on such results. 
+
+\section{Memory Architectures for Agentic LLMs}\label{sec:memory}
+Humans (and other forms of life) remember. Our memory enables us to have an identity. We can remember our name, our friends, and our family members. Memory allows us to learn what is good an what is bad for us, and it allows us to adapt our behavior. 
+When we suffer memory-loss, either through injury, illness, or old age, our personality changes. Severe memory-loss leads to loss of identity, we wander aimlessly through the world.
+
+Agents also need memory. In this section we will discuss why agentic LLM needs memory, and we provide a brief overview of the different types of memory that have been developed for agentic LLM.
+
+\subsection{The Need for Memory}%\label{sec:memory}
+A statistical model $f(x) \rightarrow \hat{y}$ estimates an output $\hat{y}$ based on the relation $f$ that it has learned for its input $x$ at training time. Such functional behavior is memory-free. Any new  information (post-training) must be provided to the model through the input parameters $x$. LLMs are no different, and even the earliest chatbots were provided with special hidden {\em system prompts} that fed the model a history of the conversation, so that it is able to hold a coherent conversation. 
+
+As the use cases for agentic LLM increase, more advanced techniques are needed, beyond the system-prompt method. 
+To better understand what memory is used for in agentic LLMs, we will now discuss different use cases for memory.
+
+\subsubsection{Coherent Conversation}
+Many machine learning benchmarks for LLMs are of the challenge/response type, and they are well suited for the functional input/output behavior of statistical models. The main real world use case for LLMs, however, is as a chat-bot, where the LLM is expected to engage in a meaningful conversation with the user. In order to maintain a coherent conversation, in which conversational partners react and respond to each other, chat-bots must be able to know what has been said before.
+
+Thus, a first requirement for agentic LLMs is to be able know what has been said before in a conversation. 
+
+
+
+\subsubsection{Adaptation}
+According to our definition in Chapter~\ref{chap:intro}, agentic LLMs are expected to learn. When a robot performs a task in a kitchen, such as chopping an onion, and the location of the knife  has moved, then it should adapt its actions: it should now first pick up the knife from its new location before starting to chop. Agents interact with the environment, and if the environment changes, then agents should adapt. 
+
+Either our agent's pretrained policies must be highly general, and able to adapt to all new situations in a certain domain, or our agents architecture must flexible, and recognize when a pretrained policy requires adaptation, finetuning or even re-training. For this, they need memory.
+
+As we have seen in Section~\ref{sec:self-reflection}, the external prompt improvement harnesses that are used in self-reflective agent architectures  require buffers and other memory types for explicit prompt improvement.
+
+\subsubsection{Identity}
+Our experiences shape our personality and our identity. When LLM agents are to build up their own identity, the experiences must either be collected and held in a memory, to be used for self-reflection, or they must be processed and used in other ways to adapt their behavior policy. 
+
+As the memory architectures of agentic harnesses improve, agents will be able to better remember their experiences. When that happens, we may find that our agents can acquire, through their agentic experiences, a unique personality.
+
+\subsubsection{Continual Learning}
+Traditional machine learning trains a model on a particular dataset for a particular task. Human learning is different, our learning evolves continuously throughout our lives.
+In machine learning, continual learning studies how models can be trained for a sequence of new tasks while preserving previously learned tasks \citep{wang2024comprehensive,li2025improving}. Like metalearning, it studies generalization across related tasks. Major challenges in continual learning are to overcome 
+catastrophic forgetting, and how to cope with changing data distributions. 
+
+The field of continual learning provides a  variety of architectures that support this type of training. 
+
+
+%\subsection{Types of Memory}
+%\subsubsection{Short Term}
+%\subsubsection{Medium Term}
+%\subsubsection{Long Term}
+
+\subsection{Memory Architectures}
+The field of agentic LLM is young. Only recently are memory architectures for LLM agents  starting to receive attention. We will discuss the different approaches that have so far appeared. 
+
+\subsubsection{Finetuning}
+A pragmatic way to deal with the need for memory is to incorporate new information into the model as it arrives. Instead of developing external memory management algorithms, we could take advantage of the fact that model parameters are a form of memory, and finetune the model as the new examples arrive. 
+
+To achieve this approach in an agentic setting, the finetuning must happen quickly, before the user can perceive a lag. Parameter efficient finetuning methods such as LoRA are an option \citep{yang2024low}.  Although this is an elegant approach that does not require external algorithms or memory structures, for most applications the finetuning will not happen quickly enough, and an in-context or harness solution should be developed.
+
+\subsubsection{Long Context Windows and Compression}
+A second approach is to perform prompt management. The standard approach of chat-bots is to provide a truncated form of the chat-history to the LLM by injecting it into the prompt in addition to the user's text. This is an approach that works quite well in practice. A limitation is that context windows are limited in size, and processing large contexts is expensive  because of the squared time complexity of the attention mechanism. 
+
+Two types of solutions have been pursued. First,  specific long-context architectures have been developed, that keep track of attention in different ways  \citep{smith2022simplified}. This is an active field of research, a survey of recent approaches is  \citet{liu2025comprehensive}.
+Second, compression schemes have been developed, to semantically compress the prompt into a smaller stream. A survey is \citet{li2025prompt}.
+Prompts can be divided into chunks \citep{sheng2025dynamic}, to allow processing of large prompts. A related approach uses the LLM to generate code for processing long prompts recursively \citep{zhang2025recursive}. 
+
+Prompts can also be compressed through filtering of unnecessary tokens (this sentence could become {\em Prompts compressed filtering unnecessary tokens}). 
+%
+Another approach is soft prompts \citep{lester2021power}. 
+%
+%Another approach is called {\em soft prompts}.
+Soft prompts eliminate discrete tokens, but  learn embeddings (via backpropagation) that can be fed directly into the transformer, without mapping them to actual language tokens. This context can serve as an alternative to a plain-text context. Impressive compression rates have been reported, from ten-fold \citep{mu2023learning} to hundred-fold \citep{li2025500xcompressor}.
+
+
+
+
+\subsubsection{Explicit Memory Management}
+If we need to store state between LLM calls, then a straightforward solution is for the agent harness to provide this storage, as part of its prompt management. In Section~\ref{sec:self-reflection} we saw how the external prompt-improvement algorithms for self-reflection add different types of storage, such as in the reflexion approach and the buffer of thoughts approach (Figures~\ref{fig:reflexion2} and \ref{fig:bot}). 
+
+Agents can have different requirements for their storage (see \citet{zhang2025survey,chhikara2025mem0} for a survey). We will discuss some of the recent studies of this active field of research. Prompts can be stored in textual or parametric form, and relevant operations are the reading and writing to memory. Furthermore, memory management operations are important, such as for compacting and forgetting information. Also, additional services can be provided by the memory systems. For example, MemoryBank  \citep{zhong2024memorybank} adds hierarchical summaries and uses LLM prompts to provide a running personality of the interaction events of a user. 
+
+Operations to store and retrieve items can be added to an agent. MemGPT \citep{packer2023memgpt} studies how LLMs can read and write to external memory using function calls (memory as a tool). %The Mem0 paper \citep{chhikara2025mem0} compares different  proprietary and open approaches. 
+A-mem \citep{xu2025mem} introduces contextual descriptions of memory, based on a mailbox principle.
+
+A disadvantage of the explicit memory management approach is that the LLM has to perform memory management explicitly, without having been trained how to do this effectively. An alternative solution is to manually write memory management code, when it is possible to foresee all possible requirements. 
+The Model Context Protocol (MCP) is a set of strategies designed for context management. Section~\ref{sec:mcp} describes the protocol in more depth. 
+
+
+\paragraph{Learning to use memory}
+Mem1 \citep{zhou2025mem1} uses a different approach: after each LLM interaction the agent updates a compact state to be shared with future LLM calls. The memory size required  is  constant, so that the state does not run out of the context window.  The shared state is created by inserting reasoning-style tags into the prompt, and is trained using reinforcement learning to incentivize state consolidation. Mem-$\alpha$ is another approach that uses reinforcement learning to train agents to effectively use memory \citep{wang2025mem}. 
+
+AgeMem \citep{yu2026agentic} integrates memory management operations into agent's policy for end-to-end optimization. It distinguishes long term and short term memory, and uses a three-stage reinforcement learning scheme to train the agent in the use of the two types of memory.
+
+This, too, is an active field of research, new studies and frameworks can be expected. See, for an overview, \citet{zhou2026we}.
+
+%\subsubsection{RAG}
+%Read only
+
+\paragraph{Vector Databases}
+In addition to the storage of prompts as human-readable text, we  can also store their tokenized embeddings directly.
+Storing prompts as text is useful for retrieving data when an exact textual match is needed. Embeddings encode semantic information---which tokens are close to each other in meaning. Storing embeddings is therefore useful when we would like to retrieve items that are semantically close. 
+
+Embeddings can be stored in vector databases. Traditional relational databases store data in rows and columns. Vector databases store high-dimensional lists of numbers, and provide low-latency access to them, making them well-suited for LLMs \citep{xie2023brief,ma2023comprehensive}. 
+
+
+
+\section{Concluding Remarks}
+The concept of an intelligent agent  is a central concept in artificial intelligence. LLMs have increased the communication and reasoning capabilities of agents significantly. In this chapter, we have discussed different agent types, and have connected them to different traditions in AI. 
+
+Agents act. We have discussed 5 main interaction styles based on the preceding chapters. Agents need memory to interact meaningfully with their environments, and we have discussed this new field of research.
+
+After covering so much theory, it is high time to get our hands dirty. In the next chapter we will look at a practical case study, to get more experience with using some of the theoretical concepts that we have seen. 
+
+\begin{comment}
+\subsection{Stable Learning}
+We have discussed a progression of   agentic prompting styles that were developed to enhance LLM performance on more and more domains.
+The later styles are increasingly dynamic, and allow the model to be used to reflect, and even change itself, based on the inference time feedback.
+
+These  self-changing interaction styles give rise to a type of learning that is known as metalearning, or algorithms that learn how to learn new tasks. Metalearning is powerful, but the multiple training processes can interact and cause oscillations and become unstable. In this section we will discuss how we can improve the stability of these dynamic, feedback-rich,  metalearning styles.
+
+
+Agents act in the world. Through their actions they change their environment, and the way that the environment responds to actions may change. However, LLMs are fixed at training time, are unaware of a changing environment, and will give the same answer to the same prompt. We could fix this by incorporating changes to the environment in the prompt, through the few-shot examples of in-context learning. In in-context reinforcement learning, the history of $(s,a,r)$ tuples plays the role of providing updated information about the changed environment to the query. A related approach is taken by retrieval augmentation (RAG), where up to date information is inserted into the LLM prompt, so that different parts of the LLM will be accessed to adapt the answer  in the light of an changed  environment. Interaction styles B, C and D can be regarded as a (limited) form of metalearning. 
+
+From the point of view of In-context (reinforcement) learning may use few-shot examples to access the correct parts of the model, but the fact remains that the model is static (modulo some randomization by the model).
+A limitation of these approaches is that the size of the context window is limited. Furthermore, these prompting approaches do not address the fundamental problem that the underlying dataset may slowly get out of sync with the real environment. We need to adapt the model in real time, as it is being used.  Ultimately, a form of finetuning may be needed to incorporate the new information about the changed environment, as is done in style E. 
+Reinforcement finetuning methods, such as GRPO, ReFT, and RLVR allow for such updates. 
+%In context learning , regardless whethat are trained on a static dataset will learn a  static policy of actions. 
+
+%One way to insert new information fix static behavior is use RAG, retrieval augmented generative AI. RAG uses information form other sources, outside the dataset, such as Wikipedia, or corporate databases, that is potentially more up to date than the training dataset. 
+
+
+
+At this point, we have seen many different learning methods, some operating at different levels, with multiple parts of the algorithm trying for adaptation. It is time to have a deeper look at multi-level learning methods. In the following  we will have a look at metalearning.
+%\subsection{State Representation}
+%\subsection{Transition Function}
+%\subsection{Reward Function}
+
+
+%\subsection{Agent: Optimizing Policy}
+
+
+\subsubsection{Metalearning and Few-shot Learning}
+The term metalearning is used for multi-level learning algorithms, that learn to learn, to solve new, unseen, tasks quicker. In ordinary learning, the prediction of the model is governed by its parameters. Most learning algorithms have hyperparameters that govern how the algorithm learns (such as the learning rate, momentum, choice of underlying algorithm, or initialization scheme of the parameters). Base learning learns the parameters of the base model based on the loss function for the examples of a single dataset; metalearning learns the hyperparameters of the learning algorithm using  a meta-loss function over multiple base tasks. Metalearning thus learns to learn, with learning loops at two levels, with the goal to answer new tasks quickly and accurately, based on few examples (few-shot learning). 
+
+%improve not the parameters of a model, but the hyperparameters of the training algorithm of the model, to learn new tasks faster and more accurately. 
+This loopy learning, consisting of a training loop around a training loop, has been studied at some depth in machine learning, and there is useful theory and insights that we should discuss for our agentic setting.
+Metalearning has a long history in AI \citep{schmidhuber1987evolutionary}. More recent surveys are  \citep{hospedales2021meta,huisman2021survey}.
+
+
+
+\subsubsection{Inner-loop Outer-loop}
+The two-layer learn-to-learn concept is often expressed  as an inner training loop being governed by an outer training loop. The inner loop trains over the {\em examples} of a task (loss function), the outer loops trains over the {\em tasks} of a domain (with a meta-loss function). 
+
+As any supervised learning approach, metalearning consists  of  (1) a meta-train phase trainign on a variety of related tassk, and (2) a meta-test phase on a new, unseen, task, to test how well it generalizes to a new {\em task}. The goal is to improve generalization by learning hyperparameter settings that work well on a wide variety of training tasks.
+
+In Metalearning, at meta-training time, here is an inner base loop, the base trainer, that trains the parameters of the model applying the loss function on the examples from training data sets).
+This base training algorithm generally has is town parameters that guide the behavior of the training process, which we call hyperparameters. The base trainers are run on the tasks with a certain setting of the hyperparameters.
+We can wrap an outer learning loop around this inner base training algorithm, to run the base trainers with different hyperparameter settings for each outer-iteration. 
+Then, at meta-test time, all test sets of the tasks are evaluated, and we know if the new set of hyperparameter improves or not. %Thus we can keep improving our hyperparameters. 
+This outer loop algorithm is called the metalearner.
+
+To summarize, (1) the base trainer is run on all tasks (training datasets) with a certain hyperparameter setting, and (2) the tasks are tested on the meta-testset. % (the meta-loss-function over the joint-task testsets). 
+Depending on the outcome of the meta-testing the hyperparameters are adjusted, and the outerloop runs again with the new hyperparameters, to optimize with the meta-loss function.
+
+%\paragraph{Inner and Outer Loop Optimization}
+
+Formally, 
+%This conventional machine learning algorithm is called the \emph{base learner}. 
+each base learner task $\mathcal{T}_i$ approximates a model $\hat{f}_i$ by
+finding the optimal parameters $\theta_i^\star$ to
+minimize the loss function on its data set $D_i$  with examples  
+$$\mathcal{T}_i = \hat{f}_{\theta_i^\star}=\argmin_{\theta_i}\mathcal{L}_{i,\omega}(\theta_i,D_{i,train})$$
+while the learning algorithm is governed by hyperparameters
+$\omega$. %A base task $\mathcal{T}_i$  is a pair of dataset and  
+% hyperparameterized-loss function  $(D_i,\mathcal{L}_\omega)$.   
+
+
+Now, meta-learning is concerned with learning a new task $\mathcal{T}$ from a set of
+base-learning tasks $\{\mathcal{T}_1,\mathcal{T}_2,\mathcal{T}_3,\dots\}$
+so that a new (related) meta-test-task will reach a high accuracy
+quicker. Each  
+base-learning task $\mathcal{T}_i$  has of a dataset
+$D_i$  and a learning 
+objective, the loss function $\mathcal{L}_i$. Thus we get $\mathcal{T}_i=(D_i,
+\mathcal{L}_i)$. Each dataset consists of pairs of input-examples and labels
+$D_i=\{(x_j,y_j)\}$, and is split into a training and a testset $D_i=\{D_{{\mathcal{T}_i},train},D_{{\mathcal{T}_i},test}\}$. On each training dataset a parameterized model
+$\hat{f}_{\theta_i}(D_{i,{train}})$ is approximated, with a loss function
+$\mathcal{L}_i(\theta_i,D_{i,{train}})$.  The model $\hat{f}$ is approximated
+with an algorithm that is governed by a set of hyperparameters
+$\omega$. The particular hyperparameters vary from algorithm to
+algorithm, but frequently encountered hyperparameters are the learning
+rate $\alpha$,  the initial  parameters $\theta_0$, and  algorithm
+constants. 
+
+
+%One of the most popular deep metalearning approaches of the last few  years is optimization-based metalearning~\citep{finn2017model,hospedales2021meta,huisman2021survey}.
+%MAML, which stands for
+%\emph{model-agnostic meta learning}~\cite{finn2017model}.
+%This approach
+% is an optimization-based approach that 
+%optimizes the initial  parameters 
+%$\theta$ of the network for fast learning of new tasks. Most 
+%optimization-based techniques do so 
+%by approaching meta-learning as a two-level optimization problem. 
+%At the \emph{inner} level, a base learner makes task-specific updates to $\theta$ for the different observations in the training set. At the \emph{outer} level, the meta-learner optimizes hyperparameters $\omega$ across a sequence of base tasks where the loss of each task is evaluated using the \emph{test} data from the base tasks $D_{{\mathcal{T}_i},test}$~\cite{ravi2016optimization,hospedales2020meta,lee2018gradient}. 
+
+% In meta learning the base learner is set to perform the \emph{inner}
+% optimization loop. The meta learner optimizes the hyperparameters
+% $\omega$ for a sequence of base tasks. This is called the \emph{outer}
+% loop.
+
+The inner loop optimizes the parameters $\theta$, and the outer loop
+optimizes the hyperparameters $\omega$ to find the best performance on
+the set of base tasks %$i=0, \ldots, M$ 
+with the appropriate test data:
+$$ \omega^\star=\underbrace{\argmin_\omega
+  \mathcal{L}^{\mbox{meta}}}_{\textrm{outer loop}} (\underbrace{\argmin_{\theta_i}
+\mathcal{L}^{\mbox{base}}_\omega (\theta_i,D_{i,train})}_{\textrm{inner loop}},D_{i,test}) .$$
+The inner loop optimizes $\theta_i$ within the datasets $D_i$ of the
+tasks $\mathcal{T}_i$ , and the
+outer loop optimizes $\omega$ across the tasks and datasets.
+
+The meta loss function
+optimizes for the meta objective, which can be accuracy, speed, or
+another goal over the set of base tasks (and datasets). The outcome of the meta
+optimization is a set of optimal hyperparameters $\omega^\star$.
+% This
+% set of optimal hyperparameters
+% may include optimal initial parameters $\theta_0^\star$ for quick learning of new
+% learning tasks,  an optimal learning rate $\alpha^\star$, and other 
+% hyperparameters. 
+
+In optimization-based metalearning  the most important hyperparameters
+$\omega$
+% , such as MAML,
+are the  optimal initial
+parameters $\theta_0^\star$. When the meta-learner   only optimizes  the
+initial parameters as hyperparameters ($\omega=\theta_0$)  then the
+inner/outer formula simplifies as follows:
+$$ \theta_0^\star=\underbrace{\argmin_{\theta_0}
+  \mathcal{L}}_{\textrm{outer loop}} (\underbrace{\argmin_{\theta_i}
+\mathcal{L}
+(\theta_i,D_{i,train})}_{\textrm{inner loop}},D_{i,test}) .$$ In this
+approach we meta-optimize the initial parameters $\theta
+_0$, such that the loss function  performs well on the \emph{test} data of the base
+tasks \citep{finn2017model,huisman2021survey}. 
+
+
+
+
+\subsubsection{Few-shot learning, LLMs, and Metalearning}
+One of the main goals in machine learning is for a model to provide good answers with only a few examples. The aim of metalearning is to learn how to quickly learn new tasks, and thus achieve the goal of few-shot learning. At the start of the base learning procedure, the model parameters are typically initialized randomly, from scratch, with zero knowledge. A common meta learning approach is to initialize the model parameters to earlier learned knowledge, so that they may train faster to a related task. This is a form of transfer learning, that we find in every standard LLM training pipeline, where we first pretrain the model on a large dataset, which implicitly contains many tasks, en then we take the parameters and finetune them further for a specific task. Metalearning is repeated finetuning, and LLM training allows few-shot in-context learning, achieving this major goal of machine learning.
+
+Metalearning is a broadly defined field. The hyperparameters of the algorithm come in many shapes and forms. The method by which  parameter  of the base model are initialized can be regarded as a hyperparameter, but also the the learning rate of the base algorithm, the structure of the network,  the particular type of optimizer function, or other elements of the training algorithm that can be changed, are considered to be a hyperparameter.
+
+The goals of transfer learning and metalearning are the same: to achieve quick learning in new tasks, tasks that are unseen, but in a related domain. The goal of transfer learning and metalearning is  to achieve  few-shot-learning, where a model performs well when it only sees a few examples. 
+
+Large language models are few-shot models \citep{brown2020language}. LLMs perform well on many new tasks, provide that the domain fits (such as question answering, translation, or math problems). The LLM training pipeline is a good example of a metalearning pipeline that works well on many tasks.
+
+\subsubsection{Stable Learning Techniques}
+Thus, the LLM is a model trained by metalearning. In agentic LLM, we go a level higher.
+
+When we use a trained model in our interacting agent with the world, and the agent is also trained using feedback  from this interaction, as it is in agentic styles D and E, then the model can be regarded as the base learner (inner loop) and the interaction with the world can be regarded as the metalearner. 
+
+%\paragraph{ICL}
+In interaction style C, in-context learning is a form of metalearning using a fixed-base-model metalearner. The inner model does not change anymore after pretraining and finetuning are finished. The base learner is run only at the start, and the prompt can be seen as a hyperparameter that guides the metalearner in the inner inference stage. 
+
+In interaction style D, a more fully developed metalearner is in-context reinforcement learning (ICRL), where we encounter an implicit reinforcement learning process. As the history that is accumulated in the prompt   out of the interference gets longer,  the metalearner is achieves increasingly good results. Still, the baselearner has been run only once, before the start of the metalearning process.
+
+%\{ReFT/GRPO/RLVR}
+In interaction style E, when we allow finetuning based on results of the outer loop test-time inferences, then the inner loop is run again and again, and a full metalearning process occurs. Thus, in RLVR, GPRO, and ReFT,  models are finetuned in a metalearning setting.
+
+\paragraph{Slow-moving Target Network}
+When two loops train their model at the same time, and one model acts as a target in the loss-function of the other model, there is a danger of interference: one loop is optimizing on a target that is being moved by the other loop.
+
+In LLM few-shot learning, the inner loop (training the model) occurs before the outer loop (test-time inference in context learning), so there is no danger of interference.
+
+However, in ReFT, GRPO, and RLVR,  the finetuning of the model takes place  results that are produced  using the same model right after a training epoch has occurred. 
+%Furthermore, %A single level baselearning agent uses feedback from the world to optimize its behavior policy. This is a stable learning setup. However,
+An LLM agent that use feedback from the world to also finetune the model in addition to optimizing the behavior policy may end up changing the underlying model to a degree that the foundation under the  policy is shifting.
+%(the loss-targets of the in-context reinforcement learning are moving---optimizing on a moving target is harder than on a static target). 
+Moving target optimization can cause oscillating divergent learning trajectories. 
+Clearly, in interaction style E, care must be taken to prevent model to achieve good trainign performance.
+
+Deep reinforcement learning also suffers from the moving target problem, since the back-propagation targets are changed while the temporal difference error is trying to optimize on them. The field of deep reinforcement learning has introduced many stabilization techniques, such as replay buffers and target networks \citep{mnih2015human,hessel2018rainbow}. These methods typically try to decouple the periodicity of the two learning processes, often by  slowing down one of them. 
+A similar approach is introduced in Hierarchical Reasoning Models (HRM) \citep{wang2025hierarchical}. HRM consists of a two-layer metalearning approach. The learning is stabilized by two different speeds to prevent oscillation.
+
+%Replay buffer
+%Multi-level model with different speeds
+
+%ReAct, BALROG? Thet are not stable, are they two layer systems, or simply single layer on top of static LLM? Pure ICL does not have a problem!
+
+%RLVR potentially wel!
+
+%En hoe zit eht met de five styles????
+%\begin{itemize}
+%    \item[A] instruction, stable (no model change)
+%\item[B] ICL, stable (no model change)
+%\item[C] CoT, stable (no model change)
+%\item[D] ICRL, stable (no model change)
+%\item[E] ReFT/RLVR/GRPO, unstable (prompt and model change)
+%\end{itemize}
+
+
+%agentic interaction is de outer loop die de context beinvloed, of de finetuning. De inner loop is pretraining, of pretraining + finetuning. Dus inderdaad metalearning, dus moet metalearnign worden iutgelegd, met zijn voordelen (krachtig en sneller leren van nieuwe dingen) en nadelen (instabiel moving target als je inner en outer tegelijk doet). Dus kijk uit met je design, wat de reden van deze sectie is.
+
+%Eerst thoerie van metalearning uitleggen, met inner en uiter loop
+
+%Dan metalearnign vertaalt naar test time compute (in context).
+%Hmm, is daar wat te vertellen? Anders dan de prompt veranderd?
+%Hangt er van af hoeveel ik al in H6 vertelt heb over de zelfreflecters. Hier toch meer over convergentie stabiliteit gaan vertellen? Voorbeelden? Grafieken? code?
+%Zijn er stabiele systemen? ReAct? ACE? Kan ik iets aanbevelen?  Is er al iets klaar voor primetime? Een werkend systeem voorbeeld? BALROG met Reflexion? Agent die iets nuttigs doet en interactie met wereld heeft...
+%Met Niki praten?
+
+%En een RLVR trainer op TTT?
+
+%Dat moet ik gaan uitzoeken!
+
+%Dan metalearning vertaalt naar finetuning uitleggen.
+
+%We have seen 5 agentic interaction styles in whcih the agents can interact with the world. All included learning at different levels. In this section we will have a more principled look at methods that learn at different levels: metalearning.
+
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\todo{Re-evaluate/redesign the structure of this section}
+
+%\paragraph{Agentic LLM: Memory based prompt optimization, interaction through Tools}
+%\subsection{DEF MetaLearning: Learning to learn Tasks}
+%Definition:
+%Metalearning learns to learn. Base learning learns good parameter values for a model for a single task, over a set of training examples, so that it will generalize well to a new example. Meta learning learns good hyperparameter values over a range of tasks, so that an algorithm will learn  a new task well and quicker. 
+%The base learner is also known as the inner learning loop, the meta learner is the outer loop.
+
+%We define Metalearning as follows: 
+%\begin{enumerate}
+%    \item {\bf Task-element}: learns over multiple tasks, that are different, to speed up learning a new task. 
+%    \item {\bf Algorithmic-architecture}: both inner loop and outer loop. In the inner loop a base learner learns parameters, on the outer loop the hyperparameters of the base learner are learned by the metalearner.
+%\end{enumerate}
+%A challenge in metalearning is often the stability of the learning process. If the inner loop shows non-linear convergence behavior, the optimization target for the outer loop changes, which may cause hyperparameters of the inner loop baselearner to fluctuate, leading to an overall unstable and unsuccessful learning process. 
+
+%For the purists, for a method to be called {\em metalearning}, it should have both elements. For the pragmatists, it is often enough to learn the lesson that optimizing on a moving target is difficult. Moving targets  require extra attention to the convergence process in any double loop learning system, such as LLM finetuning, in-context learning, and even basic single-loop model-free reinforcement learning that uses function approximation (with the neural network backpropagation becoming the extra loop, as already in DQN). The "extra attention" can be in the form of slowing down changes in hyper parameters, or adding extra buffers or networks to slow down changes of certain (hyper) parameters of the learning process.
+
+%Model-based reinforcement learning consists of two learning loops, one for the dynamics model, and one sampling from that for the policy. Depending on how lenient we are with the definition of hyperparameter, we could regard the policy network parameters as outperloop hyperparameters, and the dynamics model parameters as the baselearning inner loop. Model-based reinforcement learnign certainly has many elements of metalearning, especially when it learns over different tasks, such is in the GATO \citep{reed2022generalist} and Dreamer v3 works \citep{hafner2025mastering}.
+
+%LLMs train their parameters on a task, this is baselearning, although typically over a diverse task. Finetuning parameters on a single new task, also baselearning. The prompts, and the fewshot examples of in-context learning can be considered as hyperparameters, activating different parts of the LLM. External prompt optimizers are certainly outer loop metalearners. Agentic LLMs that use ICRL or Reinforcement finetuning based on chain of thought or other ICL prompts also metalearn the hyperparameters of the agent, although in ReFT also the innerloop parameters are changed. 
+
+%\subsubsection{Metalearning: Inner loop, Outer loop}
+
+%Metalearning is learning hyperparameters. ICL is metalearning. activating previously learned knwoledge. ICL: a model learns to adapt to new tasks by processing examples within its input context during inference. Is everything that adjusts hyperparameters metalearning? ICL is metalearning on a pretrained LLM (prompt is the hyperparameter), ICRL is certainly metalearning (hyperparameter is prompt and RL parameters), ReFT is metalearning not since  LLM is adapted (that is parameters) on World feedback, but because prompt is adapted (that is hyperparameter). All HRL is metalearning where manager level parameters are regarded as hyperparameters. 
+%Agentic LLM is metalearning, since there is an outer RL loop with World feedback that changes the prompt. Agentic LLM is HRL, since inner loop also adapts regular parameters (ReFT).
+%All Styles are metalearning, if we regard the prompt as outerloop hyperparameter, except Style A, since prompt is fixed.
+%Problem of metalearning is stability. Converging on a moving target is harder. Need different convergence rates (top level must slow down).
+
+%We have all experienced how it feels to perform metalearning when we are prompt engineering our LLM.
+
+%Metalearning (learning how to train a system on a moving target) is hard, and can be frustrating. You think you know what will happen if you change the prompt in a certain direction, and then it surprises you.
+%We experience this difficulty directly, since, when prompt engineering, trying to optimize the answer that we get out of our prompt, we change one aspect of the prompt, and performance drops. Metalearning our LLM through prompt engineering is a non-linear unpredictable process. There is non-smoothness where we do not expect it inside the LLM. It often comes down to taking smaller steps, trying to identify linear (predictable) regions where the thing does behave as your mental model is starting to believe.
+
+
+%ReFT is not metalearning because inner LLM parameters are changed. 
+
+
+
+
+
+% Transfer: single copy
+
+% Meta: sequence sub tasks
+
+% def: inner-outer
+
+% meta-goal (meta loss function)
+
+% related: curriculum
+
+% related: classic ml: automl, hyperoptim
+
+
+%\subsubsection{Learning Models and Contexts from agentic interaction; Prompts and World models}
+%\subsubsection{LLM Pretraining/Finetuning is Inner Loop}
+%\paragraph{Inner loop RL: GRPO, RLHF}
+
+%\subsubsection{ICRL is metalearning (outer loop)}
+
+
+
+%\paragraph{Inner loop solves for problem instances of one task}
+%Supervised, RL
+%\paragraph{Outer loop solves for problem tasks of one world}
+%\paragraph{Abstraction as metalearning}
+%\paragraph{Stability of Convergence: DRL can deal with unstable moving targets}
+%Challenge of hierarchical online learning, including metalearning, is stability of convergence, as lower level is moving target for upper level. Stabilization methods reduce dynamics in data sets and replay buffers and target networks, make online learning (RL) more like offline learning (supervised). Dealing with unstable convergence  has been a challenge of metalearning progress.
+
+%\subsubsection{Test Time Compute methods are  Metalearning (ABCD: IC: LLM as environment) as Metalearning}
+%Test Time Compute, Prompt Optimization, Memory-based Self-Reflection as Outer Loop learning
+
+%\paragraph{Learning and Planning, Training and Inference, Planning as Outer Loop/Inference time Learning}
+%\subsubsection{Agentic LLM as Metalearning}
+%\subsubsection{Test Time Scaling}
+
+
+
+%This section was about metalearning and how LLMs can be used to generate actions, using memory scaffolding around them. But, with ICRL,  the environment for RL was the LLM. 
+
+%Test time compute and prompt optimization loops are to improve model outcomes. Not better actions. 
+
+%Now we want the World as environment.
+%LLM acting as agent in the world. Is not the same as ICRL or ICL or metalearning. ICRL is metalearning allright, but it is not an LLM acting in the world.
+
+%Acting in the world.
+%\subsubsection{Test time learning/ICRL (outer loop)} Inference time learning is metalearning
+
+%RL is an online improvement loop, and is well suited for metalearning around and LLM. The prompt contains few-shot examples (the context as states), and an instruction/question, and the LLM answer based on its pretrained knowledge (inner loop). 
+
+%\begin{figure}[t]
+%  \begin{center}
+%    \input figures/rl2
+%    \caption{In Context Reinforcement Learning with an LLM}\label{fig:rl2}
+%  \end{center}
+%\end{figure}
+%Figure~\ref{fig:rl2} illustrates how an LLM can function as the environment for reinforcement learning agent, to learn a policy with an action for each state, online, through interaction with the LLM. 
+
+%Note that in Figure~\ref{fig:rl-org}, the state $s$ was kept in the Environment. If the LLM is our environment, then something must change, since LLMs are purely functional (do not retain state). Now, the state must be explicitly managed, and carried in the function arguments. In Figure~\ref{fig:rl2} the state is kept in the agent, and passed along with the action that is chosen by the policy to the LLM. The LLM then determines the next state and the reward for the prompt that consists of the state (history) and action. The ICRL algorithm is a conventional RL policy improvement algorithm, such as Q-learning or PPO.
+
+%The prompt contains both the history (few shot examples) and the action (instruction/move/question).
+
+
+%\subsubsection{E: FT: Agentic LLM with the World as environment, as Metalearning}
+
+%\subsubsection{Finetuning (ReFT/RLVR: inner/outer loop)}
+%\citep{luong2024reft}
+%\paragraph{Inner/Outer Loop RL: RLFT}
+
+%\subsubsection{Stable Metalearning with Feedback}
+
+
+%\section{Conclusion}
+%In-context does not change the model, but uses it with smart prompts to get the best possible actions out of standard LLMs. It is cheap, and quick. No training of models is performed, and standard models can be used. We can use standard LLMs through APIs.
+
+%Pretraining and finetuning do change model parameters, and one does need to have access to one's own model. It is more expensive, since the model must be trained, but the model can be adapted to the domain, and performance can be higher than only with in-context learning. World models and VLAs have been created that achieve surprising results. 
+
+%Metalearning is a technique to learn on different levels. %Actions from the world 
+%Wat is de inner loop, wat is de outer loop????
+%Wat zijn de taken binnen de outer loop???
+
+\end{comment}
+
+\bibliographystyle{plainnat}
+\bibliography{agenticbook,refs,case,synthetic}

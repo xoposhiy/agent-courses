@@ -1,0 +1,28 @@
+# Homework 1 public teaching repository: assignments/OMIM_620568/grill_run/tasks/0003_ground_0/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620568/grill_run/tasks/0003_ground_0/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620568/grill_run/tasks/0003_ground_0/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "term": "Cornelia de Lange syndrome 6 (CdLS6, OMIM #620568)",
+  "definition": "An autosomal dominant cohesin-pathway disorder caused by heterozygous pathogenic variants or haploinsufficiency in the BRD4 gene, characterized clinically by an atypical or non-classic Cornelia de Lange syndrome phenotype that typically presents with milder manifestations, including distinctive craniofacial dysmorphisms, developmental delay, growth retardation, and variable limb or systemic congenital abnormalities.",
+  "source": {
+    "title": "Non-Classic Cornelia de Lange Syndrome Due to BRD4 Gene Alterations: A Literature Review",
+    "authors": [
+      "F Lonardo",
+      "M Falco",
+      "C Costabile",
+      "P Fontana"
+    ],
+    "year": 2025,
+    "journal": null,
+    "doi": "10.3390/children12111440",
+    "pmid": "41300558",
+    "pmc": null,
+    "url": "https://www.mdpi.com/2227-9067/12/11/1440",
+    "quote": "Cornelia de Lange Syndrome (CdLS) is a rare congenital disorder characterised by distinctive facial features, growth retardation, limb abnormalities and developmental delays. It is characterised by genetic heterogeneity and also presents a broad clinical variability, with a spectrum of manifestations ranging from mild to severe, with milder phenotypes that can be difficult to ascertain based on physical characteristics. Pathogenic variations in the NIPBL gene account for the majority of cases, but variations in several other genes, including BRD4, have been identified as causative factors for non-classic or milder forms of the syndrome."
+  }
+}
+```

@@ -1,0 +1,407 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 5,
+    "text": "In the last video, you learned how to build a set of test\ncases for a requirement."
+  },
+  {
+    "startInSeconds": 5,
+    "endInSeconds": 10,
+    "text": "Each case specifies what to give the application,\nand what it should do in that situation."
+  },
+  {
+    "startInSeconds": 10,
+    "endInSeconds": 14,
+    "text": "Now, you can run those test cases and review the results manually."
+  },
+  {
+    "startInSeconds": 14,
+    "endInSeconds": 20,
+    "text": "That manual review is where you learn what the application is actually\ngetting wrong before you try to automate the evaluation."
+  },
+  {
+    "startInSeconds": 20,
+    "endInSeconds": 25,
+    "text": "So, your goal is to compare what the application does\nwith what you expected,"
+  },
+  {
+    "startInSeconds": 25,
+    "endInSeconds": 31,
+    "text": "and that will help you decide what needs improving in your application\nso these mistakes don't keep happening."
+  },
+  {
+    "startInSeconds": 31,
+    "endInSeconds": 38,
+    "text": "You'll do that by describing what went wrong, grouping cases that show\nthe same problem, and deciding which problems deserve attention first."
+  },
+  {
+    "startInSeconds": 38,
+    "endInSeconds": 45,
+    "text": "Let's look at one case from a test set for the requirement,\nonly match volunteers with dogs they can safely handle."
+  },
+  {
+    "startInSeconds": 45,
+    "endInSeconds": 52,
+    "text": "In this case, an experienced volunteer wants to walk a 130-lb dog,\nbut the dog is too strong for them to control safely."
+  },
+  {
+    "startInSeconds": 52,
+    "endInSeconds": 56,
+    "text": "We expect the agent to reject the match,\nbut the agent approved the match."
+  },
+  {
+    "startInSeconds": 56,
+    "endInSeconds": 62,
+    "text": "So next, you want to look at the trace to see the information the\nagent received and what it did."
+  },
+  {
+    "startInSeconds": 62,
+    "endInSeconds": 65,
+    "text": "This will help you describe what went wrong."
+  },
+  {
+    "startInSeconds": 65,
+    "endInSeconds": 71,
+    "text": "Now, as you review other cases, you may not always have enough\ninformation to tell whether the application met the requirement."
+  },
+  {
+    "startInSeconds": 71,
+    "endInSeconds": 76,
+    "text": "If that happens, check the relevant facts,\nor ask for help interpreting the requirement."
+  },
+  {
+    "startInSeconds": 76,
+    "endInSeconds": 83,
+    "text": "And if you and another reviewer disagree, compare your reasons. You\nmay have noticed different facts or interpreted the rule differently."
+  },
+  {
+    "startInSeconds": 83,
+    "endInSeconds": 87,
+    "text": "If you still can't tell whether the application met the\nrequirement, don't guess."
+  },
+  {
+    "startInSeconds": 87,
+    "endInSeconds": 92,
+    "text": "Mark the case as unresolved and write down what evidence\nor decision is missing."
+  },
+  {
+    "startInSeconds": 92,
+    "endInSeconds": 96,
+    "text": "Now, for each run, write down whether it passed or failed and why."
+  },
+  {
+    "startInSeconds": 96,
+    "endInSeconds": 102,
+    "text": "Keep that judgment with the result and trace you reviewed\nbecause another run of the same case could turn out differently."
+  },
+  {
+    "startInSeconds": 102,
+    "endInSeconds": 106,
+    "text": "For runs you haven't resolved, write down what you\nstill need to find out."
+  },
+  {
+    "startInSeconds": 106,
+    "endInSeconds": 113,
+    "text": "For our unsafe match, your reason could be, the agent approved a match\nwith a dog the volunteer couldn't safely handle."
+  },
+  {
+    "startInSeconds": 113,
+    "endInSeconds": 118,
+    "text": "That explains why you marked it as a failure,\nbut it doesn't tell you why the agent approved the match."
+  },
+  {
+    "startInSeconds": 118,
+    "endInSeconds": 122,
+    "text": "Maybe the agent never received the information about\nthe volunteer's limits,"
+  },
+  {
+    "startInSeconds": 122,
+    "endInSeconds": 125,
+    "text": "or maybe it had that information and still made the wrong decision."
+  },
+  {
+    "startInSeconds": 125,
+    "endInSeconds": 132,
+    "text": "So check the trace before you say it ignored the volunteer's limits.\nYou can still record the mistake without knowing why it happened."
+  },
+  {
+    "startInSeconds": 132,
+    "endInSeconds": 136,
+    "text": "And if you have an explanation you haven't checked,\nwrite it down as a possibility."
+  },
+  {
+    "startInSeconds": 136,
+    "endInSeconds": 142,
+    "text": "Now that you've described what went wrong in individual cases,\nthe next step is to group the ones that show the same problem."
+  },
+  {
+    "startInSeconds": 142,
+    "endInSeconds": 148,
+    "text": "That will help you see which mistakes keep happening across the test\nset and how many cases each problem affects,"
+  },
+  {
+    "startInSeconds": 148,
+    "endInSeconds": 151,
+    "text": "so you can decide which problems to work on first."
+  },
+  {
+    "startInSeconds": 151,
+    "endInSeconds": 156,
+    "text": "Take our unsafe match and compare it with another case where a\nfirst-time volunteer was matched with a dog"
+  },
+  {
+    "startInSeconds": 156,
+    "endInSeconds": 158,
+    "text": "that requires an experienced handler."
+  },
+  {
+    "startInSeconds": 158,
+    "endInSeconds": 164,
+    "text": "If the traces show that the agent received the information about the\nvolunteer's limits and the dog's requirements in each case,"
+  },
+  {
+    "startInSeconds": 164,
+    "endInSeconds": 166,
+    "text": "you can group them together."
+  },
+  {
+    "startInSeconds": 166,
+    "endInSeconds": 171,
+    "text": "It had the information it needed, but it still approved a match it\nshould have rejected."
+  },
+  {
+    "startInSeconds": 171,
+    "endInSeconds": 175,
+    "text": "But if the agent retrieved the wrong dog's record,\nyou want to keep that separate."
+  },
+  {
+    "startInSeconds": 175,
+    "endInSeconds": 177,
+    "text": "The result might be an unsafe match,"
+  },
+  {
+    "startInSeconds": 177,
+    "endInSeconds": 181,
+    "text": "but getting the wrong record is a different problem from making the\nwrong decision with the right record."
+  },
+  {
+    "startInSeconds": 181,
+    "endInSeconds": 187,
+    "text": "Once you have a group, give it a clear name and write a short\nexplanation of what the name means with an example."
+  },
+  {
+    "startInSeconds": 187,
+    "endInSeconds": 191,
+    "text": "That way, you can use the name consistently as you review more cases."
+  },
+  {
+    "startInSeconds": 191,
+    "endInSeconds": 196,
+    "text": "Across this course, we use five broad categories to help\nname these problems."
+  },
+  {
+    "startInSeconds": 196,
+    "endInSeconds": 203,
+    "text": "The two matches we grouped together fit under Judgment, because the\nagent had the relevant information but made the wrong decision."
+  },
+  {
+    "startInSeconds": 203,
+    "endInSeconds": 206,
+    "text": "More specifically, we'd call that a reasoning error."
+  },
+  {
+    "startInSeconds": 206,
+    "endInSeconds": 211,
+    "text": "Groundedness covers problems with the evidence the agent retrieves\nor the claims it makes."
+  },
+  {
+    "startInSeconds": 211,
+    "endInSeconds": 214,
+    "text": "So retrieving the wrong dog's record belongs here,"
+  },
+  {
+    "startInSeconds": 214,
+    "endInSeconds": 219,
+    "text": "and so does saying a dog completed an evaluation when there's no\nrecord to support that claim."
+  },
+  {
+    "startInSeconds": 219,
+    "endInSeconds": 225,
+    "text": "Execution covers mistakes in carrying out required actions,\nlike skipping the eligibility check before approving a match."
+  },
+  {
+    "startInSeconds": 225,
+    "endInSeconds": 229,
+    "text": "Completion is about whether the intended result actually happened."
+  },
+  {
+    "startInSeconds": 229,
+    "endInSeconds": 235,
+    "text": "So if the agent says an outing is scheduled,\nbut no calendar entry was created, that's a Completion failure."
+  },
+  {
+    "startInSeconds": 235,
+    "endInSeconds": 241,
+    "text": "Propagation is when a mistake carries into later steps,\nor information or instructions get lost along the way."
+  },
+  {
+    "startInSeconds": 241,
+    "endInSeconds": 248,
+    "text": "For example, the agent retrieves the wrong dog's record,\nuses it to approve a match, and then confirms the wrong dog."
+  },
+  {
+    "startInSeconds": 248,
+    "endInSeconds": 254,
+    "text": "These are broad categories, and you can still use names that describe\na problem specific to your application."
+  },
+  {
+    "startInSeconds": 254,
+    "endInSeconds": 262,
+    "text": "Don't force a case into a group that doesn't fit. Then save the labels\nwith each reviewed run alongside your description of what went wrong."
+  },
+  {
+    "startInSeconds": 262,
+    "endInSeconds": 264,
+    "text": "And a run can have more than one label."
+  },
+  {
+    "startInSeconds": 264,
+    "endInSeconds": 271,
+    "text": "The wrong record is a Groundedness problem, and carrying that mistake\nthrough to the confirmation is also a Propagation problem."
+  },
+  {
+    "startInSeconds": 271,
+    "endInSeconds": 274,
+    "text": "If you choose one main label, keep the others, too."
+  },
+  {
+    "startInSeconds": 274,
+    "endInSeconds": 280,
+    "text": "As you work through more cases, you may need to clarify what a label\nmeans, or separate two problems you'd grouped together,"
+  },
+  {
+    "startInSeconds": 280,
+    "endInSeconds": 283,
+    "text": "and then update the earlier labels to match."
+  },
+  {
+    "startInSeconds": 283,
+    "endInSeconds": 287,
+    "text": "Now you can use those groups to decide which\nproblems to work on first."
+  },
+  {
+    "startInSeconds": 287,
+    "endInSeconds": 290,
+    "text": "You'll want to look at how often each problem showed up\nand how much harm it"
+  },
+  {
+    "startInSeconds": 290,
+    "endInSeconds": 296,
+    "text": "could cause because the most common mistake isn't always the most\nimportant one to fix."
+  },
+  {
+    "startInSeconds": 296,
+    "endInSeconds": 303,
+    "text": "To see how common each problem was, count the runs that show it out of\nall the runs you checked for it, including the ones that passed."
+  },
+  {
+    "startInSeconds": 303,
+    "endInSeconds": 308,
+    "text": "Otherwise, a problem can look more common or less common simply\nbecause you only counted failures."
+  },
+  {
+    "startInSeconds": 308,
+    "endInSeconds": 314,
+    "text": "Make sure you haven't missed that problem in runs where you found\nanother error, and see if some runs still need checking."
+  },
+  {
+    "startInSeconds": 314,
+    "endInSeconds": 320,
+    "text": "These counts describe your test results,\nso if you choose especially difficult cases,"
+  },
+  {
+    "startInSeconds": 320,
+    "endInSeconds": 324,
+    "text": "don't assume the problems happen just as often for your users."
+  },
+  {
+    "startInSeconds": 324,
+    "endInSeconds": 327,
+    "text": "Then, think about what could happen when the agent makes that mistake."
+  },
+  {
+    "startInSeconds": 327,
+    "endInSeconds": 334,
+    "text": "For our unsafe match, the volunteer could lose control of the dog\nand someone could get hurt. And harm isn't just about physical safety."
+  },
+  {
+    "startInSeconds": 334,
+    "endInSeconds": 340,
+    "text": "If the Northwind support agent invents a return policy,\na customer could rely on it and expect the company to honor it."
+  },
+  {
+    "startInSeconds": 340,
+    "endInSeconds": 347,
+    "text": "Even if someone corrects the answer later, the customer may have\nalready acted on it, and the company could lose their trust."
+  },
+  {
+    "startInSeconds": 347,
+    "endInSeconds": 353,
+    "text": "So you'll want to consider whether anyone would catch the mistake\nbefore it causes harm, and how easy it would be to put things right."
+  },
+  {
+    "startInSeconds": 353,
+    "endInSeconds": 359,
+    "text": "Then, compare the problems using both how often they appeared\nand how serious they could be."
+  },
+  {
+    "startInSeconds": 359,
+    "endInSeconds": 364,
+    "text": "Suppose awkward formatting appeared in many of your results,\nbut an unsafe match appeared only once."
+  },
+  {
+    "startInSeconds": 364,
+    "endInSeconds": 371,
+    "text": "You might still put the unsafe match first because the risk of injury\nmatters more than the inconvenience of awkward formatting."
+  },
+  {
+    "startInSeconds": 371,
+    "endInSeconds": 374,
+    "text": "Write down which problems you'll work on first and why."
+  },
+  {
+    "startInSeconds": 374,
+    "endInSeconds": 380,
+    "text": "And if a problem could cause serious harm, you don't have to wait for\nmore examples before giving it attention."
+  },
+  {
+    "startInSeconds": 380,
+    "endInSeconds": 386,
+    "text": "You started with an initial set of test cases, and now the problems\nyou've found can help you decide what else to test."
+  },
+  {
+    "startInSeconds": 386,
+    "endInSeconds": 389,
+    "text": "If the agent approves an unsafe match, for example,"
+  },
+  {
+    "startInSeconds": 389,
+    "endInSeconds": 394,
+    "text": "you'll want to try other situations where a volunteer might not be\nable to handle the dog,"
+  },
+  {
+    "startInSeconds": 394,
+    "endInSeconds": 398,
+    "text": "so you can see whether the same mistake happens in\nthose situations, too."
+  },
+  {
+    "startInSeconds": 398,
+    "endInSeconds": 404,
+    "text": "Up next, you'll use those failure labels and review notes to expand\nyour coverage and curate a benchmark that you can keep running"
+  },
+  {
+    "startInSeconds": 404,
+    "endInSeconds": 405,
+    "text": "as the application changes."
+  }
+]

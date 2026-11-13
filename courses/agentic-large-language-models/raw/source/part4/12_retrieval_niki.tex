@@ -1,0 +1,641 @@
+%\chapter{Search and Retrieval in Agentic LLMs}\label{sec:rag}
+
+\chapter{Search and Retrieval in Agentic LLMs}\label{sec:rag}
+
+
+\begin{learningbox}
+In this chapter you will learn why retrieval is a fundamental 
+capability for agentic systems that need knowledge beyond their 
+training data. Specifically, you will be able to:
+\begin{itemize}[leftmargin=*, nosep]
+    \item Describe the full {\em retrieval-augmented generation} pipeline, from indexing and chunking to query formulation and answer generation.
+    \item Implement adaptive retrieval methods such as \textit{Self-RAG} and \textit{Self-Ask}, and build a dense retrieval system in Python.
+    \item Extend retrieval beyond plain text to graphs, code, tabular   data, and multimodal sources.
+    \item Distinguish agentic RAG from simple one-shot retrieval, including real-time and streaming variants.
+    \item Evaluate retrieval systems using standard metrics such as  \textit{Recall@$k$}, \textit{Mean Reciprocal Rank}, and \textit{faithfulness} scores.
+\end{itemize}
+\end{learningbox}
+
+
+
+\section{Retrieval in General}
+\label{sec:retrieval-origins}
+
+Before examining how agentic LLMs consult external knowledge, it is worth situating retrieval within its own, much older, disciplinary history. Information retrieval (IR) is a mature field of computer and information science that predates neural networks by decades. Many of the ideas that power modern retrieval augmented generation (RAG) pipelines are direct descendants of classical information retrieval research. The standard reference works of the field, \citet{salton1983introduction} and later \citet{manning2008introduction}, still provide the conceptual vocabulary such as: indexing, term weighting, ranking and relevance,  that this chapter builds on.
+
+\subsection{Bag of Words}
+
+Early information retrieval systems represented documents and queries as \emph{bags of words} and asked a deceptively simple question: which terms make a document a good match for a query? \citet{sparckjones1972statistical} gave this question a statistical answer with the notion of inverse document frequency (IDF), observing that terms occurring in few documents are more discriminating than terms that occur almost everywhere. Weighting terms by how frequently they occur in a document (term frequency, TF) and how rare they are across the collection (IDF) yields the TF-IDF family of weighting schemes, still one of the most widely deployed representations in production search systems.
+
+Term frequency counts how often a term $t$ occurs in a document $d$:
+\begin{equation}
+\mathrm{TF}(t,d) = \frac{f_{t,d}}{\sum_{t' \in d} f_{t',d}}
+\label{eq:tf}
+\end{equation}
+where $f_{t,d}$ is the raw count of $t$ in $d$. Inverse document frequency, following \citet{sparckjones1972statistical}, down-weights terms that occur in many documents:
+\begin{equation}
+\mathrm{IDF}(t, D) = \log \frac{|D|}{|\{d \in D : t \in d\}|}
+\label{eq:idf}
+\end{equation}
+where $D$ is the document collection. Combining the two gives the classic TF-IDF weight of term $t$ in document $d$:
+\begin{equation}
+\mathrm{TF\text{-}IDF}(t,d,D) = \mathrm{TF}(t,d) \times \mathrm{IDF}(t,D)
+\label{eq:tfidf}
+\end{equation}
+
+\subsection{Vector Space Models}
+
+\citet{salton1975vector} formalized this idea into the \emph{vector space model}, representing every document and query as a vector in a high-dimensional term space and ranking documents by their cosine similarity to the query vector. The vector space model established a pattern that persists directly into today's dense retrievers (Section~\ref{sec:rag-pipeline}): reduce documents and queries to points in a shared geometric space, and let distance or similarity stand in for relevance. 
+
+More formally, in the vector space model, each document $d$ (and query $q$) is represented as a vector of term weights, $\vec{d} = (w_{1,d}, w_{2,d}, \dots, w_{n,d})$, typically using TF-IDF weights (Eq.~\ref{eq:tfidf}). Relevance is then approximated by the cosine similarity between query and document vectors:
+\begin{equation}
+\mathrm{sim}(\vec{q}, \vec{d}) = \cos(\theta) = \frac{\vec{q} \cdot \vec{d}}{\lVert \vec{q} \rVert \, \lVert \vec{d} \rVert}
+\label{eq:cosinerag}
+\end{equation}
+Documents are ranked by decreasing $\mathrm{sim}(\vec{q}, \vec{d})$. This same operation, cosine similarity between two learned vectors, reappears in dense retrieval (Section~\ref{sec:rag-pipeline}), the only difference being how the vectors are obtained.
+Where the vector space model used raw term co-occurrence, modern dense retrievers such as dense passage retrieval (DPR)~\citep{karpukhin2020dense} use learned neural embeddings, but the underlying geometric intuition is unchanged.
+
+\subsection{Latent and Sparse Representations}
+
+Two further developments bridge classical and modern retrieval. First, \citet{robertson2009probabilistic} developed the \emph{probabilistic relevance framework}, which treats retrieval as a problem of estimating the probability that a document is relevant to a query given its term statistics. This framework produced BM25~\cite{robertson1994okapi}, a term-weighting and ranking function which ranks document $d$ for query $q$ as:
+\begin{equation}
+\mathrm{BM25}(q,d) = \sum_{t \in q} \mathrm{IDF}(t,D) \cdot
+\frac{f_{t,d} \, (k_1 + 1)}{f_{t,d} + k_1 \left(1 - b + b \, \dfrac{|d|}{\mathrm{avgdl}}\right)}
+\label{eq:bm25}
+\end{equation}
+where $|d|$ is the length of document $d$, $\mathrm{avgdl}$ is the average document length in the collection, and $k_1$ and $b$ are free parameters that control term-frequency saturation and length normalization, respectively (typical values: $k_1 \in [1.2, 2.0]$, $b = 0.75$). BM25 remains the sparse-retrieval baseline referenced throughout the hybrid retrieval discussions in Section~\ref{sec:rag-pipeline}.
+
+Second, \citet{deerwester1990indexing} introduced \emph{latent semantic analysis} (LSA), which applies singular value decomposition to the term-document matrix to uncover latent topics and match documents by meaning rather than by exact term overlap. LSA was the first widely used technique to address the vocabulary mismatch problem, the same problem that motivates dense and semantic retrieval today.
+
+LSA operates on the term-document matrix $X \in \mathbb{R}^{m \times n}$, where $m$ is the vocabulary size and $n$ the number of documents. Its entries are typically TF-IDF weights (Eq.~\ref{eq:tfidf}). Applying truncated singular value decomposition,
+\begin{equation}
+X \approx U_k \Sigma_k V_k^{\top}
+\label{eq:lsa}
+\end{equation}
+retains only the $k$ largest singular values in $\Sigma_k$, producing a rank-$k$ approximation of $X$. Documents and terms are then represented in this reduced $k$-dimensional latent space, where semantically related terms and documents lie close together even without exact term overlap.
+
+
+The final bridge from classical IR to the neural retrieval methods used throughout this chapter is the emergence of learned, dense vector representations of words. \citet{mikolov2013efficient} showed that simple neural network architectures, trained to predict a word from its context, produce continuous word embeddings that capture rich syntactic and semantic regularities. This work, together with the encoder architectures that followed, supplied the representational building blocks on which dense retrieval, DPR-style bi-encoders, and ultimately retrieval-augmented generation are built.
+
+Retrieval, in other words, is a decades-old discipline concerned with a single enduring question: given a query, which pieces of a large collection are actually relevant to it? What has changed with the arrival of LLMs is not the question but the stakes: models now consult retrieved evidence not merely to rank documents for a human reader, but to condition their own generation. We will now discuss  why that shift matters.
+
+
+\section{Why Retrieval Matters for Agentic LLMs}
+Building on this foundation, large language models introduce a new reason to care about retrieval. LLMs are frozen snapshots of world knowledge. The LLM's parameters
+can not contain information that was generated after the corpus
+was fixed.
+LLMs struggle when tasks require timely, proprietary, or long--tail information that was absent at pretraining time. Retrieval augmentation mitigates these limits by consulting external sources at inference time and conditioning generation on the retrieved evidence.
+
+Retrieval augmented generation (RAG) methods have been developed to integrate data from external knowledge bases with the pretrained  knowledge stored in the parameters of language models.
+Most RAG approaches work at inference time, although some can work during finetuning or even pretraining.
+Most RAG approaches work on unstructured (textual) data sources. These text documents are indexed to increase efficient access, and they can be organized and a knowledge graph can be created. Finally, database-type query optimization is often
+performed, where queries can be expanded or complex queries can be
+split into sub-queries \citep{cong2024query}.
+
+This simple idea, popularized by early systems such as REALM~\citep{guu2020realm}, DPR~\citep{karpukhin2020dense}, and RAG~\citep{lewis2020retrieval}, has grown into a rich design space spanning indexing, query planning, re-ranking, citation and attribution, and continuous data refresh. Recent surveys synthesize the landscape and evaluation practices \citep{gao2023rag_survey,huang2024rag_survey,yu2024rag_eval,sharma2025rag_survey,peng2024graphrag_survey}.
+
+
+
+
+\paragraph{When to retrieve.} Retrieval is most beneficial when: (1) the task is knowledge-intensive (definitions, entities, numbers, references), (2) the domain shifts rapidly (news, prices, docs), (3) transparency is required (with citations), or (4) models must respect strict source-of-truth constraints (compliance portals, internal wikis). In agentic settings, retrieval can be interleaved with tool use and planning (see Chapter~\ref{sec:tools}).
+
+\section{Retrieval-Augmented Generation Pipeline}
+\label{sec:rag-pipeline}
+
+A practical RAG system typically implements the following seven stages:
+\begin{enumerate}
+\item Indexing: The indexing phase is the first step. This step involves: Taking all raw source material, such as HTML pages, PDFs, tables, or code, and converting it into clean, consistent text. Keep important structure as metadata (headings, anchors, timestamps, authorship). Break content into chunks with meaningful boundaries (e.g., sentences or sections) and small overlaps so context isn’t lost. Create two types of searchable representations: \emph{sparse} ones, like BM25 (a classic term-matching method) or SPLADE ~\citep{formal2021splade} (a more modern variant that expands terms), which are good for exact keyword matches; and \emph{dense} ones, which are embeddings that capture meaning for semantic matches. Storing both lets the system find exact matches (IDs, numbers) and semantic matches (paraphrases, synonyms) in the same search.
+
+\item Query Construction: Turn the user’s question into one or more precise search queries. This can involve rewriting the question for clarity, breaking complex questions into sub-questions (multi-hop), adding related terms (query expansion), or even generating a hypothetical answer to use as a search target (HyDE) \citep{gao2023hyde}. For structured data sources, generate specific queries such as SQL or graph lookups. The aim is to make the search engine understand exactly what to look for.
+
+\item Candidate Retrieval: Use the constructed queries to pull in potentially relevant chunks from the index. Dense retrievers (e.g., DPR~\citep{karpukhin2020dense}, Contriever~\citep{izacard2022contriever}) match by meaning; sparse methods (BM25, SPLADE) match by exact terms; hybrids combine both. To search quickly at scale, use approximate nearest neighbor (ANN) indexes like HNSW~\citep{malkov2018HNSWG} or IVF-PQ~\citep{herve2011PQNNS}. For code or images, use specialized encoders. This step is about casting a wide net without losing focus.
+
+\item Re-ranking: Take the pool of retrieved candidates and reorder them by relevance using more accurate but slower models, like cross-encoders (BERT, MiniLM). Late-interaction models such as ColBERTv2 \citep{santhanam2022colbertv2} balance quality and speed. This ensures that top results are the ones most likely to answer the question.
+
+\item Context Assembly: Remove duplicates, ensure coverage of different aspects of the query (diversity), and prefer recent or domain-relevant sources. Bundle the selected passages, along with their metadata (source, URL, date), into a context package to feed into the LLM. This gives the model a curated, trustworthy information set.
+
+\item Grounded Generation: Ask the LLM to generate the answer using the provided context, with citations for each claim. If evidence is insufficient, the model should abstain or ask for clarification. Some systems, such as Self-RAG \citep{asai2023selfrag}, decide on the fly whether to retrieve more information. The focus is on answers that are both correct and well-supported.
+
+\item Attribution and Logging: Show the sources alongside the answer so readers can verify claims. Log the entire process including queries, retrieved documents and versions, for debugging, evaluation, and compliance. This makes the system transparent and auditable.
+\end{enumerate}
+%
+A straightforward RAG system follows the seven‑step pipeline outlined above.  Listing~\ref{lst:basicrag} shows Python‑style pseudo-code for this process.  The function takes a user question, rewrites it into one or more search queries, retrieves and re‑ranks candidate passages, assembles a context window and finally generates an answer while tracking which passages were used. We will go into more details  below.
+
+\begin{listing}[!ht]
+\begin{minted}[
+frame=lines,
+framesep=2mm,
+baselinestretch=1.0,
+fontsize=\footnotesize,
+linenos
+]{python}
+# Input: question q, search index, and number of passages k
+def rag_answer(q, index, k=8):
+    # 1. Construct search queries (possibly decompose multi-hop questions)
+    queries = rewrite_question(q)
+    # 2. Retrieve candidate passages from the index
+    candidates = retrieve(index, queries, k=200)
+    # 3. Re-rank with a cross-encoder or late-interaction model
+    ranked = rerank(candidates)
+    # 4. Assemble a context window from the top-k passages
+    context = assemble(ranked[:k])
+    # 5. Generate an answer conditioned on the context and provide citations
+    answer, citations = generate_answer(q, context)
+    return answer, citations
+\end{minted}
+\caption{High Level Flow of a Basic RAG Setup}
+\label{lst:basicrag}
+\end{listing}
+
+\section{Adaptive Retrieval Methods}\label{sec:adaptive}
+Traditional RAG systems retrieve a fixed number of passages regardless of whether any retrieval is actually needed.  This {\em always–on} strategy simplifies engineering but can hurt both efficiency and accuracy.  Recent research explores \emph{adaptive} or \emph{gated} retrieval strategies that teach the model to decide when to search and how much evidence to consult.  These methods align with the self‑reflection ideas introduced in Section~\ref{sec:self-reflection}: rather than blindly ingest retrieved text, the language model introspects about its own confidence and triggers retrieval only when it recognizes a knowledge gap.
+
+Concretely, \citet{asai2023selfrag} propose Self‑RAG, which trains a single model to generate answers, request retrieval, and critique its own outputs using special \emph{reflection tokens}.  When the model’s draft answer is uncertain, it emits a \texttt{<RETRIEVE>} token to call the search tool and incorporates the retrieved passages in the next step.  Experiments show that this learned gating improves factuality over static RAG while avoiding unnecessary calls.
+
+A more lightweight approach is Self‑Ask~\citep{press2022measuring}, where the model decomposes a complex question into simpler sub‑questions, issues them to a search tool, and uses the answers to compose a final response. Self‑Ask can be combined with planning agents, enabling models to interleave reasoning, tool calls, and retrieval.  Graph Toolformer~\citep{zhang2023graph} extends this idea by training a policy to insert search queries into a program graph.  At inference time the LLM dynamically decides whether to retrieve from a text index, a knowledge graph, or a database, based on the current state of reasoning.
+
+Beyond these specific examples, adaptive retrieval can be implemented in several ways:
+\begin{itemize}
+\item Confidence‑based Gating:  The model estimates its uncertainty (e.g., from entropy or calibration metrics) and triggers retrieval when confidence falls below a threshold.
+\item Iterative Retrieval:  Rather than pulling all evidence at once, the system retrieves a few passages, reasons about them, and then decides whether additional rounds of search are needed.  This approach is useful for multi-hop questions.
+\item Query Planning:  An agent decomposes the user query into sub‑tasks, dispatches them to different tools (search, database, calculator), and integrates the results.  Retrievers are called only when the plan requires external knowledge.
+\item Learning to Retrieve:  Reinforcement learning or supervised finetuning can teach the model to emit \texttt{<RETRIEVE>} tokens at appropriate times.  Self‑RAG is one instantiation; other methods explore training retrieval policies end‑to‑end with the generator.
+\end{itemize}
+%
+Adaptive retrieval reduces latency and cost by avoiding unnecessary searches, and it often improves answer quality by focusing attention on missing knowledge.  Designing effective gating policies, however, requires careful evaluation (see Section~\ref{sec:r_evaluation}) and may demand additional supervision during training.
+
+
+\subsection{Adaptive Retrieval via Self‑RAG and Self-Ask}
+
+The Self‑RAG framework of \citet{asai2023selfrag} teaches the model to request retrieval on demand by emitting a special \texttt{<RETRIEVE>} token during generation.  The pseudo-code in Listing~\ref{lst:selfrag} sketches how such a loop operates.  The model maintains a growing context and alternates between generating output tokens and pulling in new evidence when needed.
+
+\begin{listing}[!ht]
+\begin{minted}[
+frame=lines,
+framesep=2mm,
+baselinestretch=1.0,
+fontsize=\footnotesize,
+linenos
+]{python}
+# Input: question q, search index, and trained Self-RAG model
+def self_rag_answer(q, index, model):
+    context = []
+    output_tokens = []
+    # Generate tokens sequentially
+    for token in model.generate_stream(q, context):
+        if token == "<RETRIEVE>":
+            # Model requests more information
+            new_docs = retrieve(index, rewrite_question(q), k=5)
+            context.extend(new_docs)
+        else:
+            output_tokens.append(token)
+        if token == "<END>":
+            break
+    return detokenize(output_tokens)
+\end{minted}
+\caption{High Level Pseudo-Code Demonstrating Self-RAG}
+\label{lst:selfrag}
+\end{listing}
+
+It should be noted that for Self-RAG to work, the foundation model should be trained or fine-tuned to produce the \texttt{<RETRIEVE>} token.
+Self‑Ask~\citep{press2022measuring} on the other hand is not dependent on the language model. Self-Ask decomposes a complex question into simpler sub‑questions, retrieves evidence for each and synthesizes the final answer.  The following high‑level pseudo-code shows one way to implement this strategy:
+
+\begin{listing}[!ht]
+\begin{minted}[
+frame=lines,
+framesep=2mm,
+baselinestretch=1.0,
+fontsize=\footnotesize,
+linenos
+]{python}
+def self_ask(q, index):
+    sub_questions = decompose(q)  
+    # e.g. "When was Einstein born?" and "What is the Nobel Prize?"
+    intermediate_answers = []
+    for sq in sub_questions:
+        docs = retrieve(index, rewrite_question(sq), k=5)
+        answer = summarize(docs)
+        intermediate_answers.append(answer)
+    final_answer = compose(intermediate_answers)
+    return final_answer
+\end{minted}
+\caption{High Level Pseudo-Code Demonstrating Self-Ask}
+\label{lst:selfask}
+\end{listing}
+
+
+\subsection{A Simple Dense Retrieval Example in Python}
+
+Dense retrieval libraries such as the \texttt{sentence\_transformers} toolkit make it easy to index a small corpus and perform semantic search.  Listing~\ref{lst:dense} illustrates how to embed a corpus of sentences, compute similarities to a query and display the top results.
+
+\begin{listing}[!ht]
+\begin{minted}[
+frame=lines,
+framesep=2mm,
+baselinestretch=1.0,
+fontsize=\footnotesize,
+linenos
+]{python}
+from sentence_transformers import SentenceTransformer, util
+
+# Prepare a small corpus
+texts = [
+    "The Eiffel Tower is in Paris.",
+    "The capital of France is Paris.",
+    "Berlin is the capital of Germany.",
+    "The Great Wall is in China."
+]
+
+model = SentenceTransformer("all-MiniLM-L6-v2")
+corpus_embeddings = model.encode(texts, convert_to_tensor=True)
+
+def semantic_search(question, k=2):
+    query_emb = model.encode(question, convert_to_tensor=True)
+    scores = util.cos_sim(query_emb, corpus_embeddings)[0]
+    top_results = scores.topk(k)
+    for score, idx in zip(top_results.values, top_results.indices):
+        print(texts[idx], "(score:", score.item(), ")")
+
+# Example usage
+semantic_search("What is the capital of France?")
+\end{minted}
+\caption{A Simple Dense Retrieval Example in Python}
+\label{lst:dense}
+\end{listing}
+
+
+\subsection{Query Rewriting and Expansion}
+
+Effective retrieval often starts with transforming the original question into  a form that the index can match.  Large language models can act as query re-writers by paraphrasing, expanding acronyms, adding synonyms or even producing a hypothetical answer to use as a pseudo‑query (the HyDE technique).\footnote{HyDE stands for Hypothetical Document Embeddings and generates a plausible answer which is then embedded and used to retrieve supporting passages \citep{gao2023hyde}.}  Listing~\ref{lst:rewrite} sketches a simple function that calls an LLM to produce multiple rewrites and expansions and then merges the results into a set of search queries.
+
+\begin{listing}[!ht]
+\begin{minted}[
+frame=lines,
+framesep=2mm,
+baselinestretch=1.0,
+fontsize=\footnotesize,
+linenos
+]{python}
+def rewrite_question(q, n_variants=3):
+    """
+    Use an LLM to generate alternative phrasings and hypothetical answers.
+
+    :param q: The user question.
+    :param n_variants: Number of rewrites to generate.
+    :return: A list of expanded queries.
+    """
+    variants = [q]
+    # Ask the model for paraphrases and clarifications
+    paraphrases = llm.generate(["Rewrite: " + q] * n_variants)
+    variants.extend(paraphrases)
+    # Ask the model to guess an answer (HyDE) and use it as a pseudo-query
+    guess = llm.generate(["Answer briefly: " + q])[0]
+    variants.append(guess)
+    # Optionally add entity aliases from a knowledge base
+    aliases = lookup_aliases(q)
+    variants.extend(aliases)
+    return variants
+\end{minted}
+\caption{A Simple Example of Query Rewriting}
+\label{lst:rewrite}
+\end{listing}
+
+
+In practice, the \texttt{rewrite\_question} function might call an API such as OpenAI's \texttt{gpt-5} to generate paraphrases and hypothetical answers, then use a thesaurus or entity‑linking tool to add aliases.  Query expansion improves recall but can also introduce noise.
+
+
+
+
+\section[Graphs, Code, Tabular Data]{Beyond Text: Graphs, Code, Tabular Data and Multi-Modal}
+While most RAG systems operate over unstructured text, many agentic applications require reasoning over structured data, source code, or images.  Extending retrieval beyond plain text opens up new opportunities but also introduces modeling challenges.
+
+\paragraph{Graph‑RAG}  A knowledge graph encodes entities as nodes and relations as edges.  Building a lightweight graph over the corpus allows the retriever to follow links (e.g., {\em works for}, {\em located in}) rather than relying solely on bag‑of‑words similarity.  The GraphRAG survey formalizes a three‑step workflow: graph‑based indexing, graph‑guided retrieval, and graph‑enhanced generation \citep{peng2024graphrag_survey}.  Indexing extracts entities and relations from text, canonicalizes them and builds neighborhood structures.  Retrieval then expands the query through the graph to find related nodes and associated passages; this supports global reasoning and disambiguation.  Finally, the generation model can use the graph structure to organize facts into a coherent narrative and avoid contradictions.
+
+
+\subsection{Graph‑based retrieval example}
+
+GraphRAG systems represent knowledge as a graph of entities and relations and use graph traversals to retrieve relevant nodes \citep{peng2024graphrag_survey}.  A lightweight implementation can be built with the \texttt{networkx} library.  In the example in Listing~\ref{lst:graphrag} we construct a small knowledge graph and implement two simple retrieval primitives: (1) get the immediate neighborhood of an entity, and (2) find the shortest path between two entities.  These operations can support multi‑hop reasoning.
+
+\begin{listing}[!ht]
+\begin{minted}[
+frame=lines,
+framesep=2mm,
+baselinestretch=1.0,
+fontsize=\footnotesize,
+breaklines,
+linenos
+]{python}
+import networkx as nx
+
+def build_knowledge_graph():
+    G = nx.DiGraph()
+    # Add nodes representing entities
+    G.add_node("Albert Einstein", type="person")
+    G.add_node("Nobel Prize", type="award")
+    G.add_node("Physics", type="field")
+    G.add_node("1921", type="year")
+    # Add edges representing relations
+    G.add_edge("Albert Einstein", "Nobel Prize", relation="received")
+    G.add_edge("Nobel Prize", "Physics", relation="category")
+    G.add_edge("Nobel Prize", "1921", relation="year")
+    return G
+
+def neighbours(G, entity):
+    """Return all outgoing neighbours of an entity."""
+    return list(G.successors(entity))
+
+def shortest_path(G, source, target):
+    """Return the sequence of entities on the shortest path."""
+    try:
+        return nx.shortest_path(G, source, target)
+    except nx.NetworkXNoPath:
+        return []
+
+# Example usage
+G = build_knowledge_graph()
+print(neighbours(G, "Albert Einstein"))  
+# ['Nobel Prize']
+print(shortest_path(G, "Albert Einstein", "Physics"))  
+# ['Albert Einstein', 'Nobel Prize', 'Physics']
+\end{minted}
+\caption{An Example of Graph-based Retrieval Primitives in Python}
+\label{lst:graphrag}
+\end{listing}
+
+In a full GraphRAG system the graph nodes would store pointers to the original text passages, and the retrieval procedure would return both the sequence of nodes and the associated passages to the LLM.  Graph‑guided retrieval can reduce hallucinations by grounding reasoning in explicit edges and by encouraging consistency between related facts.
+
+\paragraph{Code‑RAG}  Source code has a rich syntax-structure. The semantics of source code differs from natural language.  For code retrieval to be effective, it should index at the function or module level, including signatures, docstrings, abstract syntax trees (ASTs) and dependency graphs.  Models such as CodeBERT~\citep{feng2020codebert} learn joint embeddings for code and natural language; they support tasks like natural‑language code search, code summarization, and documentation generation.  In Code‑RAG, the retriever can fetch relevant functions, APIs and test cases, and the re-ranker can use code‑aware cross‑encoders or graph neural networks to prioritize exact matches.  Retrieved code snippets, comments and dependency metadata are then provided to the LLM, which can answer questions, suggest fixes, or generate new code while citing the source files.  Evaluation should consider correctness of the code, type safety and adherence to dependencies.
+
+
+\subsection{Code retrieval example using ASTs and embeddings}
+
+Retrieving source code requires understanding its syntax and semantics.  An easy approach is to embed code snippets and natural language queries with a pretrained model such as CodeBERT \citep{feng2020codebert}.  Another complementary approach is to parse the code into an abstract syntax tree (AST) and search its structure.  The example in Listing~\ref{lst:coderag} demonstrates both: we embed functions with CodeBERT for semantic search and use Python's \texttt{ast} module to extract function definitions and docstrings for indexing.
+
+
+\begin{listing}[!ht]
+\begin{minted}[
+frame=lines,
+framesep=2mm,
+baselinestretch=1.0,
+fontsize=\footnotesize,
+breaklines,
+linenos
+]{python}
+from transformers import AutoTokenizer, AutoModel
+import torch, ast, inspect
+
+tokenizer = AutoTokenizer.from_pretrained("microsoft/codebert-base")
+model = AutoModel.from_pretrained("microsoft/codebert-base")
+
+def encode_code(code_str):
+    inputs = tokenizer(code_str, return_tensors="pt")
+    with torch.no_grad():
+        embeddings = model(**inputs).last_hidden_state.mean(dim=1)
+    return embeddings
+
+def extract_functions(module):
+    """Return a list of (name, source, docstring) tuples."""
+    functions = []
+    for name, obj in inspect.getmembers(module, inspect.isfunction):
+        source = inspect.getsource(obj)
+        doc = inspect.getdoc(obj) or ""
+        functions.append((name, source, doc))
+    return functions
+
+# Index a module's functions
+import example_module  # your codebase
+functions = extract_functions(example_module)
+embeddings = [encode_code(src) for (_, src, _) in functions]
+
+def search_code(query, k=2):
+    query_emb = encode_code(query)
+    scores = [torch.nn.functional.cosine_similarity(query_emb, emb)[0] 
+        for emb in embeddings]
+    # Return the top-k functions with highest similarity
+    topk = sorted(zip(scores, functions), key=lambda x: x[0], reverse=True)[:k]
+    for score, (name, src, doc) in topk:
+        print(name, "(score:", score.item(), ")\n", doc)
+
+# Example usage: search for a sorting function
+search_code("sort a list of numbers")
+\end{minted}
+\caption{An Example of Code-based Retrieval in Python}
+\label{lst:coderag}
+\end{listing}
+
+This example indexes the functions in an imported module and performs a cosine similarity search between the query and the encoded source code.  In practice one might combine code embeddings with lexical features (identifiers, comments) and incorporate AST‑based matching to handle structural queries (e.g., find all functions that call a specific API).  Code‑aware retrieval is essential for agentic systems that need to read, execute or modify existing code during tool use.
+
+
+\subsection{Multi-modal and heterogeneous sources}
+
+\paragraph{Tabular and other heterogeneous documents} Existing RAG approaches face critical limitations when applied to heterogeneous documents, comprising both textual and tabular components \citep{yu2025tableragretrievalaugmentedgeneration}. A primary challenge is \textit{Structural Information Loss}. When tabular data is  linearized or chunked for text-based RAG, its inherent relational structure, the interdependence of rows and columns, is compromised. This loss of structure  impedes the LLM's ability to perform accurate multi-hop heterogeneous reasoning. This indicates that merely converting non-textual data to text is insufficient. To address these challenges, hybrid frameworks such as \emph{TableRAG}~\citep{yu2025tableragretrievalaugmentedgeneration} have been proposed, that unify textual understanding and complex manipulations over tabular data. 
+
+TableRAG employs SQL programming and execution to treat table-related queries as indivisible reasoning units, thereby enhancing both computational efficiency and reasoning fidelity. Similarly, \emph{MixRAG}~\citep{zhang2025mixtureofragintegratingtexttables} has been shown to significantly improve retrieval performance for heterogeneous document RAG, which demands joint retrieval and reasoning across textual and hierarchical tabular data. 
+
+The success of these approaches demonstrates that a purely neural (embedding-based) RAG approach is insufficient for structured data. The integration of symbolic reasoning (e.g., SQL) alongside neural retrieval is a critical design pattern for heterogeneous RAG, reflecting a broader trend in Agentic LLMs towards neuro-symbolic integration for enhanced data understanding and fidelity.
+
+\paragraph{Multi-modal RAG}  Many knowledge bases contain tables, figures, diagrams, audio and video.  A straightforward approach is to extract any textual content using OCR and treat the remainder as plain text.  A richer approach stores embeddings for images or other modalities (e.g., CLIP or ViT representations) and pairs them with captions and context.  Queries can be encoded jointly across modalities, allowing the system to retrieve relevant figures or equations that accompany the text.  For example, a research agent might retrieve a plot and its caption to answer a data‑analysis question, or an educational agent might fetch diagrams from a textbook.  
+
+Multi-modal RAG remains an active research area. Challenges include cross‑modal alignment and efficient indexing of high‑dimensional embeddings. Furthermore, non‑textual evidence should be properly grounded in the generated answer.
+
+
+\subsection{Multi-modal retrieval example}
+Agentic systems sometimes need to retrieve images, diagrams or audio clips in addition to text.  Multi-modal models such as CLIP or Contrastive Language‑Audio Pretraining (CLAP) embed both natural language and other modalities into a shared space.  The high‑level pseudo-code in Listing \ref{lst:multimodalrag} outlines how to use CLIP to find images relevant to a textual query:
+
+
+\begin{listing}[!ht]
+\begin{minted}[
+frame=lines,
+framesep=2mm,
+baselinestretch=1.0,
+fontsize=\footnotesize,
+breaklines,
+linenos
+]{python}
+from PIL import Image
+import clip, torch
+
+model, preprocess = clip.load("ViT-B/32")
+
+def embed_image(path):
+    image = preprocess(Image.open(path)).unsqueeze(0)
+    with torch.no_grad():
+        return model.encode_image(image)
+
+def embed_text(text):
+    text_tokens = clip.tokenize([text])
+    with torch.no_grad():
+        return model.encode_text(text_tokens)
+
+# Build an index of image embeddings
+image_paths = ["cat.jpg", "dog.png", "city.png"]
+image_embs = [embed_image(p) for p in image_paths]
+
+def search_images(query, k=2):
+    query_emb = embed_text(query)
+    scores = [torch.nn.functional.cosine_similarity(query_emb, emb)[0] 
+        for emb in image_embs]
+    topk = sorted(zip(scores, image_paths), key=lambda x: x[0], reverse=True)[:k]
+    return topk
+
+# Example usage: search for a picture of a city
+print(search_images("a skyline of a large European city"))
+\end{minted}
+\caption{An Example of How to Use CLIP to Find Relevant Images in Python}
+\label{lst:multimodalrag}
+\end{listing}
+
+The multimodal retrieval returns the filenames of the most similar images.  In a RAG setting the retrieved images could be fed through a vision encoder to extract captions or objects, which are then incorporated into the context for the language model.  Multimodal agents can thus ground their outputs in both textual and visual evidence.
+
+
+
+\section{Agentic RAG: Beyond Simple Retrieval}
+\label{sec:agentic_rag}
+
+While traditional RAG systems augment LLMs with external knowledge, they are often passive, relying on a static, pre-defined pipeline. A significant and recent advancement is the concept of \textit{Agentic RAG}, which integrates autonomous AI agents directly into the retrieval-augmented generation pipeline \citep{singh2025agentic}. This paradigm shift moves RAG from a mere tool to an active, intelligent, and agent-driven process. Agentic RAG systems are characterized by their ability to dynamically manage retrieval strategies, iteratively refine contextual understanding, and adapt workflows to meet complex task requirements.
+
+Agentic RAG represents a more sophisticated form of a retrieval loop, where the LLM agent itself is responsible for orchestrating the retrieval process. This differs from simpler RAG methods by embracing a continuous feedback loop that is fundamental to advanced agentic systems. Rather than a single-shot query transformation, the agent can actively refine its queries based on intermediate results and ongoing interaction. This approach addresses the limitations of conventional RAG systems, which are often constrained by static workflows and lack the adaptability required for multistep reasoning and complex task management \citep{singh2025agentic}.
+
+\subsection{Key Components of Agentic RAG}
+
+Agentic RAG frameworks typically incorporate several key components that enable their dynamic behavior:
+
+\begin{itemize}
+    \item Dynamic Query Generation: The agent formulates queries based on its current understanding of the task and the retrieved context, allowing for more precise and effective searches. This can include query expansion, decomposition, or rewriting in response to initial retrieval failures.
+    \item Iterative Refinement: The agent evaluates the quality of the retrieved information and, if necessary, initiates a new retrieval cycle with a refined query. This iterative process ensures that the final response is grounded in the most relevant and accurate information.
+    \item Autonomous Tool Use: The agent can select and use a variety of tools, including different retrieval models (e.g., dense vs. sparse), ranking algorithms, and external APIs, to optimize its retrieval strategy. See Chapter \ref{sec:tools} for additional information on how an agent can use tools.
+    \item Self-Correction and Reflection: The agent can assess its own output for accuracy and completeness. If it detects a hallucination or an unsupported claim, it can trigger a new retrieval and reasoning process to correct the error.
+\end{itemize}
+%
+The rise of Agentic RAG indicates a  shift in the role of RAG in LLM systems. Retrieval shifts from a passive data lookup to an active, intelligent capability that is integral to the agent's cognitive functions, allowing for more sophisticated, adaptive interactions with external knowledge sources. This shift is crucial for developing robust and reliable LLM agents capable of handling complex, real-world tasks.
+
+
+
+\subsection{Real-Time and Streaming RAG}
+
+While traditional RAG systems are effective for static data, they are often not designed for applications that require continuous, real-time information. This section looks into the architectural considerations and challenges of RAG systems that operate on continuously updating, high-throughput data streams. Examples of such streams are found in news feeds, social media, or financial markets. For streaming data, simply querying an updated static index no longer suffices. Retrieval now involves dynamic index management and continuous knowledge assimilation.
+
+In traditional RAG systems, designed for static data,  preprocessing is slow, and unsuitable for real-time analysis \citep{zhu2025staticdynamicstreamingrag,sankaradas2025streamingragrealtimecontextualretrieval}. %This highlights a critical engineering and algorithmic challenge: 
+How should we maintain data freshness and semantic coverage under memory budgets and high data ingestion rates? Methods such as \emph{StreamingRAG}~\citep{sankaradas2025streamingragrealtimecontextualretrieval} try to overcome these issues with knowledge graphs that evolve dynamically in real-time.
+
+LLM agents for dynamic domains such as medicine, logistics and finance, %, particularly for applications like a Trading Assistant, 
+must have access to real-time, continuously updated information. Static RAG would yield  obsolete or inaccurate information in such fast-changing environments. In many agentic applications real-time RAG is necessary for advanced, timely, and reliable information.
+%, directly linking this technical advancement to the broader utility and impact of Agentic LLMs.
+
+
+\section{Evaluation}\label{sec:r_evaluation}
+Evaluating a retrieval‑augmented system is more difficult than evaluating a stand‑alone language model because both the retriever and the generator contribute to the final answer.  Good evaluation should separate these components and also judge their joint behavior.
+
+\paragraph{Retrieval metrics}  For a given query, we compare the retrieved passages to a set of gold documents.  Standard metrics include:
+\begin{enumerate}
+    \item recall@k (Eq. \ref{eq:recallk}) and precision@k (Eq. \ref{eq:precisionk}), the fraction of relevant documents retrieved among the top $k$ 
+    \item mean reciprocal rank (Eq. \ref{eq:MRR})
+    and mean average precision, which capture ranking quality
+    \item normalized discounted cumulative gain (NDCG) (Eq. \ref{eq:nDCG}), which weights higher ranks more heavily
+\end{enumerate}
+BEIR presents a heterogeneous benchmark of 18 datasets covering tasks like question answering, fact checking and entity retrieval; their experiments show that late‑interaction and re‑ranking models improve zero‑shot performance but at increased cost \citep{thakur2021beir}.  
+
+KILT evaluates knowledge‑intensive tasks under a unified Wikipedia snapshot and measures both task performance and provenance, encouraging models to cite the passages they used \citep{petroni2021kilt}.
+
+
+\begin{equation}
+\mathrm{Recall@}k = \frac{| \{ \text{relevant documents} \} \cap \{ \text{top-}k \text{ retrieved} \} |}{| \{ \text{relevant documents} \} |}
+\label{eq:recallk}
+\end{equation}
+
+%\paragraph{Precision@k}
+\begin{equation}
+\mathrm{Precision@}k = \frac{| \{ \text{relevant documents} \} \cap \{ \text{top-}k \text{ retrieved} \} |}{k}
+\label{eq:precisionk}
+\end{equation}
+
+%\paragraph{Mean Reciprocal Rank (MRR)}
+\begin{equation}
+\mathrm{MRR} = \frac{1}{|Q|} \sum_{i=1}^{|Q|} \frac{1}{\mathrm{rank}_i}
+\label{eq:MRR}
+\end{equation}
+where $\mathrm{rank}_i$ is the position of the first relevant document for query $i$.
+
+%\paragraph{Normalized Discounted Cumulative Gain (nDCG@k)}
+\begin{equation}
+\mathrm{nDCG@}k = \frac{\mathrm{DCG@}k}{\mathrm{IDCG@}k}
+\label{eq:nDCG}
+\end{equation}
+with
+\[
+\mathrm{DCG@}k = \sum_{i=1}^k \frac{2^{\mathrm{rel}_i} - 1}{\log_2(i+1)}
+\]
+and $\mathrm{rel}_i$ the graded relevance of the document at rank $i$.
+
+
+\paragraph{Generation metrics}  Once context is assembled, we must assess the quality of the generated answer.  Automatic metrics such as BLEU, ROUGE and BERTScore are of limited use because there is often no single ground‑truth answer.  More appropriate are \emph{faithfulness} and \emph{helpfulness}.  Faithfulness is often measured via entailment models. It works as follows for generated output $y$  and retrieved context $x$ (Eq.~\ref{eq:faithfulness}): check whether every claim is supported by the cited passages, for example via natural language inference models or quote checking.  
+\begin{equation}
+    \mathrm{Faithfulness} = \frac{\text{\# outputs entailed by context}}{\text{\# total outputs}}
+    \label{eq:faithfulness}
+\end{equation}
+Helpfulness (or utility) indicates whether the answer satisfies the user’s information need. To measure this, often human evaluation or specialized LLM‑based evaluators are needed.  In interactive settings latency and cost are also important.
+
+Helpfulness is based on human or model scoring:
+\begin{equation}
+\mathrm{Helpfulness} = \frac{\sum_{i=1}^N \text{score}(y_i, \text{query}_i)}{N}
+\label{eq:helpfullness}
+\end{equation}
+where $\text{score}$ is a Likert-scale or pairwise preference judgment.
+
+
+\paragraph{Joint evaluation and new metrics}  A key challenge is to evaluate  retrieval and generation separately.  For example, a system may retrieve irrelevant documents but still guess the right answer, or retrieve perfect evidence but fail to use it.  Recent work therefore proposes unified evaluation frameworks.  The Auepora process %described in RAG evaluation surveys 
+recommends reporting separate retrieval and generation scores and then to combine them into a holistic measure \citep{yu2024rag_eval}.  RAGAS and similar toolkits provide automated pipelines that compute context recall, answer correctness, and citation accuracy using small models.  When we evaluate adaptive methods (Section \ref{sec:adaptive}), we also need to measure the trigger decisions: how often does the model retrieve when it should, and how often does it skip retrieval unnecessarily?
+
+\paragraph{Attribution and freshness}  In many applications the model must cite its sources and avoid outdated information.  Claims can be aligned with evidence by attribution tests. Such tests use natural language inference and ensure URL–answer consistency.  Freshness metrics measure whether the answer reflects the most recent valid sources. This metric can also  quantify version drift.  
+
+Attribution and freshness are especially important for time‑sensitive domains like finance or medicine.
+
+A good system design is based on careful evaluation. When we find high retrieval recall but low faithfulness, then better re‑ranking is needed. Similarly, high faithfulness but poor helpfulness may indicate insufficient context coverage.  To support error analysis and auditing, evaluations should be accompanied by transparent logging of queries, retrieved passages and model outputs.
+
+
+
+
+
+
+
+\section{Concluding Remarks}
+
+Retrieval is an essential element of any agentic LLM system that needs to provide up-to-date information.   Large language models are static snapshots of knowledge; RAG helps them stay up to date, transparent and grounded.  Effective RAG requires careful engineering across indexing, query planning, retrieval, re‑ranking, context assembly and grounded generation, along with adaptive techniques that let the model decide when and how to search.  We have also seen how retrieval can be extended beyond plain text to graphs, code and multimodal assets. For building trustworthy systems, rigorous evaluation is essential.
+
+\paragraph{Operational considerations}  In production systems the retriever is a living service, not a one‑off script, and it should be maintained carefully.  Crawlers, webhooks and document pipelines should continuously ingest new data. Be careful to track versions and deprecations, and maintain per‑entity timelines to prefer recent facts.  Your system should apply access control lists at retrieval time and redact personally identifiable information during indexing.  Latency and cost matter: cache embeddings and top-$k$ results, reuse retrieval across conversational turns, compress context with extractive summarization, tune $k$ and chunk sizes per domain, and re‑rank only the top candidates.
+
+\paragraph{Practical suggestions}  %A few heuristics go a long way.  
+When you create a RAG system, start with a hybrid approach: combine a strong dense retriever with BM25 or SPLADE and re-rank the top hundred hits with a cross‑encoder before sending six to twelve passages to the LLM.  Be careful to chunk your corpus thoughtfully, for example using 300–500 token windows with 10–15\,\% overlap and preserved headings and tables, also attach timestamps or other metadata.  For query writing, craft your queries carefully. Rewrite complex questions, decompose multi‑hop queries, expand entity aliases and enforce domain filters.  For transparency, always require citations. If, however, the evidence is weak, ask follow‑up questions, or else abstain.  
+
+Finally, use  evidence-based system design, measure what you build. You should  track retrieval recall, groundedness, timeliness and cost. A further suggestion is to experiment with re-rankers. For debugging, you should log system traces. 
+
+%These suggestions serve as a starting point. Successful systems iterate on them continuously.
+
+
+\begin{tcolorbox}[
+    colback=blue!10!white,
+    colframe=blue!85!black,
+    title={\faRocket\quad Try it yourself!},
+    fonttitle=\bfseries,
+    coltitle=white,
+    boxrule=1pt,
+    arc=4pt,
+    left=5pt,
+    right=5pt,
+    top=5pt,
+    bottom=5pt,
+    enhanced
+]
+Want to experiment with Retrieval-Augmented Generation?  
+Open our:\\ 
+\href{https://colab.research.google.com/github/Agentic-LLMs/Agentic-AI-tutorials/blob/main/rag_tutorial.ipynb}{\faCode\quad \textbf{RAG tutorial} in Google Colab}
+\end{tcolorbox}
+
+\paragraph{Integration into agentic AI}  Retrieval is %not a one‑shot prelude to generation but 
+an integral element of agentic LLMs, it is used in  planning, self-reflection, and while acting in the real world (see Chapter~\ref{sec:assist}). Agentic pipelines can call the retriever dynamically based on the model’s confidence or plan, as in Self‑RAG and Graph Toolformer.  They can query different data sources such as text, graphs, code and images, and leverage the strengths of each.  The line between the {\em model} and its {\em memory} therefore blurs: RAG becomes part of the agent’s cognitive loop.
+
+\paragraph{Further Reading}  For in‑depth exploration, consult the surveys on RAG, evaluation and graph‑based methods \citep{gao2023rag_survey,huang2024rag_survey,yu2024rag_eval,sharma2025rag_survey,peng2024graphrag_survey}.  Foundational works include REALM, DPR and the original RAG formulation \citep{guu2020realm,karpukhin2020dense,lewis2020retrieval}.  The GraphRAG, evaluation and agentic RAG communities are evolving rapidly; following their latest papers and benchmarks is the best way to stay current.
+
+
+\bibliographystyle{plainnat}
+\bibliography{agenticbook,refs,case,synthetic}

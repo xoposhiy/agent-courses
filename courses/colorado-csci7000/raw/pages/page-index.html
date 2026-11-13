@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <title> CSCI 7000-09 Fall 2026: Building AI Agents</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <!-- Page Title -->
+        <h1> CSCI 7000-09 Fall 2026: Building AI Agents</h1>
+        <!-- End Page Title -->
+        <!-- Nav bar -->
+        <div>
+            <nav class="navbar navbar-default navbar-static">
+                <div class="container">
+                    <ul class="nav navbar-nav">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./syllabus.html">Syllabus</a></li>
+                        <li><a href="./researchProject.html">Research Project</a></li>
+                        <li><a href="./paperCritiques.html">Paper Critiques</a></li>
+                        <li><a href="./paperPresentation.html">Paper Presentation</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- End Nav bar --> 
+        
+    
+          
+      <h3>TIME AND LOCATION</h3>
+        <div>   Welcome to the webpage of CSCI 7000-09 for Fall'26 Semester at CU Boulder. <br />
+                Mon and Wed, 5:05-6:20 PM<br />
+                <p>Meets Remotely on Zoom:  <a href="https://cuboulder.zoom.us/j/99193569574" rel='nofollow'>https://cuboulder.zoom.us/j/99193569574</a> (you need to authenticate with your colorado.edu credentials)
+                <p style="color: red;">Three times per semester (Sept 9th in ECCS 1B14, mid semester, and last week of the semester), this class meets in person on campus.</p> 
+              
+            
+        </div>
+    
+    <h3>INSTRUCTOR</h3>
+    <div>
+        <p>
+        Prof. <a href="http://danny.cs.colorado.edu">Danny Dig</a> (<a href="mailto:danny.dig@coloradoedu">danny.dig@colorado.edu</a>)
+        <br />Office: On Zoom
+        <br />Phone: (303) 492-1293
+        <br />Office Hours: right after class, additional slots offered each week to accomodate various schedules. 
+        </p>
+    </div>
+    
+    <h3>Prerequisites</h3>
+    <div>
+            <p>
+               Students should have basic knowledge of Computer Science undergrad classes, including software engineering, programming languages, systems, ML/AI as demonstrated by undergrad courses at CU. This is <b> NOT </b> an introductory grad course to Software Engineering, for those students we recommend other grad courses such as Foundations of Software Engineering (CSCI 5828). This course assumes you are a competent software engineer already -- we are looking into how you can augment your current skills to include GenAI supported software development.  
+               If you are not sure whether you can attend this course, please consult the instructor (email: danny.dig@colorado.edu)
+            </p>
+    </div>
+
+
+    <h3>ABOUT THE COURSE</h3>
+    <div>
+        <p>The purpose of this research course is to expose students to seminal topics and recent
+        trends in the field of GenAI-powered Software Agents.   
+
+
+<p>
+This graduate-level course explores the rapidly emerging paradigm of
+building software systems from agentic components -— autonomous, reasoning,
+and goal-directed software entities that can perceive context,
+collaborate, and take initiative. The course has two central goals: (i)
+to critically read and discuss state-of-the-art research papers on
+software agents, multi-agent collaboration, and agentic AI in software
+engineering, and (ii) to gain practical experience designing,
+implementing, and evaluating an agentic system. 
+
+<p>
+In this highly interactive, seminar-style class, students will engage in
+instructor-guided discussions, student-led paper presentations, and
+hands-on labs exploring current agent frameworks and architectures. The
+course will culminate in a team-based term project—either
+research-oriented or prototype-driven—that demonstrates creativity,
+technical rigor, and a deep understanding of how agentic components can
+transform modern software systems. 
+</p>
+
+<p> Our exploration consists of in-class discussions of the cutting-edge research literature, interactions with industry thought leaders, and team projects that encourage risk taking.
+</p>
+       
+        <p>The course offers an opportunity for students to pursue research-oriented or novel industrial
+        term projects in small teams (3-4 students). Students may pursue any project of
+        their choosing that explores building software systems powered by Agentic components. </p>
+        <p>The course offers several opportunities to learn from the movers and shakers in Agentic AI from industry and academic research labs. 
+    <h3>COURSE OBJECTIVES</h3>
+        <ul><li>expand student's knowledge more broadly about Software Agents research & practice through reading research papers and industry surveys
+        </li><li>develop critical thinking abilities by being able to assess the quality of published research and pose new research questions
+        </li><li>practice giving scientific presentations and teaching others
+        </li><li>engage in active learning activities in class, such as student-guided discussions on research and applications of agentic AI
+        </li><li>practice developing a research or novel-industrial software development project through all its stages: formulating a research problem, posing research questions, gathering related work, designing a solution, evaluating the solution empirically, writing a research paper
+        </li><li>practice engaging in dialogue with thought leaders in agentic AI.
+        </li><li>have fun learning 
+        </li></ul>
+        <p></p> View the full <strong><a href='./syllabus.html'>Course Syllabus</a></strong> page for grading, policies, etc. </p>
+    </div>
+    <h3>SCHEDULE</h3>
+    This is a tentative schedule to give you an idea of the topics that we study in the class. Some of the assigned papers are likely to change based on the projects that students work on, once we finalize the list of course projects.
+    <div>
+        <table class="table table-hover" >
+        <tr>
+            <th class="col-md-1"><strong>Date</strong></th>
+            <th class="col-md-2"><strong>Presenter</strong></th>
+            <th class="col-md-9"><strong>Readings</strong></th>
+        </tr>
+        <tr>
+            <td> Mon, 08/24</td>
+            <td> Danny Dig </td>
+            <td> 
+                <ul>
+                <li>Course Introduction and discussing your expectations. <a href="./pdfs/W1L1.pdf">Slides presented in class</a></li>
+                <li>Read this excellent resource on how to <a class='urllink' href='http://cseweb.ucsd.edu/~wgg/CSE210/howtoread.html' rel='nofollow'>Read an Engineering Research paper</a> (by William Griswold). </li>
+                <li>Sign up on <a class='urllink' href='https://piazza.com/colorado/fall2026/csci7000009' rel='nofollow'>Piazza</a>.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td> Wed, 08/26</td>
+            <td> Danny Dig </td>
+            <td> 
+                <ul>
+                <!--
+                <li> Read two papers: (1) <a href="https://link.springer.com/article/10.1007/s11704-024-40231-1?fromPaywallRec=true">A survey on large language model based autonomous agents</a> by Lei Wang et al., Springer:Frontiers of Computer Science 2024</li>
+                <li> Read: (2) <a href="https://arxiv.org/pdf/2409.02977">Large Language Model-Based Agents for
+Software Engineering: A Survey</a> by Junwei Liu et al., ACM TOSEM 2025 </li>
+                <li> Afterwards, write a <a href="./paperCritiques.html">paper critique</a> for each paper. After you write the paper critique, please submit it <a href="https://canvas.colorado.edu/courses/138151/assignments/2849619">here on Canvas</a> (due by Wed, Aug 26 at 12pm).</li>
+                -->
+                <li> Building Trustworthy Agentic AI: Systems, Research, and a Vision for the Future </li>
+                <li> Read course <a href="./syllabus.html">syllabus</a> (and other info on our class webpage). </li>
+                
+                </ul>
+            </td>
+        </tr>
+        
+         <tr>
+            <td> Mon, 08/31</td>
+            <td> Danny Dig </td>
+            <td> 
+                <ul>
+                <li> Read two papers: (1) <a href="https://link.springer.com/article/10.1007/s11704-024-40231-1?fromPaywallRec=true">A survey on large language model based autonomous agents</a> by Lei Wang et al., Springer:Frontiers of Computer Science 2024</li>
+                <li> Read: (2) <a href="https://arxiv.org/pdf/2409.02977">Large Language Model-Based Agents for
+Software Engineering: A Survey</a> by Junwei Liu et al., ACM TOSEM 2025 </li>
+                
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td> Wed, 09/02</td>
+            <td> Danny Dig </td>
+            <td> 
+                <ul> 
+                <li> <a href="https://arxiv.org/pdf/2509.06216">Agentic Software Engineering: Foundational Pillars and a Research Roadmap</a> by Ahmed Hassan et al., ACM TOSEM</li>               
+                <li>Read about the <a href="./researchProject.html">research project</a> (and other info on our class webpage). </li>
+                
+                </ul>
+            </td>
+        </tr>
+        
+         <tr>
+            <td>Mon, 09/07 </td>
+                <td> Labor Day (no class) </td>
+                <td> 
+                <ul>
+                </ul>
+                </td>
+        </tr>
+        
+        <tr>
+            <td> Wed, 09/09</td>
+            <td> All Students </td>
+            <td> 
+                <ul> 
+                <li> <a href="./projectProposal.html">Pitch Project Ideas</a></li>               
+                 <li> <p style="color: red;"> Notice this class meets in person: ECCS 1B14</p></li>
+                </ul>
+            </td>
+        </tr>
+        
+         <tr>
+            <td> Mon, 09/14</td>
+            <td> All Students </td>
+            <td> 
+                <ul> 
+                <li>  Project Bazaar (form teams and then post your team members on Piazza). </li>               
+                 <li> <p style="color: red;"> Notice this class meets in person: ECOT 831 ECCS Conference Room (and regular Zoom link)</p></li>
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td> Wed, 09/16</td>
+            <td> Danny & All Students </td>
+            <td> 
+                <ul> 
+                <li>  Project Clinic (each team has a meeting with Prof Dig) </li>               
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td> Mon, 09/21</td>
+            <td> Joe, Moses </td>
+            <td> 
+                <ul> 
+                <li> <a href="https://arxiv.org/abs/2210.03629">ReAct: Synergizing Reasoning and Acting in Language Models</a> by Shunyu et al., ICLR'23. </li>               
+                 <li> <a href="https://arxiv.org/abs/2303.11366">Reflexion: Language Agents with Verbal Reinforcement Learning</a> by Shinn et al., NIPS'23 </li>
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td> Wed, 09/23</td>
+            <td> All Students </td>
+            <td> 
+                <ul> 
+                <li>  <a href="./milestone1.html">Project Milestone 1</a></li>               
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td> Mon, 09/28</td>
+            <td> Oliver, Rachel </td>
+            <td> 
+                <ul> 
+                <li> <a href="https://arxiv.org/pdf/2302.04761">Toolformer: Language Models Can Teach Themselves to Use Tools</a> by Schick et al., NIPS'23</li>         
+                 <li> <a href="https://arxiv.org/pdf/2305.15334">Gorilla: Large Language Model Connected with Massive APIs</a> by Patil et al., NIPS'24</li> 
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Wed, 09/30</td>
+            <td>Abhiram, Students</td>
+            <td> <ul>
+            <li> LangGraph tutorial/ walk-through. 
+            <li> <a href="https://arxiv.org/pdf/2407.16741">OpenHands: An Open Platform for AI Software Developers as Generalist Agents</a> by Wang et al., ICLR'25. Then write a Tool Experience report (option #2 on <a href="./paperCritiques.html">this page</a>).
+            </td>
+        </tr>
+        
+          <tr>
+            <td> Mon, 10/05</td>
+            <td> Swapnil, Jack </td>
+            <td> 
+                <ul> 
+                 <li> <a href="https://arxiv.org/pdf/2405.15793">SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering</a> by Yang et al., NeurIPS'24.</li> 
+                 <li> <a href="https://arxiv.org/pdf/2404.05427">AutoCodeRover: Autonomous Program Improvement</a> by Zhang et al., ISSTA'24.</li> 
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td> Wed, 10/07</td>
+            <td> Fahsai, Sushmey </td>
+            <td> 
+                <ul> 
+                <li> <a href="https://arxiv.org/pdf/2308.08155">AutoGen: Enabling Next-Gen LLM
+Applications via Multi-Agent Conversation</a> by Wu et al. </li> 
+             <li> <a href="https://arxiv.org/pdf/2308.00352">METAGPT: Meta Programming for a Multi-Agent Collaborative Framework</a> by Hong et al., ICLR'24 </li> 
+                </ul>
+            </td>
+        </tr>
+        
+          <tr>
+            <td> Mon, 10/12</td>
+            <td> Rosby, Harsh </td>
+            <td> 
+                <ul> 
+                <li> <a href="https://openreview.net/pdf?id=zj7YuTE4t8">Improving Factuality and Reasoning in Language Models
+through Multiagent Debate</a> by Du et al., ICML'24. </li> 
+             <li> <a href="https://dl.acm.org/doi/epdf/10.1145/3715754">Demystifying LLM-Based Software Engineering Agents</a> by Xia et el., FSE'25</li> 
+            </td>
+        </tr>
+        
+        <tr>
+            <td> Wed, 10/14</td>
+            <td> All Students </td>
+            <td> 
+                <ul> 
+                <li>  <a href="./milestone2.html">Project Milestone 2</a></li>               
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td> Mon, 10/19</td>
+            <td> Joe, Rachel </td>
+            <td> 
+                <ul> 
+                <li> <a href="https://iopscience.iop.org/article/10.1088/2632-2153/ae4b07/pdf">MDCrow: automating molecular dynamics
+workflows with large language models</a> by Campbell et al,  ML: Science and Technology'26 </li> 
+             <li> Paper on Agentic Refactoring (PDF file available in Canvas)</li> 
+            </td>
+        </tr>
+        
+        
+        <tr>
+            <td> Wed, 10/21</td>
+            <td> Moses, Oliver </td>
+            <td> 
+                <ul> 
+                <li> <a href="https://dl.acm.org/doi/epdf/10.1145/3832783.3834393">What Breaks When LLMs Code? Characterizing Operational
+Safety Failures of Agentic Code Assistants</a> by Hasan et al., ASE'26 </li> 
+                <li> <a href="https://dl.acm.org/doi/10.1145/3832783.3834400">From Plan to Action: How Well Do Agents Follow the Plan?</a> by Liu et al., ASE'26 </li> 
+            </td>
+        </tr>
+        
+        <tr>
+            <td> Mon, 10/26</td>
+            <td> Sushmey, Fahsai </td>
+            <td> 
+                <ul> 
+                <li> <a href="https://openreview.net/pdf?id=PPculVvgEd">Beyond Tool Selection:
+Diagnosing Downstream Failures in MCP Tool-Using LLM Agents</a> by Bae et al., ICML'26 </li> 
+                <li> <a href="https://arxiv.org/abs/2603.22327">Evaluating AI-based Scientific Knowledge Synthesis with Epidemiological Systematic Reviews</a> by Padarha et al., NeurIPS'26 </li> 
+            </td>
+        </tr>
+        
+        
+        <tr>
+            <td> Wed, 10/28</td>
+            <td> Swapnil, Jack </td>
+            <td> 
+                <ul> 
+                <li> <a href="https://arxiv.org/pdf/2610.14224v1">Harness2: Recursive Agent Harnessing for
+an Open World</a> by Xu et al., Google'26.</li> 
+                <li> <a href="https://openreview.net/pdf?id=t32Hgnk7ou">Position: Coding Benchmarks Are Misaligned with Agentic
+Software Engineering</a> by Gorinova et al., 2026 AND <a href="https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/">Why SWE-bench Verified no longer measures frontier coding capabilities</a> By OpenAI'26.</li> 
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td> Mon, 11/02</td>
+            <td> Rosby, Harsh </td>
+            <td> 
+                <ul> 
+                <li> <a href="https://arxiv.org/abs/2512.18552">Toward Training Superintelligent Software Agents through Self-Play SWE-RL</a> by Wei et al., ICML'26</li> 
+                <li> <a href="https://arxiv.org/abs/2605.29442">How Coding Agents Fail Their Users: A Large-Scale Analysis of Developer-Agent Misalignment in 20,574 Real-World Sessions</a> by Tang et al., 2026</li> 
+            </td>
+        </tr>
+        
+        <tr>
+            <td> Wed, 11/04</td>
+            <td> Industry Executives</td>
+            <td> 
+                <ul> 
+                <li> <a href="https://trustworthyresponsible.ai">Attend Workshop on Trustworthy & Responsible AI</a></li> 
+                <li> <p style="color: red;"> Notice this session meets in person: SEEC building East Campus</p></li>
+            </td>
+        </tr>
+        
+        <tr>
+            <td> Mon, 11/09</td>
+            <td> All Students </td>
+            <td> 
+                <ul> 
+                <li>  <a href="./milestone3.html">Project Milestone 3</a></li>               
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td> Mon, 11/16</td>
+            <td> AWS Team </td>
+            <td> 
+                <ul> 
+                <li> Building Agents with Kiro IDE (Part 1)</li> 
+            </td>
+        </tr>
+        
+        <tr>
+            <td> Wed, 11/18</td>
+            <td> AWS Team </td>
+            <td> 
+                <ul> 
+                <li> Building Agents with Kiro IDE (Part 2)</li> 
+            </td>
+        </tr>
+        
+         <tr>
+            <td>Mon, 11/23</td>
+            <td></td>
+            <td> <ul>
+            <li> No class -- Fall Break</a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Wed, 11/25</td>
+            <td></td>
+            <td> <ul>
+            <li> No class -- Fall Break</a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td> Mon, 11/30</td>
+            <td> Danny Dig </td>
+            <td> 
+                <ul> 
+                <li> Class summary and insights overview</li> 
+                <li> <p style="color: red;"> Notice this class meets in person: ECCS 1B14</p></li>
+            </td>
+        </tr>
+        
+        <tr>
+            <td> Wed, 12/02</td>
+            <td> All Students </td>
+            <td> 
+                <ul> 
+                <li>  <a href="./milestone4.html">Project Milestone 4</a></li>               
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Fri, 12/04</td>
+            <td> Danny Dig</td>
+            <td> <ul>
+            <li> Project Clinic.
+            </td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td>Mon, 12/07</td>
+            <td>No final exam.</td>
+            <td> <ul>
+            <li> <a href='./finalProject.html' rel='nofollow'>Submit final project</a>
+            </td>
+        </tr>
+       
+        </table>
+    </div>
+    
+    
+    </div>
+</body>
+</html>

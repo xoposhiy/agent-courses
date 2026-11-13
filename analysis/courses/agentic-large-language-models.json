@@ -1,0 +1,1912 @@
+{
+  "source_id": "agentic-large-language-models",
+  "summary": "A broad book that connects language-model foundations and training to reasoning, tool use, retrieval, applications, multi-agent behavior, and cognitive and mechanistic analysis. It is reported separately from the seven courses.",
+  "limitations": [
+    "All 23 archived chapter conversions were screened by their section structure.",
+    "The book is one source, not 23 courses. Full HTML and PDF copies are not counted as separate sources.",
+    "Book-only topics have zero course frequency until supported by a course. An asterisk on an advanced chapter is not treated as missing content; those chapters contain full text.",
+    "Named applications and methods are grouped at a stated scope. The bibliography does not create topic coverage by itself."
+  ],
+  "new_concept_ids": [
+    "scaling-laws",
+    "speculative-decoding",
+    "vla",
+    "world-models",
+    "model-based-rl",
+    "meta-learning",
+    "bdi",
+    "game-agents",
+    "query-rewriting",
+    "travel-agents",
+    "trading-agents",
+    "social-behavior",
+    "theory-of-mind",
+    "moral-behavior",
+    "behavioral-experiments",
+    "social-simulation",
+    "emergent-norms",
+    "model-collapse",
+    "recursive-agents",
+    "interpretability",
+    "activation-patching",
+    "sparse-autoencoders",
+    "circuits",
+    "metacognition",
+    "cognitive-perspectives",
+    "consciousness"
+  ],
+  "concepts": [
+    {
+      "concept_id": "agent-architecture",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-01-introduction.md",
+          "line": 36,
+          "page": null,
+          "excerpt": "#### 1.2 Concepts and Definitions",
+          "material_id": "chapters/chapter-01-introduction",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch1",
+          "sha256": "f7bd7f673836f2b9a34a0159bdf2a8c0cb47c8bd6291e668c0df96749a71d508"
+        }
+      ]
+    },
+    {
+      "concept_id": "harness",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-01-introduction.md",
+          "line": 64,
+          "page": null,
+          "excerpt": "##### 1.2.2 Agentic Harness",
+          "material_id": "chapters/chapter-01-introduction",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch1",
+          "sha256": "f7bd7f673836f2b9a34a0159bdf2a8c0cb47c8bd6291e668c0df96749a71d508"
+        }
+      ]
+    },
+    {
+      "concept_id": "llm-foundations",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-02-foundations-of-language-modeling-with-llms.md",
+          "line": 196,
+          "page": null,
+          "excerpt": "To operationalize the distributional hypothesis for computational purposes, we will rely on linear algebra and turn to a framework known as *vector semantics*. We represent words as points in a high-dimensional continuous space. Words with similar meanings are mapped to points close to each other in this space, and we can measure semantic similarity using geometric distance measures such as cosine similarity (see Figure [2.3](#Ch2.F3 \"Figure 2.3 ‣ 2.1.3 Distributional Representations ‣ 2.1 Processing Natural Language ‣ Chapter 2 Foundations of Language Modeling with LLMs ‣ Part I Language Modeling ‣ Agentic Large Language Models\") and Section [2.3.1](#Ch2.S3.SS1 \"2.3.1 Embeddings ‣ 2.3 Modeling Language ‣ Chapter 2 Foundations of Language Modeling with LLMs ‣ Part I Language Modeling ‣ Agentic Large Language Models\")). Furthermore, we can make modifications to word meaning by doing vector arithmetic.",
+          "material_id": "chapters/chapter-02-foundations-of-language-modeling-with-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch2",
+          "sha256": "22de1d3d67c4570d8c9653ffd647e3d381cae4649019b6fd692726dd0d437310"
+        }
+      ]
+    },
+    {
+      "concept_id": "tokenization",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-02-foundations-of-language-modeling-with-llms.md",
+          "line": 19,
+          "page": null,
+          "excerpt": "- Describe the core concepts of *language modeling*, including tokenization and early word-representation methods, and explain what problem each was designed to solve.",
+          "material_id": "chapters/chapter-02-foundations-of-language-modeling-with-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch2",
+          "sha256": "22de1d3d67c4570d8c9653ffd647e3d381cae4649019b6fd692726dd0d437310"
+        }
+      ]
+    },
+    {
+      "concept_id": "transformer",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-02-foundations-of-language-modeling-with-llms.md",
+          "line": 454,
+          "page": null,
+          "excerpt": "After approximately 2010, the contemporary state-of-the-art shifted to neural networks and deep learning. Rather than using logic or discrete counts, neural methods represent linguistic units as dense, low-dimensional vectors in a continuous semantic space. Modern architectures, particularly transformers, employ attention mechanisms to model global context simultaneously across an entire sequence. This approach yields impressive generalization, high fluency in text generation, and cross-lingual capabilities. Nevertheless, these advantages come with significant trade-offs: neural models operate largely as black boxes, sacrificing the interpretability seen in symbolic methods, and they require large data sets and large computational resources.",
+          "material_id": "chapters/chapter-02-foundations-of-language-modeling-with-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch2",
+          "sha256": "22de1d3d67c4570d8c9653ffd647e3d381cae4649019b6fd692726dd0d437310"
+        }
+      ]
+    },
+    {
+      "concept_id": "gradient-training",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-02-foundations-of-language-modeling-with-llms.md",
+          "line": 537,
+          "page": null,
+          "excerpt": "Training RNNs is done using backpropagation through time (BPTT), where we unroll the temporal dependencies to backpropagate the gradient from time step $t$ to earlier ones: $t_{-1},t_{-2},\\dots$. However, because the gradients for updating the model at a timestep depend recursively on the previous timesteps, this step is sensitive. Because of the repeated matrix multiplications required by the chain rule, this leads to the problem of *vanishing or exploding gradients* [[Bengio et al., 1994](#biba.bib54), [Pascanu et al., 2013](#biba.bib55)]. Controlling the flow of information in RNNs is difficult. Information from early timesteps has relatively little impact on our gradients, compared to more recent information. In practice, learning salient signals with RNNs is often difficult.",
+          "material_id": "chapters/chapter-02-foundations-of-language-modeling-with-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch2",
+          "sha256": "22de1d3d67c4570d8c9653ffd647e3d381cae4649019b6fd692726dd0d437310"
+        }
+      ]
+    },
+    {
+      "concept_id": "model-training",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-03-the-large-language-model-training-pipeline.md",
+          "line": 12,
+          "page": null,
+          "excerpt": "### Chapter 3 The Large Language Model Training Pipeline",
+          "material_id": "chapters/chapter-03-the-large-language-model-training-pipeline",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch3",
+          "sha256": "af01e357d948e1e2f4f3b70f5bbae962ebef9f6f65ff36b5af1860c58d3c2eae"
+        }
+      ]
+    },
+    {
+      "concept_id": "sft",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-03-the-large-language-model-training-pipeline.md",
+          "line": 195,
+          "page": null,
+          "excerpt": "###### Supervised Finetuning (SFT)",
+          "material_id": "chapters/chapter-03-the-large-language-model-training-pipeline",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch3",
+          "sha256": "af01e357d948e1e2f4f3b70f5bbae962ebef9f6f65ff36b5af1860c58d3c2eae"
+        }
+      ]
+    },
+    {
+      "concept_id": "rlhf",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-03-the-large-language-model-training-pipeline.md",
+          "line": 236,
+          "page": null,
+          "excerpt": "Standard methods for preference tuning include reinforcement learning with human feedback (RLHF) [[Ouyang et al., 2022](#bibb.bib7)], which trains a reward model to approximate human values, and direct preference optimization (DPO) [[Rafailov et al., 2024](#bibb.bib28)], which optimizes the policy directly from preference data. A high-level overview of RLHF is shown in Figure [3.5](#Ch3.F5 \"Figure 3.5 ‣ 3.2.4 Preference Tuning ‣ 3.2 Training Pipeline ‣ Chapter 3 The Large Language Model Training Pipeline ‣ Part I Language Modeling ‣ Agentic Large Language Models\"). To address the bottleneck of human annotation, modern pipelines increasingly utilize reinforcement learning from AI feedback (RLAIF) [[Bai et al., 2022](#bibb.bib51)], where a stronger model generates the preference signals.",
+          "material_id": "chapters/chapter-03-the-large-language-model-training-pipeline",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch3",
+          "sha256": "af01e357d948e1e2f4f3b70f5bbae962ebef9f6f65ff36b5af1860c58d3c2eae"
+        }
+      ]
+    },
+    {
+      "concept_id": "dpo",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-03-the-large-language-model-training-pipeline.md",
+          "line": 236,
+          "page": null,
+          "excerpt": "Standard methods for preference tuning include reinforcement learning with human feedback (RLHF) [[Ouyang et al., 2022](#bibb.bib7)], which trains a reward model to approximate human values, and direct preference optimization (DPO) [[Rafailov et al., 2024](#bibb.bib28)], which optimizes the policy directly from preference data. A high-level overview of RLHF is shown in Figure [3.5](#Ch3.F5 \"Figure 3.5 ‣ 3.2.4 Preference Tuning ‣ 3.2 Training Pipeline ‣ Chapter 3 The Large Language Model Training Pipeline ‣ Part I Language Modeling ‣ Agentic Large Language Models\"). To address the bottleneck of human annotation, modern pipelines increasingly utilize reinforcement learning from AI feedback (RLAIF) [[Bai et al., 2022](#bibb.bib51)], where a stronger model generates the preference signals.",
+          "material_id": "chapters/chapter-03-the-large-language-model-training-pipeline",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch3",
+          "sha256": "af01e357d948e1e2f4f3b70f5bbae962ebef9f6f65ff36b5af1860c58d3c2eae"
+        }
+      ]
+    },
+    {
+      "concept_id": "data-curation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-03-the-large-language-model-training-pipeline.md",
+          "line": 93,
+          "page": null,
+          "excerpt": "##### 3.2.1 Acquire Data",
+          "material_id": "chapters/chapter-03-the-large-language-model-training-pipeline",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch3",
+          "sha256": "af01e357d948e1e2f4f3b70f5bbae962ebef9f6f65ff36b5af1860c58d3c2eae"
+        }
+      ]
+    },
+    {
+      "concept_id": "benchmark-design",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-03-the-large-language-model-training-pipeline.md",
+          "line": 416,
+          "page": null,
+          "excerpt": "###### Data Contamination",
+          "material_id": "chapters/chapter-03-the-large-language-model-training-pipeline",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch3",
+          "sha256": "af01e357d948e1e2f4f3b70f5bbae962ebef9f6f65ff36b5af1860c58d3c2eae"
+        }
+      ]
+    },
+    {
+      "concept_id": "scaling-laws",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+          "line": 27,
+          "page": null,
+          "excerpt": "#### 4.1 Scaling Laws: Compute, Data, Parameters",
+          "material_id": "chapters/chapter-04-scaling-laws-and-efficient-large-language-models",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch4",
+          "sha256": "9c75d4871c9283e0fd29aef04317b91dd4c1d74860d9ecf541d3ca06161cb387"
+        }
+      ]
+    },
+    {
+      "concept_id": "lora",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+          "line": 311,
+          "page": null,
+          "excerpt": "###### Parameter-Efficient Fine-Tuning (PEFT)",
+          "material_id": "chapters/chapter-04-scaling-laws-and-efficient-large-language-models",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch4",
+          "sha256": "9c75d4871c9283e0fd29aef04317b91dd4c1d74860d9ecf541d3ca06161cb387"
+        }
+      ]
+    },
+    {
+      "concept_id": "distillation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+          "line": 373,
+          "page": null,
+          "excerpt": "###### Knowledge Distillation",
+          "material_id": "chapters/chapter-04-scaling-laws-and-efficient-large-language-models",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch4",
+          "sha256": "9c75d4871c9283e0fd29aef04317b91dd4c1d74860d9ecf541d3ca06161cb387"
+        }
+      ]
+    },
+    {
+      "concept_id": "kv-cache",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+          "line": 351,
+          "page": null,
+          "excerpt": "*Grouped-Query Attention* (GQA) [[Ainslie et al., 2023](#bibc.bib47)] targets the memory bandwidth bottleneck of autoregressive decoding. In standard *multi-head attention* (MHA), every query head has its own key and value matrix, which we all need to use for computing attention scores. At the other extreme, *multi-query attention* (MQA) lets all query heads share a single key/value head, which shrinks the computation but can hurt expressive quality and training stability. GQA interpolates between these two: the query heads are divided into $g$ groups, and all heads within a group share one key/value head. With $g=1$ it is equivalent to MQA, and with $g$ equal to the number of heads it is equivalent to MHA, so $g$ trades quality against memory usage. Often, GQA is combined with the KV-caching optimizations discussed next in Section [4.2](#Ch4.S2 \"4.2 Small Language Models ‣ Chapter 4 Scaling Laws and Efficient Large Language Models ‣ Part I Language Modeling ‣ Agentic Large Language Models\"), and it is now the default attention variant in many open-weight models.",
+          "material_id": "chapters/chapter-04-scaling-laws-and-efficient-large-language-models",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch4",
+          "sha256": "9c75d4871c9283e0fd29aef04317b91dd4c1d74860d9ecf541d3ca06161cb387"
+        }
+      ]
+    },
+    {
+      "concept_id": "compression",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+          "line": 410,
+          "page": null,
+          "excerpt": "###### Quantization",
+          "material_id": "chapters/chapter-04-scaling-laws-and-efficient-large-language-models",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch4",
+          "sha256": "9c75d4871c9283e0fd29aef04317b91dd4c1d74860d9ecf541d3ca06161cb387"
+        }
+      ]
+    },
+    {
+      "concept_id": "speculative-decoding",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+          "line": 425,
+          "page": null,
+          "excerpt": "###### Speculative Decoding",
+          "material_id": "chapters/chapter-04-scaling-laws-and-efficient-large-language-models",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch4",
+          "sha256": "9c75d4871c9283e0fd29aef04317b91dd4c1d74860d9ecf541d3ca06161cb387"
+        }
+      ]
+    },
+    {
+      "concept_id": "serving",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+          "line": 383,
+          "page": null,
+          "excerpt": "###### 4.2.1.2 Reducing Inference Cost",
+          "material_id": "chapters/chapter-04-scaling-laws-and-efficient-large-language-models",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch4",
+          "sha256": "9c75d4871c9283e0fd29aef04317b91dd4c1d74860d9ecf541d3ca06161cb387"
+        }
+      ]
+    },
+    {
+      "concept_id": "synthetic-data",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+          "line": 455,
+          "page": null,
+          "excerpt": "###### 4.2.2.2 Synthetic Data Gathering",
+          "material_id": "chapters/chapter-04-scaling-laws-and-efficient-large-language-models",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch4",
+          "sha256": "9c75d4871c9283e0fd29aef04317b91dd4c1d74860d9ecf541d3ca06161cb387"
+        }
+      ]
+    },
+    {
+      "concept_id": "inference-scaling",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+          "line": 21,
+          "page": null,
+          "excerpt": "- Recognize the difference between *inference-time compute* and training-time compute.",
+          "material_id": "chapters/chapter-04-scaling-laws-and-efficient-large-language-models",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch4",
+          "sha256": "9c75d4871c9283e0fd29aef04317b91dd4c1d74860d9ecf541d3ca06161cb387"
+        }
+      ]
+    },
+    {
+      "concept_id": "cost-quality",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-04-scaling-laws-and-efficient-large-language-models.md",
+          "line": 383,
+          "page": null,
+          "excerpt": "###### 4.2.1.2 Reducing Inference Cost",
+          "material_id": "chapters/chapter-04-scaling-laws-and-efficient-large-language-models",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch4",
+          "sha256": "9c75d4871c9283e0fd29aef04317b91dd4c1d74860d9ecf541d3ca06161cb387"
+        }
+      ]
+    },
+    {
+      "concept_id": "deployment",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-05-case-study-1-building-llms-from-scratch.md",
+          "line": 271,
+          "page": null,
+          "excerpt": "##### 5.8.1 Part A: Inference and Deployment",
+          "material_id": "chapters/chapter-05-case-study-1-building-llms-from-scratch",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch5",
+          "sha256": "6ffa698d64f5e0ab7148197db8c57f8a24ed7eb6150187dd692bea377bb0cfa7"
+        }
+      ]
+    },
+    {
+      "concept_id": "observability",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-05-case-study-1-building-llms-from-scratch.md",
+          "line": 121,
+          "page": null,
+          "excerpt": "###### Logging",
+          "material_id": "chapters/chapter-05-case-study-1-building-llms-from-scratch",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch5",
+          "sha256": "6ffa698d64f5e0ab7148197db8c57f8a24ed7eb6150187dd692bea377bb0cfa7"
+        }
+      ]
+    },
+    {
+      "concept_id": "reasoning",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+          "line": 29,
+          "page": null,
+          "excerpt": "#### 6.1 In-Context Reasoning",
+          "material_id": "chapters/chapter-06-multi-step-reasoning-in-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch6",
+          "sha256": "2574e767ccef8a0c691bd288dcee94c6473873708c4e75d39801abd7d0385f25"
+        }
+      ]
+    },
+    {
+      "concept_id": "prompting",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+          "line": 104,
+          "page": null,
+          "excerpt": "###### Practical Considerations and Prompt Engineering",
+          "material_id": "chapters/chapter-06-multi-step-reasoning-in-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch6",
+          "sha256": "2574e767ccef8a0c691bd288dcee94c6473873708c4e75d39801abd7d0385f25"
+        }
+      ]
+    },
+    {
+      "concept_id": "few-shot",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+          "line": 46,
+          "page": null,
+          "excerpt": "These examples cause the decoder model to access relevant knowledge stored in the LLM. Because of this rich knowledge, in-context learning finds accurate results with few examples, which is why it is a so-called *few-shot* learning method. The few-shot learning is made possible by the large size of the model, containing rich and varied knowledge on many topics.",
+          "material_id": "chapters/chapter-06-multi-step-reasoning-in-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch6",
+          "sha256": "2574e767ccef8a0c691bd288dcee94c6473873708c4e75d39801abd7d0385f25"
+        }
+      ]
+    },
+    {
+      "concept_id": "cot",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+          "line": 169,
+          "page": null,
+          "excerpt": "##### 6.1.3 Chain of Thought Prompting",
+          "material_id": "chapters/chapter-06-multi-step-reasoning-in-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch6",
+          "sha256": "2574e767ccef8a0c691bd288dcee94c6473873708c4e75d39801abd7d0385f25"
+        }
+      ]
+    },
+    {
+      "concept_id": "reflection",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+          "line": 330,
+          "page": null,
+          "excerpt": "#### 6.2 Self-Reflection and State",
+          "material_id": "chapters/chapter-06-multi-step-reasoning-in-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch6",
+          "sha256": "2574e767ccef8a0c691bd288dcee94c6473873708c4e75d39801abd7d0385f25"
+        }
+      ]
+    },
+    {
+      "concept_id": "reflexion",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+          "line": 491,
+          "page": null,
+          "excerpt": "The field of self-reflection is young and new approaches are being developed regularly. We will present four such approaches: self refine, ReAct, reflexion, and buffer of thoughts. These approaches use the LLMs in different ways, using schemes inspired by reinforcement learning to let the LLMs improve themselves.",
+          "material_id": "chapters/chapter-06-multi-step-reasoning-in-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch6",
+          "sha256": "2574e767ccef8a0c691bd288dcee94c6473873708c4e75d39801abd7d0385f25"
+        }
+      ]
+    },
+    {
+      "concept_id": "react",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+          "line": 491,
+          "page": null,
+          "excerpt": "The field of self-reflection is young and new approaches are being developed regularly. We will present four such approaches: self refine, ReAct, reflexion, and buffer of thoughts. These approaches use the LLMs in different ways, using schemes inspired by reinforcement learning to let the LLMs improve themselves.",
+          "material_id": "chapters/chapter-06-multi-step-reasoning-in-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch6",
+          "sha256": "2574e767ccef8a0c691bd288dcee94c6473873708c4e75d39801abd7d0385f25"
+        }
+      ]
+    },
+    {
+      "concept_id": "verification",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+          "line": 276,
+          "page": null,
+          "excerpt": "###### 6.1.3.2 Code Generation for Validation",
+          "material_id": "chapters/chapter-06-multi-step-reasoning-in-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch6",
+          "sha256": "2574e767ccef8a0c691bd288dcee94c6473873708c4e75d39801abd7d0385f25"
+        }
+      ]
+    },
+    {
+      "concept_id": "prompt-optimization",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+          "line": 432,
+          "page": null,
+          "excerpt": "###### 6.2.4.1 Search-based Prompt Optimization",
+          "material_id": "chapters/chapter-06-multi-step-reasoning-in-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch6",
+          "sha256": "2574e767ccef8a0c691bd288dcee94c6473873708c4e75d39801abd7d0385f25"
+        }
+      ]
+    },
+    {
+      "concept_id": "state",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+          "line": 383,
+          "page": null,
+          "excerpt": "##### 6.2.3 LLMs and Stateful Problems",
+          "material_id": "chapters/chapter-06-multi-step-reasoning-in-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch6",
+          "sha256": "2574e767ccef8a0c691bd288dcee94c6473873708c4e75d39801abd7d0385f25"
+        }
+      ]
+    },
+    {
+      "concept_id": "context-engineering",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+          "line": 55,
+          "page": null,
+          "excerpt": "A consequence is that ICL has the disadvantage of forgetfulness: since model parameters remain unchanged, all learned information is lost between LLM calls. To share information between LLM calls, previous results must be added to the prompt of the next call, in the context window, as extra learning examples.",
+          "material_id": "chapters/chapter-06-multi-step-reasoning-in-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch6",
+          "sha256": "2574e767ccef8a0c691bd288dcee94c6473873708c4e75d39801abd7d0385f25"
+        }
+      ]
+    },
+    {
+      "concept_id": "long-context",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+          "line": 336,
+          "page": null,
+          "excerpt": "We will first discuss the question of state and memory. We will look at how state can be passed between separate invocations of LLMs, at long context windows, and at the question if LLMs are good at solving problems for which they have to manipulate state.",
+          "material_id": "chapters/chapter-06-multi-step-reasoning-in-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch6",
+          "sha256": "2574e767ccef8a0c691bd288dcee94c6473873708c4e75d39801abd7d0385f25"
+        }
+      ]
+    },
+    {
+      "concept_id": "grounding",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+          "line": 186,
+          "page": null,
+          "excerpt": "Grounded Generation: Ask the LLM to generate the answer using the provided context, with citations for each claim. If evidence is insufficient, the model should abstain or ask for clarification. Some systems, such as Self-RAG [[Asai et al., 2023](#bibk.bib19)], decide on the fly whether to retrieve more information. The focus is on answers that are both correct and well-supported.",
+          "material_id": "chapters/chapter-12-search-and-retrieval-in-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch12",
+          "sha256": "8de5c1c2cb0fc7b084cade5d311a0c5bc4da1b20a9390d9522e6f6d23ce778f0"
+        }
+      ]
+    },
+    {
+      "concept_id": "vlm",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-07-vision-action-and-world-models.md",
+          "line": 26,
+          "page": null,
+          "excerpt": "#### 7.1 Multi-modal Vision Language Models",
+          "material_id": "chapters/chapter-07-vision-action-and-world-models",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch7",
+          "sha256": "050b24e2101f3baafe21672838d91d08b7d1f76003568d24169ae839d1df0e85"
+        }
+      ]
+    },
+    {
+      "concept_id": "vla",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-07-vision-action-and-world-models.md",
+          "line": 203,
+          "page": null,
+          "excerpt": "#### 7.2 Decisions & Vision Language Action Models",
+          "material_id": "chapters/chapter-07-vision-action-and-world-models",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch7",
+          "sha256": "050b24e2101f3baafe21672838d91d08b7d1f76003568d24169ae839d1df0e85"
+        }
+      ]
+    },
+    {
+      "concept_id": "world-models",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-07-vision-action-and-world-models.md",
+          "line": 377,
+          "page": null,
+          "excerpt": "#### 7.3 World Models, Physics, and Planning",
+          "material_id": "chapters/chapter-07-vision-action-and-world-models",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch7",
+          "sha256": "050b24e2101f3baafe21672838d91d08b7d1f76003568d24169ae839d1df0e85"
+        }
+      ]
+    },
+    {
+      "concept_id": "planning",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-07-vision-action-and-world-models.md",
+          "line": 377,
+          "page": null,
+          "excerpt": "#### 7.3 World Models, Physics, and Planning",
+          "material_id": "chapters/chapter-07-vision-action-and-world-models",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch7",
+          "sha256": "050b24e2101f3baafe21672838d91d08b7d1f76003568d24169ae839d1df0e85"
+        }
+      ]
+    },
+    {
+      "concept_id": "model-based-rl",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-07-vision-action-and-world-models.md",
+          "line": 393,
+          "page": null,
+          "excerpt": "The term *world model* has been used in AI in other contexts. Most notably, it refers to the *model* in model-based reinforcement learning [[Ha and Schmidhuber, 2018](#bibf.bib57), [Moerland et al., 2023](#bibf.bib45), [Sutton, 1991](#bibf.bib32)] (see next section). This model contains a local copy of some knowledge of the environment, based on the interactions it has had with the environment, to be used to improve the action policy.",
+          "material_id": "chapters/chapter-07-vision-action-and-world-models",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch7",
+          "sha256": "050b24e2101f3baafe21672838d91d08b7d1f76003568d24169ae839d1df0e85"
+        }
+      ]
+    },
+    {
+      "concept_id": "rl",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-07-vision-action-and-world-models.md",
+          "line": 612,
+          "page": null,
+          "excerpt": "For WorldCoder results are reported on grid worlds and on task planning (AlfWorld). WorldCoder is more sample-efficient than model-free reinforcement learning, and more compute-efficient compared to ReAct-style agents that try to perform in-context planning by the LLM.",
+          "material_id": "chapters/chapter-07-vision-action-and-world-models",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch7",
+          "sha256": "050b24e2101f3baafe21672838d91d08b7d1f76003568d24169ae839d1df0e85"
+        }
+      ]
+    },
+    {
+      "concept_id": "meta-learning",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-08-metalearning.md",
+          "line": 78,
+          "page": null,
+          "excerpt": "#### 8.2 Inner/Outer Loop",
+          "material_id": "chapters/chapter-08-metalearning",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch8",
+          "sha256": "cc3b846af1a2a6731332c695109917afe25c491b5e45f90a4872808f258ec298"
+        }
+      ]
+    },
+    {
+      "concept_id": "memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-09-interaction-styles-for-agentic-llms.md",
+          "line": 21,
+          "page": null,
+          "excerpt": "- Understand the importance of *memory* in agentic LLMs, and recognize different agentic memory architectures.",
+          "material_id": "chapters/chapter-09-interaction-styles-for-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch9",
+          "sha256": "f791f9c5424d3f1850a29b9ffcc222f501ae764563058bd514779a566199dae9"
+        }
+      ]
+    },
+    {
+      "concept_id": "working-memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-09-interaction-styles-for-agentic-llms.md",
+          "line": 489,
+          "page": null,
+          "excerpt": "###### 9.3.2.2 Long Context Windows and Compression",
+          "material_id": "chapters/chapter-09-interaction-styles-for-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch9",
+          "sha256": "f791f9c5424d3f1850a29b9ffcc222f501ae764563058bd514779a566199dae9"
+        }
+      ]
+    },
+    {
+      "concept_id": "compaction",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-09-interaction-styles-for-agentic-llms.md",
+          "line": 489,
+          "page": null,
+          "excerpt": "###### 9.3.2.2 Long Context Windows and Compression",
+          "material_id": "chapters/chapter-09-interaction-styles-for-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch9",
+          "sha256": "f791f9c5424d3f1850a29b9ffcc222f501ae764563058bd514779a566199dae9"
+        }
+      ]
+    },
+    {
+      "concept_id": "memory-maintenance",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-09-interaction-styles-for-agentic-llms.md",
+          "line": 510,
+          "page": null,
+          "excerpt": "###### 9.3.2.3 Explicit Memory Management",
+          "material_id": "chapters/chapter-09-interaction-styles-for-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch9",
+          "sha256": "f791f9c5424d3f1850a29b9ffcc222f501ae764563058bd514779a566199dae9"
+        }
+      ]
+    },
+    {
+      "concept_id": "bdi",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-09-interaction-styles-for-agentic-llms.md",
+          "line": 61,
+          "page": null,
+          "excerpt": "###### 9.1.1.2 Agents with Beliefs, Desires, and Intentions",
+          "material_id": "chapters/chapter-09-interaction-styles-for-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch9",
+          "sha256": "f791f9c5424d3f1850a29b9ffcc222f501ae764563058bd514779a566199dae9"
+        }
+      ]
+    },
+    {
+      "concept_id": "personalization",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-09-interaction-styles-for-agentic-llms.md",
+          "line": 436,
+          "page": null,
+          "excerpt": "###### 9.3.1.2 Adaptation",
+          "material_id": "chapters/chapter-09-interaction-styles-for-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch9",
+          "sha256": "f791f9c5424d3f1850a29b9ffcc222f501ae764563058bd514779a566199dae9"
+        }
+      ]
+    },
+    {
+      "concept_id": "game-agents",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-10-case-study-2-balrog-for-llm-reasoning-and-reflection.md",
+          "line": 19,
+          "page": null,
+          "excerpt": "- Run a multi-step *reasoning agent* on a benchmark of puzzles and games.",
+          "material_id": "chapters/chapter-10-case-study-2-balrog-for-llm-reasoning-and-reflection",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch10",
+          "sha256": "ea4b438b66bfa5cdaadf5a9d60f077e66920f7267b3eed847efa68e11ae6df6b"
+        }
+      ]
+    },
+    {
+      "concept_id": "evaluation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-10-case-study-2-balrog-for-llm-reasoning-and-reflection.md",
+          "line": 160,
+          "page": null,
+          "excerpt": "Please have a look at the BALROG code at Github <https://github.com/balrog-ai/BALROG>. Read the Evaluation Guide, the Agent Development tutorial, and the instructions how to run Few Shot Learning experiments (in-context learning).",
+          "material_id": "chapters/chapter-10-case-study-2-balrog-for-llm-reasoning-and-reflection",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch10",
+          "sha256": "ea4b438b66bfa5cdaadf5a9d60f077e66920f7267b3eed847efa68e11ae6df6b"
+        }
+      ]
+    },
+    {
+      "concept_id": "model-selection",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-10-case-study-2-balrog-for-llm-reasoning-and-reflection.md",
+          "line": 196,
+          "page": null,
+          "excerpt": "##### 10.2.2 Different LLMs",
+          "material_id": "chapters/chapter-10-case-study-2-balrog-for-llm-reasoning-and-reflection",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch10",
+          "sha256": "ea4b438b66bfa5cdaadf5a9d60f077e66920f7267b3eed847efa68e11ae6df6b"
+        }
+      ]
+    },
+    {
+      "concept_id": "research-reproduction",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-10-case-study-2-balrog-for-llm-reasoning-and-reflection.md",
+          "line": 157,
+          "page": null,
+          "excerpt": "##### 10.2.1 Reproduce Paper",
+          "material_id": "chapters/chapter-10-case-study-2-balrog-for-llm-reasoning-and-reflection",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch10",
+          "sha256": "ea4b438b66bfa5cdaadf5a9d60f077e66920f7267b3eed847efa68e11ae6df6b"
+        }
+      ]
+    },
+    {
+      "concept_id": "tool-use",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md",
+          "line": 41,
+          "page": null,
+          "excerpt": "#### 11.2 Tool Use Architectures",
+          "material_id": "chapters/chapter-11-how-agents-use-tools-to-act-in-the-world",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch11",
+          "sha256": "6b1a96ddd1b719872f957d7948e954dfa42f176e9542b6add76157706614a341"
+        }
+      ]
+    },
+    {
+      "concept_id": "plan-execute",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md",
+          "line": 19,
+          "page": null,
+          "excerpt": "- Distinguish between the direct invocation and *Planner–Caller–Summarizer* architectural patterns.",
+          "material_id": "chapters/chapter-11-how-agents-use-tools-to-act-in-the-world",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch11",
+          "sha256": "6b1a96ddd1b719872f957d7948e954dfa42f176e9542b6add76157706614a341"
+        }
+      ]
+    },
+    {
+      "concept_id": "frameworks",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md",
+          "line": 128,
+          "page": null,
+          "excerpt": "##### 11.3.1 LangChain Example",
+          "material_id": "chapters/chapter-11-how-agents-use-tools-to-act-in-the-world",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch11",
+          "sha256": "6b1a96ddd1b719872f957d7948e954dfa42f176e9542b6add76157706614a341"
+        }
+      ]
+    },
+    {
+      "concept_id": "computer-use",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md",
+          "line": 268,
+          "page": null,
+          "excerpt": "##### 11.3.2 Computer and Browser Tools",
+          "material_id": "chapters/chapter-11-how-agents-use-tools-to-act-in-the-world",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch11",
+          "sha256": "6b1a96ddd1b719872f957d7948e954dfa42f176e9542b6add76157706614a341"
+        }
+      ]
+    },
+    {
+      "concept_id": "mcp",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md",
+          "line": 21,
+          "page": null,
+          "excerpt": "- Describe the *Model Context Protocol* as a standardized approach to tool integration.",
+          "material_id": "chapters/chapter-11-how-agents-use-tools-to-act-in-the-world",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch11",
+          "sha256": "6b1a96ddd1b719872f957d7948e954dfa42f176e9542b6add76157706614a341"
+        }
+      ]
+    },
+    {
+      "concept_id": "error-recovery",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md",
+          "line": 576,
+          "page": null,
+          "excerpt": "#### 11.5 Robustness, Error Handling, and Recovery",
+          "material_id": "chapters/chapter-11-how-agents-use-tools-to-act-in-the-world",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch11",
+          "sha256": "6b1a96ddd1b719872f957d7948e954dfa42f176e9542b6add76157706614a341"
+        }
+      ]
+    },
+    {
+      "concept_id": "hitl",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md",
+          "line": 603,
+          "page": null,
+          "excerpt": "###### Human-in-the-Loop Integration",
+          "material_id": "chapters/chapter-11-how-agents-use-tools-to-act-in-the-world",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch11",
+          "sha256": "6b1a96ddd1b719872f957d7948e954dfa42f176e9542b6add76157706614a341"
+        }
+      ]
+    },
+    {
+      "concept_id": "safety",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md",
+          "line": 615,
+          "page": null,
+          "excerpt": "#### 11.6 Safety and Security",
+          "material_id": "chapters/chapter-11-how-agents-use-tools-to-act-in-the-world",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch11",
+          "sha256": "6b1a96ddd1b719872f957d7948e954dfa42f176e9542b6add76157706614a341"
+        }
+      ]
+    },
+    {
+      "concept_id": "rag",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+          "line": 78,
+          "page": null,
+          "excerpt": "[Salton et al. [1975]](#bibk.bib29) formalized this idea into the *vector space model*, representing every document and query as a vector in a high-dimensional term space and ranking documents by their cosine similarity to the query vector. The vector space model established a pattern that persists directly into today’s dense retrievers (Section [12.3](#Ch12.S3 \"12.3 Retrieval-Augmented Generation Pipeline ‣ Chapter 12 Search and Retrieval in Agentic LLMs ‣ Part IV Tools and Assistants ‣ Agentic Large Language Models\")): reduce documents and queries to points in a shared geometric space, and let distance or similarity stand in for relevance.",
+          "material_id": "chapters/chapter-12-search-and-retrieval-in-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch12",
+          "sha256": "8de5c1c2cb0fc7b084cade5d311a0c5bc4da1b20a9390d9522e6f6d23ce778f0"
+        }
+      ]
+    },
+    {
+      "concept_id": "sparse-retrieval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+          "line": 39,
+          "page": null,
+          "excerpt": "##### 12.1.1 Bag of Words",
+          "material_id": "chapters/chapter-12-search-and-retrieval-in-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch12",
+          "sha256": "8de5c1c2cb0fc7b084cade5d311a0c5bc4da1b20a9390d9522e6f6d23ce778f0"
+        }
+      ]
+    },
+    {
+      "concept_id": "embeddings",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+          "line": 368,
+          "page": null,
+          "excerpt": "##### 12.4.2 A Simple Dense Retrieval Example in Python",
+          "material_id": "chapters/chapter-12-search-and-retrieval-in-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch12",
+          "sha256": "8de5c1c2cb0fc7b084cade5d311a0c5bc4da1b20a9390d9522e6f6d23ce778f0"
+        }
+      ]
+    },
+    {
+      "concept_id": "chunking",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+          "line": 20,
+          "page": null,
+          "excerpt": "- Describe the full *retrieval-augmented generation* pipeline, from indexing and chunking to query formulation and answer generation.",
+          "material_id": "chapters/chapter-12-search-and-retrieval-in-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch12",
+          "sha256": "8de5c1c2cb0fc7b084cade5d311a0c5bc4da1b20a9390d9522e6f6d23ce778f0"
+        }
+      ]
+    },
+    {
+      "concept_id": "hybrid-search",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+          "line": 106,
+          "page": null,
+          "excerpt": "where $|d|$ is the length of document $d$, $\\mathrm{avgdl}$ is the average document length in the collection, and $k_{1}$ and $b$ are free parameters that control term-frequency saturation and length normalization, respectively (typical values: $k_{1}\\in[1.2,2.0]$, $b=0.75$). BM25 remains the sparse-retrieval baseline referenced throughout the hybrid retrieval discussions in Section [12.3](#Ch12.S3 \"12.3 Retrieval-Augmented Generation Pipeline ‣ Chapter 12 Search and Retrieval in Agentic LLMs ‣ Part IV Tools and Assistants ‣ Agentic Large Language Models\").",
+          "material_id": "chapters/chapter-12-search-and-retrieval-in-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch12",
+          "sha256": "8de5c1c2cb0fc7b084cade5d311a0c5bc4da1b20a9390d9522e6f6d23ce778f0"
+        }
+      ]
+    },
+    {
+      "concept_id": "reranking",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+          "line": 181,
+          "page": null,
+          "excerpt": "Re-ranking: Take the pool of retrieved candidates and reorder them by relevance using more accurate but slower models, like cross-encoders (BERT, MiniLM). Late-interaction models such as ColBERTv2 [[Santhanam et al., 2022](#bibk.bib9)] balance quality and speed. This ensures that top results are the ones most likely to answer the question.",
+          "material_id": "chapters/chapter-12-search-and-retrieval-in-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch12",
+          "sha256": "8de5c1c2cb0fc7b084cade5d311a0c5bc4da1b20a9390d9522e6f6d23ce778f0"
+        }
+      ]
+    },
+    {
+      "concept_id": "query-rewriting",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+          "line": 444,
+          "page": null,
+          "excerpt": "##### 12.4.3 Query Rewriting and Expansion",
+          "material_id": "chapters/chapter-12-search-and-retrieval-in-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch12",
+          "sha256": "8de5c1c2cb0fc7b084cade5d311a0c5bc4da1b20a9390d9522e6f6d23ce778f0"
+        }
+      ]
+    },
+    {
+      "concept_id": "graph-rag",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+          "line": 526,
+          "page": null,
+          "excerpt": "###### Graph‑RAG",
+          "material_id": "chapters/chapter-12-search-and-retrieval-in-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch12",
+          "sha256": "8de5c1c2cb0fc7b084cade5d311a0c5bc4da1b20a9390d9522e6f6d23ce778f0"
+        }
+      ]
+    },
+    {
+      "concept_id": "agentic-rag",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+          "line": 906,
+          "page": null,
+          "excerpt": "#### 12.6 Agentic RAG: Beyond Simple Retrieval",
+          "material_id": "chapters/chapter-12-search-and-retrieval-in-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch12",
+          "sha256": "8de5c1c2cb0fc7b084cade5d311a0c5bc4da1b20a9390d9522e6f6d23ce778f0"
+        }
+      ]
+    },
+    {
+      "concept_id": "retrieval-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+          "line": 956,
+          "page": null,
+          "excerpt": "###### Retrieval metrics",
+          "material_id": "chapters/chapter-12-search-and-retrieval-in-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch12",
+          "sha256": "8de5c1c2cb0fc7b084cade5d311a0c5bc4da1b20a9390d9522e6f6d23ce778f0"
+        }
+      ]
+    },
+    {
+      "concept_id": "citation-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+          "line": 1050,
+          "page": null,
+          "excerpt": "###### Attribution and freshness",
+          "material_id": "chapters/chapter-12-search-and-retrieval-in-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch12",
+          "sha256": "8de5c1c2cb0fc7b084cade5d311a0c5bc4da1b20a9390d9522e6f6d23ce778f0"
+        }
+      ]
+    },
+    {
+      "concept_id": "db-query",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-12-search-and-retrieval-in-agentic-llms.md",
+          "line": 22,
+          "page": null,
+          "excerpt": "- Extend retrieval beyond plain text to graphs, code, tabular data, and multimodal sources.",
+          "material_id": "chapters/chapter-12-search-and-retrieval-in-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch12",
+          "sha256": "8de5c1c2cb0fc7b084cade5d311a0c5bc4da1b20a9390d9522e6f6d23ce778f0"
+        }
+      ]
+    },
+    {
+      "concept_id": "sales-agents",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-13-from-tools-to-assistants-real-world-applications.md",
+          "line": 89,
+          "page": null,
+          "excerpt": "#### 13.3 Shopping Assistant",
+          "material_id": "chapters/chapter-13-from-tools-to-assistants-real-world-applications",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch13",
+          "sha256": "93de0f82f89c431f1c45cb805f71d0460328be7f7021cecabcc9f961c641e1a0"
+        }
+      ]
+    },
+    {
+      "concept_id": "clinical-agents",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-13-from-tools-to-assistants-real-world-applications.md",
+          "line": 198,
+          "page": null,
+          "excerpt": "#### 13.5 Medical Assistant",
+          "material_id": "chapters/chapter-13-from-tools-to-assistants-real-world-applications",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch13",
+          "sha256": "93de0f82f89c431f1c45cb805f71d0460328be7f7021cecabcc9f961c641e1a0"
+        }
+      ]
+    },
+    {
+      "concept_id": "scientific-workflows",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-13-from-tools-to-assistants-real-world-applications.md",
+          "line": 322,
+          "page": null,
+          "excerpt": "#### 13.7 Automated Scientific Discovery",
+          "material_id": "chapters/chapter-13-from-tools-to-assistants-real-world-applications",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch13",
+          "sha256": "93de0f82f89c431f1c45cb805f71d0460328be7f7021cecabcc9f961c641e1a0"
+        }
+      ]
+    },
+    {
+      "concept_id": "coding-agents",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-13-from-tools-to-assistants-real-world-applications.md",
+          "line": 348,
+          "page": null,
+          "excerpt": "#### 13.8 Coding Assistants and General Advances",
+          "material_id": "chapters/chapter-13-from-tools-to-assistants-real-world-applications",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch13",
+          "sha256": "93de0f82f89c431f1c45cb805f71d0460328be7f7021cecabcc9f961c641e1a0"
+        }
+      ]
+    },
+    {
+      "concept_id": "human-collaboration",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-13-from-tools-to-assistants-real-world-applications.md",
+          "line": 48,
+          "page": null,
+          "excerpt": "#### 13.2 Conversational Assistants",
+          "material_id": "chapters/chapter-13-from-tools-to-assistants-real-world-applications",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch13",
+          "sha256": "93de0f82f89c431f1c45cb805f71d0460328be7f7021cecabcc9f961c641e1a0"
+        }
+      ]
+    },
+    {
+      "concept_id": "travel-agents",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-13-from-tools-to-assistants-real-world-applications.md",
+          "line": 149,
+          "page": null,
+          "excerpt": "#### 13.4 Flight Operations Assistant",
+          "material_id": "chapters/chapter-13-from-tools-to-assistants-real-world-applications",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch13",
+          "sha256": "93de0f82f89c431f1c45cb805f71d0460328be7f7021cecabcc9f961c641e1a0"
+        }
+      ]
+    },
+    {
+      "concept_id": "trading-agents",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-13-from-tools-to-assistants-real-world-applications.md",
+          "line": 260,
+          "page": null,
+          "excerpt": "#### 13.6 Trading Assistant",
+          "material_id": "chapters/chapter-13-from-tools-to-assistants-real-world-applications",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch13",
+          "sha256": "93de0f82f89c431f1c45cb805f71d0460328be7f7021cecabcc9f961c641e1a0"
+        }
+      ]
+    },
+    {
+      "concept_id": "privacy",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-13-from-tools-to-assistants-real-world-applications.md",
+          "line": 137,
+          "page": null,
+          "excerpt": "- Consider ethics and trust. In shopping, recommendations carry commercial, privacy and bias implications. These issues should be assessed before deploying such a system in production, through questions such as: *which brands are shown*, *is user history handled correctly*, and *how transparent is the reasoning*.",
+          "material_id": "chapters/chapter-13-from-tools-to-assistants-real-world-applications",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch13",
+          "sha256": "93de0f82f89c431f1c45cb805f71d0460328be7f7021cecabcc9f961c641e1a0"
+        }
+      ]
+    },
+    {
+      "concept_id": "abstention",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-13-from-tools-to-assistants-real-world-applications.md",
+          "line": 403,
+          "page": null,
+          "excerpt": "When building assistants, grounding (real-world evaluation) is important. Use architectures where agents retrieve evidence, justify actions and defer to humans under uncertainty (human in the loop). Treat tools as modular components with explicit contracts and failure modes. Log decisions, plans and intermediate states to enable debugging and auditing. In high-stakes domains, we suggest to design for graceful degradation; an agent asking for clarification or abstaining is preferable to confident error.",
+          "material_id": "chapters/chapter-13-from-tools-to-assistants-real-world-applications",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch13",
+          "sha256": "93de0f82f89c431f1c45cb805f71d0460328be7f7021cecabcc9f961c641e1a0"
+        }
+      ]
+    },
+    {
+      "concept_id": "orchestrator-workers",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-14-case-study-3-building-a-multi-agent-diagnosis-framework.md",
+          "line": 132,
+          "page": null,
+          "excerpt": "##### 14.3.3 Step 2: Replacing the Rule-Based Planners with an LLM Agent",
+          "material_id": "chapters/chapter-14-case-study-3-building-a-multi-agent-diagnosis-framework",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch14",
+          "sha256": "8ceddbe37ab886640fa9f962403c05dd6c8af489b4f4e7071d389ab33449ffc1"
+        }
+      ]
+    },
+    {
+      "concept_id": "outcome-eval",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-14-case-study-3-building-a-multi-agent-diagnosis-framework.md",
+          "line": 33,
+          "page": null,
+          "excerpt": "This case study focuses on building and extending a simplified multi-agent hospital simulation using a shared context inspired by the Model Context Protocol (MCP, Chapter [11](chapter-11-how-agents-use-tools-to-act-in-the-world.md#Ch11 \"Chapter 11 How Agents Use Tools to Act in the World ‣ Part IV Tools and Assistants ‣ Agentic Large Language Models\")) [[Hou et al., 2026](#bibm.bib1)]. The case study is designed to provide hands-on experience with agentic architectures in a high-risk domain, highlighting coordination, planning, evaluation, and safety considerations.",
+          "material_id": "chapters/chapter-14-case-study-3-building-a-multi-agent-diagnosis-framework",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch14",
+          "sha256": "8ceddbe37ab886640fa9f962403c05dd6c8af489b4f4e7071d389ab33449ffc1"
+        }
+      ]
+    },
+    {
+      "concept_id": "social-behavior",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-15-studying-behavior-of-agentic-llms.md",
+          "line": 61,
+          "page": null,
+          "excerpt": "In the next sections we will first discuss the basic social toolkit for agent interaction. Next, we will look at strategic behavior, where agents reason about the behavior of other agents, and we will discuss theory of mind. Finally, we will discuss moral judgment by LLMs.",
+          "material_id": "chapters/chapter-15-studying-behavior-of-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch15",
+          "sha256": "6ab49f4d280554e60c5c2f9f032cc984555b17a7ae9a7e8383a339bea81db282"
+        }
+      ]
+    },
+    {
+      "concept_id": "theory-of-mind",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-15-studying-behavior-of-agentic-llms.md",
+          "line": 20,
+          "page": null,
+          "excerpt": "- Describe ways of studying advanced social and interactive competencies in LLMs, in particular *strategic thinking*, *Theory of Mind*, and *moral reasoning*.",
+          "material_id": "chapters/chapter-15-studying-behavior-of-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch15",
+          "sha256": "6ab49f4d280554e60c5c2f9f032cc984555b17a7ae9a7e8383a339bea81db282"
+        }
+      ]
+    },
+    {
+      "concept_id": "moral-behavior",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-15-studying-behavior-of-agentic-llms.md",
+          "line": 467,
+          "page": null,
+          "excerpt": "#### 15.6 Moral Judgment and Behavior",
+          "material_id": "chapters/chapter-15-studying-behavior-of-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch15",
+          "sha256": "6ab49f4d280554e60c5c2f9f032cc984555b17a7ae9a7e8383a339bea81db282"
+        }
+      ]
+    },
+    {
+      "concept_id": "behavioral-experiments",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-15-studying-behavior-of-agentic-llms.md",
+          "line": 49,
+          "page": null,
+          "excerpt": "#### 15.2 Probing LLM Behavior Experimentally",
+          "material_id": "chapters/chapter-15-studying-behavior-of-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch15",
+          "sha256": "6ab49f4d280554e60c5c2f9f032cc984555b17a7ae9a7e8383a339bea81db282"
+        }
+      ]
+    },
+    {
+      "concept_id": "multi-agent",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-16-role-based-interaction-in-multi-llm-systems.md",
+          "line": 26,
+          "page": null,
+          "excerpt": "#### 16.1 From Single-agent to Multi-agent",
+          "material_id": "chapters/chapter-16-role-based-interaction-in-multi-llm-systems",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch16",
+          "sha256": "e7ed242d9c5bc2e344e25c792fc6f88098a415bdb162f5797d36b5b759dc10c1"
+        }
+      ]
+    },
+    {
+      "concept_id": "multi-agent-debate",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-16-role-based-interaction-in-multi-llm-systems.md",
+          "line": 210,
+          "page": null,
+          "excerpt": "##### 16.3.2 Debate and Discussion",
+          "material_id": "chapters/chapter-16-role-based-interaction-in-multi-llm-systems",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch16",
+          "sha256": "e7ed242d9c5bc2e344e25c792fc6f88098a415bdb162f5797d36b5b759dc10c1"
+        }
+      ]
+    },
+    {
+      "concept_id": "critic-loop",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-16-role-based-interaction-in-multi-llm-systems.md",
+          "line": 177,
+          "page": null,
+          "excerpt": "In terms of the five dimensions defined in Section [16.1.3](#Ch16.S1.SS3 \"16.1.3 Five Dimensions of Multi-Agent Collaboration ‣ 16.1 From Single-agent to Multi-agent ‣ Chapter 16 Role-Based Interaction in Multi-LLM Systems ‣ Part V Behavior and Cognition ‣ Agentic Large Language Models\"), the studies vary the *strategies* and *structures* while keeping the overall interaction type cooperative. We proceed from the simplest to the most complex structure: complementary pairs, multi-party debate, teams, and social role-play under pressure.",
+          "material_id": "chapters/chapter-16-role-based-interaction-in-multi-llm-systems",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch16",
+          "sha256": "e7ed242d9c5bc2e344e25c792fc6f88098a415bdb162f5797d36b5b759dc10c1"
+        }
+      ]
+    },
+    {
+      "concept_id": "persona",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-16-role-based-interaction-in-multi-llm-systems.md",
+          "line": 177,
+          "page": null,
+          "excerpt": "In terms of the five dimensions defined in Section [16.1.3](#Ch16.S1.SS3 \"16.1.3 Five Dimensions of Multi-Agent Collaboration ‣ 16.1 From Single-agent to Multi-agent ‣ Chapter 16 Role-Based Interaction in Multi-LLM Systems ‣ Part V Behavior and Cognition ‣ Agentic Large Language Models\"), the studies vary the *strategies* and *structures* while keeping the overall interaction type cooperative. We proceed from the simplest to the most complex structure: complementary pairs, multi-party debate, teams, and social role-play under pressure.",
+          "material_id": "chapters/chapter-16-role-based-interaction-in-multi-llm-systems",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch16",
+          "sha256": "e7ed242d9c5bc2e344e25c792fc6f88098a415bdb162f5797d36b5b759dc10c1"
+        }
+      ]
+    },
+    {
+      "concept_id": "shared-memory",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-14-case-study-3-building-a-multi-agent-diagnosis-framework.md",
+          "line": 116,
+          "page": null,
+          "excerpt": "- **Shared context (MCP-like layer).** A central data structure that stores incoming patient cases, assigned diagnostic tasks, and diagnostic results. All agents interact *only* through this shared context, never directly with one another, mirroring the shared-state coordination pattern discussed for the Model Context Protocol in Section [11](chapter-11-how-agents-use-tools-to-act-in-the-world.md#Ch11 \"Chapter 11 How Agents Use Tools to Act in the World ‣ Part IV Tools and Assistants ‣ Agentic Large Language Models\").",
+          "material_id": "chapters/chapter-14-case-study-3-building-a-multi-agent-diagnosis-framework",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch14",
+          "sha256": "8ceddbe37ab886640fa9f962403c05dd6c8af489b4f4e7071d389ab33449ffc1"
+        }
+      ]
+    },
+    {
+      "concept_id": "social-simulation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-17-emergent-behavior-in-multi-llm-systems.md",
+          "line": 54,
+          "page": null,
+          "excerpt": "##### 17.1.1 From Agent-Based Modeling to Generative Agent Societies",
+          "material_id": "chapters/chapter-17-emergent-behavior-in-multi-llm-systems",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch17",
+          "sha256": "c8867fe8615877fbee0fa4da48fdf97609d330eba70c9b0539b0bcb4cb605507"
+        }
+      ]
+    },
+    {
+      "concept_id": "emergent-norms",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-17-emergent-behavior-in-multi-llm-systems.md",
+          "line": 82,
+          "page": null,
+          "excerpt": "infrastructure and simulation platforms in Section [17.2](#Ch17.S2 \"17.2 Simulation Infrastructure ‣ Chapter 17 Emergent Behavior in Multi-LLM Systems ‣ Part V Behavior and Cognition ‣ Agentic Large Language Models\"), then go to the emergence of conventions and norms in Section [17.3](#Ch17.S3 \"17.3 Emergent Conventions and Norms ‣ Chapter 17 Emergent Behavior in Multi-LLM Systems ‣ Part V Behavior and Cognition ‣ Agentic Large Language Models\"), and conclude by discussing the importance of open world environments in Section [17.4](#Ch17.S4 \"17.4 Evaluating Agents in Open World Environments ‣ Chapter 17 Emergent Behavior in Multi-LLM Systems ‣ Part V Behavior and Cognition ‣ Agentic Large Language Models\"). Finally , we reflect on risks of the open-ended setting, in Section [17.5](#Ch17.S5 \"17.5 Risks of Emergent Behavior ‣ Chapter 17 Emergent Behavior in Multi-LLM Systems ‣ Part V Behavior and Cognition ‣ Agentic Large Language Models\").",
+          "material_id": "chapters/chapter-17-emergent-behavior-in-multi-llm-systems",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch17",
+          "sha256": "c8867fe8615877fbee0fa4da48fdf97609d330eba70c9b0539b0bcb4cb605507"
+        }
+      ]
+    },
+    {
+      "concept_id": "multi-agent-failures",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-17-emergent-behavior-in-multi-llm-systems.md",
+          "line": 82,
+          "page": null,
+          "excerpt": "infrastructure and simulation platforms in Section [17.2](#Ch17.S2 \"17.2 Simulation Infrastructure ‣ Chapter 17 Emergent Behavior in Multi-LLM Systems ‣ Part V Behavior and Cognition ‣ Agentic Large Language Models\"), then go to the emergence of conventions and norms in Section [17.3](#Ch17.S3 \"17.3 Emergent Conventions and Norms ‣ Chapter 17 Emergent Behavior in Multi-LLM Systems ‣ Part V Behavior and Cognition ‣ Agentic Large Language Models\"), and conclude by discussing the importance of open world environments in Section [17.4](#Ch17.S4 \"17.4 Evaluating Agents in Open World Environments ‣ Chapter 17 Emergent Behavior in Multi-LLM Systems ‣ Part V Behavior and Cognition ‣ Agentic Large Language Models\"). Finally , we reflect on risks of the open-ended setting, in Section [17.5](#Ch17.S5 \"17.5 Risks of Emergent Behavior ‣ Chapter 17 Emergent Behavior in Multi-LLM Systems ‣ Part V Behavior and Cognition ‣ Agentic Large Language Models\").",
+          "material_id": "chapters/chapter-17-emergent-behavior-in-multi-llm-systems",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch17",
+          "sha256": "c8867fe8615877fbee0fa4da48fdf97609d330eba70c9b0539b0bcb4cb605507"
+        }
+      ]
+    },
+    {
+      "concept_id": "user-simulation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-17-emergent-behavior-in-multi-llm-systems.md",
+          "line": 155,
+          "page": null,
+          "excerpt": "##### 17.2.3 Simulation as a Scientific Instrument",
+          "material_id": "chapters/chapter-17-emergent-behavior-in-multi-llm-systems",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch17",
+          "sha256": "c8867fe8615877fbee0fa4da48fdf97609d330eba70c9b0539b0bcb4cb605507"
+        }
+      ]
+    },
+    {
+      "concept_id": "human-demos",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms.md",
+          "line": 239,
+          "page": null,
+          "excerpt": "###### Human-in-the-loop approaches",
+          "material_id": "chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch19",
+          "sha256": "774455a212775ba8f8f122f4538d41dca7380bc1e3666598d1b8662aafa623ae"
+        }
+      ]
+    },
+    {
+      "concept_id": "red-teaming",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms.md",
+          "line": 281,
+          "page": null,
+          "excerpt": "###### Automated red teaming",
+          "material_id": "chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch19",
+          "sha256": "774455a212775ba8f8f122f4538d41dca7380bc1e3666598d1b8662aafa623ae"
+        }
+      ]
+    },
+    {
+      "concept_id": "model-collapse",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms.md",
+          "line": 414,
+          "page": null,
+          "excerpt": "As should be clear by now, using synthetic data for training agentic LLMs is a solution that is not without problems. We will discuss several more risks associated with synthetic data, including model collapse, bias amplification, security and privacy vulnerabilities, and legal and ethical concerns.",
+          "material_id": "chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch19",
+          "sha256": "774455a212775ba8f8f122f4538d41dca7380bc1e3666598d1b8662aafa623ae"
+        }
+      ]
+    },
+    {
+      "concept_id": "llm-judge",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms.md",
+          "line": 271,
+          "page": null,
+          "excerpt": "Furthermore, the *LLM-as-a-judge* paradigm [[Zheng et al., 2024](#bibr.bib1)] simulates human evaluation by prompting a strong model to grade the outputs of other models, highly correlating the models with human preference and significantly reducing the latency of evaluation cycles.",
+          "material_id": "chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch19",
+          "sha256": "774455a212775ba8f8f122f4538d41dca7380bc1e3666598d1b8662aafa623ae"
+        }
+      ]
+    },
+    {
+      "concept_id": "judge-validation",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms.md",
+          "line": 33,
+          "page": null,
+          "excerpt": "The rapid scaling of LLMs has led to a significant demand for training and evaluation data. Some have coined training data the *digital oil*, reflecting the importance as primary ingredient for AI development. Furthermore, data is increasingly becoming a differentiating factor since other components of the pipeline, such as model architectures, are homogenizing [[Kim et al., 2025a](#bibr.bib56)]. As models continue to scale, they require trillions of words of human-generated text scraped from the internet; however, there is only a limited amount of human-generated data available, which raises the question of whether training data could become the main bottleneck to scaling, see Figure [19.1](#Ch19.F1 \"Figure 19.1 ‣ 19.1 The Importance of Data ‣ Chapter 19 *Synthetic Data Generation for Training Agentic LLMs ‣ Part VI Advanced Topics ‣ Agentic Large Language Models\") [[Villalobos et al., 2024](#bibr.bib73)]. Moreover, as data requirements grow in scale, the acquisition of data becomes increasingly prohibitive in terms of cost and time, since most of the straightforward sources are becoming exhausted. Furthermore, issues with privacy, copyright, and bias cause the field to be looking beyond the curation of web-based human-generated data, and instead turn towards synthetic data generation [[Liang et al., 2022](#bibr.bib34)].",
+          "material_id": "chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch19",
+          "sha256": "774455a212775ba8f8f122f4538d41dca7380bc1e3666598d1b8662aafa623ae"
+        }
+      ]
+    },
+    {
+      "concept_id": "self-play",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms.md",
+          "line": 158,
+          "page": null,
+          "excerpt": "Another approach is Self-Play Finetuning (SPIN) [[Chen et al., 2024](#bibr.bib6)]. In this method the model distinguishes its own generations from reference data across iterations, improving alignment without any external teacher. Perhaps surprisingly, even *repeated* self-distillation, with no new data source, can yield measurable gains, up to a point [[Pareek et al., 2024](#bibr.bib13)].",
+          "material_id": "chapters/chapter-19-synthetic-data-generation-for-training-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch19",
+          "sha256": "774455a212775ba8f8f122f4538d41dca7380bc1e3666598d1b8662aafa623ae"
+        }
+      ]
+    },
+    {
+      "concept_id": "harness-optimization",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-20-advanced-transformer-and-agentic-architectures.md",
+          "line": 198,
+          "page": null,
+          "excerpt": "##### 20.2.2 Self-Modifying Hyperagents",
+          "material_id": "chapters/chapter-20-advanced-transformer-and-agentic-architectures",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch20",
+          "sha256": "a85f0b6773d5f650d26172075f3c751ad3fd8c3cf4082e10755824126bc630c5"
+        }
+      ]
+    },
+    {
+      "concept_id": "recursive-agents",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-20-advanced-transformer-and-agentic-architectures.md",
+          "line": 90,
+          "page": null,
+          "excerpt": "##### 20.1.3 LoopedLLM and Recursive Multi-Agent Systems",
+          "material_id": "chapters/chapter-20-advanced-transformer-and-agentic-architectures",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch20",
+          "sha256": "a85f0b6773d5f650d26172075f3c751ad3fd8c3cf4082e10755824126bc630c5"
+        }
+      ]
+    },
+    {
+      "concept_id": "interpretability",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-21-mechanistic-interpretability-for-llm-agents.md",
+          "line": 12,
+          "page": null,
+          "excerpt": "### Chapter 21 \\*Mechanistic Interpretability for LLM Agents",
+          "material_id": "chapters/chapter-21-mechanistic-interpretability-for-llm-agents",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch21",
+          "sha256": "9f069c8979b4e092b7d276c928d277dbea31eac573f51f02fab31adf9122195f"
+        }
+      ]
+    },
+    {
+      "concept_id": "activation-patching",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-21-mechanistic-interpretability-for-llm-agents.md",
+          "line": 307,
+          "page": null,
+          "excerpt": "#### 21.7 Activation Patching and Causal Interventions",
+          "material_id": "chapters/chapter-21-mechanistic-interpretability-for-llm-agents",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch21",
+          "sha256": "9f069c8979b4e092b7d276c928d277dbea31eac573f51f02fab31adf9122195f"
+        }
+      ]
+    },
+    {
+      "concept_id": "sparse-autoencoders",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-21-mechanistic-interpretability-for-llm-agents.md",
+          "line": 26,
+          "page": null,
+          "excerpt": "- Use *sparse autoencoders* for dictionary learning to decompose model activations into monosemantic, human-interpretable features.",
+          "material_id": "chapters/chapter-21-mechanistic-interpretability-for-llm-agents",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch21",
+          "sha256": "9f069c8979b4e092b7d276c928d277dbea31eac573f51f02fab31adf9122195f"
+        }
+      ]
+    },
+    {
+      "concept_id": "circuits",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-21-mechanistic-interpretability-for-llm-agents.md",
+          "line": 27,
+          "page": null,
+          "excerpt": "- Perform *circuit analysis and activation patching* to identify and causally verify the internal algorithms responsible for specific model behaviors.",
+          "material_id": "chapters/chapter-21-mechanistic-interpretability-for-llm-agents",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch21",
+          "sha256": "9f069c8979b4e092b7d276c928d277dbea31eac573f51f02fab31adf9122195f"
+        }
+      ]
+    },
+    {
+      "concept_id": "metacognition",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-22-cognitive-perspectives-on-agentic-llms.md",
+          "line": 90,
+          "page": null,
+          "excerpt": "| Self-knowledge (Sect. [22.5](#Ch22.S5 \"22.5 Metacognition, Introspection, and Self-Knowledge ‣ Chapter 22 *Cognitive Perspectives on Agentic LLMs ‣ Part VI Advanced Topics ‣ Agentic Large Language Models\")) | <a id=\"Ch22.T1.st1.3.5.2.1.1\"></a> *Growing.* Calibration, self-prediction [[Kadavath et al., 2022](#bibu.bib79), [Binder et al., 2025](#bibu.bib80)] | <a id=\"Ch22.T1.st1.3.5.3.1.1\"></a> *Sparse.* Truthfulness directions [[Azaria and Mitchell, 2023](#bibu.bib81), [Burns et al., 2023](#bibu.bib82)] | <a id=\"Ch22.T1.st1.3.5.4.1.1\"></a> *Sparse.* Concept injection; faithfulness tests [[Lindsey, 2025](#bibu.bib83), [Turpin et al., 2023](#bibu.bib84)] |",
+          "material_id": "chapters/chapter-22-cognitive-perspectives-on-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch22",
+          "sha256": "236d87c0c82f0d216827cd4a33c0864960f9e928e714280ea8eaf1401d890fd2"
+        }
+      ]
+    },
+    {
+      "concept_id": "cognitive-perspectives",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-22-cognitive-perspectives-on-agentic-llms.md",
+          "line": 43,
+          "page": null,
+          "excerpt": "##### 22.1.1 Three Levels of Evidence",
+          "material_id": "chapters/chapter-22-cognitive-perspectives-on-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch22",
+          "sha256": "236d87c0c82f0d216827cd4a33c0864960f9e928e714280ea8eaf1401d890fd2"
+        }
+      ]
+    },
+    {
+      "concept_id": "consciousness",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-22-cognitive-perspectives-on-agentic-llms.md",
+          "line": 23,
+          "page": null,
+          "excerpt": "- Outline how scientific theories of *consciousness* are applied to LLMs, and reflect on the risks of both over- and under-attributing mental states.",
+          "material_id": "chapters/chapter-22-cognitive-perspectives-on-agentic-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch22",
+          "sha256": "236d87c0c82f0d216827cd4a33c0864960f9e928e714280ea8eaf1401d890fd2"
+        }
+      ]
+    },
+    {
+      "concept_id": "auth",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md",
+          "line": 305,
+          "page": null,
+          "excerpt": "The protocol is organized into two layers. The data layer defines the JSON-RPC-based communication between clients and servers, including capability and version discovery, as well as primitives such as tools, resources, prompts, and notifications. The transport layer specifies how this communication is established and exchanged, including connection management, message framing, and authorization. This separation allows AI applications to interact with a wide range of external systems through a common interface, while leaving the management of the resulting context to the host application.",
+          "material_id": "chapters/chapter-11-how-agents-use-tools-to-act-in-the-world",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch11",
+          "sha256": "6b1a96ddd1b719872f957d7948e954dfa42f176e9542b6add76157706614a341"
+        }
+      ]
+    },
+    {
+      "concept_id": "self-consistency",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+          "line": 254,
+          "page": null,
+          "excerpt": "Self consistency is an ensemble approach (a well-known machine learning technique to make a strong learner by running multiple weaker",
+          "material_id": "chapters/chapter-06-multi-step-reasoning-in-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch6",
+          "sha256": "2574e767ccef8a0c691bd288dcee94c6473873708c4e75d39801abd7d0385f25"
+        }
+      ]
+    },
+    {
+      "concept_id": "tree-thoughts",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+          "line": 445,
+          "page": null,
+          "excerpt": "Tree of thoughts [[Yao et al., 2024](#bibe.bib42)] uses breadth-first or depth-first search to dynamically follow different reasoning steps.22",
+          "material_id": "chapters/chapter-06-multi-step-reasoning-in-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch6",
+          "sha256": "2574e767ccef8a0c691bd288dcee94c6473873708c4e75d39801abd7d0385f25"
+        }
+      ]
+    },
+    {
+      "concept_id": "code-grader",
+      "coverage": "taught",
+      "evidence": [
+        {
+          "source_path": "courses/agentic-large-language-models/markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+          "line": 276,
+          "page": null,
+          "excerpt": "###### 6.1.3.2 Code Generation for Validation",
+          "material_id": "chapters/chapter-06-multi-step-reasoning-in-llms",
+          "category": "chapters",
+          "source_url": "https://arxiv.org/html/2610.13455v1#Ch6",
+          "sha256": "2574e767ccef8a0c691bd288dcee94c6473873708c4e75d39801abd7d0385f25"
+        }
+      ]
+    }
+  ]
+}

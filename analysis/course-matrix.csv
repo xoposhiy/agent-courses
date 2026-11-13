@@ -1,0 +1,206 @@
+﻿concept_id,concept,kind,stanford-cs329z,columbia-coms4995,cmu-11768,langchain-deep-agents,stanford-cs224v,dlai-agentic-evals,colorado-csci7000,agentic-large-language-models
+agent-architecture,Agent architecture,topic,taught,taught,taught,taught,taught,taught,taught,taught
+evaluation,Agent evaluation and benchmarks,topic,taught,taught,taught,taught,taught,taught,assigned,taught
+prompting,Prompt design,topic,taught,taught,taught,taught,taught,taught,assigned,taught
+tool-use,Tool use and function calling,topic,taught,taught,taught,taught,taught,taught,assigned,taught
+hitl,Human oversight and approval,pattern,planned,taught,taught,taught,taught,taught,taught,taught
+structured-output,Structured output and constrained decoding,method,taught,taught,taught,taught,taught,taught,not evidenced,not evidenced
+observability,Tracing and observability,topic,taught,taught,taught,taught,taught,taught,not evidenced,taught
+frameworks,Agent frameworks and orchestration,topic,taught,taught,taught,taught,taught,not evidenced,assigned,taught
+harness,Agent harness design,topic,taught,taught,taught,taught,taught,not evidenced,assigned,taught
+memory,Agent memory,topic,taught,taught,taught,taught,taught,not evidenced,assigned,taught
+context-engineering,Context engineering,topic,taught,taught,taught,taught,taught,not evidenced,assigned,taught
+planning,Planning and task decomposition,topic,taught,taught,taught,taught,taught,not evidenced,assigned,taught
+coding-agents,Coding and terminal agents,application,taught,planned,taught,taught,taught,not evidenced,taught,taught
+compaction,Context summarization and compaction,pattern,taught,taught,taught,taught,taught,not evidenced,not evidenced,taught
+state,Conversation and execution state,concept,not evidenced,taught,taught,taught,taught,not evidenced,taught,taught
+long-context,Long-context modeling,topic,taught,taught,taught,taught,taught,not evidenced,not evidenced,taught
+parallelization,Parallel execution,pattern,taught,taught,taught,taught,taught,not evidenced,not evidenced,not evidenced
+safety,Agent safety and guardrails,topic,planned,taught,taught,taught,not evidenced,taught,assigned,taught
+cost-quality,"Cost, latency, and quality tradeoffs",topic,taught,taught,taught,not evidenced,not evidenced,taught,assigned,taught
+error-analysis,Error analysis and failure taxonomy,method,not evidenced,taught,taught,not evidenced,taught,taught,assigned,not evidenced
+grounding,Evidence grounding and hallucination control,topic,not evidenced,taught,taught,not evidenced,taught,taught,assigned,taught
+human-eval,Human evaluation,method,taught,not evidenced,taught,not evidenced,taught,taught,assigned,not evidenced
+multi-agent,Multi-agent systems,topic,taught,not evidenced,taught,taught,taught,not evidenced,assigned,taught
+orchestrator-workers,Orchestrator and workers,pattern,taught,not evidenced,taught,taught,taught,not evidenced,assigned,taught
+react,ReAct,pattern,taught,taught,taught,not evidenced,taught,not evidenced,assigned,taught
+reflection,Reflection and self-correction,pattern,taught,taught,taught,not evidenced,taught,not evidenced,assigned,taught
+rag,Retrieval-augmented generation,topic,taught,taught,taught,not evidenced,taught,not evidenced,assigned,taught
+shared-memory,Shared memory and task coordination,pattern,taught,not evidenced,taught,taught,taught,not evidenced,assigned,taught
+sft,Supervised fine-tuning,method,taught,taught,taught,not evidenced,taught,not evidenced,assigned,taught
+trajectory-eval,Trajectory and process evaluation,topic,not evidenced,taught,taught,not evidenced,taught,taught,assigned,not evidenced
+code-grader,Code-based evaluators,method,taught,taught,taught,not evidenced,not evidenced,taught,not evidenced,taught
+context-isolation,Context isolation,pattern,taught,not evidenced,taught,taught,taught,not evidenced,not evidenced,not evidenced
+context-offload,Context offloading,pattern,taught,not evidenced,taught,taught,taught,not evidenced,not evidenced,not evidenced
+embeddings,Embedding-based retrieval,method,taught,taught,taught,not evidenced,taught,not evidenced,not evidenced,taught
+rubrics,Evaluation rubrics,method,taught,not evidenced,taught,not evidenced,taught,taught,not evidenced,not evidenced
+judge-validation,Judge validation and bias,topic,taught,not evidenced,taught,not evidenced,taught,taught,not evidenced,taught
+llm-judge,LLM as a judge,method,taught,not evidenced,taught,not evidenced,taught,taught,not evidenced,taught
+long-horizon,Long-horizon agent tasks,topic,not evidenced,taught,taught,taught,taught,not evidenced,not evidenced,not evidenced
+mcp,Model Context Protocol,protocol,taught,taught,taught,taught,not evidenced,not evidenced,planned,taught
+personalization,Personalization and user modeling,topic,taught,not evidenced,taught,taught,taught,not evidenced,not evidenced,taught
+plan-execute,Plan then execute,pattern,taught,taught,taught,not evidenced,taught,not evidenced,not evidenced,taught
+reliability,Reliability and repeated-run evaluation,topic,taught,not evidenced,taught,not evidenced,taught,taught,not evidenced,not evidenced
+routing,Routing,pattern,taught,taught,taught,not evidenced,not evidenced,taught,not evidenced,not evidenced
+sparse-retrieval,Sparse retrieval,method,taught,taught,taught,not evidenced,taught,not evidenced,not evidenced,taught
+tool-eval,Tool-call evaluation,topic,taught,taught,taught,not evidenced,not evidenced,taught,not evidenced,not evidenced
+user-simulation,User and environment simulation,method,taught,not evidenced,taught,not evidenced,taught,taught,not evidenced,taught
+workflow-agent,Workflows versus agents,concept,taught,taught,taught,not evidenced,not evidenced,not evidenced,taught,not evidenced
+agent-as-tool,Agent as a tool,pattern,taught,not evidenced,taught,taught,not evidenced,not evidenced,assigned,not evidenced
+verification,Answer verification,pattern,not evidenced,taught,taught,not evidenced,taught,not evidenced,assigned,taught
+benchmark-design,Benchmark and test-set design,topic,taught,not evidenced,taught,not evidenced,not evidenced,taught,assigned,taught
+cot,Chain of thought,pattern,taught,taught,taught,not evidenced,not evidenced,not evidenced,assigned,taught
+human-collaboration,Human-agent collaboration,topic,not evidenced,not evidenced,taught,taught,taught,not evidenced,assigned,taught
+reasoning,Multi-step reasoning,topic,taught,taught,taught,not evidenced,not evidenced,not evidenced,assigned,taught
+reflexion,Reflexion,method,taught,taught,taught,not evidenced,not evidenced,not evidenced,assigned,taught
+rl,Reinforcement learning,topic,taught,taught,taught,not evidenced,not evidenced,not evidenced,assigned,taught
+sandboxing,Sandboxed execution,method,planned,taught,taught,taught,not evidenced,not evidenced,assigned,not evidenced
+self-consistency,Self-consistency,pattern,taught,taught,taught,not evidenced,not evidenced,not evidenced,assigned,taught
+synthetic-data,Synthetic data and trajectory generation,method,taught,not evidenced,taught,not evidenced,not evidenced,taught,assigned,taught
+abstention,Abstention and uncertainty handling,pattern,not evidenced,taught,taught,not evidenced,not evidenced,taught,not evidenced,taught
+codeact,CodeAct,pattern,taught,not evidenced,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced
+decoding,Decoding and sampling,topic,taught,taught,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced
+deep-research,Deep research agents,application,not evidenced,not evidenced,taught,taught,taught,not evidenced,not evidenced,not evidenced
+chunking,Document chunking and indexing,method,taught,taught,not evidenced,not evidenced,taught,not evidenced,not evidenced,taught
+durable-execution,Durable execution and recovery,pattern,taught,not evidenced,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced
+few-shot,Few-shot prompting,method,taught,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced,taught
+human-demos,Human demonstrations and feedback,method,taught,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced,taught
+langgraph,LangGraph,tool,taught,not evidenced,taught,taught,not evidenced,not evidenced,planned,not evidenced
+memory-maintenance,Memory maintenance and consolidation,pattern,taught,not evidenced,taught,taught,not evidenced,not evidenced,not evidenced,taught
+model-training,Model training and post-training,topic,taught,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced,taught
+multi-agent-failures,Multi-agent failure analysis,topic,taught,not evidenced,taught,not evidenced,taught,not evidenced,not evidenced,taught
+privacy,Privacy and user data protection,topic,planned,taught,taught,taught,not evidenced,not evidenced,not evidenced,taught
+procedural-memory,Procedural memory and skills,concept,taught,not evidenced,taught,taught,planned,not evidenced,not evidenced,not evidenced
+progressive-disclosure,Progressive disclosure,pattern,taught,not evidenced,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced
+prompt-injection,Prompt injection,concept,planned,taught,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced
+kv-cache,Prompt prefix and KV caching,method,taught,not evidenced,taught,taught,not evidenced,not evidenced,not evidenced,taught
+retrieval-eval,Retrieval evaluation,topic,taught,taught,not evidenced,not evidenced,taught,not evidenced,not evidenced,taught
+reward-hacking,Reward hacking and evaluation gaming,concept,taught,taught,taught,not evidenced,planned,not evidenced,not evidenced,not evidenced
+reward-model,Reward modeling,method,taught,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+outcome-eval,Task outcome and state-change verification,topic,not evidenced,taught,taught,not evidenced,not evidenced,taught,not evidenced,taught
+threat-modeling,Threat modeling and least privilege,method,not evidenced,taught,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced
+data-curation,Training data selection and quality,topic,taught,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced,taught
+transformer,Transformer and attention,concept,taught,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced,taught
+working-memory,Working memory,concept,taught,taught,not evidenced,taught,not evidenced,not evidenced,not evidenced,taught
+harness-optimization,Automatic harness improvement,method,taught,not evidenced,taught,not evidenced,not evidenced,not evidenced,assigned,taught
+knowledge-curation,Knowledge curation and synthesis,topic,not evidenced,not evidenced,taught,not evidenced,taught,not evidenced,assigned,not evidenced
+multi-agent-debate,Multi-agent debate,pattern,taught,not evidenced,taught,not evidenced,not evidenced,not evidenced,assigned,taught
+deployment,Agent deployment and service APIs,topic,not evidenced,not evidenced,taught,taught,not evidenced,not evidenced,not evidenced,taught
+filesystem,Agent filesystem and storage backends,topic,not evidenced,not evidenced,not evidenced,taught,taught,not evidenced,not evidenced,not evidenced
+refactoring,Agentic debugging and refactoring,application,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,taught,not evidenced
+agentic-rag,Agentic retrieval,pattern,taught,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,taught
+async-agents,Asynchronous agent coordination,pattern,not evidenced,not evidenced,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced
+beam-search,Beam search,method,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+checkpointing,Checkpointing and resuming,pattern,not evidenced,not evidenced,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced
+citation-eval,Citation and evidence evaluation,topic,not evidenced,not evidenced,taught,not evidenced,taught,not evidenced,not evidenced,taught
+error-recovery,Error handling and retries,pattern,not evidenced,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced,taught
+grpo,Group relative policy optimization,method,taught,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+hybrid-search,Hybrid retrieval,method,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+serving,Inference serving and performance,topic,taught,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,taught
+inference-scaling,Inference-time scaling,method,taught,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,taught
+distillation,Knowledge distillation,method,taught,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,taught
+llm-foundations,Language model foundations,topic,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+db-query,Natural-language database and graph queries,application,not evidenced,not evidenced,not evidenced,taught,taught,not evidenced,not evidenced,taught
+persona,Persona and response style control,application,not evidenced,taught,not evidenced,taught,not evidenced,not evidenced,not evidenced,taught
+programmatic-tools,Programmatic tool composition,pattern,not evidenced,not evidenced,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced
+prompt-chain,Prompt chaining,pattern,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+ppo,Proximal policy optimization,method,taught,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+recursive-agents,Recursive and self-modifying agents,pattern,taught,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,taught
+red-teaming,Red teaming and adversarial evaluation,method,not evidenced,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced,taught
+regression-eval,Regression and version comparison,method,not evidenced,not evidenced,taught,not evidenced,not evidenced,taught,not evidenced,not evidenced
+rlhf,Reinforcement learning from human feedback,method,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+reranking,Reranking and late interaction,method,taught,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,taught
+semantic-memory,Semantic memory,concept,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+speculative-decoding,Speculative decoding,method,taught,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,taught
+tokenization,Tokenization,method,not evidenced,taught,taught,not evidenced,not evidenced,not evidenced,not evidenced,taught
+auth,Tool authentication and credential handling,topic,not evidenced,not evidenced,taught,taught,not evidenced,not evidenced,not evidenced,taught
+vlm,Vision-language models,topic,not evidenced,not evidenced,taught,not evidenced,taught,not evidenced,not evidenced,taught
+work-impact,Work automation and social impact,topic,not evidenced,not evidenced,taught,not evidenced,taught,not evidenced,not evidenced,not evidenced
+episodic-memory,Episodic memory,concept,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,assigned,not evidenced
+session-eval,Multi-turn and session evaluation,topic,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught,assigned,not evidenced
+schema-induction,Schema induction and information extraction,method,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,assigned,not evidenced
+tool-discovery,Tool discovery and selection,method,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,assigned,not evidenced
+agent-handoff,Agent handoffs,pattern,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+middleware,Agent middleware,concept,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced
+a2a,Agent2Agent protocol,protocol,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+prompt-optimization,Automatic prompt optimization,method,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+best-of-n,Best-of-N selection,pattern,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+clinical-agents,Clinical decision and literature agents,application,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,taught
+computer-use,Computer-use and web agents,application,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,taught
+canonicalization,Concept canonicalization and ontologies,method,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced
+constraint-retrieval,Constraint-satisfaction retrieval,method,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced
+controlled-eval,Controlled improvement experiments,method,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced
+rl-credit,Credit assignment and advantage estimation,method,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+structured-research,Data-driven research and analysis,application,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced
+data-reconciliation,Database reconciliation and deduplication,method,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced
+provenance,Decision rationale and data provenance,concept,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced
+declarative-agents,Declarative task-oriented agent specifications,pattern,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced
+dialogue-state,Dialogue state tracking and management,topic,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced
+dpo,Direct preference optimization,method,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+rl-systems,Distributed and asynchronous RL systems,topic,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+dspy,DSPy,tool,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+dynamic-delegation,Dynamic subagent creation and batch delegation,pattern,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced
+code-interpreter,Embedded code interpreter,method,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced
+emergent-norms,Emergent communication and social norms,concept,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,taught
+critic-loop,Evaluator and optimizer loop,pattern,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+evaluator-metrics,"Evaluator precision, recall, and agreement",method,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced
+rl-exploration,Exploration and curriculum design,topic,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+smt,Formal reasoning with SMT,method,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced
+gradient-training,Gradient descent and backpropagation,method,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+graph-rag,Graph-based retrieval,method,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+document-transcription,Historical document transcription,application,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced
+hypothesis-ledger,Hypothesis and evidence ledger,pattern,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced
+lora,Low-rank adaptation,method,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+managed-agents,Managed agent hosting,tool,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced
+memory-eval,Memory evaluation,topic,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+memory-poisoning,Memory poisoning,concept,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+memory-scoping,Memory scoping and user isolation,pattern,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced
+imputation,Missing-data imputation and assumptions,method,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced
+compression,Model compression and quantization,method,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+model-selection,Model selection and provider integration,topic,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,taught
+observation-masking,Observation masking,pattern,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+perspective-search,Perspective-guided research,pattern,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced
+rl-policy-gradient,Policy gradient methods,method,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+proactive,Proactive and mixed-initiative agents,pattern,planned,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced
+production-eval,Production monitoring and evaluation feedback,pattern,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced
+hybrid-data,Queries over structured and unstructured data,method,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced
+requirements,Requirements and expected behavior,method,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced
+research-methods,Research design and paper critique,topic,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced
+research-reproduction,Research result reproduction,method,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,taught
+caching,Response caching,method,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+sales-agents,Sales and business assistants,application,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,taught
+semantic-parsing,Semantic parsing to formal queries,method,not evidenced,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced
+skill-induction,Skill induction from experience,method,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+sliding-memory,Sliding-window conversation memory,pattern,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+social-simulation,Social simulation with agents,application,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,taught
+soft-prompts,Soft prompt tuning,method,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+state-replay,State replay and branching,pattern,not evidenced,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced
+social-behavior,Strategic and social agent behavior,topic,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,taught
+tiered-memory,Tiered memory,pattern,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+tree-thoughts,Tree of thoughts,pattern,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+visual-grounding,Visual interface grounding,method,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+worktree-isolation,Workspace isolation,pattern,taught,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced
+world-models,World models,concept,not evidenced,not evidenced,taught,not evidenced,not evidenced,not evidenced,not evidenced,taught
+developer-alignment,Developer-agent alignment,topic,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,assigned,not evidenced
+scientific-workflows,Scientific workflow automation,application,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,assigned,taught
+self-play,Self-play training,method,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,assigned,taught
+activation-patching,Activation patching and causal intervention,method,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+game-agents,Agents for games and puzzles,application,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+behavioral-experiments,Behavioral experiments on agents,method,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+bdi,Belief-desire-intention agents,concept,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+cognitive-perspectives,Cognitive analysis of agents,topic,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+consciousness,Consciousness and agency theories,topic,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+scaling-laws,Language model scaling laws,concept,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+interpretability,Mechanistic interpretability,topic,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+meta-learning,Meta-learning,topic,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+metacognition,Metacognition and self-knowledge,topic,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+circuits,Model circuit analysis,method,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+model-collapse,Model collapse and synthetic-data risks,concept,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+model-based-rl,Model-based reinforcement learning,method,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+moral-behavior,Moral judgment and ethical behavior,topic,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+query-rewriting,Query rewriting and expansion,method,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+sparse-autoencoders,Sparse autoencoders for feature discovery,method,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+theory-of-mind,Theory of mind,concept,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+trading-agents,Trading and financial assistants,application,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+travel-agents,Travel and flight assistants,application,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught
+vla,Vision-language-action models,topic,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,not evidenced,taught

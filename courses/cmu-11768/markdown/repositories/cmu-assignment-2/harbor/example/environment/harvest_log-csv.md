@@ -1,0 +1,30 @@
+# Assignment 2: harbor/example/environment/harvest_log.csv
+
+[Course index](../../../../../../README.md) · [Original source](https://github.com/cmu-agents/assignment-2/blob/HEAD/harbor/example/environment/harvest_log.csv) · [Raw file](../../../../../../raw/repositories/cmu-assignment-2/harbor/example/environment/harvest_log.csv)
+
+Retrieved: 2026-11-13T16:48:13.606223+00:00
+
+```csv
+haul_id,orchard,crew,crates,kilos_per_crate,inspection
+501,Brambleholt,dawn,12,18.00,cleared
+502,Cinderpeak,dusk,24,7.50,cleared
+503,Mistfen,dawn,9,30.00,spoiled
+504,Willowdrift,dusk,24,12.00,cleared
+505,Brambleholt,dusk,7,18.00,spoiled
+506,Cinderpeak,dawn,20,7.50,cleared
+507,Mistfen,dusk,16,30.00,cleared
+508,Willowdrift,dawn,19,12.00,cleared
+509,Brambleholt,dawn,9,18.00,cleared
+510,Cinderpeak,dusk,6,7.50,spoiled
+511,Mistfen,dawn,11,30.00,cleared
+512,Willowdrift,dusk,15,12.00,spoiled
+513,Brambleholt,dusk,6,18.00,cleared
+514,Cinderpeak,dawn,12,7.50,cleared
+515,Mistfen,dusk,8,30.00,cleared
+516,Willowdrift,dawn,14,12.00,cleared
+517,Brambleholt,dawn,4,18.00,cleared
+518,Cinderpeak,dusk,8,7.50,spoiled
+519,Mistfen,dawn,6,30.00,cleared
+520,Willowdrift,dusk,11,12.00,cleared
+
+```

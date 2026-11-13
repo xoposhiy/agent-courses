@@ -1,0 +1,262 @@
+[
+  {
+    "startInSeconds": 1,
+    "endInSeconds": 7,
+    "text": "Welcome to module four. So far in the course,\nyou've spent a lot of time evaluating what an agent says."
+  },
+  {
+    "startInSeconds": 7,
+    "endInSeconds": 11,
+    "text": "You've looked at responses, identified failures,\nturned those failures into criteria,"
+  },
+  {
+    "startInSeconds": 11,
+    "endInSeconds": 16,
+    "text": "and built evaluators that can apply those criteria to new examples."
+  },
+  {
+    "startInSeconds": 16,
+    "endInSeconds": 18,
+    "text": "But agents don't only produce responses."
+  },
+  {
+    "startInSeconds": 18,
+    "endInSeconds": 25,
+    "text": "They can retrieve information, make decisions, call tools,\nand take actions that change something outside the conversation."
+  },
+  {
+    "startInSeconds": 25,
+    "endInSeconds": 30,
+    "text": "And once a task involves several of these steps,\na final response can look perfectly reasonable,"
+  },
+  {
+    "startInSeconds": 30,
+    "endInSeconds": 33,
+    "text": "even when something went wrong along the way."
+  },
+  {
+    "startInSeconds": 33,
+    "endInSeconds": 39,
+    "text": "So let's go back to the shelter agent. Suppose a volunteer asks to go\non an outing with Pepper on Saturday afternoon."
+  },
+  {
+    "startInSeconds": 39,
+    "endInSeconds": 43,
+    "text": "The agent responds, \"Great, you're booked with Pepper\nfor Saturday at 2 PM.\""
+  },
+  {
+    "startInSeconds": 43,
+    "endInSeconds": 47,
+    "text": "If you only evaluate that message, the interaction looks successful."
+  },
+  {
+    "startInSeconds": 47,
+    "endInSeconds": 55,
+    "text": "The response is clear, it confirms the dog, and it gives the right\ntime. But now open the trace and look at what the agent actually did."
+  },
+  {
+    "startInSeconds": 55,
+    "endInSeconds": 61,
+    "text": "It retrieved the volunteer's record, selected Pepper,\ncreated the booking, and then sent the confirmation."
+  },
+  {
+    "startInSeconds": 61,
+    "endInSeconds": 65,
+    "text": "There's one problem: it never checked whether the volunteer was\neligible for the outing."
+  },
+  {
+    "startInSeconds": 65,
+    "endInSeconds": 69,
+    "text": "The booking may exist, the final message may even be\ncompletely accurate,"
+  },
+  {
+    "startInSeconds": 69,
+    "endInSeconds": 74,
+    "text": "but the agent skipped a step that the shelter requires before any\nbooking can be made."
+  },
+  {
+    "startInSeconds": 74,
+    "endInSeconds": 77,
+    "text": "That failure is almost impossible to see from the response alone."
+  },
+  {
+    "startInSeconds": 77,
+    "endInSeconds": 84,
+    "text": "You have to look at the work the agent did before it produced the\nresponse. And a failure can start even earlier."
+  },
+  {
+    "startInSeconds": 84,
+    "endInSeconds": 90,
+    "text": "Imagine the agent receives a request from one volunteer,\nbut retrieves another volunteer's record by mistake."
+  },
+  {
+    "startInSeconds": 90,
+    "endInSeconds": 97,
+    "text": "From there, the rest of the run might actually look pretty good.\nIt checks the eligibility rules against the record it retrieved."
+  },
+  {
+    "startInSeconds": 97,
+    "endInSeconds": 102,
+    "text": "It selects a dog that is appropriate for that person.\nIt creates a valid booking."
+  },
+  {
+    "startInSeconds": 102,
+    "endInSeconds": 108,
+    "text": "Then it tells the user that the outing has been scheduled.\nEach of those later steps can make sense on its own."
+  },
+  {
+    "startInSeconds": 108,
+    "endInSeconds": 111,
+    "text": "The problem is that they're all operating on the wrong volunteer."
+  },
+  {
+    "startInSeconds": 111,
+    "endInSeconds": 115,
+    "text": "So an error in one part of the workflow can propagate through\neverything that follows"
+  },
+  {
+    "startInSeconds": 115,
+    "endInSeconds": 118,
+    "text": "and still leave you with a polished final response."
+  },
+  {
+    "startInSeconds": 118,
+    "endInSeconds": 123,
+    "text": "This is why evaluating a task like this is different from\nevaluating a single answer."
+  },
+  {
+    "startInSeconds": 123,
+    "endInSeconds": 126,
+    "text": "You need to look at the pieces of work that led to the answer."
+  },
+  {
+    "startInSeconds": 126,
+    "endInSeconds": 133,
+    "text": "For the shelter agent, that might mean checking the record it\nretrieved, the eligibility decision it made, the action it took,"
+  },
+  {
+    "startInSeconds": 133,
+    "endInSeconds": 136,
+    "text": "and finally, the response it gave the volunteer."
+  },
+  {
+    "startInSeconds": 136,
+    "endInSeconds": 139,
+    "text": "You don't necessarily need an evaluator for every internal step,"
+  },
+  {
+    "startInSeconds": 139,
+    "endInSeconds": 145,
+    "text": "The question is which pieces of evidence can tell you whether the\nrequirements of the task were actually satisfied."
+  },
+  {
+    "startInSeconds": 145,
+    "endInSeconds": 150,
+    "text": "And looking at those pieces separately can also help you figure out\nwhere a failure came from."
+  },
+  {
+    "startInSeconds": 150,
+    "endInSeconds": 156,
+    "text": "Go back to the case where the wrong volunteer record was retrieved.\nSuppose the agent also makes a bad dog match."
+  },
+  {
+    "startInSeconds": 156,
+    "endInSeconds": 161,
+    "text": "If you only look at the final result, you know the match is wrong,\nbut you don't yet know why."
+  },
+  {
+    "startInSeconds": 161,
+    "endInSeconds": 167,
+    "text": "Maybe the matching logic itself is bad, or maybe it would have worked\nif it had received the correct volunteer record."
+  },
+  {
+    "startInSeconds": 167,
+    "endInSeconds": 174,
+    "text": "One way to separate these possibilities is to evaluate that matching\ndecision again, using the correct record as the input."
+  },
+  {
+    "startInSeconds": 174,
+    "endInSeconds": 176,
+    "text": "If the agent now chooses an appropriate dog,"
+  },
+  {
+    "startInSeconds": 176,
+    "endInSeconds": 182,
+    "text": "that gives you evidence that the matching logic can work and\nthat the earlier retrieval failure was driving the bad result."
+  },
+  {
+    "startInSeconds": 182,
+    "endInSeconds": 188,
+    "text": "If it still makes a bad match, then you've learned something else.\nThere may be a second problem in the reasoning itself."
+  },
+  {
+    "startInSeconds": 188,
+    "endInSeconds": 194,
+    "text": "So component-level evaluation helps you do more than say\nthat the overall task failed."
+  },
+  {
+    "startInSeconds": 194,
+    "endInSeconds": 199,
+    "text": "It helps you locate where the failure entered the process\nand whether it spread into the steps that followed."
+  },
+  {
+    "startInSeconds": 199,
+    "endInSeconds": 207,
+    "text": "You'll use that idea throughout this module. As the tasks become more\ncomplex, you'll look at different scopes of agent behavior."
+  },
+  {
+    "startInSeconds": 207,
+    "endInSeconds": 212,
+    "text": "Sometimes the important evidence is one action.\nSometimes it's the sequence of several actions."
+  },
+  {
+    "startInSeconds": 212,
+    "endInSeconds": 216,
+    "text": "Sometimes you need information from earlier turns in the conversation."
+  },
+  {
+    "startInSeconds": 216,
+    "endInSeconds": 223,
+    "text": "And sometimes the only way to know whether the task succeeded is to\ncheck the state of the external system itself."
+  },
+  {
+    "startInSeconds": 223,
+    "endInSeconds": 228,
+    "text": "Northwind has the same challenge. The Northwind agent doesn't\njust answer questions."
+  },
+  {
+    "startInSeconds": 228,
+    "endInSeconds": 234,
+    "text": "It can look up orders, retrieve customer information,\ncheck product data, and issue refunds."
+  },
+  {
+    "startInSeconds": 234,
+    "endInSeconds": 237,
+    "text": "So imagine a customer asks for the status of an order."
+  },
+  {
+    "startInSeconds": 237,
+    "endInSeconds": 244,
+    "text": "Before you judge the final answer, there are already other questions\nyou might want to ask. Did the agent look up the right order?"
+  },
+  {
+    "startInSeconds": 244,
+    "endInSeconds": 251,
+    "text": "Did it use the correct customer information?\nIf it took an action, was it actually the action the request required?"
+  },
+  {
+    "startInSeconds": 251,
+    "endInSeconds": 254,
+    "text": "When an agent can choose among several possible actions,"
+  },
+  {
+    "startInSeconds": 254,
+    "endInSeconds": 259,
+    "text": "you need to evaluate both what it decided to do and how it\ncarried that action out."
+  },
+  {
+    "startInSeconds": 259,
+    "endInSeconds": 260,
+    "text": "That's where we'll start in the next video."
+  }
+]

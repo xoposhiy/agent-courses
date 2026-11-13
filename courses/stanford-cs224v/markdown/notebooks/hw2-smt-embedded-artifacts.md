@@ -1,0 +1,2526 @@
+# Homework 2 SATIR/VERDICT saved evaluation artifacts
+
+[Course index](../../README.md) · [Original source](https://colab.research.google.com/drive/1YwmG0Nn9_XUiMmJltLnC4zjzzvcJHBwz#embedded-artifacts) · [Raw file](../../raw/notebooks/hw2-smt-embedded-artifacts.json)
+
+Retrieved: 2026-11-13T17:09:53.448153+00:00
+
+```json
+{
+  "pairs": [
+    {
+      "annotations": {
+        "requirements": {},
+        "variables": {
+          "patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now": "Boolean indicating whether the patient currently has a diagnosis of acute febrile mucocutaneous lymph node syndrome.",
+          "patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now@@diagnosed_according_to_centers_for_disease_control_and_prevention_criteria": "Boolean indicating whether the diagnosis of acute febrile mucocutaneous lymph node syndrome is determined according to the Centers for Disease Control and Prevention criteria.",
+          "patient_presented_to_participating_center_on_or_before_tenth_day_of_illness": "Boolean indicating whether the subject presented on or before the tenth day of illness.",
+          "patient_sex_is_female_now": "Boolean value indicating whether the patient's current sex is female.",
+          "patient_sex_is_male_now": "Boolean value indicating whether the patient's current sex is male."
+        }
+      },
+      "decided_by": "inclusion criteria",
+      "eligible": true,
+      "exclusion_status": "sat",
+      "flips_after_core_retraction": false,
+      "flips_after_retraction": false,
+      "inclusion_status": "sat",
+      "observed": {
+        "exclusion_presented_after_tenth_day_of_illness": false,
+        "patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now": true,
+        "patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now@@diagnosed_according_to_centers_for_disease_control_and_prevention_criteria": true,
+        "patient_is_child": true,
+        "patient_presented_to_participating_center_on_or_before_tenth_day_of_illness": true,
+        "patient_time_of_illness_onset_value_recorded_at_presentation_withunit_days": 5.0
+      },
+      "pair_id": "sigir-20144__NCT00000520",
+      "patient_id": "sigir-20144",
+      "patient_note": "A 2-year-old boy is brought to the emergency department by his parents for 5 days of high fever and irritability. The physical exam reveals conjunctivitis, strawberry tongue, inflammation of the hands and feet, desquamation of the skin of the fingers and toes, and cervical lymphadenopathy with the smallest node at 1.5 cm. The abdominal exam demonstrates tenderness and enlarged liver. Laboratory tests report elevated alanine aminotransferase, white blood cell count of 17,580/mm, albumin 2.1 g/dL, C-reactive protein 4.5 mg, erythrocyte sedimentation rate 60 mm/h, mild normochromic, normocytic anemia, and leukocytes in urine of 20/mL with no bacteria identified. The echocardiogram shows moderate dilation of the coronary arteries with possible coronary artery aneurysm.",
+      "recomputed_sat": true,
+      "smt": [
+        "(declare-const patient_is_child Bool)",
+        "(declare-const patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now Bool)",
+        "(declare-const patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now@@diagnosed_according_to_centers_for_disease_control_and_prevention_criteria Bool)",
+        "(declare-const patient_presented_to_participating_center_on_or_before_tenth_day_of_illness Bool)",
+        "(assert (! (=> patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now@@diagnosed_according_to_centers_for_disease_control_and_prevention_criteria patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now) :named REQ0_AUXILIARY0))",
+        "(assert (! (and patient_is_child patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now@@diagnosed_according_to_centers_for_disease_control_and_prevention_criteria patient_presented_to_participating_center_on_or_before_tenth_day_of_illness) :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))"
+      ],
+      "trial_criteria": "Inclusion criteria: Boys and girls who met the CDC criteria for Kawasaki Syndrome. Subjects were excluded if they presented themselves to the participating centers after the tenth day of illness.\nExclusion criteria:",
+      "trial_id": "NCT00000520",
+      "trial_title": "Prevention of Coronary Aneurysms in Kawasaki Syndrome",
+      "unsat_core": [],
+      "violated": []
+    },
+    {
+      "annotations": {
+        "requirements": {},
+        "variables": {
+          "patient_has_finding_of_coffee_ground_emesis_now": "Boolean indicating whether the patient currently presents with coffee ground emesis.",
+          "patient_has_finding_of_melena_now": "Boolean indicating whether the patient currently presents with melena.",
+          "patient_has_finding_of_vomiting_blood_fresh_now": "Boolean indicating whether the patient currently presents with fresh blood hematemesis (vomiting fresh blood)."
+        }
+      },
+      "decided_by": "inclusion criteria",
+      "eligible": true,
+      "exclusion_status": "sat",
+      "flips_after_core_retraction": false,
+      "flips_after_retraction": false,
+      "inclusion_status": "sat",
+      "observed": {
+        "patient_age_value_recorded_now_in_years": 44.0,
+        "patient_has_finding_of_coffee_ground_emesis_now": true,
+        "patient_is_exposed_to_blood_now": true,
+        "patient_is_exposed_to_blood_now@@located_in_upper_gastrointestinal_tract": true,
+        "patient_is_unable_to_consent_now": true
+      },
+      "pair_id": "sigir-20151__NCT02150941a",
+      "patient_id": "sigir-20151",
+      "patient_note": "A 44 yo male is brought to the emergency room after multiple bouts of vomiting that has a \"coffee ground\" appearance. His heart rate is 135 bpm and blood pressure is 70/40 mmHg. Physical exam findings include decreased mental status and cool extremities. He receives a rapid infusion of crystalloid solution followed by packed red blood cell transfusion and is admitted to the ICU for further care.",
+      "recomputed_sat": true,
+      "smt": [
+        "(declare-const patient_has_finding_of_vomiting_blood_fresh_now Bool)",
+        "(declare-const patient_has_finding_of_coffee_ground_emesis_now Bool)",
+        "(declare-const patient_has_finding_of_melena_now Bool)",
+        "(assert (! (or patient_has_finding_of_vomiting_blood_fresh_now patient_has_finding_of_coffee_ground_emesis_now patient_has_finding_of_melena_now) :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))"
+      ],
+      "trial_criteria": "Inclusion criteria: inclusion criteria \n\n Patients presenting with fresh blood hematemesis, coffee ground emesis, or melena \n\n Patients with hematochezia and hypotension (systolic blood pressure < 90 mm Hg) or tachycardia (heart rate > 110 beats per minute) \n\n \nExclusion criteria:  \n\n Identification of a bleeding source within the first 5 minutes of the upper endoscopy or no blood seen in the upper GI tract as these patients do not require additional suctioning. \n\n Age < 18. \n\n No endoscopy was performed. \n\n Endoscopy previously performed for current episode of UGIB. \n\n Patients unable to consent and who do not have a substitute decision maker.",
+      "trial_id": "NCT02150941a",
+      "trial_title": "Effectiveness Study of the BioVac Direct Suction Device in Upper Gastrointestinal Bleeding",
+      "unsat_core": [],
+      "violated": []
+    },
+    {
+      "annotations": {
+        "requirements": {},
+        "variables": {
+          "patient_has_finding_of_hyphae_of_aspergillus_detected_inthehistory@@specimen_is_bronchoalveolar_lavage_fluid": "Boolean indicating whether hyphae of aspergillus have ever been detected in a bronchoalveolar lavage fluid specimen from the patient.",
+          "patient_has_finding_of_hyphae_of_aspergillus_detected_inthehistory@@specimen_is_sputum": "Boolean indicating whether hyphae of aspergillus have ever been detected in a sputum specimen from the patient.",
+          "patient_has_finding_of_hyphae_of_kingdom_fungi_detected_inthehistory@@specimen_is_sputum": "Boolean indicating whether fungal hyphae (any kingdom Fungi, not necessarily Aspergillus) have ever been detected in a sputum specimen from the patient.",
+          "patient_has_finding_of_sputum_culture_positive_for_aspergillus_inthehistory": "Boolean indicating whether the patient has ever had a positive sputum culture for aspergillus species.",
+          "patient_has_undergone_aspergillus_fumigatus_1_precipitin_level_inthehistory_outcome_is_positive": "Boolean indicating whether the patient has ever had a positive aspergillus precipitin test result.",
+          "patient_has_undergone_aspergillus_species_culture_inthehistory_outcome_is_positive": "Boolean indicating whether the patient has ever had a positive bronchoalveolar lavage fluid culture for aspergillus species."
+        }
+      },
+      "decided_by": "inclusion criteria",
+      "eligible": true,
+      "exclusion_status": "sat",
+      "flips_after_core_retraction": false,
+      "flips_after_retraction": false,
+      "inclusion_status": "sat",
+      "observed": {
+        "patient_has_finding_of_hyphae_of_aspergillus_detected_inthehistory": true,
+        "patient_has_finding_of_hyphae_of_aspergillus_detected_inthehistory@@specimen_is_sputum": true,
+        "patient_has_finding_of_sputum_culture_positive_for_aspergillus_inthehistory": true,
+        "patient_is_pregnant_now": false,
+        "patient_is_pregnant_now@@strong_clinical_support": false,
+        "patient_sex_is_female_now": false
+      },
+      "pair_id": "sigir-201522__NCT01259336c",
+      "patient_id": "sigir-201522",
+      "patient_note": "A 65-year-old male with a history of tuberculosis has started to complain of productive cough with tinges of blood. Chest X-ray reveals a round opaque mass within a cavity in his left upper lobe. The spherical mass moved in the cavity during supine and prone CT imaging. Culture of the sputum revealed an organism with septated, low-angle branching hyphae that had straight, parallel walls.",
+      "recomputed_sat": true,
+      "smt": [
+        "(declare-const patient_has_undergone_aspergillus_fumigatus_1_precipitin_level_inthehistory_outcome_is_positive Bool)",
+        "(declare-const patient_has_finding_of_hyphae_of_aspergillus_detected_inthehistory@@specimen_is_bronchoalveolar_lavage_fluid Bool)",
+        "(declare-const patient_has_undergone_aspergillus_species_culture_inthehistory_outcome_is_positive Bool)",
+        "(declare-const patient_has_finding_of_sputum_culture_positive_for_aspergillus_inthehistory Bool)",
+        "(declare-const patient_has_finding_of_hyphae_of_aspergillus_detected_inthehistory@@specimen_is_sputum Bool)",
+        "(declare-const patient_has_finding_of_hyphae_of_aspergillus_detected_inthehistory Bool)",
+        "(assert (! (=> patient_has_finding_of_hyphae_of_aspergillus_detected_inthehistory@@specimen_is_bronchoalveolar_lavage_fluid patient_has_finding_of_hyphae_of_aspergillus_detected_inthehistory) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_0))",
+        "(assert (! (=> patient_has_finding_of_hyphae_of_aspergillus_detected_inthehistory@@specimen_is_sputum patient_has_finding_of_hyphae_of_aspergillus_detected_inthehistory) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_1))",
+        "(assert (! (or patient_has_undergone_aspergillus_fumigatus_1_precipitin_level_inthehistory_outcome_is_positive patient_has_finding_of_hyphae_of_aspergillus_detected_inthehistory@@specimen_is_sputum patient_has_finding_of_hyphae_of_aspergillus_detected_inthehistory@@specimen_is_bronchoalveolar_lavage_fluid patient_has_undergone_aspergillus_species_culture_inthehistory_outcome_is_positive patient_has_finding_of_sputum_culture_positive_for_aspergillus_inthehistory) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))"
+      ],
+      "trial_criteria": "Inclusion criteria: inclusion criteria: \n\n Clinical symptoms: -presence of chronic pulmonary/systemic symptoms lasting ≥ six weeks. \n\n Radiological findings: \n\n Evidence of slowly progressive pulmonary lesions over weeks-months including cavities with surrounding inflammation. \n\n presence of intracavitary mass with a surrounding crescent of air,and presence of pleural thickening in peripheral lesions. \n\n Microbiological/Immunological findings: Positive results in the aspergillus precipitin test, demonstration of aspergillus hyphae in sputum or BAL fluid or cultures of BAL/sputum growing aspergillus species. \n\n The diagnosis of CCPA will be made if \n\n Patient satisfies at least 1, 2a or 2b and/ or any of the 3rd criteria. \n\n FNAC from the cavity wall will be considered in atypical cases \n\n \nExclusion criteria: : \n\n Invasive aspergillosis \n\n Allergic broncho-pulmonary aspergillosis (ABPA) \n\n Active tuberculosis or malignancy \n\n Pregnant females",
+      "trial_id": "NCT01259336c",
+      "trial_title": "Efficacy Of Itraconazole In Chronic Cavitary Pulmonary Aspergillosis",
+      "unsat_core": [],
+      "violated": []
+    },
+    {
+      "annotations": {
+        "requirements": {
+          "REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE": "To be included, the patient must have proven iron deficiency anaemia (according to World Health Organisation criteria).",
+          "REQ1_COMPONENT0_OTHER_REQUIREMENTS": "To be included, the patient must be aged ≥ 13 years.",
+          "REQ1_COMPONENT1_OTHER_REQUIREMENTS": "To be included, the patient must be aged ≤ 18 years."
+        },
+        "variables": {
+          "patient_age_value_recorded_now_in_years": "Numeric value indicating the patient's current age in years.",
+          "patient_has_anemia_caused_by_b12_or_folate_deficiency_now": "Boolean indicating whether the patient's current anemia is caused by vitamin B12 deficiency or folate deficiency.",
+          "patient_has_anemia_secondary_to_drugs_used_to_treat_ibd_now": "Boolean indicating whether the patient's current anemia is secondary to drugs used to treat IBD.",
+          "patient_has_diagnosis_of_haemoglobinopathy_or_myelodysplasia_now": "Boolean indicating whether the patient currently has a diagnosis of any haemoglobinopathy or myelodysplasia.",
+          "patient_has_finding_of_iron_deficiency_anemia_according_to_who_criteria_now": "Boolean indicating whether the patient currently has iron deficiency anaemia according to World Health Organisation criteria.",
+          "patient_has_finding_of_iron_deficiency_anemia_now": "Boolean indicating whether the patient currently has iron deficiency anaemia.",
+          "patient_has_severe_cardiopulmonary_hepatic_or_renal_disease_now": "Boolean indicating whether the patient currently has severe cardiopulmonary, hepatic, or renal disease.",
+          "patient_is_currently_breastfeeding_now": "Boolean indicating whether the patient is currently breastfeeding.",
+          "patient_is_currently_pregnant_now": "Boolean indicating whether the patient is currently pregnant."
+        }
+      },
+      "decided_by": "inclusion criteria",
+      "eligible": true,
+      "exclusion_status": "sat",
+      "flips_after_core_retraction": false,
+      "flips_after_retraction": false,
+      "inclusion_status": "sat",
+      "observed": {
+        "patient_age_value_recorded_now_in_years": 15.0,
+        "patient_has_finding_of_anemia_now": true,
+        "patient_has_finding_of_iron_deficiency_anemia_according_to_who_criteria_now": true,
+        "patient_has_finding_of_iron_deficiency_anemia_now": true,
+        "patient_sex_is_female_now": true
+      },
+      "pair_id": "sigir-201527__NCT01991314a",
+      "patient_id": "sigir-201527",
+      "patient_note": "A 15 yo girl accompanied by her mother is referred for evaluation by the school. The girl has more than expected absences in the last three month, appears to be constantly tired and sleepy in class. Her mother assures the girl is well fed, and getting the proper sleep at night but admits the girls tires easily when they go out on weekend hikes. Physical examination: BP: 90/60. HR 130/min the only remarkable findings are extremely pale skin and mucosae. Grade 3/6 systolic murmur. Lab tests report Hb: 4.2 g/dL, MCV 61.8 fL, serum iron < 1.8 umol/L and ferritin of 2 ng/mL. Fecal occult blood is negative.",
+      "recomputed_sat": true,
+      "smt": [
+        "(declare-const patient_has_finding_of_iron_deficiency_anemia_according_to_who_criteria_now Bool)",
+        "(declare-const patient_has_finding_of_iron_deficiency_anemia_now Bool)",
+        "(declare-const patient_age_value_recorded_now_in_years Real)",
+        "(assert (! (=> patient_has_finding_of_iron_deficiency_anemia_according_to_who_criteria_now patient_has_finding_of_iron_deficiency_anemia_now) :named REQ0_AUXILIARY0))",
+        "(assert (! patient_has_finding_of_iron_deficiency_anemia_according_to_who_criteria_now :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))",
+        "(assert (! (>= patient_age_value_recorded_now_in_years 13) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))",
+        "(assert (! (<= patient_age_value_recorded_now_in_years 18) :named REQ1_COMPONENT1_OTHER_REQUIREMENTS))"
+      ],
+      "trial_criteria": "Inclusion criteria: inclusion criteria: \n\n Patients with proven iron deficiency anaemia on World Health Organisation (WHO)criteria Patients aged 13 - 18 will be considered adolescents, and aged >18 as adults. \n\n \nExclusion criteria: : \n\n Anaemia caused by B12 or folate deficiency, or secondary to drugs used to treat IBD; haemoglobinopathies or myelodysplasia; severe cardiopulmonary, hepatic or renal disease; severe cardiopulmonary, hepatic or renal disease; pregnancy and breast feeding females.",
+      "trial_id": "NCT01991314a",
+      "trial_title": "Treatment of Iron Deficiency Anaemia in Inflammatory Bowel Disease With Ferrous Sulphate",
+      "unsat_core": [],
+      "violated": []
+    },
+    {
+      "annotations": {
+        "requirements": {
+          "REQ1_COMPONENT0_OTHER_REQUIREMENTS": "\"To be included, the patient must have a stable medical history.\"",
+          "REQ1_COMPONENT1_OTHER_REQUIREMENTS": "\"To be included, the patient must have no change in medications that could affect sleepiness.\""
+        },
+        "variables": {
+          "patient_has_finding_of_patient_s_condition_stable_now": "Boolean indicating whether the patient currently has a stable medical history.",
+          "patient_has_symptoms_of_drowsy_now": "Boolean indicating whether the patient currently experiences sleepiness (drowsiness) as a symptom.",
+          "patient_has_symptoms_of_obstructive_sleep_apnea_syndrome_now": "Boolean indicating whether the patient currently experiences symptoms of obstructive sleep apnea syndrome.",
+          "patient_has_symptoms_of_snoring_now": "Boolean indicating whether the patient currently experiences snoring as a symptom.",
+          "patient_is_exposed_to_drug_or_medicament_now": "Boolean indicating whether the patient is currently exposed to medications.",
+          "patient_is_exposed_to_drug_or_medicament_now@@no_change_that_could_affect_sleepiness": "Boolean indicating whether there has been no change in medications that could affect sleepiness."
+        }
+      },
+      "decided_by": "inclusion criteria",
+      "eligible": true,
+      "exclusion_status": "sat",
+      "flips_after_core_retraction": false,
+      "flips_after_retraction": false,
+      "inclusion_status": "sat",
+      "observed": {
+        "patient_has_finding_of_patient_s_condition_stable_now": true,
+        "patient_has_suspicion_of_sleep_disorder_other_than_obstructive_sleep_apnea_now": false,
+        "patient_has_symptoms_of_drowsy_now": true,
+        "patient_has_symptoms_of_obstructive_sleep_apnea_syndrome_now": true,
+        "patient_has_symptoms_of_snoring_now": true,
+        "patient_is_pregnant_now": false
+      },
+      "pair_id": "sigir-20158__NCT00393913",
+      "patient_id": "sigir-20158",
+      "patient_note": "A 10 yo boy with nighttime snoring, pauses in breathing, and restlessness with nighttime awakenings. No history of headache or night terrors. The boy's teacher recently contacted his parents because she was concerned about his declining grades, lack of attention, and excessive sleepiness during class.",
+      "recomputed_sat": true,
+      "smt": [
+        "(declare-const patient_has_symptoms_of_obstructive_sleep_apnea_syndrome_now Bool)",
+        "(declare-const patient_has_symptoms_of_snoring_now Bool)",
+        "(declare-const patient_has_symptoms_of_drowsy_now Bool)",
+        "(declare-const patient_has_finding_of_patient_s_condition_stable_now Bool)",
+        "(declare-const patient_is_exposed_to_drug_or_medicament_now@@no_change_that_could_affect_sleepiness Bool)",
+        "(declare-const patient_is_exposed_to_drug_or_medicament_now Bool)",
+        "(assert (! (=> (or patient_has_symptoms_of_snoring_now patient_has_symptoms_of_drowsy_now) patient_has_symptoms_of_obstructive_sleep_apnea_syndrome_now) :named REQ0_AUXILIARY0))",
+        "(assert (! (=> patient_is_exposed_to_drug_or_medicament_now@@no_change_that_could_affect_sleepiness patient_is_exposed_to_drug_or_medicament_now) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_0))",
+        "(assert (! patient_has_symptoms_of_obstructive_sleep_apnea_syndrome_now :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))",
+        "(assert (! patient_has_finding_of_patient_s_condition_stable_now :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))",
+        "(assert (! patient_is_exposed_to_drug_or_medicament_now@@no_change_that_could_affect_sleepiness :named REQ1_COMPONENT1_OTHER_REQUIREMENTS))"
+      ],
+      "trial_criteria": "Inclusion criteria: inclusion criteria: \n\n Experiences symptoms of OSA, including snoring and sleepiness \n\n Stable medical history with no change in medications that could affect sleepiness \n\n \nExclusion criteria: : \n\n Suspected diagnosis of a sleep disorder other than OSA (i.e., periodic leg movements, narcolepsy, insomnia, central sleep apnea, sleep hypoventilation syndrome) \n\n Medically unstable health conditions (e.g., heart attack, congestive heart failure) \n\n Use of psychotropic medications that cause sedation in the 3 months prior to study entry \n\n Recent or confirmed history of recreational drug use or alcohol abuse \n\n Pregnant \n\n Inability to communicate verbally, write, or read \n\n Visual, hearing, or cognitive impairment",
+      "trial_id": "NCT00393913",
+      "trial_title": "Evaluating the Relationship Between Sleep-Disordered Breathing and Daytime Alertness",
+      "unsat_core": [],
+      "violated": []
+    },
+    {
+      "annotations": {
+        "requirements": {
+          "REQ2_COMPONENT0_NOT_REQUIREMNET_OR_ALWAYS_SATISFIABLE_WITH_ACTION": "Patient must present to a study healthcare facility",
+          "REQ2_COMPONENT1_OTHER_REQUIREMENTS": "Treating physician must clinically suspect community-acquired pneumonia at the study facility"
+        },
+        "variables": {
+          "patient_age_value_recorded_now_in_years": "Numeric value indicating the patient's current age in years.",
+          "patient_has_suspicion_of_community_acquired_pneumonia_now": "Boolean indicating whether the patient is currently clinically suspected by the treating physician to have community-acquired pneumonia.",
+          "patient_has_suspicion_of_community_acquired_pneumonia_now@@by_treating_physician_at_study_facility": "Boolean indicating whether the treating physician at the study healthcare facility currently clinically suspects community-acquired pneumonia.",
+          "patient_presents_to_study_healthcare_facility_now": "Boolean indicating whether the patient is currently presenting to a study healthcare facility.",
+          "patient_resides_in_surveillance_area_now": "Boolean indicating whether the patient currently resides within the surveillance area."
+        }
+      },
+      "decided_by": "inclusion criteria",
+      "eligible": false,
+      "exclusion_status": "sat",
+      "flips_after_core_retraction": true,
+      "flips_after_retraction": true,
+      "inclusion_status": "unsat",
+      "observed": {
+        "patient_age_value_recorded_now_in_years": 31.0,
+        "patient_has_finding_of_hospital_acquired_pneumonia_now": false,
+        "patient_has_finding_of_pneumonia_now@@developed_after_hospitalization_greater_than_or_equal_to_48_hours_at_any_healthcare_facility": false,
+        "patient_has_suspicion_of_community_acquired_pneumonia_now": true,
+        "patient_has_undergone_patient_transfer_to_another_health_care_facility_now": false,
+        "patient_has_undergone_patient_transfer_to_another_health_care_facility_now@@after_hospitalization_at_other_inpatient_facility_for_at_least_48_hours": false,
+        "patient_hospitalization_duration_at_other_inpatient_facility_prior_to_transfer_in_hours": 0.0
+      },
+      "pair_id": "sigir-201524__NCT00929721",
+      "patient_id": "sigir-201524",
+      "patient_note": "A 31 yo male with no significant past medical history presents with productive cough and chest pain. He reports developing cold symptoms one week ago that were improving until two days ago, when he developed a new fever, chills, and worsening cough. He has right-sided chest pain that is aggravated by coughing. His wife also had cold symptoms a week ago but is now feeling well. Vitals signs include temperature 103.4, pulse 105, blood pressure 120/80, and respiratory rate 15. Lung exam reveals expiratory wheezing, decreased breath sounds, and egophany in the left lower lung field.",
+      "recomputed_sat": false,
+      "smt": [
+        "(declare-const patient_age_value_recorded_now_in_years Real)",
+        "(declare-const patient_resides_in_surveillance_area_now Bool)",
+        "(declare-const patient_has_suspicion_of_community_acquired_pneumonia_now Bool)",
+        "(assert (! (>= patient_age_value_recorded_now_in_years 50.0) :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))",
+        "(assert (! patient_resides_in_surveillance_area_now :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))",
+        "(assert (! patient_has_suspicion_of_community_acquired_pneumonia_now :named REQ2_COMPONENT1_OTHER_REQUIREMENTS))"
+      ],
+      "trial_criteria": "Inclusion criteria: inclusion criteria: \n\n Adult subjects 50 years of age or older \n\n Subject must reside in the surveillance area \n\n Subjects who present to a study healthcare facility where the treating physician clinically suspects CAP \n\n \nExclusion criteria: : \n\n Any subject who is transferred to a study healthcare facility after already being hospitalized for 48 hours or more at any other in-patient facility (such as a community hospital). \n\n Hospital Acquired pneumonia (ie, develops signs and symptoms of pneumonia after being hospitalized for 48 hours or more).",
+      "trial_id": "NCT00929721",
+      "trial_title": "A Global Active Surveillance for Community Acquired Pneumonia",
+      "unsat_core": [
+        "REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE",
+        "REQ1_COMPONENT0_OTHER_REQUIREMENTS",
+        "REQ2_COMPONENT1_OTHER_REQUIREMENTS"
+      ],
+      "violated": [
+        "REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE"
+      ]
+    },
+    {
+      "annotations": {
+        "requirements": {
+          "REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE": "To be included, the patient must have a clinical diagnosis of Kawasaki disease.",
+          "REQ0_COMPONENT1_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE": "To be included, the patient must have a clinical diagnosis of giant aneurysm.",
+          "REQ1_COMPONENT0_OTHER_REQUIREMENTS": "To be included, the patient must be age > 10 years."
+        },
+        "variables": {
+          "patient_age_value_recorded_now_in_years": "Numeric value indicating the patient's current age in years.",
+          "patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_inthehistory": "Boolean indicating whether the patient has a past clinical diagnosis of Kawasaki disease (acute febrile mucocutaneous lymph node syndrome).",
+          "patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now": "Boolean indicating whether the patient currently has a clinical diagnosis of Kawasaki disease (acute febrile mucocutaneous lymph node syndrome).",
+          "patient_has_diagnosis_of_aneurysm_now": "Boolean indicating whether the patient currently has a clinical diagnosis of aneurysm.",
+          "patient_has_diagnosis_of_giant_aneurysm_now": "Boolean indicating whether the patient currently has a clinical diagnosis of giant aneurysm."
+        }
+      },
+      "decided_by": "inclusion criteria",
+      "eligible": false,
+      "exclusion_status": "sat",
+      "flips_after_core_retraction": true,
+      "flips_after_retraction": true,
+      "inclusion_status": "unsat",
+      "observed": {
+        "patient_age_value_recorded_now_in_years": 2.0,
+        "patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now": true,
+        "patient_has_finding_of_abnormal_liver_function_now": true,
+        "patient_has_finding_of_alt_sgpt_level_raised_now": true,
+        "patient_is_pregnant_now": false,
+        "patient_is_pregnant_now@@strong_clinical_support": false,
+        "patient_plans_for_child_bearing_during_study_periods": false,
+        "patient_sex_is_female_now": false
+      },
+      "pair_id": "sigir-20144__NCT02114099",
+      "patient_id": "sigir-20144",
+      "patient_note": "A 2-year-old boy is brought to the emergency department by his parents for 5 days of high fever and irritability. The physical exam reveals conjunctivitis, strawberry tongue, inflammation of the hands and feet, desquamation of the skin of the fingers and toes, and cervical lymphadenopathy with the smallest node at 1.5 cm. The abdominal exam demonstrates tenderness and enlarged liver. Laboratory tests report elevated alanine aminotransferase, white blood cell count of 17,580/mm, albumin 2.1 g/dL, C-reactive protein 4.5 mg, erythrocyte sedimentation rate 60 mm/h, mild normochromic, normocytic anemia, and leukocytes in urine of 20/mL with no bacteria identified. The echocardiogram shows moderate dilation of the coronary arteries with possible coronary artery aneurysm.",
+      "recomputed_sat": false,
+      "smt": [
+        "(declare-const patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now Bool)",
+        "(declare-const patient_has_diagnosis_of_giant_aneurysm_now Bool)",
+        "(declare-const patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_inthehistory Bool)",
+        "(declare-const patient_age_value_recorded_now_in_years Real)",
+        "(assert (! (or patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_inthehistory) :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))",
+        "(assert (! patient_has_diagnosis_of_giant_aneurysm_now :named REQ0_COMPONENT1_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))",
+        "(assert (! (> patient_age_value_recorded_now_in_years 10) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))"
+      ],
+      "trial_criteria": "Inclusion criteria: inclusion criteria: \n\n Clinical diagnosis of Kawasaki Disease with giant aneurysm \n\n Must be older than 10 years old \n\n \nExclusion criteria: : \n\n Subjects ever received coronary artery bypass graft (CABG) surgery. \n\n Subjects have active hepatitis or persistent abnormal liver function such as elevated GOT and GPT. \n\n Subjects have the past history of rhabdomyolysis. \n\n Female subjects are pregnant or plan for child-bearing during study periods.",
+      "trial_id": "NCT02114099",
+      "trial_title": "Trial of Atorvastatin on the Persistent Coronary Aneurysm in Children With Kawasaki Disease",
+      "unsat_core": [
+        "REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE",
+        "REQ0_COMPONENT1_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE",
+        "REQ1_COMPONENT0_OTHER_REQUIREMENTS"
+      ],
+      "violated": [
+        "REQ0_COMPONENT1_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE",
+        "REQ1_COMPONENT0_OTHER_REQUIREMENTS"
+      ]
+    },
+    {
+      "annotations": {
+        "requirements": {},
+        "variables": {
+          "patient_age_years": "Integer representing the patient's age in years.",
+          "patient_has_finding_of_graves_disease_in_remission_after_antithyroid_drug_therapy_now": "Boolean indicating whether the patient currently has Graves disease in remission after antithyroid drug therapy.",
+          "patient_has_finding_of_hyperthyroidism_in_remission_after_antithyroid_drug_therapy_now": "Boolean indicating whether the patient currently has hyperthyroidism in remission after antithyroid drug therapy.",
+          "patient_has_severe_concomitant_disease_now": "Boolean indicating whether the patient currently has any severe concomitant disease."
+        }
+      },
+      "decided_by": "inclusion criteria",
+      "eligible": false,
+      "exclusion_status": "sat",
+      "flips_after_core_retraction": true,
+      "flips_after_retraction": true,
+      "inclusion_status": "unsat",
+      "observed": {
+        "patient_age_value_recorded_now_in_years": 46.0,
+        "patient_has_finding_of_graves_disease_in_remission_after_antithyroid_drug_therapy_now": false,
+        "patient_has_finding_of_hyperthyroidism_in_remission_after_antithyroid_drug_therapy_now": false
+      },
+      "pair_id": "sigir-20156__NCT00796913",
+      "patient_id": "sigir-20156",
+      "patient_note": "A 46-year-old woman presents  with a 9 month history of weight loss (20 lb), sweating, insomnia and diarrhea. She reports to have been eating more than normal and that her heart sometimes races for no reason. On physical examination her hands are warm and sweaty, her pulse is irregular at 110bpm and there is hyperreflexia and mild exophthalmia.",
+      "recomputed_sat": false,
+      "smt": [
+        "(declare-const patient_has_finding_of_graves_disease_in_remission_after_antithyroid_drug_therapy_now Bool)",
+        "(declare-const patient_has_finding_of_hyperthyroidism_in_remission_after_antithyroid_drug_therapy_now Bool)",
+        "(assert (! patient_has_finding_of_graves_disease_in_remission_after_antithyroid_drug_therapy_now :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))",
+        "(assert (! patient_has_finding_of_hyperthyroidism_in_remission_after_antithyroid_drug_therapy_now :named REQ0_COMPONENT1_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))"
+      ],
+      "trial_criteria": "Inclusion criteria: inclusion criteria: \n\n Graves hyperthyroidism in remission after ATD \n\n \nExclusion criteria: : \n\n Age < 18, severe concomitant disease",
+      "trial_id": "NCT00796913",
+      "trial_title": "Remission Induction and Sustenance in Graves' Disease 2",
+      "unsat_core": [
+        "REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE",
+        "REQ0_COMPONENT1_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE"
+      ],
+      "violated": [
+        "REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE",
+        "REQ0_COMPONENT1_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE"
+      ]
+    },
+    {
+      "annotations": {
+        "requirements": {},
+        "variables": {
+          "patient_age_value_recorded_now_in_years": "Numeric value indicating the patient's current age in years.",
+          "patient_has_finding_of_renal_impairment_now": "Boolean indicating whether the patient currently has a clinical finding of renal impairment.",
+          "patient_has_undergone_coronary_artery_bypass_graft_inthehistory": "Boolean indicating whether the patient has ever undergone coronary artery bypass grafting surgery at any time in their history.",
+          "patient_has_undergone_coronary_artery_bypass_graft_inthehistory@@current_operation": "Boolean indicating whether the patient is currently undergoing coronary artery bypass grafting (CABG) in the index operation.",
+          "patient_has_undergone_emergency_operation_inthehistory": "Boolean indicating whether the patient has ever undergone an emergency operation in their history.",
+          "patient_has_undergone_emergency_operation_inthehistory@@current_operation": "Boolean indicating whether the patient's current heart surgery (index operation) is emergent.",
+          "patient_has_undergone_operation_on_heart_valve_inthehistory": "Boolean indicating whether the patient has ever undergone heart valve surgery at any time in their history.",
+          "patient_has_undergone_operation_on_heart_valve_inthehistory@@current_operation": "Boolean indicating whether the patient is currently undergoing heart valve surgery in the index operation.",
+          "patient_has_undergone_revision_of_bypass_for_coronary_artery_inthehistory": "Boolean indicating whether the patient has ever undergone a repeat coronary artery bypass grafting surgery (revision of bypass for coronary artery) in their history.",
+          "patient_has_undergone_revision_of_bypass_for_coronary_artery_inthehistory@@current_operation": "Boolean indicating whether the current heart surgery is a repeat (re-do) coronary artery bypass grafting.",
+          "patient_has_undergone_revision_of_prosthesis_of_heart_valve_inthehistory": "Boolean indicating whether the patient has ever undergone a repeat heart valve surgery (revision of prosthesis of heart valve) in their history.",
+          "patient_has_undergone_revision_of_prosthesis_of_heart_valve_inthehistory@@current_operation": "Boolean indicating whether the current heart surgery is a repeat (re-do) heart valve surgery.",
+          "patient_left_ventricular_ejection_fraction_value_recorded_now_withunit_percent": "Numeric percentage representing the patient's current left ventricular ejection fraction.",
+          "patient_serum_creatinine_level_finding_value_recorded_now_withunit_mg_per_dl": "Numeric value representing the patient's serum creatinine concentration in mg/dL recorded now.",
+          "patient_serum_creatinine_level_finding_value_recorded_now_withunit_mg_per_dl@@baseline_measurement": "Boolean indicating whether the serum creatinine concentration value recorded now is a baseline (pre-existing) measurement."
+        }
+      },
+      "decided_by": "inclusion criteria",
+      "eligible": false,
+      "exclusion_status": "sat",
+      "flips_after_core_retraction": true,
+      "flips_after_retraction": true,
+      "inclusion_status": "unsat",
+      "observed": {
+        "patient_age_value_recorded_now_in_years": 0.5,
+        "patient_has_finding_of_acute_renal_failure_syndrome_now": true,
+        "patient_has_finding_of_acute_renal_failure_syndrome_now@@pre_operative": false,
+        "patient_has_finding_of_acute_renal_failure_syndrome_now@@pre_operative@@strong_clinical_support": false,
+        "patient_has_undergone_creatinine_measurement_serum_inthehistory": true,
+        "patient_serum_creatinine_level_finding_value_recorded_now_withunit_milligrams_per_deciliter": 1.3,
+        "serum_creatinine_value_recorded_at_baseline_withunit_mg_per_dl": 1.3
+      },
+      "pair_id": "sigir-201418__NCT00774137a",
+      "patient_id": "sigir-201418",
+      "patient_note": "A 6-month-old male infant has a urine output of less than 0.2 mL/kg/hr shortly after undergoing major surgery. On examination, he has generalized edema. His blood pressure is 115/80 mm Hg, his pulse is 141/min, and his respirations are 18/min. His blood urea nitrogen is 33 mg/dL, and his serum creatinine is 1.3 mg/dL. Initial urinalysis shows specific gravity of 1.017. Microscopic examination of the urine sample reveals 1 WBC per high-power field (HPF), 18 RBCs per HPF, and 5 granular casts per HPF. His fractional excretion of sodium is 3.3%.",
+      "recomputed_sat": false,
+      "smt": [
+        "(declare-const patient_has_undergone_emergency_operation_now Bool)",
+        "(declare-const patient_has_finding_of_renal_impairment_inthehistory Bool)",
+        "(declare-const patient_has_finding_of_renal_impairment_inthehistory@@pre_existing_at_baseline Bool)",
+        "(declare-const patient_has_undergone_creatinine_measurement_serum_inthehistory Bool)",
+        "(declare-const patient_has_undergone_creatinine_measurement_serum_inthehistory@@at_baseline Bool)",
+        "(declare-const serum_creatinine_value_recorded_at_baseline_withunit_mg_per_dl Real)",
+        "(declare-const patient_left_ventricular_ejection_fraction_value_recorded_now_withunit_percent Real)",
+        "(declare-const patient_age_value_recorded_now_in_years Real)",
+        "(declare-const patient_has_diagnosis_of_diabetes_mellitus_now Bool)",
+        "(declare-const patient_is_undergoing_coronary_artery_bypass_graft_now Bool)",
+        "(declare-const patient_is_undergoing_operation_on_heart_valve_now Bool)",
+        "(declare-const patient_is_undergoing_revision_of_bypass_for_coronary_artery_now Bool)",
+        "(declare-const patient_is_undergoing_revision_of_prosthesis_of_heart_valve_now Bool)",
+        "(assert (! (=> patient_has_finding_of_renal_impairment_inthehistory@@pre_existing_at_baseline patient_has_finding_of_renal_impairment_inthehistory) :named REQ1_AUXILIARY0))",
+        "(assert (! (=> patient_has_undergone_creatinine_measurement_serum_inthehistory@@at_baseline patient_has_undergone_creatinine_measurement_serum_inthehistory) :named REQ1_AUXILIARY1))",
+        "(assert (! (and (or patient_is_undergoing_coronary_artery_bypass_graft_now patient_is_undergoing_operation_on_heart_valve_now) (>= patient_age_value_recorded_now_in_years 18.0) (or patient_has_undergone_emergency_operation_now (> serum_creatinine_value_recorded_at_baseline_withunit_mg_per_dl 2.0) (< patient_left_ventricular_ejection_fraction_value_recorded_now_withunit_percent 35.0) (>= patient_age_value_recorded_now_in_years 70.0) patient_has_diagnosis_of_diabetes_mellitus_now (and patient_is_undergoing_coronary_artery_bypass_graft_now patient_is_undergoing_operation_on_heart_valve_now) (or patient_is_undergoing_revision_of_bypass_for_coronary_artery_now patient_is_undergoing_revision_of_prosthesis_of_heart_valve_now))) :named REQ_INCLUSION_AT_LEAST_ONE))"
+      ],
+      "trial_criteria": "Inclusion criteria: inclusion criteria for Adults: (must have at least one of the following) \n\n Emergent surgery \n\n Pre-existing kidney impairment (baseline serum creatinine greater than 2 mg/dL) \n\n Ejection fraction less than 35% \n\n At least 70 years old \n\n Diabetes mellitus \n\n Combined CABG and valve surgery \n\n Repeat CABG or valve surgery \n\n \nExclusion criteria:  for Adults: \n\n Pre-operative acute kidney injury \n\n Enrolled in a conflicting research study \n\n Prior kidney transplantation \n\n Baseline serum creatinine level greater than 4.5 mg/dL \n\n Nephrotoxic drugs administered pre-operatively \n\n Surgery for only left ventricular assist device \n\n inclusion criteria for Children: \n\n Undergoing open heart surgery",
+      "trial_id": "NCT00774137a",
+      "trial_title": "Examining New Diagnostic Tests for Acute Kidney Injury After Heart Surgery",
+      "unsat_core": [
+        "REQ1_AUXILIARY0",
+        "REQ1_AUXILIARY1",
+        "REQ_INCLUSION_AT_LEAST_ONE"
+      ],
+      "violated": [
+        "REQ_INCLUSION_AT_LEAST_ONE"
+      ]
+    },
+    {
+      "annotations": {
+        "requirements": {},
+        "variables": {
+          "guardian_has_signed_informed_consent": "Boolean indicating whether at least one guardian of the patient has signed an informed consent.",
+          "parent_has_signed_informed_consent": "Boolean indicating whether at least one parent of the patient has signed an informed consent.",
+          "patient_age_value_recorded_now_in_years": "Numeric value indicating the patient's current age in years.",
+          "patient_has_finding_of_well_adult_now": "Boolean indicating whether the patient is currently a well adult (healthy volunteer).",
+          "patient_has_given_assent_now": "Boolean indicating whether the patient has currently given assent to participate in the study.",
+          "patient_is_able_to_understand_nature_of_study_now": "Boolean indicating whether the patient is currently able to understand the nature of the study.",
+          "patient_is_healthy_volunteer_child_now": "Boolean indicating whether the patient is currently a healthy child (healthy pediatric volunteer)."
+        }
+      },
+      "decided_by": "inclusion criteria",
+      "eligible": false,
+      "exclusion_status": "sat",
+      "flips_after_core_retraction": true,
+      "flips_after_retraction": true,
+      "inclusion_status": "unsat",
+      "observed": {
+        "patient_age_value_recorded_now_in_years": 10.0,
+        "patient_has_finding_of_disease_condition_finding_now": true,
+        "patient_is_healthy_volunteer_child_now": false
+      },
+      "pair_id": "sigir-20158__NCT00233194a",
+      "patient_id": "sigir-20158",
+      "patient_note": "A 10 yo boy with nighttime snoring, pauses in breathing, and restlessness with nighttime awakenings. No history of headache or night terrors. The boy's teacher recently contacted his parents because she was concerned about his declining grades, lack of attention, and excessive sleepiness during class.",
+      "recomputed_sat": false,
+      "smt": [
+        "(declare-const patient_age_value_recorded_now_in_years Real)",
+        "(declare-const patient_has_given_assent_now Bool)",
+        "(declare-const patient_is_able_to_understand_nature_of_study_now Bool)",
+        "(declare-const patient_is_healthy_volunteer_child_now Bool)",
+        "(assert (! (=> (or (> patient_age_value_recorded_now_in_years 9) (and (< patient_age_value_recorded_now_in_years 9) patient_is_able_to_understand_nature_of_study_now)) patient_has_given_assent_now) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))",
+        "(assert (! patient_is_healthy_volunteer_child_now :named REQ2_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))"
+      ],
+      "trial_criteria": "Inclusion criteria: inclusion criteria: \n\n Assent of child (if over the age of 9 or younger but able to understand the nature of the study) \n\n At least one parent or guardian must sign an informed consent \n\n Child must be either a healthy volunteer or scheduled for an adenotonsillectomy for any reason \n\n Children scheduled for adenotonsillectomies must be referred to the program by a treating otolaryngologist who practices at the University of Michigan or St. Joseph Mercy Hospital in Ann Arbor, Michigan \n\n \nExclusion criteria: : \n\n Mental or physical limitations that would prevent proper interpretation of neurobehavioral tests \n\n Medical history that could confound interpretation of EEG or behavioral data, including epilepsy, psychiatric diagnoses (other than disruptive behavior disorders), head trauma with loss of consciousness for more than 30 seconds, or chronic medication use (e.g., benzodiazepines, other hypnotics, or antihistamines) \n\n Current treatment by a physician or past surgical treatment for SDB \n\n A known medical condition that carries independent high risk of SDB (e.g., Pierre Robin syndrome, Down syndrome, or neuromuscular disorders) or excessive daytime sleepiness (e.g., narcolepsy) \n\n Inability to schedule polysomnography, a Multiple Sleep Latency Test, and neurobehavioral testing before the surgical date \n\n Determination by any of the patient's physicians that sleep testing is required before surgery can be scheduled (to avoid the possibility that study enr",
+      "trial_id": "NCT00233194a",
+      "trial_title": "Identification of Sleep-Disordered Breathing in Children",
+      "unsat_core": [
+        "REQ0_COMPONENT0_OTHER_REQUIREMENTS",
+        "REQ2_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE"
+      ],
+      "violated": [
+        "REQ2_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE"
+      ]
+    },
+    {
+      "annotations": {
+        "requirements": {
+          "REQ0_COMPONENT0_OTHER_REQUIREMENTS": "To be included, the patient must be aged ≥ 2 months.",
+          "REQ0_COMPONENT1_OTHER_REQUIREMENTS": "To be included, the patient must be aged ≤ 59 months.",
+          "REQ0_COMPONENT2_OTHER_REQUIREMENTS": "To be included, the patient must be attending the outpatient clinics of the participating sites."
+        },
+        "variables": {
+          "patient_age_value_recorded_now_in_months": "Numeric value indicating the patient's current age in months.",
+          "patient_has_accessibility_for_follow_up": "Boolean indicating whether the patient has accessibility for follow-up.",
+          "patient_is_attending_outpatient_clinic_of_participating_site_now": "Boolean indicating whether the patient is currently attending the outpatient clinic of a participating site.",
+          "written_informed_consent_provided_by_legal_guardian": "Boolean indicating whether written informed consent has been provided by a legal guardian for the patient.",
+          "written_informed_consent_provided_by_parent": "Boolean indicating whether written informed consent has been provided by a parent for the patient."
+        }
+      },
+      "decided_by": "inclusion criteria",
+      "eligible": false,
+      "exclusion_status": "sat",
+      "flips_after_core_retraction": true,
+      "flips_after_retraction": true,
+      "inclusion_status": "unsat",
+      "observed": {
+        "patient_age_value_recorded_now_in_months": 48.0,
+        "patient_has_diagnosis_of_asthma_inthehistory": false,
+        "patient_has_finding_of_cyanosis_now": false,
+        "patient_has_finding_of_difficult_to_wake_now": false,
+        "patient_has_finding_of_drowsy_now": false,
+        "patient_has_finding_of_inability_to_drink_now": false,
+        "patient_has_finding_of_seizure_now": false,
+        "patient_has_finding_of_wheezing_now": true,
+        "patient_has_world_health_organization_signs_of_very_severe_disease_now": false,
+        "patient_has_world_health_organization_signs_of_very_severe_pneumonia_now": false,
+        "patient_number_of_wheezing_episodes_in_the_history_value_recorded_in_integer": 0.0
+      },
+      "pair_id": "sigir-201516__NCT00851487",
+      "patient_id": "sigir-201516",
+      "patient_note": "A 4 year old boy presents to the emergency room with wheezing. He has had a history of allergic rhinitis, but no history of wheezing. His mother reports that 5 hours ago patient was playing in the backyard sandbox when she heard him suddenly start coughing. The coughing lasted only moments, but he has been audibly wheezing since. Mother was concerned, because his breathing has not returned to normal, so she brought him to the ED. On exam, the child is playful and well appearing. Wheezing is heard in the mid-right chest area. O2 sats are 100% on room air.",
+      "recomputed_sat": false,
+      "smt": [
+        "(declare-const patient_age_value_recorded_now_in_months Real)",
+        "(declare-const patient_is_attending_outpatient_clinic_of_participating_site_now Bool)",
+        "(declare-const patient_has_finding_of_pneumonia_now Bool)",
+        "(declare-const patient_has_finding_of_pneumonia_now@@defined_according_to_world_health_organization_criteria Bool)",
+        "(declare-const patient_has_finding_of_pneumonia_now@@non_severe Bool)",
+        "(assert (! (=> patient_has_finding_of_pneumonia_now@@defined_according_to_world_health_organization_criteria patient_has_finding_of_pneumonia_now) :named REQ1_AUXILIARY0))",
+        "(assert (! (=> patient_has_finding_of_pneumonia_now@@non_severe patient_has_finding_of_pneumonia_now) :named REQ1_AUXILIARY1))",
+        "(assert (! (>= patient_age_value_recorded_now_in_months 2.0) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))",
+        "(assert (! (<= patient_age_value_recorded_now_in_months 59.0) :named REQ0_COMPONENT1_OTHER_REQUIREMENTS))",
+        "(assert (! patient_is_attending_outpatient_clinic_of_participating_site_now :named REQ0_COMPONENT2_OTHER_REQUIREMENTS))",
+        "(assert (! (and patient_has_finding_of_pneumonia_now@@defined_according_to_world_health_organization_criteria patient_has_finding_of_pneumonia_now@@non_severe) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))"
+      ],
+      "trial_criteria": "Inclusion criteria: inclusion criteria: \n\n Children aged 2 to 59 months attending the outpatient's clinics of participating sites \n\n WHO defined non-severe pneumonia \n\n Accessibility for follow-up \n\n Written informed consent by a parent or legal guardian \n\n \nExclusion criteria: : \n\n WHO signs of severe pneumonia recognised by lower chest wall retraction. Children who present with wheezing will be evaluated for lower chest wall indrawing after treatments with nebulised salbutamol. WHO signs of very severe disease/pneumonia defined as any of the following: \n\n Cyanosis \n\n Inability to drink \n\n Convulsions \n\n Abnormally sleepy or difficult to wake \n\n Severe malnutrition recognised by weight for age less than third percentile by the NCHS (National Child Health Statistics) growth chart and/or oedema (see chart). \n\n All patients with a previous history of 3 or more episodes of wheeze or diagnosed to have asthma. \n\n Known or clinically recognisable congenital heart disease with cyanosis or, congestive heart failure or cardiomegaly. \n\n Known or clinically recognisable acute/chronic organ system disorders including jaundice, nephrotic syndrome, severe anaemia manifested as extreme pallor etc. \n\n Other infectious conditions requiring antibiotic therapy at the day of contact including meningitis, tuberculosis, dysentery, osteomyelitis, septic arthritis etc. \n\n Children who have taken the appropriate doses of WHO-recommended dose of anti microbial drug for 48 hours prior to presentation.",
+      "trial_id": "NCT00851487",
+      "trial_title": "Trial of Amoxicillin Compared With Placebo for Pneumonia in Children Aged 2-59 Months",
+      "unsat_core": [
+        "REQ0_COMPONENT0_OTHER_REQUIREMENTS",
+        "REQ0_COMPONENT1_OTHER_REQUIREMENTS",
+        "REQ0_COMPONENT2_OTHER_REQUIREMENTS",
+        "REQ1_AUXILIARY0",
+        "REQ1_AUXILIARY1",
+        "REQ1_COMPONENT0_OTHER_REQUIREMENTS"
+      ],
+      "violated": [
+        "REQ1_COMPONENT0_OTHER_REQUIREMENTS"
+      ]
+    },
+    {
+      "annotations": {
+        "requirements": {
+          "REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE": "At least one qualifying symptom event (with all qualifiers) must be present",
+          "REQ1_AUXILIARY0": "The event warrants further risk stratification, as determined by an emergency department attending",
+          "REQ1_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE": "patient must have at least two cardiac risk factors (from exhaustive subcategories)",
+          "REQ3_COMPONENT0_OTHER_REQUIREMENTS": "To be included, the patient must be less than 75 years of age.",
+          "REQ3_COMPONENT1_OTHER_REQUIREMENTS": "To be included, the patient must be greater than 40 years of age."
+        },
+        "variables": {
+          "breath_holding_duration_value_recorded_now_in_seconds": "Numeric value representing the duration in seconds for which the patient can hold their breath now.",
+          "patient_age_value_recorded_now_in_years": "Numeric value indicating the patient's current age in years.",
+          "patient_cardiac_risk_factor_count_now": "Numeric value indicating the number of cardiac risk factors (from the specified set) the patient currently has.",
+          "patient_has_finding_of_at_risk_of_heart_disease_now": "Boolean indicating whether the patient currently has at least two cardiac risk factors (from the specified subcategories).",
+          "patient_has_finding_of_chest_pain_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": "Boolean indicating whether the patient has had chest pain in the past 24 hours, with all required qualifiers.",
+          "patient_has_finding_of_chest_tightness_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": "Boolean indicating whether the patient has had chest tightness in the past 24 hours, with all required qualifiers.",
+          "patient_has_finding_of_current_tobacco_smoking_now": "Boolean indicating whether the patient is currently a tobacco smoker.",
+          "patient_has_finding_of_diabetes_mellitus_now": "Boolean indicating whether the patient currently has diabetes mellitus.",
+          "patient_has_finding_of_family_history_of_coronary_artery_disease_now": "Boolean indicating whether the patient currently has a family history of coronary artery disease.",
+          "patient_has_finding_of_generalized_weakness_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": "Boolean indicating whether the patient has had generalized weakness in the past 24 hours, with all required qualifiers.",
+          "patient_has_finding_of_hyperlipidemia_now": "Boolean indicating whether the patient currently has hyperlipidemia.",
+          "patient_has_finding_of_hypertension_now": "Boolean indicating whether the patient currently has hypertension.",
+          "patient_has_finding_of_nausea_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": "Boolean indicating whether the patient has had nausea in the past 24 hours, with all required qualifiers.",
+          "patient_has_finding_of_pain_radiating_to_back_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": "Boolean indicating whether the patient has had pain radiating to back in the past 24 hours, with all required qualifiers.",
+          "patient_has_finding_of_pain_radiating_to_both_arms_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": "Boolean indicating whether the patient has had pain radiating to both arms in the past 24 hours, with all required qualifiers.",
+          "patient_has_finding_of_pain_radiating_to_both_shoulders_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": "Boolean indicating whether the patient has had pain radiating to both shoulders in the past 24 hours, with all required qualifiers.",
+          "patient_has_finding_of_pain_radiating_to_epigastrium_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": "Boolean indicating whether the patient has had pain radiating to epigastrium in the past 24 hours, with all required qualifiers.",
+          "patient_has_finding_of_pain_radiating_to_jaw_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": "Boolean indicating whether the patient has had pain radiating to jaw in the past 24 hours, with all required qualifiers.",
+          "patient_has_finding_of_pain_radiating_to_left_arm_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": "Boolean indicating whether the patient has had pain radiating to left arm in the past 24 hours, with all required qualifiers.",
+          "patient_has_finding_of_pain_radiating_to_left_shoulder_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": "Boolean indicating whether the patient has had pain radiating to left shoulder in the past 24 hours, with all required qualifiers.",
+          "patient_has_finding_of_pain_radiating_to_neck_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": "Boolean indicating whether the patient has had pain radiating to neck in the past 24 hours, with all required qualifiers.",
+          "patient_has_finding_of_pain_radiating_to_right_arm_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": "Boolean indicating whether the patient has had pain radiating to right arm in the past 24 hours, with all required qualifiers.",
+          "patient_has_finding_of_pain_radiating_to_right_shoulder_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": "Boolean indicating whether the patient has had pain radiating to right shoulder in the past 24 hours, with all required qualifiers.",
+          "patient_has_finding_of_pain_radiating_to_throat_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": "Boolean indicating whether the patient has had pain radiating to throat in the past 24 hours, with all required qualifiers.",
+          "patient_has_finding_of_presyncope_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": "Boolean indicating whether the patient has had presyncope in the past 24 hours, with all required qualifiers.",
+          "patient_has_finding_of_sinus_rhythm_now": "Boolean indicating whether the patient is currently in sinus rhythm.",
+          "patient_has_finding_of_syncope_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": "Boolean indicating whether the patient has had syncope in the past 24 hours, with all required qualifiers.",
+          "patient_has_finding_of_unexplained_shortness_of_breath_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": "Boolean indicating whether the patient has had unexplained shortness of breath in the past 24 hours, with all required qualifiers.",
+          "patient_has_finding_of_vomiting_thought_to_be_of_cardiac_origin_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": "Boolean indicating whether the patient has had vomiting thought to be of cardiac origin in the past 24 hours, with all required qualifiers.",
+          "patient_is_able_to_provide_written_informed_consent_now": "Boolean indicating whether the patient is currently able to provide written informed consent."
+        }
+      },
+      "decided_by": "inclusion criteria",
+      "eligible": false,
+      "exclusion_status": "sat",
+      "flips_after_core_retraction": true,
+      "flips_after_retraction": true,
+      "inclusion_status": "unsat",
+      "observed": {
+        "patient_age_value_recorded_now_in_years": 58.0,
+        "patient_cardiac_risk_factor_count_now": 1,
+        "patient_has_contraindication_to_beta_blocker_therapy_now@@taking_daily_antiasthmatic_medication": false,
+        "patient_has_diagnosis_of_coronary_arteriosclerosis_inthehistory": false,
+        "patient_has_diagnosis_of_coronary_arteriosclerosis_inthehistory@@self_reported_history": false,
+        "patient_has_diagnosis_of_coronary_artery_stenosis_inthehistory": false,
+        "patient_has_diagnosis_of_coronary_artery_stenosis_inthehistory@@known": false,
+        "patient_has_diagnosis_of_coronary_artery_stenosis_inthehistory@@self_reported_history": false,
+        "patient_has_diagnosis_of_coronary_artery_stenosis_inthehistory@@significant_stenosis_greater_than_50_percent": false,
+        "patient_has_diagnosis_of_myocardial_infarction_inthehistory": false,
+        "patient_has_diagnosis_of_myocardial_infarction_inthehistory@@self_reported_history": false,
+        "patient_has_finding_of_at_risk_of_heart_disease_now": false,
+        "patient_has_finding_of_atrial_arrhythmia_now": false,
+        "patient_has_finding_of_chest_pain_inthepast24hours": true,
+        "patient_has_finding_of_chest_pain_now": false,
+        "patient_has_finding_of_chest_pain_now@@persistent": false,
+        "patient_has_finding_of_chest_tightness_inthepast24hours": true,
+        "patient_has_finding_of_chest_tightness_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": true,
+        "patient_has_finding_of_clinical_instability_now": false,
+        "patient_has_finding_of_current_tobacco_smoking_now": false,
+        "patient_has_finding_of_diabetes_mellitus_now": false,
+        "patient_has_finding_of_ekg_myocardial_ischemia_now": false,
+        "patient_has_finding_of_ekg_myocardial_ischemia_now@@new": false,
+        "patient_has_finding_of_ekg_myocardial_ischemia_now@@present_in_more_than_two_anatomically_adjacent_leads": false,
+        "patient_has_finding_of_family_history_of_coronary_artery_disease_now": false,
+        "patient_has_finding_of_hyperlipidemia_now": false,
+        "patient_has_finding_of_hypertension_now": true,
+        "patient_has_finding_of_nausea_inthepast24hours": true,
+        "patient_has_finding_of_pain_radiating_to_back_inthepast24hours": true,
+        "patient_has_finding_of_pain_radiating_to_both_arms_inthepast24hours": false,
+        "patient_has_finding_of_pain_radiating_to_both_shoulders_inthepast24hours": false,
+        "patient_has_finding_of_pain_radiating_to_epigastrium_inthepast24hours": false,
+        "patient_has_finding_of_vomiting_thought_to_be_of_cardiac_origin_inthepast24hours": false,
+        "patient_is_taking_metformin_containing_product_now": false
+      },
+      "pair_id": "sigir-20141__NCT01084239",
+      "patient_id": "sigir-20141",
+      "patient_note": "A 58-year-old African-American woman presents to the ER with episodic pressing/burning anterior chest pain that began two days earlier for the first time in her life. The pain started while she was walking, radiates to the back, and is accompanied by nausea, diaphoresis and mild dyspnea, but is not increased on inspiration. The latest episode of pain ended half an hour prior to her arrival. She is known to have hypertension and obesity. She denies smoking, diabetes, hypercholesterolemia, or a family history of heart disease. She currently takes no medications. Physical examination is normal. The EKG shows nonspecific changes.",
+      "recomputed_sat": false,
+      "role": "the selective-core example for Part 3",
+      "smt": [
+        "(declare-const patient_has_finding_of_chest_pain_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending Bool)",
+        "(declare-const patient_has_finding_of_chest_tightness_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_left_arm_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_right_arm_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_both_arms_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_left_shoulder_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_right_shoulder_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_both_shoulders_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_back_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_neck_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_epigastrium_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_jaw_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_throat_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending Bool)",
+        "(declare-const patient_has_finding_of_unexplained_shortness_of_breath_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending Bool)",
+        "(declare-const patient_has_finding_of_syncope_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending Bool)",
+        "(declare-const patient_has_finding_of_presyncope_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending Bool)",
+        "(declare-const patient_has_finding_of_generalized_weakness_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending Bool)",
+        "(declare-const patient_has_finding_of_nausea_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending Bool)",
+        "(declare-const patient_has_finding_of_vomiting_thought_to_be_of_cardiac_origin_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending Bool)",
+        "(declare-const patient_cardiac_risk_factor_count_now Int)",
+        "(declare-const patient_has_finding_of_at_risk_of_heart_disease_now Bool)",
+        "(declare-const patient_has_finding_of_diabetes_mellitus_now Bool)",
+        "(declare-const patient_has_finding_of_hypertension_now Bool)",
+        "(declare-const patient_has_finding_of_hyperlipidemia_now Bool)",
+        "(declare-const patient_has_finding_of_current_tobacco_smoking_now Bool)",
+        "(declare-const patient_has_finding_of_family_history_of_coronary_artery_disease_now Bool)",
+        "(declare-const patient_age_value_recorded_now_in_years Real)",
+        "(declare-const breath_holding_duration_value_recorded_now_in_seconds Real)",
+        "(declare-const patient_has_finding_of_sinus_rhythm_now Bool)",
+        "(declare-const patient_has_finding_of_generalized_weakness_inthepast24hours Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_jaw_inthepast24hours Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_both_shoulders_inthepast24hours Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_epigastrium_inthepast24hours Bool)",
+        "(declare-const patient_has_finding_of_chest_tightness_inthepast24hours Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_back_inthepast24hours Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_left_shoulder_inthepast24hours Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_throat_inthepast24hours Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_right_shoulder_inthepast24hours Bool)",
+        "(declare-const patient_has_finding_of_unexplained_shortness_of_breath_inthepast24hours Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_neck_inthepast24hours Bool)",
+        "(declare-const patient_has_finding_of_syncope_inthepast24hours Bool)",
+        "(declare-const patient_has_finding_of_chest_pain_inthepast24hours Bool)",
+        "(declare-const patient_has_finding_of_nausea_inthepast24hours Bool)",
+        "(declare-const patient_has_finding_of_presyncope_inthepast24hours Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_left_arm_inthepast24hours Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_right_arm_inthepast24hours Bool)",
+        "(declare-const patient_has_finding_of_vomiting_thought_to_be_of_cardiac_origin_inthepast24hours Bool)",
+        "(declare-const patient_has_finding_of_pain_radiating_to_both_arms_inthepast24hours Bool)",
+        "(assert (! (= patient_cardiac_risk_factor_count_now (+ (ite patient_has_finding_of_diabetes_mellitus_now 1 0) (ite patient_has_finding_of_hypertension_now 1 0) (ite patient_has_finding_of_hyperlipidemia_now 1 0) (ite patient_has_finding_of_current_tobacco_smoking_now 1 0) (ite patient_has_finding_of_family_history_of_coronary_artery_disease_now 1 0))) :named REQ1_AUXILIARY0))",
+        "(assert (! (= patient_has_finding_of_at_risk_of_heart_disease_now (>= patient_cardiac_risk_factor_count_now 2)) :named REQ1_AUXILIARY1))",
+        "(assert (! (=> patient_has_finding_of_chest_pain_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_chest_pain_inthepast24hours) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_0))",
+        "(assert (! (=> patient_has_finding_of_chest_tightness_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_chest_tightness_inthepast24hours) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_1))",
+        "(assert (! (=> patient_has_finding_of_generalized_weakness_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_generalized_weakness_inthepast24hours) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_2))",
+        "(assert (! (=> patient_has_finding_of_nausea_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_nausea_inthepast24hours) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_3))",
+        "(assert (! (=> patient_has_finding_of_pain_radiating_to_back_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_back_inthepast24hours) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_4))",
+        "(assert (! (=> patient_has_finding_of_pain_radiating_to_both_arms_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_both_arms_inthepast24hours) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_5))",
+        "(assert (! (=> patient_has_finding_of_pain_radiating_to_both_shoulders_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_both_shoulders_inthepast24hours) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_6))",
+        "(assert (! (=> patient_has_finding_of_pain_radiating_to_epigastrium_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_epigastrium_inthepast24hours) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_7))",
+        "(assert (! (=> patient_has_finding_of_pain_radiating_to_jaw_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_jaw_inthepast24hours) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_8))",
+        "(assert (! (=> patient_has_finding_of_pain_radiating_to_left_arm_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_left_arm_inthepast24hours) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_9))",
+        "(assert (! (=> patient_has_finding_of_pain_radiating_to_left_shoulder_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_left_shoulder_inthepast24hours) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_10))",
+        "(assert (! (=> patient_has_finding_of_pain_radiating_to_neck_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_neck_inthepast24hours) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_11))",
+        "(assert (! (=> patient_has_finding_of_pain_radiating_to_right_arm_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_right_arm_inthepast24hours) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_12))",
+        "(assert (! (=> patient_has_finding_of_pain_radiating_to_right_shoulder_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_right_shoulder_inthepast24hours) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_13))",
+        "(assert (! (=> patient_has_finding_of_pain_radiating_to_throat_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_throat_inthepast24hours) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_14))",
+        "(assert (! (=> patient_has_finding_of_presyncope_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_presyncope_inthepast24hours) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_15))",
+        "(assert (! (=> patient_has_finding_of_syncope_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_syncope_inthepast24hours) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_16))",
+        "(assert (! (=> patient_has_finding_of_unexplained_shortness_of_breath_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_unexplained_shortness_of_breath_inthepast24hours) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_17))",
+        "(assert (! (=> patient_has_finding_of_vomiting_thought_to_be_of_cardiac_origin_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_vomiting_thought_to_be_of_cardiac_origin_inthepast24hours) :named AUTO_AUXILIARY_QUAL_IMPLIES_STEM_18))",
+        "(assert (! (or patient_has_finding_of_chest_pain_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_chest_tightness_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_left_arm_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_right_arm_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_both_arms_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_left_shoulder_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_right_shoulder_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_both_shoulders_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_back_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_neck_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_epigastrium_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_jaw_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_throat_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_unexplained_shortness_of_breath_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_syncope_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_presyncope_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_generalized_weakness_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_nausea_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_vomiting_thought_to_be_of_cardiac_origin_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending) :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))",
+        "(assert (! (>= patient_cardiac_risk_factor_count_now 2) :named REQ1_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))",
+        "(assert (! (< patient_age_value_recorded_now_in_years 75) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))",
+        "(assert (! (> patient_age_value_recorded_now_in_years 40) :named REQ3_COMPONENT1_OTHER_REQUIREMENTS))",
+        "(assert (! (>= breath_holding_duration_value_recorded_now_in_seconds 10.0) :named REQ4_COMPONENT0_OTHER_REQUIREMENTS))",
+        "(assert (! patient_has_finding_of_sinus_rhythm_now :named REQ5_COMPONENT0_OTHER_REQUIREMENTS))"
+      ],
+      "trial_criteria": "Inclusion criteria: inclusion criteria: \n\n Participant had at least five minutes of chest pain or equivalent (chest tightness; pain radiating to left, right, or both arms or shoulders, back, neck, epigastrium, jaw/throat; or unexplained shortness of breath, syncope/presyncope, generalized weakness, nausea, or vomiting thought to be of cardiac origin) at rest or during exercise within 24 hours of ED presentation, warranting further risk stratification, as determined by an ED attending. \n\n 2 or more cardiac risk factors (diabetes, hypertension, hyperlipidemia, current smoker and family history of coronary artery disease). \n\n Able to provide a written informed consent. \n\n <75 years of age, but >40 years of age. \n\n Able to hold breath for at least 10 seconds. \n\n Sinus rhythm. \n\n \nExclusion criteria: : \n\n New diagnostic ischemic ECG changes (ST-segment elevation or depression > 1 mm or T-wave inversion > 4 mm) in more than two anatomically adjacent leads or left bundle branch block \n\n Documented or self-reported history of CAD (MI, percutaneous coronary interventions [PCIs], coronary artery bypass graft [CABG], known significant coronary stenosis [>50%]) \n\n Greater than 6 hours since presentation to ED. \n\n BMI >40 kg/m2 \n\n Impaired renal function as defined by serum creatinine >1.5 mg/dL* \n\n Elevated troponin-T (> 0.09 ng/ml) \n\n Hemodynamically or clinically unstable condition (BP systolic < 80 mm Hg, atrial or ventricular arrhythmias, persistent chest pain despite adequate therap",
+      "trial_id": "NCT01084239",
+      "trial_title": "Multicenter Study to Rule Out Myocardial Infarction by Cardiac Computed Tomography",
+      "unsat_core": [
+        "REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE",
+        "REQ1_AUXILIARY0",
+        "REQ1_AUXILIARY1",
+        "REQ1_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE",
+        "REQ3_COMPONENT0_OTHER_REQUIREMENTS",
+        "REQ3_COMPONENT1_OTHER_REQUIREMENTS",
+        "REQ4_COMPONENT0_OTHER_REQUIREMENTS",
+        "REQ5_COMPONENT0_OTHER_REQUIREMENTS"
+      ],
+      "violated": [
+        "REQ1_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE",
+        "REQ5_COMPONENT0_OTHER_REQUIREMENTS"
+      ]
+    }
+  ],
+  "policy": {
+    "categories": [
+      {
+        "examples": [
+          "hypertension",
+          "type 2 diabetes",
+          "asthma",
+          "COPD"
+        ],
+        "id": "1a",
+        "silent_means": "unknown_defer",
+        "what": "common chronic disease",
+        "why": "common enough that a silent chart is weak evidence either way"
+      },
+      {
+        "examples": [
+          "cystic fibrosis",
+          "multiple sclerosis",
+          "end-stage renal disease"
+        ],
+        "id": "1b",
+        "silent_means": "assumed_false",
+        "what": "named specific disease",
+        "why": "a condition this salient would have been written down"
+      },
+      {
+        "examples": [
+          "MI within 30 days",
+          "acute exacerbation"
+        ],
+        "id": "1c",
+        "silent_means": "assumed_false",
+        "what": "recent acute event",
+        "why": "a recent event would be in the note"
+      }
+    ],
+    "rules": {
+      "Consent / Setting|Consent / Logistic": {
+        "exclusion": "unknown_defer",
+        "inclusion": "unknown_defer"
+      },
+      "Consent / Setting|Other": {
+        "exclusion": "unknown_defer",
+        "inclusion": "unknown_defer"
+      },
+      "Demographic / Personal Info|Age/Sex": {
+        "exclusion": "unknown_defer",
+        "inclusion": "unknown_defer"
+      },
+      "Demographic / Personal Info|Other": {
+        "exclusion": "unknown_defer",
+        "inclusion": "unknown_defer"
+      },
+      "Demographic / Personal Info|Pregnancy / Lactation": {
+        "exclusion": "assumed_true",
+        "inclusion": "assumed_false"
+      },
+      "Demographic / Personal Info|Race / Ethnicity / Nationality": {
+        "exclusion": "unknown_defer",
+        "inclusion": "unknown_defer"
+      },
+      "Disease/Disorder|Common Acute Disease": {
+        "exclusion": "assumed_true",
+        "inclusion": "assumed_false"
+      },
+      "Disease/Disorder|Common Chronic Disease": {
+        "exclusion": "unknown_defer",
+        "inclusion": "unknown_defer"
+      },
+      "Disease/Disorder|Other Disease": {
+        "exclusion": "assumed_true",
+        "inclusion": "assumed_false"
+      },
+      "Disease/Disorder|Uncommon Acute Disease": {
+        "exclusion": "assumed_true",
+        "inclusion": "assumed_false"
+      },
+      "Disease/Disorder|Uncommon Chronic Disease": {
+        "exclusion": "assumed_true",
+        "inclusion": "assumed_false"
+      },
+      "Numerical Threshold|Encoding a Common Disease/Disorder/Symptom": {
+        "exclusion": "unknown_defer",
+        "inclusion": "unknown_defer"
+      },
+      "Numerical Threshold|Encoding an Uncommon Disease/Disorder/Symptom": {
+        "exclusion": "assumed_true",
+        "inclusion": "assumed_false"
+      },
+      "Numerical Threshold|Other": {
+        "exclusion": "unknown_defer",
+        "inclusion": "unknown_defer"
+      },
+      "Numerical|All": {
+        "exclusion": "unknown_defer",
+        "inclusion": "unknown_defer"
+      },
+      "Other|All": {
+        "exclusion": "unknown_defer",
+        "inclusion": "unknown_defer"
+      },
+      "Procedure|Other": {
+        "exclusion": "assumed_true",
+        "inclusion": "assumed_false"
+      },
+      "Procedure|Past or Ongoing Diagnostic Procedure": {
+        "exclusion": "unknown_defer",
+        "inclusion": "unknown_defer"
+      },
+      "Procedure|Past or Ongoing Imaging Study": {
+        "exclusion": "unknown_defer",
+        "inclusion": "unknown_defer"
+      },
+      "Procedure|Past or Ongoing Routine Procedure": {
+        "exclusion": "assumed_true",
+        "inclusion": "assumed_false"
+      },
+      "Procedure|Past or Ongoing Surgical Procedure": {
+        "exclusion": "assumed_true",
+        "inclusion": "assumed_false"
+      },
+      "Procedure|Past or Ongoing Therapeutic Non-Surgical Procedure": {
+        "exclusion": "assumed_true",
+        "inclusion": "assumed_false"
+      },
+      "Procedure|Past or Ongoing Vaccination / Immunization": {
+        "exclusion": "unknown_defer",
+        "inclusion": "unknown_defer"
+      },
+      "Procedure|Planned / Scheduled Procedure": {
+        "exclusion": "unknown_defer",
+        "inclusion": "unknown_defer"
+      },
+      "Symptom/Sign|Current Symptom": {
+        "exclusion": "assumed_true",
+        "inclusion": "assumed_false"
+      },
+      "Symptom/Sign|Exam Finding (Current Visit)": {
+        "exclusion": "assumed_true",
+        "inclusion": "assumed_false"
+      },
+      "Symptom/Sign|Exam Finding (Past Visits)": {
+        "exclusion": "unknown_defer",
+        "inclusion": "unknown_defer"
+      },
+      "Symptom/Sign|Other Symptom/Sign": {
+        "exclusion": "unknown_defer",
+        "inclusion": "unknown_defer"
+      },
+      "Symptom/Sign|Past Symptom": {
+        "exclusion": "unknown_defer",
+        "inclusion": "unknown_defer"
+      }
+    },
+    "source": "TrialGPT-SMT-Refactored/experiments/typed_policy/policies/",
+    "source_table": "experiments/typed_policy/policies/typed_missingness_v5.csv",
+    "states": {
+      "assumed_false": "chart is silent; policy reads silence as false",
+      "assumed_true": "chart is silent; policy reads silence as true (rare)",
+      "explicit_false": "the chart documents that this does NOT hold",
+      "explicit_true": "the chart documents that this holds",
+      "unknown_defer": "chart is silent; policy refuses to guess, defer to the visit"
+    },
+    "version": "typed_missingness_v1"
+  },
+  "predicate_categories": {
+    "breath_holding_duration_value_recorded_now_in_seconds": {
+      "level1": "Numerical",
+      "level2": "All",
+      "polarity": "inclusion",
+      "rationale": "Raw value of breath holding duration is a numerical measurement.",
+      "type": "Real"
+    },
+    "patient_age_value_recorded_now_in_months": {
+      "level1": "Demographic / Personal Info",
+      "level2": "Age/Sex",
+      "polarity": "exclusion",
+      "rationale": "This is a raw age value, a demographic variable.",
+      "type": "Real"
+    },
+    "patient_age_value_recorded_now_in_years": {
+      "level1": "Demographic / Personal Info",
+      "level2": "Age/Sex",
+      "polarity": "inclusion",
+      "rationale": "Raw age value is demographic information.",
+      "type": "Real"
+    },
+    "patient_cardiac_risk_factor_count_now": {
+      "level1": "Numerical",
+      "level2": "All",
+      "polarity": "inclusion",
+      "rationale": "Raw count of cardiac risk factors is a numerical value.",
+      "type": "Real"
+    },
+    "patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_inthehistory": {
+      "level1": "Disease/Disorder",
+      "level2": "Uncommon Acute Disease",
+      "polarity": "inclusion",
+      "rationale": "Kawasaki disease (the syndrome) is rare and acute.",
+      "type": "Bool"
+    },
+    "patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now": {
+      "level1": "Disease/Disorder",
+      "level2": "Uncommon Acute Disease",
+      "polarity": "exclusion",
+      "rationale": "Kawasaki disease is an uncommon acute disorder.",
+      "type": "Bool"
+    },
+    "patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now@@diagnosed_according_to_centers_for_disease_control_and_prevention_criteria": {
+      "level1": "Disease/Disorder",
+      "level2": "Uncommon Acute Disease",
+      "polarity": "inclusion",
+      "rationale": "Kawasaki disease is rare and acute; qualifier is about documentation method.",
+      "type": "Bool"
+    },
+    "patient_has_diagnosis_of_diabetes_mellitus_now": {
+      "level1": "Disease/Disorder",
+      "level2": "Common Chronic Disease",
+      "polarity": "inclusion",
+      "rationale": "Diabetes mellitus is a common chronic disease.",
+      "type": "Bool"
+    },
+    "patient_has_diagnosis_of_giant_aneurysm_now": {
+      "level1": "Disease/Disorder",
+      "level2": "Uncommon Chronic Disease",
+      "polarity": "inclusion",
+      "rationale": "Giant aneurysm is rare and specialist-managed.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_at_risk_of_heart_disease_now": {
+      "level1": "Disease/Disorder",
+      "level2": "Other Disease",
+      "polarity": "inclusion",
+      "rationale": "Being 'at risk' is not a disease but a risk state; best fit is Other Disease.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_chest_pain_inthepast24hours": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Chest pain in past 24h is a past symptom.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_chest_pain_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Duration, context, and risk stratification are substantive qualifiers for past chest pain.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_chest_tightness_inthepast24hours": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Chest tightness in past 24h is a past symptom.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_chest_tightness_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Duration, context, and risk stratification are substantive qualifiers for past chest tightness.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_coffee_ground_emesis_now": {
+      "level1": "Symptom/Sign",
+      "level2": "Exam Finding (Current Visit)",
+      "polarity": "inclusion",
+      "rationale": "Coffee ground emesis is a current exam finding.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_current_tobacco_smoking_now": {
+      "level1": "Other",
+      "level2": "All",
+      "polarity": "inclusion",
+      "rationale": "Current tobacco use is a behavior, not a disease or symptom.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_diabetes_mellitus_now": {
+      "level1": "Disease/Disorder",
+      "level2": "Common Chronic Disease",
+      "polarity": "inclusion",
+      "rationale": "Diabetes mellitus is a common chronic disease.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_family_history_of_coronary_artery_disease_now": {
+      "level1": "Other",
+      "level2": "All",
+      "polarity": "inclusion",
+      "rationale": "Family history is not a disease or symptom in the patient.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_generalized_weakness_inthepast24hours": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Generalized weakness in past 24h is a past symptom.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_generalized_weakness_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Duration, context, and risk stratification are substantive qualifiers for past generalized weakness.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_graves_disease_in_remission_after_antithyroid_drug_therapy_now": {
+      "level1": "Disease/Disorder",
+      "level2": "Uncommon Chronic Disease",
+      "polarity": "inclusion",
+      "rationale": "Graves disease is uncommon and specialist-managed.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_hyperlipidemia_now": {
+      "level1": "Disease/Disorder",
+      "level2": "Common Chronic Disease",
+      "polarity": "inclusion",
+      "rationale": "Hyperlipidemia is a common chronic disease on primary-care problem lists.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_hypertension_now": {
+      "level1": "Disease/Disorder",
+      "level2": "Common Chronic Disease",
+      "polarity": "inclusion",
+      "rationale": "Hypertension is a common chronic disease.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_hyperthyroidism_in_remission_after_antithyroid_drug_therapy_now": {
+      "level1": "Disease/Disorder",
+      "level2": "Uncommon Chronic Disease",
+      "polarity": "inclusion",
+      "rationale": "Hyperthyroidism is uncommon and specialist-managed.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_hyphae_of_aspergillus_detected_inthehistory": {
+      "level1": "Symptom/Sign",
+      "level2": "Other Symptom/Sign",
+      "polarity": "inclusion",
+      "rationale": "Finding of hyphae is a sign, not a diagnosis.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_hyphae_of_aspergillus_detected_inthehistory@@specimen_is_bronchoalveolar_lavage_fluid": {
+      "level1": "Symptom/Sign",
+      "level2": "Other Symptom/Sign",
+      "polarity": "inclusion",
+      "rationale": "Finding of hyphae is a sign; specimen source restricts the fact.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_hyphae_of_aspergillus_detected_inthehistory@@specimen_is_sputum": {
+      "level1": "Symptom/Sign",
+      "level2": "Other Symptom/Sign",
+      "polarity": "inclusion",
+      "rationale": "Finding of hyphae is a sign; specimen source restricts the fact.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_iron_deficiency_anemia_according_to_who_criteria_now": {
+      "level1": "Disease/Disorder",
+      "level2": "Uncommon Chronic Disease",
+      "polarity": "inclusion",
+      "rationale": "Iron deficiency anemia is uncommon; WHO criteria is a documentation qualifier.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_iron_deficiency_anemia_now": {
+      "level1": "Disease/Disorder",
+      "level2": "Uncommon Chronic Disease",
+      "polarity": "inclusion",
+      "rationale": "Iron deficiency anemia is not a top 20 primary care problem and is specialist-managed.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_melena_now": {
+      "level1": "Symptom/Sign",
+      "level2": "Exam Finding (Current Visit)",
+      "polarity": "inclusion",
+      "rationale": "Melena found now is an exam finding from current visit.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_nausea_inthepast24hours": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Nausea in past 24h is a past symptom.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_nausea_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Duration, context, and risk stratification are substantive qualifiers for past nausea.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_back_inthepast24hours": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Pain radiating to back in past 24h is a past symptom.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_back_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Duration, context, and risk stratification are substantive qualifiers for past radiating pain.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_both_arms_inthepast24hours": {
+      "level1": "Symptom/Sign",
+      "level2": "Current Symptom",
+      "polarity": "inclusion",
+      "rationale": "Pain radiating to both arms in past 24 hours is a current symptom.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_both_arms_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Duration, context, and risk stratification are substantive qualifiers for past radiating pain.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_both_shoulders_inthepast24hours": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Pain radiating to both shoulders in past 24h is a past symptom.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_both_shoulders_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Duration, context, and risk stratification are substantive qualifiers for past radiating pain.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_epigastrium_inthepast24hours": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Pain radiating to epigastrium in past 24h is a past symptom.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_epigastrium_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Duration, context, and risk stratification are substantive qualifiers for past radiating pain.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_jaw_inthepast24hours": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Pain radiating to jaw in past 24h is a past symptom.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_jaw_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Duration, context, and risk stratification are substantive qualifiers for past radiating pain.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_left_arm_inthepast24hours": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Pain radiating to left arm in past 24h is a past symptom.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_left_arm_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Duration, context, and risk stratification are substantive qualifiers for past radiating pain.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_left_shoulder_inthepast24hours": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Pain radiating to left shoulder in past 24h is a past symptom.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_left_shoulder_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Duration, context, and risk stratification are substantive qualifiers for past radiating pain.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_neck_inthepast24hours": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Pain radiating to neck in past 24h is a past symptom.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_neck_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Duration, context, and risk stratification are substantive qualifiers for past radiating pain.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_right_arm_inthepast24hours": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Pain radiating to right arm in past 24h is a past symptom.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_right_arm_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Duration, context, and risk stratification are substantive qualifiers for past radiating pain.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_right_shoulder_inthepast24hours": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Pain radiating to right shoulder in past 24h is a past symptom.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_right_shoulder_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Duration, context, and risk stratification are substantive qualifiers for past radiating pain.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_throat_inthepast24hours": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Pain radiating to throat in past 24h is a past symptom.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pain_radiating_to_throat_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Duration, context, and risk stratification are substantive qualifiers for past radiating pain.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_patient_s_condition_stable_now": {
+      "level1": "Symptom/Sign",
+      "level2": "Exam Finding (Current Visit)",
+      "polarity": "inclusion",
+      "rationale": "Stability is a current exam finding.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pneumonia_now": {
+      "level1": "Disease/Disorder",
+      "level2": "Common Acute Disease",
+      "polarity": "inclusion",
+      "rationale": "Pneumonia is a common acute disease.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pneumonia_now@@defined_according_to_world_health_organization_criteria": {
+      "level1": "Disease/Disorder",
+      "level2": "Common Acute Disease",
+      "polarity": "inclusion",
+      "rationale": "WHO criteria is a documentation protocol, not a substantive change to pneumonia.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_pneumonia_now@@non_severe": {
+      "level1": "Disease/Disorder",
+      "level2": "Common Acute Disease",
+      "polarity": "inclusion",
+      "rationale": "'Non_severe' restricts to a subset of pneumonia, changing the clinical claim.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_presyncope_inthepast24hours": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Presyncope in past 24h is a past symptom.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_presyncope_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Duration, context, and risk stratification are substantive qualifiers for past presyncope.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_renal_impairment_inthehistory": {
+      "level1": "Disease/Disorder",
+      "level2": "Uncommon Chronic Disease",
+      "polarity": "inclusion",
+      "rationale": "Renal impairment is specialist-managed and uncommon.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_renal_impairment_inthehistory@@pre_existing_at_baseline": {
+      "level1": "Disease/Disorder",
+      "level2": "Uncommon Chronic Disease",
+      "polarity": "inclusion",
+      "rationale": "Pre-existing at baseline restricts to a subset of patients.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_sinus_rhythm_now": {
+      "level1": "Symptom/Sign",
+      "level2": "Exam Finding (Current Visit)",
+      "polarity": "inclusion",
+      "rationale": "Sinus rhythm is a current exam finding, typically from ECG.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_sputum_culture_positive_for_aspergillus_inthehistory": {
+      "level1": "Symptom/Sign",
+      "level2": "Exam Finding (Past Visits)",
+      "polarity": "inclusion",
+      "rationale": "Sputum culture result is an exam finding from a past visit.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_syncope_inthepast24hours": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Syncope in past 24h is a past symptom.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_syncope_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Duration, context, and risk stratification are substantive qualifiers for past syncope.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_unexplained_shortness_of_breath_inthepast24hours": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Unexplained shortness of breath in past 24h is a past symptom.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_unexplained_shortness_of_breath_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Duration, context, and risk stratification are substantive qualifiers for past shortness of breath.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_vomiting_blood_fresh_now": {
+      "level1": "Symptom/Sign",
+      "level2": "Exam Finding (Current Visit)",
+      "polarity": "inclusion",
+      "rationale": "Fresh blood vomiting is a current exam finding.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_vomiting_thought_to_be_of_cardiac_origin_inthepast24hours": {
+      "level1": "Symptom/Sign",
+      "level2": "Current Symptom",
+      "polarity": "inclusion",
+      "rationale": "Vomiting in the past 24 hours is a current symptom, with cardiac origin as context.",
+      "type": "Bool"
+    },
+    "patient_has_finding_of_vomiting_thought_to_be_of_cardiac_origin_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending": {
+      "level1": "Symptom/Sign",
+      "level2": "Past Symptom",
+      "polarity": "inclusion",
+      "rationale": "Vomiting of cardiac origin in past 24h is a past symptom; duration, context, and risk qualifiers are substantive.",
+      "type": "Bool"
+    },
+    "patient_has_given_assent_now": {
+      "level1": "Consent / Setting",
+      "level2": "Consent / Logistic",
+      "polarity": "inclusion",
+      "rationale": "Assent is a consent/logistic inclusion criterion.",
+      "type": "Bool"
+    },
+    "patient_has_suspicion_of_community_acquired_pneumonia_now": {
+      "level1": "Disease/Disorder",
+      "level2": "Common Acute Disease",
+      "polarity": "inclusion",
+      "rationale": "Community-acquired pneumonia is a common acute disease.",
+      "type": "Bool"
+    },
+    "patient_has_symptoms_of_drowsy_now": {
+      "level1": "Symptom/Sign",
+      "level2": "Current Symptom",
+      "polarity": "inclusion",
+      "rationale": "Drowsiness is a current symptom.",
+      "type": "Bool"
+    },
+    "patient_has_symptoms_of_obstructive_sleep_apnea_syndrome_now": {
+      "level1": "Symptom/Sign",
+      "level2": "Current Symptom",
+      "polarity": "inclusion",
+      "rationale": "Current symptoms of OSA are a present symptom/sign.",
+      "type": "Bool"
+    },
+    "patient_has_symptoms_of_snoring_now": {
+      "level1": "Symptom/Sign",
+      "level2": "Current Symptom",
+      "polarity": "inclusion",
+      "rationale": "Snoring is a current symptom.",
+      "type": "Bool"
+    },
+    "patient_has_undergone_aspergillus_fumigatus_1_precipitin_level_inthehistory_outcome_is_positive": {
+      "level1": "Procedure",
+      "level2": "Past or Ongoing Diagnostic Procedure",
+      "polarity": "inclusion",
+      "rationale": "This is a diagnostic test (precipitin level) with a positive result.",
+      "type": "Bool"
+    },
+    "patient_has_undergone_aspergillus_species_culture_inthehistory_outcome_is_positive": {
+      "level1": "Procedure",
+      "level2": "Past or Ongoing Diagnostic Procedure",
+      "polarity": "inclusion",
+      "rationale": "This is a diagnostic procedure (culture) with a positive result.",
+      "type": "Bool"
+    },
+    "patient_has_undergone_creatinine_measurement_serum_inthehistory": {
+      "level1": "Procedure",
+      "level2": "Past or Ongoing Diagnostic Procedure",
+      "polarity": "exclusion",
+      "rationale": "Serum creatinine measurement is a diagnostic procedure.",
+      "type": "Bool"
+    },
+    "patient_has_undergone_creatinine_measurement_serum_inthehistory@@at_baseline": {
+      "level1": "Procedure",
+      "level2": "Past or Ongoing Diagnostic Procedure",
+      "polarity": "inclusion",
+      "rationale": "@@at_baseline restricts to baseline measurements.",
+      "type": "Bool"
+    },
+    "patient_has_undergone_emergency_operation_now": {
+      "level1": "Procedure",
+      "level2": "Past or Ongoing Surgical Procedure",
+      "polarity": "inclusion",
+      "rationale": "Emergency operation is a surgical procedure.",
+      "type": "Bool"
+    },
+    "patient_is_able_to_understand_nature_of_study_now": {
+      "level1": "Consent / Setting",
+      "level2": "Consent / Logistic",
+      "polarity": "inclusion",
+      "rationale": "Ability to understand study is a consent/logistic inclusion criterion.",
+      "type": "Bool"
+    },
+    "patient_is_attending_outpatient_clinic_of_participating_site_now": {
+      "level1": "Consent / Setting",
+      "level2": "Other",
+      "polarity": "inclusion",
+      "rationale": "Attendance at a participating site is a setting/logistic criterion.",
+      "type": "Bool"
+    },
+    "patient_is_child": {
+      "level1": "Demographic / Personal Info",
+      "level2": "Age/Sex",
+      "polarity": "inclusion",
+      "rationale": "Predicate encodes age group (child).",
+      "type": "Bool"
+    },
+    "patient_is_exposed_to_drug_or_medicament_now": {
+      "level1": "Other",
+      "level2": "All",
+      "polarity": "inclusion",
+      "rationale": "General drug exposure is not a disease, symptom, or procedure.",
+      "type": "Bool"
+    },
+    "patient_is_exposed_to_drug_or_medicament_now@@no_change_that_could_affect_sleepiness": {
+      "level1": "Other",
+      "level2": "All",
+      "polarity": "inclusion",
+      "rationale": "Exposure to drug with qualifier restricting to no change affecting sleepiness is substantive and not a disease/procedure.",
+      "type": "Bool"
+    },
+    "patient_is_healthy_volunteer_child_now": {
+      "level1": "Demographic / Personal Info",
+      "level2": "Other",
+      "polarity": "inclusion",
+      "rationale": "Healthy volunteer child is a demographic/personal info inclusion.",
+      "type": "Bool"
+    },
+    "patient_is_undergoing_coronary_artery_bypass_graft_now": {
+      "level1": "Procedure",
+      "level2": "Past or Ongoing Surgical Procedure",
+      "polarity": "exclusion",
+      "rationale": "CABG is a surgical procedure being performed now.",
+      "type": "Bool"
+    },
+    "patient_is_undergoing_operation_on_heart_valve_now": {
+      "level1": "Procedure",
+      "level2": "Planned / Scheduled Procedure",
+      "polarity": "inclusion",
+      "rationale": "Heart valve operation is a planned/scheduled procedure.",
+      "type": "Bool"
+    },
+    "patient_is_undergoing_revision_of_bypass_for_coronary_artery_now": {
+      "level1": "Procedure",
+      "level2": "Planned / Scheduled Procedure",
+      "polarity": "inclusion",
+      "rationale": "Revision of coronary bypass is a planned/scheduled procedure.",
+      "type": "Bool"
+    },
+    "patient_is_undergoing_revision_of_prosthesis_of_heart_valve_now": {
+      "level1": "Procedure",
+      "level2": "Planned / Scheduled Procedure",
+      "polarity": "inclusion",
+      "rationale": "Revision of heart valve prosthesis is a planned/scheduled procedure.",
+      "type": "Bool"
+    },
+    "patient_left_ventricular_ejection_fraction_value_recorded_now_withunit_percent": {
+      "level1": "Numerical",
+      "level2": "All",
+      "polarity": "inclusion",
+      "rationale": "Raw value predicate for LVEF.",
+      "type": "Real"
+    },
+    "patient_presented_to_participating_center_on_or_before_tenth_day_of_illness": {
+      "level1": "Other",
+      "level2": "All",
+      "polarity": "inclusion",
+      "rationale": "Presentation timing to center is a trial logistics criterion, not a clinical disease or symptom.",
+      "type": "Bool"
+    },
+    "patient_resides_in_surveillance_area_now": {
+      "level1": "Consent / Setting",
+      "level2": "Other",
+      "polarity": "inclusion",
+      "rationale": "Residence in a surveillance area is a setting criterion.",
+      "type": "Bool"
+    },
+    "serum_creatinine_value_recorded_at_baseline_withunit_mg_per_dl": {
+      "level1": "Numerical",
+      "level2": "All",
+      "polarity": "inclusion",
+      "rationale": "Raw value predicate for serum creatinine at baseline.",
+      "type": "Real"
+    }
+  },
+  "projection": {
+    "NCT00000520": {
+      "exclusion": {
+        "gate": [],
+        "program": [
+          "(assert (! (=> (> patient_time_of_illness_onset_value_recorded_at_presentation_withunit_days 10.0) exclusion_presented_after_tenth_day_of_illness) :named REQ0_AUXILIARY_1))",
+          "(assert (! (not exclusion_presented_after_tenth_day_of_illness) :named REQ0))"
+        ],
+        "variables": [
+          "patient_time_of_illness_onset_value_recorded_now_withunit_days",
+          "exclusion_presented_after_tenth_day_of_illness",
+          "patient_time_of_illness_onset_value_recorded_at_presentation_withunit_days"
+        ]
+      },
+      "inclusion": {
+        "gate": [
+          "(assert patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now)"
+        ],
+        "program": [
+          "(assert (! (=> patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now@@diagnosed_according_to_centers_for_disease_control_and_prevention_criteria patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now) :named REQ0_AUXILIARY0))",
+          "(assert (! (and patient_is_child patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now@@diagnosed_according_to_centers_for_disease_control_and_prevention_criteria patient_presented_to_participating_center_on_or_before_tenth_day_of_illness) :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))"
+        ],
+        "variables": [
+          "patient_sex_is_male_now",
+          "patient_sex_is_female_now",
+          "patient_is_child",
+          "patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now",
+          "patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now@@diagnosed_according_to_centers_for_disease_control_and_prevention_criteria",
+          "patient_presented_to_participating_center_on_or_before_tenth_day_of_illness"
+        ]
+      }
+    },
+    "NCT00233194a": {
+      "exclusion": {
+        "gate": [
+          "(assert patient_can_undergo_multiple_sleep_latency_test_inthefuture)",
+          "(assert patient_can_undergo_polysomnography_inthefuture)",
+          "(assert (not patient_has_diagnosis_of_epilepsy_inthehistory))",
+          "(assert (not patient_has_finding_of_complete_trisomy_21_syndrome_now))",
+          "(assert (not patient_has_finding_of_myoneural_disorder_now))",
+          "(assert (not patient_has_finding_of_narcolepsy_now))",
+          "(assert (not patient_has_finding_of_robin_sequence_now))",
+          "(assert (not patient_will_undergo_surgical_procedure_inthefuture6months))"
+        ],
+        "program": [
+          "(assert (! (=> patient_can_undergo_neuropsychological_testing_now@@prevented_by_mental_limitations (not patient_can_undergo_neuropsychological_testing_now)) :named REQ0_AUXILIARY0))",
+          "(assert (! (=> patient_can_undergo_neuropsychological_testing_now@@prevented_by_physical_limitations (not patient_can_undergo_neuropsychological_testing_now)) :named REQ0_AUXILIARY1))",
+          "(assert (! (not patient_can_undergo_neuropsychological_testing_now@@prevented_by_mental_limitations) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_can_undergo_neuropsychological_testing_now@@prevented_by_physical_limitations) :named REQ0_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (=> (or patient_has_diagnosis_of_epilepsy_inthehistory patient_has_psychiatric_diagnosis_other_than_disruptive_behavior_disorder_inthehistory patient_has_history_of_head_trauma_with_loss_of_consciousness_gt_30s patient_has_chronic_use_of_medication_inthehistory) patient_has_medical_history_that_could_confound_eeg_interpretation) :named REQ1_AUXILIARY0))",
+          "(assert (! (=> (or patient_has_diagnosis_of_epilepsy_inthehistory patient_has_psychiatric_diagnosis_other_than_disruptive_behavior_disorder_inthehistory patient_has_history_of_head_trauma_with_loss_of_consciousness_gt_30s patient_has_chronic_use_of_medication_inthehistory) patient_has_medical_history_that_could_confound_behavioral_data_interpretation) :named REQ1_AUXILIARY1))",
+          "(assert (! true :named REQ1_AUXILIARY2))",
+          "(assert (! (= patient_has_history_of_head_trauma_with_loss_of_consciousness_gt_30s (and patient_has_finding_of_loss_of_consciousness_inthehistory patient_has_finding_of_loss_of_consciousness_inthehistory@@due_to_head_trauma patient_has_finding_of_loss_of_consciousness_inthehistory@@duration_greater_than_thirty_seconds)) :named REQ1_AUXILIARY3))",
+          "(assert (! (=> (or patient_is_exposed_to_benzodiazepine_inthehistory@@chronic_use_as_medication patient_is_exposed_to_hypnotic_agent_inthehistory@@chronic_use_as_medication patient_is_exposed_to_histamine_receptor_antagonist_inthehistory@@chronic_use_as_medication) patient_has_chronic_use_of_medication_inthehistory) :named REQ1_AUXILIARY4))",
+          "(assert (! (=> patient_is_exposed_to_benzodiazepine_inthehistory@@chronic_use_as_medication patient_is_exposed_to_benzodiazepine_inthehistory) :named REQ1_AUXILIARY5))",
+          "(assert (! (=> patient_is_exposed_to_hypnotic_agent_inthehistory@@chronic_use_as_medication patient_is_exposed_to_hypnotic_agent_inthehistory) :named REQ1_AUXILIARY6))",
+          "(assert (! (=> patient_is_exposed_to_histamine_receptor_antagonist_inthehistory@@chronic_use_as_medication patient_is_exposed_to_histamine_receptor_antagonist_inthehistory) :named REQ1_AUXILIARY7))",
+          "(assert (! (=> patient_has_finding_of_loss_of_consciousness_inthehistory@@due_to_head_trauma patient_has_finding_of_loss_of_consciousness_inthehistory) :named REQ1_AUXILIARY8))",
+          "(assert (! (=> patient_has_finding_of_loss_of_consciousness_inthehistory@@duration_greater_than_thirty_seconds patient_has_finding_of_loss_of_consciousness_inthehistory) :named REQ1_AUXILIARY9))",
+          "(assert (! (not (or patient_has_medical_history_that_could_confound_eeg_interpretation patient_has_medical_history_that_could_confound_behavioral_data_interpretation)) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_is_undergoing_therapeutic_procedure_now@@for_sleep_disordered_breathing patient_is_undergoing_therapeutic_procedure_now) :named REQ2_AUXILIARY0))",
+          "(assert (! (=> patient_is_undergoing_therapeutic_procedure_now@@provided_by_physician patient_is_undergoing_therapeutic_procedure_now) :named REQ2_AUXILIARY1))",
+          "(assert (! (=> patient_has_undergone_surgical_procedure_inthehistory@@for_sleep_disordered_breathing patient_has_undergone_surgical_procedure_inthehistory) :named REQ2_AUXILIARY2))",
+          "(assert (! (=> (and patient_is_undergoing_therapeutic_procedure_now@@for_sleep_disordered_breathing patient_is_undergoing_therapeutic_procedure_now@@provided_by_physician) patient_is_receiving_treatment_for_sleep_disordered_breathing_by_physician_now) :named REQ2_AUXILIARY3))",
+          "(assert (! (not patient_is_receiving_treatment_for_sleep_disordered_breathing_by_physician_now) :named REQ2_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_undergone_surgical_procedure_inthehistory@@for_sleep_disordered_breathing) :named REQ2_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (=> (or patient_has_finding_of_robin_sequence_now patient_has_finding_of_complete_trisomy_21_syndrome_now patient_has_finding_of_myoneural_disorder_now) patient_has_finding_of_disease_condition_finding_now@@carries_independent_high_risk_of_sleep_disordered_breathing) :named REQ3_AUXILIARY0))",
+          "(assert (! (=> patient_has_finding_of_narcolepsy_now patient_has_finding_of_disease_condition_finding_now@@carries_independent_high_risk_of_excessive_daytime_sleepiness) :named REQ3_AUXILIARY1))",
+          "(assert (! (=> patient_has_finding_of_disease_condition_finding_now@@carries_independent_high_risk_of_sleep_disordered_breathing patient_has_finding_of_disease_condition_finding_now) :named REQ3_AUXILIARY2))",
+          "(assert (! (=> patient_has_finding_of_disease_condition_finding_now@@carries_independent_high_risk_of_excessive_daytime_sleepiness patient_has_finding_of_disease_condition_finding_now) :named REQ3_AUXILIARY3))",
+          "(assert (! (not patient_has_finding_of_disease_condition_finding_now@@carries_independent_high_risk_of_sleep_disordered_breathing) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_disease_condition_finding_now@@carries_independent_high_risk_of_excessive_daytime_sleepiness) :named REQ3_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! patient_can_undergo_polysomnography_inthefuture@@scheduled_before_surgical_date :named REQ4_COMPONENT0_CAN_ALWAYS_GO_FROM_SATISFIED_TO_NOTSATISFIED))",
+          "(assert (! patient_can_undergo_multiple_sleep_latency_test_inthefuture@@scheduled_before_surgical_date :named REQ4_COMPONENT1_CAN_ALWAYS_GO_FROM_SATISFIED_TO_NOTSATISFIED))",
+          "(assert (! patient_can_undergo_neurobehavioral_testing_inthefuture@@scheduled_before_surgical_date :named REQ4_COMPONENT2_CAN_ALWAYS_GO_FROM_SATISFIED_TO_NOTSATISFIED))",
+          "(assert (! (=> patient_has_undergone_sleep_studies_inthehistory@@determined_required_by_any_patient_physician_before_surgery_scheduling patient_has_undergone_sleep_studies_inthehistory) :named REQ5_AUXILIARY0))",
+          "(assert (! (=> patient_has_undergone_sleep_studies_inthehistory@@determined_required_by_any_patient_physician_before_surgery_scheduling patient_has_physician_determination_sleep_testing_required_before_surgery_scheduling) :named REQ5_AUXILIARY1))",
+          "(assert (! (not patient_has_physician_determination_sleep_testing_required_before_surgery_scheduling) :named REQ5_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_sibling_previously_enrolled_in_study) :named REQ6_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not (or patient_will_no_longer_have_convenient_access_to_university_of_michigan_facilities_within_6_months patient_will_undergo_surgical_procedure_inthefuture6months)) :named REQ7_COMPONENT0_OTHER_REQUIREMENTS))"
+        ],
+        "variables": [
+          "patient_can_undergo_neuropsychological_testing_now",
+          "patient_can_undergo_neuropsychological_testing_now@@prevented_by_mental_limitations",
+          "patient_can_undergo_neuropsychological_testing_now@@prevented_by_physical_limitations",
+          "patient_has_diagnosis_of_epilepsy_inthehistory",
+          "patient_has_diagnosis_of_disruptive_behavior_disorder_inthehistory",
+          "patient_has_finding_of_loss_of_consciousness_inthehistory",
+          "patient_has_finding_of_loss_of_consciousness_inthehistory@@due_to_head_trauma",
+          "patient_has_finding_of_loss_of_consciousness_inthehistory@@duration_greater_than_thirty_seconds",
+          "patient_is_exposed_to_benzodiazepine_inthehistory",
+          "patient_is_exposed_to_benzodiazepine_inthehistory@@chronic_use_as_medication",
+          "patient_is_exposed_to_hypnotic_agent_inthehistory",
+          "patient_is_exposed_to_hypnotic_agent_inthehistory@@chronic_use_as_medication",
+          "patient_is_exposed_to_histamine_receptor_antagonist_inthehistory",
+          "patient_is_exposed_to_histamine_receptor_antagonist_inthehistory@@chronic_use_as_medication",
+          "patient_has_finding_of_well_adult_now",
+          "patient_has_medical_history_that_could_confound_eeg_interpretation",
+          "patient_has_medical_history_that_could_confound_behavioral_data_interpretation",
+          "patient_has_psychiatric_diagnosis_other_than_disruptive_behavior_disorder_inthehistory",
+          "patient_has_history_of_head_trauma_with_loss_of_consciousness_gt_30s",
+          "patient_has_chronic_use_of_medication_inthehistory",
+          "patient_is_undergoing_therapeutic_procedure_now",
+          "patient_is_undergoing_therapeutic_procedure_now@@for_sleep_disordered_breathing",
+          "patient_is_undergoing_therapeutic_procedure_now@@provided_by_physician",
+          "patient_has_undergone_surgical_procedure_inthehistory",
+          "patient_has_undergone_surgical_procedure_inthehistory@@for_sleep_disordered_breathing",
+          "patient_is_receiving_treatment_for_sleep_disordered_breathing_by_physician_now",
+          "patient_has_finding_of_breathing_related_sleep_disorder_now",
+          "patient_has_finding_of_complete_trisomy_21_syndrome_now",
+          "patient_has_finding_of_disease_condition_finding_now",
+          "patient_has_finding_of_disease_condition_finding_now@@carries_independent_high_risk_of_sleep_disordered_breathing",
+          "patient_has_finding_of_disease_condition_finding_now@@carries_independent_high_risk_of_excessive_daytime_sleepiness",
+          "patient_has_finding_of_myoneural_disorder_now",
+          "patient_has_finding_of_narcolepsy_now",
+          "patient_has_finding_of_robin_sequence_now",
+          "patient_can_undergo_polysomnography_inthefuture@@scheduled_before_surgical_date",
+          "patient_can_undergo_multiple_sleep_latency_test_inthefuture@@scheduled_before_surgical_date",
+          "patient_can_undergo_neurobehavioral_testing_inthefuture@@scheduled_before_surgical_date",
+          "patient_has_undergone_sleep_studies_inthehistory",
+          "patient_has_undergone_sleep_studies_inthehistory@@determined_required_by_any_patient_physician_before_surgery_scheduling",
+          "patient_has_physician_determination_sleep_testing_required_before_surgery_scheduling",
+          "patient_has_sibling_previously_enrolled_in_study",
+          "patient_will_no_longer_have_convenient_access_to_university_of_michigan_facilities_within_6_months",
+          "patient_will_undergo_surgical_procedure_inthefuture6months"
+        ]
+      },
+      "inclusion": {
+        "gate": [],
+        "program": [
+          "(assert (! (=> (or (> patient_age_value_recorded_now_in_years 9) (and (< patient_age_value_recorded_now_in_years 9) patient_is_able_to_understand_nature_of_study_now)) patient_has_given_assent_now) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (or parent_has_signed_informed_consent guardian_has_signed_informed_consent) :named REQ1_COMPONENT0_NOT_REQUIREMNET_OR_ALWAYS_SATISFIABLE_WITH_ACTION))",
+          "(assert (! patient_is_healthy_volunteer_child_now :named REQ2_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))"
+        ],
+        "variables": [
+          "patient_age_value_recorded_now_in_years",
+          "patient_has_given_assent_now",
+          "patient_is_able_to_understand_nature_of_study_now",
+          "parent_has_signed_informed_consent",
+          "guardian_has_signed_informed_consent",
+          "patient_has_finding_of_well_adult_now",
+          "patient_is_healthy_volunteer_child_now"
+        ]
+      }
+    },
+    "NCT00393913": {
+      "exclusion": {
+        "gate": [
+          "(assert (not patient_has_finding_of_patient_s_condition_unstable_now))",
+          "(assert (not patient_is_pregnant_now))",
+          "(assert (not patient_has_finding_of_unable_to_read_now))",
+          "(assert (not patient_has_finding_of_unable_to_use_verbal_communication_now))",
+          "(assert (not patient_has_finding_of_unable_to_write_now))",
+          "(assert (not patient_has_finding_of_hearing_loss_now))",
+          "(assert (not patient_has_finding_of_impaired_cognition_now))",
+          "(assert (not patient_has_finding_of_visual_impairment_now))"
+        ],
+        "program": [
+          "(assert (! (not patient_has_suspicion_of_sleep_disorder_other_than_obstructive_sleep_apnea_now) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (=> (or patient_has_finding_of_myocardial_infarction_now patient_has_finding_of_congestive_heart_failure_now) patient_has_finding_of_patient_s_condition_unstable_now) :named REQ1_AUXILIARY0))",
+          "(assert (! (not patient_has_finding_of_patient_s_condition_unstable_now) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_is_exposed_to_psychotropic_agent_inthepast3months@@causes_sedation patient_is_exposed_to_psychotropic_agent_inthepast3months) :named REQ2_AUXILIARY0))",
+          "(assert (! (not patient_is_exposed_to_psychotropic_agent_inthepast3months@@causes_sedation) :named REQ2_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_has_finding_of_recreational_drug_use_inthehistory@@recent_history patient_has_finding_of_recreational_drug_use_inthehistory) :named REQ3_AUXILIARY0))",
+          "(assert (! (=> patient_has_finding_of_recreational_drug_use_inthehistory@@confirmed_history patient_has_finding_of_recreational_drug_use_inthehistory) :named REQ3_AUXILIARY1))",
+          "(assert (! (=> patient_has_finding_of_alcohol_abuse_inthehistory@@recent_history patient_has_finding_of_alcohol_abuse_inthehistory) :named REQ3_AUXILIARY2))",
+          "(assert (! (=> patient_has_finding_of_alcohol_abuse_inthehistory@@confirmed_history patient_has_finding_of_alcohol_abuse_inthehistory) :named REQ3_AUXILIARY3))",
+          "(assert (! (not patient_has_finding_of_recreational_drug_use_inthehistory@@recent_history) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_recreational_drug_use_inthehistory@@confirmed_history) :named REQ3_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_alcohol_abuse_inthehistory@@recent_history) :named REQ3_COMPONENT2_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_alcohol_abuse_inthehistory@@confirmed_history) :named REQ3_COMPONENT3_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_is_pregnant_now) :named REQ4_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_unable_to_use_verbal_communication_now) :named REQ5_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_unable_to_write_now) :named REQ5_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_unable_to_read_now) :named REQ5_COMPONENT2_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_visual_impairment_now) :named REQ6_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_hearing_loss_now) :named REQ6_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_impaired_cognition_now) :named REQ6_COMPONENT2_OTHER_REQUIREMENTS))"
+        ],
+        "variables": [
+          "patient_has_suspicion_of_sleep_disorder_now",
+          "patient_has_suspicion_of_sleep_disorder_other_than_obstructive_sleep_apnea_now",
+          "patient_has_finding_of_congestive_heart_failure_now",
+          "patient_has_finding_of_myocardial_infarction_now",
+          "patient_has_finding_of_patient_s_condition_unstable_now",
+          "patient_is_exposed_to_psychotropic_agent_inthepast3months",
+          "patient_is_exposed_to_psychotropic_agent_inthepast3months@@causes_sedation",
+          "patient_has_finding_of_recreational_drug_use_inthehistory",
+          "patient_has_finding_of_recreational_drug_use_inthehistory@@recent_history",
+          "patient_has_finding_of_recreational_drug_use_inthehistory@@confirmed_history",
+          "patient_has_finding_of_alcohol_abuse_inthehistory",
+          "patient_has_finding_of_alcohol_abuse_inthehistory@@recent_history",
+          "patient_has_finding_of_alcohol_abuse_inthehistory@@confirmed_history",
+          "patient_is_pregnant_now",
+          "patient_has_finding_of_unable_to_use_verbal_communication_now",
+          "patient_has_finding_of_unable_to_write_now",
+          "patient_has_finding_of_unable_to_read_now",
+          "patient_has_finding_of_visual_impairment_now",
+          "patient_has_finding_of_hearing_loss_now",
+          "patient_has_finding_of_impaired_cognition_now"
+        ]
+      },
+      "inclusion": {
+        "gate": [
+          "(assert patient_has_symptoms_of_obstructive_sleep_apnea_syndrome_now)"
+        ],
+        "program": [
+          "(assert (! (=> (or patient_has_symptoms_of_snoring_now patient_has_symptoms_of_drowsy_now) patient_has_symptoms_of_obstructive_sleep_apnea_syndrome_now) :named REQ0_AUXILIARY0))",
+          "(assert (! patient_has_symptoms_of_obstructive_sleep_apnea_syndrome_now :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))",
+          "(assert (! patient_has_finding_of_patient_s_condition_stable_now :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! patient_is_exposed_to_drug_or_medicament_now@@no_change_that_could_affect_sleepiness :named REQ1_COMPONENT1_OTHER_REQUIREMENTS))"
+        ],
+        "variables": [
+          "patient_has_symptoms_of_obstructive_sleep_apnea_syndrome_now",
+          "patient_has_symptoms_of_snoring_now",
+          "patient_has_symptoms_of_drowsy_now",
+          "patient_has_finding_of_patient_s_condition_stable_now",
+          "patient_is_exposed_to_drug_or_medicament_now",
+          "patient_is_exposed_to_drug_or_medicament_now@@no_change_that_could_affect_sleepiness"
+        ]
+      }
+    },
+    "NCT00774137a": {
+      "exclusion": {
+        "gate": [
+          "(assert (not patient_has_undergone_transplant_of_kidney_inthehistory))"
+        ],
+        "program": [
+          "(assert (! (=> patient_has_finding_of_acute_renal_failure_syndrome_now@@pre_operative patient_has_finding_of_acute_renal_failure_syndrome_now) :named REQ0_AUXILIARY1))",
+          "(assert (! (=> patient_has_finding_of_acute_renal_failure_syndrome_now@@pre_operative@@strong_clinical_support patient_has_finding_of_acute_renal_failure_syndrome_now@@pre_operative) :named REQ0_AUXILIARY2))",
+          "(assert (! (=> patient_has_finding_of_acute_renal_failure_syndrome_now@@pre_operative patient_has_finding_of_acute_renal_failure_syndrome_now@@pre_operative) :named REQ0_AUXILIARY0))",
+          "(assert (! (not (or patient_has_finding_of_acute_renal_failure_syndrome_now@@pre_operative patient_has_finding_of_acute_renal_failure_syndrome_now@@pre_operative@@strong_clinical_support)) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_is_undergoing_clinical_trial_now@@is_conflicting patient_is_undergoing_clinical_trial_now) :named REQ1_AUXILIARY0))",
+          "(assert (! (not patient_is_undergoing_clinical_trial_now@@is_conflicting) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_undergone_transplant_of_kidney_inthehistory) :named REQ2_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not (and patient_serum_creatinine_level_finding_value_recorded_now_withunit_milligrams_per_deciliter@@baseline (> patient_serum_creatinine_level_finding_value_recorded_now_withunit_milligrams_per_deciliter 4.5))) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_is_exposed_to_drug_or_medicament_inthehistory@@pre_operatively patient_is_exposed_to_drug_or_medicament_inthehistory) :named REQ4_AUXILIARY0))",
+          "(assert (! (=> patient_is_exposed_to_drug_or_medicament_inthehistory@@nephrotoxic patient_is_exposed_to_drug_or_medicament_inthehistory) :named REQ4_AUXILIARY1))",
+          "(assert (! (=> patient_is_exposed_to_drug_or_medicament_inthehistory@@nephrotoxic@@pre_operatively (and patient_is_exposed_to_drug_or_medicament_inthehistory@@pre_operatively patient_is_exposed_to_drug_or_medicament_inthehistory@@nephrotoxic)) :named REQ4_AUXILIARY2))",
+          "(assert (! (not patient_is_exposed_to_drug_or_medicament_inthehistory@@nephrotoxic@@pre_operatively) :named REQ4_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_is_undergoing_surgery_for_only_left_ventricular_assist_device_implantation_now) :named REQ5_COMPONENT0_OTHER_REQUIREMENTS))"
+        ],
+        "variables": [
+          "patient_has_finding_of_acute_renal_failure_syndrome_now",
+          "patient_has_finding_of_acute_renal_failure_syndrome_now@@pre_operative",
+          "patient_has_finding_of_acute_renal_failure_syndrome_now@@pre_operative@@strong_clinical_support",
+          "patient_is_undergoing_clinical_trial_now",
+          "patient_is_undergoing_clinical_trial_now@@is_conflicting",
+          "patient_has_undergone_transplant_of_kidney_inthehistory",
+          "patient_serum_creatinine_level_finding_value_recorded_now_withunit_milligrams_per_deciliter",
+          "patient_serum_creatinine_level_finding_value_recorded_now_withunit_milligrams_per_deciliter@@baseline",
+          "patient_is_exposed_to_drug_or_medicament_inthehistory",
+          "patient_is_exposed_to_drug_or_medicament_inthehistory@@pre_operatively",
+          "patient_is_exposed_to_drug_or_medicament_inthehistory@@nephrotoxic",
+          "patient_is_exposed_to_drug_or_medicament_inthehistory@@nephrotoxic@@pre_operatively",
+          "patient_is_undergoing_implantation_of_left_ventricular_assist_device_now",
+          "patient_is_undergoing_surgery_for_only_left_ventricular_assist_device_implantation_now"
+        ]
+      },
+      "inclusion": {
+        "gate": [],
+        "program": [
+          "(assert (! (=> patient_has_finding_of_renal_impairment_inthehistory@@pre_existing_at_baseline patient_has_finding_of_renal_impairment_inthehistory) :named REQ1_AUXILIARY0))",
+          "(assert (! (=> patient_has_undergone_creatinine_measurement_serum_inthehistory@@at_baseline patient_has_undergone_creatinine_measurement_serum_inthehistory) :named REQ1_AUXILIARY1))",
+          "(assert (! (and (or patient_is_undergoing_coronary_artery_bypass_graft_now patient_is_undergoing_operation_on_heart_valve_now) (>= patient_age_value_recorded_now_in_years 18.0) (or patient_has_undergone_emergency_operation_now (> serum_creatinine_value_recorded_at_baseline_withunit_mg_per_dl 2.0) (< patient_left_ventricular_ejection_fraction_value_recorded_now_withunit_percent 35.0) (>= patient_age_value_recorded_now_in_years 70.0) patient_has_diagnosis_of_diabetes_mellitus_now (and patient_is_undergoing_coronary_artery_bypass_graft_now patient_is_undergoing_operation_on_heart_valve_now) (or patient_is_undergoing_revision_of_bypass_for_coronary_artery_now patient_is_undergoing_revision_of_prosthesis_of_heart_valve_now))) :named REQ_INCLUSION_AT_LEAST_ONE))"
+        ],
+        "variables": [
+          "patient_has_undergone_emergency_operation_now",
+          "patient_has_finding_of_renal_impairment_inthehistory",
+          "patient_has_finding_of_renal_impairment_inthehistory@@pre_existing_at_baseline",
+          "patient_has_undergone_creatinine_measurement_serum_inthehistory",
+          "patient_has_undergone_creatinine_measurement_serum_inthehistory@@at_baseline",
+          "serum_creatinine_value_recorded_at_baseline_withunit_mg_per_dl",
+          "patient_left_ventricular_ejection_fraction_value_recorded_now_withunit_percent",
+          "patient_age_value_recorded_now_in_years",
+          "patient_has_diagnosis_of_diabetes_mellitus_now",
+          "patient_is_undergoing_coronary_artery_bypass_graft_now",
+          "patient_is_undergoing_operation_on_heart_valve_now",
+          "patient_is_undergoing_revision_of_bypass_for_coronary_artery_now",
+          "patient_is_undergoing_revision_of_prosthesis_of_heart_valve_now"
+        ]
+      }
+    },
+    "NCT00796913": {
+      "exclusion": {
+        "gate": [
+          "(assert (>= patient_age_value_recorded_now_in_years 18.0))"
+        ],
+        "program": [
+          "(assert (! (not (< patient_age_value_recorded_now_in_years 18)) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_has_finding_of_co_morbid_conditions_now@@severe patient_has_finding_of_co_morbid_conditions_now) :named REQ1_AUXILIARY0))",
+          "(assert (! (=> patient_has_finding_of_co_morbid_conditions_now@@severe@@strong_clinical_support patient_has_finding_of_co_morbid_conditions_now@@severe) :named REQ1_AUXILIARY1))",
+          "(assert (! (not patient_has_finding_of_co_morbid_conditions_now@@severe) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_co_morbid_conditions_now@@severe@@strong_clinical_support) :named REQ1_COMPONENT1_OTHER_REQUIREMENTS))"
+        ],
+        "variables": [
+          "patient_age_value_recorded_now_in_years",
+          "patient_has_finding_of_co_morbid_conditions_now",
+          "patient_has_finding_of_co_morbid_conditions_now@@severe",
+          "patient_has_finding_of_co_morbid_conditions_now@@severe@@strong_clinical_support"
+        ]
+      },
+      "inclusion": {
+        "gate": [],
+        "program": [
+          "(assert (! patient_has_finding_of_graves_disease_in_remission_after_antithyroid_drug_therapy_now :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))",
+          "(assert (! patient_has_finding_of_hyperthyroidism_in_remission_after_antithyroid_drug_therapy_now :named REQ0_COMPONENT1_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))"
+        ],
+        "variables": [
+          "patient_has_finding_of_graves_disease_in_remission_after_antithyroid_drug_therapy_now",
+          "patient_has_finding_of_hyperthyroidism_in_remission_after_antithyroid_drug_therapy_now"
+        ]
+      }
+    },
+    "NCT00851487": {
+      "exclusion": {
+        "gate": [
+          "(assert (not patient_has_finding_of_cyanosis_now))",
+          "(assert (not patient_has_finding_of_drowsy_now))",
+          "(assert (not patient_has_finding_of_seizure_now))",
+          "(assert (not patient_has_finding_of_edema_now))",
+          "(assert (not patient_has_diagnosis_of_asthma_inthehistory))",
+          "(assert (not patient_has_finding_of_cardiomegaly_now))",
+          "(assert (not patient_has_finding_of_congestive_heart_failure_now))",
+          "(assert (not patient_has_finding_of_inpatient_stay_inthepast2weeks))",
+          "(assert (not patient_has_finding_of_measles_inthepast1months))",
+          "(assert (not patient_has_finding_of_measles_now))",
+          "(assert (not patient_has_finding_of_allergic_reaction_caused_by_penicillin_inthehistory))",
+          "(assert (not patient_has_finding_of_allergy_to_penicillin_inthehistory))",
+          "(assert (not patient_has_finding_of_penicillin_induced_anaphylaxis_inthehistory))",
+          "(assert (not patient_has_finding_of_penicillin_induced_angioedema_urticaria_inthehistory))"
+        ],
+        "program": [
+          "(assert (! (=> patient_has_finding_of_pneumonia_now@@recognized_by_lower_chest_wall_retraction patient_has_finding_of_pneumonia_now) :named REQ0_AUXILIARY0))",
+          "(assert (! (=> patient_has_finding_of_pneumonia_now@@recognized_by_lower_chest_wall_indrawing_after_treatment_with_nebulized_salbutamol patient_has_finding_of_pneumonia_now) :named REQ0_AUXILIARY1))",
+          "(assert (! (not patient_has_finding_of_pneumonia_now@@recognized_by_lower_chest_wall_retraction) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not (and patient_has_finding_of_wheezing_now patient_has_finding_of_pneumonia_now@@recognized_by_lower_chest_wall_indrawing_after_treatment_with_nebulized_salbutamol)) :named REQ0_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (= patient_has_world_health_organization_signs_of_very_severe_pneumonia_now (or patient_has_finding_of_cyanosis_now patient_has_finding_of_inability_to_drink_now patient_has_finding_of_seizure_now patient_has_finding_of_drowsy_now patient_has_finding_of_difficult_to_wake_now)) :named REQ1_AUXILIARY0))",
+          "(assert (! (= patient_has_world_health_organization_signs_of_very_severe_disease_now patient_has_world_health_organization_signs_of_very_severe_pneumonia_now) :named REQ1_AUXILIARY1))",
+          "(assert (! (not patient_has_world_health_organization_signs_of_very_severe_disease_now) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_world_health_organization_signs_of_very_severe_pneumonia_now) :named REQ1_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (= patient_has_finding_of_nutritional_disorder_now@@recognized_by_weight_for_age_less_than_third_percentile_national_child_health_statistics_growth_chart (< patient_weight_for_age_percentile_value_recorded_now_withunit_percentile 3)) :named REQ2_AUXILIARY0))",
+          "(assert (! (=> patient_has_finding_of_nutritional_disorder_now@@severe patient_has_finding_of_nutritional_disorder_now) :named REQ2_AUXILIARY1))",
+          "(assert (! (=> patient_has_finding_of_nutritional_disorder_now@@recognized_by_weight_for_age_less_than_third_percentile_national_child_health_statistics_growth_chart patient_has_finding_of_nutritional_disorder_now) :named REQ2_AUXILIARY2))",
+          "(assert (! (not patient_has_finding_of_nutritional_disorder_now@@recognized_by_weight_for_age_less_than_third_percentile_national_child_health_statistics_growth_chart) :named REQ2_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_edema_now) :named REQ2_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (not (>= patient_number_of_wheezing_episodes_in_the_history_value_recorded_in_integer 3)) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_diagnosis_of_asthma_inthehistory) :named REQ3_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_has_finding_of_cyanotic_congenital_heart_disease_now@@known patient_has_finding_of_cyanotic_congenital_heart_disease_now) :named REQ4_AUXILIARY0))",
+          "(assert (! (=> patient_has_finding_of_cyanotic_congenital_heart_disease_now@@clinically_recognizable patient_has_finding_of_cyanotic_congenital_heart_disease_now) :named REQ4_AUXILIARY1))",
+          "(assert (! (not patient_has_finding_of_cyanotic_congenital_heart_disease_now@@known) :named REQ4_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_cyanotic_congenital_heart_disease_now@@clinically_recognizable) :named REQ4_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_congestive_heart_failure_now) :named REQ4_COMPONENT2_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_cardiomegaly_now) :named REQ4_COMPONENT3_OTHER_REQUIREMENTS))",
+          "(assert (! (=> (or patient_has_finding_of_jaundice_now patient_has_finding_of_nephrotic_syndrome_now patient_has_finding_of_anemia_now@@severe) patient_has_finding_of_disorder_of_body_system_now@@known) :named REQ5_AUXILIARY0))",
+          "(assert (! (=> (or patient_has_finding_of_jaundice_now patient_has_finding_of_nephrotic_syndrome_now patient_has_finding_of_anemia_now@@severe) patient_has_finding_of_disorder_of_body_system_now@@clinically_recognizable) :named REQ5_AUXILIARY1))",
+          "(assert (! (=> patient_has_finding_of_disorder_of_body_system_now@@acute patient_has_finding_of_disorder_of_body_system_now) :named REQ5_AUXILIARY2))",
+          "(assert (! (=> patient_has_finding_of_disorder_of_body_system_now@@chronic patient_has_finding_of_disorder_of_body_system_now) :named REQ5_AUXILIARY3))",
+          "(assert (! (=> patient_has_finding_of_disorder_of_body_system_now@@known patient_has_finding_of_disorder_of_body_system_now) :named REQ5_AUXILIARY4))",
+          "(assert (! (=> patient_has_finding_of_disorder_of_body_system_now@@clinically_recognizable patient_has_finding_of_disorder_of_body_system_now) :named REQ5_AUXILIARY5))",
+          "(assert (! (=> patient_has_finding_of_anemia_now@@severe patient_has_finding_of_anemia_now) :named REQ5_AUXILIARY6))",
+          "(assert (! (not (and patient_has_finding_of_disorder_of_body_system_now@@acute patient_has_finding_of_disorder_of_body_system_now@@known)) :named REQ5_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not (and patient_has_finding_of_disorder_of_body_system_now@@acute patient_has_finding_of_disorder_of_body_system_now@@clinically_recognizable)) :named REQ5_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (not (and patient_has_finding_of_disorder_of_body_system_now@@chronic patient_has_finding_of_disorder_of_body_system_now@@known)) :named REQ5_COMPONENT2_OTHER_REQUIREMENTS))",
+          "(assert (! (not (and patient_has_finding_of_disorder_of_body_system_now@@chronic patient_has_finding_of_disorder_of_body_system_now@@clinically_recognizable)) :named REQ5_COMPONENT3_OTHER_REQUIREMENTS))",
+          "(assert (! (=> (or patient_has_finding_of_meningitis_now patient_has_finding_of_tuberculosis_now patient_has_finding_of_dysentery_now patient_has_finding_of_osteomyelitis_now patient_has_finding_of_septic_arthritis_now) patient_has_finding_of_disorder_due_to_infection_now@@requires_antibiotic_therapy) :named REQ6_AUXILIARY0))",
+          "(assert (! (=> patient_has_finding_of_disorder_due_to_infection_now@@requires_antibiotic_therapy patient_has_finding_of_disorder_due_to_infection_now) :named REQ6_AUXILIARY1))",
+          "(assert (! (not patient_has_finding_of_disorder_due_to_infection_now@@requires_antibiotic_therapy) :named REQ6_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_has_taken_drug_or_medicament_inthepast48hours@@who_recommended_antimicrobial patient_has_taken_drug_or_medicament_inthepast48hours) :named REQ7_AUXILIARY0))",
+          "(assert (! (=> patient_has_taken_drug_or_medicament_inthepast48hours@@appropriate_dose_taken patient_has_taken_drug_or_medicament_inthepast48hours) :named REQ7_AUXILIARY1))",
+          "(assert (! (not (and patient_has_taken_drug_or_medicament_inthepast48hours@@who_recommended_antimicrobial patient_has_taken_drug_or_medicament_inthepast48hours@@appropriate_dose_taken)) :named REQ7_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_inpatient_stay_inthepast2weeks) :named REQ8_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (= patient_has_finding_of_measles_now (and patient_has_fever_with_rash_now patient_has_conjunctivitis_now)) :named REQ9_AUXILIARY0))",
+          "(assert (! (not (or patient_has_finding_of_measles_now patient_has_finding_of_measles_inthepast1months)) :named REQ9_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_prior_enrolment_in_current_trial) :named REQ10_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_allergy_to_penicillin_inthehistory) :named REQ11_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_allergic_reaction_caused_by_penicillin_inthehistory) :named REQ11_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_penicillin_induced_angioedema_urticaria_inthehistory) :named REQ11_COMPONENT2_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_penicillin_induced_anaphylaxis_inthehistory) :named REQ11_COMPONENT3_OTHER_REQUIREMENTS))",
+          "(assert (! (not (and patient_lives_outside_municipal_limits_of_city_now patient_cannot_be_followed_up_now)) :named REQ12_COMPONENT0_OTHER_REQUIREMENTS))"
+        ],
+        "variables": [
+          "patient_has_finding_of_pneumonia_now",
+          "patient_has_finding_of_pneumonia_now@@severe",
+          "patient_has_finding_of_pneumonia_now@@recognized_by_lower_chest_wall_retraction",
+          "patient_has_finding_of_pneumonia_now@@recognized_by_lower_chest_wall_indrawing_after_treatment_with_nebulized_salbutamol",
+          "patient_has_finding_of_wheezing_now",
+          "patient_has_world_health_organization_signs_of_very_severe_disease_now",
+          "patient_has_finding_of_cyanosis_now",
+          "patient_has_finding_of_inability_to_drink_now",
+          "patient_has_finding_of_seizure_now",
+          "patient_has_finding_of_drowsy_now",
+          "patient_has_finding_of_difficult_to_wake_now",
+          "patient_has_world_health_organization_signs_of_very_severe_pneumonia_now",
+          "patient_has_finding_of_edema_now",
+          "patient_has_finding_of_nutritional_disorder_now",
+          "patient_has_finding_of_nutritional_disorder_now@@severe",
+          "patient_has_finding_of_nutritional_disorder_now@@recognized_by_weight_for_age_less_than_third_percentile_national_child_health_statistics_growth_chart",
+          "patient_weight_for_age_percentile_value_recorded_now_withunit_percentile",
+          "patient_has_diagnosis_of_asthma_inthehistory",
+          "patient_has_finding_of_wheezing_inthehistory",
+          "patient_number_of_wheezing_episodes_in_the_history_value_recorded_in_integer",
+          "patient_has_finding_of_cardiomegaly_now",
+          "patient_has_finding_of_congestive_heart_failure_now",
+          "patient_has_finding_of_cyanotic_congenital_heart_disease_now",
+          "patient_has_finding_of_cyanotic_congenital_heart_disease_now@@known",
+          "patient_has_finding_of_cyanotic_congenital_heart_disease_now@@clinically_recognizable",
+          "patient_has_finding_of_disorder_of_body_system_now",
+          "patient_has_finding_of_disorder_of_body_system_now@@acute",
+          "patient_has_finding_of_disorder_of_body_system_now@@chronic",
+          "patient_has_finding_of_disorder_of_body_system_now@@known",
+          "patient_has_finding_of_disorder_of_body_system_now@@clinically_recognizable",
+          "patient_has_finding_of_jaundice_now",
+          "patient_has_finding_of_nephrotic_syndrome_now",
+          "patient_has_finding_of_anemia_now",
+          "patient_has_finding_of_anemia_now@@severe",
+          "patient_has_finding_of_disorder_due_to_infection_now",
+          "patient_has_finding_of_disorder_due_to_infection_now@@requires_antibiotic_therapy",
+          "patient_has_finding_of_meningitis_now",
+          "patient_has_finding_of_tuberculosis_now",
+          "patient_has_finding_of_dysentery_now",
+          "patient_has_finding_of_osteomyelitis_now",
+          "patient_has_finding_of_septic_arthritis_now",
+          "patient_has_taken_drug_or_medicament_inthepast48hours",
+          "patient_has_taken_drug_or_medicament_inthepast48hours@@who_recommended_antimicrobial",
+          "patient_has_taken_drug_or_medicament_inthepast48hours@@appropriate_dose_taken",
+          "patient_has_finding_of_inpatient_stay_inthepast2weeks",
+          "patient_has_conjunctivitis_now",
+          "patient_has_fever_with_rash_now",
+          "patient_has_finding_of_measles_inthepast1months",
+          "patient_has_finding_of_measles_now",
+          "patient_has_prior_enrolment_in_current_trial",
+          "patient_has_finding_of_allergy_to_penicillin_inthehistory",
+          "patient_has_finding_of_allergic_reaction_caused_by_penicillin_inthehistory",
+          "patient_has_finding_of_penicillin_induced_angioedema_urticaria_inthehistory",
+          "patient_has_finding_of_penicillin_induced_anaphylaxis_inthehistory",
+          "patient_cannot_be_followed_up_now",
+          "patient_lives_outside_municipal_limits_of_city_now"
+        ]
+      },
+      "inclusion": {
+        "gate": [],
+        "program": [
+          "(assert (! (>= patient_age_value_recorded_now_in_months 2.0) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (<= patient_age_value_recorded_now_in_months 59.0) :named REQ0_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! patient_is_attending_outpatient_clinic_of_participating_site_now :named REQ0_COMPONENT2_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_has_finding_of_pneumonia_now@@defined_according_to_world_health_organization_criteria patient_has_finding_of_pneumonia_now) :named REQ1_AUXILIARY0))",
+          "(assert (! (=> patient_has_finding_of_pneumonia_now@@non_severe patient_has_finding_of_pneumonia_now) :named REQ1_AUXILIARY1))",
+          "(assert (! (and patient_has_finding_of_pneumonia_now@@defined_according_to_world_health_organization_criteria patient_has_finding_of_pneumonia_now@@non_severe) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! patient_has_accessibility_for_follow_up :named REQ2_COMPONENT0_NOT_REQUIREMNET_OR_ALWAYS_SATISFIABLE_WITH_ACTION))",
+          "(assert (! (or written_informed_consent_provided_by_parent written_informed_consent_provided_by_legal_guardian) :named REQ3_COMPONENT0_NOT_REQUIREMNET_OR_ALWAYS_SATISFIABLE_WITH_ACTION))"
+        ],
+        "variables": [
+          "patient_age_value_recorded_now_in_months",
+          "patient_is_attending_outpatient_clinic_of_participating_site_now",
+          "patient_has_finding_of_pneumonia_now",
+          "patient_has_finding_of_pneumonia_now@@defined_according_to_world_health_organization_criteria",
+          "patient_has_finding_of_pneumonia_now@@non_severe",
+          "patient_has_accessibility_for_follow_up",
+          "written_informed_consent_provided_by_parent",
+          "written_informed_consent_provided_by_legal_guardian"
+        ]
+      }
+    },
+    "NCT00929721": {
+      "exclusion": {
+        "gate": [
+          "(assert (not patient_has_finding_of_hospital_acquired_pneumonia_now))"
+        ],
+        "program": [
+          "(assert (! (= patient_has_undergone_patient_transfer_to_another_health_care_facility_now@@after_hospitalization_at_other_inpatient_facility_for_at_least_48_hours (and patient_has_undergone_patient_transfer_to_another_health_care_facility_now (>= patient_hospitalization_duration_at_other_inpatient_facility_prior_to_transfer_in_hours 48))) :named REQ0_AUXILIARY0))",
+          "(assert (! (=> patient_has_undergone_patient_transfer_to_another_health_care_facility_now@@after_hospitalization_at_other_inpatient_facility_for_at_least_48_hours patient_has_undergone_patient_transfer_to_another_health_care_facility_now) :named REQ0_AUXILIARY1))",
+          "(assert (! (not patient_has_undergone_patient_transfer_to_another_health_care_facility_now@@after_hospitalization_at_other_inpatient_facility_for_at_least_48_hours) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (= patient_has_finding_of_hospital_acquired_pneumonia_now patient_has_finding_of_pneumonia_now@@developed_after_hospitalization_greater_than_or_equal_to_48_hours_at_any_healthcare_facility) :named REQ1_AUXILIARY0))",
+          "(assert (! (=> patient_has_finding_of_pneumonia_now@@developed_after_hospitalization_greater_than_or_equal_to_48_hours_at_any_healthcare_facility patient_has_finding_of_pneumonia_now) :named REQ1_AUXILIARY1))",
+          "(assert (! (not patient_has_finding_of_hospital_acquired_pneumonia_now) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))"
+        ],
+        "variables": [
+          "patient_has_undergone_patient_transfer_to_another_health_care_facility_now",
+          "patient_has_undergone_patient_transfer_to_another_health_care_facility_now@@after_hospitalization_at_other_inpatient_facility_for_at_least_48_hours",
+          "patient_hospitalization_duration_at_other_inpatient_facility_prior_to_transfer_in_hours",
+          "patient_has_finding_of_hospital_acquired_pneumonia_now",
+          "patient_has_finding_of_pneumonia_now",
+          "patient_has_finding_of_pneumonia_now@@developed_after_hospitalization_greater_than_or_equal_to_48_hours_at_any_healthcare_facility"
+        ]
+      },
+      "inclusion": {
+        "gate": [
+          "(assert (>= patient_age_value_recorded_now_in_years 50.0))"
+        ],
+        "program": [
+          "(assert (! (>= patient_age_value_recorded_now_in_years 50.0) :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))",
+          "(assert (! patient_resides_in_surveillance_area_now :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! patient_presents_to_study_healthcare_facility_now :named REQ2_COMPONENT0_NOT_REQUIREMNET_OR_ALWAYS_SATISFIABLE_WITH_ACTION))",
+          "(assert (! patient_has_suspicion_of_community_acquired_pneumonia_now :named REQ2_COMPONENT1_OTHER_REQUIREMENTS))"
+        ],
+        "variables": [
+          "patient_age_value_recorded_now_in_years",
+          "patient_resides_in_surveillance_area_now",
+          "patient_presents_to_study_healthcare_facility_now",
+          "patient_has_suspicion_of_community_acquired_pneumonia_now"
+        ]
+      }
+    },
+    "NCT01084239": {
+      "exclusion": {
+        "gate": [
+          "(assert (not patient_has_finding_of_left_bundle_branch_block_now))",
+          "(assert (not patient_has_diagnosis_of_coronary_arteriosclerosis_inthehistory))",
+          "(assert (not patient_has_undergone_coronary_artery_bypass_graft_inthehistory))",
+          "(assert (not patient_has_diagnosis_of_myocardial_infarction_inthehistory))",
+          "(assert (not patient_has_undergone_percutaneous_coronary_intervention_inthehistory))",
+          "(assert (not patient_has_finding_of_renal_impairment_now))",
+          "(assert (not patient_has_finding_of_atrial_arrhythmia_now))",
+          "(assert (not patient_has_finding_of_hemodynamic_instability_now))",
+          "(assert (not patient_has_finding_of_ventricular_arrhythmia_now))",
+          "(assert (not patient_has_finding_of_asthma_currently_active_now))"
+        ],
+        "program": [
+          "(assert (! (= patient_has_finding_of_ekg_myocardial_ischemia_now@@new (or (> patient_st_segment_elevation_value_recorded_now_withunit_millimeter 1) (> patient_st_segment_depression_value_recorded_now_withunit_millimeter 1) (> patient_inverted_t_wave_value_recorded_now_withunit_millimeter 4))) :named REQ0_AUXILIARY0))",
+          "(assert (! (=> patient_has_finding_of_ekg_myocardial_ischemia_now@@new patient_has_finding_of_ekg_myocardial_ischemia_now) :named REQ0_AUXILIARY1))",
+          "(assert (! (=> patient_has_finding_of_ekg_myocardial_ischemia_now@@present_in_more_than_two_anatomically_adjacent_leads patient_has_finding_of_ekg_myocardial_ischemia_now) :named REQ0_AUXILIARY2))",
+          "(assert (! (not (and patient_has_finding_of_ekg_myocardial_ischemia_now@@new patient_has_finding_of_ekg_myocardial_ischemia_now@@present_in_more_than_two_anatomically_adjacent_leads)) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_left_bundle_branch_block_now) :named REQ0_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_diagnosis_of_coronary_arteriosclerosis_inthehistory) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_diagnosis_of_coronary_arteriosclerosis_inthehistory@@self_reported_history) :named REQ1_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_diagnosis_of_myocardial_infarction_inthehistory) :named REQ1_COMPONENT2_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_diagnosis_of_myocardial_infarction_inthehistory@@self_reported_history) :named REQ1_COMPONENT3_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_undergone_percutaneous_coronary_intervention_inthehistory) :named REQ1_COMPONENT4_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_undergone_coronary_artery_bypass_graft_inthehistory) :named REQ1_COMPONENT6_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_undergone_percutaneous_coronary_intervention_inthehistory@@self_reported_history) :named REQ1_COMPONENT5_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_undergone_coronary_artery_bypass_graft_inthehistory@@self_reported_history) :named REQ1_COMPONENT7_OTHER_REQUIREMENTS))",
+          "(assert (! (not (and patient_has_diagnosis_of_coronary_artery_stenosis_inthehistory@@known patient_has_diagnosis_of_coronary_artery_stenosis_inthehistory@@significant_stenosis_greater_than_50_percent)) :named REQ1_COMPONENT8_OTHER_REQUIREMENTS))",
+          "(assert (! (not (and patient_has_diagnosis_of_coronary_artery_stenosis_inthehistory@@self_reported_history patient_has_diagnosis_of_coronary_artery_stenosis_inthehistory@@significant_stenosis_greater_than_50_percent)) :named REQ1_COMPONENT9_OTHER_REQUIREMENTS))",
+          "(assert (! (not (> patient_time_since_emergency_department_presentation_in_hours 6)) :named REQ2_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not (> patient_finding_of_body_mass_index_value_recorded_now_withunit_kilograms_per_square_meter 40)) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (= patient_has_finding_of_renal_impairment_now (> patient_creatinine_measurement_serum_value_recorded_now_withunit_milligrams_per_deciliter 1.5)) :named REQ4_AUXILIARY0))",
+          "(assert (! (not patient_has_finding_of_renal_impairment_now) :named REQ4_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not (> patient_troponin_t_value_recorded_now_withunit_nanograms_per_milliliter 0.09)) :named REQ5_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_has_finding_of_chest_pain_now@@persistent patient_has_finding_of_chest_pain_now) :named REQ6_AUXILIARY0))",
+          "(assert (! (=> patient_has_finding_of_chest_pain_now@@despite_adequate_therapy patient_has_finding_of_chest_pain_now) :named REQ6_AUXILIARY1))",
+          "(assert (! (not patient_has_finding_of_hemodynamic_instability_now) :named REQ6_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_clinical_instability_now) :named REQ6_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (not (< patient_systolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury 80)) :named REQ6_COMPONENT2_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_atrial_arrhythmia_now) :named REQ6_COMPONENT3_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_ventricular_arrhythmia_now) :named REQ6_COMPONENT4_OTHER_REQUIREMENTS))",
+          "(assert (! (not (and patient_has_finding_of_chest_pain_now@@persistent patient_has_finding_of_chest_pain_now@@despite_adequate_therapy)) :named REQ6_COMPONENT5_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_known_allergy_to_iodinated_contrast_agent_now) :named REQ7_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_asthma_currently_active_now) :named REQ8_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_has_finding_of_cocaine_misuse_inthepast48hours@@documented patient_has_finding_of_cocaine_misuse_inthepast48hours) :named REQ9_AUXILIARY0))",
+          "(assert (! (=> patient_has_finding_of_cocaine_misuse_inthepast48hours@@self_reported patient_has_finding_of_cocaine_misuse_inthepast48hours) :named REQ9_AUXILIARY1))",
+          "(assert (! (not (or patient_has_finding_of_cocaine_misuse_inthepast48hours@@documented patient_has_finding_of_cocaine_misuse_inthepast48hours@@self_reported)) :named REQ9_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not (and patient_is_taking_metformin_containing_product_now (or patient_is_taking_metformin_containing_product_now@@unable_to_discontinue_for_48_hours_after_computed_tomography_scan patient_is_taking_metformin_containing_product_now@@unwilling_to_discontinue_for_48_hours_after_computed_tomography_scan))) :named REQ10_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_has_contraindication_to_beta_blocker_therapy_now@@taking_daily_antiasthmatic_medication patient_has_contraindication_to_beta_blocker_therapy_now) :named REQ11_AUXILIARY0))",
+          "(assert (! (not (and patient_has_contraindication_to_beta_blocker_therapy_now@@taking_daily_antiasthmatic_medication (> patient_finding_of_heart_rate_value_recorded_now_withunit_beats_per_minute 65) patient_is_undergoing_computerized_axial_tomography_now@@performed_using_non_dual_source_scanner)) :named REQ11_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (= lack_of_contact_information_prevents_follow_up_now (or patient_has_no_telephone_number_now patient_has_no_cell_phone_number_now patient_has_no_address_now)) :named REQ12_AUXILIARY0))",
+          "(assert (! (not lack_of_contact_information_prevents_follow_up_now) :named REQ12_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_has_positive_pregnancy_test_now patient_is_pregnant_now) :named REQ13_AUXILIARY0))",
+          "(assert (! (not patient_has_positive_pregnancy_test_now) :named REQ13_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not (and patient_has_childbearing_potential_now (or (not patient_has_pregnancy_test_performed_within_24_hours_before_ct_scan) patient_has_positive_pregnancy_test_now))) :named REQ13_COMPONENT1_CAN_ALWAYS_GO_FROM_SATISFIED_TO_NOTSATISFIED))",
+          "(assert (! (not patient_is_unwilling_to_provide_written_informed_consent_now) :named REQ14_COMPONENT0_OTHER_REQUIREMENTS))"
+        ],
+        "variables": [
+          "patient_has_finding_of_ekg_myocardial_ischemia_now",
+          "patient_has_finding_of_ekg_myocardial_ischemia_now@@new",
+          "patient_has_finding_of_ekg_myocardial_ischemia_now@@present_in_more_than_two_anatomically_adjacent_leads",
+          "patient_has_finding_of_left_bundle_branch_block_now",
+          "patient_st_segment_elevation_value_recorded_now_withunit_millimeter",
+          "patient_st_segment_depression_value_recorded_now_withunit_millimeter",
+          "patient_inverted_t_wave_value_recorded_now_withunit_millimeter",
+          "patient_has_diagnosis_of_coronary_arteriosclerosis_inthehistory",
+          "patient_has_diagnosis_of_coronary_arteriosclerosis_inthehistory@@self_reported_history",
+          "patient_has_diagnosis_of_myocardial_infarction_inthehistory",
+          "patient_has_diagnosis_of_myocardial_infarction_inthehistory@@self_reported_history",
+          "patient_has_undergone_percutaneous_coronary_intervention_inthehistory",
+          "patient_has_undergone_percutaneous_coronary_intervention_inthehistory@@self_reported_history",
+          "patient_has_undergone_coronary_artery_bypass_graft_inthehistory",
+          "patient_has_undergone_coronary_artery_bypass_graft_inthehistory@@self_reported_history",
+          "patient_has_diagnosis_of_coronary_artery_stenosis_inthehistory",
+          "patient_has_diagnosis_of_coronary_artery_stenosis_inthehistory@@known",
+          "patient_has_diagnosis_of_coronary_artery_stenosis_inthehistory@@significant_stenosis_greater_than_50_percent",
+          "patient_has_diagnosis_of_coronary_artery_stenosis_inthehistory@@self_reported_history",
+          "patient_time_since_emergency_department_presentation_in_hours",
+          "patient_finding_of_body_mass_index_value_recorded_now_withunit_kilograms_per_square_meter",
+          "patient_creatinine_measurement_serum_value_recorded_now_withunit_milligrams_per_deciliter",
+          "patient_has_finding_of_renal_impairment_now",
+          "patient_troponin_t_value_recorded_now_withunit_nanograms_per_milliliter",
+          "patient_has_finding_of_hemodynamic_instability_now",
+          "patient_has_finding_of_clinical_instability_now",
+          "patient_systolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+          "patient_has_finding_of_atrial_arrhythmia_now",
+          "patient_has_finding_of_ventricular_arrhythmia_now",
+          "patient_has_finding_of_chest_pain_now",
+          "patient_has_finding_of_chest_pain_now@@persistent",
+          "patient_has_finding_of_chest_pain_now@@despite_adequate_therapy",
+          "patient_has_known_allergy_to_iodinated_contrast_agent_now",
+          "patient_has_finding_of_asthma_currently_active_now",
+          "patient_has_finding_of_cocaine_misuse_inthepast48hours",
+          "patient_has_finding_of_cocaine_misuse_inthepast48hours@@documented",
+          "patient_has_finding_of_cocaine_misuse_inthepast48hours@@self_reported",
+          "patient_is_taking_metformin_containing_product_now",
+          "patient_is_taking_metformin_containing_product_now@@unable_to_discontinue_for_48_hours_after_computed_tomography_scan",
+          "patient_is_taking_metformin_containing_product_now@@unwilling_to_discontinue_for_48_hours_after_computed_tomography_scan",
+          "patient_has_contraindication_to_beta_blocker_therapy_now",
+          "patient_has_contraindication_to_beta_blocker_therapy_now@@taking_daily_antiasthmatic_medication",
+          "patient_finding_of_heart_rate_value_recorded_now_withunit_beats_per_minute",
+          "patient_is_undergoing_computerized_axial_tomography_now@@performed_using_non_dual_source_scanner",
+          "lack_of_contact_information_prevents_follow_up_now",
+          "patient_has_no_telephone_number_now",
+          "patient_has_no_cell_phone_number_now",
+          "patient_has_no_address_now",
+          "patient_has_childbearing_potential_now",
+          "patient_has_positive_pregnancy_test_now",
+          "patient_has_pregnancy_test_performed_within_24_hours_before_ct_scan",
+          "patient_is_pregnant_now",
+          "patient_is_unwilling_to_provide_written_informed_consent_now"
+        ]
+      },
+      "inclusion": {
+        "gate": [
+          "(assert patient_has_finding_of_at_risk_of_heart_disease_now)"
+        ],
+        "program": [
+          "(assert (! (or patient_has_finding_of_chest_pain_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_chest_tightness_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_left_arm_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_right_arm_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_both_arms_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_left_shoulder_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_right_shoulder_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_both_shoulders_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_back_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_neck_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_epigastrium_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_jaw_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_pain_radiating_to_throat_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_unexplained_shortness_of_breath_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_syncope_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_presyncope_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_generalized_weakness_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_nausea_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending patient_has_finding_of_vomiting_thought_to_be_of_cardiac_origin_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending ) :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))",
+          "(assert (! (= patient_cardiac_risk_factor_count_now (+ (ite patient_has_finding_of_diabetes_mellitus_now 1 0) (ite patient_has_finding_of_hypertension_now 1 0) (ite patient_has_finding_of_hyperlipidemia_now 1 0) (ite patient_has_finding_of_current_tobacco_smoking_now 1 0) (ite patient_has_finding_of_family_history_of_coronary_artery_disease_now 1 0))) :named REQ1_AUXILIARY0))",
+          "(assert (! (= patient_has_finding_of_at_risk_of_heart_disease_now (>= patient_cardiac_risk_factor_count_now 2)) :named REQ1_AUXILIARY1))",
+          "(assert (! (>= patient_cardiac_risk_factor_count_now 2) :named REQ1_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))",
+          "(assert (! patient_is_able_to_provide_written_informed_consent_now :named REQ2_COMPONENT0_NOT_REQUIREMNET_OR_ALWAYS_SATISFIABLE_WITH_ACTION))",
+          "(assert (! (< patient_age_value_recorded_now_in_years 75) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (> patient_age_value_recorded_now_in_years 40) :named REQ3_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (>= breath_holding_duration_value_recorded_now_in_seconds 10.0) :named REQ4_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! patient_has_finding_of_sinus_rhythm_now :named REQ5_COMPONENT0_OTHER_REQUIREMENTS))"
+        ],
+        "variables": [
+          "patient_has_finding_of_chest_pain_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending",
+          "patient_has_finding_of_chest_tightness_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending",
+          "patient_has_finding_of_pain_radiating_to_left_arm_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending",
+          "patient_has_finding_of_pain_radiating_to_right_arm_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending",
+          "patient_has_finding_of_pain_radiating_to_both_arms_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending",
+          "patient_has_finding_of_pain_radiating_to_left_shoulder_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending",
+          "patient_has_finding_of_pain_radiating_to_right_shoulder_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending",
+          "patient_has_finding_of_pain_radiating_to_both_shoulders_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending",
+          "patient_has_finding_of_pain_radiating_to_back_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending",
+          "patient_has_finding_of_pain_radiating_to_neck_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending",
+          "patient_has_finding_of_pain_radiating_to_epigastrium_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending",
+          "patient_has_finding_of_pain_radiating_to_jaw_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending",
+          "patient_has_finding_of_pain_radiating_to_throat_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending",
+          "patient_has_finding_of_unexplained_shortness_of_breath_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending",
+          "patient_has_finding_of_syncope_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending",
+          "patient_has_finding_of_presyncope_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending",
+          "patient_has_finding_of_generalized_weakness_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending",
+          "patient_has_finding_of_nausea_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending",
+          "patient_has_finding_of_vomiting_thought_to_be_of_cardiac_origin_inthepast24hours@@minimum_duration_five_minutes@@occurred_at_rest_or_during_exercise@@warrants_further_risk_stratification_by_ed_attending",
+          "patient_cardiac_risk_factor_count_now",
+          "patient_has_finding_of_at_risk_of_heart_disease_now",
+          "patient_has_finding_of_diabetes_mellitus_now",
+          "patient_has_finding_of_hypertension_now",
+          "patient_has_finding_of_hyperlipidemia_now",
+          "patient_has_finding_of_current_tobacco_smoking_now",
+          "patient_has_finding_of_family_history_of_coronary_artery_disease_now",
+          "patient_is_able_to_provide_written_informed_consent_now",
+          "patient_age_value_recorded_now_in_years",
+          "breath_holding_duration_value_recorded_now_in_seconds",
+          "patient_has_finding_of_sinus_rhythm_now"
+        ]
+      }
+    },
+    "NCT01259336c": {
+      "exclusion": {
+        "gate": [
+          "(assert (not patient_has_finding_of_invasive_aspergillosis_now))",
+          "(assert (not patient_has_diagnosis_of_allergic_bronchopulmonary_aspergillosis_now))",
+          "(assert (not patient_has_finding_of_active_tuberculosis_now))",
+          "(assert (not patient_has_finding_of_malignant_neoplastic_disease_now))",
+          "(assert (or (not patient_sex_is_female_now) (not patient_is_pregnant_now)))"
+        ],
+        "program": [
+          "(assert (! (=> patient_has_finding_of_invasive_aspergillosis_now@@not_chronic_cavitary_pulmonary_aspergillosis patient_has_finding_of_invasive_aspergillosis_now) :named REQ0_AUXILIARY0))",
+          "(assert (! (=> patient_has_finding_of_invasive_aspergillosis_now@@strong_clinical_support patient_has_finding_of_invasive_aspergillosis_now) :named REQ0_AUXILIARY1))",
+          "(assert (! (not (or patient_has_finding_of_invasive_aspergillosis_now patient_has_finding_of_invasive_aspergillosis_now@@strong_clinical_support)) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_has_diagnosis_of_allergic_bronchopulmonary_aspergillosis_now@@strong_clinical_support patient_has_diagnosis_of_allergic_bronchopulmonary_aspergillosis_now) :named REQ1_AUXILIARY0))",
+          "(assert (! (not (or patient_has_diagnosis_of_allergic_bronchopulmonary_aspergillosis_now patient_has_diagnosis_of_allergic_bronchopulmonary_aspergillosis_now@@strong_clinical_support)) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_has_finding_of_active_tuberculosis_now@@strong_clinical_support patient_has_finding_of_active_tuberculosis_now) :named REQ2_AUXILIARY0))",
+          "(assert (! (=> patient_has_finding_of_malignant_neoplastic_disease_now@@strong_clinical_support patient_has_finding_of_malignant_neoplastic_disease_now) :named REQ2_AUXILIARY1))",
+          "(assert (! (not (or patient_has_finding_of_active_tuberculosis_now patient_has_finding_of_active_tuberculosis_now@@strong_clinical_support)) :named REQ2_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not (or patient_has_finding_of_malignant_neoplastic_disease_now patient_has_finding_of_malignant_neoplastic_disease_now@@strong_clinical_support)) :named REQ2_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_is_pregnant_now@@strong_clinical_support patient_is_pregnant_now) :named REQ3_AUXILIARY0))",
+          "(assert (! (not (and patient_sex_is_female_now (or patient_is_pregnant_now patient_is_pregnant_now@@strong_clinical_support))) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))"
+        ],
+        "variables": [
+          "patient_has_finding_of_invasive_aspergillosis_now",
+          "patient_has_finding_of_invasive_aspergillosis_now@@not_chronic_cavitary_pulmonary_aspergillosis",
+          "patient_has_finding_of_invasive_aspergillosis_now@@strong_clinical_support",
+          "patient_has_diagnosis_of_allergic_bronchopulmonary_aspergillosis_now",
+          "patient_has_diagnosis_of_allergic_bronchopulmonary_aspergillosis_now@@strong_clinical_support",
+          "patient_has_finding_of_active_tuberculosis_now",
+          "patient_has_finding_of_malignant_neoplastic_disease_now",
+          "patient_has_finding_of_active_tuberculosis_now@@strong_clinical_support",
+          "patient_has_finding_of_malignant_neoplastic_disease_now@@strong_clinical_support",
+          "patient_is_pregnant_now",
+          "patient_sex_is_female_now",
+          "patient_is_pregnant_now@@strong_clinical_support"
+        ]
+      },
+      "inclusion": {
+        "gate": [],
+        "program": [
+          "(assert (! (or patient_has_undergone_aspergillus_fumigatus_1_precipitin_level_inthehistory_outcome_is_positive patient_has_finding_of_hyphae_of_aspergillus_detected_inthehistory@@specimen_is_sputum patient_has_finding_of_hyphae_of_aspergillus_detected_inthehistory@@specimen_is_bronchoalveolar_lavage_fluid patient_has_undergone_aspergillus_species_culture_inthehistory_outcome_is_positive patient_has_finding_of_sputum_culture_positive_for_aspergillus_inthehistory) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))"
+        ],
+        "variables": [
+          "patient_has_undergone_aspergillus_fumigatus_1_precipitin_level_inthehistory_outcome_is_positive",
+          "patient_has_finding_of_hyphae_of_kingdom_fungi_detected_inthehistory@@specimen_is_sputum",
+          "patient_has_finding_of_hyphae_of_aspergillus_detected_inthehistory@@specimen_is_bronchoalveolar_lavage_fluid",
+          "patient_has_undergone_aspergillus_species_culture_inthehistory_outcome_is_positive",
+          "patient_has_finding_of_sputum_culture_positive_for_aspergillus_inthehistory",
+          "patient_has_finding_of_hyphae_of_aspergillus_detected_inthehistory@@specimen_is_sputum"
+        ]
+      }
+    },
+    "NCT01991314a": {
+      "exclusion": {
+        "gate": [
+          "(assert (not patient_has_finding_of_megaloblastic_anemia_due_to_folate_deficiency_now))",
+          "(assert (not patient_has_diagnosis_of_bone_marrow_myeloid_dysplasia_now))",
+          "(assert (not patient_has_diagnosis_of_hemoglobinopathy_now))",
+          "(assert (not patient_is_pregnant_now))",
+          "(assert (or (not patient_is_breastfeeding_now) (not patient_sex_is_female_now)))"
+        ],
+        "program": [
+          "(assert (! (=> patient_has_finding_of_anemia_now@@caused_by_vitamin_b12_deficiency patient_has_finding_of_anemia_now) :named REQ0_AUXILIARY0))",
+          "(assert (! (=> patient_has_finding_of_anemia_now@@secondary_to_drugs_used_to_treat_inflammatory_bowel_disease patient_has_finding_of_anemia_now) :named REQ0_AUXILIARY1))",
+          "(assert (! (=> patient_has_finding_of_megaloblastic_anemia_due_to_folate_deficiency_now patient_has_finding_of_anemia_now) :named REQ0_AUXILIARY2))",
+          "(assert (! (=> patient_has_finding_of_anemia_now@@caused_by_folate_deficiency patient_has_finding_of_anemia_now) :named REQ0_AUXILIARY3))",
+          "(assert (! (=> patient_has_finding_of_megaloblastic_anemia_due_to_folate_deficiency_now patient_has_finding_of_anemia_now@@caused_by_folate_deficiency) :named REQ0_AUXILIARY4))",
+          "(assert (! (not patient_has_finding_of_anemia_now@@caused_by_vitamin_b12_deficiency) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_anemia_now@@caused_by_folate_deficiency) :named REQ0_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_anemia_now@@secondary_to_drugs_used_to_treat_inflammatory_bowel_disease) :named REQ0_COMPONENT2_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_diagnosis_of_hemoglobinopathy_now) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_diagnosis_of_bone_marrow_myeloid_dysplasia_now) :named REQ1_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_has_finding_of_cardiopulmonary_disease_now@@severe patient_has_finding_of_cardiopulmonary_disease_now) :named REQ2_AUXILIARY0))",
+          "(assert (! (not patient_has_finding_of_cardiopulmonary_disease_now@@severe) :named REQ2_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_disease_of_liver_now@@severe) :named REQ2_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_kidney_disease_now@@severe) :named REQ2_COMPONENT2_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_is_pregnant_now) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not (and patient_is_breastfeeding_now patient_sex_is_female_now)) :named REQ3_COMPONENT1_OTHER_REQUIREMENTS))"
+        ],
+        "variables": [
+          "patient_has_finding_of_anemia_now",
+          "patient_has_finding_of_anemia_now@@caused_by_vitamin_b12_deficiency",
+          "patient_has_finding_of_megaloblastic_anemia_due_to_folate_deficiency_now",
+          "patient_has_finding_of_anemia_now@@caused_by_folate_deficiency",
+          "patient_has_finding_of_anemia_now@@secondary_to_drugs_used_to_treat_inflammatory_bowel_disease",
+          "patient_has_diagnosis_of_hemoglobinopathy_now",
+          "patient_has_diagnosis_of_bone_marrow_myeloid_dysplasia_now",
+          "patient_has_finding_of_disease_now@@severe",
+          "patient_has_finding_of_disease_of_liver_now@@severe",
+          "patient_has_finding_of_kidney_disease_now@@severe",
+          "patient_has_finding_of_cardiopulmonary_disease_now",
+          "patient_has_finding_of_cardiopulmonary_disease_now@@severe",
+          "patient_is_pregnant_now",
+          "patient_is_breastfeeding_now",
+          "patient_sex_is_female_now"
+        ]
+      },
+      "inclusion": {
+        "gate": [
+          "(assert patient_has_finding_of_iron_deficiency_anemia_now)"
+        ],
+        "program": [
+          "(assert (! (=> patient_has_finding_of_iron_deficiency_anemia_according_to_who_criteria_now patient_has_finding_of_iron_deficiency_anemia_now) :named REQ0_AUXILIARY0))",
+          "(assert (! patient_has_finding_of_iron_deficiency_anemia_according_to_who_criteria_now :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))",
+          "(assert (! (>= patient_age_value_recorded_now_in_years 13) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (<= patient_age_value_recorded_now_in_years 18) :named REQ1_COMPONENT1_OTHER_REQUIREMENTS))"
+        ],
+        "variables": [
+          "patient_has_finding_of_iron_deficiency_anemia_according_to_who_criteria_now",
+          "patient_has_finding_of_iron_deficiency_anemia_now",
+          "patient_age_value_recorded_now_in_years"
+        ]
+      }
+    },
+    "NCT02114099": {
+      "exclusion": {
+        "gate": [
+          "(assert (not patient_has_undergone_coronary_artery_bypass_graft_inthehistory))",
+          "(assert (not patient_has_diagnosis_of_rhabdomyolysis_inthehistory))",
+          "(assert (or (not patient_has_finding_of_ast_sgot_level_raised_now) (not patient_has_finding_of_alt_sgpt_level_raised_now)))",
+          "(assert (or (not patient_sex_is_female_now) (not patient_is_pregnant_now)))"
+        ],
+        "program": [
+          "(assert (! (not patient_has_undergone_coronary_artery_bypass_graft_inthehistory) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_has_finding_of_inflammatory_disease_of_liver_now@@active patient_has_finding_of_inflammatory_disease_of_liver_now) :named REQ1_AUXILIARY0))",
+          "(assert (! (=> patient_has_finding_of_abnormal_liver_function_now@@persistent patient_has_finding_of_abnormal_liver_function_now) :named REQ1_AUXILIARY1))",
+          "(assert (! (=> (and patient_has_finding_of_ast_sgot_level_raised_now patient_has_finding_of_alt_sgpt_level_raised_now) patient_has_finding_of_abnormal_liver_function_now@@persistent) :named REQ1_AUXILIARY2))",
+          "(assert (! (=> patient_has_finding_of_inflammatory_disease_of_liver_now@@active@@strong_clinical_support patient_has_finding_of_inflammatory_disease_of_liver_now@@active) :named REQ1_AUXILIARY3))",
+          "(assert (! (=> patient_has_finding_of_abnormal_liver_function_now@@persistent@@strong_clinical_support patient_has_finding_of_abnormal_liver_function_now@@persistent) :named REQ1_AUXILIARY4))",
+          "(assert (! (not patient_has_finding_of_inflammatory_disease_of_liver_now@@active) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_abnormal_liver_function_now@@persistent) :named REQ1_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_inflammatory_disease_of_liver_now@@active@@strong_clinical_support) :named REQ1_COMPONENT2_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_finding_of_abnormal_liver_function_now@@persistent@@strong_clinical_support) :named REQ1_COMPONENT3_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_diagnosis_of_rhabdomyolysis_inthehistory) :named REQ2_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_has_diagnosis_of_rhabdomyolysis_inthehistory@@strong_clinical_support patient_has_diagnosis_of_rhabdomyolysis_inthehistory) :named REQ2_AUXILIARY0))",
+          "(assert (! (not patient_has_diagnosis_of_rhabdomyolysis_inthehistory@@strong_clinical_support) :named REQ2_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (not (and patient_sex_is_female_now (or patient_is_pregnant_now patient_plans_for_child_bearing_during_study_periods))) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_is_pregnant_now@@strong_clinical_support patient_is_pregnant_now) :named REQ3_AUXILIARY0))",
+          "(assert (! (not (and patient_sex_is_female_now patient_is_pregnant_now@@strong_clinical_support)) :named REQ3_COMPONENT1_OTHER_REQUIREMENTS))"
+        ],
+        "variables": [
+          "patient_has_undergone_coronary_artery_bypass_graft_inthehistory",
+          "patient_has_finding_of_inflammatory_disease_of_liver_now",
+          "patient_has_finding_of_inflammatory_disease_of_liver_now@@active",
+          "patient_has_finding_of_abnormal_liver_function_now",
+          "patient_has_finding_of_abnormal_liver_function_now@@persistent",
+          "patient_has_finding_of_ast_sgot_level_raised_now",
+          "patient_has_finding_of_alt_sgpt_level_raised_now",
+          "patient_has_finding_of_inflammatory_disease_of_liver_now@@active@@strong_clinical_support",
+          "patient_has_finding_of_abnormal_liver_function_now@@persistent@@strong_clinical_support",
+          "patient_has_diagnosis_of_rhabdomyolysis_inthehistory",
+          "patient_has_diagnosis_of_rhabdomyolysis_inthehistory@@strong_clinical_support",
+          "patient_sex_is_female_now",
+          "patient_is_pregnant_now",
+          "patient_is_able_to_be_pregnant_inthefuture",
+          "patient_plans_for_child_bearing_during_study_periods",
+          "patient_is_pregnant_now@@strong_clinical_support"
+        ]
+      },
+      "inclusion": {
+        "gate": [],
+        "program": [
+          "(assert (! (or patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_inthehistory) :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))",
+          "(assert (! patient_has_diagnosis_of_giant_aneurysm_now :named REQ0_COMPONENT1_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))",
+          "(assert (! (> patient_age_value_recorded_now_in_years 10) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))"
+        ],
+        "variables": [
+          "patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now",
+          "patient_has_diagnosis_of_aneurysm_now",
+          "patient_has_diagnosis_of_giant_aneurysm_now",
+          "patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_inthehistory",
+          "patient_age_value_recorded_now_in_years"
+        ]
+      }
+    },
+    "NCT02150941a": {
+      "exclusion": {
+        "gate": [
+          "(assert patient_has_undergone_esophagogastroduodenoscopy_now)",
+          "(assert (>= patient_age_value_recorded_now_in_years 18.0))"
+        ],
+        "program": [
+          "(assert (! (=> patient_has_identification_of_bleeding_source_now@@identified_within_first_five_minutes_of_upper_endoscopy patient_has_identification_of_bleeding_source_now) :named REQ0_AUXILIARY0))",
+          "(assert (! (=> patient_has_undergone_esophagogastroduodenoscopy_now@@temporalcontext_within_first_five_minutes patient_has_undergone_esophagogastroduodenoscopy_now) :named REQ0_AUXILIARY1))",
+          "(assert (! (=> patient_is_exposed_to_blood_now@@seen_during_endoscopy patient_is_exposed_to_blood_now) :named REQ0_AUXILIARY2))",
+          "(assert (! (=> patient_is_exposed_to_blood_now@@located_in_upper_gastrointestinal_tract patient_is_exposed_to_blood_now) :named REQ0_AUXILIARY3))",
+          "(assert (! (not patient_has_identification_of_bleeding_source_now@@identified_within_first_five_minutes_of_upper_endoscopy) :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not patient_has_no_blood_seen_in_upper_gastrointestinal_tract_during_endoscopy_now) :named REQ0_COMPONENT1_OTHER_REQUIREMENTS))",
+          "(assert (! (not (< patient_age_value_recorded_now_in_years 18.0)) :named REQ1_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not (not patient_has_undergone_esophagogastroduodenoscopy_now)) :named REQ2_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (=> patient_has_undergone_endoscopy_inthehistory@@performed_for_current_episode_of_upper_gastrointestinal_bleeding patient_has_undergone_endoscopy_inthehistory) :named REQ3_AUXILIARY0))",
+          "(assert (! (not patient_has_undergone_endoscopy_inthehistory@@performed_for_current_episode_of_upper_gastrointestinal_bleeding) :named REQ3_COMPONENT0_OTHER_REQUIREMENTS))",
+          "(assert (! (not (and patient_is_unable_to_consent_now (not patient_has_substitute_decision_maker_now))) :named REQ4_COMPONENT0_OTHER_REQUIREMENTS))"
+        ],
+        "variables": [
+          "patient_has_identification_of_bleeding_source_now",
+          "patient_has_identification_of_bleeding_source_now@@identified_within_first_five_minutes_of_upper_endoscopy",
+          "patient_has_no_blood_seen_in_upper_gastrointestinal_tract_during_endoscopy_now",
+          "patient_has_undergone_endoscopy_now",
+          "patient_has_undergone_esophagogastroduodenoscopy_now",
+          "patient_has_undergone_esophagogastroduodenoscopy_now@@temporalcontext_within_first_five_minutes",
+          "patient_is_exposed_to_blood_now",
+          "patient_is_exposed_to_blood_now@@seen_during_endoscopy",
+          "patient_is_exposed_to_blood_now@@located_in_upper_gastrointestinal_tract",
+          "patient_age_value_recorded_now_in_years",
+          "patient_has_finding_of_upper_gastrointestinal_bleeding_now",
+          "patient_has_undergone_endoscopy_inthehistory",
+          "patient_has_undergone_endoscopy_inthehistory@@performed_for_current_episode_of_upper_gastrointestinal_bleeding",
+          "patient_is_unable_to_consent_now",
+          "patient_has_substitute_decision_maker_now"
+        ]
+      },
+      "inclusion": {
+        "gate": [],
+        "program": [
+          "(assert (! (or patient_has_finding_of_vomiting_blood_fresh_now patient_has_finding_of_coffee_ground_emesis_now patient_has_finding_of_melena_now) :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE))"
+        ],
+        "variables": [
+          "patient_has_finding_of_vomiting_blood_fresh_now",
+          "patient_has_finding_of_coffee_ground_emesis_now",
+          "patient_has_finding_of_melena_now"
+        ]
+      }
+    }
+  },
+  "retrieval": {
+    "corpus": {
+      "patients": 59,
+      "trials": 3621
+    },
+    "objectives": [
+      {
+        "embedding_recall": 62.44,
+        "embedding_trials_per_patient": 2.17,
+        "key": "ModeCCR",
+        "name": "treat the chief complaint",
+        "satir_recall": 93.66,
+        "satir_trials_per_patient": 3.25
+      },
+      {
+        "embedding_recall": 53.66,
+        "embedding_trials_per_patient": 2.98,
+        "key": "ModeAll",
+        "name": "treat any condition",
+        "satir_recall": 92.07,
+        "satir_trials_per_patient": 5.12
+      },
+      {
+        "embedding_recall": 70.27,
+        "embedding_trials_per_patient": 8.93,
+        "key": "ModeAllExplore",
+        "name": "relevant to any condition",
+        "satir_recall": 92.53,
+        "satir_trials_per_patient": 11.76
+      }
+    ],
+    "patients_served_with_at_least_one_useful_trial": {
+      "embedding": 50,
+      "satir": 54
+    },
+    "query_seconds_per_patient_satir": 2.95,
+    "source": "TrialGPT-SMT-Refactored/backup/sql_retrieval/README.md"
+  }
+}
+
+```

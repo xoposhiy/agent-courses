@@ -1,0 +1,35 @@
+{
+  "source_id": "langchain-deep-agents",
+  "materials": 613,
+  "markdown_files": 606,
+  "raw_files": 946,
+  "local_links_checked": 5399,
+  "raw_checksums_checked": 577,
+  "converted_html_checked": 160,
+  "broken_local_links": [],
+  "errors": [],
+  "course": {
+    "id": "langchain-deep-agents",
+    "folder": "courses/langchain-deep-agents",
+    "raw_files": 946,
+    "markdown_files": 606,
+    "bytes": 149020100,
+    "local_links_checked": 5400,
+    "broken_local_links": [],
+    "manifest_type": "dict",
+    "manifest_records": 613,
+    "statuses": {
+      "failed": 2,
+      "downloaded": 610,
+      "not_material": 1
+    },
+    "conversion_statuses": {
+      "failed": 6,
+      "converted": 531,
+      "converted_with_limitations": 75,
+      "not_applicable": 1
+    },
+    "pdf_pages": 43
+  },
+  "structural_checked_at": "2026-11-13T17:39:24.846270+00:00"
+}

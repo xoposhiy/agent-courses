@@ -1,0 +1,6677 @@
+[
+  {
+    "text": "Okay. So, hi everyone. Uh, welcome to",
+    "start": 0.64,
+    "duration": 7.279
+  },
+  {
+    "text": "class number two. Today,",
+    "start": 4.319,
+    "duration": 5.521
+  },
+  {
+    "text": "uh, today I'll be talking about tool use",
+    "start": 7.919,
+    "duration": 5.441
+  },
+  {
+    "text": "for language model agents. And, uh, this",
+    "start": 9.84,
+    "duration": 5.759
+  },
+  {
+    "text": "is, you know, the the most fundamental",
+    "start": 13.36,
+    "duration": 4.56
+  },
+  {
+    "text": "thing about agents that, uh, you know,",
+    "start": 15.599,
+    "duration": 3.84
+  },
+  {
+    "text": "makes them different from a language",
+    "start": 17.92,
+    "duration": 4.519
+  },
+  {
+    "text": "model.",
+    "start": 19.439,
+    "duration": 3.0
+  },
+  {
+    "text": "Um so the basic idea here is uh that",
+    "start": 23.279,
+    "duration": 6.561
+  },
+  {
+    "text": "we're going to be um a tool is basically",
+    "start": 27.199,
+    "duration": 4.721
+  },
+  {
+    "text": "an interface through which a language",
+    "start": 29.84,
+    "duration": 4.08
+  },
+  {
+    "text": "model can invoke an external computer",
+    "start": 31.92,
+    "duration": 6.56
+  },
+  {
+    "text": "program. And uh this is a language model",
+    "start": 33.92,
+    "duration": 6.72
+  },
+  {
+    "text": "cannot do this on its own because it's",
+    "start": 38.48,
+    "duration": 3.84
+  },
+  {
+    "text": "fundamentally a token predicting",
+    "start": 40.64,
+    "duration": 5.599
+  },
+  {
+    "text": "machine. But this enables you to do you",
+    "start": 42.32,
+    "duration": 5.759
+  },
+  {
+    "text": "know many many different things. So you",
+    "start": 46.239,
+    "duration": 3.761
+  },
+  {
+    "text": "know you can search, you can call a",
+    "start": 48.079,
+    "duration": 4.48
+  },
+  {
+    "text": "calculator, you can call a browser, um",
+    "start": 50.0,
+    "duration": 3.92
+  },
+  {
+    "text": "you can call Python, you can call",
+    "start": 52.559,
+    "duration": 5.441
+  },
+  {
+    "text": "arbitrary APIs and so uh the language",
+    "start": 53.92,
+    "duration": 7.84
+  },
+  {
+    "text": "model kind of as you'll see the method",
+    "start": 58.0,
+    "duration": 6.479
+  },
+  {
+    "text": "for tool calling is standardized but",
+    "start": 61.76,
+    "duration": 4.48
+  },
+  {
+    "text": "what you do downstream with the tool",
+    "start": 64.479,
+    "duration": 4.96
+  },
+  {
+    "text": "call can be very different.",
+    "start": 66.24,
+    "duration": 6.0
+  },
+  {
+    "text": "So there's basically two uh benefits of",
+    "start": 69.439,
+    "duration": 5.601
+  },
+  {
+    "text": "tools and all of this is from one of the",
+    "start": 72.24,
+    "duration": 4.879
+  },
+  {
+    "text": "readings that I I posted on the website",
+    "start": 75.04,
+    "duration": 3.759
+  },
+  {
+    "text": "if you want to go back and read more",
+    "start": 77.119,
+    "duration": 5.521
+  },
+  {
+    "text": "about it. Uh this is a survey that uh I",
+    "start": 78.799,
+    "duration": 6.241
+  },
+  {
+    "text": "we wrote uh together Daniel and I and",
+    "start": 82.64,
+    "duration": 5.28
+  },
+  {
+    "text": "Zoro Wong, one of our our students. Um",
+    "start": 85.04,
+    "duration": 6.16
+  },
+  {
+    "text": "and the first thing is extending the",
+    "start": 87.92,
+    "duration": 5.6
+  },
+  {
+    "text": "ability of language models. So this is",
+    "start": 91.2,
+    "duration": 4.16
+  },
+  {
+    "text": "giving language models the ability to do",
+    "start": 93.52,
+    "duration": 4.239
+  },
+  {
+    "text": "something that they fundamentally cannot",
+    "start": 95.36,
+    "duration": 4.719
+  },
+  {
+    "text": "do. And so this could be like accessing",
+    "start": 97.759,
+    "duration": 4.241
+  },
+  {
+    "text": "information or actions that are outside",
+    "start": 100.079,
+    "duration": 5.04
+  },
+  {
+    "text": "the language model's um you know action",
+    "start": 102.0,
+    "duration": 5.84
+  },
+  {
+    "text": "space. The second thing is uh",
+    "start": 105.119,
+    "duration": 4.801
+  },
+  {
+    "text": "facilitating the language model. And so",
+    "start": 107.84,
+    "duration": 4.0
+  },
+  {
+    "text": "what I mean by this is this is something",
+    "start": 109.92,
+    "duration": 3.92
+  },
+  {
+    "text": "that fundamentally the language model",
+    "start": 111.84,
+    "duration": 6.4
+  },
+  {
+    "text": "can do but it's just a lot easier if you",
+    "start": 113.84,
+    "duration": 6.16
+  },
+  {
+    "text": "don't if you don't require the language",
+    "start": 118.24,
+    "duration": 4.239
+  },
+  {
+    "text": "model to do it.",
+    "start": 120.0,
+    "duration": 5.92
+  },
+  {
+    "text": "So um can anybody come up with an",
+    "start": 122.479,
+    "duration": 5.681
+  },
+  {
+    "text": "example or well I guess we already have",
+    "start": 125.92,
+    "duration": 4.16
+  },
+  {
+    "text": "an example in here. So like one thing",
+    "start": 128.16,
+    "duration": 3.6
+  },
+  {
+    "text": "the the language model fundamentally",
+    "start": 130.08,
+    "duration": 4.08
+  },
+  {
+    "text": "cannot do would be get the time four",
+    "start": 131.76,
+    "duration": 3.839
+  },
+  {
+    "text": "months ago or something like that. So",
+    "start": 134.16,
+    "duration": 4.48
+  },
+  {
+    "text": "the most recent information it saw is uh",
+    "start": 135.599,
+    "duration": 5.041
+  },
+  {
+    "text": "from four months ago and then its",
+    "start": 138.64,
+    "duration": 4.0
+  },
+  {
+    "text": "parameters are frozen. So there's no way",
+    "start": 140.64,
+    "duration": 3.44
+  },
+  {
+    "text": "it could know that without calling you",
+    "start": 142.64,
+    "duration": 3.84
+  },
+  {
+    "text": "know an external function. On the other",
+    "start": 144.08,
+    "duration": 4.32
+  },
+  {
+    "text": "hand, uh something in the realm of",
+    "start": 146.48,
+    "duration": 4.8
+  },
+  {
+    "text": "facilitating is language models can do",
+    "start": 148.4,
+    "duration": 6.479
+  },
+  {
+    "text": "math actually quite well nowadays, but",
+    "start": 151.28,
+    "duration": 5.52
+  },
+  {
+    "text": "they take a lot longer than calling a",
+    "start": 154.879,
+    "duration": 3.601
+  },
+  {
+    "text": "calculator to do math because they have",
+    "start": 156.8,
+    "duration": 3.6
+  },
+  {
+    "text": "to do reasoning like you ask them to",
+    "start": 158.48,
+    "duration": 5.2
+  },
+  {
+    "text": "multiply uh two seven-digit numbers and",
+    "start": 160.4,
+    "duration": 4.72
+  },
+  {
+    "text": "it will take them a very long time to do",
+    "start": 163.68,
+    "duration": 3.199
+  },
+  {
+    "text": "it where a calculator can do that really",
+    "start": 165.12,
+    "duration": 4.399
+  },
+  {
+    "text": "quickly. So those are the two kind of",
+    "start": 166.879,
+    "duration": 5.44
+  },
+  {
+    "text": "basic categories.",
+    "start": 169.519,
+    "duration": 5.44
+  },
+  {
+    "text": "So um to go a little bit more deeply",
+    "start": 172.319,
+    "duration": 4.961
+  },
+  {
+    "text": "into those uh you can do things like",
+    "start": 174.959,
+    "duration": 5.041
+  },
+  {
+    "text": "look up current information um and the",
+    "start": 177.28,
+    "duration": 4.48
+  },
+  {
+    "text": "benefit of this is this gives you you",
+    "start": 180.0,
+    "duration": 4.319
+  },
+  {
+    "text": "know fresh evidence to uh ground your",
+    "start": 181.76,
+    "duration": 5.68
+  },
+  {
+    "text": "answers uh do exact computation using",
+    "start": 184.319,
+    "duration": 5.601
+  },
+  {
+    "text": "like calculators or python this gives",
+    "start": 187.44,
+    "duration": 4.799
+  },
+  {
+    "text": "you the ability to execute more reliably",
+    "start": 189.92,
+    "duration": 4.08
+  },
+  {
+    "text": "or and quickly than using the language",
+    "start": 192.239,
+    "duration": 3.521
+  },
+  {
+    "text": "model itself.",
+    "start": 194.0,
+    "duration": 4.08
+  },
+  {
+    "text": "Um other things is uh access private",
+    "start": 195.76,
+    "duration": 4.559
+  },
+  {
+    "text": "states. So giving the model access to",
+    "start": 198.08,
+    "duration": 4.159
+  },
+  {
+    "text": "like information about the user so they",
+    "start": 200.319,
+    "duration": 4.961
+  },
+  {
+    "text": "can uh respond based on the user state",
+    "start": 202.239,
+    "duration": 5.36
+  },
+  {
+    "text": "um or uh make a change to your external",
+    "start": 205.28,
+    "duration": 3.52
+  },
+  {
+    "text": "environment. So this could be like",
+    "start": 207.599,
+    "duration": 5.481
+  },
+  {
+    "text": "browsing or or calling an API.",
+    "start": 208.8,
+    "duration": 4.28
+  },
+  {
+    "text": "So to have some examples of these um if",
+    "start": 213.28,
+    "duration": 6.4
+  },
+  {
+    "text": "we think about chat GPT",
+    "start": 217.28,
+    "duration": 5.76
+  },
+  {
+    "text": "uh chat GPT used to like literally just",
+    "start": 219.68,
+    "duration": 5.68
+  },
+  {
+    "text": "be text in and text out when it first",
+    "start": 223.04,
+    "duration": 5.199
+  },
+  {
+    "text": "came out. it, you know, the the only",
+    "start": 225.36,
+    "duration": 4.159
+  },
+  {
+    "text": "thing that it could do was give you",
+    "start": 228.239,
+    "duration": 4.401
+  },
+  {
+    "text": "textual responses to uh your queries.",
+    "start": 229.519,
+    "duration": 5.201
+  },
+  {
+    "text": "Now, it's kind of an everything app. It",
+    "start": 232.64,
+    "duration": 3.36
+  },
+  {
+    "text": "allows you to do so many different",
+    "start": 234.72,
+    "duration": 4.0
+  },
+  {
+    "text": "things. Um,",
+    "start": 236.0,
+    "duration": 4.56
+  },
+  {
+    "text": "so like what what are some of the",
+    "start": 238.72,
+    "duration": 6.32
+  },
+  {
+    "text": "examples of things that uh you know are",
+    "start": 240.56,
+    "duration": 7.52
+  },
+  {
+    "text": "your top use cases of uh of using chat",
+    "start": 245.04,
+    "duration": 5.44
+  },
+  {
+    "text": "GPD now?",
+    "start": 248.08,
+    "duration": 3.84
+  },
+  {
+    "text": ">> Yeah.",
+    "start": 250.48,
+    "duration": 5.119
+  },
+  {
+    "text": ">> Writing code. Okay. So uh what what tool",
+    "start": 251.92,
+    "duration": 6.24
+  },
+  {
+    "text": "would you need for something like that?",
+    "start": 255.599,
+    "duration": 5.92
+  },
+  {
+    "text": "uh like cursor or codeex I think they",
+    "start": 258.16,
+    "duration": 5.68
+  },
+  {
+    "text": "they can invoke like",
+    "start": 261.519,
+    "duration": 4.081
+  },
+  {
+    "text": ">> okay but that's not chat GPT right",
+    "start": 263.84,
+    "duration": 3.6
+  },
+  {
+    "text": "that's cursor or codeex yeah I mean chat",
+    "start": 265.6,
+    "duration": 4.48
+  },
+  {
+    "text": "GPT like in the chat GPT interface",
+    "start": 267.44,
+    "duration": 5.36
+  },
+  {
+    "text": ">> they can use blender so they they can",
+    "start": 270.08,
+    "duration": 6.0
+  },
+  {
+    "text": "render blender okay things so that",
+    "start": 272.8,
+    "duration": 6.64
+  },
+  {
+    "text": "that's an example of um something that",
+    "start": 276.08,
+    "duration": 5.119
+  },
+  {
+    "text": "requires executing code but also like",
+    "start": 279.44,
+    "duration": 4.24
+  },
+  {
+    "text": "displaying it in the appropriate format",
+    "start": 281.199,
+    "duration": 5.601
+  },
+  {
+    "text": "um any any other ones that people do",
+    "start": 283.68,
+    "duration": 6.239
+  },
+  {
+    "text": "yeah Just the web page generate images.",
+    "start": 286.8,
+    "duration": 5.04
+  },
+  {
+    "text": ">> Generate images. Yeah. So that that's",
+    "start": 289.919,
+    "duration": 4.241
+  },
+  {
+    "text": "calling an image generation tool. Any",
+    "start": 291.84,
+    "duration": 4.32
+  },
+  {
+    "text": "others?",
+    "start": 294.16,
+    "duration": 5.0
+  },
+  {
+    "text": ">> Yeah.",
+    "start": 296.16,
+    "duration": 3.0
+  },
+  {
+    "text": "Yeah. So recommend products like a",
+    "start": 306.72,
+    "duration": 4.24
+  },
+  {
+    "text": "blender or something like this. And for",
+    "start": 308.639,
+    "duration": 4.321
+  },
+  {
+    "text": "this uh what what sort of tool do you",
+    "start": 310.96,
+    "duration": 3.84
+  },
+  {
+    "text": "think it would need?",
+    "start": 312.96,
+    "duration": 3.84
+  },
+  {
+    "text": ">> Some sort of like web searches like",
+    "start": 314.8,
+    "duration": 5.119
+  },
+  {
+    "text": "Google or Amazon to find.",
+    "start": 316.8,
+    "duration": 5.04
+  },
+  {
+    "text": ">> Yep. So you might need like arbitrary",
+    "start": 319.919,
+    "duration": 3.761
+  },
+  {
+    "text": "web search or you might need an API that",
+    "start": 321.84,
+    "duration": 3.76
+  },
+  {
+    "text": "directly links into Google or Amazon or",
+    "start": 323.68,
+    "duration": 3.84
+  },
+  {
+    "text": "something like that. Yeah. Any other",
+    "start": 325.6,
+    "duration": 3.76
+  },
+  {
+    "text": "like weirder weirder ones? Things you",
+    "start": 327.52,
+    "duration": 3.92
+  },
+  {
+    "text": "were surprised chat GPT was able to do?",
+    "start": 329.36,
+    "duration": 2.48
+  },
+  {
+    "text": ">> Yeah.",
+    "start": 331.44,
+    "duration": 4.0
+  },
+  {
+    "text": ">> You can render latex quite nicely.",
+    "start": 331.84,
+    "duration": 6.639
+  },
+  {
+    "text": ">> Okay. messed up files when I fix you the",
+    "start": 335.44,
+    "duration": 4.08
+  },
+  {
+    "text": "PDF",
+    "start": 338.479,
+    "duration": 2.56
+  },
+  {
+    "text": ">> and compile everything which is very",
+    "start": 339.52,
+    "duration": 2.72
+  },
+  {
+    "text": "handy sometimes.",
+    "start": 341.039,
+    "duration": 3.761
+  },
+  {
+    "text": ">> Yep. Ren, it can render latex. Well, I",
+    "start": 342.24,
+    "duration": 4.16
+  },
+  {
+    "text": "actually don't know if this is a tool or",
+    "start": 344.8,
+    "duration": 3.28
+  },
+  {
+    "text": "if this is just a front-end interface",
+    "start": 346.4,
+    "duration": 4.079
+  },
+  {
+    "text": "thing, but it might be just that it's",
+    "start": 348.08,
+    "duration": 4.08
+  },
+  {
+    "text": "rendered in your web browser.",
+    "start": 350.479,
+    "duration": 3.841
+  },
+  {
+    "text": ">> Oh, it creates a PDF. So, okay. Is a",
+    "start": 352.16,
+    "duration": 4.96
+  },
+  {
+    "text": "tool. Okay. Very cool. Yeah.",
+    "start": 354.32,
+    "duration": 4.96
+  },
+  {
+    "text": ">> Interact",
+    "start": 357.12,
+    "duration": 3.919
+  },
+  {
+    "text": ">> uh interact with like Slack or something",
+    "start": 359.28,
+    "duration": 3.199
+  },
+  {
+    "text": "like that. So, that's another",
+    "start": 361.039,
+    "duration": 3.361
+  },
+  {
+    "text": "specialized API. So all kinds of",
+    "start": 362.479,
+    "duration": 4.881
+  },
+  {
+    "text": "different things. Um I I kind of",
+    "start": 364.4,
+    "duration": 4.88
+  },
+  {
+    "text": "categorized these into a list of things",
+    "start": 367.36,
+    "duration": 5.6
+  },
+  {
+    "text": "that I think are um the most uh like",
+    "start": 369.28,
+    "duration": 6.56
+  },
+  {
+    "text": "typical tools and most of the other",
+    "start": 372.96,
+    "duration": 4.4
+  },
+  {
+    "text": "tools can kind of be categorized into",
+    "start": 375.84,
+    "duration": 4.0
+  },
+  {
+    "text": "each of these. So the first one is uh",
+    "start": 377.36,
+    "duration": 5.119
+  },
+  {
+    "text": "textual responses. So this is kind of",
+    "start": 379.84,
+    "duration": 4.16
+  },
+  {
+    "text": "the boring one where it just gives you",
+    "start": 382.479,
+    "duration": 4.961
+  },
+  {
+    "text": "an answer. Um there's two ways you can",
+    "start": 384.0,
+    "duration": 6.639
+  },
+  {
+    "text": "implement this within an agentic uh like",
+    "start": 387.44,
+    "duration": 5.599
+  },
+  {
+    "text": "loop. By the way, chat GPT is is an",
+    "start": 390.639,
+    "duration": 5.041
+  },
+  {
+    "text": "agent now. Uh if you're like if there",
+    "start": 393.039,
+    "duration": 4.481
+  },
+  {
+    "text": "was any question about it, chat GPD is",
+    "start": 395.68,
+    "duration": 3.28
+  },
+  {
+    "text": "not just a chat app. It's an agent",
+    "start": 397.52,
+    "duration": 3.76
+  },
+  {
+    "text": "because it makes uh iterative tool calls",
+    "start": 398.96,
+    "duration": 3.76
+  },
+  {
+    "text": "to answer your queries. So that's kind",
+    "start": 401.28,
+    "duration": 4.8
+  },
+  {
+    "text": "of the definition of an agent. Um but uh",
+    "start": 402.72,
+    "duration": 5.28
+  },
+  {
+    "text": "textual responses, there's two ways you",
+    "start": 406.08,
+    "duration": 3.839
+  },
+  {
+    "text": "can implement these. One way you can",
+    "start": 408.0,
+    "duration": 5.12
+  },
+  {
+    "text": "implement these is you can have a finish",
+    "start": 409.919,
+    "duration": 5.12
+  },
+  {
+    "text": "tool that says, \"Okay, I'm done",
+    "start": 413.12,
+    "duration": 3.44
+  },
+  {
+    "text": "interacting with the user, so I'm just",
+    "start": 415.039,
+    "duration": 3.121
+  },
+  {
+    "text": "going to finish and and output some",
+    "start": 416.56,
+    "duration": 4.0
+  },
+  {
+    "text": "text.\" The other way you can do it is if",
+    "start": 418.16,
+    "duration": 4.159
+  },
+  {
+    "text": "the agent decides to not call a tool,",
+    "start": 420.56,
+    "duration": 3.68
+  },
+  {
+    "text": "you can just finish the agentic loop. So",
+    "start": 422.319,
+    "duration": 4.481
+  },
+  {
+    "text": "that's kind of uh you know the the",
+    "start": 424.24,
+    "duration": 7.04
+  },
+  {
+    "text": "simple u you know most obvious one.",
+    "start": 426.8,
+    "duration": 8.32
+  },
+  {
+    "text": "Another extremely common one. Um so all",
+    "start": 431.28,
+    "duration": 5.68
+  },
+  {
+    "text": "all of these are tools and so like",
+    "start": 435.12,
+    "duration": 3.28
+  },
+  {
+    "text": "theoretically all of them can be thought",
+    "start": 436.96,
+    "duration": 3.679
+  },
+  {
+    "text": "of as an API but uh just to break them",
+    "start": 438.4,
+    "duration": 4.639
+  },
+  {
+    "text": "down a little bit more. Um another one",
+    "start": 440.639,
+    "duration": 5.12
+  },
+  {
+    "text": "is searching the web and this is you",
+    "start": 443.039,
+    "duration": 5.44
+  },
+  {
+    "text": "know pulling in information um from all",
+    "start": 445.759,
+    "duration": 7.201
+  },
+  {
+    "text": "of these uh different settings. Um how",
+    "start": 448.479,
+    "duration": 5.681
+  },
+  {
+    "text": "many people have heard of retrieval",
+    "start": 452.96,
+    "duration": 3.84
+  },
+  {
+    "text": "augmented generation? Probably everybody",
+    "start": 454.16,
+    "duration": 5.599
+  },
+  {
+    "text": "everybody who took the NLP class here uh",
+    "start": 456.8,
+    "duration": 4.88
+  },
+  {
+    "text": "you know has heard of it but a lot of",
+    "start": 459.759,
+    "duration": 3.681
+  },
+  {
+    "text": "people. How many people have heard like",
+    "start": 461.68,
+    "duration": 4.685
+  },
+  {
+    "text": "rag is dead?",
+    "start": 463.44,
+    "duration": 4.0
+  },
+  {
+    "text": "[snorts and laughter] A fairly large",
+    "start": 466.365,
+    "duration": 2.915
+  },
+  {
+    "text": "number of people. So there there's been",
+    "start": 467.44,
+    "duration": 3.44
+  },
+  {
+    "text": "an argument in like language model",
+    "start": 469.28,
+    "duration": 3.12
+  },
+  {
+    "text": "circles that retrieval augmented",
+    "start": 470.88,
+    "duration": 3.599
+  },
+  {
+    "text": "generation was so like two years ago and",
+    "start": 472.4,
+    "duration": 4.32
+  },
+  {
+    "text": "like nobody cares about it anymore. My",
+    "start": 474.479,
+    "duration": 4.56
+  },
+  {
+    "text": "argument here is a retrieval augmented",
+    "start": 476.72,
+    "duration": 4.159
+  },
+  {
+    "text": "generation where you retrieve context",
+    "start": 479.039,
+    "duration": 3.921
+  },
+  {
+    "text": "and then generate answers based on it",
+    "start": 480.879,
+    "duration": 3.841
+  },
+  {
+    "text": "has become so normal that people don't",
+    "start": 482.96,
+    "duration": 3.12
+  },
+  {
+    "text": "even realize that they're using it",
+    "start": 484.72,
+    "duration": 4.879
+  },
+  {
+    "text": "anymore. And so um it's it's so alive",
+    "start": 486.08,
+    "duration": 6.64
+  },
+  {
+    "text": "that people think it's dead. Um but uh",
+    "start": 489.599,
+    "duration": 5.361
+  },
+  {
+    "text": "basically you know searching the web and",
+    "start": 492.72,
+    "duration": 3.52
+  },
+  {
+    "text": "retrieving information and then",
+    "start": 494.96,
+    "duration": 3.44
+  },
+  {
+    "text": "generating answers based on it is now",
+    "start": 496.24,
+    "duration": 4.799
+  },
+  {
+    "text": "essentially the norm uh within these uh",
+    "start": 498.4,
+    "duration": 4.799
+  },
+  {
+    "text": "these applications. Now so uh that's",
+    "start": 501.039,
+    "duration": 4.16
+  },
+  {
+    "text": "another tool that's provided very very",
+    "start": 503.199,
+    "duration": 6.72
+  },
+  {
+    "text": "broadly and like any chat uh interface.",
+    "start": 505.199,
+    "duration": 7.2
+  },
+  {
+    "text": "Another one is code execution and so",
+    "start": 509.919,
+    "duration": 5.521
+  },
+  {
+    "text": "this is uh throwing in uh you know a set",
+    "start": 512.399,
+    "duration": 5.681
+  },
+  {
+    "text": "of code to do uh calculations or or",
+    "start": 515.44,
+    "duration": 5.44
+  },
+  {
+    "text": "something like this. very useful for uh",
+    "start": 518.08,
+    "duration": 4.639
+  },
+  {
+    "text": "computation all the other stuff we",
+    "start": 520.88,
+    "duration": 4.72
+  },
+  {
+    "text": "talked about. Another common one is uh",
+    "start": 522.719,
+    "duration": 6.481
+  },
+  {
+    "text": "having some sort of image generation and",
+    "start": 525.6,
+    "duration": 5.52
+  },
+  {
+    "text": "uh this this is you know obviously",
+    "start": 529.2,
+    "duration": 3.84
+  },
+  {
+    "text": "another very popular use case in chat",
+    "start": 531.12,
+    "duration": 5.2
+  },
+  {
+    "text": "GPT. Um this one's a little bit",
+    "start": 533.04,
+    "duration": 4.64
+  },
+  {
+    "text": "different because like all of the other",
+    "start": 536.32,
+    "duration": 3.68
+  },
+  {
+    "text": "ones here uh that I was talking about",
+    "start": 537.68,
+    "duration": 5.2
+  },
+  {
+    "text": "basically you know mostly interface with",
+    "start": 540.0,
+    "duration": 6.48
+  },
+  {
+    "text": "text. Um here this is interfacing with",
+    "start": 542.88,
+    "duration": 6.8
+  },
+  {
+    "text": "uh this is interfacing with images. One",
+    "start": 546.48,
+    "duration": 6.4
+  },
+  {
+    "text": "interesting thing is uh you'll notice",
+    "start": 549.68,
+    "duration": 6.96
+  },
+  {
+    "text": "that this is not the same thing is here.",
+    "start": 552.88,
+    "duration": 7.04
+  },
+  {
+    "text": "So this is like water watercolor robot",
+    "start": 556.64,
+    "duration": 4.96
+  },
+  {
+    "text": "studying in a library where the query",
+    "start": 559.92,
+    "duration": 5.52
+  },
+  {
+    "text": "was actually different. And so a big",
+    "start": 561.6,
+    "duration": 6.0
+  },
+  {
+    "text": "part of calling these images is actually",
+    "start": 565.44,
+    "duration": 4.56
+  },
+  {
+    "text": "deciding what query to put in there. So",
+    "start": 567.6,
+    "duration": 4.0
+  },
+  {
+    "text": "the language model will like really",
+    "start": 570.0,
+    "duration": 3.279
+  },
+  {
+    "text": "really expand the query before it calls",
+    "start": 571.6,
+    "duration": 3.919
+  },
+  {
+    "text": "an image generation API. I don't know if",
+    "start": 573.279,
+    "duration": 3.921
+  },
+  {
+    "text": "you can see this anymore in chat GPT,",
+    "start": 575.519,
+    "duration": 3.201
+  },
+  {
+    "text": "but you used to be able to see in chat",
+    "start": 577.2,
+    "duration": 4.319
+  },
+  {
+    "text": "GPT when you downloaded the image um",
+    "start": 578.72,
+    "duration": 4.239
+  },
+  {
+    "text": "that it would have like a very different",
+    "start": 581.519,
+    "duration": 2.801
+  },
+  {
+    "text": "caption than the caption you gave and",
+    "start": 582.959,
+    "duration": 3.281
+  },
+  {
+    "text": "you could kind of like latently see what",
+    "start": 584.32,
+    "duration": 4.32
+  },
+  {
+    "text": "the uh what query the the image",
+    "start": 586.24,
+    "duration": 4.719
+  },
+  {
+    "text": "generator uh sent to the generate image",
+    "start": 588.64,
+    "duration": 4.96
+  },
+  {
+    "text": "tool.",
+    "start": 590.959,
+    "duration": 5.601
+  },
+  {
+    "text": "Then there's all all kinds of uh you",
+    "start": 593.6,
+    "duration": 6.48
+  },
+  {
+    "text": "know custom functions. So, um, like buy",
+    "start": 596.56,
+    "duration": 7.04
+  },
+  {
+    "text": "me buy me bananas, uh, milk and coffee.",
+    "start": 600.08,
+    "duration": 5.439
+  },
+  {
+    "text": "Um, so, you know, this could create a",
+    "start": 603.6,
+    "duration": 4.48
+  },
+  {
+    "text": "grocery cart, uh, for you and call the",
+    "start": 605.519,
+    "duration": 6.561
+  },
+  {
+    "text": "like Instacart API to do this. Um, and",
+    "start": 608.08,
+    "duration": 5.92
+  },
+  {
+    "text": "you can basically go as wild as you want",
+    "start": 612.08,
+    "duration": 3.52
+  },
+  {
+    "text": "with all these tools and and add",
+    "start": 614.0,
+    "duration": 5.56
+  },
+  {
+    "text": "whichever ones you want there.",
+    "start": 615.6,
+    "duration": 3.96
+  },
+  {
+    "text": "Okay, so there's a bunch of different",
+    "start": 620.079,
+    "duration": 6.961
+  },
+  {
+    "text": "ways you can think about tool calling.",
+    "start": 624.72,
+    "duration": 4.08
+  },
+  {
+    "text": "Um the first way you can think about",
+    "start": 627.04,
+    "duration": 5.359
+  },
+  {
+    "text": "tool calling is just",
+    "start": 628.8,
+    "duration": 9.039
+  },
+  {
+    "text": "you provide a list of uh 50 or 70 API",
+    "start": 632.399,
+    "duration": 7.44
+  },
+  {
+    "text": "functions that the agent is able to",
+    "start": 637.839,
+    "duration": 4.321
+  },
+  {
+    "text": "inter interact with and it can call",
+    "start": 639.839,
+    "duration": 6.081
+  },
+  {
+    "text": "these uh APIs and if you do that",
+    "start": 642.16,
+    "duration": 5.04
+  },
+  {
+    "text": "basically what you're doing is like",
+    "start": 645.92,
+    "duration": 3.359
+  },
+  {
+    "text": "every step you're calling one API or if",
+    "start": 647.2,
+    "duration": 3.199
+  },
+  {
+    "text": "you're doing parallel tool calling",
+    "start": 649.279,
+    "duration": 2.481
+  },
+  {
+    "text": "you're calling multiple APIs or",
+    "start": 650.399,
+    "duration": 4.641
+  },
+  {
+    "text": "something like this but code is kind of",
+    "start": 651.76,
+    "duration": 8.4
+  },
+  {
+    "text": "a special uh API uh because code is",
+    "start": 655.04,
+    "duration": 6.799
+  },
+  {
+    "text": "extremely",
+    "start": 660.16,
+    "duration": 4.08
+  },
+  {
+    "text": "uh you know expressive and you can view",
+    "start": 661.839,
+    "duration": 6.24
+  },
+  {
+    "text": "code as like a meta tool right so within",
+    "start": 664.24,
+    "duration": 6.159
+  },
+  {
+    "text": "this we have like the bakers baked 200",
+    "start": 668.079,
+    "duration": 3.76
+  },
+  {
+    "text": "loaves of bread how many loaves of bread",
+    "start": 670.399,
+    "duration": 4.401
+  },
+  {
+    "text": "did they have left here this is calling",
+    "start": 671.839,
+    "duration": 6.161
+  },
+  {
+    "text": "an assignment tool an assignment tool",
+    "start": 674.8,
+    "duration": 6.0
+  },
+  {
+    "text": "this is calling a subtraction tool um",
+    "start": 678.0,
+    "duration": 5.6
+  },
+  {
+    "text": "this is calling a uh assignment tool you",
+    "start": 680.8,
+    "duration": 6.64
+  },
+  {
+    "text": "know etc etc so like essentially",
+    "start": 683.6,
+    "duration": 5.84
+  },
+  {
+    "text": "Um I I imagine that a lot of people have",
+    "start": 687.44,
+    "duration": 3.44
+  },
+  {
+    "text": "taken like a programming languages",
+    "start": 689.44,
+    "duration": 4.0
+  },
+  {
+    "text": "course or have some familiar familiarity",
+    "start": 690.88,
+    "duration": 5.04
+  },
+  {
+    "text": "with programming languages but basically",
+    "start": 693.44,
+    "duration": 4.959
+  },
+  {
+    "text": "you you can express",
+    "start": 695.92,
+    "duration": 5.359
+  },
+  {
+    "text": "each piece of code is a tree of these",
+    "start": 698.399,
+    "duration": 6.56
+  },
+  {
+    "text": "function calls um and these uh the tree",
+    "start": 701.279,
+    "duration": 6.0
+  },
+  {
+    "text": "can also be have loops and other uh",
+    "start": 704.959,
+    "duration": 4.961
+  },
+  {
+    "text": "control flow in it. So it's essentially",
+    "start": 707.279,
+    "duration": 4.961
+  },
+  {
+    "text": "you know a very rich way of calling uh",
+    "start": 709.92,
+    "duration": 6.159
+  },
+  {
+    "text": "tools. Um and so uh you can also pull in",
+    "start": 712.24,
+    "duration": 7.279
+  },
+  {
+    "text": "external libraries. So these are now the",
+    "start": 716.079,
+    "duration": 6.481
+  },
+  {
+    "text": "custom APIs that you pull into your uh",
+    "start": 719.519,
+    "duration": 6.241
+  },
+  {
+    "text": "pull into your system. So uh you know",
+    "start": 722.56,
+    "duration": 5.12
+  },
+  {
+    "text": "now if you're calling pandas now you've",
+    "start": 725.76,
+    "duration": 4.639
+  },
+  {
+    "text": "opened up all of the like tools in",
+    "start": 727.68,
+    "duration": 5.2
+  },
+  {
+    "text": "pandas right",
+    "start": 730.399,
+    "duration": 6.481
+  },
+  {
+    "text": "and um you know you can build your own",
+    "start": 732.88,
+    "duration": 7.68
+  },
+  {
+    "text": "utility functions. So you could call uh",
+    "start": 736.88,
+    "duration": 5.519
+  },
+  {
+    "text": "special purpose functions that you want",
+    "start": 740.56,
+    "duration": 5.12
+  },
+  {
+    "text": "uh as well. So",
+    "start": 742.399,
+    "duration": 5.041
+  },
+  {
+    "text": "code is kind of special. It's like one",
+    "start": 745.68,
+    "duration": 4.32
+  },
+  {
+    "text": "of the one of the you know special",
+    "start": 747.44,
+    "duration": 5.92
+  },
+  {
+    "text": "things that uh it's different from other",
+    "start": 750.0,
+    "duration": 5.2
+  },
+  {
+    "text": "tools in the way that it like opens up",
+    "start": 753.36,
+    "duration": 4.56
+  },
+  {
+    "text": "your ability to call tools in new ways.",
+    "start": 755.2,
+    "duration": 4.8
+  },
+  {
+    "text": "And so there's actually uh research work",
+    "start": 757.92,
+    "duration": 3.68
+  },
+  {
+    "text": "that demonstrates that this is very",
+    "start": 760.0,
+    "duration": 4.079
+  },
+  {
+    "text": "effective. Uh right now we basically",
+    "start": 761.6,
+    "duration": 5.28
+  },
+  {
+    "text": "take it for granted but this was not how",
+    "start": 764.079,
+    "duration": 5.041
+  },
+  {
+    "text": "uh not how we called tools like three or",
+    "start": 766.88,
+    "duration": 5.519
+  },
+  {
+    "text": "four years ago uh when we first started",
+    "start": 769.12,
+    "duration": 6.08
+  },
+  {
+    "text": "uh you know building agents with LLMs.",
+    "start": 772.399,
+    "duration": 5.921
+  },
+  {
+    "text": "And so the the standard then was like if",
+    "start": 775.2,
+    "duration": 5.12
+  },
+  {
+    "text": "you got a a query sorry this is very",
+    "start": 778.32,
+    "duration": 4.16
+  },
+  {
+    "text": "small but um it basically says determine",
+    "start": 780.32,
+    "duration": 4.24
+  },
+  {
+    "text": "the most cost-effective country to",
+    "start": 782.48,
+    "duration": 4.72
+  },
+  {
+    "text": "purchase the smartphone model Kodak 1.",
+    "start": 784.56,
+    "duration": 5.44
+  },
+  {
+    "text": "Uh the countries to consider are the US",
+    "start": 787.2,
+    "duration": 5.199
+  },
+  {
+    "text": "uh Japan, Germany and India. Basically,",
+    "start": 790.0,
+    "duration": 6.16
+  },
+  {
+    "text": "what this would require you to do was uh",
+    "start": 792.399,
+    "duration": 6.161
+  },
+  {
+    "text": "you would call your lookup rates tool on",
+    "start": 796.16,
+    "duration": 4.72
+  },
+  {
+    "text": "Germany. Um you would call your lookup",
+    "start": 798.56,
+    "duration": 5.36
+  },
+  {
+    "text": "phone price uh tool. You would call uh",
+    "start": 800.88,
+    "duration": 5.36
+  },
+  {
+    "text": "convert and tax. Then you would call",
+    "start": 803.92,
+    "duration": 4.56
+  },
+  {
+    "text": "lookup rates again. Then you would call",
+    "start": 806.24,
+    "duration": 3.92
+  },
+  {
+    "text": "uh look up phone price and you would",
+    "start": 808.48,
+    "duration": 4.479
+  },
+  {
+    "text": "step over and over and over again uh in",
+    "start": 810.16,
+    "duration": 5.119
+  },
+  {
+    "text": "order to uh finally get uh finally get",
+    "start": 812.959,
+    "duration": 4.081
+  },
+  {
+    "text": "the result.",
+    "start": 815.279,
+    "duration": 4.081
+  },
+  {
+    "text": "But if you write code, you can just",
+    "start": 817.04,
+    "duration": 4.4
+  },
+  {
+    "text": "write like a single program to perform",
+    "start": 819.36,
+    "duration": 4.64
+  },
+  {
+    "text": "this. And so uh this makes it like a",
+    "start": 821.44,
+    "duration": 4.8
+  },
+  {
+    "text": "much richer uh a much more efficient way",
+    "start": 824.0,
+    "duration": 4.48
+  },
+  {
+    "text": "of calling tools in addition to be being",
+    "start": 826.24,
+    "duration": 4.8
+  },
+  {
+    "text": "richer. And so this method called uh",
+    "start": 828.48,
+    "duration": 6.56
+  },
+  {
+    "text": "called Kodak has a paper uh about it and",
+    "start": 831.04,
+    "duration": 5.599
+  },
+  {
+    "text": "uh some of the core results from the",
+    "start": 835.04,
+    "duration": 3.76
+  },
+  {
+    "text": "paper are essentially the success rate",
+    "start": 836.639,
+    "duration": 4.161
+  },
+  {
+    "text": "goes up and the average number of",
+    "start": 838.8,
+    "duration": 4.32
+  },
+  {
+    "text": "interaction turns goes down. And this is",
+    "start": 840.8,
+    "duration": 5.839
+  },
+  {
+    "text": "even for tasks that didn't traditionally",
+    "start": 843.12,
+    "duration": 5.279
+  },
+  {
+    "text": "require code. These are for tasks that",
+    "start": 846.639,
+    "duration": 4.081
+  },
+  {
+    "text": "were like viewed as regular tool use",
+    "start": 848.399,
+    "duration": 5.281
+  },
+  {
+    "text": "tasks. Um but like code is just like a",
+    "start": 850.72,
+    "duration": 4.96
+  },
+  {
+    "text": "good medium uh for how you would do",
+    "start": 853.68,
+    "duration": 4.88
+  },
+  {
+    "text": "this.",
+    "start": 855.68,
+    "duration": 5.2
+  },
+  {
+    "text": "Um but there's a reason why people don't",
+    "start": 858.56,
+    "duration": 4.399
+  },
+  {
+    "text": "use code uh programmatic tool calling",
+    "start": 860.88,
+    "duration": 4.959
+  },
+  {
+    "text": "for everything. Um and it largely has to",
+    "start": 862.959,
+    "duration": 6.961
+  },
+  {
+    "text": "do with um with like the level of power",
+    "start": 865.839,
+    "duration": 6.161
+  },
+  {
+    "text": "that you want to give to the agent. So",
+    "start": 869.92,
+    "duration": 4.08
+  },
+  {
+    "text": "code is very highowered. So it's",
+    "start": 872.0,
+    "duration": 4.24
+  },
+  {
+    "text": "expressive. It gives you loop variables",
+    "start": 874.0,
+    "duration": 4.56
+  },
+  {
+    "text": "and libraries. This is good. But what",
+    "start": 876.24,
+    "duration": 4.8
+  },
+  {
+    "text": "could be a downside of this?",
+    "start": 878.56,
+    "duration": 5.6
+  },
+  {
+    "text": "Any ideas? Ju just with respect to loops",
+    "start": 881.04,
+    "duration": 5.2
+  },
+  {
+    "text": "variables uh loops and variables at",
+    "start": 884.16,
+    "duration": 4.32
+  },
+  {
+    "text": "first maybe. Yeah.",
+    "start": 886.24,
+    "duration": 2.959
+  },
+  {
+    "text": ">> Get stuck.",
+    "start": 888.48,
+    "duration": 2.0
+  },
+  {
+    "text": ">> Yeah, it could get stuck. So it could",
+    "start": 889.199,
+    "duration": 3.281
+  },
+  {
+    "text": "write an infinite loop and then you need",
+    "start": 890.48,
+    "duration": 3.44
+  },
+  {
+    "text": "to have something in your system to deal",
+    "start": 892.48,
+    "duration": 3.599
+  },
+  {
+    "text": "with infinite loops, right? That's uh",
+    "start": 893.92,
+    "duration": 4.4
+  },
+  {
+    "text": "that's a little bit annoying. Um what",
+    "start": 896.079,
+    "duration": 5.12
+  },
+  {
+    "text": "about libraries?",
+    "start": 898.32,
+    "duration": 4.959
+  },
+  {
+    "text": "any problem with that?",
+    "start": 901.199,
+    "duration": 3.841
+  },
+  {
+    "text": ">> Yeah, security problems would be one",
+    "start": 903.279,
+    "duration": 4.0
+  },
+  {
+    "text": "thing. Also, maybe just versioning and",
+    "start": 905.04,
+    "duration": 4.32
+  },
+  {
+    "text": "stuff like this, but um I'm not sure if",
+    "start": 907.279,
+    "duration": 3.841
+  },
+  {
+    "text": "people are familiar with this, but one",
+    "start": 909.36,
+    "duration": 4.0
+  },
+  {
+    "text": "of the major issues with agents in cyber",
+    "start": 911.12,
+    "duration": 4.64
+  },
+  {
+    "text": "security right now is the agents will",
+    "start": 913.36,
+    "duration": 3.76
+  },
+  {
+    "text": "pull in a library that has been",
+    "start": 915.76,
+    "duration": 4.56
+  },
+  {
+    "text": "compromised. Um the agent gets",
+    "start": 917.12,
+    "duration": 4.56
+  },
+  {
+    "text": "compromised and then your whole system",
+    "start": 920.32,
+    "duration": 3.36
+  },
+  {
+    "text": "gets compromised. So, uh this is",
+    "start": 921.68,
+    "duration": 3.519
+  },
+  {
+    "text": "something uh something you need to be",
+    "start": 923.68,
+    "duration": 3.839
+  },
+  {
+    "text": "very careful about.",
+    "start": 925.199,
+    "duration": 5.2
+  },
+  {
+    "text": "Um they're also uh harder con to",
+    "start": 927.519,
+    "duration": 4.161
+  },
+  {
+    "text": "constrain because they have the broad",
+    "start": 930.399,
+    "duration": 3.841
+  },
+  {
+    "text": "action space. So uh it's you know harder",
+    "start": 931.68,
+    "duration": 4.56
+  },
+  {
+    "text": "to validate and uh get predictable",
+    "start": 934.24,
+    "duration": 4.719
+  },
+  {
+    "text": "behavior. Um they also have higher",
+    "start": 936.24,
+    "duration": 4.48
+  },
+  {
+    "text": "impact. So they can you know use more",
+    "start": 938.959,
+    "duration": 4.161
+  },
+  {
+    "text": "disk uh sorry use more memory, use more",
+    "start": 940.72,
+    "duration": 4.88
+  },
+  {
+    "text": "disk, use more CPU and stuff like this.",
+    "start": 943.12,
+    "duration": 4.48
+  },
+  {
+    "text": "And so because of this um we'll talk",
+    "start": 945.6,
+    "duration": 3.359
+  },
+  {
+    "text": "about this more in the safety lecture,",
+    "start": 947.6,
+    "duration": 3.44
+  },
+  {
+    "text": "but like once you move to programmatic",
+    "start": 948.959,
+    "duration": 5.041
+  },
+  {
+    "text": "tool calling, you need to be uh you need",
+    "start": 951.04,
+    "duration": 4.479
+  },
+  {
+    "text": "to think about sandboxes and how you're",
+    "start": 954.0,
+    "duration": 2.8
+  },
+  {
+    "text": "going to contain the agent and stuff",
+    "start": 955.519,
+    "duration": 4.081
+  },
+  {
+    "text": "like that as well.",
+    "start": 956.8,
+    "duration": 7.64
+  },
+  {
+    "text": "Um any any questions about this?",
+    "start": 959.6,
+    "duration": 4.84
+  },
+  {
+    "text": "Cool.",
+    "start": 966.959,
+    "duration": 5.201
+  },
+  {
+    "text": "Okay. So I want to uh talk next about",
+    "start": 969.519,
+    "duration": 5.361
+  },
+  {
+    "text": "the mech uh mechanics of providing tools",
+    "start": 972.16,
+    "duration": 6.96
+  },
+  {
+    "text": "and right now uh every language model is",
+    "start": 974.88,
+    "duration": 7.199
+  },
+  {
+    "text": "basically pretty good at uh like calling",
+    "start": 979.12,
+    "duration": 5.12
+  },
+  {
+    "text": "tools but this was not you know taken",
+    "start": 982.079,
+    "duration": 4.241
+  },
+  {
+    "text": "for granted. I I think I mentioned this",
+    "start": 984.24,
+    "duration": 4.719
+  },
+  {
+    "text": "on Tuesday as well. Um but basically",
+    "start": 986.32,
+    "duration": 5.84
+  },
+  {
+    "text": "tool calls are um expressed as tokens",
+    "start": 988.959,
+    "duration": 6.721
+  },
+  {
+    "text": "like this. And so um you know a text",
+    "start": 992.16,
+    "duration": 7.039
+  },
+  {
+    "text": "continuation is the weather is sunny. A",
+    "start": 995.68,
+    "duration": 7.68
+  },
+  {
+    "text": "tool continuation is uh like a tool call",
+    "start": 999.199,
+    "duration": 5.76
+  },
+  {
+    "text": "and then you have get weather or",
+    "start": 1003.36,
+    "duration": 3.2
+  },
+  {
+    "text": "something like this within the the tool",
+    "start": 1004.959,
+    "duration": 5.841
+  },
+  {
+    "text": "call. And very often uh you have both in",
+    "start": 1006.56,
+    "duration": 7.279
+  },
+  {
+    "text": "the same uh output. So if you remember",
+    "start": 1010.8,
+    "duration": 7.2
+  },
+  {
+    "text": "react uh which was talked about before",
+    "start": 1013.839,
+    "duration": 9.92
+  },
+  {
+    "text": "um I can actually draw this on the board",
+    "start": 1018.0,
+    "duration": 8.079
+  },
+  {
+    "text": "but react basically you have your text",
+    "start": 1023.759,
+    "duration": 4.481
+  },
+  {
+    "text": "up here",
+    "start": 1026.079,
+    "duration": 6.641
+  },
+  {
+    "text": "and then you have your uh tool call",
+    "start": 1028.24,
+    "duration": 6.079
+  },
+  {
+    "text": "and then you have your tool call down",
+    "start": 1032.72,
+    "duration": 4.599
+  },
+  {
+    "text": "here.",
+    "start": 1034.319,
+    "duration": 3.0
+  },
+  {
+    "text": "Yeah, this is like the end of the tool",
+    "start": 1039.919,
+    "duration": 4.721
+  },
+  {
+    "text": "call.",
+    "start": 1041.839,
+    "duration": 5.84
+  },
+  {
+    "text": "And so now you have the the model be",
+    "start": 1044.64,
+    "duration": 6.56
+  },
+  {
+    "text": "being uh giving a response to the human",
+    "start": 1047.679,
+    "duration": 5.601
+  },
+  {
+    "text": "uh while it's making the tool call. And",
+    "start": 1051.2,
+    "duration": 4.32
+  },
+  {
+    "text": "then uh in here you have the like actual",
+    "start": 1053.28,
+    "duration": 4.24
+  },
+  {
+    "text": "tool call that it's making. And so the",
+    "start": 1055.52,
+    "duration": 4.24
+  },
+  {
+    "text": "react loop is no longer expressed as",
+    "start": 1057.52,
+    "duration": 4.88
+  },
+  {
+    "text": "like separate code. It's expressed more",
+    "start": 1059.76,
+    "duration": 5.44
+  },
+  {
+    "text": "as like just a single completion. um if",
+    "start": 1062.4,
+    "duration": 6.639
+  },
+  {
+    "text": "you're using one of the reasoning models",
+    "start": 1065.2,
+    "duration": 5.52
+  },
+  {
+    "text": "um",
+    "start": 1069.039,
+    "duration": 4.401
+  },
+  {
+    "text": "that can reason uh like have long",
+    "start": 1070.72,
+    "duration": 5.68
+  },
+  {
+    "text": "reasoning traces and stuff like that. In",
+    "start": 1073.44,
+    "duration": 4.08
+  },
+  {
+    "text": "addition, you might have like the",
+    "start": 1076.4,
+    "duration": 3.04
+  },
+  {
+    "text": "thinking tokens up here and then a",
+    "start": 1077.52,
+    "duration": 4.56
+  },
+  {
+    "text": "message and then the tool calls. And so",
+    "start": 1079.44,
+    "duration": 4.4
+  },
+  {
+    "text": "the thinking is like very verbose",
+    "start": 1082.08,
+    "duration": 3.04
+  },
+  {
+    "text": "thinking that you don't show to the",
+    "start": 1083.84,
+    "duration": 3.92
+  },
+  {
+    "text": "user. The text is the less verbose uh",
+    "start": 1085.12,
+    "duration": 4.48
+  },
+  {
+    "text": "message that you show to the user and",
+    "start": 1087.76,
+    "duration": 3.6
+  },
+  {
+    "text": "then the tool call is like the actual",
+    "start": 1089.6,
+    "duration": 4.8
+  },
+  {
+    "text": "output you have there.",
+    "start": 1091.36,
+    "duration": 3.76
+  },
+  {
+    "text": "Yeah,",
+    "start": 1094.4,
+    "duration": 2.96
+  },
+  {
+    "text": ">> the tool call tokens has to be in the",
+    "start": 1095.12,
+    "duration": 4.0
+  },
+  {
+    "text": "vocabulary of the model during",
+    "start": 1097.36,
+    "duration": 3.84
+  },
+  {
+    "text": "pre-training also, right?",
+    "start": 1099.12,
+    "duration": 2.64
+  },
+  {
+    "text": ">> Yes.",
+    "start": 1101.2,
+    "duration": 2.32
+  },
+  {
+    "text": ">> So all of these service tokens are going",
+    "start": 1101.76,
+    "duration": 5.039
+  },
+  {
+    "text": "to be vocabulary.",
+    "start": 1103.52,
+    "duration": 5.68
+  },
+  {
+    "text": ">> Uh yes. So actually that's a good point.",
+    "start": 1106.799,
+    "duration": 4.24
+  },
+  {
+    "text": "I said yes, but the answer might be no.",
+    "start": 1109.2,
+    "duration": 3.359
+  },
+  {
+    "text": "I'm going to repeat the question first.",
+    "start": 1111.039,
+    "duration": 4.161
+  },
+  {
+    "text": "So the question was um do these tokens",
+    "start": 1112.559,
+    "duration": 4.321
+  },
+  {
+    "text": "have to be in the vocabulary when you do",
+    "start": 1115.2,
+    "duration": 4.8
+  },
+  {
+    "text": "pre-training? Um, typically if you're",
+    "start": 1116.88,
+    "duration": 4.96
+  },
+  {
+    "text": "pre-training on all of the internet, you",
+    "start": 1120.0,
+    "duration": 3.28
+  },
+  {
+    "text": "don't necessarily have to have them in",
+    "start": 1121.84,
+    "duration": 6.16
+  },
+  {
+    "text": "the vocabulary yet. Um we there are",
+    "start": 1123.28,
+    "duration": 6.48
+  },
+  {
+    "text": "cases where you might do that but it's",
+    "start": 1128.0,
+    "duration": 3.2
+  },
+  {
+    "text": "actually more typical to introduce them",
+    "start": 1129.76,
+    "duration": 3.279
+  },
+  {
+    "text": "in a process of mid-training which is",
+    "start": 1131.2,
+    "duration": 5.28
+  },
+  {
+    "text": "like uh between uh it's when you're",
+    "start": 1133.039,
+    "duration": 6.081
+  },
+  {
+    "text": "training on like moderately large",
+    "start": 1136.48,
+    "duration": 4.96
+  },
+  {
+    "text": "amounts of data on things in the format",
+    "start": 1139.12,
+    "duration": 4.48
+  },
+  {
+    "text": "that you like and then uh you might do",
+    "start": 1141.44,
+    "duration": 3.84
+  },
+  {
+    "text": "reinforcement learning after that but",
+    "start": 1143.6,
+    "duration": 2.959
+  },
+  {
+    "text": "you might not necessarily have them when",
+    "start": 1145.28,
+    "duration": 5.12
+  },
+  {
+    "text": "you pre-train on the whole internet.",
+    "start": 1146.559,
+    "duration": 7.441
+  },
+  {
+    "text": "Cool. Um",
+    "start": 1150.4,
+    "duration": 5.279
+  },
+  {
+    "text": "so",
+    "start": 1154.0,
+    "duration": 5.2
+  },
+  {
+    "text": "I think this should likely be familiar",
+    "start": 1155.679,
+    "duration": 7.12
+  },
+  {
+    "text": "to um you know uh people who have",
+    "start": 1159.2,
+    "duration": 5.52
+  },
+  {
+    "text": "implemented things in uh previous",
+    "start": 1162.799,
+    "duration": 3.521
+  },
+  {
+    "text": "natural language processing or or",
+    "start": 1164.72,
+    "duration": 5.12
+  },
+  {
+    "text": "whatever courses. But um if you have the",
+    "start": 1166.32,
+    "duration": 5.44
+  },
+  {
+    "text": "chat format like the open AAI chat",
+    "start": 1169.84,
+    "duration": 3.44
+  },
+  {
+    "text": "format you have things like the system",
+    "start": 1171.76,
+    "duration": 3.52
+  },
+  {
+    "text": "message, the user message, the assistant",
+    "start": 1173.28,
+    "duration": 4.72
+  },
+  {
+    "text": "message and then uh these are",
+    "start": 1175.28,
+    "duration": 6.96
+  },
+  {
+    "text": "represented as something like JSON in",
+    "start": 1178.0,
+    "duration": 6.88
+  },
+  {
+    "text": "uh like in Python when you call the call",
+    "start": 1182.24,
+    "duration": 6.319
+  },
+  {
+    "text": "the model but these get converted into",
+    "start": 1184.88,
+    "duration": 5.76
+  },
+  {
+    "text": "something uh with like a special token",
+    "start": 1188.559,
+    "duration": 6.24
+  },
+  {
+    "text": "here the system uh like this is a system",
+    "start": 1190.64,
+    "duration": 6.08
+  },
+  {
+    "text": "prompt and then be concise and stuff",
+    "start": 1194.799,
+    "duration": 4.401
+  },
+  {
+    "text": "like this. So like each chat message",
+    "start": 1196.72,
+    "duration": 5.199
+  },
+  {
+    "text": "gets its own format and this is an",
+    "start": 1199.2,
+    "duration": 5.52
+  },
+  {
+    "text": "example of the quen format",
+    "start": 1201.919,
+    "duration": 5.521
+  },
+  {
+    "text": "but uh as I'll show later the other uh",
+    "start": 1204.72,
+    "duration": 3.76
+  },
+  {
+    "text": "other functions are in different",
+    "start": 1207.44,
+    "duration": 3.92
+  },
+  {
+    "text": "formats. So",
+    "start": 1208.48,
+    "duration": 6.559
+  },
+  {
+    "text": "tools basically um add a structure to",
+    "start": 1211.36,
+    "duration": 5.28
+  },
+  {
+    "text": "the request and so you have a tool",
+    "start": 1215.039,
+    "duration": 4.88
+  },
+  {
+    "text": "definition like this and uh this tells",
+    "start": 1216.64,
+    "duration": 5.52
+  },
+  {
+    "text": "you that it's a function. The function",
+    "start": 1219.919,
+    "duration": 4.64
+  },
+  {
+    "text": "name might be get weather. Um the",
+    "start": 1222.16,
+    "duration": 6.639
+  },
+  {
+    "text": "parameters are city and the type is a",
+    "start": 1224.559,
+    "duration": 8.801
+  },
+  {
+    "text": "string and this is required. And this",
+    "start": 1228.799,
+    "duration": 7.201
+  },
+  {
+    "text": "schema gets passed to for example the",
+    "start": 1233.36,
+    "duration": 4.559
+  },
+  {
+    "text": "chat completions function that you you",
+    "start": 1236.0,
+    "duration": 3.44
+  },
+  {
+    "text": "would use when calling openAI or",
+    "start": 1237.919,
+    "duration": 4.841
+  },
+  {
+    "text": "something like this.",
+    "start": 1239.44,
+    "duration": 3.32
+  },
+  {
+    "text": "So um when the prompt uh contains",
+    "start": 1244.32,
+    "duration": 4.96
+  },
+  {
+    "text": "something like this, you might have uh",
+    "start": 1247.36,
+    "duration": 4.08
+  },
+  {
+    "text": "this included in the tools section of",
+    "start": 1249.28,
+    "duration": 5.2
+  },
+  {
+    "text": "the prompt and then the output uh ends",
+    "start": 1251.44,
+    "duration": 5.68
+  },
+  {
+    "text": "up being something like name get weather",
+    "start": 1254.48,
+    "duration": 4.24
+  },
+  {
+    "text": "uh with the appropriate arguments like",
+    "start": 1257.12,
+    "duration": 5.08
+  },
+  {
+    "text": "the city of Pittsburgh.",
+    "start": 1258.72,
+    "duration": 3.48
+  },
+  {
+    "text": "So um we we had a question about how you",
+    "start": 1262.799,
+    "duration": 5.681
+  },
+  {
+    "text": "pre-train the models and um you might",
+    "start": 1265.6,
+    "duration": 4.48
+  },
+  {
+    "text": "not be pre-training but at least at",
+    "start": 1268.48,
+    "duration": 3.6
+  },
+  {
+    "text": "mid-training and beyond you will be",
+    "start": 1270.08,
+    "duration": 3.52
+  },
+  {
+    "text": "training the model to fit a particular",
+    "start": 1272.08,
+    "duration": 3.92
+  },
+  {
+    "text": "tool call format. The interesting thing",
+    "start": 1273.6,
+    "duration": 4.319
+  },
+  {
+    "text": "is uh every model has a different tool",
+    "start": 1276.0,
+    "duration": 4.72
+  },
+  {
+    "text": "call format. Maybe not everyone but many",
+    "start": 1277.919,
+    "duration": 6.161
+  },
+  {
+    "text": "of the different ones. And so uh Quen",
+    "start": 1280.72,
+    "duration": 8.56
+  },
+  {
+    "text": "has like im start tool call uh IM end.",
+    "start": 1284.08,
+    "duration": 8.4
+  },
+  {
+    "text": "Uh Mistall has tool calls and then uh",
+    "start": 1289.28,
+    "duration": 5.6
+  },
+  {
+    "text": "all of the tool calls. Deepseek has",
+    "start": 1292.48,
+    "duration": 5.52
+  },
+  {
+    "text": "their like DSML DeepS markup language",
+    "start": 1294.88,
+    "duration": 4.96
+  },
+  {
+    "text": "function calls. They they don't call it",
+    "start": 1298.0,
+    "duration": 3.6
+  },
+  {
+    "text": "tool calls. they call it function calls",
+    "start": 1299.84,
+    "duration": 4.88
+  },
+  {
+    "text": "and then evoke invoke and basically you",
+    "start": 1301.6,
+    "duration": 5.04
+  },
+  {
+    "text": "know any of these works. Um there might",
+    "start": 1304.72,
+    "duration": 4.56
+  },
+  {
+    "text": "be like minor minor differences in uh",
+    "start": 1306.64,
+    "duration": 4.32
+  },
+  {
+    "text": "which one gets better performance or not",
+    "start": 1309.28,
+    "duration": 2.96
+  },
+  {
+    "text": "if you train the same model with the",
+    "start": 1310.96,
+    "duration": 3.92
+  },
+  {
+    "text": "same data. Uh but",
+    "start": 1312.24,
+    "duration": 4.0
+  },
+  {
+    "text": "what you need to know is you need to",
+    "start": 1314.88,
+    "duration": 2.64
+  },
+  {
+    "text": "know that these are different. So you",
+    "start": 1316.24,
+    "duration": 3.679
+  },
+  {
+    "text": "can't just assume that like some parsing",
+    "start": 1317.52,
+    "duration": 4.159
+  },
+  {
+    "text": "code that works with deepseek will",
+    "start": 1319.919,
+    "duration": 4.0
+  },
+  {
+    "text": "suddenly work with quen and vice versa.",
+    "start": 1321.679,
+    "duration": 3.041
+  },
+  {
+    "text": "Yeah.",
+    "start": 1323.919,
+    "duration": 5.201
+  },
+  {
+    "text": ">> You said you add functionality.",
+    "start": 1324.72,
+    "duration": 8.439
+  },
+  {
+    "text": "So need to provide.",
+    "start": 1329.12,
+    "duration": 4.039
+  },
+  {
+    "text": ">> Um, so what do you mean by loose",
+    "start": 1337.28,
+    "duration": 5.399
+  },
+  {
+    "text": "generalizability?",
+    "start": 1339.679,
+    "duration": 3.0
+  },
+  {
+    "text": ">> Yep. fine tuning",
+    "start": 1356.32,
+    "duration": 3.52
+  },
+  {
+    "text": "set of",
+    "start": 1358.88,
+    "duration": 2.159
+  },
+  {
+    "text": ">> Yeah. So when you're when you're",
+    "start": 1359.84,
+    "duration": 4.719
+  },
+  {
+    "text": "fine-tuning, you will want to match like",
+    "start": 1361.039,
+    "duration": 5.601
+  },
+  {
+    "text": "if you're fine-tuning",
+    "start": 1364.559,
+    "duration": 3.681
+  },
+  {
+    "text": "from a model that's already been",
+    "start": 1366.64,
+    "duration": 4.0
+  },
+  {
+    "text": "trained, you 100% want to match the tool",
+    "start": 1368.24,
+    "duration": 3.52
+  },
+  {
+    "text": "call format. You don't want to try to",
+    "start": 1370.64,
+    "duration": 2.96
+  },
+  {
+    "text": "get it to do something it wasn't trained",
+    "start": 1371.76,
+    "duration": 5.52
+  },
+  {
+    "text": "on. Um, and the good news is this is all",
+    "start": 1373.6,
+    "duration": 6.0
+  },
+  {
+    "text": "implemented in like hugging face with",
+    "start": 1377.28,
+    "duration": 5.519
+  },
+  {
+    "text": "the apply chat template uh function. And",
+    "start": 1379.6,
+    "duration": 4.8
+  },
+  {
+    "text": "so you need to apply the chat template",
+    "start": 1382.799,
+    "duration": 3.041
+  },
+  {
+    "text": "for the model you're using, but that's",
+    "start": 1384.4,
+    "duration": 3.6
+  },
+  {
+    "text": "all implemented. If it's not implemented",
+    "start": 1385.84,
+    "duration": 5.839
+  },
+  {
+    "text": "properly, you can go in and um like it",
+    "start": 1388.0,
+    "duration": 5.52
+  },
+  {
+    "text": "you ask them and they'll go in and",
+    "start": 1391.679,
+    "duration": 3.281
+  },
+  {
+    "text": "implement it or you do it yourself or",
+    "start": 1393.52,
+    "duration": 3.039
+  },
+  {
+    "text": "something like that. But yeah, it's it's",
+    "start": 1394.96,
+    "duration": 5.839
+  },
+  {
+    "text": "all standardized now. But I I want to",
+    "start": 1396.559,
+    "duration": 5.681
+  },
+  {
+    "text": "people to know that this is going on",
+    "start": 1400.799,
+    "duration": 2.801
+  },
+  {
+    "text": "under the hood because if you don't know",
+    "start": 1402.24,
+    "duration": 3.52
+  },
+  {
+    "text": "this, you can make mistakes and uh and",
+    "start": 1403.6,
+    "duration": 5.88
+  },
+  {
+    "text": "it will not be happy.",
+    "start": 1405.76,
+    "duration": 3.72
+  },
+  {
+    "text": "Cool. So um once you have done this uh",
+    "start": 1409.52,
+    "duration": 8.72
+  },
+  {
+    "text": "the next thing is um that you",
+    "start": 1413.76,
+    "duration": 6.88
+  },
+  {
+    "text": "do tool call parsing and actually I'm",
+    "start": 1418.24,
+    "duration": 4.24
+  },
+  {
+    "text": "going to talk about tool called kernel",
+    "start": 1420.64,
+    "duration": 4.56
+  },
+  {
+    "text": "parsing in the next section. So um not",
+    "start": 1422.48,
+    "duration": 5.439
+  },
+  {
+    "text": "immediately here but like let's assume",
+    "start": 1425.2,
+    "duration": 6.0
+  },
+  {
+    "text": "that if uh the language model outputs",
+    "start": 1427.919,
+    "duration": 5.441
+  },
+  {
+    "text": "this you have a way of parsing it into",
+    "start": 1431.2,
+    "duration": 5.12
+  },
+  {
+    "text": "uh into the function arguments. you then",
+    "start": 1433.36,
+    "duration": 6.96
+  },
+  {
+    "text": "um like have the you register the tool",
+    "start": 1436.32,
+    "duration": 8.4
+  },
+  {
+    "text": "at initialization and um you uh have a",
+    "start": 1440.32,
+    "duration": 8.32
+  },
+  {
+    "text": "way to resolve it so that you get a map",
+    "start": 1444.72,
+    "duration": 5.92
+  },
+  {
+    "text": "from the name to the tool that you want",
+    "start": 1448.64,
+    "duration": 5.2
+  },
+  {
+    "text": "to execute. So most agentic frameworks",
+    "start": 1450.64,
+    "duration": 5.279
+  },
+  {
+    "text": "basically will will have a way that you",
+    "start": 1453.84,
+    "duration": 4.4
+  },
+  {
+    "text": "can add new tools. Each tool gets its",
+    "start": 1455.919,
+    "duration": 4.88
+  },
+  {
+    "text": "own name and then you have a Python",
+    "start": 1458.24,
+    "duration": 4.64
+  },
+  {
+    "text": "function or something like that. Python,",
+    "start": 1460.799,
+    "duration": 4.081
+  },
+  {
+    "text": "TypeScript, whatever language. And then",
+    "start": 1462.88,
+    "duration": 4.88
+  },
+  {
+    "text": "it uh it will be dispatched to that with",
+    "start": 1464.88,
+    "duration": 5.12
+  },
+  {
+    "text": "the appropriate arguments. And so then",
+    "start": 1467.76,
+    "duration": 5.2
+  },
+  {
+    "text": "at each time you you parse uh you look",
+    "start": 1470.0,
+    "duration": 5.44
+  },
+  {
+    "text": "up the tool, you validate the uh action",
+    "start": 1472.96,
+    "duration": 4.959
+  },
+  {
+    "text": "from the arguments and you execute uh",
+    "start": 1475.44,
+    "duration": 5.28
+  },
+  {
+    "text": "and then you return. But um at",
+    "start": 1477.919,
+    "duration": 5.76
+  },
+  {
+    "text": "validation time, this can fail if the",
+    "start": 1480.72,
+    "duration": 4.959
+  },
+  {
+    "text": "model gave you the wrong uh the wrong",
+    "start": 1483.679,
+    "duration": 4.161
+  },
+  {
+    "text": "tool call. At execution time, this can",
+    "start": 1485.679,
+    "duration": 5.041
+  },
+  {
+    "text": "also fail if there's like not something",
+    "start": 1487.84,
+    "duration": 6.719
+  },
+  {
+    "text": "that was explicitly said is bad uh is",
+    "start": 1490.72,
+    "duration": 6.319
+  },
+  {
+    "text": "like invalid but implicitly is invalid.",
+    "start": 1494.559,
+    "duration": 3.681
+  },
+  {
+    "text": "So like for example, if you have an",
+    "start": 1497.039,
+    "duration": 4.481
+  },
+  {
+    "text": "execute Python tool, it might accept any",
+    "start": 1498.24,
+    "duration": 5.12
+  },
+  {
+    "text": "string as Python, but then when you",
+    "start": 1501.52,
+    "duration": 3.519
+  },
+  {
+    "text": "actually try to run the Python, it it",
+    "start": 1503.36,
+    "duration": 3.04
+  },
+  {
+    "text": "might fail. So that that would be like",
+    "start": 1505.039,
+    "duration": 3.52
+  },
+  {
+    "text": "an execution error. And then if it does",
+    "start": 1506.4,
+    "duration": 5.12
+  },
+  {
+    "text": "if it well whether it uh whether it",
+    "start": 1508.559,
+    "duration": 5.201
+  },
+  {
+    "text": "fails or not, then uh you get an",
+    "start": 1511.52,
+    "duration": 5.84
+  },
+  {
+    "text": "observation out of it.",
+    "start": 1513.76,
+    "duration": 3.6
+  },
+  {
+    "text": "So this is another detail um that that's",
+    "start": 1518.08,
+    "duration": 6.64
+  },
+  {
+    "text": "pretty helpful but also really annoying",
+    "start": 1521.2,
+    "duration": 5.52
+  },
+  {
+    "text": "uh when you're implementing agents if",
+    "start": 1524.72,
+    "duration": 4.64
+  },
+  {
+    "text": "you if you get it wrong. But basically",
+    "start": 1526.72,
+    "duration": 6.559
+  },
+  {
+    "text": "each tool call is assigned an ID uh when",
+    "start": 1529.36,
+    "duration": 7.84
+  },
+  {
+    "text": "you uh when you run it basically by um",
+    "start": 1533.279,
+    "duration": 6.241
+  },
+  {
+    "text": "uh either the language model inference",
+    "start": 1537.2,
+    "duration": 5.12
+  },
+  {
+    "text": "code or the agent code and then you get",
+    "start": 1539.52,
+    "duration": 5.68
+  },
+  {
+    "text": "a result and the result has a matching",
+    "start": 1542.32,
+    "duration": 7.68
+  },
+  {
+    "text": "call ID and this is useful especially in",
+    "start": 1545.2,
+    "duration": 6.24
+  },
+  {
+    "text": "the case of parallel tool calling",
+    "start": 1550.0,
+    "duration": 3.039
+  },
+  {
+    "text": "because I'm going to talk about parallel",
+    "start": 1551.44,
+    "duration": 4.08
+  },
+  {
+    "text": "tool calling in a bit and having the IDs",
+    "start": 1553.039,
+    "duration": 4.801
+  },
+  {
+    "text": "matched lets you know which tool call is",
+    "start": 1555.52,
+    "duration": 3.84
+  },
+  {
+    "text": "associated assiated with with which",
+    "start": 1557.84,
+    "duration": 6.48
+  },
+  {
+    "text": "result. But the uh the problem is uh for",
+    "start": 1559.36,
+    "duration": 8.72
+  },
+  {
+    "text": "instance uh anthropic if you have a tool",
+    "start": 1564.32,
+    "duration": 6.479
+  },
+  {
+    "text": "call with no matched tool result it will",
+    "start": 1568.08,
+    "duration": 6.16
+  },
+  {
+    "text": "die on you and uh so it will tell you",
+    "start": 1570.799,
+    "duration": 5.921
+  },
+  {
+    "text": "this is an invalid history and I'm not",
+    "start": 1574.24,
+    "duration": 3.76
+  },
+  {
+    "text": "going to accept this history and and",
+    "start": 1576.72,
+    "duration": 4.16
+  },
+  {
+    "text": "generate any more outputs for you. And",
+    "start": 1578.0,
+    "duration": 6.159
+  },
+  {
+    "text": "so in my practical experience there's",
+    "start": 1580.88,
+    "duration": 5.12
+  },
+  {
+    "text": "times when for example the assistant",
+    "start": 1584.159,
+    "duration": 5.441
+  },
+  {
+    "text": "makes a tool call then suddenly uh your",
+    "start": 1586.0,
+    "duration": 5.279
+  },
+  {
+    "text": "your program dies or something like that",
+    "start": 1589.6,
+    "duration": 3.199
+  },
+  {
+    "text": "it fails to write out the tool result",
+    "start": 1591.279,
+    "duration": 2.961
+  },
+  {
+    "text": "and then you resume it it doesn't have",
+    "start": 1592.799,
+    "duration": 5.12
+  },
+  {
+    "text": "the result the associated result and uh",
+    "start": 1594.24,
+    "duration": 6.559
+  },
+  {
+    "text": "anthropic fails to fails to work for",
+    "start": 1597.919,
+    "duration": 4.801
+  },
+  {
+    "text": "you. So this is a little bit of a a",
+    "start": 1600.799,
+    "duration": 5.801
+  },
+  {
+    "text": "detail that you need to know.",
+    "start": 1602.72,
+    "duration": 3.88
+  },
+  {
+    "text": "Okay. So, um, any any questions there?",
+    "start": 1607.12,
+    "duration": 7.799
+  },
+  {
+    "text": "Yeah.",
+    "start": 1611.919,
+    "duration": 3.0
+  },
+  {
+    "text": ">> And, uh, great question. Are the tool",
+    "start": 1615.84,
+    "duration": 3.439
+  },
+  {
+    "text": "calls asynchronous? Um, I'm going to",
+    "start": 1617.6,
+    "duration": 3.36
+  },
+  {
+    "text": "talk about that in like the the next",
+    "start": 1619.279,
+    "duration": 4.161
+  },
+  {
+    "text": "next section. Yeah.",
+    "start": 1620.96,
+    "duration": 6.0
+  },
+  {
+    "text": "Cool. Okay. So, now now here's a very",
+    "start": 1623.44,
+    "duration": 6.4
+  },
+  {
+    "text": "technically algorithmically",
+    "start": 1626.96,
+    "duration": 6.24
+  },
+  {
+    "text": "difficult problem. Uh, that may be very",
+    "start": 1629.84,
+    "duration": 5.12
+  },
+  {
+    "text": "interesting to you or maybe not not very",
+    "start": 1633.2,
+    "duration": 3.52
+  },
+  {
+    "text": "interesting to you. But if it's not",
+    "start": 1634.96,
+    "duration": 3.28
+  },
+  {
+    "text": "interesting to you, be glad that other",
+    "start": 1636.72,
+    "duration": 5.04
+  },
+  {
+    "text": "people are solving it for you. Um, so,",
+    "start": 1638.24,
+    "duration": 6.0
+  },
+  {
+    "text": "uh, language models are definitely not",
+    "start": 1641.76,
+    "duration": 4.399
+  },
+  {
+    "text": "guaranteed to generate well-formed tool",
+    "start": 1644.24,
+    "duration": 5.76
+  },
+  {
+    "text": "calls. Um, and this is an example. Uh,",
+    "start": 1646.159,
+    "duration": 6.721
+  },
+  {
+    "text": "you can see that this is JSON that's",
+    "start": 1650.0,
+    "duration": 6.32
+  },
+  {
+    "text": "missing the uh, last closing bracket.",
+    "start": 1652.88,
+    "duration": 6.159
+  },
+  {
+    "text": "So, this is poorly formed JSON. You put",
+    "start": 1656.32,
+    "duration": 4.4
+  },
+  {
+    "text": "this into your JSON parsing program and",
+    "start": 1659.039,
+    "duration": 3.201
+  },
+  {
+    "text": "it will throw an exception and you won't",
+    "start": 1660.72,
+    "duration": 3.439
+  },
+  {
+    "text": "be able to get the uh, the data out of",
+    "start": 1662.24,
+    "duration": 4.799
+  },
+  {
+    "text": "it. So I I've seen a million people go",
+    "start": 1664.159,
+    "duration": 4.961
+  },
+  {
+    "text": "in and try to like figure out if the",
+    "start": 1667.039,
+    "duration": 3.601
+  },
+  {
+    "text": "brackets are missing and like add one",
+    "start": 1669.12,
+    "duration": 2.88
+  },
+  {
+    "text": "post hawk, but you don't want to be",
+    "start": 1670.64,
+    "duration": 5.68
+  },
+  {
+    "text": "doing that. That's not not fun. Um so",
+    "start": 1672.0,
+    "duration": 6.48
+  },
+  {
+    "text": "there's a bunch of constraints uh that",
+    "start": 1676.32,
+    "duration": 4.56
+  },
+  {
+    "text": "you uh could be assigning to each of the",
+    "start": 1678.48,
+    "duration": 5.919
+  },
+  {
+    "text": "tool calls. So the first one is syntax.",
+    "start": 1680.88,
+    "duration": 5.679
+  },
+  {
+    "text": "So it has to be valid JSON. So this is",
+    "start": 1684.399,
+    "duration": 4.241
+  },
+  {
+    "text": "kind of like table stakes, right? So it",
+    "start": 1686.559,
+    "duration": 4.961
+  },
+  {
+    "text": "it needs to parse. Um the second thing",
+    "start": 1688.64,
+    "duration": 6.32
+  },
+  {
+    "text": "is uh shape. So make sure that if you",
+    "start": 1691.52,
+    "duration": 5.6
+  },
+  {
+    "text": "have expected or required fields, you",
+    "start": 1694.96,
+    "duration": 4.88
+  },
+  {
+    "text": "have the required fields. Um the third",
+    "start": 1697.12,
+    "duration": 5.679
+  },
+  {
+    "text": "thing is types. So uh you know if you",
+    "start": 1699.84,
+    "duration": 6.319
+  },
+  {
+    "text": "have city, the city must be a string. Oh",
+    "start": 1702.799,
+    "duration": 6.561
+  },
+  {
+    "text": "sorry. Yeah. Um yeah. So if you have a",
+    "start": 1706.159,
+    "duration": 6.24
+  },
+  {
+    "text": "city, city is a string. Um if you have",
+    "start": 1709.36,
+    "duration": 5.36
+  },
+  {
+    "text": "uh values, uh you know the units are in",
+    "start": 1712.399,
+    "duration": 4.081
+  },
+  {
+    "text": "the appropriate units. So this can all",
+    "start": 1714.72,
+    "duration": 4.64
+  },
+  {
+    "text": "be expressed through um something called",
+    "start": 1716.48,
+    "duration": 5.36
+  },
+  {
+    "text": "JSON schema or basically any schema",
+    "start": 1719.36,
+    "duration": 7.12
+  },
+  {
+    "text": "library. Um so it's like this is a city",
+    "start": 1721.84,
+    "duration": 6.8
+  },
+  {
+    "text": "uh the type is string and the units can",
+    "start": 1726.48,
+    "duration": 5.04
+  },
+  {
+    "text": "be uh Celsius or Fahrenheit and city is",
+    "start": 1728.64,
+    "duration": 5.84
+  },
+  {
+    "text": "required.",
+    "start": 1731.52,
+    "duration": 6.399
+  },
+  {
+    "text": "So um the the good thing about this is",
+    "start": 1734.48,
+    "duration": 5.52
+  },
+  {
+    "text": "this has machine readable validation",
+    "start": 1737.919,
+    "duration": 4.0
+  },
+  {
+    "text": "rules. So you can check if like a call",
+    "start": 1740.0,
+    "duration": 4.24
+  },
+  {
+    "text": "uh follows the schema.",
+    "start": 1741.919,
+    "duration": 5.441
+  },
+  {
+    "text": "But um",
+    "start": 1744.24,
+    "duration": 5.2
+  },
+  {
+    "text": "one way that you can express whether the",
+    "start": 1747.36,
+    "duration": 5.039
+  },
+  {
+    "text": "schema is valid or invalid is by",
+    "start": 1749.44,
+    "duration": 5.52
+  },
+  {
+    "text": "defining a grammar over uh over the",
+    "start": 1752.399,
+    "duration": 5.921
+  },
+  {
+    "text": "schema. And how many people uh did like",
+    "start": 1754.96,
+    "duration": 7.199
+  },
+  {
+    "text": "contextf free grammarss or like context",
+    "start": 1758.32,
+    "duration": 5.359
+  },
+  {
+    "text": "or those sorts of things? Regular",
+    "start": 1762.159,
+    "duration": 4.24
+  },
+  {
+    "text": "grammarss. How many people know regular",
+    "start": 1763.679,
+    "duration": 5.041
+  },
+  {
+    "text": "expressions?",
+    "start": 1766.399,
+    "duration": 6.321
+  },
+  {
+    "text": "Okay. A lot of a lot of people. Okay. So",
+    "start": 1768.72,
+    "duration": 5.92
+  },
+  {
+    "text": "a regular expression is a regular",
+    "start": 1772.72,
+    "duration": 5.04
+  },
+  {
+    "text": "grammar. Um does anybody know how you",
+    "start": 1774.64,
+    "duration": 7.56
+  },
+  {
+    "text": "can parse a regular expression?",
+    "start": 1777.76,
+    "duration": 4.44
+  },
+  {
+    "text": ">> Finite state automaton. Yeah, that's",
+    "start": 1782.64,
+    "duration": 5.44
+  },
+  {
+    "text": "exactly correct. Um so a finite state",
+    "start": 1784.399,
+    "duration": 6.321
+  },
+  {
+    "text": "automaton uh for for those who are less",
+    "start": 1788.08,
+    "duration": 7.16
+  },
+  {
+    "text": "familiar with this is",
+    "start": 1790.72,
+    "duration": 4.52
+  },
+  {
+    "text": "something that looks a little bit like",
+    "start": 1804.08,
+    "duration": 4.599
+  },
+  {
+    "text": "this.",
+    "start": 1805.679,
+    "duration": 3.0
+  },
+  {
+    "text": "Um, so you have a state and every time",
+    "start": 1811.84,
+    "duration": 7.28
+  },
+  {
+    "text": "you take a token as input, uh, you move",
+    "start": 1815.279,
+    "duration": 6.241
+  },
+  {
+    "text": "to a different state. So if you get A,",
+    "start": 1819.12,
+    "duration": 3.84
+  },
+  {
+    "text": "you would move to this state. If you get",
+    "start": 1821.52,
+    "duration": 6.32
+  },
+  {
+    "text": "B or C, you move to this state. And",
+    "start": 1822.96,
+    "duration": 7.92
+  },
+  {
+    "text": "This this works on uh something called",
+    "start": 1827.84,
+    "duration": 6.559
+  },
+  {
+    "text": "uh uh regular grammarss. So regular",
+    "start": 1830.88,
+    "duration": 5.76
+  },
+  {
+    "text": "expressions like the the slashes and dot",
+    "start": 1834.399,
+    "duration": 3.76
+  },
+  {
+    "text": "stars and stuff like this that you might",
+    "start": 1836.64,
+    "duration": 5.44
+  },
+  {
+    "text": "use to search for search text are uh reg",
+    "start": 1838.159,
+    "duration": 6.161
+  },
+  {
+    "text": "are regular expressions and they can be",
+    "start": 1842.08,
+    "duration": 5.52
+  },
+  {
+    "text": "expressed through regular grammars. Um",
+    "start": 1844.32,
+    "duration": 5.359
+  },
+  {
+    "text": "JSON schema cannot be expressed through",
+    "start": 1847.6,
+    "duration": 4.72
+  },
+  {
+    "text": "a regular grammar. um it can be",
+    "start": 1849.679,
+    "duration": 4.081
+  },
+  {
+    "text": "expressed through something called a",
+    "start": 1852.32,
+    "duration": 4.959
+  },
+  {
+    "text": "contextf free grammar and you can uh the",
+    "start": 1853.76,
+    "duration": 5.039
+  },
+  {
+    "text": "context free grammar can basically make",
+    "start": 1857.279,
+    "duration": 3.041
+  },
+  {
+    "text": "a tree that looks a little bit like",
+    "start": 1858.799,
+    "duration": 4.641
+  },
+  {
+    "text": "this. So um every JSON expression can",
+    "start": 1860.32,
+    "duration": 5.68
+  },
+  {
+    "text": "have brackets on the side. It can have",
+    "start": 1863.44,
+    "duration": 5.44
+  },
+  {
+    "text": "commas between its members. Uh this can",
+    "start": 1866.0,
+    "duration": 6.72
+  },
+  {
+    "text": "be a string um and this can be a unit.",
+    "start": 1868.88,
+    "duration": 7.679
+  },
+  {
+    "text": "And if uh the JSON schema is in the",
+    "start": 1872.72,
+    "duration": 6.0
+  },
+  {
+    "text": "correct format, you should be able to",
+    "start": 1876.559,
+    "duration": 4.561
+  },
+  {
+    "text": "create a tree uh that looks like this.",
+    "start": 1878.72,
+    "duration": 3.92
+  },
+  {
+    "text": "If the JSON schema is in the wrong",
+    "start": 1881.12,
+    "duration": 4.08
+  },
+  {
+    "text": "format, you might create a be able to",
+    "start": 1882.64,
+    "duration": 4.96
+  },
+  {
+    "text": "create create most of a tree. But then",
+    "start": 1885.2,
+    "duration": 4.32
+  },
+  {
+    "text": "when you get to a unit, a unit cannot be",
+    "start": 1887.6,
+    "duration": 4.88
+  },
+  {
+    "text": "K. So basically this would uh this would",
+    "start": 1889.52,
+    "duration": 6.96
+  },
+  {
+    "text": "fail even though a unit can be K, but uh",
+    "start": 1892.48,
+    "duration": 6.48
+  },
+  {
+    "text": "we we defined this to not accept Kelvin",
+    "start": 1896.48,
+    "duration": 5.84
+  },
+  {
+    "text": "as our our unit of temperature.",
+    "start": 1898.96,
+    "duration": 4.959
+  },
+  {
+    "text": "So",
+    "start": 1902.32,
+    "duration": 5.68
+  },
+  {
+    "text": "um basically if you can parse uh the",
+    "start": 1903.919,
+    "duration": 7.521
+  },
+  {
+    "text": "tool call with a contextf free grammar",
+    "start": 1908.0,
+    "duration": 6.159
+  },
+  {
+    "text": "uh defined from your JSON schema you can",
+    "start": 1911.44,
+    "duration": 4.88
+  },
+  {
+    "text": "uh you can do this and I'm not going to",
+    "start": 1914.159,
+    "duration": 4.721
+  },
+  {
+    "text": "go into a lot of details but a finite",
+    "start": 1916.32,
+    "duration": 5.04
+  },
+  {
+    "text": "state automaton cannot parse a um a",
+    "start": 1918.88,
+    "duration": 4.08
+  },
+  {
+    "text": "contextf free grammar but there's",
+    "start": 1921.36,
+    "duration": 3.039
+  },
+  {
+    "text": "something called a push down automaton",
+    "start": 1922.96,
+    "duration": 3.04
+  },
+  {
+    "text": "that can allow you to do this. So",
+    "start": 1924.399,
+    "duration": 5.76
+  },
+  {
+    "text": "basically it adds a stack to uh the",
+    "start": 1926.0,
+    "duration": 6.799
+  },
+  {
+    "text": "regular grammar and uh you push things",
+    "start": 1930.159,
+    "duration": 4.561
+  },
+  {
+    "text": "onto the stack uh pop things off of the",
+    "start": 1932.799,
+    "duration": 5.521
+  },
+  {
+    "text": "stack and eventually can um eventually",
+    "start": 1934.72,
+    "duration": 6.079
+  },
+  {
+    "text": "can decide whether it's uh parsible or",
+    "start": 1938.32,
+    "duration": 5.199
+  },
+  {
+    "text": "not. And so what you do is you start out",
+    "start": 1940.799,
+    "duration": 6.161
+  },
+  {
+    "text": "at the very beginning um with uh a state",
+    "start": 1943.519,
+    "duration": 5.441
+  },
+  {
+    "text": "in this push down automaton and you step",
+    "start": 1946.96,
+    "duration": 7.199
+  },
+  {
+    "text": "through and uh validate your output as",
+    "start": 1948.96,
+    "duration": 7.439
+  },
+  {
+    "text": "you um as you generate it from left to",
+    "start": 1954.159,
+    "duration": 4.24
+  },
+  {
+    "text": "right",
+    "start": 1956.399,
+    "duration": 4.64
+  },
+  {
+    "text": "and I'm giving some examples from X",
+    "start": 1958.399,
+    "duration": 5.12
+  },
+  {
+    "text": "grammar uh and X grammar is a thing",
+    "start": 1961.039,
+    "duration": 4.561
+  },
+  {
+    "text": "that's actually pretty widely used in uh",
+    "start": 1963.519,
+    "duration": 4.64
+  },
+  {
+    "text": "all of the LM inference libraries. It's",
+    "start": 1965.6,
+    "duration": 3.84
+  },
+  {
+    "text": "actually developed by people in the",
+    "start": 1968.159,
+    "duration": 4.481
+  },
+  {
+    "text": "machine learning department here. Uh so",
+    "start": 1969.44,
+    "duration": 5.52
+  },
+  {
+    "text": "what you uh what this means is every",
+    "start": 1972.64,
+    "duration": 6.56
+  },
+  {
+    "text": "time you get an LLM predict the logits",
+    "start": 1974.96,
+    "duration": 7.92
+  },
+  {
+    "text": "of the next token, you take a look at",
+    "start": 1979.2,
+    "duration": 6.479
+  },
+  {
+    "text": "your grammar and if the grammar says",
+    "start": 1982.88,
+    "duration": 5.76
+  },
+  {
+    "text": "this is a valid next token, uh you get a",
+    "start": 1985.679,
+    "duration": 5.12
+  },
+  {
+    "text": "score of one and if you have an invalid",
+    "start": 1988.64,
+    "duration": 4.96
+  },
+  {
+    "text": "next token, you get a score of zero. And",
+    "start": 1990.799,
+    "duration": 4.961
+  },
+  {
+    "text": "you set all of the invalid next tokens",
+    "start": 1993.6,
+    "duration": 4.959
+  },
+  {
+    "text": "to negative infinity. um for the output",
+    "start": 1995.76,
+    "duration": 5.919
+  },
+  {
+    "text": "logits and then you renormalize so that",
+    "start": 1998.559,
+    "duration": 5.681
+  },
+  {
+    "text": "you get probability only on the valid",
+    "start": 2001.679,
+    "duration": 5.681
+  },
+  {
+    "text": "tokens. And so what this uh lets you do",
+    "start": 2004.24,
+    "duration": 5.52
+  },
+  {
+    "text": "is this ensures that you generate valid",
+    "start": 2007.36,
+    "duration": 4.559
+  },
+  {
+    "text": "output.",
+    "start": 2009.76,
+    "duration": 6.96
+  },
+  {
+    "text": "Um, and so",
+    "start": 2011.919,
+    "duration": 7.36
+  },
+  {
+    "text": "this is another figure from the Xgrammer",
+    "start": 2016.72,
+    "duration": 5.76
+  },
+  {
+    "text": "paper and they do these uh tricky things",
+    "start": 2019.279,
+    "duration": 5.12
+  },
+  {
+    "text": "where basically there are some",
+    "start": 2022.48,
+    "duration": 4.64
+  },
+  {
+    "text": "vocabulary that are always valid or",
+    "start": 2024.399,
+    "duration": 5.76
+  },
+  {
+    "text": "always invalid and you premputee these",
+    "start": 2027.12,
+    "duration": 5.039
+  },
+  {
+    "text": "and then there what there are those that",
+    "start": 2030.159,
+    "duration": 4.561
+  },
+  {
+    "text": "are valid only in some contexts only in",
+    "start": 2032.159,
+    "duration": 4.24
+  },
+  {
+    "text": "some uh stack context and then you",
+    "start": 2034.72,
+    "duration": 4.24
+  },
+  {
+    "text": "calculate them on the fly. So it's uh",
+    "start": 2036.399,
+    "duration": 4.64
+  },
+  {
+    "text": "very interesting algorithmically if you",
+    "start": 2038.96,
+    "duration": 4.319
+  },
+  {
+    "text": "like algorithmic uh stuff. If you don't",
+    "start": 2041.039,
+    "duration": 4.0
+  },
+  {
+    "text": "like it uh be glad that the people in",
+    "start": 2043.279,
+    "duration": 2.801
+  },
+  {
+    "text": "the machine learning department are",
+    "start": 2045.039,
+    "duration": 4.001
+  },
+  {
+    "text": "doing it for you basically. Um so",
+    "start": 2046.08,
+    "duration": 5.999
+  },
+  {
+    "text": "because of this almost always um if you",
+    "start": 2049.04,
+    "duration": 8.639
+  },
+  {
+    "text": "are uh if you are have this enabled you",
+    "start": 2052.079,
+    "duration": 8.401
+  },
+  {
+    "text": "will uh and set your appropriate JSON",
+    "start": 2057.679,
+    "duration": 5.041
+  },
+  {
+    "text": "schema you will get wellformed to tool",
+    "start": 2060.48,
+    "duration": 6.56
+  },
+  {
+    "text": "calls. So that that's uh that's great.",
+    "start": 2062.72,
+    "duration": 6.399
+  },
+  {
+    "text": "There's one case where you actually",
+    "start": 2067.04,
+    "duration": 5.839
+  },
+  {
+    "text": "can't uh uh get well-formed tool calls",
+    "start": 2069.119,
+    "duration": 7.121
+  },
+  {
+    "text": "despite this. Um may maybe I can give a",
+    "start": 2072.879,
+    "duration": 5.28
+  },
+  {
+    "text": "quick quiz. This is very very difficult.",
+    "start": 2076.24,
+    "duration": 3.28
+  },
+  {
+    "text": "So I don't know if anybody can get it.",
+    "start": 2078.159,
+    "duration": 3.041
+  },
+  {
+    "text": "But any anybody have an idea where even",
+    "start": 2079.52,
+    "duration": 4.559
+  },
+  {
+    "text": "this would not be uh not be enough. Need",
+    "start": 2081.2,
+    "duration": 8.28
+  },
+  {
+    "text": "to be familiar with uh with LMS I guess.",
+    "start": 2084.079,
+    "duration": 5.401
+  },
+  {
+    "text": ">> Yeah.",
+    "start": 2090.399,
+    "duration": 3.0
+  },
+  {
+    "text": "Uh I I think that's close enough to what",
+    "start": 2098.079,
+    "duration": 4.481
+  },
+  {
+    "text": "I I wanted to say. So basically um when",
+    "start": 2100.0,
+    "duration": 4.72
+  },
+  {
+    "text": "you run out of tokens, so models can",
+    "start": 2102.56,
+    "duration": 4.24
+  },
+  {
+    "text": "only generate so many tokens and you",
+    "start": 2104.72,
+    "duration": 3.6
+  },
+  {
+    "text": "might run into a place where you're",
+    "start": 2106.8,
+    "duration": 2.88
+  },
+  {
+    "text": "still on a valid path through the",
+    "start": 2108.32,
+    "duration": 2.96
+  },
+  {
+    "text": "automaton, but you're not at the final",
+    "start": 2109.68,
+    "duration": 3.36
+  },
+  {
+    "text": "state. So you generate like part of a",
+    "start": 2111.28,
+    "duration": 6.24
+  },
+  {
+    "text": "JSON output. So very very good. Um and I",
+    "start": 2113.04,
+    "duration": 6.559
+  },
+  {
+    "text": "I've actually encountered this. There's",
+    "start": 2117.52,
+    "duration": 4.16
+  },
+  {
+    "text": "uh theoretically a way you could do that",
+    "start": 2119.599,
+    "duration": 3.681
+  },
+  {
+    "text": "which is like you count the number of",
+    "start": 2121.68,
+    "duration": 3.2
+  },
+  {
+    "text": "output tokens that you still have left",
+    "start": 2123.28,
+    "duration": 4.799
+  },
+  {
+    "text": "and you you cut them off but that's uh",
+    "start": 2124.88,
+    "duration": 4.88
+  },
+  {
+    "text": "if if somebody wants to implement that",
+    "start": 2128.079,
+    "duration": 3.601
+  },
+  {
+    "text": "in next grammar as a extra credit",
+    "start": 2129.76,
+    "duration": 4.88
+  },
+  {
+    "text": "assignment you know be happy to happy to",
+    "start": 2131.68,
+    "duration": 9.12
+  },
+  {
+    "text": "have that okay so now um let's go to",
+    "start": 2134.64,
+    "duration": 10.24
+  },
+  {
+    "text": "rest API calling um so there's uh two",
+    "start": 2140.8,
+    "duration": 6.799
+  },
+  {
+    "text": "different ways to um there's different",
+    "start": 2144.88,
+    "duration": 5.04
+  },
+  {
+    "text": "ways to Express",
+    "start": 2147.599,
+    "duration": 5.841
+  },
+  {
+    "text": "tools and um I'd say probably most",
+    "start": 2149.92,
+    "duration": 5.76
+  },
+  {
+    "text": "people are familiar with REST APIs. The",
+    "start": 2153.44,
+    "duration": 4.08
+  },
+  {
+    "text": "these are the ways you interact with web",
+    "start": 2155.68,
+    "duration": 5.919
+  },
+  {
+    "text": "services. Um but",
+    "start": 2157.52,
+    "duration": 5.68
+  },
+  {
+    "text": "actually sorry there's one other way to",
+    "start": 2161.599,
+    "duration": 3.76
+  },
+  {
+    "text": "call APIs and one way to call APIs is",
+    "start": 2163.2,
+    "duration": 4.24
+  },
+  {
+    "text": "through programmatic tool calling where",
+    "start": 2165.359,
+    "duration": 4.401
+  },
+  {
+    "text": "basically um you just give the model a",
+    "start": 2167.44,
+    "duration": 4.88
+  },
+  {
+    "text": "Python program and you say use the stuff",
+    "start": 2169.76,
+    "duration": 4.96
+  },
+  {
+    "text": "in this Python program to call tools.",
+    "start": 2172.32,
+    "duration": 4.08
+  },
+  {
+    "text": "And so if you do something like that you",
+    "start": 2174.72,
+    "duration": 5.119
+  },
+  {
+    "text": "might have like weather lib.py pi and uh",
+    "start": 2176.4,
+    "duration": 5.36
+  },
+  {
+    "text": "you have the get weather function in",
+    "start": 2179.839,
+    "duration": 5.441
+  },
+  {
+    "text": "here uh with its city and its units and",
+    "start": 2181.76,
+    "duration": 5.2
+  },
+  {
+    "text": "uh then you just say call this function",
+    "start": 2185.28,
+    "duration": 3.2
+  },
+  {
+    "text": "whenever you need to and you give it the",
+    "start": 2186.96,
+    "duration": 3.28
+  },
+  {
+    "text": "ability to execute Python and it will be",
+    "start": 2188.48,
+    "duration": 3.84
+  },
+  {
+    "text": "able to call that tool. So in",
+    "start": 2190.24,
+    "duration": 4.0
+  },
+  {
+    "text": "programmatic tool calling this uh this",
+    "start": 2192.32,
+    "duration": 4.88
+  },
+  {
+    "text": "works but this is not um callable",
+    "start": 2194.24,
+    "duration": 4.879
+  },
+  {
+    "text": "remotely and it's also not callable from",
+    "start": 2197.2,
+    "duration": 4.48
+  },
+  {
+    "text": "the like standard method of tool calling",
+    "start": 2199.119,
+    "duration": 7.921
+  },
+  {
+    "text": "that you use um that you use when you",
+    "start": 2201.68,
+    "duration": 7.6
+  },
+  {
+    "text": "uh implement this uh not through",
+    "start": 2207.04,
+    "duration": 5.92
+  },
+  {
+    "text": "non-programmatic tool calling.",
+    "start": 2209.28,
+    "duration": 6.16
+  },
+  {
+    "text": "So there's a way to turn this into uh",
+    "start": 2212.96,
+    "duration": 4.96
+  },
+  {
+    "text": "REST APIs. Has anybody used fast API",
+    "start": 2215.44,
+    "duration": 5.28
+  },
+  {
+    "text": "before? It's a pretty common Okay. a lot",
+    "start": 2217.92,
+    "duration": 4.96
+  },
+  {
+    "text": "of people. It's a pretty common library.",
+    "start": 2220.72,
+    "duration": 4.24
+  },
+  {
+    "text": "And basically what this allows you to do",
+    "start": 2222.88,
+    "duration": 4.8
+  },
+  {
+    "text": "is this allows you to create a web uh",
+    "start": 2224.96,
+    "duration": 6.24
+  },
+  {
+    "text": "web backend uh extremely simply by just",
+    "start": 2227.68,
+    "duration": 6.8
+  },
+  {
+    "text": "uh setting up a fast API uh giving an",
+    "start": 2231.2,
+    "duration": 5.36
+  },
+  {
+    "text": "API key so you can get people to",
+    "start": 2234.48,
+    "duration": 4.4
+  },
+  {
+    "text": "validate against the API and then",
+    "start": 2236.56,
+    "duration": 4.799
+  },
+  {
+    "text": "writing a Python decorator where uh",
+    "start": 2238.88,
+    "duration": 7.76
+  },
+  {
+    "text": "weather becomes uh becomes this. And so",
+    "start": 2241.359,
+    "duration": 8.161
+  },
+  {
+    "text": "this is good uh for a couple reasons.",
+    "start": 2246.64,
+    "duration": 4.479
+  },
+  {
+    "text": "The first reason is maybe if you don't",
+    "start": 2249.52,
+    "duration": 5.28
+  },
+  {
+    "text": "want people uh looking at the weather um",
+    "start": 2251.119,
+    "duration": 5.121
+  },
+  {
+    "text": "then uh you can prevent them from",
+    "start": 2254.8,
+    "duration": 2.96
+  },
+  {
+    "text": "looking at the weather. But probably",
+    "start": 2256.24,
+    "duration": 2.72
+  },
+  {
+    "text": "more importantly if you don't want",
+    "start": 2257.76,
+    "duration": 3.12
+  },
+  {
+    "text": "people like getting your personal data",
+    "start": 2258.96,
+    "duration": 3.68
+  },
+  {
+    "text": "or something like that you can require",
+    "start": 2260.88,
+    "duration": 4.88
+  },
+  {
+    "text": "an API key and uh this will uh allow you",
+    "start": 2262.64,
+    "duration": 4.56
+  },
+  {
+    "text": "to block anybody who doesn't have an",
+    "start": 2265.76,
+    "duration": 5.52
+  },
+  {
+    "text": "appropriate API key for instance. Um the",
+    "start": 2267.2,
+    "duration": 7.84
+  },
+  {
+    "text": "other reason why is this gives you a",
+    "start": 2271.28,
+    "duration": 6.64
+  },
+  {
+    "text": "JSON schema for free. uh and when I say",
+    "start": 2275.04,
+    "duration": 4.24
+  },
+  {
+    "text": "for free of course you know this is",
+    "start": 2277.92,
+    "duration": 3.28
+  },
+  {
+    "text": "something that's implemented in in fast",
+    "start": 2279.28,
+    "duration": 4.48
+  },
+  {
+    "text": "API but your entire API can be expressed",
+    "start": 2281.2,
+    "duration": 4.96
+  },
+  {
+    "text": "as a JSON schema and that JSON schema",
+    "start": 2283.76,
+    "duration": 4.8
+  },
+  {
+    "text": "can then be provided as is to a language",
+    "start": 2286.16,
+    "duration": 4.24
+  },
+  {
+    "text": "model and that language model can then",
+    "start": 2288.56,
+    "duration": 3.68
+  },
+  {
+    "text": "use it uh to you know specify which",
+    "start": 2290.4,
+    "duration": 3.28
+  },
+  {
+    "text": "calls are allowed and so then you could",
+    "start": 2292.24,
+    "duration": 5.119
+  },
+  {
+    "text": "go in and process this and um whenever",
+    "start": 2293.68,
+    "duration": 5.36
+  },
+  {
+    "text": "the agent made a tool call you could",
+    "start": 2297.359,
+    "duration": 3.76
+  },
+  {
+    "text": "then send it to your API server and they",
+    "start": 2299.04,
+    "duration": 5.68
+  },
+  {
+    "text": "it could use that on the API server",
+    "start": 2301.119,
+    "duration": 5.681
+  },
+  {
+    "text": "Um,",
+    "start": 2304.72,
+    "duration": 4.24
+  },
+  {
+    "text": "another option for calling these is you",
+    "start": 2306.8,
+    "duration": 4.4
+  },
+  {
+    "text": "can just uh use the curl command. And",
+    "start": 2308.96,
+    "duration": 4.879
+  },
+  {
+    "text": "the curl command um basically allows you",
+    "start": 2311.2,
+    "duration": 4.639
+  },
+  {
+    "text": "to call these APIs uh directly like this",
+    "start": 2313.839,
+    "duration": 4.081
+  },
+  {
+    "text": "as well. And so if you have a a coding",
+    "start": 2315.839,
+    "duration": 4.321
+  },
+  {
+    "text": "agent that has access to bash, it has",
+    "start": 2317.92,
+    "duration": 6.56
+  },
+  {
+    "text": "the ability to um to call like this.",
+    "start": 2320.16,
+    "duration": 7.679
+  },
+  {
+    "text": "So this is maybe maybe reasonably",
+    "start": 2324.48,
+    "duration": 5.119
+  },
+  {
+    "text": "straightforward if you're familiar with",
+    "start": 2327.839,
+    "duration": 3.52
+  },
+  {
+    "text": "uh REST and stuff like this. Any any",
+    "start": 2329.599,
+    "duration": 6.0
+  },
+  {
+    "text": "questions or comments or",
+    "start": 2331.359,
+    "duration": 5.601
+  },
+  {
+    "text": "If you haven't played around with fast",
+    "start": 2335.599,
+    "duration": 5.041
+  },
+  {
+    "text": "API, it's nice. It's very easy to use.",
+    "start": 2336.96,
+    "duration": 5.36
+  },
+  {
+    "text": "But um the reason why I wanted to cover",
+    "start": 2340.64,
+    "duration": 3.52
+  },
+  {
+    "text": "this first is this is kind of like the",
+    "start": 2342.32,
+    "duration": 4.96
+  },
+  {
+    "text": "traditional way of of programming uh you",
+    "start": 2344.16,
+    "duration": 7.439
+  },
+  {
+    "text": "know before agents. Um",
+    "start": 2347.28,
+    "duration": 6.72
+  },
+  {
+    "text": "there's uh something called MCP the",
+    "start": 2351.599,
+    "duration": 4.561
+  },
+  {
+    "text": "model context protocol and this was",
+    "start": 2354.0,
+    "duration": 4.88
+  },
+  {
+    "text": "introduced by anthropic uh maybe twoish",
+    "start": 2356.16,
+    "duration": 5.439
+  },
+  {
+    "text": "years ago or a year and a half ago and",
+    "start": 2358.88,
+    "duration": 5.6
+  },
+  {
+    "text": "the idea was this is was designed to be",
+    "start": 2361.599,
+    "duration": 6.961
+  },
+  {
+    "text": "a standard way to uh give your model",
+    "start": 2364.48,
+    "duration": 6.56
+  },
+  {
+    "text": "additional context.",
+    "start": 2368.56,
+    "duration": 5.92
+  },
+  {
+    "text": "When I first saw this I actually was",
+    "start": 2371.04,
+    "duration": 5.36
+  },
+  {
+    "text": "like why do we need to do this? I don't",
+    "start": 2374.48,
+    "duration": 4.08
+  },
+  {
+    "text": "understand why we need to do this. Let's",
+    "start": 2376.4,
+    "duration": 4.56
+  },
+  {
+    "text": "uh let's just let our uh agents call",
+    "start": 2378.56,
+    "duration": 6.88
+  },
+  {
+    "text": "APIs. Um but there is one uh important",
+    "start": 2380.96,
+    "duration": 7.6
+  },
+  {
+    "text": "point about one one or two important",
+    "start": 2385.44,
+    "duration": 4.88
+  },
+  {
+    "text": "points that make MCP different from just",
+    "start": 2388.56,
+    "duration": 4.64
+  },
+  {
+    "text": "calling a normal API. Uh and I'll I'll",
+    "start": 2390.32,
+    "duration": 5.68
+  },
+  {
+    "text": "explain them here. But um first I'll",
+    "start": 2393.2,
+    "duration": 6.159
+  },
+  {
+    "text": "explain why I didn't real I didn't like",
+    "start": 2396.0,
+    "duration": 4.88
+  },
+  {
+    "text": "I thought this was not actually",
+    "start": 2399.359,
+    "duration": 3.201
+  },
+  {
+    "text": "necessary. And basically the reason why",
+    "start": 2400.88,
+    "duration": 6.08
+  },
+  {
+    "text": "is every time you set up an MCP, what",
+    "start": 2402.56,
+    "duration": 7.039
+  },
+  {
+    "text": "you do is you have your AI application",
+    "start": 2406.96,
+    "duration": 5.119
+  },
+  {
+    "text": "and then you set up a couple MCP",
+    "start": 2409.599,
+    "duration": 4.561
+  },
+  {
+    "text": "clients. So like maybe this is your",
+    "start": 2412.079,
+    "duration": 4.161
+  },
+  {
+    "text": "weather client uh your this is your",
+    "start": 2414.16,
+    "duration": 5.76
+  },
+  {
+    "text": "weather MCP and your uh your GitHub MCP",
+    "start": 2416.24,
+    "duration": 5.599
+  },
+  {
+    "text": "or something like that. So you can ask",
+    "start": 2419.92,
+    "duration": 3.6
+  },
+  {
+    "text": "what the weather is what the weather is",
+    "start": 2421.839,
+    "duration": 7.881
+  },
+  {
+    "text": "and push it to your GitHub. Um uh and",
+    "start": 2423.52,
+    "duration": 6.2
+  },
+  {
+    "text": "the reason why I didn't think this was",
+    "start": 2430.0,
+    "duration": 4.48
+  },
+  {
+    "text": "necessary originally was because like",
+    "start": 2432.32,
+    "duration": 4.24
+  },
+  {
+    "text": "why do you need to run a program to call",
+    "start": 2434.48,
+    "duration": 3.76
+  },
+  {
+    "text": "an API, right? We already have good ways",
+    "start": 2436.56,
+    "duration": 3.92
+  },
+  {
+    "text": "to call APIs. We just, you know, send it",
+    "start": 2438.24,
+    "duration": 5.68
+  },
+  {
+    "text": "to the the REST API server.",
+    "start": 2440.48,
+    "duration": 6.92
+  },
+  {
+    "text": "But um",
+    "start": 2443.92,
+    "duration": 3.48
+  },
+  {
+    "text": "okay. Yeah. So so that's a little bit of",
+    "start": 2447.68,
+    "duration": 4.399
+  },
+  {
+    "text": "an aside. Um, uh, I'll I'll get back to",
+    "start": 2449.52,
+    "duration": 4.0
+  },
+  {
+    "text": "that in a moment, but for a little bit",
+    "start": 2452.079,
+    "duration": 3.441
+  },
+  {
+    "text": "of an aside, uh, there's a really nice",
+    "start": 2453.52,
+    "duration": 5.52
+  },
+  {
+    "text": "library called fast MCP. And fast MCP is",
+    "start": 2455.52,
+    "duration": 6.0
+  },
+  {
+    "text": "basically designed to be fast API for",
+    "start": 2459.04,
+    "duration": 4.64
+  },
+  {
+    "text": "MCP. So if you want to create an MCP",
+    "start": 2461.52,
+    "duration": 4.72
+  },
+  {
+    "text": "server for whatever you want, you can",
+    "start": 2463.68,
+    "duration": 5.12
+  },
+  {
+    "text": "um, just like basically swap out fast",
+    "start": 2466.24,
+    "duration": 5.2
+  },
+  {
+    "text": "MCP and swap it uh, swap out fast API",
+    "start": 2468.8,
+    "duration": 5.12
+  },
+  {
+    "text": "and swap in fast MCP and you can uh,",
+    "start": 2471.44,
+    "duration": 5.36
+  },
+  {
+    "text": "create an MCP server very easily.",
+    "start": 2473.92,
+    "duration": 5.36
+  },
+  {
+    "text": "Um, you can also take in a spec that was",
+    "start": 2476.8,
+    "duration": 4.48
+  },
+  {
+    "text": "generated by like a REST API and just",
+    "start": 2479.28,
+    "duration": 6.24
+  },
+  {
+    "text": "turn it in into an MCP as well.",
+    "start": 2481.28,
+    "duration": 7.44
+  },
+  {
+    "text": "But here here's the main reason why you",
+    "start": 2485.52,
+    "duration": 6.96
+  },
+  {
+    "text": "might want to use MCP uh as opposed to",
+    "start": 2488.72,
+    "duration": 7.92
+  },
+  {
+    "text": "an API. Uh, and the reason why is",
+    "start": 2492.48,
+    "duration": 5.839
+  },
+  {
+    "text": "because it gives you an extra layer of",
+    "start": 2496.64,
+    "duration": 7.28
+  },
+  {
+    "text": "security. And so MCPs have an MCP",
+    "start": 2498.319,
+    "duration": 10.241
+  },
+  {
+    "text": "API key. And this MCP API key uh is",
+    "start": 2503.92,
+    "duration": 6.48
+  },
+  {
+    "text": "something that you need to provide to",
+    "start": 2508.56,
+    "duration": 4.559
+  },
+  {
+    "text": "the process that's running your agent.",
+    "start": 2510.4,
+    "duration": 4.16
+  },
+  {
+    "text": "Separately from this, you have the",
+    "start": 2513.119,
+    "duration": 3.601
+  },
+  {
+    "text": "upstream API key. So like let's say you",
+    "start": 2514.56,
+    "duration": 4.88
+  },
+  {
+    "text": "are getting um getting your agent to",
+    "start": 2516.72,
+    "duration": 5.2
+  },
+  {
+    "text": "connect to your GitHub. The upstream API",
+    "start": 2519.44,
+    "duration": 4.24
+  },
+  {
+    "text": "key would be your GitHub token and you",
+    "start": 2521.92,
+    "duration": 3.679
+  },
+  {
+    "text": "would provide that to the MCP server,",
+    "start": 2523.68,
+    "duration": 3.28
+  },
+  {
+    "text": "but you would not provide it to the",
+    "start": 2525.599,
+    "duration": 4.321
+  },
+  {
+    "text": "agent. And then what you provide to the",
+    "start": 2526.96,
+    "duration": 5.359
+  },
+  {
+    "text": "agent is the MCP API key, which allows",
+    "start": 2529.92,
+    "duration": 4.88
+  },
+  {
+    "text": "you to authenticate into the MCP server.",
+    "start": 2532.319,
+    "duration": 4.561
+  },
+  {
+    "text": "And so the reason why this is important",
+    "start": 2534.8,
+    "duration": 4.08
+  },
+  {
+    "text": "is what happens if you give your agent",
+    "start": 2536.88,
+    "duration": 5.04
+  },
+  {
+    "text": "the GitHub your GitHub token and your",
+    "start": 2538.88,
+    "duration": 4.64
+  },
+  {
+    "text": "agent suddenly decides that it's a good",
+    "start": 2541.92,
+    "duration": 4.24
+  },
+  {
+    "text": "idea to push that to your public GitHub",
+    "start": 2543.52,
+    "duration": 4.96
+  },
+  {
+    "text": "repository.",
+    "start": 2546.16,
+    "duration": 4.159
+  },
+  {
+    "text": "Not good, right? [laughter] Your account",
+    "start": 2548.48,
+    "duration": 4.16
+  },
+  {
+    "text": "gets compromised and uh you get malware",
+    "start": 2550.319,
+    "duration": 4.401
+  },
+  {
+    "text": "installed onto all your repositories or",
+    "start": 2552.64,
+    "duration": 3.92
+  },
+  {
+    "text": "something like this. So you want to give",
+    "start": 2554.72,
+    "duration": 5.28
+  },
+  {
+    "text": "the the agent something that is",
+    "start": 2556.56,
+    "duration": 6.32
+  },
+  {
+    "text": "relatively harmless. Uh so that even if",
+    "start": 2560.0,
+    "duration": 5.04
+  },
+  {
+    "text": "it leaks it for whatever reason like",
+    "start": 2562.88,
+    "duration": 3.92
+  },
+  {
+    "text": "that leak is relatively harmless and",
+    "start": 2565.04,
+    "duration": 4.72
+  },
+  {
+    "text": "then the um the actual credentials get",
+    "start": 2566.8,
+    "duration": 4.48
+  },
+  {
+    "text": "get preserved and so that was basically",
+    "start": 2569.76,
+    "duration": 5.48
+  },
+  {
+    "text": "the reasoning behind it.",
+    "start": 2571.28,
+    "duration": 3.96
+  },
+  {
+    "text": "So um just to go into a summary, they",
+    "start": 2575.76,
+    "duration": 5.2
+  },
+  {
+    "text": "all give you the ability to add a set of",
+    "start": 2578.64,
+    "duration": 5.52
+  },
+  {
+    "text": "APIs into uh into your agent. Like you",
+    "start": 2580.96,
+    "duration": 4.56
+  },
+  {
+    "text": "could do that through a regular JSON",
+    "start": 2584.16,
+    "duration": 5.28
+  },
+  {
+    "text": "schema or through an MCP. Um",
+    "start": 2585.52,
+    "duration": 5.92
+  },
+  {
+    "text": "the uh but a lot of other things are",
+    "start": 2589.44,
+    "duration": 4.48
+  },
+  {
+    "text": "different. So like for discovery um you",
+    "start": 2591.44,
+    "duration": 4.639
+  },
+  {
+    "text": "might need to fetch an open API uh",
+    "start": 2593.92,
+    "duration": 5.76
+  },
+  {
+    "text": "document. For MCP there is a special API",
+    "start": 2596.079,
+    "duration": 4.881
+  },
+  {
+    "text": "that allows you to list all of the",
+    "start": 2599.68,
+    "duration": 6.56
+  },
+  {
+    "text": "tools. Um for invocation um you call an",
+    "start": 2600.96,
+    "duration": 6.96
+  },
+  {
+    "text": "HTTP",
+    "start": 2606.24,
+    "duration": 5.52
+  },
+  {
+    "text": "uh thing here for um MCP there's an MCP",
+    "start": 2607.92,
+    "duration": 5.12
+  },
+  {
+    "text": "transport and this can be through",
+    "start": 2611.76,
+    "duration": 2.72
+  },
+  {
+    "text": "various ways. You connect through",
+    "start": 2613.04,
+    "duration": 3.76
+  },
+  {
+    "text": "standard IO or you connect through an H",
+    "start": 2614.48,
+    "duration": 5.119
+  },
+  {
+    "text": "uh uh a socket or something like that.",
+    "start": 2616.8,
+    "duration": 5.44
+  },
+  {
+    "text": "Uh I already talked about authentication",
+    "start": 2619.599,
+    "duration": 6.641
+  },
+  {
+    "text": "and um MCP actually has a few other um",
+    "start": 2622.24,
+    "duration": 6.32
+  },
+  {
+    "text": "has a few other like conveniences like",
+    "start": 2626.24,
+    "duration": 3.839
+  },
+  {
+    "text": "you can add resources, prompts and",
+    "start": 2628.56,
+    "duration": 3.12
+  },
+  {
+    "text": "extensions, but I'm not going to go into",
+    "start": 2630.079,
+    "duration": 5.401
+  },
+  {
+    "text": "a lot of detail about that.",
+    "start": 2631.68,
+    "duration": 3.8
+  },
+  {
+    "text": "Cool. Um",
+    "start": 2636.48,
+    "duration": 5.119
+  },
+  {
+    "text": "actually, um there's two other things",
+    "start": 2639.599,
+    "duration": 4.24
+  },
+  {
+    "text": "I'd like to mention. um there I don't",
+    "start": 2641.599,
+    "duration": 6.881
+  },
+  {
+    "text": "want to uh I I guess I forgot to add",
+    "start": 2643.839,
+    "duration": 7.201
+  },
+  {
+    "text": "them to my slide. Um so the first thing",
+    "start": 2648.48,
+    "duration": 7.92
+  },
+  {
+    "text": "is um MCP registry. There's an official",
+    "start": 2651.04,
+    "duration": 9.039
+  },
+  {
+    "text": "MCP registry. So if you want to find",
+    "start": 2656.4,
+    "duration": 6.32
+  },
+  {
+    "text": "MCPS uh that allow you to do something",
+    "start": 2660.079,
+    "duration": 4.321
+  },
+  {
+    "text": "like this, you can, you know, go to this",
+    "start": 2662.72,
+    "duration": 5.04
+  },
+  {
+    "text": "registry and find uh any of a very large",
+    "start": 2664.4,
+    "duration": 6.24
+  },
+  {
+    "text": "number of MCPS. There's also like a",
+    "start": 2667.76,
+    "duration": 6.559
+  },
+  {
+    "text": "million and a half uh MCP server like",
+    "start": 2670.64,
+    "duration": 5.92
+  },
+  {
+    "text": "websites that you can go to that are are",
+    "start": 2674.319,
+    "duration": 4.881
+  },
+  {
+    "text": "ranked based on uh popularity and stuff",
+    "start": 2676.56,
+    "duration": 5.92
+  },
+  {
+    "text": "like this. Another thing is um I've been",
+    "start": 2679.2,
+    "duration": 4.48
+  },
+  {
+    "text": "talking a lot about the Pittsburgh",
+    "start": 2682.48,
+    "duration": 4.96
+  },
+  {
+    "text": "weather and uh the funny thing is uh",
+    "start": 2683.68,
+    "duration": 6.08
+  },
+  {
+    "text": "today I prepared all of these slides",
+    "start": 2687.44,
+    "duration": 4.639
+  },
+  {
+    "text": "like earlier of course but today we",
+    "start": 2689.76,
+    "duration": 4.48
+  },
+  {
+    "text": "actually got Pittsburgh weather that was",
+    "start": 2692.079,
+    "duration": 4.641
+  },
+  {
+    "text": "simultaneously rainy and sunny at the",
+    "start": 2694.24,
+    "duration": 5.44
+  },
+  {
+    "text": "same time. And so I managed to break my",
+    "start": 2696.72,
+    "duration": 4.399
+  },
+  {
+    "text": "own API because it cannot return",
+    "start": 2699.68,
+    "duration": 3.6
+  },
+  {
+    "text": "multiple states at the same time. But uh",
+    "start": 2701.119,
+    "duration": 4.401
+  },
+  {
+    "text": "uh yeah, it was uh quite the",
+    "start": 2703.28,
+    "duration": 3.68
+  },
+  {
+    "text": "coincidence. You can see the torrential",
+    "start": 2705.52,
+    "duration": 3.12
+  },
+  {
+    "text": "downpour and the the bright side at the",
+    "start": 2706.96,
+    "duration": 5.2
+  },
+  {
+    "text": "same time. Okay. Uh back back to serious",
+    "start": 2708.64,
+    "duration": 6.52
+  },
+  {
+    "text": "stuff.",
+    "start": 2712.16,
+    "duration": 3.0
+  },
+  {
+    "text": "Cool. Um so another big uh kind of like",
+    "start": 2716.0,
+    "duration": 6.56
+  },
+  {
+    "text": "development pretty recently is parallel",
+    "start": 2720.0,
+    "duration": 5.2
+  },
+  {
+    "text": "tool calling. in parallel tool calling.",
+    "start": 2722.56,
+    "duration": 5.6
+  },
+  {
+    "text": "Um the the basic problem we want to",
+    "start": 2725.2,
+    "duration": 4.48
+  },
+  {
+    "text": "solve is the same problem that I talked",
+    "start": 2728.16,
+    "duration": 3.199
+  },
+  {
+    "text": "about when I talked about like the codec",
+    "start": 2729.68,
+    "duration": 3.919
+  },
+  {
+    "text": "and the programmatic tool calling which",
+    "start": 2731.359,
+    "duration": 6.96
+  },
+  {
+    "text": "is if you call tools one at a time. Um",
+    "start": 2733.599,
+    "duration": 7.52
+  },
+  {
+    "text": "the uh it it could become very long for",
+    "start": 2738.319,
+    "duration": 4.241
+  },
+  {
+    "text": "even a simple operation because you",
+    "start": 2741.119,
+    "duration": 2.72
+  },
+  {
+    "text": "might do a weather and then do a",
+    "start": 2742.56,
+    "duration": 4.88
+  },
+  {
+    "text": "calendar and then do a flight. Um, but",
+    "start": 2743.839,
+    "duration": 6.081
+  },
+  {
+    "text": "if tool calls are independent, you can",
+    "start": 2747.44,
+    "duration": 4.159
+  },
+  {
+    "text": "actually call them at the same time. And",
+    "start": 2749.92,
+    "duration": 4.159
+  },
+  {
+    "text": "this is done pretty simply. You just",
+    "start": 2751.599,
+    "duration": 7.681
+  },
+  {
+    "text": "like add add multiple tool call",
+    "start": 2754.079,
+    "duration": 10.28
+  },
+  {
+    "text": "blocks to a single agent response.",
+    "start": 2759.28,
+    "duration": 5.079
+  },
+  {
+    "text": "The um there's a few nuances about this.",
+    "start": 2764.4,
+    "duration": 5.12
+  },
+  {
+    "text": "The first one is um you can only",
+    "start": 2767.92,
+    "duration": 3.12
+  },
+  {
+    "text": "paralyze tool calls if they don't have",
+    "start": 2769.52,
+    "duration": 4.64
+  },
+  {
+    "text": "dependencies on each other. So, um, like",
+    "start": 2771.04,
+    "duration": 4.4
+  },
+  {
+    "text": "if you were looking up the weather for",
+    "start": 2774.16,
+    "duration": 2.8
+  },
+  {
+    "text": "Pittsburgh and reading today's calendar",
+    "start": 2775.44,
+    "duration": 3.84
+  },
+  {
+    "text": "and looking up flight status, that might",
+    "start": 2776.96,
+    "duration": 5.04
+  },
+  {
+    "text": "be, uh, might be good. Um, but if you",
+    "start": 2779.28,
+    "duration": 4.319
+  },
+  {
+    "text": "need to find a customer ID, use it to",
+    "start": 2782.0,
+    "duration": 3.119
+  },
+  {
+    "text": "fetch orders and refund the selected",
+    "start": 2783.599,
+    "duration": 3.441
+  },
+  {
+    "text": "order. Obviously, you can't do that. So,",
+    "start": 2785.119,
+    "duration": 3.521
+  },
+  {
+    "text": "there's limits to the parallel tool",
+    "start": 2787.04,
+    "duration": 3.279
+  },
+  {
+    "text": "calling you could do. And if your",
+    "start": 2788.64,
+    "duration": 3.679
+  },
+  {
+    "text": "calendar or your flight was dependent on",
+    "start": 2790.319,
+    "duration": 3.52
+  },
+  {
+    "text": "the weather, then you know, obviously",
+    "start": 2792.319,
+    "duration": 5.121
+  },
+  {
+    "text": "that'd be a problem, too.",
+    "start": 2793.839,
+    "duration": 5.361
+  },
+  {
+    "text": "So, there was a question about this. Um,",
+    "start": 2797.44,
+    "duration": 3.2
+  },
+  {
+    "text": "do you execute the tool calls in",
+    "start": 2799.2,
+    "duration": 3.119
+  },
+  {
+    "text": "parallel? And the answer is typically",
+    "start": 2800.64,
+    "duration": 5.6
+  },
+  {
+    "text": "yes. You can just uh use typical Python",
+    "start": 2802.319,
+    "duration": 6.401
+  },
+  {
+    "text": "uh syntax to you know have a whole bunch",
+    "start": 2806.24,
+    "duration": 4.96
+  },
+  {
+    "text": "of tool calls and then execute them and",
+    "start": 2808.72,
+    "duration": 4.16
+  },
+  {
+    "text": "then uh use something like",
+    "start": 2811.2,
+    "duration": 4.8
+  },
+  {
+    "text": "async.io.gather to uh to return the",
+    "start": 2812.88,
+    "duration": 5.199
+  },
+  {
+    "text": "results of them when they run in the",
+    "start": 2816.0,
+    "duration": 5.119
+  },
+  {
+    "text": "same time. So this is uh uh this is",
+    "start": 2818.079,
+    "duration": 5.52
+  },
+  {
+    "text": "pretty common. Another thing I'd like to",
+    "start": 2821.119,
+    "duration": 6.401
+  },
+  {
+    "text": "point out is um this is a major",
+    "start": 2823.599,
+    "duration": 6.961
+  },
+  {
+    "text": "difference between really efficient",
+    "start": 2827.52,
+    "duration": 4.799
+  },
+  {
+    "text": "language models in note efficient",
+    "start": 2830.56,
+    "duration": 5.36
+  },
+  {
+    "text": "language models. And",
+    "start": 2832.319,
+    "duration": 6.161
+  },
+  {
+    "text": "there there's this weird",
+    "start": 2835.92,
+    "duration": 4.96
+  },
+  {
+    "text": "weird paradox in agentic language models",
+    "start": 2838.48,
+    "duration": 6.72
+  },
+  {
+    "text": "nowadays that more expensive models more",
+    "start": 2840.88,
+    "duration": 6.8
+  },
+  {
+    "text": "expensive models can actually be cheaper",
+    "start": 2845.2,
+    "duration": 4.32
+  },
+  {
+    "text": "if you measure them on a taskbytask",
+    "start": 2847.68,
+    "duration": 4.24
+  },
+  {
+    "text": "basis. And there's two major reasons for",
+    "start": 2849.52,
+    "duration": 3.92
+  },
+  {
+    "text": "this.",
+    "start": 2851.92,
+    "duration": 3.6
+  },
+  {
+    "text": "The first major reason is more expensive",
+    "start": 2853.44,
+    "duration": 4.24
+  },
+  {
+    "text": "models can be smarter. So they pick like",
+    "start": 2855.52,
+    "duration": 4.72
+  },
+  {
+    "text": "an appropriate solution more quickly. Um",
+    "start": 2857.68,
+    "duration": 5.76
+  },
+  {
+    "text": "but another thing is um more recent",
+    "start": 2860.24,
+    "duration": 4.96
+  },
+  {
+    "text": "models",
+    "start": 2863.44,
+    "duration": 4.48
+  },
+  {
+    "text": "do parallel tool calling uh a lot",
+    "start": 2865.2,
+    "duration": 4.159
+  },
+  {
+    "text": "better. So they make a whole bunch of",
+    "start": 2867.92,
+    "duration": 4.08
+  },
+  {
+    "text": "calls at the same time. So if you're",
+    "start": 2869.359,
+    "duration": 4.161
+  },
+  {
+    "text": "using a coding agent or something like",
+    "start": 2872.0,
+    "duration": 5.359
+  },
+  {
+    "text": "this, uh you use the the better uh you",
+    "start": 2873.52,
+    "duration": 6.24
+  },
+  {
+    "text": "use the better models and they are doing",
+    "start": 2877.359,
+    "duration": 5.201
+  },
+  {
+    "text": "like a bunch of view images at the same",
+    "start": 2879.76,
+    "duration": 5.92
+  },
+  {
+    "text": "time or they're uh like writing a bunch",
+    "start": 2882.56,
+    "duration": 4.559
+  },
+  {
+    "text": "of different files at the same time or",
+    "start": 2885.68,
+    "duration": 2.399
+  },
+  {
+    "text": "something like that. That's because",
+    "start": 2887.119,
+    "duration": 2.321
+  },
+  {
+    "text": "they're doing parallel tool calling.",
+    "start": 2888.079,
+    "duration": 4.881
+  },
+  {
+    "text": "Well, um does anyone have an idea of",
+    "start": 2889.44,
+    "duration": 5.12
+  },
+  {
+    "text": "like why they got so much better at",
+    "start": 2892.96,
+    "duration": 3.92
+  },
+  {
+    "text": "this? They like this was not a huge",
+    "start": 2894.56,
+    "duration": 4.08
+  },
+  {
+    "text": "thing even though parallel tool calling",
+    "start": 2896.88,
+    "duration": 3.36
+  },
+  {
+    "text": "mechanisms have existed for a long time.",
+    "start": 2898.64,
+    "duration": 3.679
+  },
+  {
+    "text": "This was not a huge thing until maybe",
+    "start": 2900.24,
+    "duration": 4.879
+  },
+  {
+    "text": "like six months ago or something. Yeah.",
+    "start": 2902.319,
+    "duration": 4.481
+  },
+  {
+    "text": ">> Reinforcement learning just forced them",
+    "start": 2905.119,
+    "duration": 2.401
+  },
+  {
+    "text": "to do that.",
+    "start": 2906.8,
+    "duration": 3.12
+  },
+  {
+    "text": ">> Yes. Exactly. So reinforcement learning",
+    "start": 2907.52,
+    "duration": 4.4
+  },
+  {
+    "text": "uh kind of forced them to do that and so",
+    "start": 2909.92,
+    "duration": 3.36
+  },
+  {
+    "text": "the models were very heavily",
+    "start": 2911.92,
+    "duration": 3.52
+  },
+  {
+    "text": "incentivized to fish finish tasks",
+    "start": 2913.28,
+    "duration": 4.559
+  },
+  {
+    "text": "quickly and parallel tool calling is one",
+    "start": 2915.44,
+    "duration": 4.72
+  },
+  {
+    "text": "of the good ways to do that. So if you",
+    "start": 2917.839,
+    "duration": 4.0
+  },
+  {
+    "text": "do reinforcement learning with a very",
+    "start": 2920.16,
+    "duration": 4.56
+  },
+  {
+    "text": "heavy like brevity penalty on on how",
+    "start": 2921.839,
+    "duration": 5.841
+  },
+  {
+    "text": "long uh the task execution is, you can",
+    "start": 2924.72,
+    "duration": 5.44
+  },
+  {
+    "text": "get uh like a lot more parallel tool",
+    "start": 2927.68,
+    "duration": 5.48
+  },
+  {
+    "text": "calling.",
+    "start": 2930.16,
+    "duration": 3.0
+  },
+  {
+    "text": "Cool. So um the final thing I'd like to",
+    "start": 2933.839,
+    "duration": 4.961
+  },
+  {
+    "text": "talk about in this lecture today is",
+    "start": 2937.04,
+    "duration": 5.76
+  },
+  {
+    "text": "evaluating tool use. And so I'm not",
+    "start": 2938.8,
+    "duration": 6.64
+  },
+  {
+    "text": "going to talk about evaluating endto-end",
+    "start": 2942.8,
+    "duration": 6.08
+  },
+  {
+    "text": "agentic tasks immediately yet. um but",
+    "start": 2945.44,
+    "duration": 5.28
+  },
+  {
+    "text": "rather talk about evaluating just the",
+    "start": 2948.88,
+    "duration": 3.6
+  },
+  {
+    "text": "tool usability of language models",
+    "start": 2950.72,
+    "duration": 4.399
+  },
+  {
+    "text": "because it's kind of like a prerequisite",
+    "start": 2952.48,
+    "duration": 6.48
+  },
+  {
+    "text": "for language models to be good at um uh",
+    "start": 2955.119,
+    "duration": 6.881
+  },
+  {
+    "text": "good at agentic tasks. And there's a",
+    "start": 2958.96,
+    "duration": 5.2
+  },
+  {
+    "text": "bunch of data sets for this. The most",
+    "start": 2962.0,
+    "duration": 3.839
+  },
+  {
+    "text": "famous one is the Berkeley function",
+    "start": 2964.16,
+    "duration": 4.72
+  },
+  {
+    "text": "calling leaderboard and this has four",
+    "start": 2965.839,
+    "duration": 5.601
+  },
+  {
+    "text": "versions. Uh it started out with version",
+    "start": 2968.88,
+    "duration": 6.4
+  },
+  {
+    "text": "one which was basically um single turn",
+    "start": 2971.44,
+    "duration": 6.8
+  },
+  {
+    "text": "uh tool calling. Um it's then evolved",
+    "start": 2975.28,
+    "duration": 4.48
+  },
+  {
+    "text": "through the four versions and now it",
+    "start": 2978.24,
+    "duration": 4.56
+  },
+  {
+    "text": "covers um multi-turn tool calling. It",
+    "start": 2979.76,
+    "duration": 5.2
+  },
+  {
+    "text": "also does have aentic tool calling but",
+    "start": 2982.8,
+    "duration": 4.88
+  },
+  {
+    "text": "this is more um not for like endto-end",
+    "start": 2984.96,
+    "duration": 4.0
+  },
+  {
+    "text": "coding agents or something like that.",
+    "start": 2987.68,
+    "duration": 3.52
+  },
+  {
+    "text": "It's uh tool calling agents and they",
+    "start": 2988.96,
+    "duration": 4.08
+  },
+  {
+    "text": "also have tool calling robustness. So",
+    "start": 2991.2,
+    "duration": 4.24
+  },
+  {
+    "text": "they measure um hallucination of",
+    "start": 2993.04,
+    "duration": 4.559
+  },
+  {
+    "text": "arguments. They also measure format",
+    "start": 2995.44,
+    "duration": 3.76
+  },
+  {
+    "text": "sensitivity. So when I talked about like",
+    "start": 2997.599,
+    "duration": 3.841
+  },
+  {
+    "text": "the all the different formats uh they",
+    "start": 2999.2,
+    "duration": 6.919
+  },
+  {
+    "text": "have uh parameters about that as well.",
+    "start": 3001.44,
+    "duration": 4.679
+  },
+  {
+    "text": "So um",
+    "start": 3006.72,
+    "duration": 5.119
+  },
+  {
+    "text": "when you uh go in to evaluate the whole",
+    "start": 3009.04,
+    "duration": 5.039
+  },
+  {
+    "text": "uh stack there's a number of things that",
+    "start": 3011.839,
+    "duration": 5.441
+  },
+  {
+    "text": "you want to uh evaluate. So the first",
+    "start": 3014.079,
+    "duration": 6.641
+  },
+  {
+    "text": "thing is did the language model choose",
+    "start": 3017.28,
+    "duration": 5.68
+  },
+  {
+    "text": "the appropriate tool for the task. So it",
+    "start": 3020.72,
+    "duration": 3.76
+  },
+  {
+    "text": "might have picked like a an",
+    "start": 3022.96,
+    "duration": 4.08
+  },
+  {
+    "text": "inappropriate tool that can't uh allow",
+    "start": 3024.48,
+    "duration": 5.76
+  },
+  {
+    "text": "you to do that uh the task at all. Um",
+    "start": 3027.04,
+    "duration": 6.88
+  },
+  {
+    "text": "the other thing is arguments uh which is",
+    "start": 3030.24,
+    "duration": 5.68
+  },
+  {
+    "text": "uh you know whether you you add the",
+    "start": 3033.92,
+    "duration": 4.72
+  },
+  {
+    "text": "right values. Um if you're talking about",
+    "start": 3035.92,
+    "duration": 4.56
+  },
+  {
+    "text": "agentic tool calling you can talk about",
+    "start": 3038.64,
+    "duration": 4.16
+  },
+  {
+    "text": "whether it did it in the right order and",
+    "start": 3040.48,
+    "duration": 4.24
+  },
+  {
+    "text": "then you can uh measure endto-end task",
+    "start": 3042.8,
+    "duration": 4.08
+  },
+  {
+    "text": "accuracy for if you're doing uh agentic",
+    "start": 3044.72,
+    "duration": 3.52
+  },
+  {
+    "text": "tool calling. And all of these are kind",
+    "start": 3046.88,
+    "duration": 5.4
+  },
+  {
+    "text": "of metrics in this leaderboard.",
+    "start": 3048.24,
+    "duration": 4.04
+  },
+  {
+    "text": "Then separately from that there's also",
+    "start": 3052.559,
+    "duration": 4.8
+  },
+  {
+    "text": "um efficiency. So like uh how quickly",
+    "start": 3054.559,
+    "duration": 5.04
+  },
+  {
+    "text": "can you solve the task? Like um how many",
+    "start": 3057.359,
+    "duration": 4.081
+  },
+  {
+    "text": "tokens did it take? How how much did it",
+    "start": 3059.599,
+    "duration": 7.121
+  },
+  {
+    "text": "cost? Um reliability. So um you know if",
+    "start": 3061.44,
+    "duration": 9.04
+  },
+  {
+    "text": "a tool call times out uh does it retry",
+    "start": 3066.72,
+    "duration": 5.839
+  },
+  {
+    "text": "appropriately? If a tool is out of",
+    "start": 3070.48,
+    "duration": 4.879
+  },
+  {
+    "text": "order, can it choose a a different one?",
+    "start": 3072.559,
+    "duration": 5.201
+  },
+  {
+    "text": "And also um safety. So if you have",
+    "start": 3075.359,
+    "duration": 4.72
+  },
+  {
+    "text": "adversarial outputs where you ask it to",
+    "start": 3077.76,
+    "duration": 5.28
+  },
+  {
+    "text": "use a tool in an inappropriate way, uh",
+    "start": 3080.079,
+    "duration": 4.721
+  },
+  {
+    "text": "can you do this? And all of these are",
+    "start": 3083.04,
+    "duration": 3.84
+  },
+  {
+    "text": "like over the four iterations of this",
+    "start": 3084.8,
+    "duration": 3.759
+  },
+  {
+    "text": "benchmark. It covers uh all of these",
+    "start": 3086.88,
+    "duration": 4.679
+  },
+  {
+    "text": "dimensions.",
+    "start": 3088.559,
+    "duration": 3.0
+  },
+  {
+    "text": "Um yeah, I kind of covered that already",
+    "start": 3092.319,
+    "duration": 4.8
+  },
+  {
+    "text": "actually. So one other uh really",
+    "start": 3094.24,
+    "duration": 5.28
+  },
+  {
+    "text": "interesting benchmark uh for tool",
+    "start": 3097.119,
+    "duration": 6.161
+  },
+  {
+    "text": "calling is uh this open router uh tool",
+    "start": 3099.52,
+    "duration": 6.0
+  },
+  {
+    "text": "call air rate benchmark. I don't know if",
+    "start": 3103.28,
+    "duration": 4.799
+  },
+  {
+    "text": "anybody like uses open router or has",
+    "start": 3105.52,
+    "duration": 6.4
+  },
+  {
+    "text": "seen this before. Maybe no.",
+    "start": 3108.079,
+    "duration": 8.48
+  },
+  {
+    "text": "Okay. So um this is for the same model.",
+    "start": 3111.92,
+    "duration": 6.8
+  },
+  {
+    "text": "All of these are for uh I think this is",
+    "start": 3116.559,
+    "duration": 5.841
+  },
+  {
+    "text": "GLM 5.3. So it's like the same the same",
+    "start": 3118.72,
+    "duration": 6.24
+  },
+  {
+    "text": "model and it's measuring the tool call",
+    "start": 3122.4,
+    "duration": 4.959
+  },
+  {
+    "text": "error rate",
+    "start": 3124.96,
+    "duration": 5.76
+  },
+  {
+    "text": "simply the only thing they varied is who",
+    "start": 3127.359,
+    "duration": 7.601
+  },
+  {
+    "text": "serves the model to you. And this is uh",
+    "start": 3130.72,
+    "duration": 6.16
+  },
+  {
+    "text": "this is pretty important obviously",
+    "start": 3134.96,
+    "duration": 3.359
+  },
+  {
+    "text": "because you think oh I'm going to use",
+    "start": 3136.88,
+    "duration": 3.36
+  },
+  {
+    "text": "this model maybe you know it's going to",
+    "start": 3138.319,
+    "duration": 3.841
+  },
+  {
+    "text": "be the same regardless of who provides",
+    "start": 3140.24,
+    "duration": 4.16
+  },
+  {
+    "text": "it to me but actually the difference is",
+    "start": 3142.16,
+    "duration": 6.48
+  },
+  {
+    "text": "between 15% and like 0.01",
+    "start": 3144.4,
+    "duration": 6.08
+  },
+  {
+    "text": "to 0.05%.",
+    "start": 3148.64,
+    "duration": 6.52
+  },
+  {
+    "text": "Any idea uh why this might be?",
+    "start": 3150.48,
+    "duration": 4.68
+  },
+  {
+    "text": "There were some uh there were some hints",
+    "start": 3160.319,
+    "duration": 4.321
+  },
+  {
+    "text": "in the lecture and some uh not some",
+    "start": 3162.72,
+    "duration": 2.8
+  },
+  {
+    "text": "hints in the lecture",
+    "start": 3164.64,
+    "duration": 3.04
+  },
+  {
+    "text": ">> is decoding algorithms different maybe",
+    "start": 3165.52,
+    "duration": 4.559
+  },
+  {
+    "text": "someone's using",
+    "start": 3167.68,
+    "duration": 5.12
+  },
+  {
+    "text": "like cheaper version of the model or",
+    "start": 3170.079,
+    "duration": 4.641
+  },
+  {
+    "text": "quantized version of the model.",
+    "start": 3172.8,
+    "duration": 3.92
+  },
+  {
+    "text": ">> Yeah, great great points. So I'll I'll",
+    "start": 3174.72,
+    "duration": 4.56
+  },
+  {
+    "text": "repeat it. So number one is the decoding",
+    "start": 3176.72,
+    "duration": 4.08
+  },
+  {
+    "text": "or the inference algorithm could be",
+    "start": 3179.28,
+    "duration": 4.48
+  },
+  {
+    "text": "different and um one very big difference",
+    "start": 3180.8,
+    "duration": 5.12
+  },
+  {
+    "text": "is whether they're using quantization of",
+    "start": 3183.76,
+    "duration": 4.079
+  },
+  {
+    "text": "the model or not or like what level of",
+    "start": 3185.92,
+    "duration": 3.919
+  },
+  {
+    "text": "quantization of the model they're using.",
+    "start": 3187.839,
+    "duration": 6.641
+  },
+  {
+    "text": "So my my personal experience is um uh",
+    "start": 3189.839,
+    "duration": 7.76
+  },
+  {
+    "text": "FP8 models uh FP8 is kind of like the",
+    "start": 3194.48,
+    "duration": 5.359
+  },
+  {
+    "text": "default level of uh quantization for the",
+    "start": 3197.599,
+    "duration": 5.441
+  },
+  {
+    "text": "model um get a lot fewer uh mistaken",
+    "start": 3199.839,
+    "duration": 6.161
+  },
+  {
+    "text": "tool calls than FP4 models because FP4",
+    "start": 3203.04,
+    "duration": 5.039
+  },
+  {
+    "text": "is like compressing it very heavily.",
+    "start": 3206.0,
+    "duration": 3.68
+  },
+  {
+    "text": "It's saving money for the inference",
+    "start": 3208.079,
+    "duration": 5.28
+  },
+  {
+    "text": "provider, but it's it's usually a worse",
+    "start": 3209.68,
+    "duration": 5.6
+  },
+  {
+    "text": "model. There aren't very many FP4",
+    "start": 3213.359,
+    "duration": 4.401
+  },
+  {
+    "text": "quantizations that can allow you to get",
+    "start": 3215.28,
+    "duration": 4.88
+  },
+  {
+    "text": "the same performance. Another one was uh",
+    "start": 3217.76,
+    "duration": 4.72
+  },
+  {
+    "text": "speculative decoding. Um I don't think",
+    "start": 3220.16,
+    "duration": 3.679
+  },
+  {
+    "text": "we're going to talk about speculative",
+    "start": 3222.48,
+    "duration": 3.04
+  },
+  {
+    "text": "decoding a huge amount in this class.",
+    "start": 3223.839,
+    "duration": 2.881
+  },
+  {
+    "text": "Maybe I'll talk about it during long",
+    "start": 3225.52,
+    "duration": 4.799
+  },
+  {
+    "text": "context or actually may there are a few",
+    "start": 3226.72,
+    "duration": 5.52
+  },
+  {
+    "text": "algorithms specifically for agents which",
+    "start": 3230.319,
+    "duration": 3.121
+  },
+  {
+    "text": "are interesting. So maybe we can talk",
+    "start": 3232.24,
+    "duration": 3.119
+  },
+  {
+    "text": "about it. But basically what it is is",
+    "start": 3233.44,
+    "duration": 4.639
+  },
+  {
+    "text": "you have another cheaper model um that",
+    "start": 3235.359,
+    "duration": 5.281
+  },
+  {
+    "text": "predicts what the more expensive model",
+    "start": 3238.079,
+    "duration": 4.24
+  },
+  {
+    "text": "is going to do and then you use that to",
+    "start": 3240.64,
+    "duration": 4.08
+  },
+  {
+    "text": "like speed up your inference.",
+    "start": 3242.319,
+    "duration": 6.481
+  },
+  {
+    "text": "um spec lossless speculative decoding",
+    "start": 3244.72,
+    "duration": 5.28
+  },
+  {
+    "text": "probably shouldn't make a difference",
+    "start": 3248.8,
+    "duration": 4.319
+  },
+  {
+    "text": "because it it's like not changing the",
+    "start": 3250.0,
+    "duration": 5.28
+  },
+  {
+    "text": "underlying result of the model. But if",
+    "start": 3253.119,
+    "duration": 3.681
+  },
+  {
+    "text": "they're doing some sort of like lossy",
+    "start": 3255.28,
+    "duration": 3.76
+  },
+  {
+    "text": "speculative decoding uh then that might",
+    "start": 3256.8,
+    "duration": 4.16
+  },
+  {
+    "text": "might cause it to be different. But then",
+    "start": 3259.04,
+    "duration": 3.279
+  },
+  {
+    "text": "you know calling it the same model is",
+    "start": 3260.96,
+    "duration": 4.32
+  },
+  {
+    "text": "also probably a bad uh a bad idea. Uh",
+    "start": 3262.319,
+    "duration": 5.601
+  },
+  {
+    "text": "there's one other thing um that I",
+    "start": 3265.28,
+    "duration": 6.16
+  },
+  {
+    "text": "mentioned uh and anybody have an idea",
+    "start": 3267.92,
+    "duration": 6.159
+  },
+  {
+    "text": "this was actually mentioned in the uh in",
+    "start": 3271.44,
+    "duration": 6.52
+  },
+  {
+    "text": "the class today.",
+    "start": 3274.079,
+    "duration": 3.881
+  },
+  {
+    "text": "What can you do to make your tool calls",
+    "start": 3283.92,
+    "duration": 4.8
+  },
+  {
+    "text": "more successful?",
+    "start": 3286.559,
+    "duration": 3.841
+  },
+  {
+    "text": ">> Yeah.",
+    "start": 3288.72,
+    "duration": 4.16
+  },
+  {
+    "text": ">> Constraint decoding. Yeah, exactly. So",
+    "start": 3290.4,
+    "duration": 4.48
+  },
+  {
+    "text": "these different providers might be using",
+    "start": 3292.88,
+    "duration": 3.12
+  },
+  {
+    "text": "different constraint decoding",
+    "start": 3294.88,
+    "duration": 5.199
+  },
+  {
+    "text": "algorithms. Um just practically",
+    "start": 3296.0,
+    "duration": 7.2
+  },
+  {
+    "text": "many many of these providers will be",
+    "start": 3300.079,
+    "duration": 5.681
+  },
+  {
+    "text": "implementing their own inference",
+    "start": 3303.2,
+    "duration": 4.08
+  },
+  {
+    "text": "algorithm. So they'll have their own",
+    "start": 3305.76,
+    "duration": 2.96
+  },
+  {
+    "text": "inference algorithm completely",
+    "start": 3307.28,
+    "duration": 4.72
+  },
+  {
+    "text": "implemented from scratch. Um some of the",
+    "start": 3308.72,
+    "duration": 4.879
+  },
+  {
+    "text": "providers will be using an open source",
+    "start": 3312.0,
+    "duration": 4.96
+  },
+  {
+    "text": "one like VLM or SGLANG. And VLM or SG",
+    "start": 3313.599,
+    "duration": 5.281
+  },
+  {
+    "text": "lang support different grammar-based",
+    "start": 3316.96,
+    "duration": 5.84
+  },
+  {
+    "text": "decoding uh algorithms. And so uh some",
+    "start": 3318.88,
+    "duration": 5.52
+  },
+  {
+    "text": "of these providers just might not have",
+    "start": 3322.8,
+    "duration": 3.36
+  },
+  {
+    "text": "that implemented and so they're entirely",
+    "start": 3324.4,
+    "duration": 3.6
+  },
+  {
+    "text": "relying on the language model to do good",
+    "start": 3326.16,
+    "duration": 5.439
+  },
+  {
+    "text": "tool calls. Um otherwise uh they might",
+    "start": 3328.0,
+    "duration": 5.92
+  },
+  {
+    "text": "not. A final kind of like boring reason",
+    "start": 3331.599,
+    "duration": 3.841
+  },
+  {
+    "text": "why tool calls might fail is the",
+    "start": 3333.92,
+    "duration": 3.28
+  },
+  {
+    "text": "inference provider might be unreliable.",
+    "start": 3335.44,
+    "duration": 3.679
+  },
+  {
+    "text": "So it might go down some of the time and",
+    "start": 3337.2,
+    "duration": 5.96
+  },
+  {
+    "text": "then the tool call would fail.",
+    "start": 3339.119,
+    "duration": 4.041
+  },
+  {
+    "text": "Cool. Um so these are the um that that's",
+    "start": 3343.359,
+    "duration": 5.921
+  },
+  {
+    "text": "the main thing that I I had for today.",
+    "start": 3347.119,
+    "duration": 4.72
+  },
+  {
+    "text": "Um so tool use is basically a layered",
+    "start": 3349.28,
+    "duration": 5.279
+  },
+  {
+    "text": "system. Um you know the tools add",
+    "start": 3351.839,
+    "duration": 4.72
+  },
+  {
+    "text": "capabilities such as retrieval,",
+    "start": 3354.559,
+    "duration": 4.321
+  },
+  {
+    "text": "execution, generation, application.",
+    "start": 3356.559,
+    "duration": 4.56
+  },
+  {
+    "text": "They're what make an agent an agent. Uh",
+    "start": 3358.88,
+    "duration": 5.919
+  },
+  {
+    "text": "but we can't get that uh for free. And",
+    "start": 3361.119,
+    "duration": 7.361
+  },
+  {
+    "text": "um you can uh add schemas to the prompt.",
+    "start": 3364.799,
+    "duration": 5.841
+  },
+  {
+    "text": "Uh the models emit calls and then you",
+    "start": 3368.48,
+    "duration": 4.56
+  },
+  {
+    "text": "validate dispatch and match results by",
+    "start": 3370.64,
+    "duration": 5.679
+  },
+  {
+    "text": "ID. And we can add constraints uh like",
+    "start": 3373.04,
+    "duration": 5.6
+  },
+  {
+    "text": "grammar-based decoding. um they don't",
+    "start": 3376.319,
+    "duration": 4.881
+  },
+  {
+    "text": "guarantee semantic correctness. So um if",
+    "start": 3378.64,
+    "duration": 4.08
+  },
+  {
+    "text": "you have like a Python program, the",
+    "start": 3381.2,
+    "duration": 3.52
+  },
+  {
+    "text": "Python program might still be wrong even",
+    "start": 3382.72,
+    "duration": 4.24
+  },
+  {
+    "text": "if you generated uh you know a string",
+    "start": 3384.72,
+    "duration": 4.879
+  },
+  {
+    "text": "that could be parsed as Python. Um and",
+    "start": 3386.96,
+    "duration": 4.48
+  },
+  {
+    "text": "there's a number of uh ways you can",
+    "start": 3389.599,
+    "duration": 3.441
+  },
+  {
+    "text": "interface with them like direct rest",
+    "start": 3391.44,
+    "duration": 4.24
+  },
+  {
+    "text": "calls and MCPS.",
+    "start": 3393.04,
+    "duration": 4.319
+  },
+  {
+    "text": "Uh and then we have a lot of systems",
+    "start": 3395.68,
+    "duration": 3.919
+  },
+  {
+    "text": "that um orchestrate dependencies and",
+    "start": 3397.359,
+    "duration": 5.841
+  },
+  {
+    "text": "concurrency and uh allow us to evaluate.",
+    "start": 3399.599,
+    "duration": 6.801
+  },
+  {
+    "text": "So yeah, that that's uh what I wanted to",
+    "start": 3403.2,
+    "duration": 4.96
+  },
+  {
+    "text": "talk about for tool calling. Uh this",
+    "start": 3406.4,
+    "duration": 3.6
+  },
+  {
+    "text": "will be something that is covered in the",
+    "start": 3408.16,
+    "duration": 3.679
+  },
+  {
+    "text": "harness uh assignment or the first",
+    "start": 3410.0,
+    "duration": 3.28
+  },
+  {
+    "text": "assignment where you build your agent.",
+    "start": 3411.839,
+    "duration": 2.96
+  },
+  {
+    "text": "So you'll need to need to deal with",
+    "start": 3413.28,
+    "duration": 5.039
+  },
+  {
+    "text": "this. Um but and next time we're going",
+    "start": 3414.799,
+    "duration": 4.961
+  },
+  {
+    "text": "to talk about context management for",
+    "start": 3418.319,
+    "duration": 5.121
+  },
+  {
+    "text": "long context in long context LMS. But um",
+    "start": 3419.76,
+    "duration": 5.599
+  },
+  {
+    "text": "any questions",
+    "start": 3423.44,
+    "duration": 4.159
+  },
+  {
+    "text": "to wrap up?",
+    "start": 3425.359,
+    "duration": 3.281
+  },
+  {
+    "text": "Okay. Yeah. Yeah. And I'm going to",
+    "start": 3427.599,
+    "duration": 2.48
+  },
+  {
+    "text": "repeat in case people didn't hear in the",
+    "start": 3428.64,
+    "duration": 5.04
+  },
+  {
+    "text": "back, but the first um uh assignment for",
+    "start": 3430.079,
+    "duration": 5.04
+  },
+  {
+    "text": "reflecting on the lecture and talking",
+    "start": 3433.68,
+    "duration": 2.639
+  },
+  {
+    "text": "about something you learned in the",
+    "start": 3435.119,
+    "duration": 3.041
+  },
+  {
+    "text": "lecture is going to be up on Canvas. So,",
+    "start": 3436.319,
+    "duration": 3.76
+  },
+  {
+    "text": "make sure you uh make sure you submit",
+    "start": 3438.16,
+    "duration": 5.28
+  },
+  {
+    "text": "it. Thank you.",
+    "start": 3440.079,
+    "duration": 3.361
+  }
+]

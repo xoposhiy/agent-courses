@@ -1,0 +1,14 @@
+﻿category_id,concept_count,confirmed_course_concepts,book_only_concepts,covered_course_count
+foundations,16,13,3,7
+architecture,18,18,0,7
+reasoning-techniques,19,19,0,7
+context-memory,17,17,0,6
+retrieval-knowledge,19,18,1,5
+tool-techniques,5,5,0,7
+training,22,19,3,6
+evaluation,28,27,1,7
+safety-trust,11,11,0,6
+runtime,15,15,0,7
+tools-protocols,5,5,0,4
+applications,14,11,3,5
+behavior,16,7,9,5

@@ -1,0 +1,67 @@
+# Homework 1 public teaching repository: assignments/OMIM_620985/grill_run/tasks/0009_screen_h4/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_620985/grill_run/tasks/0009_screen_h4/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_620985/grill_run/tasks/0009_screen_h4/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "MSL2 is an established epigenetic/chromatin regulator linked to a neurodevelopmental syndrome characterized by developmental delay, hypotonia, and distinct dysmorphisms, making differential diagnosis from other chromatinopathies plausible.",
+  "confidence": 0.75,
+  "evidence": [
+    {
+      "text": "Karayol et al. reported a cohort of 25 individuals with de novo MSL2 variants presenting with an epigenetic neurodevelopmental disorder including developmental delay, hypotonia, dysmorphisms, coordination issues, and a distinct episignature.",
+      "stance": "supports",
+      "source": {
+        "title": "MSL2 variants lead to a neurodevelopmental syndrome with lack of coordination, epilepsy, specific dysmorphisms, and a distinct episignature",
+        "authors": [
+          "R Karayol",
+          "MC Borroto",
+          "S Haghshenas"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": "PMC11267526",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11267526/",
+        "quote": "Using exome sequencing, here we identify a cohort of 25 individuals with heterozygous de novo variants in MSL complex member MSL2. MSL2 variants were associated with NDD phenotypes including global developmental delay, intellectual disability, hypotonia, and motor issues such as coordination problems, feeding difficulties, and gait disturbance."
+      },
+      "numbers": [
+        {
+          "metric": "cohort size",
+          "value": 25
+        }
+      ]
+    },
+    {
+      "text": "Lu et al. described novel protein-truncating variants in the epigenetic regulator MSL2 causing syndromic neurodevelopmental disorder with dysmorphic features.",
+      "stance": "supports",
+      "source": {
+        "title": "Novel protein-truncating variants of a chromatin-modifying gene MSL2 in syndromic neurodevelopmental disorders",
+        "authors": [
+          "X Lu",
+          "K Ng",
+          "F Pinto e Vairo",
+          "J Collins",
+          "R Cohn"
+        ],
+        "year": 2024,
+        "journal": null,
+        "doi": "10.1038/s41431-024-01576-0",
+        "pmid": "38702431",
+        "pmc": null,
+        "url": "https://www.nature.com/articles/s41431-024-01576-0",
+        "quote": "Taken together, our descriptions of dysmorphic face and other features support the causal role of MSL2 in a likely syndromic neurodevelopmental disorder and add MSL2 to a growing list of epigenetic genes implicated in ASD."
+      },
+      "numbers": [
+        {
+          "metric": "detailed clinical cases described",
+          "value": 3
+        }
+      ]
+    }
+  ]
+}
+```

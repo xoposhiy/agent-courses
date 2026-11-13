@@ -1,0 +1,65 @@
+# Homework 1 public teaching repository: assignments/OMIM_621421/grill_run/tasks/0034_screen_h12/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621421/grill_run/tasks/0034_screen_h12/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621421/grill_run/tasks/0034_screen_h12/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Ramond et al. described 12 individuals across 11 families, and Shatokhina et al. reported a single individual as the second study, summing to 13 individuals across 12 families.",
+  "confidence": 0.95,
+  "evidence": [
+    {
+      "text": "Ramond et al. identified 12 individuals from 11 unrelated families with monoallelic TRA2B variants.",
+      "stance": "supports",
+      "source": {
+        "title": "Clustered variants in the 5' coding region of TRA2B cause a distinctive neurodevelopmental syndrome",
+        "authors": [],
+        "year": null,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.researchgate.net/publication/366428134_Clustered_variants_in_the_5'_coding_region_of_TRA2B_cause_a_distinctive_neurodevelopmental_syndrome",
+        "quote": "A total of 12 individuals from 11 unrelated families who harbored predicted loss-of-function monoallelic variants, mostly de novo, were recruited."
+      },
+      "numbers": [
+        {
+          "metric": "individuals",
+          "value": 12
+        },
+        {
+          "metric": "families",
+          "value": 11
+        }
+      ]
+    },
+    {
+      "text": "Shatokhina et al. documented a single proband as the second study of human pathogenic TRA2B variants, following the initial report of 11 families.",
+      "stance": "supports",
+      "source": {
+        "title": "TRA2B Gene Splice Variant Linked to Seizures and Neurodevelopmental Delay: A Second Case Study",
+        "authors": [
+          "O Shatokhina",
+          "V Kovalskaia",
+          "P Sparber"
+        ],
+        "year": 2023,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.mdpi.com/1422-0067/24/21/15572",
+        "quote": "However, only one study has documented this association in 11 families with pathogenic or likely pathogenic TRA2B variants. In our investigation, we report a new de novo TRA2B ... This paper represents the second investigation of pathogenic variants in the TRA2B gene in humans"
+      },
+      "numbers": [
+        {
+          "metric": "individuals",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}
+```

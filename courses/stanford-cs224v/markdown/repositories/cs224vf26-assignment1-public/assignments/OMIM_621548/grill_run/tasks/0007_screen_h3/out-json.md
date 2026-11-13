@@ -1,0 +1,66 @@
+# Homework 1 public teaching repository: assignments/OMIM_621548/grill_run/tasks/0007_screen_h3/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621548/grill_run/tasks/0007_screen_h3/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621548/grill_run/tasks/0007_screen_h3/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "CLN3 mutations cause both classic syndromic juvenile Batten disease (JNCL) with dementia, seizures, and neurodegeneration, and isolated/nonsyndromic retinal degeneration (RP101) lacking systemic neurological decline.",
+  "confidence": 0.95,
+  "evidence": [
+    {
+      "text": "Biallelic variants in CLN3 lead to a spectrum ranging from severe neurodegeneration with retinal involvement (JNCL) to retina-restricted conditions where patients present with nonsyndromic inherited retinal disease.",
+      "stance": "supports",
+      "source": {
+        "title": "Retinal Phenotype of Patients With Isolated Retinal Degeneration Due to CLN3 Pathogenic Variants in a French Retinitis Pigmentosa Cohort",
+        "authors": [
+          "VM Smirnov",
+          "M Nassisi",
+          "C Solis Hernandez"
+        ],
+        "year": 2021,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": "PMC7844693",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7844693/",
+        "quote": "Biallelic variants in CLN3 lead to a spectrum of diseases, ranging from severe neurodegeneration with retinal involvement (juvenile neuronal ceroid lipofuscinosis) to retina-restricted conditions."
+      },
+      "numbers": [
+        {
+          "metric": "nonsyndromic IRD patients with biallelic CLN3 variants",
+          "value": 15
+        }
+      ]
+    },
+    {
+      "text": "Mutations in CLN3 associated with late-onset, non-syndromic retinal dystrophy did not develop neurological symptoms over prolonged follow-up, contrasting with classic juvenile neuronal ceroid lipofuscinosis.",
+      "stance": "supports",
+      "source": {
+        "title": "Clinical and molecular characterization of non-syndromic retinal dystrophy due to c.175G>A mutation in ceroid lipofuscinosis neuronal 3 (CLN3)",
+        "authors": [
+          "FK Chen",
+          "X Zhang",
+          "J Eintracht",
+          "D Zhang"
+        ],
+        "year": 2019,
+        "journal": null,
+        "doi": "10.1007/s10633-018-9665-7",
+        "pmid": "30446867",
+        "pmc": null,
+        "url": "https://link.springer.com/article/10.1007/s10633-018-9665-7",
+        "quote": "Mutation of the CLN3 gene, associated with juvenile neuronal ceroid lipofuscinosis, has recently been associated with late-onset, non-syndromic retinal dystrophy."
+      },
+      "numbers": [
+        {
+          "metric": "years without developing neurological symptoms",
+          "value": 20
+        }
+      ]
+    }
+  ]
+}
+```

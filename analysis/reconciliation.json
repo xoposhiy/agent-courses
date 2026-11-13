@@ -1,0 +1,1450 @@
+{
+  "dictionary_updates": [
+    {
+      "concept_id": "embeddings",
+      "fields": {
+        "aliases": [
+          "dense retrieval",
+          "vector search"
+        ],
+        "related_terms": [
+          "DPR"
+        ]
+      }
+    },
+    {
+      "concept_id": "sparse-retrieval",
+      "fields": {
+        "aliases": [
+          "lexical retrieval"
+        ],
+        "related_terms": [
+          "BM25"
+        ]
+      }
+    },
+    {
+      "concept_id": "hybrid-search",
+      "fields": {
+        "aliases": [
+          "hybrid search"
+        ],
+        "related_terms": [
+          "reciprocal rank fusion"
+        ]
+      }
+    },
+    {
+      "concept_id": "reranking",
+      "fields": {
+        "aliases": [
+          "cross-encoder reranking"
+        ],
+        "related_terms": [
+          "ColBERT"
+        ]
+      }
+    },
+    {
+      "concept_id": "agentic-rag",
+      "fields": {
+        "aliases": [
+          "agentic RAG"
+        ],
+        "related_terms": [
+          "corrective RAG"
+        ]
+      }
+    },
+    {
+      "concept_id": "context-offload",
+      "fields": {
+        "aliases": [
+          "memory offloading",
+          "context offloading to files"
+        ],
+        "related_terms": [
+          "memory offloading"
+        ]
+      }
+    },
+    {
+      "concept_id": "tiered-memory",
+      "fields": {
+        "aliases": [
+          "memory hierarchy"
+        ],
+        "related_terms": [
+          "MemGPT"
+        ]
+      }
+    },
+    {
+      "concept_id": "shared-memory",
+      "fields": {
+        "aliases": [],
+        "related_terms": [
+          "task ledger",
+          "message board"
+        ]
+      }
+    },
+    {
+      "concept_id": "data-curation",
+      "fields": {
+        "aliases": [],
+        "related_terms": [
+          "data selection",
+          "data quality"
+        ]
+      }
+    },
+    {
+      "concept_id": "reliability",
+      "fields": {
+        "aliases": [
+          "nondeterminism"
+        ],
+        "related_terms": [
+          "pass@k",
+          "pass^k"
+        ]
+      }
+    },
+    {
+      "concept_id": "tokenization",
+      "fields": {
+        "aliases": [],
+        "related_terms": [
+          "BPE",
+          "byte pair encoding"
+        ]
+      }
+    },
+    {
+      "concept_id": "verification",
+      "fields": {
+        "aliases": [
+          "self-verification"
+        ],
+        "related_terms": [
+          "chain of verification"
+        ]
+      }
+    },
+    {
+      "concept_id": "lora",
+      "fields": {
+        "aliases": [
+          "LoRA"
+        ],
+        "related_terms": [
+          "parameter-efficient fine-tuning (PEFT)"
+        ]
+      }
+    },
+    {
+      "concept_id": "threat-modeling",
+      "fields": {
+        "aliases": [],
+        "related_terms": [
+          "threat modeling",
+          "least privilege"
+        ]
+      }
+    },
+    {
+      "concept_id": "rl-credit",
+      "fields": {
+        "aliases": [
+          "advantage estimation"
+        ],
+        "related_terms": [
+          "GAE"
+        ]
+      }
+    },
+    {
+      "concept_id": "rl-policy-gradient",
+      "fields": {
+        "aliases": [
+          "policy gradients"
+        ],
+        "related_terms": [
+          "REINFORCE"
+        ]
+      }
+    },
+    {
+      "concept_id": "model-selection",
+      "fields": {
+        "aliases": [
+          "model selection"
+        ],
+        "related_terms": [
+          "model providers"
+        ]
+      }
+    },
+    {
+      "concept_id": "auth",
+      "fields": {
+        "aliases": [],
+        "related_terms": [
+          "OAuth",
+          "credential brokering"
+        ]
+      }
+    },
+    {
+      "concept_id": "managed-agents",
+      "fields": {
+        "aliases": [],
+        "related_terms": [
+          "Managed Deep Agents",
+          "MDA"
+        ]
+      }
+    },
+    {
+      "concept_id": "provenance",
+      "fields": {
+        "aliases": [
+          "data provenance",
+          "decision rationale"
+        ],
+        "related_terms": [
+          "accountability",
+          "faithful rationale"
+        ]
+      }
+    },
+    {
+      "concept_id": "smt",
+      "fields": {
+        "aliases": [
+          "satisfiability modulo theories"
+        ],
+        "related_terms": [
+          "MaxSMT"
+        ]
+      }
+    },
+    {
+      "concept_id": "constraint-retrieval",
+      "fields": {
+        "aliases": [
+          "satisfiability-based retrieval"
+        ],
+        "related_terms": [
+          "SatIR"
+        ]
+      }
+    },
+    {
+      "concept_id": "semantic-parsing",
+      "fields": {
+        "aliases": [],
+        "related_terms": [
+          "text-to-SQL",
+          "text-to-SPARQL",
+          "NL-to-SMT"
+        ]
+      }
+    },
+    {
+      "concept_id": "imputation",
+      "fields": {
+        "aliases": [
+          "data imputation"
+        ],
+        "related_terms": [
+          "salience-based imputation"
+        ]
+      }
+    },
+    {
+      "concept_id": "hybrid-data",
+      "fields": {
+        "aliases": [
+          "hybrid data queries"
+        ],
+        "related_terms": [
+          "SUQL"
+        ]
+      }
+    },
+    {
+      "concept_id": "declarative-agents",
+      "fields": {
+        "aliases": [
+          "task-oriented dialogue"
+        ],
+        "related_terms": [
+          "Genie Worksheets"
+        ]
+      }
+    },
+    {
+      "concept_id": "structured-research",
+      "fields": {
+        "aliases": [
+          "data-driven deep research"
+        ],
+        "related_terms": [
+          "DataSTORM"
+        ]
+      }
+    },
+    {
+      "concept_id": "research-reproduction",
+      "fields": {
+        "aliases": [
+          "scientific reproducibility"
+        ],
+        "related_terms": [
+          "SEER-Repro"
+        ]
+      }
+    },
+    {
+      "concept_id": "document-transcription",
+      "fields": {
+        "aliases": [
+          "document transcription"
+        ],
+        "related_terms": [
+          "OCR",
+          "CHURRO"
+        ]
+      }
+    },
+    {
+      "concept_id": "production-eval",
+      "fields": {
+        "aliases": [
+          "production evals"
+        ],
+        "related_terms": [
+          "data flywheel"
+        ]
+      }
+    },
+    {
+      "concept_id": "evaluator-metrics",
+      "fields": {
+        "aliases": [
+          "judge precision and recall"
+        ],
+        "related_terms": [
+          "Cohen kappa"
+        ]
+      }
+    },
+    {
+      "concept_id": "self-play",
+      "fields": {
+        "aliases": [
+          "self play"
+        ],
+        "related_terms": [
+          "self-play SWE-RL"
+        ]
+      }
+    },
+    {
+      "concept_id": "scientific-workflows",
+      "fields": {
+        "aliases": [],
+        "related_terms": [
+          "MDCrow",
+          "molecular dynamics agents"
+        ]
+      }
+    },
+    {
+      "concept_id": "scaling-laws",
+      "fields": {
+        "aliases": [
+          "compute-optimal scaling"
+        ],
+        "related_terms": [
+          "Chinchilla scaling"
+        ]
+      }
+    },
+    {
+      "concept_id": "bdi",
+      "fields": {
+        "aliases": [],
+        "related_terms": [
+          "BDI agents"
+        ]
+      }
+    },
+    {
+      "concept_id": "game-agents",
+      "fields": {
+        "aliases": [
+          "game-playing agents"
+        ],
+        "related_terms": [
+          "BALROG"
+        ]
+      }
+    },
+    {
+      "concept_id": "recursive-agents",
+      "fields": {
+        "aliases": [
+          "recursive agents"
+        ],
+        "related_terms": [
+          "hyperagents"
+        ]
+      }
+    },
+    {
+      "concept_id": "circuits",
+      "fields": {
+        "aliases": [
+          "circuit discovery"
+        ],
+        "related_terms": [
+          "induction heads"
+        ]
+      }
+    },
+    {
+      "concept_id": "cognitive-perspectives",
+      "fields": {
+        "aliases": [],
+        "related_terms": [
+          "cognitive perspectives"
+        ]
+      }
+    },
+    {
+      "concept_id": "dpo",
+      "fields": {
+        "parent_id": "model-training"
+      }
+    },
+    {
+      "concept_id": "harness-optimization",
+      "fields": {
+        "aliases": [
+          "harness search"
+        ],
+        "related_terms": [
+          "recursive agent harnessing"
+        ]
+      }
+    },
+    {
+      "concept_id": "social-behavior",
+      "fields": {
+        "aliases": [
+          "strategic interaction"
+        ],
+        "related_terms": [
+          "social dilemmas"
+        ]
+      }
+    },
+    {
+      "concept_id": "rl-exploration",
+      "fields": {
+        "aliases": [],
+        "related_terms": [
+          "exploration collapse",
+          "curriculum learning"
+        ]
+      }
+    },
+    {
+      "concept_id": "persona",
+      "fields": {
+        "aliases": [
+          "persona agents",
+          "style control"
+        ]
+      }
+    },
+    {
+      "concept_id": "model-based-rl",
+      "fields": {
+        "aliases": [
+          "model based RL"
+        ]
+      }
+    }
+  ],
+  "coverage_updates": [
+    {
+      "source_id": "stanford-cs329z",
+      "concept_id": "beam-search",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture02.md",
+          "needle": "Beam Search"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs329z",
+      "concept_id": "rlhf",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture02.md",
+          "needle": "Learning from Human Preferences"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs329z",
+      "concept_id": "long-context",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture02.md",
+          "needle": "Full Softmax Attention vs Linear Attention"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs329z",
+      "concept_id": "kv-cache",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture02.md",
+          "needle": "Avoid invalidating the KV Cache"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs329z",
+      "concept_id": "speculative-decoding",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture02.md",
+          "needle": "Speculative Decoding"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs329z",
+      "concept_id": "serving",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture02.md",
+          "needle": "Prefill and Decode"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs329z",
+      "concept_id": "multi-agent-debate",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture01.md",
+          "needle": "Multi-agent debate to improve reasoning"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs329z",
+      "concept_id": "reward-model",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture09.md",
+          "needle": "Also “Reward Model”"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs329z",
+      "concept_id": "cost-quality",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture09.md",
+          "needle": "Lower cost and latency"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs329z",
+      "concept_id": "harness-optimization",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture09.md",
+          "needle": "Meta-Harness"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs329z",
+      "concept_id": "recursive-agents",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture09.md",
+          "needle": "parent modifies itself"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs329z",
+      "concept_id": "user-simulation",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture11.md",
+          "needle": "An LLM can stand in for the user"
+        }
+      ]
+    },
+    {
+      "source_id": "columbia-coms4995",
+      "concept_id": "long-context",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/week4.md",
+          "needle": "Non-robust in long context"
+        }
+      ]
+    },
+    {
+      "source_id": "columbia-coms4995",
+      "concept_id": "error-analysis",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/week7.md",
+          "needle": "Common tool failure modes"
+        }
+      ]
+    },
+    {
+      "source_id": "columbia-coms4995",
+      "concept_id": "cost-quality",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/week7.md",
+          "needle": "Latency"
+        }
+      ]
+    },
+    {
+      "source_id": "columbia-coms4995",
+      "concept_id": "code-grader",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/assignments/hw2.md",
+          "needle": "Check each extraction against the schema"
+        }
+      ]
+    },
+    {
+      "source_id": "columbia-coms4995",
+      "concept_id": "semantic-memory",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/assignments/hw2.md",
+          "needle": "facts"
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "prompt-optimization",
+      "action": "remove",
+      "reason": "The cited passage is harness search, which is distinct from prompt optimization."
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "harness-optimization",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-20-search-basics.md",
+          "needle": "Harness search"
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "reward-model",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-20-search-basics.md",
+          "needle": "Use a reward model"
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "context-offload",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-03-long-context.md",
+          "needle": "Evidence store"
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "prompting",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-03-long-context.md",
+          "needle": "Prompt design for cache reuse"
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "reflexion",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-04-memory-and-skills.md",
+          "needle": "GENERATED FEEDBACK"
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "few-shot",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-04-memory-and-skills.md",
+          "needle": "include them as few-shot"
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "langgraph",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-15-orchestration-and-monitoring.md",
+          "needle": "LangGraph connects functions"
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "error-analysis",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-15-orchestration-and-monitoring.md",
+          "needle": "Failure mode synthesis"
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "programmatic-tools",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-02-tool-use.md",
+          "needle": "Programmatic tool calling"
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "auth",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-02-tool-use.md",
+          "needle": "production deployments should verify JWTs"
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "deployment",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-14-openhands.md",
+          "needle": "Agent Server inside Docker"
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "vlm",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-07-computer-use-agents.md",
+          "needle": "A VLM predicts actions"
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "outcome-eval",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-07-computer-use-agents.md",
+          "needle": "end-state checks"
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "knowledge-curation",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-10-deep-research-agents.md",
+          "needle": "Deep research combines many searches with evidence synthesis."
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "speculative-decoding",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-12-rl-systems.md",
+          "needle": "Inference Optimizations: Speculative Decoding"
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "world-models",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-06-coding-agents.md",
+          "needle": "Building and using simulators"
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "cost-quality",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-06-coding-agents.md",
+          "needle": "Compare task success AND total latency"
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "refactoring",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-06-coding-agents.md",
+          "needle": "The localize–edit–verify loop"
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "emergent-norms",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-18-multi-agent-systems.md",
+          "needle": "Conventions and emergent communication"
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "social-simulation",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-18-multi-agent-systems.md",
+          "needle": "Simulating a town of generative agents"
+        }
+      ]
+    },
+    {
+      "source_id": "cmu-11768",
+      "concept_id": "social-behavior",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/lecture-18-multi-agent-systems.md",
+          "needle": "Simulating an agentic marketplace"
+        }
+      ]
+    },
+    {
+      "source_id": "langchain-deep-agents",
+      "concept_id": "long-context",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/lessons/m4.3-dynamic-subagents.md",
+          "needle": "Core insight:"
+        }
+      ]
+    },
+    {
+      "source_id": "langchain-deep-agents",
+      "concept_id": "recursive-agents",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/lessons/m4.3-dynamic-subagents.md",
+          "needle": "recursive agents (RA)"
+        }
+      ]
+    },
+    {
+      "source_id": "langchain-deep-agents",
+      "concept_id": "evaluation",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/lessons/m4.3-dynamic-subagents.md",
+          "needle": "The OOLONG benchmark"
+        }
+      ]
+    },
+    {
+      "source_id": "langchain-deep-agents",
+      "concept_id": "db-query",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/lessons/m2.4-interpreter.md",
+          "needle": "Chinook"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs224v",
+      "concept_id": "compaction",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/i-deepresearch.md",
+          "needle": "Summarize old turns; keep going"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs224v",
+      "concept_id": "memory",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/i-deepresearch.md",
+          "needle": "Memory: an outline plus a reference pool"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs224v",
+      "concept_id": "context-isolation",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/i-deepresearch.md",
+          "needle": "Explore in a fresh window; return a summary"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs224v",
+      "concept_id": "llm-judge",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/i-deepresearch.md",
+          "needle": "Start with about 20 real queries and an LLM judge"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs224v",
+      "concept_id": "rubrics",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/i-deepresearch.md",
+          "needle": "with a rubric; humans catch what it misses."
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs224v",
+      "concept_id": "judge-validation",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/i-deepresearch.md",
+          "needle": "with a rubric; humans catch what it misses."
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs224v",
+      "concept_id": "user-simulation",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/i-deepresearch.md",
+          "needle": "with simulated or real"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs224v",
+      "concept_id": "work-impact",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/i-deepresearch.md",
+          "needle": "What do workers actually want agents to do?"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs224v",
+      "concept_id": "error-analysis",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/i-deepresearch.md",
+          "needle": "Top failure modes: communication"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs224v",
+      "concept_id": "multi-agent-failures",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/i-deepresearch.md",
+          "needle": "Top failure modes: communication"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs224v",
+      "concept_id": "personalization",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/i-deepresearch.md",
+          "needle": "real users’ goals"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs224v",
+      "concept_id": "embeddings",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/l-freetext.md",
+          "needle": "Similarity score between"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs224v",
+      "concept_id": "sparse-retrieval",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/l-freetext.md",
+          "needle": "dense, multi-vector and sparse retrieval"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs224v",
+      "concept_id": "reranking",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/l-freetext.md",
+          "needle": "ColBERT Information Retrieval"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs224v",
+      "concept_id": "verification",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/l-freetext.md",
+          "needle": "Fact-Checking an LLM Response"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs224v",
+      "concept_id": "hitl",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/l-smt-match.md",
+          "needle": "We need human-in-the-loop"
+        }
+      ]
+    },
+    {
+      "source_id": "stanford-cs224v",
+      "concept_id": "deep-research",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/assignments/cs224v-2026-hw1.md",
+          "needle": "Agentic Literature Research for Rare-Disease Diagnosis"
+        }
+      ]
+    },
+    {
+      "source_id": "dlai-agentic-evals",
+      "concept_id": "routing",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/slides/module-5.md",
+          "needle": "Routing instruction"
+        }
+      ]
+    },
+    {
+      "source_id": "colorado-csci7000",
+      "concept_id": "rag",
+      "action": "set",
+      "coverage": "assigned",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/readings/arxiv-2409-02977.md",
+          "needle": "Including the retrieved resources"
+        }
+      ]
+    },
+    {
+      "source_id": "colorado-csci7000",
+      "concept_id": "cot",
+      "action": "set",
+      "coverage": "assigned",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/readings/arxiv-2409-02977.md",
+          "needle": "Chain-of-thought (CoT)"
+        }
+      ]
+    },
+    {
+      "source_id": "colorado-csci7000",
+      "concept_id": "self-consistency",
+      "action": "set",
+      "coverage": "assigned",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/readings/arxiv-2409-02977.md",
+          "needle": "such as self-consistency"
+        }
+      ]
+    },
+    {
+      "source_id": "colorado-csci7000",
+      "concept_id": "shared-memory",
+      "action": "set",
+      "coverage": "assigned",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/readings/arxiv-2308-00352.md",
+          "needle": "shared message"
+        }
+      ]
+    },
+    {
+      "source_id": "colorado-csci7000",
+      "concept_id": "context-engineering",
+      "action": "set",
+      "coverage": "assigned",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/readings/arxiv-2308-11432.md",
+          "needle": "memory operation"
+        }
+      ]
+    },
+    {
+      "source_id": "agentic-large-language-models",
+      "concept_id": "auth",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Cross-course review found available teaching evidence for a concept registered later.",
+      "evidence": [
+        {
+          "source": "markdown/chapters/chapter-11-how-agents-use-tools-to-act-in-the-world.md",
+          "needle": "message framing, and authorization."
+        }
+      ]
+    },
+    {
+      "source_id": "columbia-coms4995",
+      "concept_id": "tiered-memory",
+      "action": "remove",
+      "reason": "A list of storage backends does not establish a managed tiered-memory architecture."
+    },
+    {
+      "source_id": "columbia-coms4995",
+      "concept_id": "trajectory-eval",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Lecture evaluates the action sequence and the actual task result separately.",
+      "evidence": [
+        {
+          "source": "markdown/slides/week7.md",
+          "needle": "Wrong tool → error → retry"
+        }
+      ]
+    },
+    {
+      "source_id": "columbia-coms4995",
+      "concept_id": "outcome-eval",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Lecture evaluates the action sequence and the actual task result separately.",
+      "evidence": [
+        {
+          "source": "markdown/slides/week7.md",
+          "needle": "Did the user actually get"
+        }
+      ]
+    },
+    {
+      "source_id": "agentic-large-language-models",
+      "concept_id": "self-consistency",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Use the chapter explanation rather than a matching bibliography title.",
+      "evidence": [
+        {
+          "source": "markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+          "needle": "Self consistency is an ensemble approach"
+        }
+      ]
+    },
+    {
+      "source_id": "agentic-large-language-models",
+      "concept_id": "tree-thoughts",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Use the chapter explanation rather than a matching bibliography title.",
+      "evidence": [
+        {
+          "source": "markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+          "needle": "Tree of Thoughts"
+        }
+      ]
+    },
+    {
+      "source_id": "agentic-large-language-models",
+      "concept_id": "code-grader",
+      "action": "set",
+      "coverage": "taught",
+      "reason": "Use the chapter explanation rather than a matching bibliography title.",
+      "evidence": [
+        {
+          "source": "markdown/chapters/chapter-06-multi-step-reasoning-in-llms.md",
+          "needle": "Code Generation for Validation"
+        }
+      ]
+    }
+  ],
+  "rejected_match_examples": [
+    {
+      "match": "catastrophic forgetting",
+      "decision": "Do not count agent memory maintenance from model-training forgetting."
+    },
+    {
+      "match": "introspection calls",
+      "decision": "Do not count runtime introspection as cognitive metacognition."
+    },
+    {
+      "match": "The Future of Work",
+      "decision": "Do not count a research example title as a lesson on work impact; use the actual WORKBANK discussion instead."
+    },
+    {
+      "match": "language modeling in conference names",
+      "decision": "Do not count conference titles as teaching language-model foundations."
+    },
+    {
+      "match": "text-to-SQL in a reference link",
+      "decision": "Do not count a linked example alone as semantic parsing instruction."
+    },
+    {
+      "match": "LoRA in a model-stack overview",
+      "decision": "Do not count the overview label as LoRA instruction."
+    },
+    {
+      "match": "MCP downstream failures on a schedule",
+      "decision": "Keep schedule-only evidence outside the confirmed count when the assigned paper is unavailable."
+    }
+  ]
+}

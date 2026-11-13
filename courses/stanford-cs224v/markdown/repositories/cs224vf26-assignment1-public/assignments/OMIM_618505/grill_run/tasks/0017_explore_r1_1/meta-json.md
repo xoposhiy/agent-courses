@@ -1,0 +1,105 @@
+# Homework 1 public teaching repository: assignments/OMIM_618505/grill_run/tasks/0017_explore_r1_1/meta.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_618505/grill_run/tasks/0017_explore_r1_1/meta.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_618505/grill_run/tasks/0017_explore_r1_1/meta.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "mode": "research",
+  "model": "gemini-3.8-flash",
+  "executor": "direct",
+  "queries": [
+    "\"KDM6B\" \"Stolerman\" \"fingertip pads\" \"palpebral\"",
+    "KDM6B neurodevelopmental disorder Rots clinical phenotype cohort findings"
+  ],
+  "n_hits": 10,
+  "hits": [
+    {
+      "id": "10.1111/cge.14181",
+      "title": "Disorders of histone methylation: molecular basis and clinical syndromes",
+      "pmid": null,
+      "doi": "10.1111/cge.14181",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/cge.14181",
+      "abstract_chars": 1082
+    },
+    {
+      "id": "10.1186/s40246-025-00734-9",
+      "title": "Molecular and clinical aspects of histone-related disorders",
+      "pmid": null,
+      "doi": "10.1186/s40246-025-00734-9",
+      "url": "https://link.springer.com/article/10.1186/s40246-025-00734-9",
+      "abstract_chars": 1820
+    },
+    {
+      "id": "https://www.cell.com/ajhg/fulltext/S0002-9297(23)00132-5",
+      "title": "The clinical and molecular spectrum of the KDM6B-related neurodevelopmental disorder",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.cell.com/ajhg/fulltext/S0002-9297(23)00132-5",
+      "abstract_chars": 0
+    },
+    {
+      "id": "10.1002/ajmg.a.61173",
+      "title": "Genetic variants in the KDM6B gene are associated with neurodevelopmental delays and dysmorphic features",
+      "pmid": null,
+      "doi": "10.1002/ajmg.a.61173",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ajmg.a.61173",
+      "abstract_chars": 699
+    },
+    {
+      "id": "https://www.mdpi.com/2227-9059/12/12/2736",
+      "title": "Genetic Heterogeneity in Four Probands Reveals HGSNAT, KDM6B, LMNA and WFS1 Related Neurodevelopmental Disorders",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.mdpi.com/2227-9059/12/12/2736",
+      "abstract_chars": 1712
+    },
+    {
+      "id": "https://www.sciencedirect.com/science/article/pii/S217350502200019X",
+      "title": "The KDM6B mutation: Phenotype and clinical characteristics\u2014Report of a case",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.sciencedirect.com/science/article/pii/S217350502200019X",
+      "abstract_chars": 1633
+    },
+    {
+      "id": "PMC10257005",
+      "title": "The clinical and molecular spectrum of the KDM6B-related ...",
+      "pmid": null,
+      "doi": null,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10257005/",
+      "abstract_chars": 0
+    },
+    {
+      "id": "https://cris.maastrichtuniversity.nl/en/publications/the-clinical-and-molecular-spectrum-of-the-kdm6b-related-neurodev/",
+      "title": "The clinical and molecular spectrum of the KDM6B-related ...",
+      "pmid": null,
+      "doi": null,
+      "url": "https://cris.maastrichtuniversity.nl/en/publications/the-clinical-and-molecular-spectrum-of-the-kdm6b-related-neurodev/",
+      "abstract_chars": 0
+    },
+    {
+      "id": "https://www.simonssearchlight.org/gene-guide/kdm6b/",
+      "title": "KDM6B-Related Syndrome",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.simonssearchlight.org/gene-guide/kdm6b/",
+      "abstract_chars": 0
+    },
+    {
+      "id": "https://www.baylorgenetics.com/publication/the-clinical-and-molecular-spectrum-of-the-kdm6b-related-neurodevelopmental-disorder/?print=print",
+      "title": "The clinical and molecular spectrum of the KDM6B-related ...",
+      "pmid": null,
+      "doi": null,
+      "url": "https://www.baylorgenetics.com/publication/the-clinical-and-molecular-spectrum-of-the-kdm6b-related-neurodevelopmental-disorder/?print=print",
+      "abstract_chars": 0
+    }
+  ],
+  "input_tokens": 6328,
+  "output_tokens": 5233,
+  "usd": 0.01886,
+  "seconds": 23.8,
+  "ok": true
+}
+```

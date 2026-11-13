@@ -1,0 +1,32 @@
+# Local collection and review state
+/.cache/
+/.playwright-cli/
+/.review/
+/tmp/
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Installed JavaScript dependencies
+node_modules/
+
+# Local credentials
+.env
+.env.local
+.env.*.local
+
+# Editor and operating system files
+/.idea/
+/.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini

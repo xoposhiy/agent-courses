@@ -1,0 +1,73 @@
+# Homework 1 public teaching repository: assignments/OMIM_621548/grill_run/tasks/0035_screen_h14/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_621548/grill_run/tasks/0035_screen_h14/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_621548/grill_run/tasks/0035_screen_h14/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "plausible": true,
+  "note": "Literature confirms dark-adapted ERG in CLN3 disease presents as either electronegative or absent/extinguished, so a composite criterion is necessary to avoid missing extinguished cases.",
+  "confidence": 0.9,
+  "evidence": [
+    {
+      "text": "In CLN3 disease, dark-adapted full-field ERG responses were either absent or electronegative, whereas dark-adapted ERG responses in early-onset STGD1 were generally unaffected and none had an electronegative ERG.",
+      "stance": "supports",
+      "source": {
+        "title": "Recognizing differentiating clinical signs of CLN3 disease (Batten disease) at presentation",
+        "authors": [
+          "WFE Kuper",
+          "HE Talsma"
+        ],
+        "year": 2021,
+        "journal": null,
+        "doi": "10.1111/aos.14630",
+        "pmid": null,
+        "pmc": null,
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/aos.14630",
+        "quote": "In CLN3 disease, dark-adapted (DA) full-field electroretinogram (ERG) responses were either absent or electronegative. In early-onset STGD1, DA ERG responses were generally unaffected. None of the STGD1 patients had an electronegative ERG."
+      },
+      "numbers": [
+        {
+          "metric": "CLN3 cohort size",
+          "value": 18
+        },
+        {
+          "metric": "STGD1 cohort size",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "text": "In juvenile CLN3 disease, electronegative ERG was present in 4 of 8 patients (50%), while the remaining 4 patients had an undetectable ERG due to additional a-wave reduction.",
+      "stance": "supports",
+      "source": {
+        "title": "Juvenile Batten disease (CLN3): detailed ocular phenotype, novel observations, delayed diagnosis, masquerades, and prospects for therapy",
+        "authors": [
+          "GA Wright",
+          "M Georgiou",
+          "AG Robson",
+          "N Ali"
+        ],
+        "year": 2020,
+        "journal": null,
+        "doi": null,
+        "pmid": null,
+        "pmc": null,
+        "url": "https://www.sciencedirect.com/science/article/pii/S2468653019306293",
+        "quote": "An electronegative ERG was present in 4 patients (50%), but with additional a-wave reduction, there was an undetectable ERG in the remaining 4 patients."
+      },
+      "numbers": [
+        {
+          "metric": "electronegative ERG frequency",
+          "value": "4/8"
+        },
+        {
+          "metric": "undetectable ERG frequency",
+          "value": "4/8"
+        }
+      ]
+    }
+  ]
+}
+```

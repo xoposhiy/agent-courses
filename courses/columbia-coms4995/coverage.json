@@ -1,0 +1,23 @@
+{
+  "scope": "All links on the current course home, syllabus, three homework pages, and final-project page. Staff personal/contact links excluded.",
+  "discovered_links": 42,
+  "excluded_links": [
+    {
+      "url": "https://shreyahavaldar.com/",
+      "label": "Shreya Havaldar",
+      "linked_from": [
+        "https://designing-agents.github.io/"
+      ],
+      "reason": "Staff biography or contact link"
+    },
+    {
+      "url": "https://www.linkedin.com/in/aadityabarve",
+      "label": "Aaditya Barve",
+      "linked_from": [
+        "https://designing-agents.github.io/"
+      ],
+      "reason": "Staff biography or contact link"
+    }
+  ],
+  "missing_links": []
+}

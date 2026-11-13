@@ -1,0 +1,26 @@
+# Homework 1 public teaching repository: assignments/OMIM_618443/grill_run/tasks/0006_ground_3/out.json
+
+[Course index](../../../../../../../../README.md) · [Original source](https://github.com/stanford-oval/cs224vf26-assignment1-public/blob/HEAD/assignments/OMIM_618443/grill_run/tasks/0006_ground_3/out.json) · [Raw file](../../../../../../../../raw/repositories/cs224vf26-assignment1-public/assignments/OMIM_618443/grill_run/tasks/0006_ground_3/out.json)
+
+Retrieved: 2026-11-13T16:58:36.902200+00:00
+
+```json
+{
+  "term": "Corpus callosum hypoplasia",
+  "definition": "A congenital brain structural abnormality characterized by underdevelopment or reduced volume/thickness of the corpus callosum, annotated in standardized clinical phenotyping under Human Phenotype Ontology (HPO) code HP:0002079 and frequently observed via neuroimaging in individuals with neurodevelopmental disorders.",
+  "source": {
+    "title": "PhenoExam: gene set analyses through integration of different phenotype databases",
+    "authors": [
+      "A Cisterna",
+      "A Gonz\u00e1lez"
+    ],
+    "year": 2022,
+    "journal": null,
+    "doi": "10.1186/s12859-022-05122-x",
+    "pmid": "36587217",
+    "pmc": null,
+    "url": "https://link.springer.com/article/10.1186/s12859-022-05122-x",
+    "quote": "We also found Hypoplasia of the corpus callosum (HP: 0002079; P< 3.56 \u00d7 10\u22125), a \u2026 for phenotypic similarity measure and enrichment analysis based on the human phenotype ontology\u2026"
+  }
+}
+```

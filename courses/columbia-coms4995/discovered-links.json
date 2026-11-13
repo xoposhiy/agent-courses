@@ -1,0 +1,300 @@
+[
+  {
+    "url": "https://designing-agents.github.io/syllabus.html",
+    "label": "Syllabus",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://courseworks2.columbia.edu/courses/258235",
+    "label": "Courseworks",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/assets/lecture_slides/week1.pdf",
+    "label": "[slides]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/assets/lecture_slides/week2.pdf",
+    "label": "[slides]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/activities/gradient_descent.py",
+    "label": "[gradient_descent.py]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/activities/gradient_descent_solutions.py",
+    "label": "[solutions]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/HW1.html",
+    "label": "HW 1 Released",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/assets/lecture_slides/week3.pdf",
+    "label": "[slides]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/activities/beam_search.py",
+    "label": "[beam_search.py]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/activities/beam_search_solutions.py",
+    "label": "[solutions]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/assets/lecture_slides/week4.pdf",
+    "label": "[slides]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/activities/autoprompting.py",
+    "label": "[autoprompting.py]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/activities/autoprompting_solutions.py",
+    "label": "[solutions]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/activities/gemini.py",
+    "label": "[gemini.py]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/HW2.html",
+    "label": "HW 2 Released",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/assets/lecture_slides/week5.pdf",
+    "label": "[slides]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/activities/reward_model.py",
+    "label": "[reward_model.py]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/activities/reward_model_solutions.py",
+    "label": "[solutions]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/assets/lecture_slides/week6.pdf",
+    "label": "[slides]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/activities/planning.py",
+    "label": "[planning.py]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/activities/planning_answers.py",
+    "label": "[solutions]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/HW3.html",
+    "label": "HW 3 Released",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/assets/lecture_slides/week7.pdf",
+    "label": "[slides]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/activities/web_search.py",
+    "label": "[web_search.py]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/activities/web_search_solutions.py",
+    "label": "[solutions]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/assets/lecture_slides/week9.pdf",
+    "label": "[slides]",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/project.html",
+    "label": "Final Project Released",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://shreyahavaldar.com/",
+    "label": "Shreya Havaldar",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://www.linkedin.com/in/aadityabarve",
+    "label": "Aaditya Barve",
+    "linked_from": [
+      "https://designing-agents.github.io/"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/index.html",
+    "label": "\u2190 Back to Course Home",
+    "linked_from": [
+      "https://designing-agents.github.io/syllabus.html",
+      "https://designing-agents.github.io/HW1.html",
+      "https://designing-agents.github.io/HW2.html",
+      "https://designing-agents.github.io/HW3.html",
+      "https://designing-agents.github.io/project.html"
+    ]
+  },
+  {
+    "url": "https://www.cs.columbia.edu/academic/academic-honesty/",
+    "label": "Principles of Academic Honesty",
+    "linked_from": [
+      "https://designing-agents.github.io/syllabus.html"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/assets/HW1.zip",
+    "label": "Download HW1.zip",
+    "linked_from": [
+      "https://designing-agents.github.io/HW1.html"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/assets/HW2.zip",
+    "label": "Download HW2.zip",
+    "linked_from": [
+      "https://designing-agents.github.io/HW2.html"
+    ]
+  },
+  {
+    "url": "https://ai.google.dev/gemini-api/docs/api-key",
+    "label": "Google AI Studio",
+    "linked_from": [
+      "https://designing-agents.github.io/HW2.html"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/assets/celebrity_agent.zip",
+    "label": "Download celebrity_agent.zip",
+    "linked_from": [
+      "https://designing-agents.github.io/HW3.html"
+    ]
+  },
+  {
+    "url": "https://react.dev",
+    "label": "React",
+    "linked_from": [
+      "https://designing-agents.github.io/HW3.html"
+    ]
+  },
+  {
+    "url": "https://vuejs.org",
+    "label": "Vue",
+    "linked_from": [
+      "https://designing-agents.github.io/HW3.html"
+    ]
+  },
+  {
+    "url": "https://svelte.dev",
+    "label": "Svelte",
+    "linked_from": [
+      "https://designing-agents.github.io/HW3.html"
+    ]
+  },
+  {
+    "url": "https://fastapi.tiangolo.com",
+    "label": "FastAPI",
+    "linked_from": [
+      "https://designing-agents.github.io/HW3.html"
+    ]
+  },
+  {
+    "url": "https://flask.palletsprojects.com",
+    "label": "Flask",
+    "linked_from": [
+      "https://designing-agents.github.io/HW3.html"
+    ]
+  },
+  {
+    "url": "https://openrouter.ai/",
+    "label": "OpenRouter",
+    "linked_from": [
+      "https://designing-agents.github.io/project.html"
+    ]
+  },
+  {
+    "url": "https://designing-agents.github.io/assets/openrouter_example.py",
+    "label": "Download example code",
+    "linked_from": [
+      "https://designing-agents.github.io/project.html"
+    ]
+  }
+]

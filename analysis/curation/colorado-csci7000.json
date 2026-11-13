@@ -1,0 +1,373 @@
+{
+  "source_id": "colorado-csci7000",
+  "summary": "A graduate seminar on agentic software engineering. The main evidence is the assigned research literature, supported by one introduction deck and project instructions. It emphasizes tool use, coding agents, multi-agent work, safety, harness improvement, and the limits of benchmarks.",
+  "limitations": [
+    "Only the introductory slide deck is archived. Most substantive topics are marked assigned, not taught from lecture evidence.",
+    "The MCP downstream-failure paper and the agentic-refactoring paper are unavailable. Their scheduled topics are not counted as confirmed from those papers.",
+    "Survey readings support broad architecture topics. Their bibliographies do not establish additional course coverage.",
+    "The Kiro IDE sessions occur after the archive date and have no teaching materials in the archive."
+  ],
+  "new_concepts": [
+    {
+      "id": "self-play",
+      "label": "Self-play training",
+      "kind": "method",
+      "definition": "Generate training challenges through interaction between agents or roles and learn from the resulting tasks.",
+      "aliases": [
+        "self-play SWE-RL",
+        "self play"
+      ],
+      "parent_id": "rl"
+    },
+    {
+      "id": "harness-optimization",
+      "label": "Automatic harness improvement",
+      "kind": "method",
+      "definition": "Search or revise agent runtime instructions and structure using measured feedback.",
+      "aliases": [
+        "recursive agent harnessing",
+        "harness search"
+      ],
+      "parent_id": "harness"
+    },
+    {
+      "id": "refactoring",
+      "label": "Agentic debugging and refactoring",
+      "kind": "application",
+      "definition": "Use agents to locate bugs or change code structure while preserving required behavior.",
+      "aliases": [
+        "autonomous program improvement",
+        "refactoring agents"
+      ],
+      "parent_id": "coding-agents"
+    },
+    {
+      "id": "scientific-workflows",
+      "label": "Scientific workflow automation",
+      "kind": "application",
+      "definition": "Use agents to configure and run scientific tools or experiments.",
+      "aliases": [
+        "molecular dynamics agents",
+        "MDCrow"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "developer-alignment",
+      "label": "Developer-agent alignment",
+      "kind": "topic",
+      "definition": "Analyze whether an agent follows developer intent, constraints, and expected workflows.",
+      "aliases": [
+        "developer-agent misalignment"
+      ],
+      "parent_id": "human-collaboration"
+    },
+    {
+      "id": "research-methods",
+      "label": "Research design and paper critique",
+      "kind": "topic",
+      "definition": "Form research questions, assess prior work, design experiments, and report evidence.",
+      "aliases": [
+        "paper critique",
+        "research project design"
+      ],
+      "parent_id": null
+    }
+  ],
+  "coverage": [
+    {
+      "concept_id": "agent-architecture",
+      "source": "markdown/slides/w1l1.md",
+      "needle": "A system is agentic if it:",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "workflow-agent",
+      "source": "markdown/slides/w1l1.md",
+      "needle": "Control flow you don\u2019t fully own",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "state",
+      "source": "markdown/slides/w1l1.md",
+      "needle": "State that evolves unpredictably",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "coding-agents",
+      "source": "markdown/slides/w1l1.md",
+      "needle": "Smart coding agent in the IDE",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "refactoring",
+      "source": "markdown/slides/w1l1.md",
+      "needle": "Coordinated Refactoring Agent",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "hitl",
+      "source": "markdown/slides/w1l1.md",
+      "needle": "human in the loop is crucial",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "research-methods",
+      "source": "markdown/pages/page-researchproject.md",
+      "needle": "research",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "memory",
+      "source": "markdown/readings/arxiv-2308-11432.md",
+      "needle": "memory",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "planning",
+      "source": "markdown/readings/arxiv-2308-11432.md",
+      "needle": "planning",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "reasoning",
+      "source": "markdown/readings/arxiv-2308-11432.md",
+      "needle": "reasoning",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "prompting",
+      "source": "markdown/readings/arxiv-2308-11432.md",
+      "needle": "prompt",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "evaluation",
+      "source": "markdown/readings/arxiv-2308-11432.md",
+      "needle": "evaluation strategies",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "rag",
+      "source": "markdown/readings/arxiv-2409-02977.md",
+      "needle": "retrieval",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "reflection",
+      "source": "markdown/readings/arxiv-2308-11432.md",
+      "needle": "reflection",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "context-engineering",
+      "source": "markdown/readings/arxiv-2308-11432.md",
+      "needle": "context",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "react",
+      "source": "markdown/readings/arxiv-2210-03629.md",
+      "needle": "reasoning and acting",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "reflexion",
+      "source": "markdown/readings/arxiv-2303-11366.md",
+      "needle": "verbal reinforcement learning",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "episodic-memory",
+      "source": "markdown/readings/arxiv-2303-11366.md",
+      "needle": "episodic memory",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "tool-use",
+      "source": "markdown/readings/arxiv-2302-04761.md",
+      "needle": "API calls",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "sft",
+      "source": "markdown/readings/arxiv-2302-04761.md",
+      "needle": "finetun",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "tool-discovery",
+      "source": "markdown/readings/arxiv-2305-15334.md",
+      "needle": "retrieval",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "grounding",
+      "source": "markdown/readings/arxiv-2305-15334.md",
+      "needle": "hallucination",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "harness",
+      "source": "markdown/readings/arxiv-2610-14224v1.md",
+      "needle": "execution harnesses",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "frameworks",
+      "source": "markdown/readings/arxiv-2407-16741.md",
+      "needle": "platform",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "sandboxing",
+      "source": "markdown/readings/arxiv-2407-16741.md",
+      "needle": "sandbox",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "multi-agent",
+      "source": "markdown/readings/arxiv-2308-08155.md",
+      "needle": "multi-agent conversation",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "agent-as-tool",
+      "source": "markdown/readings/arxiv-2407-16741.md",
+      "needle": "AgentDelegateAction",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "orchestrator-workers",
+      "source": "markdown/readings/arxiv-2308-00352.md",
+      "needle": "roles",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "shared-memory",
+      "source": "markdown/readings/arxiv-2308-00352.md",
+      "needle": "shared message",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "multi-agent-debate",
+      "source": "markdown/readings/arxiv-2305-14325.md",
+      "needle": "debate",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "verification",
+      "source": "markdown/readings/arxiv-2305-14325.md",
+      "needle": "factual",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "scientific-workflows",
+      "source": "markdown/readings/ref-0cfd55675bb9.md",
+      "needle": "automating molecular dynamics",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "safety",
+      "source": "markdown/readings/arxiv-2605-30777.md",
+      "needle": "operational safety",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "error-analysis",
+      "source": "markdown/readings/arxiv-2605-30777.md",
+      "needle": "safety taxonomy",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "trajectory-eval",
+      "source": "markdown/readings/arxiv-2604-12147.md",
+      "needle": "plan compliance",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "knowledge-curation",
+      "source": "markdown/readings/arxiv-2603-22327.md",
+      "needle": "Systematic literature reviews",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "schema-induction",
+      "source": "markdown/readings/arxiv-2603-22327.md",
+      "needle": "Structured data extraction",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "cost-quality",
+      "source": "markdown/readings/arxiv-2603-22327.md",
+      "needle": "Estimated costs vary",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "human-eval",
+      "source": "markdown/readings/arxiv-2603-22327.md",
+      "needle": "expert annotated dataset",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "harness-optimization",
+      "source": "markdown/readings/arxiv-2610-14224v1.md",
+      "needle": "two connected levels of recursion",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "benchmark-design",
+      "source": "markdown/readings/arxiv-2606-17799.md",
+      "needle": "absence of signal",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "self-play",
+      "source": "markdown/readings/arxiv-2512-18552.md",
+      "needle": "self-play setting",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "rl",
+      "source": "markdown/readings/arxiv-2512-18552.md",
+      "needle": "reinforcement learn",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "synthetic-data",
+      "source": "markdown/readings/arxiv-2512-18552.md",
+      "needle": "inject and repair",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "developer-alignment",
+      "source": "markdown/readings/arxiv-2605-29442.md",
+      "needle": "developer intent",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "human-collaboration",
+      "source": "markdown/readings/arxiv-2605-29442.md",
+      "needle": "correction",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "session-eval",
+      "source": "markdown/readings/arxiv-2605-29442.md",
+      "needle": "adjacent sessions",
+      "coverage": "assigned"
+    },
+    {
+      "concept_id": "mcp",
+      "source": "markdown/pages/page-index.md",
+      "needle": "Downstream Failures in MCP",
+      "coverage": "planned"
+    },
+    {
+      "concept_id": "langgraph",
+      "source": "markdown/pages/page-index.md",
+      "needle": "LangGraph tutorial",
+      "coverage": "planned"
+    }
+  ]
+}

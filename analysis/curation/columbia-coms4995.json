@@ -1,0 +1,671 @@
+{
+  "source_id": "columbia-coms4995",
+  "summary": "A practical introduction that builds from language modeling and decoding to memory, planning, tools, and agent safety. Homework covers data preparation, a small classifier, retrieval, conversation memory, and a grounded persona agent.",
+  "limitations": [
+    "Eight lecture decks and three homework descriptions are available.",
+    "The later vibe-coding session is schedule-only; it is excluded from confirmed frequency.",
+    "Exercise data, solutions, and starter implementations are supporting material rather than separate course occurrences."
+  ],
+  "new_concepts": [
+    {
+      "id": "tokenization",
+      "label": "Tokenization",
+      "kind": "method",
+      "definition": "Convert text to token IDs and back using a defined vocabulary and algorithm.",
+      "aliases": [
+        "BPE",
+        "byte pair encoding"
+      ],
+      "parent_id": "llm-foundations"
+    },
+    {
+      "id": "gradient-training",
+      "label": "Gradient descent and backpropagation",
+      "kind": "method",
+      "definition": "Compute loss gradients and update neural-network weights.",
+      "aliases": [
+        "backpropagation",
+        "gradient descent"
+      ],
+      "parent_id": "model-training"
+    },
+    {
+      "id": "beam-search",
+      "label": "Beam search",
+      "kind": "method",
+      "definition": "Keep several high-scoring partial outputs during decoding.",
+      "aliases": [],
+      "parent_id": "decoding"
+    },
+    {
+      "id": "tree-thoughts",
+      "label": "Tree of thoughts",
+      "kind": "pattern",
+      "definition": "Search a branching set of intermediate reasoning states.",
+      "aliases": [
+        "ToT",
+        "tree-of-thoughts"
+      ],
+      "parent_id": "reasoning"
+    },
+    {
+      "id": "verification",
+      "label": "Answer verification",
+      "kind": "pattern",
+      "definition": "Check claims or candidate answers before accepting a result.",
+      "aliases": [
+        "self-verification",
+        "chain of verification"
+      ],
+      "parent_id": "reasoning"
+    },
+    {
+      "id": "soft-prompts",
+      "label": "Soft prompt tuning",
+      "kind": "method",
+      "definition": "Learn prompt embeddings while keeping the main model weights fixed.",
+      "aliases": [
+        "soft prompting",
+        "prompt tuning"
+      ],
+      "parent_id": "prompting"
+    },
+    {
+      "id": "sliding-memory",
+      "label": "Sliding-window conversation memory",
+      "kind": "pattern",
+      "definition": "Keep only a recent window of interaction history in the prompt.",
+      "aliases": [
+        "sliding window memory"
+      ],
+      "parent_id": "working-memory"
+    },
+    {
+      "id": "rlhf",
+      "label": "Reinforcement learning from human feedback",
+      "kind": "method",
+      "definition": "Train a reward model from human preferences and use it to guide policy updates.",
+      "aliases": [
+        "RLHF"
+      ],
+      "parent_id": "rl"
+    },
+    {
+      "id": "dpo",
+      "label": "Direct preference optimization",
+      "kind": "method",
+      "definition": "Train directly on preferred and rejected response pairs.",
+      "aliases": [
+        "DPO"
+      ],
+      "parent_id": "model-training"
+    },
+    {
+      "id": "reward-model",
+      "label": "Reward modeling",
+      "kind": "method",
+      "definition": "Learn or define a score that guides policy training.",
+      "aliases": [
+        "reward models",
+        "reward functions"
+      ],
+      "parent_id": "rl"
+    },
+    {
+      "id": "lora",
+      "label": "Low-rank adaptation",
+      "kind": "method",
+      "definition": "Adapt a model by training small low-rank weight updates.",
+      "aliases": [
+        "LoRA",
+        "PEFT"
+      ],
+      "parent_id": "model-training"
+    },
+    {
+      "id": "compression",
+      "label": "Model compression and quantization",
+      "kind": "method",
+      "definition": "Reduce model size or arithmetic precision to lower execution costs.",
+      "aliases": [
+        "model quantization",
+        "compression"
+      ],
+      "parent_id": "llm-foundations"
+    },
+    {
+      "id": "caching",
+      "label": "Response caching",
+      "kind": "method",
+      "definition": "Reuse stored results for repeated model or tool requests.",
+      "aliases": [
+        "API caching",
+        "disk cache"
+      ],
+      "parent_id": "frameworks"
+    },
+    {
+      "id": "state",
+      "label": "Conversation and execution state",
+      "kind": "concept",
+      "definition": "Track messages, task progress, and runtime data across agent steps.",
+      "aliases": [
+        "agent state",
+        "conversation state"
+      ],
+      "parent_id": "agent-architecture"
+    },
+    {
+      "id": "error-recovery",
+      "label": "Error handling and retries",
+      "kind": "pattern",
+      "definition": "Detect model or tool errors and retry, recover, or stop safely.",
+      "aliases": [
+        "exception handling",
+        "exponential backoff"
+      ],
+      "parent_id": "frameworks"
+    },
+    {
+      "id": "long-horizon",
+      "label": "Long-horizon agent tasks",
+      "kind": "topic",
+      "definition": "Maintain progress over long sequences of dependent actions.",
+      "aliases": [
+        "long horizon tasks"
+      ],
+      "parent_id": "planning"
+    },
+    {
+      "id": "threat-modeling",
+      "label": "Threat modeling and least privilege",
+      "kind": "method",
+      "definition": "Identify threats and limit access to the permissions a task requires.",
+      "aliases": [
+        "least privilege",
+        "threat modeling"
+      ],
+      "parent_id": "safety"
+    },
+    {
+      "id": "red-teaming",
+      "label": "Red teaming and adversarial evaluation",
+      "kind": "method",
+      "definition": "Test an agent with attacks and difficult misuse cases.",
+      "aliases": [
+        "red teaming",
+        "adversarial testing"
+      ],
+      "parent_id": "safety"
+    },
+    {
+      "id": "memory-poisoning",
+      "label": "Memory poisoning",
+      "kind": "concept",
+      "definition": "An attacker changes stored memory to affect later agent behavior.",
+      "aliases": [],
+      "parent_id": "safety"
+    },
+    {
+      "id": "grounding",
+      "label": "Evidence grounding and hallucination control",
+      "kind": "topic",
+      "definition": "Tie claims to trusted evidence and reduce unsupported statements.",
+      "aliases": [
+        "grounded generation",
+        "hallucination mitigation"
+      ],
+      "parent_id": null
+    },
+    {
+      "id": "abstention",
+      "label": "Abstention and uncertainty handling",
+      "kind": "pattern",
+      "definition": "Decline to answer or ask for help when evidence or confidence is insufficient.",
+      "aliases": [
+        "I don't know",
+        "selective answering"
+      ],
+      "parent_id": "grounding"
+    },
+    {
+      "id": "persona",
+      "label": "Persona and response style control",
+      "kind": "application",
+      "definition": "Make an agent follow a defined identity and style while preserving factual constraints.",
+      "aliases": [
+        "persona agents",
+        "style control"
+      ],
+      "parent_id": null
+    }
+  ],
+  "coverage": [
+    {
+      "concept_id": "agent-architecture",
+      "source": "markdown/slides/week1.md",
+      "needle": "Cognitive Architecture of an Agent",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "llm-foundations",
+      "source": "markdown/slides/week1.md",
+      "needle": "Evolution of language models",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "react",
+      "source": "markdown/slides/week1.md",
+      "needle": "The ReAct Pattern",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "transformer",
+      "source": "markdown/slides/week2.md",
+      "needle": "Components of the Transformer",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "gradient-training",
+      "source": "markdown/slides/week2.md",
+      "needle": "gradient",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "tokenization",
+      "source": "markdown/assignments/hw1.md",
+      "needle": "Byte pair encoding",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "data-curation",
+      "source": "markdown/assignments/hw1.md",
+      "needle": "Quality filter",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "privacy",
+      "source": "markdown/assignments/hw1.md",
+      "needle": "Scrub PII",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "decoding",
+      "source": "markdown/slides/week3.md",
+      "needle": "Nucleus sampling",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "beam-search",
+      "source": "markdown/slides/week3.md",
+      "needle": "Beam search",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "model-training",
+      "source": "markdown/slides/week3.md",
+      "needle": "Pre-training",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "prompting",
+      "source": "markdown/slides/week4.md",
+      "needle": "Prompts always involve",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "soft-prompts",
+      "source": "markdown/slides/week4.md",
+      "needle": "Soft Prompting",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reasoning",
+      "source": "markdown/slides/week4.md",
+      "needle": "Reasoning in LLMs",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "cot",
+      "source": "markdown/slides/week4.md",
+      "needle": "CoT improves",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "self-consistency",
+      "source": "markdown/slides/week4.md",
+      "needle": "Self-consistency",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "tree-thoughts",
+      "source": "markdown/slides/week4.md",
+      "needle": "Tree of Thoughts",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reflexion",
+      "source": "markdown/slides/week4.md",
+      "needle": "Reflexion converts",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reflection",
+      "source": "markdown/slides/week4.md",
+      "needle": "self-reflections",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "verification",
+      "source": "markdown/slides/week4.md",
+      "needle": "verify",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "memory",
+      "source": "markdown/slides/week4.md",
+      "needle": "Memory management",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "context-engineering",
+      "source": "markdown/slides/week4.md",
+      "needle": "context selection and presentation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "sliding-memory",
+      "source": "markdown/slides/week4.md",
+      "needle": "sliding window memory",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "working-memory",
+      "source": "markdown/slides/week4.md",
+      "needle": "append only the N last turns",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "compaction",
+      "source": "markdown/slides/week4.md",
+      "needle": "Summary-based compaction",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "tiered-memory",
+      "source": "markdown/slides/week4.md",
+      "needle": "In-Memory Cache",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "caching",
+      "source": "markdown/slides/week4.md",
+      "needle": "Good practice: caching",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "error-recovery",
+      "source": "markdown/slides/week4.md",
+      "needle": "exponential backoff",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "structured-output",
+      "source": "markdown/assignments/hw2.md",
+      "needle": "Validate:",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "few-shot",
+      "source": "markdown/assignments/hw2.md",
+      "needle": "Few-shot:",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "retrieval-eval",
+      "source": "markdown/assignments/hw2.md",
+      "needle": "Evaluate:",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "sft",
+      "source": "markdown/slides/week5.md",
+      "needle": "SFT teaches",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "rl",
+      "source": "markdown/slides/week5.md",
+      "needle": "Reinforcement Learning",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "rlhf",
+      "source": "markdown/slides/week5.md",
+      "needle": "Train a reward model",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "human-demos",
+      "source": "markdown/slides/week5.md",
+      "needle": "Collect human preference comparisons",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "dpo",
+      "source": "markdown/slides/week5.md",
+      "needle": "DPO (Direct Preference Optimization)",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reward-model",
+      "source": "markdown/slides/week5.md",
+      "needle": "Learned reward models",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "reward-hacking",
+      "source": "markdown/slides/week5.md",
+      "needle": "Reward Hacking",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "lora",
+      "source": "markdown/slides/week5.md",
+      "needle": "LoRA (Low-Rank Adaptation)",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "compression",
+      "source": "markdown/slides/week5.md",
+      "needle": "Compression:",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "rag",
+      "source": "markdown/slides/week5.md",
+      "needle": "Retrieval-Augmented Generation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "chunking",
+      "source": "markdown/slides/week5.md",
+      "needle": "Indexing",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "sparse-retrieval",
+      "source": "markdown/slides/week5.md",
+      "needle": "sparse",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "embeddings",
+      "source": "markdown/slides/week5.md",
+      "needle": "dense",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "hybrid-search",
+      "source": "markdown/slides/week5.md",
+      "needle": "hybrid index",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "grounding",
+      "source": "markdown/slides/week5.md",
+      "needle": "ignores evidence",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "harness",
+      "source": "markdown/slides/week6.md",
+      "needle": "runtime infrastructure",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "state",
+      "source": "markdown/slides/week6.md",
+      "needle": "Everything the system currently knows",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "workflow-agent",
+      "source": "markdown/slides/week6.md",
+      "needle": "Static vs. dynamic workflows",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "prompt-chain",
+      "source": "markdown/slides/week6.md",
+      "needle": "Prompt chaining decomposes",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "routing",
+      "source": "markdown/slides/week6.md",
+      "needle": "Routing is a classification problem",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "planning",
+      "source": "markdown/slides/week6.md",
+      "needle": "Iterative Planning",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "plan-execute",
+      "source": "markdown/slides/week6.md",
+      "needle": "Plan-then-execute",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "long-horizon",
+      "source": "markdown/slides/week6.md",
+      "needle": "Long-horizon tasks",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "tool-use",
+      "source": "markdown/slides/week7.md",
+      "needle": "Tool calling:",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "parallelization",
+      "source": "markdown/slides/week7.md",
+      "needle": "Parallel",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "frameworks",
+      "source": "markdown/slides/week7.md",
+      "needle": "An agentic framework",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "mcp",
+      "source": "markdown/slides/week7.md",
+      "needle": "Before MCP:",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "tool-eval",
+      "source": "markdown/slides/week7.md",
+      "needle": "How to evaluate tool calling?",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "evaluation",
+      "source": "markdown/slides/week7.md",
+      "needle": "Final-answer accuracy",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "observability",
+      "source": "markdown/slides/week7.md",
+      "needle": "Logging",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "hitl",
+      "source": "markdown/slides/week7.md",
+      "needle": "Human approval points",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "safety",
+      "source": "markdown/slides/week9.md",
+      "needle": "What is a guardrail?",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "prompt-injection",
+      "source": "markdown/slides/week9.md",
+      "needle": "Indirect prompt injection",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "sandboxing",
+      "source": "markdown/slides/week9.md",
+      "needle": "Designing a safe system: sandboxing",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "threat-modeling",
+      "source": "markdown/slides/week9.md",
+      "needle": "Designing a safe system: least privilege",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "red-teaming",
+      "source": "markdown/slides/week9.md",
+      "needle": "Red teaming and adversarial evaluation",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "memory-poisoning",
+      "source": "markdown/slides/week9.md",
+      "needle": "Memory poisoning",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "abstention",
+      "source": "markdown/assignments/hw3.md",
+      "needle": "Say \"I don't know\"",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "persona",
+      "source": "markdown/assignments/hw3.md",
+      "needle": "Style Module",
+      "coverage": "taught"
+    },
+    {
+      "concept_id": "coding-agents",
+      "source": "markdown/pages/index.md",
+      "needle": "Vibe coding",
+      "coverage": "planned"
+    }
+  ]
+}

@@ -1,0 +1,467 @@
+[
+  {
+    "startInSeconds": 0,
+    "endInSeconds": 4,
+    "text": "You just saw how you can turn a requirement into a rubric."
+  },
+  {
+    "startInSeconds": 4,
+    "endInSeconds": 9,
+    "text": "You gave the judge a role, criteria, inputs, examples,\nand output instructions,"
+  },
+  {
+    "startInSeconds": 9,
+    "endInSeconds": 14,
+    "text": "but a clear-looking rubric does not guarantee that a judge\nwill apply it correctly."
+  },
+  {
+    "startInSeconds": 14,
+    "endInSeconds": 20,
+    "text": "Before you use its labels to decide what needs improving,\nyou need to test whether those labels can be trusted."
+  },
+  {
+    "startInSeconds": 20,
+    "endInSeconds": 23,
+    "text": "Let's go back to the shelter's safe matching evaluator."
+  },
+  {
+    "startInSeconds": 23,
+    "endInSeconds": 31,
+    "text": "The judge reads a volunteer profile, a dog record, and the agent's\nrecommendation, and it returns a label like SAFE or UNSAFE."
+  },
+  {
+    "startInSeconds": 31,
+    "endInSeconds": 36,
+    "text": "That label may look definitive, but it is still the judge's\ninterpretation of the rubric."
+  },
+  {
+    "startInSeconds": 36,
+    "endInSeconds": 39,
+    "text": "So you should treat the judge like a classifier."
+  },
+  {
+    "startInSeconds": 39,
+    "endInSeconds": 46,
+    "text": "It's assigning labels to cases, and you can test those labels by\ncomparing them with the reviewed labels from your benchmark."
+  },
+  {
+    "startInSeconds": 46,
+    "endInSeconds": 51,
+    "text": "When you do that, start with cases that weren't used to\nwrite or tune the rubric."
+  },
+  {
+    "startInSeconds": 51,
+    "endInSeconds": 57,
+    "text": "If you test only on the examples you used while building the rubric,\nthe results can look better than they really are."
+  },
+  {
+    "startInSeconds": 57,
+    "endInSeconds": 63,
+    "text": "Those examples already shaped the evaluator.\nSo instead, keep a separate held-out set."
+  },
+  {
+    "startInSeconds": 63,
+    "endInSeconds": 70,
+    "text": "These are reviewed cases that the judge has not seen as prompt\nexamples, and that haven't been used to refine the rubric."
+  },
+  {
+    "startInSeconds": 70,
+    "endInSeconds": 76,
+    "text": "Run the judge on those held-out cases, and, for each case,\ncompare the judge's label with the reviewed label."
+  },
+  {
+    "startInSeconds": 76,
+    "endInSeconds": 82,
+    "text": "Suppose the shelter agent recommends a dog that requires an\nexperienced handler to a first-time volunteer."
+  },
+  {
+    "startInSeconds": 82,
+    "endInSeconds": 89,
+    "text": "A human reviewer labels that recommendation UNSAFE,\nbut the judge labels it SAFE. Now you have a disagreement."
+  },
+  {
+    "startInSeconds": 89,
+    "endInSeconds": 92,
+    "text": "the judge missed a failure that the reviewer caught."
+  },
+  {
+    "startInSeconds": 92,
+    "endInSeconds": 98,
+    "text": "Across the validation set, these matches and disagreements tell you\nhow reliably the judge is applying the rubric."
+  },
+  {
+    "startInSeconds": 98,
+    "endInSeconds": 104,
+    "text": "There are two useful metrics when measuring a judge's reliability:\nprecision and recall."
+  },
+  {
+    "startInSeconds": 104,
+    "endInSeconds": 112,
+    "text": "For this evaluator, focus on the UNSAFE label because unsafe\nrecommendations are the failures you most need the judge to catch."
+  },
+  {
+    "startInSeconds": 112,
+    "endInSeconds": 116,
+    "text": "Precision tells you of the recommendations that the\njudge labeled UNSAFE,"
+  },
+  {
+    "startInSeconds": 116,
+    "endInSeconds": 120,
+    "text": "how many were actually UNSAFE according to the reviewed labels?"
+  },
+  {
+    "startInSeconds": 120,
+    "endInSeconds": 126,
+    "text": "If the judge labels a SAFE match as UNSAFE, that's a false alarm\nthat will cause precision to go down."
+  },
+  {
+    "startInSeconds": 126,
+    "endInSeconds": 130,
+    "text": "So precision tells you how often the judge's warnings are right."
+  },
+  {
+    "startInSeconds": 130,
+    "endInSeconds": 136,
+    "text": "Recall measures: of all the recommendations reviewers labeled unsafe,\nhow many did the judge catch?"
+  },
+  {
+    "startInSeconds": 136,
+    "endInSeconds": 142,
+    "text": "If the judge labels an unsafe match as safe, that's a missed failure,\nand it will bring recall down."
+  },
+  {
+    "startInSeconds": 142,
+    "endInSeconds": 150,
+    "text": "So recall tells you whether unsafe recommendations are slipping\nthrough. Which mistake matters more depends on the requirement."
+  },
+  {
+    "startInSeconds": 150,
+    "endInSeconds": 157,
+    "text": "At the shelter, a false alarm means someone may review a safe\nrecommendation unnecessarily. That costs time."
+  },
+  {
+    "startInSeconds": 157,
+    "endInSeconds": 164,
+    "text": "But a missed failure means an unsafe match may move forward,\nwhich could put a volunteer or a dog at risk."
+  },
+  {
+    "startInSeconds": 164,
+    "endInSeconds": 167,
+    "text": "So for the safe matching evaluator, recall matters a lot."
+  },
+  {
+    "startInSeconds": 167,
+    "endInSeconds": 173,
+    "text": "You may be willing to accept some extra false alarms if that helps\ncatch more unsafe matches."
+  },
+  {
+    "startInSeconds": 173,
+    "endInSeconds": 177,
+    "text": "One thing to note, recall and precision metrics are at\nodds with each other."
+  },
+  {
+    "startInSeconds": 177,
+    "endInSeconds": 184,
+    "text": "If one goes up, the other goes down, so you can't prioritize both at\nthe same time. Another evaluator might need a different balance."
+  },
+  {
+    "startInSeconds": 184,
+    "endInSeconds": 191,
+    "text": "For example, if a judge flags too many acceptable responses for manual\nreview, it may become too noisy to use."
+  },
+  {
+    "startInSeconds": 191,
+    "endInSeconds": 197,
+    "text": "So don't treat precision and recall as abstract scores.\nRead them in terms of what errors would actually cost."
+  },
+  {
+    "startInSeconds": 197,
+    "endInSeconds": 201,
+    "text": "You can also measure agreement across all labels with Cohen's kappa."
+  },
+  {
+    "startInSeconds": 201,
+    "endInSeconds": 208,
+    "text": "Imagine you've just reviewed 10 shelter cases,\nnine of which you manually labeled as SAFE and one as UNSAFE."
+  },
+  {
+    "startInSeconds": 208,
+    "endInSeconds": 214,
+    "text": "Let's say the judge labels every case safe.\nIt agrees with the reviewer 9 out of 10 times."
+  },
+  {
+    "startInSeconds": 214,
+    "endInSeconds": 222,
+    "text": "That sounds like 90% agreement, but the judge missed the only unsafe\ncase. It didn't show that it can distinguish safe from unsafe matches."
+  },
+  {
+    "startInSeconds": 222,
+    "endInSeconds": 226,
+    "text": "It basically just benefited from choosing the most common label."
+  },
+  {
+    "startInSeconds": 226,
+    "endInSeconds": 232,
+    "text": "Cohen's kappa adjusts for the agreement you would expect by chance,\ngiven how often the labels appear."
+  },
+  {
+    "startInSeconds": 232,
+    "endInSeconds": 236,
+    "text": "A kappa of 1 means the judge and reviewers matched on every label."
+  },
+  {
+    "startInSeconds": 236,
+    "endInSeconds": 244,
+    "text": "A kappa of 0 means their agreement was no better than chance, and a\nnegative kappa means they disagreed more than chance would predict."
+  },
+  {
+    "startInSeconds": 244,
+    "endInSeconds": 250,
+    "text": "Kappa is useful because it gives you a broader view of agreement,\nbut it's not enough by itself."
+  },
+  {
+    "startInSeconds": 250,
+    "endInSeconds": 258,
+    "text": "On a small validation set, one disagreement can move the score a lot.\nAnd kappa only compares two sets of labels."
+  },
+  {
+    "startInSeconds": 258,
+    "endInSeconds": 264,
+    "text": "It doesn't prove that either label is correct.\nThe judge and reviewer can agree and still both be wrong."
+  },
+  {
+    "startInSeconds": 264,
+    "endInSeconds": 269,
+    "text": "Perhaps the reviewer missed an important detail,\nor the rubric itself is unclear,"
+  },
+  {
+    "startInSeconds": 269,
+    "endInSeconds": 272,
+    "text": "or maybe everyone is applying the wrong standard consistently."
+  },
+  {
+    "startInSeconds": 272,
+    "endInSeconds": 279,
+    "text": "So use the metrics as signals, not as the final answer.\nWhen the labels disagree, inspect the case."
+  },
+  {
+    "startInSeconds": 279,
+    "endInSeconds": 285,
+    "text": "Read the volunteer profile, the dog record, and the agent's\nrecommendation, and go through the judge's explanation."
+  },
+  {
+    "startInSeconds": 285,
+    "endInSeconds": 288,
+    "text": "Then apply the safe matching requirement yourself."
+  },
+  {
+    "startInSeconds": 288,
+    "endInSeconds": 293,
+    "text": "If the judge's decision follows the requirement,\nthe reviewed label may need to be corrected."
+  },
+  {
+    "startInSeconds": 293,
+    "endInSeconds": 298,
+    "text": "If the reviewed label is right, the judge may have\nmisapplied the rubric."
+  },
+  {
+    "startInSeconds": 298,
+    "endInSeconds": 303,
+    "text": "And if the case could reasonably go either way,\nthe rubric might not be making the boundary clear enough."
+  },
+  {
+    "startInSeconds": 303,
+    "endInSeconds": 309,
+    "text": "A disagreement does not automatically mean fix the judge.\nIt tells you where the evaluation needs investigation."
+  },
+  {
+    "startInSeconds": 309,
+    "endInSeconds": 316,
+    "text": "As you inspect disagreements, look for patterns because some judge\nerrors are not random."
+  },
+  {
+    "startInSeconds": 316,
+    "endInSeconds": 323,
+    "text": "For example, suppose the agent recommends a calm senior dog to an\nexperienced volunteer. The response sounds careful."
+  },
+  {
+    "startInSeconds": 323,
+    "endInSeconds": 328,
+    "text": "It says the dog is gentle and explains that the volunteer has\nhandled many dogs before."
+  },
+  {
+    "startInSeconds": 328,
+    "endInSeconds": 335,
+    "text": "At first glance, the recommendation may seem safe, but the volunteer's\nprofile says they can safely handle dogs up to 50 lb."
+  },
+  {
+    "startInSeconds": 335,
+    "endInSeconds": 341,
+    "text": "This dog weighs 80 lb. So the problem is that the recommendation\nignores a physical handling limit."
+  },
+  {
+    "startInSeconds": 341,
+    "endInSeconds": 345,
+    "text": "An LLM judge might miss that if it focuses on the positive language\nin the recommendation,"
+  },
+  {
+    "startInSeconds": 345,
+    "endInSeconds": 349,
+    "text": "instead of comparing the dog's weight with the\nvolunteer's stated limit."
+  },
+  {
+    "startInSeconds": 349,
+    "endInSeconds": 354,
+    "text": "To see whether that mistake is part of a pattern,\ncompare similar cases."
+  },
+  {
+    "startInSeconds": 354,
+    "endInSeconds": 360,
+    "text": "Does the judge catch unsafe matches when the behavior risk is obvious,\nbut miss cases where the risk is a numeric constraint?"
+  },
+  {
+    "startInSeconds": 360,
+    "endInSeconds": 366,
+    "text": "Or maybe recall drops when the recommendation sounds thoughtful\nand the dog seems calm."
+  },
+  {
+    "startInSeconds": 366,
+    "endInSeconds": 372,
+    "text": "If so, the judge may be giving too much weight to the agent's\nexplanation and not enough weight to the underlying evidence."
+  },
+  {
+    "startInSeconds": 372,
+    "endInSeconds": 376,
+    "text": "One thing you can do is to try a targeted rubric change."
+  },
+  {
+    "startInSeconds": 376,
+    "endInSeconds": 382,
+    "text": "For example, before assigning a label, require the judge to identify\nthe volunteer's handling limit and the dog's weight,"
+  },
+  {
+    "startInSeconds": 382,
+    "endInSeconds": 384,
+    "text": "then compare them directly."
+  },
+  {
+    "startInSeconds": 384,
+    "endInSeconds": 389,
+    "text": "That pushes the judge towards the evidence that should determine\nthe safety decision."
+  },
+  {
+    "startInSeconds": 389,
+    "endInSeconds": 392,
+    "text": "But don't assume the change helps just because it fixes one case."
+  },
+  {
+    "startInSeconds": 392,
+    "endInSeconds": 398,
+    "text": "Change one thing at a time, then test the revised rubric on\nfresh reviewed cases."
+  },
+  {
+    "startInSeconds": 398,
+    "endInSeconds": 403,
+    "text": "If you use a disagreement to revise the rubric,\nthat case has now influenced the evaluator,"
+  },
+  {
+    "startInSeconds": 403,
+    "endInSeconds": 406,
+    "text": "It's no longer a clean validation case for the revised version."
+  },
+  {
+    "startInSeconds": 406,
+    "endInSeconds": 414,
+    "text": "So when possible, test the revision on other reviewed cases that were\nnot used to make the change. Compare the old and new versions."
+  },
+  {
+    "startInSeconds": 414,
+    "endInSeconds": 420,
+    "text": "Did recall improve on unsafe matches?\nDid precision fall too far? Did kappa improve?"
+  },
+  {
+    "startInSeconds": 420,
+    "endInSeconds": 425,
+    "text": "Do the explanations show that the judge is using the relevant\nvolunteer and dog information?"
+  },
+  {
+    "startInSeconds": 425,
+    "endInSeconds": 429,
+    "text": "Keep the change only if the evaluator improved overall."
+  },
+  {
+    "startInSeconds": 429,
+    "endInSeconds": 435,
+    "text": "If the change fixes one case but creates new errors elsewhere,\nrevise again or return to the previous version."
+  },
+  {
+    "startInSeconds": 435,
+    "endInSeconds": 441,
+    "text": "This is the same discipline you'd use when changing application code.\nA local fix is not enough."
+  },
+  {
+    "startInSeconds": 441,
+    "endInSeconds": 446,
+    "text": "You need to know whether the change improves behavior across\nthe cases that matter."
+  },
+  {
+    "startInSeconds": 446,
+    "endInSeconds": 453,
+    "text": "So before you trust an LLM judge, bring several checks together.\nUse recall to see whether it catches the failures you care about."
+  },
+  {
+    "startInSeconds": 453,
+    "endInSeconds": 461,
+    "text": "Check precision to see whether its warnings are usually right, and get\nCohen's kappa to measure agreement with reviewed labels beyond chance."
+  },
+  {
+    "startInSeconds": 461,
+    "endInSeconds": 465,
+    "text": "Inspect any disagreements to understand what actually went wrong."
+  },
+  {
+    "startInSeconds": 465,
+    "endInSeconds": 471,
+    "text": "and read explanations to confirm that the judge is applying the\nrequirement using the right evidence."
+  },
+  {
+    "startInSeconds": 471,
+    "endInSeconds": 476,
+    "text": "Only then should you rely on the judge's labels to guide\nimprovement or block a change."
+  },
+  {
+    "startInSeconds": 476,
+    "endInSeconds": 481,
+    "text": "So far in this module, you've gone through the evaluation process\nusing the dog shelter agent as an example."
+  },
+  {
+    "startInSeconds": 481,
+    "endInSeconds": 485,
+    "text": "You built a code evaluator when the requirement could\nbe checked strictly."
+  },
+  {
+    "startInSeconds": 485,
+    "endInSeconds": 492,
+    "text": "You chose an LLM judge when the requirement needed interpretation, and\nyou built a rubric to tell the judge how to apply that requirement."
+  },
+  {
+    "startInSeconds": 492,
+    "endInSeconds": 497,
+    "text": "And now you've seen how to test whether the judge's\nlabels are reliable."
+  },
+  {
+    "startInSeconds": 497,
+    "endInSeconds": 500,
+    "text": "Next, you'll bring those pieces together with the Northwind agent."
+  },
+  {
+    "startInSeconds": 500,
+    "endInSeconds": 505,
+    "text": "You'll choose different evaluators for different requirements,\nkeep their results separate,"
+  },
+  {
+    "startInSeconds": 505,
+    "endInSeconds": 507,
+    "text": "and validate the custom judge before relying on its labels."
+  }
+]
